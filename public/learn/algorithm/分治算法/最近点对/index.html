@@ -1,0 +1,1303 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Bowen Zhou" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B9/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#bbdefb" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://bowenei.gitee.io/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B9/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+  <meta property="og:url" content="https://bowenei.gitee.io/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B9/" />
+  <meta property="og:title" content="最近点对 | Bowen&#39;s Academic Home" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-10-16T20:54:28&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-10-16T20:54:28&#43;08:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>最近点对 | Bowen&#39;s Academic Home</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="b15b917e09fcc6523a3c466268392efa" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+
+  
+
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blogs"><span>Blogs</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallery"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/learn/"><span>Learn</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/bowenEI/" data-toggle="tooltip" data-placement="bottom" title="Follow me on Github" target="_blank" rel="noopener" aria-label="Follow me on Github">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          分治算法
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/learn/"><i class="fas fa-arrow-left pr-1"></i>Learn</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/">算法分析与设计</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">基础知识</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/">算法分析</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E9%80%92%E5%BD%92%E6%96%B9%E7%A8%8B/">递归方程</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/">分治算法</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E5%A4%A7%E6%95%B4%E6%95%B0%E4%B9%98%E6%B3%95/">大整数乘法</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/">矩阵乘法</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">快速排序</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E6%B1%82%E7%AC%ACk%E5%B0%8F%E5%85%83%E7%B4%A0/">求第 k 小元素</a></li>
+
+
+
+  <li class="active"><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B9/">最近点对</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">快速傅里叶变换</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E5%AF%BB%E6%89%BE%E5%87%B8%E5%8C%85/">寻找凸包</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E4%BD%9C%E4%B8%9A/">作业</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E7%9F%A9%E9%98%B5%E8%BF%9E%E4%B9%98/">矩阵连乘</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E9%92%A2%E6%9D%A1%E5%88%87%E5%89%B2/">钢条切割</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97/">最长公共子序列</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%9C%80%E4%BC%98%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">最优二叉搜索树</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%B5%81%E6%B0%B4%E4%BD%9C%E4%B8%9A%E8%B0%83%E5%BA%A6/">流水作业调度</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/0-1%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">0-1背包问题</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E5%A4%9A%E7%BA%A7%E5%9B%BE%E9%97%AE%E9%A2%98/">多级图问题</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E4%BD%9C%E4%B8%9A/">作业</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">贪心算法</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%B4%BB%E5%8A%A8%E9%80%89%E6%8B%A9/">活动选择</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/">哈夫曼编码</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/">最小生成树</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E4%BD%9C%E4%B8%9A/">作业</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/">图论算法</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/">图的遍历</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E5%9B%BE%E7%9A%84%E8%BF%9E%E9%80%9A/">图的连通</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/">最短路径</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/">拓扑排序</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E4%BD%9C%E4%B8%9A/">作业</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/">进阶知识</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/np-complete/">NP 完全理论</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/%E5%9B%9E%E6%BA%AF%E5%89%AA%E6%9E%9D/">回溯剪枝</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#问题描述">问题描述</a></li>
+    <li><a href="#问题分析">问题分析</a>
+      <ul>
+        <li><a href="#简单情形一维数轴">简单情形：一维数轴</a></li>
+        <li><a href="#复杂情形二维平面">复杂情形：二维平面</a></li>
+      </ul>
+    </li>
+    <li><a href="#算法分析">算法分析</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>最近点对</h1>
+
+          <div class="article-style">
+            <h2 id="问题描述">问题描述</h2>
+<p>给定平面上 $m$ 个点的集合 $S$，找其中的一对点使得在 $n$ 个点组成的所有点对中，该点对间的距离最小。</p>
+<h2 id="问题分析">问题分析</h2>
+<h3 id="简单情形一维数轴">简单情形：一维数轴</h3>
+<p>为了使问题易于理解和分析，先来考虑一维的情形。此时 $S$ 中的 $n$ 个点退化为 $x$ 轴上的 $n$ 个实数 $x_1, x_2, \cdots, x_n$。最接近点对即为这 $n$ 个实数中相差最小的 $2$ 个实数。</p>
+<p>假设用 $x$ 轴上某个点 $m$ 将 $S$ 划分为小于 $m$ 的子集 $S_1$ 和大于 $m$ 的子集 $S_2$。基于平衡子问题的思想，用 $S$ 中各点坐标的中位数来作分割点。在 $S_1$ 中找出其最近点对 $\{p_1, p_2\} (p_1 &gt; p_2)$，在 $S_2$ 中找出其最近点对 $\{q_1, q_2\} (q_1 &lt; q_2)$。于是最短距离分别为</p>
+<p>\begin{align}
+d_{S_1} &amp;= \left | p_1 - p_2 \right | \\
+d_{S_2} &amp;= \left | q_1 - q_2 \right |
+\end{align}</p>
+<p>递归地，$S$ 中的最近点对要么是 $\{p_1, p_2\}$，要么是 $\{q_1, q_2\}$，要么是某个点对 $\{p_3, q_3\}$，其中 $p_3 \in S_1$ 且 $q_3 \in S_2$。从而用线性时间就可以将 $S_1$ 的解和 $S_2$ 的解合并成为 $S$ 的解。</p>
+<p>\begin{align}
+d = \min (d_{S_1}, d_{S_2}, q_3 - p_3)
+\end{align}</p>
+<h3 id="复杂情形二维平面">复杂情形：二维平面</h3>
+<p>选取一垂直线 $l:x=m$ 来作为分割直线。其中 $m$ 为 $S$ 中各点 $x$ 坐标的中位数。由此将 $S$ 分割为 $S_1$ 和 $S_2$ 两个半平面。</p>
+<p>递归地在 $S_1$ 和 $S_2$ 上找出其最小距离 $d_1$ 和 $d_2$ 并设 $d=\min(d_1, d_2)$。$S$ 中的最接近点对要么是 $d$，要么是某个 $\{p, q\}$，其中 $p \in S_1$ 且 $q \in S_2$。如图所示：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/algorithm/%E9%80%92%E5%BD%92%E5%88%86%E6%B2%BB/%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B91_hu0a9d42f39f09d91ed85043567f9c234b_35046_16c016fd642a31ecf33acc9e094f427c.webp 400w,
+               /media/learn/algorithm/%E9%80%92%E5%BD%92%E5%88%86%E6%B2%BB/%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B91_hu0a9d42f39f09d91ed85043567f9c234b_35046_0db733f5feb3026633565c461283ab95.webp 760w,
+               /media/learn/algorithm/%E9%80%92%E5%BD%92%E5%88%86%E6%B2%BB/%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B91_hu0a9d42f39f09d91ed85043567f9c234b_35046_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/algorithm/%E9%80%92%E5%BD%92%E5%88%86%E6%B2%BB/%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B91_hu0a9d42f39f09d91ed85043567f9c234b_35046_16c016fd642a31ecf33acc9e094f427c.webp"
+               width="760"
+               height="389"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>对于点 $p \in P_1$，需要考察 $P_2$ 中的各个点和点 $p$ 之间的距离是否小于 $d$。显然 $P_2$ 中这样点的 $y$ 轴坐标一定位于区间 $[y-d, y+d]$ 之间，而且，这样的点不会超过 $6$ 个。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/algorithm/%E9%80%92%E5%BD%92%E5%88%86%E6%B2%BB/%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B92_huda2237f95461272edab55415f91cf60d_13208_5a55c4ce925d91ccd559e0498e91bc9e.webp 400w,
+               /media/learn/algorithm/%E9%80%92%E5%BD%92%E5%88%86%E6%B2%BB/%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B92_huda2237f95461272edab55415f91cf60d_13208_d2d588f9c9f5e0290b40528987199442.webp 760w,
+               /media/learn/algorithm/%E9%80%92%E5%BD%92%E5%88%86%E6%B2%BB/%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B92_huda2237f95461272edab55415f91cf60d_13208_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/algorithm/%E9%80%92%E5%BD%92%E5%88%86%E6%B2%BB/%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B92_huda2237f95461272edab55415f91cf60d_13208_5a55c4ce925d91ccd559e0498e91bc9e.webp"
+               width="406"
+               height="474"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p><strong>快速检查 $6$ 个点的方法</strong></p>
+<ul>
+<li>将 $P_1$ 和 $P_2$ 中所有 $S$ 中点按其 $y$ 坐标排好序（预处理）。</li>
+<li>对 $P_1$ 中所有点，对排好序的点列作一次扫描。</li>
+<li>对 $P_1$ 中每一点最多只要检查 $P_2$ 中排好序的相继 $6$ 个点。</li>
+</ul>
+<h2 id="算法分析">算法分析</h2>
+<p>一维简单情形和二维情形的时间复杂度均为</p>
+<p>\begin{align}
+T(n) &amp;= 2 T\left( \frac{n}{2} \right) + O(n) \\
+&amp;= O(n \log {n})
+\end{align}</p>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E6%B1%82%E7%AC%ACk%E5%B0%8F%E5%85%83%E7%B4%A0/" rel="next">求第 k 小元素</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" rel="prev">快速傅里叶变换</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Oct 16, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
+
+    
+    
+    
+      
+
+      
+      
+
+      
+
+      
+
+    
+
+    
+    
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
+
+    
+    
+    
+    
+    
+    
+      
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

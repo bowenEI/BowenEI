@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git 使用教程 | Bowen&#39;s Academic Home</title>
+    <link>https://bowenei.gitee.io/learn/git/tutorial/</link>
+      <atom:link href="https://bowenei.gitee.io/learn/git/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <description>Git 使用教程</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 03 Dec 2021 09:57:48 +0800</lastBuildDate>
+    <image>
+      <url>https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png</url>
+      <title>Git 使用教程</title>
+      <link>https://bowenei.gitee.io/learn/git/tutorial/</link>
+    </image>
+    
+    <item>
+      <title>安装 Git</title>
+      <link>https://bowenei.gitee.io/learn/git/tutorial/installation/</link>
+      <pubDate>Fri, 03 Dec 2021 09:57:30 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/git/tutorial/installation/</guid>
+      <description>&lt;h2 id=&#34;安装-git&#34;&gt;安装 Git&lt;/h2&gt;
+&lt;h3 id=&#34;linux&#34;&gt;Linux&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;windows&#34;&gt;Windows&lt;/h3&gt;
+&lt;p&gt;直接从&lt;a href=&#34;https://git-scm.com/downloads&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方网站&lt;/a&gt;下载安装。&lt;/p&gt;
+&lt;h2 id=&#34;git-基本配置&#34;&gt;Git 基本配置&lt;/h2&gt;
+&lt;h3 id=&#34;设置用户名和邮箱&#34;&gt;设置用户名和邮箱&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.name &lt;span class=&#34;s2&#34;&gt;&amp;#34;Your Name&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.email email@example.com &lt;span class=&#34;c1&#34;&gt;#邮箱不需要引号&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;配置完成后，可以查看是否配置成功：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global --list 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;设置-ssh-key&#34;&gt;设置 ssh key&lt;/h3&gt;
+&lt;p&gt;执行以下命令生成秘钥：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-keygen -t rsa -C &lt;span class=&#34;s2&#34;&gt;&amp;#34;email@example.com&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;执行命令后需要进行3次或4次确认：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;确认秘钥的保存路径（一般为 &lt;code&gt;~/.ssh/&lt;/code&gt;，如果不需要改路径则直接回车）；&lt;/li&gt;
+&lt;li&gt;如果上一步置顶的保存路径下已经有秘钥文件，则需要确认是否覆盖（如果之前的秘钥不再需要则直接回车覆盖，如需要则手动拷贝到其他目录后再覆盖）；&lt;/li&gt;
+&lt;li&gt;创建密码（如果不需要密码则直接回车）；&lt;/li&gt;
+&lt;li&gt;确认密码；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在指定的保存路径下会生成2个名为 &lt;code&gt;id_rsa&lt;/code&gt; 和 &lt;code&gt;id_rsa.pub&lt;/code&gt; 的文件，前者为私钥，后者为公钥。私钥无论如何都不能泄露出去，公钥可以放心地告诉任何人。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat ~/.ssh/id_rsa.pub
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;登录 &lt;a href=&#34;https:github.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;，选择 &lt;code&gt;Settings -&amp;gt; SSH and GPG keys -&amp;gt; New SSH key&lt;/code&gt;，将公钥 &lt;code&gt;id_rsa.pub&lt;/code&gt; 中的内容拷贝进去，并取一个名称（名称应当好记并且能够唯一标识当前的电脑）保存。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git 本地仓库</title>
+      <link>https://bowenei.gitee.io/learn/git/tutorial/repository/</link>
+      <pubDate>Fri, 03 Dec 2021 10:03:39 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/git/tutorial/repository/</guid>
+      <description>&lt;h2 id=&#34;创建版本库&#34;&gt;创建版本库&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;即可在当前文件夹创建本地仓库。&lt;/p&gt;
+&lt;h2 id=&#34;把文件添加到版本库&#34;&gt;把文件添加到版本库&lt;/h2&gt;
+&lt;h3 id=&#34;暂存更改&#34;&gt;暂存更改&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add README.md &lt;span class=&#34;c1&#34;&gt;#将README.md文件添加到版本库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .         &lt;span class=&#34;c1&#34;&gt;#将已更改的所有文件添加到版本库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;提交更改&#34;&gt;提交更改&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;add README.md&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注意，&lt;code&gt;-m&lt;/code&gt; 参数后面是提交的说明，应当便于他人阅读。&lt;/p&gt;
+&lt;p&gt;一次 &lt;code&gt;commit&lt;/code&gt; 会将所有已经暂存的更改提交，因此一个好习惯是在对多个文件都做了修改后，根据需要分别暂存提交。不暂存而直接将所有更改提交是一个不好的习惯。&lt;/p&gt;
+&lt;h2 id=&#34;穿梭时光&#34;&gt;穿梭时光&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; 的强大之处就在于它就好像给了我们一个时间轴，让我们可以在过去和未来之间自由穿梭。要知道 &lt;strong&gt;Git&lt;/strong&gt; 是如何实现这一功能的，我们首先要了解工作区和暂存区的区别和联系。&lt;/p&gt;
+&lt;h3 id=&#34;工作区和暂存区&#34;&gt;工作区和暂存区&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;工作区&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通常就是指 &lt;strong&gt;Git&lt;/strong&gt; 仓库所在的文件目录，是我们直接可以看到的，也是我们工作时的载体。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;暂存区&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在每一个 &lt;strong&gt;Git&lt;/strong&gt; 仓库的根目录下都有一个隐藏文件夹，它就是版本库。而暂存区 &lt;code&gt;stage&lt;/code&gt; 就位于版本库中，它专门用来存放已经添加 &lt;code&gt;add&lt;/code&gt; 但还未提交 &lt;code&gt;commit&lt;/code&gt; 的修改。&lt;/p&gt;
+&lt;h3 id=&#34;撤销修改&#34;&gt;撤销修改&lt;/h3&gt;
+&lt;h4 id=&#34;修改未暂存&#34;&gt;修改未暂存&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout -- README.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;该命令可以直接将 &lt;code&gt;README.md&lt;/code&gt; 文件在&lt;strong&gt;工作区&lt;/strong&gt;的修改全部撤销，这里有以下两种情况：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;README.md&lt;/code&gt; 自修改后还未暂存，则直接撤销全部工作区修改会回到和上一个版本库一模一样的状态。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;README.md&lt;/code&gt; 暂存后又作了修改，则直接撤销全部工作区修改会回到刚刚暂存时的状态。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注：现在新的命令 &lt;code&gt;restore&lt;/code&gt; 取代 &lt;code&gt;checkout&lt;/code&gt; 命令，因为 &lt;code&gt;checkout&lt;/code&gt; 还有其他用途（后文详述）。而且，如果不加两个短横线，该命令就完全三另外一种操作了。为了不混淆，新版 &lt;strong&gt;Git&lt;/strong&gt; 提倡使用新的命令。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git restore README.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;修改已暂存&#34;&gt;修改已暂存&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reset HEAD README.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注意，这里的 &lt;code&gt;reset&lt;/code&gt; 命令的含义是将已暂存的修改撤销 &lt;code&gt;unstage&lt;/code&gt;，重新返回到上一个版本的状态。这里 &lt;code&gt;HEAD&lt;/code&gt; 表示最新的版本，在后文中，&lt;code&gt;HEAD&lt;/code&gt; 还会多次出现，并且含义可能各不相同。&lt;/p&gt;
+&lt;h3 id=&#34;版本回退&#34;&gt;版本回退&lt;/h3&gt;
+&lt;p&gt;当我们已经提交了修改之后，如果发现有问题想要撤销回到过去，结果发现并不是暂存区那样很容易就撤销了，应该怎么办？&lt;/p&gt;
+&lt;p&gt;首先，我们需要查看提交日志，使用 &lt;code&gt;git log&lt;/code&gt; 命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;commit 746eb565b0840bc5241d4e16e757bcdb2deec007 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;HEAD -&amp;gt; master, origin/master, origin/HEAD&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Author: Fourier-Ubuntu &amp;lt;zhoubw1999@126.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Date:   Tue Sep &lt;span class=&#34;m&#34;&gt;29&lt;/span&gt; 12:58:16 &lt;span class=&#34;m&#34;&gt;2020&lt;/span&gt; +0800
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    add README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;commit f27f2ad514235263bbe539a9bd3daff9e652a302
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Author: Fourier &amp;lt;zhoubw1999@126.com&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Date:   Fri Sep &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt; 16:04:24 &lt;span class=&#34;m&#34;&gt;2020&lt;/span&gt; +0800
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    update README.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;commit&lt;/code&gt; 后面的一大串十六进制数是通过SHA1哈希算法计算出来的，可以唯一确定一次提交。如果我们想要回到当前版本的上一个版本，可以使用如下命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reset --hard 746eb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reset --hard HEAD^
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;注&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;直接写哈希值只需要写几位即可，&lt;strong&gt;Git&lt;/strong&gt; 会自动推断是哪一次提交。&lt;/li&gt;
+&lt;li&gt;在 &lt;code&gt;HEAD&lt;/code&gt; 的右上角加 &lt;code&gt;^&lt;/code&gt; 表示它的上一个版本，如果加2个则表示它的上一个版本的上一个版本，以此类推。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;head-指针&#34;&gt;HEAD 指针&lt;/h3&gt;
+&lt;p&gt;本节我们要来彻底弄清楚 &lt;code&gt;HEAD&lt;/code&gt; 的含义，并且了解 &lt;strong&gt;Git&lt;/strong&gt; 版本控制的机制。这一次，&lt;code&gt;HEAD&lt;/code&gt; 又有了新的称呼——指针。要理解 &lt;code&gt;HEAD&lt;/code&gt; 指针，我们需要理解 &lt;strong&gt;Git&lt;/strong&gt; 版本控制的时间线机制。&lt;/p&gt;
+&lt;p&gt;在 &lt;strong&gt;Git&lt;/strong&gt; 中，每一次提交意味着沿着时间线前进一步，来到一个新的时间点。换句话说，每一次提交都和一个时间点一一对应。每当提交完成后，&lt;code&gt;HEAD&lt;/code&gt; 指针会指向新的时间点。也就是说，&lt;code&gt;HEAD&lt;/code&gt; 始终指向当前版本库。因此，要实现版本回退，只需要修改 &lt;code&gt;HEAD&lt;/code&gt; 指针即可。&lt;/p&gt;
+&lt;h3 id=&#34;重返未来&#34;&gt;重返未来&lt;/h3&gt;
+&lt;p&gt;在回退版本后，又发现自己原来写得没有问题，想要再回到最一开始都提交的状态，就需要再次重返未来。但是，当我们再次使用 &lt;code&gt;git log&lt;/code&gt; 查看历史记录时，却发现 &lt;code&gt;HEAD&lt;/code&gt; 指针后的所有版本库都不见了！这可如何是好？&lt;/p&gt;
+&lt;p&gt;这个时候，查看命令历史记录命令 &lt;code&gt;git reflog&lt;/code&gt; 就派上用场了：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;746eb56 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;HEAD -&amp;gt; master, origin/master, origin/HEAD&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; HEAD@&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;0&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;: commit: update README.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;f27f2ad HEAD@&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;: add README.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这样，再用 &lt;code&gt;git reset&lt;/code&gt; 命令就能够重返未来了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git 远程仓库</title>
+      <link>https://bowenei.gitee.io/learn/git/tutorial/remote/</link>
+      <pubDate>Fri, 03 Dec 2021 10:05:35 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/git/tutorial/remote/</guid>
+      <description>&lt;h2 id=&#34;添加远程仓库&#34;&gt;添加远程仓库&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote add origin git@server-name:path/repo-name.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此时可以查看远程仓库信息：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote -v		&lt;span class=&#34;c1&#34;&gt;#显示更详细的信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;注&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;origin&lt;/code&gt; 是远程仓库的名字，不是参数。当然，也可以换成别的名字，但是 &lt;code&gt;origin&lt;/code&gt; 让人一看就是远程仓库的意思。如果一个本地仓库需要关联至少两个远程仓库，应当起两个不同的名字以示区别。&lt;/li&gt;
+&lt;li&gt;后面的地址是使用ssh协议的地址，我们非常建议使用ssh地址，因为它是非对称加密，稳定安全。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;推送本地仓库&#34;&gt;推送本地仓库&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;注意，这里 &lt;code&gt;master&lt;/code&gt; 的含义是（主）分支，这将在后文详述。通常情况下，默认只有一个主分支。如果需要推送到其他分支，应当指定其名称。&lt;/p&gt;
+&lt;p&gt;如果是刚刚关联的远程仓库，一般需要使用下面的命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push -u origin master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;-u&lt;/code&gt; 参数的意思是，将本地的 &lt;code&gt;master&lt;/code&gt; 分支和远程的 &lt;code&gt;master&lt;/code&gt; 分支关联起来。使用 &lt;code&gt;-u&lt;/code&gt; 参数后，可以简化推送命令 &lt;code&gt;git push&lt;/code&gt;。即，本地是在哪个分支上，就推送到远程的哪个分支上去。&lt;/p&gt;
+&lt;h2 id=&#34;从远程仓库克隆&#34;&gt;从远程仓库克隆&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone git@server-name:path/repo-name.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;会在当前文件夹下创建一个名为 &lt;code&gt;repo-name&lt;/code&gt; 的本地仓库。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git 分支管理</title>
+      <link>https://bowenei.gitee.io/learn/git/tutorial/branch/</link>
+      <pubDate>Fri, 03 Dec 2021 10:06:44 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/git/tutorial/branch/</guid>
+      <description>&lt;h2 id=&#34;分支的基本操作&#34;&gt;分支的基本操作&lt;/h2&gt;
+&lt;h3 id=&#34;创建分支&#34;&gt;创建分支&lt;/h3&gt;
+&lt;p&gt;在版本回退一章中，我们知道，每次提交，&lt;strong&gt;Git&lt;/strong&gt; 都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在 &lt;strong&gt;Git&lt;/strong&gt; 里，这个分支叫主分支，即 &lt;code&gt;master&lt;/code&gt; 分支。&lt;code&gt;HEAD&lt;/code&gt; 严格来说不是指向提交，而是指向 &lt;code&gt;master&lt;/code&gt;，&lt;code&gt;master&lt;/code&gt; 才是指向提交的，所以，&lt;code&gt;HEAD&lt;/code&gt; 指向的就是当前分支。&lt;/p&gt;
+&lt;p&gt;一开始的时候，&lt;code&gt;master&lt;/code&gt; 分支是一条线，&lt;strong&gt;Git&lt;/strong&gt; 用 &lt;code&gt;master&lt;/code&gt; 指向最新的提交，再用 &lt;code&gt;HEAD&lt;/code&gt; 指向 &lt;code&gt;master&lt;/code&gt;，就能确定当前分支，以及当前分支的提交点。每次提交，&lt;code&gt;master&lt;/code&gt; 分支都会向前移动一步，这样，随着你不断提交，&lt;code&gt;master&lt;/code&gt; 分支的线也越来越长。&lt;/p&gt;
+&lt;p&gt;现在我们来创建一个新的分支 &lt;code&gt;dev&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout -b dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;它相当于以下两条命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch			&lt;span class=&#34;c1&#34;&gt;#可以使用此命令列出所有分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;合并分支&#34;&gt;合并分支&lt;/h3&gt;
+&lt;p&gt;当我们在 &lt;code&gt;dev&lt;/code&gt; 分支下进行开发时，会修改本地仓库的一些文件。此时如果切换回主分支：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;会发现刚才工作编辑的文件都丢失了，因为那个提交是在 &lt;code&gt;dev&lt;/code&gt; 分支上，而 &lt;code&gt;master&lt;/code&gt; 分支此刻的提交点并没有变。&lt;/p&gt;
+&lt;p&gt;现在，我们把 &lt;code&gt;dev&lt;/code&gt; 分支的工作成果合并到 &lt;code&gt;master&lt;/code&gt; 分支上：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git merge dev		&lt;span class=&#34;c1&#34;&gt;#合并指定分支到当前分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;快进模式&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Updating d46f35e..b17d20e
+Fast-forward
+ readme.txt | 1 +
+ 1 file changed, 1 insertion(+)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;注意到上面的 &lt;code&gt;Fast-forward&lt;/code&gt; 信息，&lt;strong&gt;Git&lt;/strong&gt; 告诉我们，这次合并是“快进模式”，也就是直接把 &lt;code&gt;master&lt;/code&gt; 指向 &lt;code&gt;dev&lt;/code&gt; 的当前提交，所以合并速度非常快。&lt;/p&gt;
+&lt;p&gt;当然，也不是每次合并都能 &lt;code&gt;Fast-forward&lt;/code&gt;，我们后面会讲其他方式的合并。&lt;/p&gt;
+&lt;h3 id=&#34;删除分支&#34;&gt;删除分支&lt;/h3&gt;
+&lt;p&gt;合并完成后，就可以放心地删除 &lt;code&gt;dev&lt;/code&gt; 分支了：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch -d dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;切换分支&#34;&gt;切换分支&lt;/h3&gt;
+&lt;p&gt;现在 &lt;strong&gt;Git&lt;/strong&gt; 建议使用 &lt;code&gt;switch&lt;/code&gt; 命令来切换分支，一来是为了更容易理解，二来前面讲过的撤销修改则是 &lt;code&gt;git checkout -- &amp;lt;file&amp;gt;&lt;/code&gt;，同一个命令，有两种作用，确实有点令人迷惑。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git switch -c dev	&lt;span class=&#34;c1&#34;&gt;#创建并切换到新的dev分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git switch master	&lt;span class=&#34;c1&#34;&gt;#直接切换到已有的master分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;解决冲突&#34;&gt;解决冲突&lt;/h2&gt;
+&lt;p&gt;人生不如意之事十之八九，合并分支往往也不是一帆风顺的。&lt;/p&gt;
+&lt;p&gt;现在我们的仓库下有一个文本文件 &lt;code&gt;readme.txt&lt;/code&gt;，内容为：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Creating a new branch is quick and simple.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;准备新的 &lt;code&gt;feature1&lt;/code&gt; 分支，继续我们的新分支开发：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git switch -c feature1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Switched to a new branch &lt;span class=&#34;s1&#34;&gt;&amp;#39;feature1&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;修改 &lt;code&gt;readme.txt&lt;/code&gt; 最后一行，改为：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Creating a new branch is quick AND simple.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在 &lt;code&gt;feature1&lt;/code&gt; 分支上提交：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git add readme.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;AND simple&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;feature1 14096d0&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; AND simple
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; file changed, &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; insertion&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;+&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; deletion&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;切换到 &lt;code&gt;master&lt;/code&gt; 分支：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git switch master
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Switched to branch &lt;span class=&#34;s1&#34;&gt;&amp;#39;master&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Your branch is ahead of &lt;span class=&#34;s1&#34;&gt;&amp;#39;origin/master&amp;#39;&lt;/span&gt; by &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; commit.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;use &lt;span class=&#34;s2&#34;&gt;&amp;#34;git push&amp;#34;&lt;/span&gt; to publish your &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; commits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; 还会自动提示我们当前 &lt;code&gt;master&lt;/code&gt; 分支比远程的 &lt;code&gt;master&lt;/code&gt; 分支要超前1个提交。&lt;/p&gt;
+&lt;p&gt;在 &lt;code&gt;master&lt;/code&gt; 分支上把 &lt;code&gt;readme.txt&lt;/code&gt; 文件的最后一行改为：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Creating a new branch is quick &amp;amp; simple.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;提交：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git add readme.txt 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;amp; simple&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;master 5dc6824&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt; simple
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; file changed, &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; insertion&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;+&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; deletion&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;现在，&lt;code&gt;master&lt;/code&gt; 分支和 &lt;code&gt;feature1&lt;/code&gt; 分支各自都分别有新的提交，变成了这样：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.liaoxuefeng.com/files/attachments/919023000423040/0&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;当在不同的分支中对同一个文件的同一个地方作了不同的修改，像例子中把小写的 &lt;code&gt;and&lt;/code&gt; 分别改成大写的 &lt;code&gt;AND&lt;/code&gt; 和 &lt;code&gt;&amp;amp;&lt;/code&gt;，&lt;strong&gt;Git&lt;/strong&gt; 无法执行“快速合并”，只能试图把各自的修改合并起来，但这种合并就可能会有冲突，我们试试看：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git merge feature1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Auto-merging readme.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CONFLICT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;content&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: Merge conflict in readme.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Automatic merge failed&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; fix conflicts and &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt; commit the result.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;果然冲突了！ &lt;strong&gt;Git&lt;/strong&gt; 告诉我们，&lt;code&gt;readme.txt&lt;/code&gt; 文件存在冲突，必须手动解决冲突后再提交。&lt;code&gt;git status&lt;/code&gt; 也可以告诉我们冲突的文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git status
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;On branch master
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Your branch is ahead of &lt;span class=&#34;s1&#34;&gt;&amp;#39;origin/master&amp;#39;&lt;/span&gt; by &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; commits.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;use &lt;span class=&#34;s2&#34;&gt;&amp;#34;git push&amp;#34;&lt;/span&gt; to publish your &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; commits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;You have unmerged paths.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;fix conflicts and run &lt;span class=&#34;s2&#34;&gt;&amp;#34;git commit&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;use &lt;span class=&#34;s2&#34;&gt;&amp;#34;git merge --abort&amp;#34;&lt;/span&gt; to abort the merge&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Unmerged paths:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;use &lt;span class=&#34;s2&#34;&gt;&amp;#34;git add &amp;lt;file&amp;gt;...&amp;#34;&lt;/span&gt; to mark resolution&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	both modified:   readme.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;no changes added to commit &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;use &lt;span class=&#34;s2&#34;&gt;&amp;#34;git add&amp;#34;&lt;/span&gt; and/or &lt;span class=&#34;s2&#34;&gt;&amp;#34;git commit -a&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;我们可以直接查看 &lt;code&gt;readme.txt&lt;/code&gt; 的内容：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt; **Git**  is a distributed version control system.
+ **Git**  is free software distributed under the GPL.
+ **Git**  has a mutable index called stage.
+ **Git**  tracks changes of files.
+&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD
+Creating a new branch is quick &amp;amp; simple.
+=======
+Creating a new branch is quick AND simple.
+&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; feature1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; 用 &lt;code&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&lt;/code&gt;，&lt;code&gt;=======&lt;/code&gt;，&lt;code&gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt; 标记出不同分支的内容，我们修改如下后保存：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Creating a new branch is quick and simple.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;再提交：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git add readme.txt 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;conflict fixed&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;master cf810e4&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; conflict fixed
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;现在，&lt;code&gt;master&lt;/code&gt; 分支和 &lt;code&gt;feature1&lt;/code&gt; 分支变成了下图所示：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.liaoxuefeng.com/files/attachments/919023031831104/0&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;用带参数的 &lt;code&gt;git log&lt;/code&gt; 也可以看到分支的合并情况：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git log --graph --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;oneline --abbrev-commit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*   cf810e4 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;HEAD -&amp;gt; master&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; conflict fixed
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\ &lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; * 14096d0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;feature1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; AND simple
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 5dc6824 &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt; simple
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;/  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* b17d20e branch &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* d46f35e &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;origin/master&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; remove test.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* b84166e add test.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* 519219b git tracks changes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* e43a48b understand how stage works
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* 1094adb append GPL
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* e475afc add distributed
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* eaadf4e wrote a readme file
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最后，删除 &lt;code&gt;feature1&lt;/code&gt; 分支：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git branch -d feature1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Deleted branch feature1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;was 14096d0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;分支管理策略&#34;&gt;分支管理策略&lt;/h2&gt;
+&lt;h3 id=&#34;禁用快进模式&#34;&gt;禁用快进模式&lt;/h3&gt;
+&lt;p&gt;通常，合并分支时，如果可能，&lt;strong&gt;Git&lt;/strong&gt; 会用 &lt;code&gt;Fast forward&lt;/code&gt; 模式，但这种模式下，删除分支后，会丢掉分支信息。&lt;/p&gt;
+&lt;p&gt;如果要强制禁用 &lt;code&gt;Fast forward&lt;/code&gt; 模式，&lt;strong&gt;Git&lt;/strong&gt; 就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git merge --no-ff -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;merge with no-ff&amp;#34;&lt;/span&gt; dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;因为本次合并要创建一个新的commit，所以加上 &lt;code&gt;-m&lt;/code&gt; 参数，把commit描述写进去。&lt;/p&gt;
+&lt;h3 id=&#34;新功能分支&#34;&gt;新功能分支&lt;/h3&gt;
+&lt;p&gt;软件开发中，总有无穷无尽的新的功能要不断添加进来。当我们在 &lt;code&gt;dev&lt;/code&gt; 分支上工作时，突然项目经理下了一个新任务，要实现一个名为 &lt;code&gt;Make America Grete Again&lt;/code&gt; 的新功能。&lt;/p&gt;
+&lt;p&gt;添加一个新功能时，你肯定不希望因为一些实验性质的代码，把主分支搞乱了，所以，每添加一个新功能，最好新建一个 &lt;code&gt;feature&lt;/code&gt; 分支，在上面开发，完成后，合并，最后，删除该 &lt;code&gt;feature&lt;/code&gt; 分支。&lt;/p&gt;
+&lt;p&gt;准备开发，创建新分支：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git switch -c feature-MAGA
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;你很牛逼，5分钟就实现了这个功能并且测试通过提交，然后你切回 &lt;code&gt;dev&lt;/code&gt; 分支准备合并。突然，项目经理说经（川）费（普）不（败）足（选），新功能必须取消！&lt;/p&gt;
+&lt;p&gt;虽然白干了，但是这个包含机密资料的分支还是必须就地销毁：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch -d feature-MAGA
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此时是无法删除分支的，因为 &lt;code&gt;feature-MAGA&lt;/code&gt; 分支还没有被合并。如果删除，将丢失掉修改，如果要强行删除，需要使用大写的 &lt;code&gt;-D&lt;/code&gt; 参数：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch -D feature-MAGA
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;小结&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开发一个新 &lt;code&gt;feature&lt;/code&gt;，最好新建一个分支；&lt;/li&gt;
+&lt;li&gt;如果要丢弃一个没有被合并过的分支，可以通过 &lt;code&gt;git branch -D &amp;lt;name&amp;gt;&lt;/code&gt; 强行删除。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;多人协作&#34;&gt;多人协作&lt;/h2&gt;
+&lt;h3 id=&#34;分情况使用分支&#34;&gt;分情况使用分支&lt;/h3&gt;
+&lt;p&gt;实际的软件开发过程中一定会涉及到多人协作，每个人都负责自己开发的部分。即使软件耦合程度足够低，任何一个人的开发出现问题都会影响到整个软件开发的进度。&lt;/p&gt;
+&lt;p&gt;使用分布式版本控制系统 &lt;strong&gt;Git&lt;/strong&gt; 是一个好办法。&lt;strong&gt;Git&lt;/strong&gt; 提供了分支这样一个非常强大的功能，使得多人协作开发软件的效率非常之高。&lt;/p&gt;
+&lt;p&gt;分支在本地和远程可以具有对应关系，例如 &lt;code&gt;master&lt;/code&gt; 分支，也可能只存在于本地。那么，哪些分支需要推送，哪些不需要呢？存在以下几个原则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;master&lt;/code&gt; 分支是主分支，因此要时刻与远程同步；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dev&lt;/code&gt; 分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；&lt;/li&gt;
+&lt;li&gt;bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;feature&lt;/code&gt; 分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt; 鼓励在开发过程中使用分支，随着开发的进度逐步走向尾声，分支会逐渐合并，最后往往只剩下一个 &lt;code&gt;master&lt;/code&gt; 分支。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当其他同事推送了他的工作后，正确的做法是先拉取他的修改与本地合并，然后再将自己的工作推送。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git pull origin dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;它相当于：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git fetch origin dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git merge dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显然，如果直接 &lt;code&gt;pull&lt;/code&gt;，很可能会产生冲突，需要手动解决。&lt;/p&gt;
+&lt;h3 id=&#34;多人协作的工作模式&#34;&gt;多人协作的工作模式&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;首先，可以试图用 &lt;code&gt;git push origin &amp;lt;branch-name&amp;gt;&lt;/code&gt; 推送自己的修改；&lt;/li&gt;
+&lt;li&gt;如果推送失败，则因为远程分支比你的本地更新，需要先用 &lt;code&gt;git pull&lt;/code&gt; 试图合并；&lt;/li&gt;
+&lt;li&gt;如果合并有冲突，则解决冲突，并在本地提交；&lt;/li&gt;
+&lt;li&gt;没有冲突或者解决掉冲突后，再用 &lt;code&gt;git push origin &amp;lt;branch-name&amp;gt;&lt;/code&gt; 推送就能成功！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果 &lt;code&gt;git pull&lt;/code&gt; 提示 &lt;code&gt;no tracking information&lt;/code&gt;，则说明本地分支和远程分支的链接关系没有创建，用命令 &lt;code&gt;git branch --set-upstream-to &amp;lt;branch-name&amp;gt; origin/&amp;lt;branch-name&amp;gt;&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;拉取请求&#34;&gt;拉取请求&lt;/h3&gt;
+&lt;p&gt;在远程仓库中，我们可以发起 &lt;code&gt;Pull Request&lt;/code&gt;，表示远程的某一分支向当前分支合并。&lt;/p&gt;
+&lt;p&gt;这种操作通常会发生在 &lt;code&gt;dev&lt;/code&gt; 分支向 &lt;code&gt;master&lt;/code&gt; 分支合并的时候。一般地，&lt;code&gt;master&lt;/code&gt; 分支下的项目是绝对没有任何bug的，是具有一定功能或者框架的软件。开发者们通常在 &lt;code&gt;dev&lt;/code&gt; 分支上协作开发，在这个过程中会出现bug（主要是耦合上的，因为内聚上不可能推送上来）或者是冲突。在解决了这些问题之后，一般能够测试通过，于是任务进度继续向前推进，需要将 &lt;code&gt;dev&lt;/code&gt; 分支合并到 &lt;code&gt;master&lt;/code&gt; 分支。这样才能够绝对确保至少有一个 &lt;code&gt;master&lt;/code&gt; 分支不会出现任何问题。&lt;/p&gt;
+&lt;p&gt;因此，开发团队常常将 &lt;code&gt;master&lt;/code&gt; 分支设置为不可直接 &lt;code&gt;push&lt;/code&gt;，也就是说任何开发人员都只能拉取主分支而不能推送自己的代码到主分支。于是，修改主分支的方法只剩下发起 &lt;code&gt;Pull Request&lt;/code&gt; 一种，大大提高了安全性。一般来说，项目组的组长在开发分支测试通过后会发起 &lt;code&gt;Pull Request&lt;/code&gt; 合并到主分支。如果是开源软件的多人协作，则可能由独立的个人开发者发起 &lt;code&gt;Pull Request&lt;/code&gt;，然后他可以请求团队成员核查并确认。只有这些其他成员同意了才能够成功合并。&lt;/p&gt;
+&lt;h3 id=&#34;变基技术&#34;&gt;变基技术&lt;/h3&gt;
+&lt;p&gt;多人在同一个分支上协作时，很容易出现冲突。即使没有冲突，后 &lt;code&gt;push&lt;/code&gt; 的童鞋不得不先 &lt;code&gt;pull&lt;/code&gt;，在本地合并，然后才能 &lt;code&gt;push&lt;/code&gt; 成功。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt; 有没有办法让提交历史是一条干净的直线？这就是 &lt;code&gt;rebase&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git rebase
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;rebase&lt;/code&gt; 的原理是把我们本地的提交“挪动”了位置，但是最终提交的内容是一样的。这就是 &lt;code&gt;rebase&lt;/code&gt; 操作的特点：把分叉的提交历史“整理”成一条直线，看上去更直观。缺点是本地的分叉提交已经被修改过了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git 标签管理</title>
+      <link>https://bowenei.gitee.io/learn/git/tutorial/tag/</link>
+      <pubDate>Fri, 03 Dec 2021 10:07:46 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/git/tutorial/tag/</guid>
+      <description>&lt;p&gt;发布一个版本时，我们通常先在版本库中打一个标签 &lt;code&gt;tag&lt;/code&gt;，这样，就唯一确定了打标签时刻的版本。将来无论什么时候，取某个标签的版本，就是把那个打标签的时刻的历史版本取出来。所以，标签也是版本库的一个快照。&lt;/p&gt;
+&lt;p&gt;实际上，标签就是一个特定的提交，本质上是指向某一个 &lt;code&gt;commit&lt;/code&gt; 的指针常量。标签与某个版本绑定在一起，是一个让人容易记住的有意义的名字。&lt;/p&gt;
+&lt;h2 id=&#34;创建标签&#34;&gt;创建标签&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git tag v1.0			&lt;span class=&#34;c1&#34;&gt;#创建版本为v1.0的标签&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git tag v0.9 f52c633	&lt;span class=&#34;c1&#34;&gt;#指定特定的commit哈希值为v0.9的标签&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以直接使用 &lt;code&gt;git tag&lt;/code&gt; 查看所有已创建的标签：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git tag
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;还可以创建带有说明的标签，用 &lt;code&gt;-a&lt;/code&gt; 指定标签名，&lt;code&gt;-m&lt;/code&gt; 指定说明文字：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git tag -a v0.1 -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;version 0.1 released&amp;#34;&lt;/span&gt; 1094adb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;用命令 &lt;code&gt;git show &amp;lt;tagname&amp;gt;&lt;/code&gt; 可以看到说明文字：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git show v0.1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;操作标签&#34;&gt;操作标签&lt;/h2&gt;
+&lt;p&gt;如果标签打错了，也可以删除：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git tag -d v0.1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果要推送某个标签到远程，使用命令 &lt;code&gt;git push origin &amp;lt;tagname&amp;gt;&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin v1.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin --tags	&lt;span class=&#34;c1&#34;&gt;#推送本地所有标签&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果标签已经推送到远程，要删除远程标签就麻烦一点，先从本地删除，再 &lt;code&gt;push&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git tag -d v0.9
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin :refs/tags/v0.9
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

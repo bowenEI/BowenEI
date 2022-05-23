@@ -1,0 +1,1274 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Bowen Zhou" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/python/thread/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#bbdefb" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://bowenei.gitee.io/learn/python/thread/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+  <meta property="og:url" content="https://bowenei.gitee.io/learn/python/thread/" />
+  <meta property="og:title" content="Python 多线程编程 | Bowen&#39;s Academic Home" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-01-01T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-01-01T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Python 多线程编程 | Bowen&#39;s Academic Home</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="fedd782023fdfcd81d27b73fbe5b610e" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+
+  
+
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blogs"><span>Blogs</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallery"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/learn/"><span>Learn</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/bowenEI/" data-toggle="tooltip" data-placement="bottom" title="Follow me on Github" target="_blank" rel="noopener" aria-label="Follow me on Github">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Python
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/learn/"><i class="fas fa-arrow-left pr-1"></i>Learn</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/python/">Python</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/python/list/">Python 列表</a></li>
+
+
+
+  <li class=""><a href="/learn/python/tuple/">Python 元组</a></li>
+
+
+
+  <li class=""><a href="/learn/python/dict/">Python 字典</a></li>
+
+
+
+  <li class=""><a href="/learn/python/set/">Python 集合</a></li>
+
+
+
+  <li class=""><a href="/learn/python/str/">Python 字符串</a></li>
+
+
+
+  <li class=""><a href="/learn/python/function/">Python 函数</a></li>
+
+
+
+  <li class=""><a href="/learn/python/exception/">Python 异常处理</a></li>
+
+
+
+  <li class=""><a href="/learn/python/magic/">Python 魔法函数</a></li>
+
+
+
+  <li class=""><a href="/learn/python/o-o/">Python 面向对象</a></li>
+
+
+
+  <li class="active"><a href="/learn/python/thread/">Python 多线程编程</a></li>
+
+
+
+  <li class=""><a href="/learn/python/regex/">Python 正则表达式</a></li>
+
+
+
+  <li class=""><a href="/learn/python/json/">Python 处理 json 数据</a></li>
+
+
+
+  <li class=""><a href="/learn/python/ipython/">iPython: Python 交互式 Shell</a></li>
+
+
+
+  <li class=""><a href="/learn/python/os/">Python 操作系统调用</a></li>
+
+
+
+  <li class=""><a href="/learn/python/decorator/">Python 装饰器</a></li>
+
+
+
+  <li class=""><a href="/learn/python/pkg-manager/">Python 包管理器</a></li>
+
+
+
+  <li class=""><a href="/learn/python/sys/">Python 系统环境交互</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#_thread-模块">_thread 模块</a></li>
+    <li><a href="#threading-模块">threading 模块</a></li>
+    <li><a href="#线程同步">线程同步</a></li>
+    <li><a href="#线程优先级队列">线程优先级队列</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>Python 多线程编程</h1>
+
+          <div class="article-style">
+            <p>多线程类似于同时执行多个不同程序，多线程运行有如下优点：</p>
+<ul>
+<li>使用线程可以把占据长时间的程序中的任务放到后台去处理。</li>
+<li>用户界面可以更加吸引人，比如用户点击了一个按钮去触发某些事件的处理，可以弹出一个进度条来显示处理的进度。</li>
+<li>程序的运行速度可能加快。</li>
+<li>在一些等待的任务实现上如用户输入、文件读写和网络收发数据等，线程就比较有用了。在这种情况下我们可以释放一些珍贵的资源如内存占用等等。</li>
+</ul>
+<p>每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口。但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制。</p>
+<p>每个线程都有他自己的一组CPU寄存器，称为线程的上下文，该上下文反映了线程上次运行该线程的CPU寄存器的状态。</p>
+<p>指令指针和堆栈指针寄存器是线程上下文中两个最重要的寄存器，线程总是在进程得到上下文中运行的，这些地址都用于标志拥有线程的进程地址空间中的内存。</p>
+<ul>
+<li>线程可以被抢占（中断）。</li>
+<li>在其他线程正在运行时，线程可以暂时搁置（也称为睡眠），这就是线程的退让。</li>
+</ul>
+<p>线程可以分为:</p>
+<ul>
+<li>内核线程：由操作系统内核创建和撤销。</li>
+<li>用户线程：不需要内核支持而在用户程序中实现的线程。</li>
+</ul>
+<h2 id="_thread-模块">_thread 模块</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">_thread</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">_thread.start_new_thread(
+</span></span></span><span class="line"><span class="cl"><span class="s2">    function,       # 线程函数
+</span></span></span><span class="line"><span class="cl"><span class="s2">    args,           # 传递给线程函数的参数，必须是tuple类型
+</span></span></span><span class="line"><span class="cl"><span class="s2">    [kwargs]        # 可选参数
+</span></span></span><span class="line"><span class="cl"><span class="s2">)
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 为线程定义一个函数</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="n">threadName</span><span class="p">,</span> <span class="n">delay</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">threadName</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())))</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2"> finished at </span><span class="si">%s</span><span class="s2">.&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">threadName</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建两个线程</span>
+</span></span><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">_thread</span><span class="o">.</span><span class="n">start_new_thread</span><span class="p">(</span><span class="n">print_time</span><span class="p">,</span> <span class="p">(</span><span class="s2">&#34;Thread-1&#34;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">_thread</span><span class="o">.</span><span class="n">start_new_thread</span><span class="p">(</span><span class="n">print_time</span><span class="p">,</span> <span class="p">(</span><span class="s2">&#34;Thread-2&#34;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">except</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Error: 无法启动线程&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Thread-1: Sun Jan 31 16:42:28 2021
+Thread-2: Sun Jan 31 16:42:30 2021
+Thread-1: Sun Jan 31 16:42:30 2021
+Thread-1: Sun Jan 31 16:42:32 2021
+Thread-2: Sun Jan 31 16:42:34 2021
+Thread-1: Sun Jan 31 16:42:34 2021
+Thread-1: Sun Jan 31 16:42:36 2021
+Thread-1 finished at Sun Jan 31 16:42:36 2021.
+Thread-2: Sun Jan 31 16:42:38 2021
+Thread-2: Sun Jan 31 16:42:42 2021
+Thread-2: Sun Jan 31 16:42:46 2021
+Thread-2 finished at Sun Jan 31 16:42:46 2021.
+</code></pre>
+<h2 id="threading-模块">threading 模块</h2>
+<p>_thread 提供了低级别的、原始的线程以及一个简单的锁，它相比于 threading 模块的功能还是比较有限的。</p>
+<p>threading 模块除了包含 _thread 模块中的所有方法外，还提供的其他方法：</p>
+<ul>
+<li>threading.currentThread(): 返回当前的线程变量。</li>
+<li>threading.enumerate(): 返回一个包含正在运行的线程的list。正在运行指线程启动后、结束前，不包括启动前和终止后的线程。</li>
+<li>threading.activeCount(): 返回正在运行的线程数量，与len(threading.enumerate())有相同的结果。</li>
+</ul>
+<p>除了使用方法外，线程模块同样提供了Thread类来处理线程，Thread类提供了以下方法:</p>
+<ul>
+<li>run(): 用以表示线程活动的方法。</li>
+<li>start():启动线程活动。</li>
+<li>join([time]): 等待至线程中止。这阻塞调用线程直至线程的join()方法被调用中止、正常退出或者抛出未处理的异常，或者是可选的超时发生。</li>
+<li>isAlive(): 返回线程是否活动的。</li>
+<li>getName(): 返回线程名。</li>
+<li>setName(): 设置线程名。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">threading</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">exitFlag</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">myThread</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">threadID</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">counter</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">threadID</span> <span class="o">=</span> <span class="n">threadID</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span> <span class="p">(</span><span class="s2">&#34;开始线程：&#34;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">print_time</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">counter</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span> <span class="p">(</span><span class="s2">&#34;退出线程：&#34;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="n">threadName</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">counter</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">counter</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">exitFlag</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">threadName</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">threadName</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">counter</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建新线程</span>
+</span></span><span class="line"><span class="cl"><span class="n">thread1</span> <span class="o">=</span> <span class="n">myThread</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&#34;Thread-1&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">thread2</span> <span class="o">=</span> <span class="n">myThread</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&#34;Thread-2&#34;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 开启新线程</span>
+</span></span><span class="line"><span class="cl"><span class="n">thread1</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">thread2</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">thread1</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">thread2</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;退出主线程&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>开始线程：Thread-1
+开始线程：Thread-2
+Thread-1: Sun Jan 31 16:42:47 2021
+Thread-2: Sun Jan 31 16:42:48 2021Thread-1: Sun Jan 31 16:42:48 2021
+
+Thread-1: Sun Jan 31 16:42:49 2021
+Thread-2: Sun Jan 31 16:42:50 2021
+Thread-1: Sun Jan 31 16:42:50 2021
+Thread-1: Sun Jan 31 16:42:51 2021
+退出线程：Thread-1
+Thread-2: Sun Jan 31 16:42:52 2021
+Thread-2: Sun Jan 31 16:42:54 2021
+Thread-2: Sun Jan 31 16:42:56 2021
+退出线程：Thread-2
+退出主线程
+</code></pre>
+<h2 id="线程同步">线程同步</h2>
+<p>如果多个线程共同对某个数据修改，则可能出现不可预料的结果，为了保证数据的正确性，需要对多个线程进行同步。</p>
+<p>使用 Thread 对象的 Lock 和 Rlock 可以实现简单的线程同步，这两个对象都有 acquire 方法和 release 方法，对于那些需要每次只允许一个线程操作的数据，可以将其操作放到 acquire 和 release 方法之间。如下：</p>
+<p>多线程的优势在于可以同时运行多个任务（至少感觉起来是这样）。但是当线程需要共享数据时，可能存在数据不同步的问题。</p>
+<p>考虑这样一种情况：一个列表里所有元素都是0，线程&quot;set&quot;从后向前把所有元素改成1，而线程&quot;print&quot;负责从前往后读取列表并打印。</p>
+<p>那么，可能线程&quot;set&quot;开始改的时候，线程&quot;print&quot;便来打印列表了，输出就成了一半0一半1，这就是数据的不同步。为了避免这种情况，引入了锁的概念。</p>
+<p>锁有两种状态——锁定和未锁定。每当一个线程比如&quot;set&quot;要访问共享数据时，必须先获得锁定；如果已经有别的线程比如&quot;print&quot;获得锁定了，那么就让线程&quot;set&quot;暂停，也就是同步阻塞；等到线程&quot;print&quot;访问完毕，释放锁以后，再让线程&quot;set&quot;继续。</p>
+<p>经过这样的处理，打印列表时要么全部输出0，要么全部输出1，不会再出现一半0一半1的尴尬场面。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MyThread</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">threadID</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">counter</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">threadID</span> <span class="o">=</span> <span class="n">threadID</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;开启线程：&#34;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 获取锁，用于线程同步</span>
+</span></span><span class="line"><span class="cl">        <span class="n">threadLock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">print_time</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">counter</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 释放锁，开启下一个线程</span>
+</span></span><span class="line"><span class="cl">        <span class="n">threadLock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="n">threadName</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">counter</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">counter</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">threadName</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">counter</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">threadLock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">threads</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建新线程</span>
+</span></span><span class="line"><span class="cl"><span class="n">thread1</span> <span class="o">=</span> <span class="n">MyThread</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&#34;Thread-1&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">thread2</span> <span class="o">=</span> <span class="n">MyThread</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&#34;Thread-2&#34;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 开启新线程</span>
+</span></span><span class="line"><span class="cl"><span class="n">thread1</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">thread2</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加线程到线程列表</span>
+</span></span><span class="line"><span class="cl"><span class="n">threads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thread1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">threads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thread2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 等待所有线程完成</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">threads</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span> <span class="p">(</span><span class="s2">&#34;退出主线程&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>开启线程：Thread-1
+开启线程：Thread-2
+Thread-1: Sun Jan 31 16:42:57 2021
+Thread-1: Sun Jan 31 16:42:58 2021
+Thread-1: Sun Jan 31 16:42:59 2021
+Thread-2: Sun Jan 31 16:43:01 2021
+Thread-2: Sun Jan 31 16:43:03 2021
+Thread-2: Sun Jan 31 16:43:05 2021
+退出主线程
+</code></pre>
+<h2 id="线程优先级队列">线程优先级队列</h2>
+<p>Python 的 queue 模块中提供了同步的、线程安全的队列类，包括 FIFO（先入先出）队列 <code>Queue</code>，LIFO（后入先出）队列 <code>LifoQueue</code>，和优先级队列 <code>PriorityQueue</code>。</p>
+<p>这些队列都实现了锁原语，能够在多线程中直接使用，可以使用队列来实现线程间的同步。</p>
+<p>Queue 模块中的常用方法:</p>
+<ul>
+<li>Queue.qsize() 返回队列的大小</li>
+<li>Queue.empty() 如果队列为空，返回True,反之False</li>
+<li>Queue.full() 如果队列满了，返回True,反之False</li>
+<li>Queue.full 与 maxsize 大小对应</li>
+<li>Queue.get([block[, timeout]])获取队列，timeout等待时间</li>
+<li>Queue.get_nowait() 相当Queue.get(False)</li>
+<li>Queue.put(item) 写入队列，timeout等待时间</li>
+<li>Queue.put_nowait(item) 相当Queue.put(item, False)</li>
+<li>Queue.task_done() 在完成一项工作之后，Queue.task_done()函数向任务已经完成的队列发送一个信号</li>
+<li>Queue.join() 实际上意味着等到队列为空，再执行别的操作</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">queue</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">exitFlag</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">QueueThread</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">threadID</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">threadID</span> <span class="o">=</span> <span class="n">threadID</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">q</span> <span class="o">=</span> <span class="n">q</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;开启线程：&#34;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">process_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">q</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;退出线程：&#34;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">threadName</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="ow">not</span> <span class="n">exitFlag</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">queueLock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="ow">not</span> <span class="n">workQueue</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">            <span class="n">data</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="n">queueLock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2"> processing </span><span class="si">%s</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">threadName</span><span class="p">,</span> <span class="n">data</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">queueLock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">threadList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Thread-1&#34;</span><span class="p">,</span> <span class="s2">&#34;Thread-2&#34;</span><span class="p">,</span> <span class="s2">&#34;Thread-3&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">nameList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;One&#34;</span><span class="p">,</span> <span class="s2">&#34;Two&#34;</span><span class="p">,</span> <span class="s2">&#34;Three&#34;</span><span class="p">,</span> <span class="s2">&#34;Four&#34;</span><span class="p">,</span> <span class="s2">&#34;Five&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">queueLock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">workQueue</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">Queue</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">threads</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="n">threadID</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建新线程</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">tName</span> <span class="ow">in</span> <span class="n">threadList</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">thread</span> <span class="o">=</span> <span class="n">QueueThread</span><span class="p">(</span><span class="n">threadID</span><span class="p">,</span> <span class="n">tName</span><span class="p">,</span> <span class="n">workQueue</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">threads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thread</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">threadID</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 填充队列</span>
+</span></span><span class="line"><span class="cl"><span class="n">queueLock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">nameList</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">workQueue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">queueLock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 等待队列清空</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="ow">not</span> <span class="n">workQueue</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 通知线程是时候退出</span>
+</span></span><span class="line"><span class="cl"><span class="n">exitFlag</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 等待所有线程完成</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">threads</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;退出主线程&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>开启线程：Thread-1
+开启线程：Thread-2
+开启线程：Thread-3
+Thread-1 processing One
+Thread-3 processing TwoThread-2 processing Three
+
+Thread-1 processing Four
+Thread-3 processing Five
+退出线程：Thread-2
+退出线程：Thread-1
+退出线程：Thread-3
+退出主线程
+</code></pre>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/learn/python/o-o/" rel="next">Python 面向对象</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/learn/python/regex/" rel="prev">Python 正则表达式</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
+
+    
+    
+    
+      
+
+      
+      
+
+      
+
+      
+
+    
+
+    
+    
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
+
+    
+    
+    
+    
+    
+    
+      
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

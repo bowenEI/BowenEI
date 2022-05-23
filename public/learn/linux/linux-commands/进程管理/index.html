@@ -1,0 +1,1431 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Bowen Zhou" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/linux/linux-commands/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#bbdefb" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://bowenei.gitee.io/learn/linux/linux-commands/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+  <meta property="og:url" content="https://bowenei.gitee.io/learn/linux/linux-commands/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" />
+  <meta property="og:title" content="进程管理 | Bowen&#39;s Academic Home" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-10-29T19:02:25&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-10-29T19:02:25&#43;08:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>进程管理 | Bowen&#39;s Academic Home</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="9c9b7d2322eaccca1af0f84ac94b741b" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+
+  
+
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blogs"><span>Blogs</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallery"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/learn/"><span>Learn</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/bowenEI/" data-toggle="tooltip" data-placement="bottom" title="Follow me on Github" target="_blank" rel="noopener" aria-label="Follow me on Github">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Linux 常用命令一览
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/learn/"><i class="fas fa-arrow-left pr-1"></i>Learn</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/linux/">Linux</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/linux/linux-commands/">Linux 常用命令一览</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/linux/linux-commands/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/">文件管理</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/linux-commands/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91/">文档编辑</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/linux-commands/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">系统管理</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/linux-commands/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86/">软件包管理</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/linux-commands/%E5%A4%87%E4%BB%BD%E5%8E%8B%E7%BC%A9/">备份压缩</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/linux-commands/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/">网络通信</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/linux-commands/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/">权限管理</a></li>
+
+
+
+  <li class="active"><a href="/learn/linux/linux-commands/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/">进程管理</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/linux/ubuntu-desktop/">Ubuntu Desktop 快速部署</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/linux/ubuntu-desktop/install/">系统安装</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/ubuntu-desktop/apt-source/">更换软件源</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/ubuntu-desktop/oh-my-zsh/">终端美化</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/ubuntu-desktop/softwares/">必备软件</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/ubuntu-desktop/cuda/">CUDA</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/ubuntu-desktop/others/">其他注意事项</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ps-命令显示进程状态">ps 命令：显示进程状态</a></li>
+    <li><a href="#kill-命令杀死进程">kill 命令：杀死进程</a></li>
+    <li><a href="#killall-命令使用进程名称来杀死一组进程">killall 命令：使用进程名称来杀死一组进程</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>进程管理</h1>
+
+          <div class="article-style">
+            <h2 id="ps-命令显示进程状态">ps 命令：显示进程状态</h2>
+<p><code>ps</code> 命令是 process status 的缩写，<code>ps</code> 命令用于显示当前系统的进程状态。可以搭配 <code>kill</code> 指令随时中断、删除不必要的程序。</p>
+<p><code>ps</code> 命令是最基本同时也是非常强大的进程查看命令，使用该命令可以确定有哪些进程正在运行和运行的状态、进程是否结束、进程有没有僵死、哪些进程占用了过多的资源等等，总之大部分信息都是可以通过执行该命令得到的。</p>
+<p><strong>常用参数</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-a</td>
+<td>显示所有终端机下执行的程序，除了阶段作业领导者之外</td>
+</tr>
+<tr>
+<td>a</td>
+<td>显示现行终端机下的所有程序，包括其他用户的程序</td>
+</tr>
+<tr>
+<td>-A</td>
+<td>显示所有程序</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>显示CLS和PRI栏位</td>
+</tr>
+<tr>
+<td>c</td>
+<td>列出程序时，显示每个程序真正的指令名称，而不包含路径，选项或常驻服务的标示</td>
+</tr>
+<tr>
+<td>-C &lt;指令名称&gt;</td>
+<td>指定执行指令的名称，并列出该指令的程序的状况</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>显示所有程序，但不包括阶段作业领导者的程序</td>
+</tr>
+<tr>
+<td>-e</td>
+<td>此选项的效果和指定”A”选项相同</td>
+</tr>
+<tr>
+<td>e</td>
+<td>列出程序时，显示每个程序所使用的环境变量</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>显示UID,PPIP,C与STIME栏位</td>
+</tr>
+<tr>
+<td>f</td>
+<td>用ASCII字符显示树状结构，表达程序间的相互关系</td>
+</tr>
+<tr>
+<td>-g &lt;群组名称&gt;</td>
+<td>此选项的效果和指定”-G”选项相同，当亦能使用阶段作业领导者的名称来指定</td>
+</tr>
+<tr>
+<td>g</td>
+<td>显示现行终端机下的所有程序，包括群组领导者的程序</td>
+</tr>
+<tr>
+<td>-G &lt;群组识别码&gt;</td>
+<td>列出属于该群组的程序的状况，也可使用群组名称来指定</td>
+</tr>
+<tr>
+<td>h</td>
+<td>不显示标题列</td>
+</tr>
+<tr>
+<td>-H</td>
+<td>显示树状结构，表示程序间的相互关系</td>
+</tr>
+<tr>
+<td>-j或j</td>
+<td>采用工作控制的格式显示程序状况</td>
+</tr>
+<tr>
+<td>-l或l</td>
+<td>采用详细的格式来显示程序状况</td>
+</tr>
+<tr>
+<td>L</td>
+<td>列出栏位的相关信息</td>
+</tr>
+<tr>
+<td>-m或m</td>
+<td>显示所有的执行绪</td>
+</tr>
+<tr>
+<td>n</td>
+<td>以数字来表示USER和WCHAN栏位</td>
+</tr>
+<tr>
+<td>-N</td>
+<td>显示所有的程序，除了执行ps指令终端机下的程序之外</td>
+</tr>
+<tr>
+<td>-p &lt;程序识别码&gt;</td>
+<td>指定程序识别码，并列出该程序的状况</td>
+</tr>
+<tr>
+<td>p &lt;程序识别码&gt;</td>
+<td>此选项的效果和指定”-p”选项相同，只在列表格式方面稍有差异</td>
+</tr>
+<tr>
+<td>r</td>
+<td>只列出现行终端机正在执行中的程序</td>
+</tr>
+<tr>
+<td>-s &lt;阶段作业&gt;</td>
+<td>指定阶段作业的程序识别码，并列出隶属该阶段作业的程序的状况</td>
+</tr>
+<tr>
+<td>s</td>
+<td>采用程序信号的格式显示程序状况</td>
+</tr>
+<tr>
+<td>S</td>
+<td>列出程序时，包括已中断的子程序资料</td>
+</tr>
+<tr>
+<td>-t &lt;终端机编号&gt;</td>
+<td>指定终端机编号，并列出属于该终端机的程序的状况</td>
+</tr>
+<tr>
+<td>t &lt;终端机编号&gt;</td>
+<td>此选项的效果和指定”-t”选项相同，只在列表格式方面稍有差异</td>
+</tr>
+<tr>
+<td>-T</td>
+<td>显示现行终端机下的所有程序</td>
+</tr>
+<tr>
+<td>-u &lt;用户识别码&gt;</td>
+<td>此选项的效果和指定”-U”选项相同</td>
+</tr>
+<tr>
+<td>u</td>
+<td>以用户为主的格式来显示程序状况</td>
+</tr>
+<tr>
+<td>-U &lt;用户识别码&gt;</td>
+<td>列出属于该用户的程序的状况，也可使用用户名称来指定</td>
+</tr>
+<tr>
+<td>U &lt;用户名称&gt;</td>
+<td>列出属于该用户的程序的状况</td>
+</tr>
+<tr>
+<td>v</td>
+<td>采用虚拟内存的格式显示程序状况</td>
+</tr>
+<tr>
+<td>-V或V</td>
+<td>显示版本信息</td>
+</tr>
+<tr>
+<td>-w或w</td>
+<td>采用宽阔的格式来显示程序状况</td>
+</tr>
+<tr>
+<td>x</td>
+<td>显示所有程序，不以终端机来区分</td>
+</tr>
+<tr>
+<td>X</td>
+<td>采用旧式的Linux i386登陆格式显示程序状况</td>
+</tr>
+<tr>
+<td>-y</td>
+<td>配合选项”-l”使用时，不显示F(flag)栏位，并以RSS栏位取代ADDR栏位</td>
+</tr>
+<tr>
+<td>&ndash; &lt;程序识别码&gt;</td>
+<td>此选项的效果和指定”p”选项相同</td>
+</tr>
+<tr>
+<td>&ndash;cols &lt;每列字符数&gt;</td>
+<td>设置每列的最大字符数</td>
+</tr>
+<tr>
+<td>&ndash;columns &lt;每列字符数&gt;</td>
+<td>此选项的效果和指定”&ndash;cols”选项相同</td>
+</tr>
+<tr>
+<td>&ndash;cumulative</td>
+<td>此选项的效果和指定”S”选项相同</td>
+</tr>
+<tr>
+<td>&ndash;deselect</td>
+<td>此选项的效果和指定”-N”选项相同</td>
+</tr>
+<tr>
+<td>&ndash;forest</td>
+<td>此选项的效果和指定”f”选项相同</td>
+</tr>
+<tr>
+<td>&ndash;headers</td>
+<td>重复显示标题列</td>
+</tr>
+<tr>
+<td>&ndash;help</td>
+<td>在线帮助</td>
+</tr>
+<tr>
+<td>&ndash;info</td>
+<td>显示排错信息</td>
+</tr>
+<tr>
+<td>&ndash;lines &lt;显示列数&gt;</td>
+<td>设置显示画面的列数</td>
+</tr>
+<tr>
+<td>&ndash;no-headers</td>
+<td>此选项的效果和指定”h”选项相同，只在列表格式方面稍有差异</td>
+</tr>
+<tr>
+<td>&ndash;group &lt;群组名称&gt;</td>
+<td>此选项的效果和指定”-G”选项相同</td>
+</tr>
+<tr>
+<td>&ndash;Group &lt;群组识别码&gt;</td>
+<td>此选项的效果和指定”-G”选项相同</td>
+</tr>
+<tr>
+<td>&ndash;pid &lt;程序识别码&gt;</td>
+<td>此选项的效果和指定”-p”选项相同</td>
+</tr>
+<tr>
+<td>&ndash;rows &lt;显示列数&gt;</td>
+<td>此选项的效果和指定”&ndash;lines”选项相同</td>
+</tr>
+<tr>
+<td>&ndash;sid &lt;阶段作业&gt;</td>
+<td>此选项的效果和指定”-s”选项相同</td>
+</tr>
+<tr>
+<td>-tty &lt;终端机编号&gt;</td>
+<td>此选项的效果和指定”-t”选项相同</td>
+</tr>
+<tr>
+<td>&ndash;user &lt;用户名称&gt;</td>
+<td>此选项的效果和指定”-U”选项相同</td>
+</tr>
+<tr>
+<td>&ndash;User &lt;用户识别码&gt;</td>
+<td>此选项的效果和指定”-U”选项相同</td>
+</tr>
+<tr>
+<td>&ndash;version</td>
+<td>此选项的效果和指定”-V”选项相同</td>
+</tr>
+<tr>
+<td>&ndash;widty &lt;每列字符数&gt;</td>
+<td>此选项的效果和指定”-cols”选项相同</td>
+</tr>
+</tbody>
+</table>
+<p><strong>参考实例</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ps -aux                 <span class="c1"># 把所有进程显示出来</span>
+</span></span><span class="line"><span class="cl">ps -A                   <span class="c1"># 把所有进程显示出来</span>
+</span></span><span class="line"><span class="cl">ps -aux &gt; ps.txt        <span class="c1"># 把所有进程显示出来，并输出到ps.txt文件</span>
+</span></span><span class="line"><span class="cl">ps -ef <span class="p">|</span> grep ssh       <span class="c1"># 查找特定进程信息</span>
+</span></span><span class="line"><span class="cl">ps -u root              <span class="c1"># 显示指定用户信息</span>
+</span></span><span class="line"><span class="cl">ps -aux <span class="p">|</span> sort -nk <span class="m">3</span>    <span class="c1"># 按 CPU 资源的使用量对进程进行排序</span>
+</span></span><span class="line"><span class="cl">ps -aux <span class="p">|</span> sort -rnk <span class="m">4</span>   <span class="c1"># 按内存资源的使用量对进程进行排序</span>
+</span></span></code></pre></div><h2 id="kill-命令杀死进程">kill 命令：杀死进程</h2>
+<p><code>kill</code> 正如这个单词的意思一样，就是杀死。<strong>Linux</strong> 系统中 <code>kill</code> 命令用来删除执行中的程序或工作。</p>
+<p><code>kill</code> 命令可将指定的信号发送给相应的进程或工作。<code>kill</code> 命令默认使用信号为 15，用于结束进程或工作。如果进程或工作忽略此信号，则可以使用信号 9，强制杀死进程或作业。</p>
+<p><strong>常用参数</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-l</td>
+<td>列出系统支持的信号</td>
+</tr>
+<tr>
+<td>-s</td>
+<td>指定向进程发送的信号</td>
+</tr>
+<tr>
+<td>-a</td>
+<td>处理当前进程时不限制命令名和进程号的对应关系</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>指定kill命令只打印相关进程的进程号，而不发送任何信号</td>
+</tr>
+</tbody>
+</table>
+<p><strong>参考实例</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">kill</span> -l         <span class="c1"># 列出系统支持的信号列表</span>
+</span></span><span class="line"><span class="cl"><span class="nb">kill</span> -9 <span class="m">1951</span>    <span class="c1"># 强制杀死进程 PID 为 1951 的进程</span>
+</span></span></code></pre></div><p><strong>常用的信号量</strong></p>
+<table>
+<thead>
+<tr>
+<th>信号</th>
+<th>编号</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HUP</td>
+<td>1</td>
+<td>终端断线</td>
+</tr>
+<tr>
+<td>INT</td>
+<td>2</td>
+<td>中断（同<code>Ctrl+C</code>）</td>
+</tr>
+<tr>
+<td>QUIT</td>
+<td>3</td>
+<td>退出（同<code>Ctrl+\</code>）</td>
+</tr>
+<tr>
+<td>KILL</td>
+<td>9</td>
+<td>强制终止</td>
+</tr>
+<tr>
+<td>TERM</td>
+<td>15</td>
+<td>终止</td>
+</tr>
+<tr>
+<td>CONT</td>
+<td>18</td>
+<td>继续（与STOP相反，<code>fg/bg</code>命令）</td>
+</tr>
+<tr>
+<td>STOP</td>
+<td>19</td>
+<td>暂停（同<code>Ctrl+Z</code>）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="killall-命令使用进程名称来杀死一组进程">killall 命令：使用进程名称来杀死一组进程</h2>
+<p><code>killall</code> 命令使用进程的名称来杀死进程，使用此指令可以杀死一组同名进程。我们可以使用 <code>kill</code> 命令杀死指定进程 PID 的进程，如果要找到我们需要杀死的进程，我们还需要在之前使用 <code>ps</code> 等命令再配合 <code>grep</code> 来查找进程，而 <code>killall</code> 把这两个过程合二为一，是一个很好用的命令。</p>
+<p><strong>常用参数</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-e</td>
+<td>对长名称进行精确匹配</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>打印所有已知信号列表</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>杀死进程所属的进程组</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>交互式杀死进程，杀死进程前需要进行确认</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>使用正规表达式匹配要杀死的进程名称</td>
+</tr>
+<tr>
+<td>-s</td>
+<td>用指定的进程号代替默认信号“SIGTERM”</td>
+</tr>
+<tr>
+<td>-u</td>
+<td>杀死指定用户的进程</td>
+</tr>
+</tbody>
+</table>
+<p><strong>参考实例</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">killall -9 httpd        <span class="c1"># 杀死 httpd 所有进程</span>
+</span></span><span class="line"><span class="cl">killall -l              <span class="c1"># 使用 -l 参数打印所有已知信号列表</span>
+</span></span></code></pre></div>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/learn/linux/linux-commands/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/" rel="next">权限管理</a>
+  </div>
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Oct 29, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
+
+    
+    
+    
+      
+
+      
+      
+
+      
+
+      
+
+    
+
+    
+    
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
+
+    
+    
+    
+    
+    
+    
+      
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

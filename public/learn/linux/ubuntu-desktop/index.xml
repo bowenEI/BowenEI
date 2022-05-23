@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu Desktop 快速部署 | Bowen&#39;s Academic Home</title>
+    <link>https://bowenei.gitee.io/learn/linux/ubuntu-desktop/</link>
+      <atom:link href="https://bowenei.gitee.io/learn/linux/ubuntu-desktop/index.xml" rel="self" type="application/rss+xml" />
+    <description>Ubuntu Desktop 快速部署</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png</url>
+      <title>Ubuntu Desktop 快速部署</title>
+      <link>https://bowenei.gitee.io/learn/linux/ubuntu-desktop/</link>
+    </image>
+    
+    <item>
+      <title>系统安装</title>
+      <link>https://bowenei.gitee.io/learn/linux/ubuntu-desktop/install/</link>
+      <pubDate>Fri, 03 Dec 2021 10:34:58 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/linux/ubuntu-desktop/install/</guid>
+      <description>&lt;h2 id=&#34;制作启动盘&#34;&gt;制作启动盘&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://cn.ultraiso.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UltraISO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rufus.ie/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rufus&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;推荐使用 Rufus，制作 Ubuntu 系统启动盘安装成功率高。&lt;/p&gt;
+&lt;p&gt;文件系统建议 NTFS。&lt;/p&gt;
+&lt;h2 id=&#34;u盘启动安装系统&#34;&gt;U盘启动安装系统&lt;/h2&gt;
+&lt;p&gt;如果是 Ubuntu 和 Windows 双系统，最好不要安装在同一块物理硬盘上，否则会出现不可预知的问题。目前已经发现到的问题有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Windows 引导丢失&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;解决方法：&lt;a href=&#34;http://dbc.cycycy888.top/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;大白菜U盘&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ubuntu 引导丢失&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;解决方法：&lt;a href=&#34;../%e5%85%b6%e4%bb%96%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9/&#34;&gt;引导修复&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;除非只有使用 Ubuntu 的需求，否则强烈建议不要选择默认安装选项，一定要通过引导程序手动挂载分区。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推荐挂载分区的方式&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;挂载点&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;说明&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;文件系统&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;大小&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;/&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;系统根目录&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ext4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;16G～32G&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;相当于Windows的C盘&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;/boot&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;引导目录&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ext4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;512M以内&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;实现双系统必不可少&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;/home&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;用户目录&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ext4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;尽可能大&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;相当于C盘下的用户目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;交换空间&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;swap&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;内存的1～2倍&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;本质上是操作系统的虚拟内存&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：下方安装引导程序的位置应当选择 &lt;code&gt;/boot&lt;/code&gt; 分区所在分区。&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;&lt;strong&gt;小知识：主分区、扩展分区与逻辑分区&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;主分区&lt;/strong&gt;：是硬盘的启动分区，它是独立的，也是硬盘的第一个分区。正常情况下，我们常说的 C 盘就是硬盘上的主分区。主分区也可称为“引导分区”，会被操作系统和主板认定为这个硬盘的第一个分区。所以 C 盘永远都是排在所有磁盘分区的第一的位置上。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;扩展分区&lt;/strong&gt;：除去主分区所占用的容量以外，剩下的容量就被认定为扩展分区。换而言之，一块硬盘除去主分区外的容量后，如果对剩下的容量进行了再分区，那么，这个再分区就是扩展分区。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;逻辑分区&lt;/strong&gt;：扩展分区是不能直接使用的，它是以逻辑分区的方式来使用的，所以说扩展分区可以分成若干个逻辑分区。它们的关系是包含的关系，所有的逻辑分区都是扩展分区的一部分——扩展分区如果不再进行分区了，那么扩展分区就是逻辑分区了。&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>更换软件源</title>
+      <link>https://bowenei.gitee.io/learn/linux/ubuntu-desktop/apt-source/</link>
+      <pubDate>Fri, 03 Dec 2021 10:36:48 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/linux/ubuntu-desktop/apt-source/</guid>
+      <description>&lt;p&gt;安装完成进入系统的第一件事就是换软件源，可以有效减少不必要的麻烦。&lt;/p&gt;
+&lt;h2 id=&#34;备份官方源&#34;&gt;备份官方源&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak   &lt;span class=&#34;c1&#34;&gt;# 备份官方源&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gedit /etc/apt/sources.list                          &lt;span class=&#34;c1&#34;&gt;# 没有可视化文本编辑器的终端可以使用 vim&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;&lt;strong&gt;Tip: Codename&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ubuntu 中，每个版本都有一个更为特色的名字，这个名字由一个形容词和一个动物名称组成，并且，形容词和名词的首字母都是一致的。从 D 版本开始又增加了一个规则，首字母要顺延上个版本，如果当前版本是 D，下个版本就要以 E 来起头。&lt;/p&gt;
+&lt;p&gt;例如，Ubuntu 18.04 LTS 的代号为 Bionic Beaver，简称 &lt;code&gt;bionic&lt;/code&gt;；Ubuntu 20.04 LTS 的代号为 Focal Fossa，简称 &lt;code&gt;focal&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;查询当前系统的版本代号可以使用下面的命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lsb_release -a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;添加软件源&#34;&gt;添加软件源&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：将软件源文本中关于代号的部分全部替换成相应的代号。本文列出的是 Ubuntu 18.04 LTS 对应的软件源。&lt;/p&gt;
+&lt;h3 id=&#34;阿里源&#34;&gt;阿里源&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;清华源&#34;&gt;清华源&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;中科大源&#34;&gt;中科大源&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;deb https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;更新软件源&#34;&gt;更新软件源&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update     &lt;span class=&#34;c1&#34;&gt;# 更新软件源&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get upgrade    &lt;span class=&#34;c1&#34;&gt;# 因为软件源更新了，所以要通过新的软件源再更新本地软件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Tip: new apt command&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在 Ubuntu 16.05 之前，开发是通过 &lt;code&gt;apt-get&lt;/code&gt;、&lt;code&gt;apt-cache&lt;/code&gt;、&lt;code&gt;apt-config&lt;/code&gt; 命令来和 &lt;code&gt;apt&lt;/code&gt; 包管理系统交互的。这些工具提供了很多功能，但是一般来说开发者并没有使用他们提供的所有功能。&lt;/p&gt;
+&lt;p&gt;因此，Linux 想要创建一个更简单的工具——只具备基本功能即可。这一工具便是 &lt;code&gt;apt&lt;/code&gt;，伴随 Ubuntu 16.05 和 Debian 8 发布。其主要目标是去合并最多使用的 &lt;code&gt;apt-get&lt;/code&gt; 和 &lt;code&gt;apt-cache&lt;/code&gt; 命令的功能到一个命令下：&lt;code&gt;apt&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;故更新软件源也可以用以下命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;今后使用 &lt;code&gt;apt&lt;/code&gt; 包管理相关命令时，统一采用 &lt;code&gt;apt&lt;/code&gt; 命令，而不使用 &lt;code&gt;apt-get&lt;/code&gt; 命令。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>终端美化</title>
+      <link>https://bowenei.gitee.io/learn/linux/ubuntu-desktop/oh-my-zsh/</link>
+      <pubDate>Fri, 03 Dec 2021 10:40:32 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/linux/ubuntu-desktop/oh-my-zsh/</guid>
+      <description>&lt;h2 id=&#34;zsh&#34;&gt;zsh&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;zsh&lt;/code&gt;，被誉为终极 Shell。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install zsh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;oh-my-zsh&#34;&gt;oh-my-zsh&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ohmyz.sh/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方网站&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ohmyzsh/ohmyzsh&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方仓库&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sh -c &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;			    &lt;span class=&#34;c1&#34;&gt;# 通过 curl 命令安装&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sh -c &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;	&lt;span class=&#34;c1&#34;&gt;# 通过 wget 命令安装&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;速度慢可以在国内 &lt;a href=&#34;https://www.gitclone.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitClone&lt;/a&gt; 平台搜索相应仓库克隆，然后执行安装脚本：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://gitclone.com/github.com/ohmyzsh/ohmyzsh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sh oh-my-zsh/tools/install.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;主题&#34;&gt;主题&lt;/h2&gt;
+&lt;p&gt;编辑 &lt;code&gt;zsh&lt;/code&gt; 配置脚本：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gedit ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在文件中找到：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ZSH_THEME=&amp;#34;robbyrussell&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;改为自己想要的主题：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ZSH_THEME=&amp;#34;ys&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在 Github 上浏览所有的&lt;a href=&#34;https://github.com/ohmyzsh/ohmyzsh/wiki/Themes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;主题&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;插件&#34;&gt;插件&lt;/h2&gt;
+&lt;p&gt;安装插件的一般方法：在 Github 上搜索插件名称，克隆或者打包下载下来之后将之移动到 &lt;code&gt;~/.oh-my-zsh/plugins/&lt;/code&gt; 下，编辑 &lt;code&gt;zsh&lt;/code&gt; 配置脚本：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mv &amp;lt;plugin&amp;gt; ~/.oh-my-zsh/plugins/
+gedit ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在文件中找到：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;plugins=(
+  git
+  bundler
+  dotenv
+  osx
+  rake
+  rbenv
+  ruby
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在其中添加相应插件即可。&lt;/p&gt;
+&lt;h3 id=&#34;zsh-syntax-highlighting&#34;&gt;zsh-syntax-highlighting&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/zsh-users/zsh-syntax-highlighting&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;仓库链接&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone https://github.com/zsh-users/zsh-syntax-highlighting
+git clone https://gitclone.com/github.com/zsh-users/zsh-syntax-highlighting
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;一个智能高亮插件，当命令 Shell 无法解析时，显示红色，否则显示绿色。&lt;/p&gt;
+&lt;h3 id=&#34;zsh-autosuggestions&#34;&gt;zsh-autosuggestions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/zsh-users/zsh-autosuggestions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;仓库链接&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone https://github.com/zsh-users/zsh-autosuggestions
+git clone https://gitclone.com/github.com/zsh-users/zsh-autosuggestions
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;一个命令提示插件，会根据当前输入的内容猜测可能要执行的命令（基于历史记录），然后按方向右键即可立刻补全。&lt;/p&gt;
+&lt;h3 id=&#34;autojump&#34;&gt;autojump&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/wting/autojump&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;仓库链接&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;autojump 通过数据库记录本地文件目录结构，并且使用及其简单的命令就可以快速切换文件夹。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/wting/autojump
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; autojump
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./install.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;具体使用方法详见仓库说明。&lt;/p&gt;
+&lt;h2 id=&#34;设置默认终端&#34;&gt;设置默认终端&lt;/h2&gt;
+&lt;p&gt;我们可以设置 &lt;code&gt;zsh&lt;/code&gt; 为默认终端。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chsh -s &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;which zsh&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;设置完成后，需要注销当前用户。登录后，使用下面的命令验证是否成功修改：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$SHELL&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果需要将默认终端切换回 &lt;code&gt;bash&lt;/code&gt;，执行下面的命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chsh -s &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;which bash&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>必备软件</title>
+      <link>https://bowenei.gitee.io/learn/linux/ubuntu-desktop/softwares/</link>
+      <pubDate>Fri, 03 Dec 2021 10:41:29 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/linux/ubuntu-desktop/softwares/</guid>
+      <description>&lt;h2 id=&#34;visual-studio-code&#34;&gt;Visual Studio Code&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方网站&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;通过-deb-包安装&#34;&gt;通过 deb 包安装&lt;/h3&gt;
+&lt;p&gt;下载 &lt;code&gt;deb&lt;/code&gt; 安装文件，执行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dpkg -i &amp;lt;code-installer&amp;gt;.deb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;通过-snap-安装&#34;&gt;通过 snap 安装&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo snap install code --classic
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;pycharm--intellij-idea&#34;&gt;PyCharm &amp;amp; IntelliJ IDEA&lt;/h2&gt;
+&lt;p&gt;PyCharm 和 IntelliJ IDEA 分别是 JetBrains 公司推出的 Python 和 Java 语言的强大 IDE。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jetbrains.com/pycharm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyCharm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jetbrains.com/idea/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;IntelliJ IDEA&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;通过官方网站安装&#34;&gt;通过官方网站安装&lt;/h3&gt;
+&lt;p&gt;下载的文件为 &lt;code&gt;tar.gz&lt;/code&gt; 格式的压缩文件，使用如下命令解压。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -xzvf &amp;lt;pycharm-community&amp;gt;.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -xzvf &amp;lt;idea-community&amp;gt;.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;解压后执行文件夹下的 &lt;code&gt;sh&lt;/code&gt; 文件就可以运行软件，初次使用需要同意相关协议并进行配置。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sh &amp;lt;pycharm-community&amp;gt;/pycharm.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sh &amp;lt;ieda-community&amp;gt;/idea.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以在设置中手动添加快捷方式图标到开始菜单。&lt;/p&gt;
+&lt;h3 id=&#34;通过-snap-安装-1&#34;&gt;通过 snap 安装&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo snap install pycharm-community --classic
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo sanp install idea-community --classic
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;typora&#34;&gt;Typora&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.typora.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方网站&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;通过官网安装&#34;&gt;通过官网安装&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# or run:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget -qO - https://typora.io/linux/public-key.asc &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo apt-key add -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# add Typora&amp;#39;s repository&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo add-apt-repository &lt;span class=&#34;s1&#34;&gt;&amp;#39;deb https://typora.io/linux ./&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# install typora&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install typora
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;国内访问非常慢，因此推荐 &lt;a href=&#34;https://gitee.com/typora-mirror/Typora-Mirror/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gitee&lt;/a&gt; 的镜像。&lt;/p&gt;
+&lt;h3 id=&#34;通过-snap-安装-2&#34;&gt;通过 snap 安装&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo snap install typora
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;typora-主题推荐&#34;&gt;Typora 主题推荐&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sweatran/typora-onedark-theme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OneDark&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/kinoute/typora-github-night-theme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github Night&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/adrian-fuertes/typora-notion-theme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Typora Notion Theme&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;代理客户端&#34;&gt;代理客户端&lt;/h2&gt;
+&lt;h3 id=&#34;qv2ray&#34;&gt;Qv2ray&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://qv2ray.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方网站&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Qv2ray/Qv2ray/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;仓库地址&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在 Ubuntu 上使用代理服务器，Qv2ray 是一个很好的选择，它开源且提供友好的交互界面。搭建 Qv2ray 的工作环境总的来说分为两步：下载 Qv2ray 客户端；配置 v2ray 核心。&lt;/p&gt;
+&lt;h4 id=&#34;下载-qv2ray-客户端&#34;&gt;下载 Qv2ray 客户端&lt;/h4&gt;
+&lt;p&gt;官方网站提供了 Qv2ray 客户端的多种下载方式，前文也提供了 Qv2ray 客户端所在的 Github 下载地址。推荐下载 &lt;code&gt;AppImage&lt;/code&gt; 格式的文件，它是免安装的独立可执行文件，基于 Qt 框架开发，具有很好的跨平台性。此外，Ubuntu 系统还可以通过 snap 应用商店搜索直接安装，或者和以下命令等价：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo snap install qv2ray
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;客户端的设置保持默认即可，完全适用于一般使用。&lt;/p&gt;
+&lt;h4 id=&#34;配置-v2ray-核心&#34;&gt;配置 v2ray 核心&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/v2fly/v2ray-core/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;v2ray-core&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;v2ray 核心建议在 Github 上搜索，我们也提供了一个 Github 下载地址，要以实际开发和维护的仓库为准。克隆或下载后，将之放在用户文件夹下，然后打开 Qv2ray 客户端，在首选项中配置 v2ray 核心的路径以及可执行文件的地址，例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/home/username/vcore/v2ray      &lt;span class=&#34;c1&#34;&gt;# 可执行文件路径&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/home/username/vcore            &lt;span class=&#34;c1&#34;&gt;# v2ray 路径&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;提供可执行权限：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chmod +x /home/username/vcore/v2ray
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chmod +x /home/username/vcore/v2ctl
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最后点击软件下方的验证按钮，一般没有问题都会验证通过。如果验证没有通过，可能的原因是 v2ray 核心文件的版本和客户端不匹配。&lt;/p&gt;
+&lt;h3 id=&#34;v2raya&#34;&gt;v2rayA&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://v2raya.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方网站&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/v2rayA/v2rayA&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;仓库地址&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;v2rayA 是一个易用而强大的，专注于 Linux 的 v2ray 客户端。其安装和配置相对而言更加方便快捷。&lt;/p&gt;
+&lt;h4 id=&#34;安装-v2ray-内核&#34;&gt;安装 v2ray 内核&lt;/h4&gt;
+&lt;p&gt;使用 &lt;a href=&#34;https://github.com/v2fly/fhs-install-v2ray&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;fhs-install-v2ray&lt;/a&gt; 仓库的一件安装脚本：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bash &amp;lt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;安装-v2raya&#34;&gt;安装 v2rayA&lt;/h4&gt;
+&lt;p&gt;添加公钥&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget -qO - https://apt.v2raya.mzz.pub/key/public-key.asc &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo tee /etc/apt/trusted.gpg.d/v2raya.asc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;添加 v2rayA 软件源&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;deb https://apt.v2raya.mzz.pub/ v2raya main&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo tee /etc/apt/sources.list.d/v2raya.list
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装 v2rayA&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install v2raya
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;v2raya-配置&#34;&gt;v2rayA 配置&lt;/h4&gt;
+&lt;p&gt;启动 v2rayA&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl start v2raya.service
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;设置开机自动启动&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; v2raya.service
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;qq--微信&#34;&gt;QQ &amp;amp; 微信&lt;/h2&gt;
+&lt;p&gt;目前在 Ubuntu/Debian 系统上使用 QQ 和微信最好的方法是使用 &lt;code&gt;wine&lt;/code&gt; 容器。&lt;code&gt;wine&lt;/code&gt; 容器相当于一个虚拟机，可以模拟 Windows 环境。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/wszqkzqk/deepin-wine-ubuntu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;仓库地址&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitee.com/wszqkzqk/deepin-wine-containers-for-ubuntu/raw/master/deepin.com.qq.im_9.1.8deepin0_i386.deb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;QQ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitee.com/wszqkzqk/deepin-wine-containers-for-ubuntu/raw/master/deepin.com.wechat_2.6.8.65deepin0_i386.deb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;微信&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;首先需要克隆该仓库，进入仓库文件夹后，执行安装脚本安装 &lt;code&gt;deepin-wine&lt;/code&gt; 容器环境。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/wszqkzqk/deepin-wine-ubuntu.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://gitee.com/wszqkzqk/deepin-wine-for-ubuntu.git   &lt;span class=&#34;c1&#34;&gt;# gitee 仓库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo sh ./install.sh                                              &lt;span class=&#34;c1&#34;&gt;# 需要授予可执行权限&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装好 &lt;code&gt;deepin-wine&lt;/code&gt; 容器环境后，下载 QQ 和微信对应的 &lt;code&gt;deb&lt;/code&gt; 安装包，执行如下安装命令安装即可：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dpkg -i deepin.com.qq.im_9.1.8deepin0_i386.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dpkg -i deepin.com.wechat_2.6.8.65deepin0_i386.deb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;latex&#34;&gt;LateX&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Ubuntu&lt;/strong&gt; 系统中最好用的 $\LaTeX$ 文档编辑器是 &lt;a href=&#34;https://www.xm1math.net/texmaker/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Texmaker&lt;/a&gt;。要特别注意的是，强烈推荐在官网下载，而不要使用 &lt;code&gt;apt install texmaker&lt;/code&gt; 的方法安装。因为 &lt;code&gt;apt&lt;/code&gt; 安装的 Texmaker 会附带 &lt;code&gt;texlive&lt;/code&gt; 的很多东西，不仅安装时间长，而且和系统字体有冲突，还难以卸载。&lt;/p&gt;
+&lt;h2 id=&#34;nemo&#34;&gt;Nemo&lt;/h2&gt;
+&lt;p&gt;Nemo 是 Ubuntu 更高级的文件资源管理器，具有很多更加方便的功能，非常推荐安装。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install nemo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装完成后，可以设置默认的文件资源管理器为 Nemo，与此同时，禁用 Nautilus。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gsettings &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; org.gnome.desktop.background show-desktop-icons &lt;span class=&#34;nb&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gsettings &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; org.nemo.desktop show-desktop-icons &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;gnome-扩展&#34;&gt;gnome 扩展&lt;/h2&gt;
+&lt;p&gt;gnome 为 Ubuntu 提供了更友好的桌面环境，特别是 gnome-shell-extensions。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install gnome-shell-extensions
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装完成后，我们可以看到它已经预装了一些扩展，可以定制我们的桌面。例如，使用 Desktop Icon 可以设置桌面是否显示应用和文件图标。&lt;/p&gt;
+&lt;p&gt;我们可以浏览&lt;a href=&#34;https://extensions.gnome.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方网站&lt;/a&gt;安装自己需要的插件。具体的安装方法是安装相应的浏览器插件，然后勾选需要的插件，就可以自动下载完成安装。&lt;/p&gt;
+&lt;p&gt;下面的一些插件值得推荐：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://extensions.gnome.org/extension/779/clipboard-indicator/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Clipboard Indicator&lt;/a&gt;：保持剪贴板历史，方便复制粘贴。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://extensions.gnome.org/extension/1112/screenshot-tool/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Screenshot Tool&lt;/a&gt;：屏幕截图。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://extensions.gnome.org/extension/307/dash-to-dock/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dash to Dock&lt;/a&gt;：类似于 Windows 系统的任务栏，可以自由定制。&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>CUDA</title>
+      <link>https://bowenei.gitee.io/learn/linux/ubuntu-desktop/cuda/</link>
+      <pubDate>Fri, 03 Dec 2021 10:42:58 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/linux/ubuntu-desktop/cuda/</guid>
+      <description>&lt;p&gt;CUDA 是一种由显卡厂商 NVIDIA 推出的通用并行计算架构，该架构使 GPU 能够解决复杂的计算问题，在深度学习等领域具有广泛的应用。一些主流的深度学习框架诸如 &lt;code&gt;PyTorch&lt;/code&gt;、&lt;code&gt;TensorFlow&lt;/code&gt; 等都实现了一些调用 GPU 训练神经网络的 API，而 Ubuntu 系统本身并没有安装或者默认启用 NVIDIA 官方显卡驱动，因此需要用户手动进行配置。&lt;/p&gt;
+&lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.nvidia.com/cuda/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方文档&lt;/a&gt;：务必认真阅读！CUDA 对于 Ubuntu 系统的版本、&lt;code&gt;gcc&lt;/code&gt; 的版本、深度学习框架的版本等有严格要求，否则会出现不可预知的错误！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;查看 GPU 信息：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lspci &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -i nvidia
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;查看系统信息：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uname -m &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cat /etc/*release
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;查看 &lt;code&gt;gcc&lt;/code&gt; 版本：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcc --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果没有安装 &lt;code&gt;gcc&lt;/code&gt;，请安装 &lt;code&gt;gcc&lt;/code&gt;。要注意，&lt;code&gt;gcc&lt;/code&gt; 的版本需要按照官方文档提供的标准，一般来说默认安装即可。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install gcc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;确认当前正在使用的内核版本，并安装当前运行的内核的内核头文件和开发包：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uname -r
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install linux-headers-&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;uname -r&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;&lt;strong&gt;特别注意！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;确定内核版本后，不要随意更换内核或更新内核，否则可能会导致无法进入桌面系统。&lt;/p&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;禁用-nouveau&#34;&gt;禁用 Nouveau&lt;/h2&gt;
+&lt;p&gt;Ubuntu 系统默认使用 X.org X Server 的 Nouveau 作为显示驱动程序，这与 NVIDIA 的驱动有冲突，需要将其禁用。&lt;/p&gt;
+&lt;p&gt;首先输入以下命令，确认 Ubuntu 系统是否使用 Nouveau：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lsmod &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep nouveau
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;若有输出，则必须执行下面的步骤：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gedit /etc/modprobe.d/blacklist-nouveau.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在新建的文件中写入：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;blacklist nouveau
+options nouveau modeset=0
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后重新生成内核：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo /sbin/mkinitrd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;若在此时重启电脑，有些机器可能无法显示桌面，有些机器可能会以较低的分辨率显示桌面。&lt;/p&gt;
+&lt;p&gt;目前，Ubuntu 官方提供了第三方的 NVIDIA 显卡驱动下载，我们可以在开始菜单中选择“软件与更新”，找到“附加驱动”选项卡，选择来自 NVIDIA 官方的驱动。应用之后Ubuntu会自动下载，重启后系统会有很多明显的动画效果，说明安装成功。也可以通过下面的命令验证：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvidia-smi
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;当然，也可以在 NVIDIA 官方网站下载适用于特定型号显卡的驱动，例如 GTX 系列。但是必须确保 Nouveau 成功禁用，否则安装失败率很高。&lt;/p&gt;
+&lt;h2 id=&#34;安装-cuda&#34;&gt;安装 CUDA&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.nvidia.com/zh-cn/cuda-downloads&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;下载地址&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;强烈推荐下载 &lt;code&gt;runfile&lt;/code&gt; 类型的安装包，安装成功率高。&lt;code&gt;deb&lt;/code&gt; 包可能在某些情况下会安装失败，不推荐作为首选安装方式。&lt;/p&gt;
+&lt;p&gt;如果当前系统之前安装过 CUDA，特别是安装过其他版本的 CUDA，一定要将残留卸载干净，确保不存在 CUDA。可以尝试下面的命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt- autoremove --purge cuda       &lt;span class=&#34;c1&#34;&gt;# 清理 apt 包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dpkg -l &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep cuda                &lt;span class=&#34;c1&#34;&gt;# 清理 deb 包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接下来执行下载好的 &lt;code&gt;runfile&lt;/code&gt; 文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo sh cuda_&amp;lt;version&amp;gt;_linux.run
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果因禁用 Nouveau 而没有显卡驱动，需要重启进入文本模式。&lt;/p&gt;
+&lt;p&gt;安装程序可能需要等待一段时间，然后接受许可协议（输入 &lt;code&gt;accept&lt;/code&gt; 回车），接下来需要选择安装的内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果没有安装显卡驱动，可以通过此安装包安装 NVIDIA 显卡驱动，但一般不推荐。&lt;/li&gt;
+&lt;li&gt;CUDA Toolkit 必选，一般默认即可。&lt;/li&gt;
+&lt;li&gt;其余可选，Samples 可用于验证CUDA是否安装成功。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;安装完成后，注意终端的提示信息。主要包括以下两个方面：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;CUDA 默认安装在 &lt;code&gt;/usr/local/cuda&lt;/code&gt; 下，它本质上是个软链接，实际安装位置为 &lt;code&gt;/usr/local/cuda-&amp;lt;version&amp;gt;&lt;/code&gt;。例如 CUDA 10.0 的安装位置为 &lt;code&gt;/usr/local/cuda-10.0&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;需要在 shell 的配置文件中添加两个环境变量，例如使用 zsh，安装 CUDA 11.0，则需要在 &lt;code&gt;~/.zshrc&lt;/code&gt; 中加入：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;:/usr/local/cuda-11.0/bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;LD_LIBRARY_PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$LD_LIBRARY_PATH&lt;/span&gt;:/usr/local/cuda-11.0/lib64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输入下面的命令可以验证是否安装成功：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvcc -V
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装-cudnn&#34;&gt;安装 cuDNN&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.nvidia.com/rdp/cudnn-download&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;下载地址&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;cuDNN 的全称是 The NVIDIA CUDA Deep Neural Network Library，是专门用于深度神经网络的 GPU 加速库。在安装之前首先要验证 CUDA 是否安装成功，并且需要确认版本是否对应，官方网站和文档有详细的说明。&lt;/p&gt;
+&lt;p&gt;安装 cuDNN 的方式有多种，一种常用的方法为 &lt;code&gt;tar&lt;/code&gt; 格式压缩包解压即可：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -xzvf cudnn-x.x-linux-x64-v8.x.x.x.tgz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo cp cuda/include/cudnn*.h /usr/local/cuda/include
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;官方还为 Debian 系的系统提供了 &lt;code&gt;deb&lt;/code&gt; 包的安装方式，注意这里分为 &lt;code&gt;Runtime&lt;/code&gt; 版和 &lt;code&gt;Developer&lt;/code&gt; 版，即运行库和开发库。如果只需要能够运行深度学习应用（例如模型训练和推断）只需要运行库即可，如果需要开发深度学习底层框架（例如使用 C 或 C++ 编写 GPU 并行加速程序）则需要开发库。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dpkg -i libcudnn8_x.x.x-1+cudax.x_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>其他注意事项</title>
+      <link>https://bowenei.gitee.io/learn/linux/ubuntu-desktop/others/</link>
+      <pubDate>Fri, 03 Dec 2021 10:44:16 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/linux/ubuntu-desktop/others/</guid>
+      <description>&lt;h2 id=&#34;视频编解码器&#34;&gt;视频编解码器&lt;/h2&gt;
+&lt;p&gt;部分系统的 Firefox 浏览器可能无法播放部分视频，是因为缺少了编解码器。执行下面的命令安装即可：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install ffmpeg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;span-nameboot-repair引导修复span&#34;&gt;&lt;span name=&#34;boot-repair&#34;&gt;引导修复&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;U 盘启动，选择试用 Ubuntu。进入系统后执行下面的命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo add-apt-repository ppa:yannubuntu/boot-repair &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt update   &lt;span class=&#34;c1&#34;&gt;# 添加软件源&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install boot-repair                                            &lt;span class=&#34;c1&#34;&gt;# 安装 boot-repair&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;boot-repair                                                             &lt;span class=&#34;c1&#34;&gt;# 运行 boot-repair&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后选择默认修复，即可解决大部分引导丢失问题。&lt;/p&gt;
+&lt;h2 id=&#34;解决双系统时间不统一的问题&#34;&gt;解决双系统时间不统一的问题&lt;/h2&gt;
+&lt;p&gt;不少人在安装 Windows 和 Ubuntu 双系统的电脑后都会发现一个奇妙的小问题：在 Ubuntu 系统中重启进入 Windows 系统，会发现时间整整慢了 8 小时；而在 Windows 系统中重启进入 Ubuntu 系统，会发现时间整整快了 8 小时。&lt;/p&gt;
+&lt;p&gt;原因在于 Windows 认为 BIOS 时间是本地时间，Ubuntu 认为 BIOS 时间是 UTC（Universal Time Coordinated）时间，是由国际无线电咨询委员会规定和推荐，并由国际时间局（BIH）负责保持的以秒为基础的时间标度。UTC 相当于本初子午线（即经度 0 度）上的平均太阳时，过去曾用格林威治平均时（GMT）来表示。北京时间比 UTC 时间早 8 小时，因此 Ubuntu 认为实际的时间应该是主板上硬件的时间加上当前所在时区（东 8 区）。&lt;/p&gt;
+&lt;p&gt;在 Ubuntu 16.04 之后，时间改成了由 &lt;code&gt;timedatectl&lt;/code&gt; 来管理。因此需要执行依次执行如下命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;timedatectl set-local-rtc &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; --adjust-system-clock   &lt;span class=&#34;c1&#34;&gt;# 禁用 Ubuntu 的 UTC&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install ntpdate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ntpdate time.windows.com                       &lt;span class=&#34;c1&#34;&gt;# 使用 Windows 的服务器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo hwclock --localtime --systohc                  &lt;span class=&#34;c1&#34;&gt;# 将本地时间更新到硬件上&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

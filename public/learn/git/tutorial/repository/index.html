@@ -1,0 +1,1113 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Bowen Zhou" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/git/tutorial/repository/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#bbdefb" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://bowenei.gitee.io/learn/git/tutorial/repository/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+  <meta property="og:url" content="https://bowenei.gitee.io/learn/git/tutorial/repository/" />
+  <meta property="og:title" content="Git 本地仓库 | Bowen&#39;s Academic Home" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-12-03T10:03:39&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-12-03T10:03:39&#43;08:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Git 本地仓库 | Bowen&#39;s Academic Home</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="92774923c7b391adfadd450dcbb7ec31" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+
+  
+
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blogs"><span>Blogs</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallery"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/learn/"><span>Learn</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/bowenEI/" data-toggle="tooltip" data-placement="bottom" title="Follow me on Github" target="_blank" rel="noopener" aria-label="Follow me on Github">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Git 使用教程
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/learn/"><i class="fas fa-arrow-left pr-1"></i>Learn</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/git/">Git</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/git/tutorial/">Git 使用教程</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/git/tutorial/installation/">安装 Git</a></li>
+
+
+
+  <li class="active"><a href="/learn/git/tutorial/repository/">Git 本地仓库</a></li>
+
+
+
+  <li class=""><a href="/learn/git/tutorial/remote/">Git 远程仓库</a></li>
+
+
+
+  <li class=""><a href="/learn/git/tutorial/branch/">Git 分支管理</a></li>
+
+
+
+  <li class=""><a href="/learn/git/tutorial/tag/">Git 标签管理</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/git/commands/">Git 常用命令一览</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/git/commands/%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93/">创建版本库</a></li>
+
+
+
+  <li class=""><a href="/learn/git/commands/%E6%9F%A5%E8%AF%A2%E4%BF%A1%E6%81%AF/">查询信息</a></li>
+
+
+
+  <li class=""><a href="/learn/git/commands/%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE/">修改配置</a></li>
+
+
+
+  <li class=""><a href="/learn/git/commands/%E4%BF%AE%E6%94%B9%E5%92%8C%E6%8F%90%E4%BA%A4/">修改和提交</a></li>
+
+
+
+  <li class=""><a href="/learn/git/commands/%E6%92%A4%E9%94%80%E4%B8%8E%E5%9B%9E%E9%80%80/">撤销与回退</a></li>
+
+
+
+  <li class=""><a href="/learn/git/commands/%E5%88%86%E6%94%AF%E4%B8%8E%E6%A0%87%E7%AD%BE/">分支与标签</a></li>
+
+
+
+  <li class=""><a href="/learn/git/commands/%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C/">远程操作</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#创建版本库">创建版本库</a></li>
+    <li><a href="#把文件添加到版本库">把文件添加到版本库</a>
+      <ul>
+        <li><a href="#暂存更改">暂存更改</a></li>
+        <li><a href="#提交更改">提交更改</a></li>
+      </ul>
+    </li>
+    <li><a href="#穿梭时光">穿梭时光</a>
+      <ul>
+        <li><a href="#工作区和暂存区">工作区和暂存区</a></li>
+        <li><a href="#撤销修改">撤销修改</a></li>
+        <li><a href="#版本回退">版本回退</a></li>
+        <li><a href="#head-指针">HEAD 指针</a></li>
+        <li><a href="#重返未来">重返未来</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>Git 本地仓库</h1>
+
+          <div class="article-style">
+            <h2 id="创建版本库">创建版本库</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git init
+</span></span></code></pre></div><p>即可在当前文件夹创建本地仓库。</p>
+<h2 id="把文件添加到版本库">把文件添加到版本库</h2>
+<h3 id="暂存更改">暂存更改</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git add README.md <span class="c1">#将README.md文件添加到版本库</span>
+</span></span><span class="line"><span class="cl">git add .         <span class="c1">#将已更改的所有文件添加到版本库</span>
+</span></span></code></pre></div><h3 id="提交更改">提交更改</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git commit -m <span class="s2">&#34;add README.md&#34;</span>
+</span></span></code></pre></div><p>注意，<code>-m</code> 参数后面是提交的说明，应当便于他人阅读。</p>
+<p>一次 <code>commit</code> 会将所有已经暂存的更改提交，因此一个好习惯是在对多个文件都做了修改后，根据需要分别暂存提交。不暂存而直接将所有更改提交是一个不好的习惯。</p>
+<h2 id="穿梭时光">穿梭时光</h2>
+<p><strong>Git</strong> 的强大之处就在于它就好像给了我们一个时间轴，让我们可以在过去和未来之间自由穿梭。要知道 <strong>Git</strong> 是如何实现这一功能的，我们首先要了解工作区和暂存区的区别和联系。</p>
+<h3 id="工作区和暂存区">工作区和暂存区</h3>
+<ul>
+<li>工作区</li>
+</ul>
+<p>通常就是指 <strong>Git</strong> 仓库所在的文件目录，是我们直接可以看到的，也是我们工作时的载体。</p>
+<ul>
+<li>暂存区</li>
+</ul>
+<p>在每一个 <strong>Git</strong> 仓库的根目录下都有一个隐藏文件夹，它就是版本库。而暂存区 <code>stage</code> 就位于版本库中，它专门用来存放已经添加 <code>add</code> 但还未提交 <code>commit</code> 的修改。</p>
+<h3 id="撤销修改">撤销修改</h3>
+<h4 id="修改未暂存">修改未暂存</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout -- README.md
+</span></span></code></pre></div><p>该命令可以直接将 <code>README.md</code> 文件在<strong>工作区</strong>的修改全部撤销，这里有以下两种情况：</p>
+<ol>
+<li><code>README.md</code> 自修改后还未暂存，则直接撤销全部工作区修改会回到和上一个版本库一模一样的状态。</li>
+<li><code>README.md</code> 暂存后又作了修改，则直接撤销全部工作区修改会回到刚刚暂存时的状态。</li>
+</ol>
+<p>注：现在新的命令 <code>restore</code> 取代 <code>checkout</code> 命令，因为 <code>checkout</code> 还有其他用途（后文详述）。而且，如果不加两个短横线，该命令就完全三另外一种操作了。为了不混淆，新版 <strong>Git</strong> 提倡使用新的命令。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git restore README.md
+</span></span></code></pre></div><h4 id="修改已暂存">修改已暂存</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git reset HEAD README.md
+</span></span></code></pre></div><p>注意，这里的 <code>reset</code> 命令的含义是将已暂存的修改撤销 <code>unstage</code>，重新返回到上一个版本的状态。这里 <code>HEAD</code> 表示最新的版本，在后文中，<code>HEAD</code> 还会多次出现，并且含义可能各不相同。</p>
+<h3 id="版本回退">版本回退</h3>
+<p>当我们已经提交了修改之后，如果发现有问题想要撤销回到过去，结果发现并不是暂存区那样很容易就撤销了，应该怎么办？</p>
+<p>首先，我们需要查看提交日志，使用 <code>git log</code> 命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">commit 746eb565b0840bc5241d4e16e757bcdb2deec007 <span class="o">(</span>HEAD -&gt; master, origin/master, origin/HEAD<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Author: Fourier-Ubuntu &lt;zhoubw1999@126.com&gt;
+</span></span><span class="line"><span class="cl">Date:   Tue Sep <span class="m">29</span> 12:58:16 <span class="m">2020</span> +0800
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    add README.md
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">commit f27f2ad514235263bbe539a9bd3daff9e652a302
+</span></span><span class="line"><span class="cl">Author: Fourier &lt;zhoubw1999@126.com&gt;
+</span></span><span class="line"><span class="cl">Date:   Fri Sep <span class="m">18</span> 16:04:24 <span class="m">2020</span> +0800
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    update README.md
+</span></span></code></pre></div><p><code>commit</code> 后面的一大串十六进制数是通过SHA1哈希算法计算出来的，可以唯一确定一次提交。如果我们想要回到当前版本的上一个版本，可以使用如下命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git reset --hard 746eb
+</span></span><span class="line"><span class="cl">git reset --hard HEAD^
+</span></span></code></pre></div><p><em>注</em></p>
+<ol>
+<li>直接写哈希值只需要写几位即可，<strong>Git</strong> 会自动推断是哪一次提交。</li>
+<li>在 <code>HEAD</code> 的右上角加 <code>^</code> 表示它的上一个版本，如果加2个则表示它的上一个版本的上一个版本，以此类推。</li>
+</ol>
+<h3 id="head-指针">HEAD 指针</h3>
+<p>本节我们要来彻底弄清楚 <code>HEAD</code> 的含义，并且了解 <strong>Git</strong> 版本控制的机制。这一次，<code>HEAD</code> 又有了新的称呼——指针。要理解 <code>HEAD</code> 指针，我们需要理解 <strong>Git</strong> 版本控制的时间线机制。</p>
+<p>在 <strong>Git</strong> 中，每一次提交意味着沿着时间线前进一步，来到一个新的时间点。换句话说，每一次提交都和一个时间点一一对应。每当提交完成后，<code>HEAD</code> 指针会指向新的时间点。也就是说，<code>HEAD</code> 始终指向当前版本库。因此，要实现版本回退，只需要修改 <code>HEAD</code> 指针即可。</p>
+<h3 id="重返未来">重返未来</h3>
+<p>在回退版本后，又发现自己原来写得没有问题，想要再回到最一开始都提交的状态，就需要再次重返未来。但是，当我们再次使用 <code>git log</code> 查看历史记录时，却发现 <code>HEAD</code> 指针后的所有版本库都不见了！这可如何是好？</p>
+<p>这个时候，查看命令历史记录命令 <code>git reflog</code> 就派上用场了：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">746eb56 <span class="o">(</span>HEAD -&gt; master, origin/master, origin/HEAD<span class="o">)</span> HEAD@<span class="o">{</span>0<span class="o">}</span>: commit: update README.md
+</span></span><span class="line"><span class="cl">f27f2ad HEAD@<span class="o">{</span>1<span class="o">}</span>: add README.md
+</span></span></code></pre></div><p>这样，再用 <code>git reset</code> 命令就能够重返未来了。</p>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/learn/git/tutorial/installation/" rel="next">安装 Git</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/learn/git/tutorial/remote/" rel="prev">Git 远程仓库</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Dec 3, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
+
+    
+    
+    
+      
+
+      
+      
+
+      
+
+      
+
+    
+
+    
+    
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
+
+    
+    
+    
+    
+    
+    
+      
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

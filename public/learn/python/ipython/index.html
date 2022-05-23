@@ -1,0 +1,1246 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Bowen Zhou" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/python/ipython/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#bbdefb" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://bowenei.gitee.io/learn/python/ipython/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+  <meta property="og:url" content="https://bowenei.gitee.io/learn/python/ipython/" />
+  <meta property="og:title" content="iPython: Python 交互式 Shell | Bowen&#39;s Academic Home" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-01-01T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-01-01T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>iPython: Python 交互式 Shell | Bowen&#39;s Academic Home</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="cbb156fa88426ac36a5d3d90e57f58da" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+
+  
+
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blogs"><span>Blogs</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallery"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/learn/"><span>Learn</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/bowenEI/" data-toggle="tooltip" data-placement="bottom" title="Follow me on Github" target="_blank" rel="noopener" aria-label="Follow me on Github">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Python
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/learn/"><i class="fas fa-arrow-left pr-1"></i>Learn</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/python/">Python</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/python/list/">Python 列表</a></li>
+
+
+
+  <li class=""><a href="/learn/python/tuple/">Python 元组</a></li>
+
+
+
+  <li class=""><a href="/learn/python/dict/">Python 字典</a></li>
+
+
+
+  <li class=""><a href="/learn/python/set/">Python 集合</a></li>
+
+
+
+  <li class=""><a href="/learn/python/str/">Python 字符串</a></li>
+
+
+
+  <li class=""><a href="/learn/python/function/">Python 函数</a></li>
+
+
+
+  <li class=""><a href="/learn/python/exception/">Python 异常处理</a></li>
+
+
+
+  <li class=""><a href="/learn/python/magic/">Python 魔法函数</a></li>
+
+
+
+  <li class=""><a href="/learn/python/o-o/">Python 面向对象</a></li>
+
+
+
+  <li class=""><a href="/learn/python/thread/">Python 多线程编程</a></li>
+
+
+
+  <li class=""><a href="/learn/python/regex/">Python 正则表达式</a></li>
+
+
+
+  <li class=""><a href="/learn/python/json/">Python 处理 json 数据</a></li>
+
+
+
+  <li class="active"><a href="/learn/python/ipython/">iPython: Python 交互式 Shell</a></li>
+
+
+
+  <li class=""><a href="/learn/python/os/">Python 操作系统调用</a></li>
+
+
+
+  <li class=""><a href="/learn/python/decorator/">Python 装饰器</a></li>
+
+
+
+  <li class=""><a href="/learn/python/pkg-manager/">Python 包管理器</a></li>
+
+
+
+  <li class=""><a href="/learn/python/sys/">Python 系统环境交互</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-对象内省"><code>?</code>: 对象内省</a></li>
+    <li><a href="#-执行-shell-命令"><code>!</code>: 执行 Shell 命令</a></li>
+    <li><a href="#-魔法命令"><code>%</code>: 魔法命令</a>
+      <ul>
+        <li><a href="#run-运行脚本">run 运行脚本</a></li>
+        <li><a href="#timeit-测量代码运行时间">timeit 测量代码运行时间</a></li>
+        <li><a href="#科学计算与交互">科学计算与交互</a></li>
+        <li><a href="#quickref-参考帮助">quickref 参考帮助</a></li>
+        <li><a href="#python-脚本操作">Python 脚本操作</a></li>
+        <li><a href="#precision-浮点数精度">precision 浮点数精度</a></li>
+        <li><a href="#变量与对象操作">变量与对象操作</a></li>
+      </ul>
+    </li>
+    <li><a href="#输入和输出">输入和输出</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>iPython: Python 交互式 Shell</h1>
+
+          <div class="article-style">
+            <p><strong>IPython</strong> 是一种基于 <strong>Python</strong> 的交互式解释器，提供了强大的编辑和交互功能。</p>
+<h2 id="-对象内省"><code>?</code>: 对象内省</h2>
+<p>在对象后面加上 <code>?</code>，可以打印出该对象的详细信息。例如一个列表对象，打印出该对象的类型、长度等信息。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">obj</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">obj</span><span class="err">?</span>
+</span></span></code></pre></div><pre><code>Type:        list
+String form: [1, 2, 3]
+Length:      3
+Docstring:  
+list() -&gt; new empty list
+list(iterable) -&gt; new list initialized from iterable's items
+</code></pre>
+<p><code>??</code> 和 <code>?</code> 功能相似，不过 <code>??</code> 还可以查看函数或模块对象的源代码。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">num</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">foo</span><span class="err">??</span>
+</span></span></code></pre></div><pre><code>Signature: foo(num)
+Docstring: &lt;no docstring&gt;
+Source:   
+def foo(num):
+    x = num
+    print(x)
+File:      ~/文档/Jupyter-Notebook/Python Basics/Advanced/&lt;ipython-input-2-46f951045f2c&gt;
+Type:      function
+</code></pre>
+<h2 id="-执行-shell-命令"><code>!</code>: 执行 Shell 命令</h2>
+<p>Shell 表示使用命令行文本与计算机操作系统交互的方式。在 <strong>IPython</strong> 中，Shell 命令前加上感叹号 <code>!</code> 就可以在 IPython Kernel 中直接执行。例如 ping 百度的 IP 地址：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">!</span> <span class="n">ping</span> <span class="o">-</span><span class="n">c</span> <span class="mi">4</span> <span class="n">www</span><span class="o">.</span><span class="n">baidu</span><span class="o">.</span><span class="n">com</span>
+</span></span></code></pre></div><pre><code>PING www.a.shifen.com (36.152.44.95) 56(84) bytes of data.
+64 比特，来自 36.152.44.95 (36.152.44.95): icmp_seq=1 ttl=55 时间=43.3 毫秒
+64 比特，来自 36.152.44.95 (36.152.44.95): icmp_seq=2 ttl=55 时间=71.4 毫秒
+64 比特，来自 36.152.44.95 (36.152.44.95): icmp_seq=3 ttl=55 时间=73.3 毫秒
+64 比特，来自 36.152.44.95 (36.152.44.95): icmp_seq=4 ttl=55 时间=125 毫秒
+
+--- www.a.shifen.com ping 统计 ---
+已发送 4 个包， 已接收 4 个包, 0% 包丢失, 耗时 3003 毫秒
+rtt min/avg/max/mdev = 43.341/78.204/124.714/29.360 ms
+</code></pre>
+<h2 id="-魔法命令"><code>%</code>: 魔法命令</h2>
+<p>魔法命令分为两种：</p>
+<ul>
+<li>Line magics: 只有一个百分号 <code>%</code> 表示只在本行有效</li>
+<li>Cell magics: 两个百分号 <code>%%</code> 表示在整个 Cell 单元有效</li>
+</ul>
+<h3 id="run-运行脚本">run 运行脚本</h3>
+<p>在 <strong>IPython</strong> 会话环境中，<code>py</code> 文件可以通过 <code>%run</code> 命令当作 <strong>Python</strong> 程序直接运行。</p>
+<p>当前文件夹下的 <code>src/</code> 目录下有一个 <code>test.py</code> 文件，我们来看看它的内容——可以直接用 <code>!</code> 执行 Shell 命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">!</span> <span class="n">cat</span> <span class="o">./</span><span class="n">src</span><span class="o">/</span><span class="n">test</span><span class="o">.</span><span class="n">py</span>
+</span></span></code></pre></div><pre><code>print('Hello World!')
+</code></pre>
+<p>下面我们来执行这个 Python 脚本：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">run</span> <span class="o">./</span><span class="n">src</span><span class="o">/</span><span class="n">test</span><span class="o">.</span><span class="n">py</span>
+</span></span></code></pre></div><pre><code>Hello World!
+</code></pre>
+<h3 id="timeit-测量代码运行时间">timeit 测量代码运行时间</h3>
+<p><code>%timeit</code> 可以测量一行代码的运行时间：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">timeit</span> <span class="nb">sum</span><span class="p">([</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)])</span>
+</span></span></code></pre></div><pre><code>242 µs ± 457 ns per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+</code></pre>
+<p><code>%%timeit</code> 可以测量一个 Cell 代码的运行时间：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%%</span><span class="n">timeit</span>
+</span></span><span class="line"><span class="cl"><span class="n">obj</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">obj</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">sum</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>290 µs ± 289 ns per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+</code></pre>
+<h3 id="科学计算与交互">科学计算与交互</h3>
+<p>在 notebook 中绘制图像时，使用 <code>%matplotlib inline</code> 命令可以将图表直接嵌入到 notebook 中，方便查看。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)))</span>
+</span></span></code></pre></div><pre><code>[&lt;matplotlib.lines.Line2D at 0x7f86fb26cb38&gt;]
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/python/ipython/output_27_1_hu0c1029501edc8db43fa9e5578a3dbf28_19962_9ba0df986ec4caded3e7d17200203d5a.webp 400w,
+               /media/learn/python/ipython/output_27_1_hu0c1029501edc8db43fa9e5578a3dbf28_19962_81dd690505569b556d07076c42b51d41.webp 760w,
+               /media/learn/python/ipython/output_27_1_hu0c1029501edc8db43fa9e5578a3dbf28_19962_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/python/ipython/output_27_1_hu0c1029501edc8db43fa9e5578a3dbf28_19962_9ba0df986ec4caded3e7d17200203d5a.webp"
+               width="386"
+               height="248"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p><code>%pylab</code> 魔法命令可以使 numpy 和 matplotlib 中的科学计算功能生效，这些功能被称为基于向量和矩阵的高效操作，交互可视化特性。它能够让我们在控制台进行交互式计算和动态绘图。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">pylab</span>
+</span></span></code></pre></div><pre><code>Using matplotlib backend: Qt5Agg
+Populating the interactive namespace from numpy and matplotlib
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">tan</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</span></span></code></pre></div><pre><code>[&lt;matplotlib.lines.Line2D at 0x7f86f56c8358&gt;]
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/python/ipython/output_30_1_hu49f0b58c0abaa38da317e671b510e315_11238_1d943241893833a576d8fb10e76889c7.webp 400w,
+               /media/learn/python/ipython/output_30_1_hu49f0b58c0abaa38da317e671b510e315_11238_eb7f0d620b040e9bc9bacc964335d84e.webp 760w,
+               /media/learn/python/ipython/output_30_1_hu49f0b58c0abaa38da317e671b510e315_11238_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/python/ipython/output_30_1_hu49f0b58c0abaa38da317e671b510e315_11238_1d943241893833a576d8fb10e76889c7.webp"
+               width="377"
+               height="248"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<h3 id="quickref-参考帮助">quickref 参考帮助</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">quickref</span>
+</span></span></code></pre></div><h3 id="python-脚本操作">Python 脚本操作</h3>
+<p><code>%pycat &lt;filename&gt;</code> 用语法高亮显示一个 Python 脚本（不用加 <code>.py</code> 后缀名）。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">pycat</span> <span class="o">./</span><span class="n">src</span><span class="o">/</span><span class="n">foo</span>
+</span></span></code></pre></div><pre><code>[0;32mdef[0m [0mfoo[0m[0;34m([0m[0;34m)[0m[0;34m:[0m[0;34m[0m
+[0;34m[0m    [0mprint[0m[0;34m([0m[0;34m'Hello World!'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+</code></pre>
+<p><code>%load</code> 命令用于将脚本代码加载到当前 Cell。执行后，自动加载代码到当前 Cell 中。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># %load ./src/foo</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="precision-浮点数精度">precision 浮点数精度</h3>
+<p><code>%precision</code> 命令用来设置浮点数精度，可添加具体参数，无参数则默认精度。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">precision</span> <span class="mi">3</span>
+</span></span></code></pre></div><pre><code>'%.3f'
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+</span></span><span class="line"><span class="cl"><span class="n">pi</span>
+</span></span></code></pre></div><pre><code>3.142
+</code></pre>
+<h3 id="变量与对象操作">变量与对象操作</h3>
+<p><code>%who</code> 命令用于显示当前所有变量，你也可以指定显示变量的类型。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">who</span>
+</span></span></code></pre></div><pre><code>foo	 obj	 pi	 x	 
+</code></pre>
+<p><code>%whos</code> 命令同样用于显示当前变量，但提供的信息更加丰富。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">whos</span>
+</span></span></code></pre></div><pre><code>Variable   Type        Data/Info
+--------------------------------
+foo        function    &lt;function foo at 0x7f86f4107378&gt;
+obj        list        n=3
+pi         float       3.141592653589793
+x          ndarray     100: 100 elems, type `float64`, 800 bytes
+</code></pre>
+<p><code>%xdel</code> 命令用于删除变量，并尝试清楚其在IPython中的对象上的一切引用。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">xdel</span> <span class="n">x</span>
+</span></span></code></pre></div><p><code>%reset -f</code> 命令用于删除定义的所有变量，如果不指定参数 <code>-f</code>，则需要确认后再重置。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">reset</span> <span class="o">-</span><span class="n">f</span>
+</span></span></code></pre></div><h2 id="输入和输出">输入和输出</h2>
+<ul>
+<li><code>In</code> 对象是一个列表，按照顺序记录所有的命令</li>
+<li><code>Out</code> 对象不是一个列表，而是一个字典，它将输入数字映射到相应的输出（如果有的话）</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">In</span>
+</span></span></code></pre></div><pre><code>['',
+ &quot;obj = [1, 2, 3]\nget_ipython().run_line_magic('pinfo', 'obj')&quot;,
+ 'def foo(num):\n    x = num\n    print(x)',
+ &quot;get_ipython().run_line_magic('pinfo2', 'foo')&quot;,
+ &quot;get_ipython().system(' ping -c 4 www.baidu.com')&quot;,
+ &quot;get_ipython().system(' cat ./src/test.py')&quot;,
+ &quot;get_ipython().run_line_magic('run', './src/test.py')&quot;,
+ &quot;get_ipython().run_line_magic('timeit', 'sum([i**2 for i in range(1000)])')&quot;,
+ &quot;get_ipython().run_cell_magic('timeit', '', 'obj = []\\nfor i in range(1000):\\n    obj.append(i**2)\\nsum(obj)\\n')&quot;,
+ &quot;get_ipython().run_line_magic('matplotlib', 'inline')&quot;,
+ 'import numpy as np\nimport matplotlib.pyplot as plt\n\nplt.plot(np.sin(np.linspace(0, 10*np.pi, 100)))',
+ &quot;get_ipython().run_line_magic('pylab', '')&quot;,
+ 'x = linspace(0, 10*np.pi, 100)\nplot(x, tan(x))',
+ &quot;get_ipython().run_line_magic('quickref', '')&quot;,
+ &quot;get_ipython().run_line_magic('pycat', './src/foo')&quot;,
+ &quot;# %load ./src/foo\ndef foo():\n    print('Hello World!')&quot;,
+ &quot;get_ipython().run_line_magic('precision', '3')&quot;,
+ 'from math import pi\npi',
+ &quot;get_ipython().run_line_magic('who', '')&quot;,
+ &quot;get_ipython().run_line_magic('whos', '')&quot;,
+ &quot;get_ipython().run_line_magic('xdel', 'x')&quot;,
+ &quot;get_ipython().run_line_magic('reset', '-f')&quot;,
+ 'In']
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">Out</span>
+</span></span></code></pre></div><pre><code>{22: ['',
+  &quot;obj = [1, 2, 3]\nget_ipython().run_line_magic('pinfo', 'obj')&quot;,
+  'def foo(num):\n    x = num\n    print(x)',
+  &quot;get_ipython().run_line_magic('pinfo2', 'foo')&quot;,
+  &quot;get_ipython().system(' ping -c 4 www.baidu.com')&quot;,
+  &quot;get_ipython().system(' cat ./src/test.py')&quot;,
+  &quot;get_ipython().run_line_magic('run', './src/test.py')&quot;,
+  &quot;get_ipython().run_line_magic('timeit', 'sum([i**2 for i in range(1000)])')&quot;,
+  &quot;get_ipython().run_cell_magic('timeit', '', 'obj = []\\nfor i in range(1000):\\n    obj.append(i**2)\\nsum(obj)\\n')&quot;,
+  &quot;get_ipython().run_line_magic('matplotlib', 'inline')&quot;,
+  'import numpy as np\nimport matplotlib.pyplot as plt\n\nplt.plot(np.sin(np.linspace(0, 10*np.pi, 100)))',
+  &quot;get_ipython().run_line_magic('pylab', '')&quot;,
+  'x = linspace(0, 10*np.pi, 100)\nplot(x, tan(x))',
+  &quot;get_ipython().run_line_magic('quickref', '')&quot;,
+  &quot;get_ipython().run_line_magic('pycat', './src/foo')&quot;,
+  &quot;# %load ./src/foo\ndef foo():\n    print('Hello World!')&quot;,
+  &quot;get_ipython().run_line_magic('precision', '3')&quot;,
+  'from math import pi\npi',
+  &quot;get_ipython().run_line_magic('who', '')&quot;,
+  &quot;get_ipython().run_line_magic('whos', '')&quot;,
+  &quot;get_ipython().run_line_magic('xdel', 'x')&quot;,
+  &quot;get_ipython().run_line_magic('reset', '-f')&quot;,
+  'In',
+  'Out']}
+</code></pre>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/learn/python/json/" rel="next">Python 处理 json 数据</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/learn/python/os/" rel="prev">Python 操作系统调用</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
+
+    
+    
+    
+      
+
+      
+      
+
+      
+
+      
+
+    
+
+    
+    
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
+
+    
+    
+    
+    
+    
+    
+      
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

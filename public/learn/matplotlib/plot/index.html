@@ -1,0 +1,1818 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Bowen Zhou" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/matplotlib/plot/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#bbdefb" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://bowenei.gitee.io/learn/matplotlib/plot/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+  <meta property="og:url" content="https://bowenei.gitee.io/learn/matplotlib/plot/" />
+  <meta property="og:title" content="Matplotlib 二维绘图 | Bowen&#39;s Academic Home" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-04-18T22:37:51&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-04-18T22:37:51&#43;08:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Matplotlib 二维绘图 | Bowen&#39;s Academic Home</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="2c1d38d6107927890cbdd82a2a068785" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+
+  
+
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blogs"><span>Blogs</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallery"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/learn/"><span>Learn</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/bowenEI/" data-toggle="tooltip" data-placement="bottom" title="Follow me on Github" target="_blank" rel="noopener" aria-label="Follow me on Github">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Matplotlib
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/learn/"><i class="fas fa-arrow-left pr-1"></i>Learn</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/matplotlib/">Matplotlib</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/matplotlib/overview/">Matplotlib 概述</a></li>
+
+
+
+  <li class=""><a href="/learn/matplotlib/style/">Matplotlib 绘图样式</a></li>
+
+
+
+  <li class="active"><a href="/learn/matplotlib/plot/">Matplotlib 二维绘图</a></li>
+
+
+
+  <li class=""><a href="/learn/matplotlib/bar/">Matplotlib 条形图</a></li>
+
+
+
+  <li class=""><a href="/learn/matplotlib/subplot/">Matplotlib 子图</a></li>
+
+
+
+  <li class=""><a href="/learn/matplotlib/plot3d/">Matplotlib 三维绘图</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#入门">入门</a></li>
+    <li><a href="#用-axes-对象绘图">用 Axes 对象绘图</a></li>
+    <li><a href="#美化图像">美化图像</a></li>
+    <li><a href="#坐标轴设置">坐标轴设置</a>
+      <ul>
+        <li><a href="#坐标轴范围">坐标轴范围</a></li>
+        <li><a href="#坐标轴刻度">坐标轴刻度</a></li>
+        <li><a href="#坐标轴子刻度">坐标轴子刻度</a></li>
+        <li><a href="#坐标轴刻度标签">坐标轴刻度标签</a></li>
+        <li><a href="#坐标轴标题">坐标轴标题</a></li>
+      </ul>
+    </li>
+    <li><a href="#网格线">网格线</a></li>
+    <li><a href="#图例">图例</a></li>
+    <li><a href="#注解">注解</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>Matplotlib 二维绘图</h1>
+
+          <div class="article-style">
+            <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span></code></pre></div><h2 id="入门">入门</h2>
+<p>下面，我们用描点法来画正弦函数 $y = \sin{x}$ 一个周期内的图像。</p>
+<p>首先，我们要生成一系列均匀的散点 <code>x</code>，并计算出对应的函数值 <code>y</code>：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span></code></pre></div><p>然后直接调用 <code>plt.plot</code> 方法绘图即可：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>[&lt;matplotlib.lines.Line2D at 0x18edab70a30&gt;]
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_7_1_hu51231c906018dbd7ca23a99db5e4f7b7_12156_8e348cb06f98e0d2b1b31379d1f4974e.webp 400w,
+               /media/learn/matplotlib/plot/output_7_1_hu51231c906018dbd7ca23a99db5e4f7b7_12156_5022480a10a112442a5d5b5c18c274bd.webp 760w,
+               /media/learn/matplotlib/plot/output_7_1_hu51231c906018dbd7ca23a99db5e4f7b7_12156_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_7_1_hu51231c906018dbd7ca23a99db5e4f7b7_12156_8e348cb06f98e0d2b1b31379d1f4974e.webp"
+               width="386"
+               height="248"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>但是，我们的教程非常不推荐这种绘图方法，因为这种绘图方法只适用于简单图像的绘制，如果需要对图像的各个元素进行更细致化的设置是不行的。</p>
+<h2 id="用-axes-对象绘图">用 Axes 对象绘图</h2>
+<p>首先，我们获取 <code>Figure</code> 对象。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+</span></span></code></pre></div><pre><code>&lt;Figure size 432x288 with 0 Axes&gt;
+</code></pre>
+<p>不过 <code>Figure</code> 对象只是一个空白的 <code>Figure</code> 窗口，它没有任何的坐标系可以绘制图像。因此，我们需要在 <code>Figure</code> 对象中添加 <code>Axes</code> 对象：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">])</span>
+</span></span></code></pre></div><p>传入的四元组参数表示绘图区域 <code>Axes</code> 的横纵坐标、宽度和高度，都是 $[0, 1]$ 之间的浮点数。</p>
+<p>这样，当我们显示绘图窗口时，会发现是一张有坐标系的白纸：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_16_0_hu510c0ef0842aef3e9c5e79d6c35eb18b_3569_7644ebc38d6c49c4146218caf518af95.webp 400w,
+               /media/learn/matplotlib/plot/output_16_0_hu510c0ef0842aef3e9c5e79d6c35eb18b_3569_630ce6b3146b6a2a71989c1fa88aa909.webp 760w,
+               /media/learn/matplotlib/plot/output_16_0_hu510c0ef0842aef3e9c5e79d6c35eb18b_3569_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_16_0_hu510c0ef0842aef3e9c5e79d6c35eb18b_3569_7644ebc38d6c49c4146218caf518af95.webp"
+               width="391"
+               height="265"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>下面，我们调用 <code>Axes</code> 对象的 <code>plot</code> 绘图方法：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sin_line</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span></span></code></pre></div><p><code>Figure</code> 对象是整个绘图窗口，它不能画图。只有控制整个绘图区域的 <code>Axes</code> 对象才能画图。</p>
+<p>现在来看看绘图窗口，会发现已经有图像显示了：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_21_0_hu5802433aceb7b98d784f5313ad4747c4_12700_51d5c7c4b5a56b6a6a0dd54a04bcf524.webp 400w,
+               /media/learn/matplotlib/plot/output_21_0_hu5802433aceb7b98d784f5313ad4747c4_12700_dfb4b47db921c5753a5c3736a6b69c6f.webp 760w,
+               /media/learn/matplotlib/plot/output_21_0_hu5802433aceb7b98d784f5313ad4747c4_12700_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_21_0_hu5802433aceb7b98d784f5313ad4747c4_12700_51d5c7c4b5a56b6a6a0dd54a04bcf524.webp"
+               width="397"
+               height="261"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span></span></code></pre></div><h2 id="美化图像">美化图像</h2>
+<p>我们可以用一些简单的参数美化图像，例如设置线条颜色为绿色，线条样式为点划线，并用实心点标注。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sin_line</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;go-.&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_26_0_hub2bec7c7120ee7ee069a4baf7cd6c87c_11999_11fabc0adac7f247206c460f1121b325.webp 400w,
+               /media/learn/matplotlib/plot/output_26_0_hub2bec7c7120ee7ee069a4baf7cd6c87c_11999_621a3a0543539e09ee1c409b9ab79034.webp 760w,
+               /media/learn/matplotlib/plot/output_26_0_hub2bec7c7120ee7ee069a4baf7cd6c87c_11999_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_26_0_hub2bec7c7120ee7ee069a4baf7cd6c87c_11999_11fabc0adac7f247206c460f1121b325.webp"
+               width="397"
+               height="261"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span></span></code></pre></div><p>颜色、线条样式和标注样式可以分别设置：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sin_line</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_30_0_hu810c6884172a429ceac8ddcb084655e1_10698_8348100ef8ecfda85a796df0ee988d51.webp 400w,
+               /media/learn/matplotlib/plot/output_30_0_hu810c6884172a429ceac8ddcb084655e1_10698_5c68a0cefcab4deed9c97038b1f16f7f.webp 760w,
+               /media/learn/matplotlib/plot/output_30_0_hu810c6884172a429ceac8ddcb084655e1_10698_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_30_0_hu810c6884172a429ceac8ddcb084655e1_10698_8348100ef8ecfda85a796df0ee988d51.webp"
+               width="397"
+               height="261"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<h2 id="坐标轴设置">坐标轴设置</h2>
+<h3 id="坐标轴范围">坐标轴范围</h3>
+<p>坐标轴范围即定义域，也就是 <code>x</code> 的取值范围；以及值域，也就是 <code>y</code> 的取值范围。</p>
+<p>我们绘制的是正弦函数一个周期内的图像，因此可以设置其横轴的取值范围为 $[0, 2 \pi]$。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>(0.0, 6.283185307179586)
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_36_0_hu033717df1ccd863c78007142b5b3b2d5_10942_58c18d52cca5bd60469d6c6fffe56a2e.webp 400w,
+               /media/learn/matplotlib/plot/output_36_0_hu033717df1ccd863c78007142b5b3b2d5_10942_918ba5addc548780c1dca10aaf128df6.webp 760w,
+               /media/learn/matplotlib/plot/output_36_0_hu033717df1ccd863c78007142b5b3b2d5_10942_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_36_0_hu033717df1ccd863c78007142b5b3b2d5_10942_58c18d52cca5bd60469d6c6fffe56a2e.webp"
+               width="397"
+               height="261"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>也可以设置其值域为 $[-1, 1]$。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>(-1.0, 1.0)
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_39_0_hua97be4d272870965ca87d9822ce0eb4e_11161_9897a0a7526503571a07ede57ed4334d.webp 400w,
+               /media/learn/matplotlib/plot/output_39_0_hua97be4d272870965ca87d9822ce0eb4e_11161_854c0140dc891bc808e64f2af1cb8508.webp 760w,
+               /media/learn/matplotlib/plot/output_39_0_hua97be4d272870965ca87d9822ce0eb4e_11161_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_39_0_hua97be4d272870965ca87d9822ce0eb4e_11161_9897a0a7526503571a07ede57ed4334d.webp"
+               width="397"
+               height="265"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<h3 id="坐标轴刻度">坐标轴刻度</h3>
+<p>三角函数在 $\pi$ 的有理数倍处往往可以取到特殊值，而绘图时默认横轴的刻度是整数，我们可以进行如下调整：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">xticks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">xticks</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>[&lt;matplotlib.axis.XTick at 0x18edb3363d0&gt;,
+ &lt;matplotlib.axis.XTick at 0x18edb336520&gt;,
+ &lt;matplotlib.axis.XTick at 0x18edb351220&gt;,
+ &lt;matplotlib.axis.XTick at 0x18edb34b2b0&gt;,
+ &lt;matplotlib.axis.XTick at 0x18edb3212b0&gt;,
+ &lt;matplotlib.axis.XTick at 0x18edb321130&gt;,
+ &lt;matplotlib.axis.XTick at 0x18edb344700&gt;]
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_43_0_hub97d01af8acd82971ae05e7040e57227_12339_69f172f6f82bebe26be087202da4d07f.webp 400w,
+               /media/learn/matplotlib/plot/output_43_0_hub97d01af8acd82971ae05e7040e57227_12339_bf8763678c8412eaa5d1b9f4cc04a23b.webp 760w,
+               /media/learn/matplotlib/plot/output_43_0_hub97d01af8acd82971ae05e7040e57227_12339_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_43_0_hub97d01af8acd82971ae05e7040e57227_12339_69f172f6f82bebe26be087202da4d07f.webp"
+               width="412"
+               height="265"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>同理，纵轴的刻度也可以进行类似的调整：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">yticks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">yticks</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>[&lt;matplotlib.axis.YTick at 0x18edb310eb0&gt;,
+ &lt;matplotlib.axis.YTick at 0x18edb310df0&gt;,
+ &lt;matplotlib.axis.YTick at 0x18edb33bc70&gt;,
+ &lt;matplotlib.axis.YTick at 0x18edb2e3310&gt;,
+ &lt;matplotlib.axis.YTick at 0x18edb2e33a0&gt;]
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_46_0_huf11d67f41c07d615b8ed296d37ffc591_10870_af087b4c83edc9b774158d8705fc7ff4.webp 400w,
+               /media/learn/matplotlib/plot/output_46_0_huf11d67f41c07d615b8ed296d37ffc591_10870_a5a8b0ebd4f8d60be441f64e976406ce.webp 760w,
+               /media/learn/matplotlib/plot/output_46_0_huf11d67f41c07d615b8ed296d37ffc591_10870_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_46_0_huf11d67f41c07d615b8ed296d37ffc591_10870_af087b4c83edc9b774158d8705fc7ff4.webp"
+               width="405"
+               height="265"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<h3 id="坐标轴子刻度">坐标轴子刻度</h3>
+<p>坐标轴子刻度不能用标签或者值进行标注。访问坐标轴子刻度需要通过 <code>Axis</code> 坐标轴对象。<code>MultipleLocator</code> 类按照指定间隔设定刻度 <code>tick</code>。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">miloc</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">miloc</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_50_0_huf11d67f41c07d615b8ed296d37ffc591_10930_fae3c7b810138bc78e239872babfb6c4.webp 400w,
+               /media/learn/matplotlib/plot/output_50_0_huf11d67f41c07d615b8ed296d37ffc591_10930_4e9651275a46cf5a7e8c67360f5530d7.webp 760w,
+               /media/learn/matplotlib/plot/output_50_0_huf11d67f41c07d615b8ed296d37ffc591_10930_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_50_0_huf11d67f41c07d615b8ed296d37ffc591_10930_fae3c7b810138bc78e239872babfb6c4.webp"
+               width="405"
+               height="265"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">miloc</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">miloc</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_52_0_hu8df15c6ad9e30edf613a302d6a763973_11038_858f51720de4235c49d9c4a7b4992407.webp 400w,
+               /media/learn/matplotlib/plot/output_52_0_hu8df15c6ad9e30edf613a302d6a763973_11038_4e9c5192ddbb80f5a8d14ea6124b1ecb.webp 760w,
+               /media/learn/matplotlib/plot/output_52_0_hu8df15c6ad9e30edf613a302d6a763973_11038_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_52_0_hu8df15c6ad9e30edf613a302d6a763973_11038_858f51720de4235c49d9c4a7b4992407.webp"
+               width="405"
+               height="265"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<h3 id="坐标轴刻度标签">坐标轴刻度标签</h3>
+<p>我们发现，前面一小节设置的横轴刻度还不能够满足我们的需求。如果刻度线下面显示刻度值是含有 $\pi$ 的无理数就更完美了。因此，需要设置坐标轴刻度标签。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">xticklabels</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\frac {\pi} </span><span class="si">{3}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\frac {2 \pi} </span><span class="si">{3}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\pi$&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">               <span class="sa">r</span><span class="s1">&#39;$\frac {4 \pi} </span><span class="si">{3}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\frac {5 \pi} </span><span class="si">{3}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$2 \pi$&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">xticklabels</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>[Text(0.0, 0, '0'),
+ Text(1.0471975511965976, 0, '$\\frac {\\pi} {3}$'),
+ Text(2.0943951023931953, 0, '$\\frac {2 \\pi} {3}$'),
+ Text(3.141592653589793, 0, '$\\pi$'),
+ Text(4.1887902047863905, 0, '$\\frac {4 \\pi} {3}$'),
+ Text(5.235987755982988, 0, '$\\frac {5 \\pi} {3}$'),
+ Text(6.283185307179586, 0, '$2 \\pi$')]
+</code></pre>
+<p>要注意的是，如果需要渲染 <strong>LaTeX</strong> 公式，需要在字符串首尾添加 <code>$</code> 符。而且，由于 <strong>LaTeX</strong> 代码涉及 <code>\</code> 转义符，而 <strong>Python</strong> 字符串中也有类似语法，故字符串前需要加上 <code>r</code> 或者使用双反斜杠 <code>\\</code>。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_57_0_hua851f138c8220be107cc85b81a13ac8e_9910_aa6134b4c278d24e3186bebb9fc35eca.webp 400w,
+               /media/learn/matplotlib/plot/output_57_0_hua851f138c8220be107cc85b81a13ac8e_9910_a5a07dfe2b5d15711a9f531ac4549cf8.webp 760w,
+               /media/learn/matplotlib/plot/output_57_0_hua851f138c8220be107cc85b81a13ac8e_9910_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_57_0_hua851f138c8220be107cc85b81a13ac8e_9910_aa6134b4c278d24e3186bebb9fc35eca.webp"
+               width="398"
+               height="274"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>同理，纵轴的标签也可以这样设置：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">yticklabels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;-1&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$- \frac </span><span class="si">{1}</span><span class="s1"> </span><span class="si">{2}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\frac </span><span class="si">{1}</span><span class="s1"> </span><span class="si">{2}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">yticklabels</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>[Text(0, -1.0, '-1'),
+ Text(0, -0.5, '$- \\frac {1} {2}$'),
+ Text(0, 0.0, '0'),
+ Text(0, 0.5, '$\\frac {1} {2}$'),
+ Text(0, 1.0, '1')]
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_60_0_hue63b1e1568089734917a313dd573dd37_9645_c96fbcedd464f6ad533e35b88932c707.webp 400w,
+               /media/learn/matplotlib/plot/output_60_0_hue63b1e1568089734917a313dd573dd37_9645_b2ff047d28680f48f652b83dd401d1df.webp 760w,
+               /media/learn/matplotlib/plot/output_60_0_hue63b1e1568089734917a313dd573dd37_9645_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_60_0_hue63b1e1568089734917a313dd573dd37_9645_c96fbcedd464f6ad533e35b88932c707.webp"
+               width="389"
+               height="274"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<h3 id="坐标轴标题">坐标轴标题</h3>
+<p>坐标轴的标题同样也可以设置，并且支持 <strong>LaTeX</strong>，本小节不再赘述。</p>
+<p>有些时候，坐标轴标题需要中文显示，而如果采用默认设置就会出现乱码。因此，需要进行如下设置：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="n">mpl</span>
+</span></span><span class="line"><span class="cl"><span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.sans-serif&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;SimHei&#39;</span><span class="p">]</span>
+</span></span></code></pre></div><p>现在，我们添加横纵坐标轴标题：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;相位&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;幅度&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Text(3.200000000000003, 0.5, '幅度')
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_67_0_hu7eb7ebec16cc66a3cc8f3d7a14024f48_10273_a31028837b290d895b2f5c1ee025becb.webp 400w,
+               /media/learn/matplotlib/plot/output_67_0_hu7eb7ebec16cc66a3cc8f3d7a14024f48_10273_1261e74111572e9ada269f6fb066e35a.webp 760w,
+               /media/learn/matplotlib/plot/output_67_0_hu7eb7ebec16cc66a3cc8f3d7a14024f48_10273_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_67_0_hu7eb7ebec16cc66a3cc8f3d7a14024f48_10273_a31028837b290d895b2f5c1ee025becb.webp"
+               width="402"
+               height="286"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>标题字体的大小也可以设置：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;相位&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;幅度&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Text(16.403125000000003, 0.5, '幅度')
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_70_0_hu265ebd4de641f6a07a43c3dbf14357ba_11092_2032dc016cf16705e21be0472d19ab13.webp 400w,
+               /media/learn/matplotlib/plot/output_70_0_hu265ebd4de641f6a07a43c3dbf14357ba_11092_df51bd0399fd05e8843cc536fc94e45a.webp 760w,
+               /media/learn/matplotlib/plot/output_70_0_hu265ebd4de641f6a07a43c3dbf14357ba_11092_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_70_0_hu265ebd4de641f6a07a43c3dbf14357ba_11092_2032dc016cf16705e21be0472d19ab13.webp"
+               width="407"
+               height="292"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<h2 id="网格线">网格线</h2>
+<p><code>Axes</code> 对象的 <code>grid</code> 方法可以添加网格线。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_74_0_hu198eac112cfc42e27dc9ef18913e2f88_11271_cd3ba2abd8d5945cd7887e0b55a4842a.webp 400w,
+               /media/learn/matplotlib/plot/output_74_0_hu198eac112cfc42e27dc9ef18913e2f88_11271_c5bc60b7f9de17332b2eccf1433d17ae.webp 760w,
+               /media/learn/matplotlib/plot/output_74_0_hu198eac112cfc42e27dc9ef18913e2f88_11271_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_74_0_hu198eac112cfc42e27dc9ef18913e2f88_11271_cd3ba2abd8d5945cd7887e0b55a4842a.webp"
+               width="407"
+               height="292"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+</span></span></code></pre></div><p>可以设置网格线的样式：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-.&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_78_0_huf61ac3a783d548372f5d5c7d1cf13773_15413_85001ba1b4876f4aa225bb891391367f.webp 400w,
+               /media/learn/matplotlib/plot/output_78_0_huf61ac3a783d548372f5d5c7d1cf13773_15413_b076cdf423a49f828cca8c19bf05b105.webp 760w,
+               /media/learn/matplotlib/plot/output_78_0_huf61ac3a783d548372f5d5c7d1cf13773_15413_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_78_0_huf61ac3a783d548372f5d5c7d1cf13773_15413_85001ba1b4876f4aa225bb891391367f.webp"
+               width="407"
+               height="292"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+</span></span></code></pre></div><p>可以只设置一个轴显示网格线：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_82_0_hub154a2d96f7455cdc0f594b14c25e614_13598_3e6b2e93eed38a3278862e977011e3e3.webp 400w,
+               /media/learn/matplotlib/plot/output_82_0_hub154a2d96f7455cdc0f594b14c25e614_13598_5d3570ec6fda3fc6569a3c216a220077.webp 760w,
+               /media/learn/matplotlib/plot/output_82_0_hub154a2d96f7455cdc0f594b14c25e614_13598_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_82_0_hub154a2d96f7455cdc0f594b14c25e614_13598_3e6b2e93eed38a3278862e977011e3e3.webp"
+               width="407"
+               height="292"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+</span></span></code></pre></div><p>设置网格线的粗细：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_86_0_hu9d24884ed17b5a874e91b5b62be7c3df_12533_4923042411a35c96de5a242e78d1dcd3.webp 400w,
+               /media/learn/matplotlib/plot/output_86_0_hu9d24884ed17b5a874e91b5b62be7c3df_12533_8fec8359414cc54ac1abd890fbffda22.webp 760w,
+               /media/learn/matplotlib/plot/output_86_0_hu9d24884ed17b5a874e91b5b62be7c3df_12533_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_86_0_hu9d24884ed17b5a874e91b5b62be7c3df_12533_4923042411a35c96de5a242e78d1dcd3.webp"
+               width="407"
+               height="292"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<h2 id="图例">图例</h2>
+<p>添加图例首先需要设置图像的 <code>label</code> 参数。我们首先要找到表示正弦曲线的 <code>Line2D</code> 对象：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sin_line</span><span class="err">?</span>
+</span></span></code></pre></div><pre><code>[1;31mType:[0m        list
+[1;31mString form:[0m [&lt;matplotlib.lines.Line2D object at 0x0000018EDB35B5B0&gt;]
+[1;31mLength:[0m      1
+[1;31mDocstring:[0m  
+Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sin_line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$y = \sin</span><span class="si">{x}</span><span class="s1">$&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p><code>loc</code> 用于确定图例的位置，<code>upper right</code> 表示图例的显示位置为右上角。其他方位以此类推。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>&lt;matplotlib.legend.Legend at 0x18edb5ad280&gt;
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_93_0_hu1b4e3b7c75ffbec31dbfeabf19fa38cf_13397_de1c6e0124c0b100ec5ce9c124218aa4.webp 400w,
+               /media/learn/matplotlib/plot/output_93_0_hu1b4e3b7c75ffbec31dbfeabf19fa38cf_13397_3df5b054dd1396d03ad3ed60bacd2579.webp 760w,
+               /media/learn/matplotlib/plot/output_93_0_hu1b4e3b7c75ffbec31dbfeabf19fa38cf_13397_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_93_0_hu1b4e3b7c75ffbec31dbfeabf19fa38cf_13397_de1c6e0124c0b100ec5ce9c124218aa4.webp"
+               width="407"
+               height="292"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">legend_</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+</span></span></code></pre></div><p>如果不希望图例显示在绘图区域，则需要通过 <code>Figure</code> 对象，将图例绘制在窗口内。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper center&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>&lt;matplotlib.legend.Legend at 0x18edb2e30d0&gt;
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_97_0_hu045eae641595841d4c98c4afb2247139_13668_b54386c7f8541d60442dc66c910fbd82.webp 400w,
+               /media/learn/matplotlib/plot/output_97_0_hu045eae641595841d4c98c4afb2247139_13668_5707621ff2db99f37521cadb3a4a0b05.webp 760w,
+               /media/learn/matplotlib/plot/output_97_0_hu045eae641595841d4c98c4afb2247139_13668_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_97_0_hu045eae641595841d4c98c4afb2247139_13668_b54386c7f8541d60442dc66c910fbd82.webp"
+               width="407"
+               height="312"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<h2 id="注解">注解</h2>
+<p>在 <strong>Matplotlib</strong> 中，我们可以使用 <code>annotate</code> 方法来创建一个注解。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">text</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_100_0_hu8147d6fc54616c98d790534f38eb2185_14340_af8d6d42332324750a4c7bc8ac7ab2ea.webp 400w,
+               /media/learn/matplotlib/plot/output_100_0_hu8147d6fc54616c98d790534f38eb2185_14340_4de37dbc2058df18aacd9b13a816418b.webp 760w,
+               /media/learn/matplotlib/plot/output_100_0_hu8147d6fc54616c98d790534f38eb2185_14340_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_100_0_hu8147d6fc54616c98d790534f38eb2185_14340_af8d6d42332324750a4c7bc8ac7ab2ea.webp"
+               width="407"
+               height="312"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>其中，参数 <code>text</code> 表示注解的文本内容，参数 <code>xy</code> 表示被注解的点的坐标，参数 <code>xytext</code> 表示注解的文本框的坐标。</p>
+<p>我们还可以创建带有箭头的注解，这需要用到 <code>arrowprops</code> 参数。默认情况下，该参数取空值 <code>None</code>。如果需要绘制箭头，则需要传入指定格式的字典。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">text</span><span class="o">=</span><span class="s1">&#39;min&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_103_0_hu6da2fef7fd7f26c31d200ab3f3f58484_15113_b96266f3c05c581697ada85e15cdf752.webp 400w,
+               /media/learn/matplotlib/plot/output_103_0_hu6da2fef7fd7f26c31d200ab3f3f58484_15113_3d47fd75e421353c27bdbecd8eec4667.webp 760w,
+               /media/learn/matplotlib/plot/output_103_0_hu6da2fef7fd7f26c31d200ab3f3f58484_15113_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_103_0_hu6da2fef7fd7f26c31d200ab3f3f58484_15113_b96266f3c05c581697ada85e15cdf752.webp"
+               width="407"
+               height="312"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>箭头参数主要包括：</p>
+<ul>
+<li><code>width</code> 箭头宽度</li>
+<li><code>headwidth</code> 箭头头部宽度</li>
+<li><code>headlength</code> 箭头头部长度</li>
+<li><code>shrink</code> 箭头两端收缩的百分比</li>
+</ul>
+<p>我们也可以采用内置的模板直接绘制，即指定 <code>arrowstyle</code> 参数。这个时候，不能手动设置箭头参数。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">text</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\frac </span><span class="si">{T}</span><span class="s1"> </span><span class="si">{2}</span><span class="s1">$&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;-&gt;&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span>
+</span></span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/plot/output_106_0_hu103790f27975de6597f4f97fe24e02b9_16207_886731bf2b0174fdc4c686f40377a2e6.webp 400w,
+               /media/learn/matplotlib/plot/output_106_0_hu103790f27975de6597f4f97fe24e02b9_16207_e32afc4e65df400ef89ebaecd1883882.webp 760w,
+               /media/learn/matplotlib/plot/output_106_0_hu103790f27975de6597f4f97fe24e02b9_16207_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/plot/output_106_0_hu103790f27975de6597f4f97fe24e02b9_16207_886731bf2b0174fdc4c686f40377a2e6.webp"
+               width="407"
+               height="312"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/learn/matplotlib/style/" rel="next">Matplotlib 绘图样式</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/learn/matplotlib/bar/" rel="prev">Matplotlib 条形图</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Apr 18, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
+
+    
+    
+    
+      
+
+      
+      
+
+      
+
+      
+
+    
+
+    
+    
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
+
+    
+    
+    
+    
+    
+    
+      
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

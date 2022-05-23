@@ -1,0 +1,1347 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Bowen Zhou" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/convex-optimization/mathematical-background/derivatives/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#bbdefb" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://bowenei.gitee.io/learn/convex-optimization/mathematical-background/derivatives/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+  <meta property="og:url" content="https://bowenei.gitee.io/learn/convex-optimization/mathematical-background/derivatives/" />
+  <meta property="og:title" content="导数 | Bowen&#39;s Academic Home" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-11-28T15:06:00&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-11-28T15:06:00&#43;08:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>导数 | Bowen&#39;s Academic Home</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="bda722fb29493a63d70af6bbf4c92584" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+
+  
+
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blogs"><span>Blogs</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallery"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/learn/"><span>Learn</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/bowenEI/" data-toggle="tooltip" data-placement="bottom" title="Follow me on Github" target="_blank" rel="noopener" aria-label="Follow me on Github">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+
+        
+        
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          数学基础
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/learn/"><i class="fas fa-arrow-left pr-1"></i>Learn</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/convex-optimization/">凸优化</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/convex-optimization/mathematical-background/">数学基础</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/convex-optimization/mathematical-background/norms/">范数</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/mathematical-background/analysis/">分析</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/mathematical-background/functions/">函数</a></li>
+
+
+
+  <li class="active"><a href="/learn/convex-optimization/mathematical-background/derivatives/">导数</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/mathematical-background/linear-algebra/">线性代数</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/convex-optimization/convex-sets/">凸集</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-sets/affine-and-convex-sets/">仿射集合和凸集</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-sets/important-convex-sets/">重要凸集</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-sets/operations-that-preserve-convexity/">保凸运算</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-sets/generalized-inequalities/">广义不等式</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-sets/separating-and-supporting-hyperplanes/">分离与支撑超平面</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-sets/dual-cones-and-generalized-inequalities/">对偶锥与广义不等式</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/convex-optimization/convex-functions/">凸函数</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-functions/basic-properties/">基本性质</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-functions/important-convex-functions/">重要凸函数</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-functions/operations-that-preserve-convexity/">保凸运算</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-functions/conjugate-function/">共轭函数</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-functions/quasiconvex-functions/">拟凸函数</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-functions/log-concave-and-log-convex-functions/">对数凹函数和对数凸函数</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-functions/convexity-with-respect-to-generalized-inequalities/">广义不等式的单调性和凸性</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/convex-optimization/convex-optimization-problems/">凸优化问题</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-optimization-problems/optimization-problems/">优化问题</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-optimization-problems/convex-optimization/">凸优化</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-optimization-problems/linear-optimization-problems/">线性规划问题</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-optimization-problems/quadratic-optimization-problems/">二次优化问题</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-optimization-problems/geometric-programming/">几何规划</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-optimization-problems/generalized-inequality-constraints/">广义不等式约束</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/convex-optimization-problems/vector-optimization/">向量优化</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/convex-optimization/duality/">对偶</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/convex-optimization/duality/the-lagrange-dual-function/">Lagrange 对偶函数</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/duality/the-lagrange-dual-problem/">Lagrange 对偶问题</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/duality/geometric-interpretation/">几何解释</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/duality/saddle-point-interpretation/">鞍点解释</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/duality/optimality-conditions/">最优性条件</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/duality/going-deeper-into-kkt/">深入理解 KKT 条件</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/duality/perturbation-and-sensitivity-analysis/">扰动和灵敏度分析</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/duality/equivalent-dual-problems/">等价的对偶问题</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/duality/theorems-of-alternatives/">择一定理</a></li>
+
+
+
+  <li class=""><a href="/learn/convex-optimization/duality/generalized-inequalities/">广义不等式</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/convex-optimization/%E6%97%A0%E7%BA%A6%E6%9D%9F%E4%BC%98%E5%8C%96/">无约束优化</a>
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/convex-optimization/%E7%AD%89%E5%BC%8F%E7%BA%A6%E6%9D%9F%E4%BC%98%E5%8C%96/">等式约束优化</a>
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/convex-optimization/%E5%86%85%E7%82%B9%E6%B3%95/">内点法</a>
+    
+
+    
+      </div>
+    
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#导数">导数</a></li>
+    <li><a href="#梯度">梯度</a></li>
+    <li><a href="#链式规则">链式规则</a>
+      <ul>
+        <li><a href="#仿射函数">仿射函数</a></li>
+        <li><a href="#方向导数">方向导数</a></li>
+      </ul>
+    </li>
+    <li><a href="#二阶导数">二阶导数</a></li>
+    <li><a href="#二阶导数的链式规则">二阶导数的链式规则</a>
+      <ul>
+        <li><a href="#标量复合函数">标量复合函数</a></li>
+        <li><a href="#复合仿射函数">复合仿射函数</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+
+          <h1>导数</h1>
+
+          <div class="article-style">
+            <h2 id="导数">导数</h2>
+<p>设函数 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}^{m}$，$x \in \operatorname{int} \operatorname{dom} f$。如果存在矩阵 $Df(x) \in \mathbf{R}^{m \times n}$，满足</p>
+<p>\begin{align}
+\lim _{z \in \operatorname{dom} f, z \neq x, z \rightarrow x} \frac{\|f(z)-f(x)-D f(x)(z-x)\| _{2}}{\|z-x\| _{2}}=0
+\end{align}</p>
+<p>则称函数 $f$ <strong>可微</strong>，并称 $Df(x)$ 为 $f$ 在 $x$ 处的<strong>导数</strong>（或 <strong>Jacobian</strong> 矩阵）。</p>
+<p>我们将 $z$ 的仿射函数</p>
+<p>\begin{align}
+f(x) + Df(x)(z-x)
+\end{align}</p>
+<p>称为 $f$ 在 $x$ 处（或附近）的<strong>一次逼近</strong>。当 $z$ 接近 $x$ 时，该仿射函数非常接近 $f$。</p>
+<p>$Df(x)$ 可以通过计算偏导数的方式求得：</p>
+<p>\begin{align}
+D f(x) _{ij}=\frac{\partial f _{i}(x)}{\partial x _{j}}, \quad i=1, \cdots, m, \quad j=1, \cdots, n
+\end{align}</p>
+<h2 id="梯度">梯度</h2>
+<p>\begin{align}
+\nabla f(x)=D f(x)^{T}
+\end{align}</p>
+<p><strong>梯度</strong>是一个列向量，它的分量是 $f$ 的偏导数。</p>
+<p>\begin{align}
+\nabla f(x) _{i}=\frac{\partial f(x)}{\partial x _{i}}, \quad i=1, \cdots, n
+\end{align}</p>
+<h2 id="链式规则">链式规则</h2>
+<p>设复合函数 $h(x) = g(f(x))$，则</p>
+<p>\begin{align}
+\nabla h(x) &amp;= g&rsquo;(f(x))f(x) \\
+&amp;= \nabla g(f(x))^T f(x)
+\end{align}</p>
+<h3 id="仿射函数">仿射函数</h3>
+<p>设仿射函数 $g(x) = f(Ax+b)$，其中 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}^{m}$，$A \in \mathbf{R}^{n \times p}$，$b \in \mathbf{R}^{n}$，则 $g: \mathbf{R}^{p} \rightarrow \mathbf{R}^{m}$。当 $f$ 是实函数时（即 $m=1$），仿射函数 $g$ 的梯度公式为：</p>
+<p>\begin{align}
+\nabla g(x) = A^T \nabla f(Ax+b)
+\end{align}</p>
+<div class="alert alert-note">
+  <div>
+    <p><strong>仿射</strong></p>
+<p>从 $\mathbf{R}^{n}$ 到 $\mathbf{R}^{m}$ 的映射 $x \rightarrow Ax+b$ 称为<strong>仿射变换</strong>。当 $m=1$ 时，称上述仿射变换为<strong>仿射函数</strong>。若仿射函数的 $b=0$，则称之为<strong>线性函数</strong>。</p>
+
+  </div>
+</div>
+
+<h3 id="方向导数">方向导数</h3>
+<p>设 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}^{m}$，$x, v \in \mathbf{R}^{n}$。定义函数 $\tilde{f} = f(x+tv)$。（粗略地说，$\tilde{f}$ 是将 $f$ 限制在直线 $\{x+tv \mid t \in \mathbf{R}\}$ 上的函数。）则</p>
+<p>\begin{align}
+D \tilde{f}(t)=\tilde{f}^{\prime}(t)=\nabla f(x+t v)^{T} v
+\end{align}</p>
+<p>并称标量 $\tilde{f}^{\prime}(0)$ 为函数 $f$ 在 $x$ 处沿方向 $v$ 的<strong>方向导数</strong>。</p>
+<h2 id="二阶导数">二阶导数</h2>
+<p>设函数 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}$，$x \in \operatorname{int} \operatorname{dom} f$。那么 $f$ 在 $x$ 处的二阶导数（或 <strong>Hessian</strong> 矩阵）为</p>
+<p>\begin{align}
+\nabla^{2} f(x) _{ij}=\frac{\partial^{2} f(x)}{\partial x _{i} \partial x _{j}}, \quad i=1, \cdots, n, \quad j=1, \cdots, n
+\end{align}</p>
+<p>函数 $f$ 在（或接近）$x$ 处以 $z$ 为变量的<strong>二次逼近</strong>为</p>
+<p>\begin{align}
+\widehat{f}(z)=f(x)+\nabla f(x)^{T}(z-x)+\frac{1}{2}(z-x)^{T} \nabla^{2} f(x)(z-x)
+\end{align}</p>
+<h2 id="二阶导数的链式规则">二阶导数的链式规则</h2>
+<h3 id="标量复合函数">标量复合函数</h3>
+<p>设 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}$，$g: \mathbf{R} \rightarrow \mathbf{R}$，$h(x)=g(f(x))$。我们有</p>
+<p>\begin{align}
+\nabla^{2} h(x)=g^{\prime}(f(x)) \nabla^{2} f(x)+g^{\prime \prime}(f(x)) \nabla f(x) \nabla f(x)^{T}
+\end{align}</p>
+<h3 id="复合仿射函数">复合仿射函数</h3>
+<p>设 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}$，$A \in \mathbf{R}^{n \times m}$，$b \in \mathbf{R}^{n}$，定义 $g: \mathbf{R}^{m} \rightarrow \mathbf{R}$ 为 $g(x) = f(Ax+b)$。我们有</p>
+<p>\begin{align}
+\nabla^{2} g(x)=A^T \nabla^{2} f(Ax+b) A
+\end{align}</p>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/learn/convex-optimization/mathematical-background/functions/" rel="next">函数</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/learn/convex-optimization/mathematical-background/linear-algebra/" rel="prev">线性代数</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Nov 28, 2021</p>
+
+          
+
+
+
+          
+
+
+
+
+          
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
+
+    
+    
+    
+      
+
+      
+      
+
+      
+
+      
+
+    
+
+    
+    
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
+
+    
+    
+    
+    
+    
+    
+      
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>
