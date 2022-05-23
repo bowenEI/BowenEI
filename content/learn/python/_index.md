@@ -1,0 +1,21 @@
+---
+title: Learn Python
+linkTitle: Python
+summary: 学习 Python 基础知识，方便查阅。
+date: '2021-01-24'
+type: book
+weight: 50
+---
+
+{{< figure src="learn/python/python.png" >}}
+
+{{< toc hide_on="xl" >}}
+
+## What you will learn
+
+{{< list_children >}}
+
+## Thanks & References
+
+- [Python.org](https://www.python.org)
+- [菜鸟教程](https://www.runoob.com/)

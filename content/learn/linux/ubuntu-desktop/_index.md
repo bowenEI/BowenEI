@@ -1,0 +1,13 @@
+---
+title: "Ubuntu Desktop 快速部署"
+linktitle: "Ubuntu Desktop 快速部署"
+date: '2021-01-01'
+type: book
+weight: 100
+---
+
+<!--more-->
+
+## What you will learn
+
+{{< list_children >}}
