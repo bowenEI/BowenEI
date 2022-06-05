@@ -8,7 +8,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
   
 
   
@@ -22,11 +22,7 @@
 
 
 
-
   
-
-
-
 
 
 
@@ -72,15 +68,18 @@
   
   
   
-    <meta name="theme-color" content="#bbdefb" />
+    <meta name="theme-color" content="#1565c0" />
   
 
   
   
+    
+    <script src="/js/mathjax-config.js"></script>
+  
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
 
   
   
@@ -101,120 +100,132 @@
     
     
     
-    
-
-    
-    
-    
-
-    
-
-    
-    
-      
-      
-
-      
-      
-
       
     
-      
-      
-
-      
-      
-
-      
     
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
       
       
         
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
       
 
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -240,7 +251,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
 
   
 
@@ -248,9 +259,7 @@
 
   
 
-
   
-
 
   
 
@@ -325,7 +334,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="a603879f7b370dfaa34fe5cc4c94b256" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="a603879f7b370dfaa34fe5cc4c94b256" >
 
   
   
@@ -336,10 +345,47 @@
   
   
   
-  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
 
   
 
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
 
 
 
@@ -588,9 +634,29 @@
 
         
         
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
 
         
         
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
         
 
         
@@ -607,10 +673,7 @@
 
   <div class="page-body">
     
-    
-    
 
-    
 
 
 
@@ -630,6 +693,12 @@
     </div>
   </button>
 
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
   
 </form>
 
@@ -755,13 +824,63 @@
 
         <div class="docs-article-container">
           
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/">
+        
+          Learn
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/pandas/">
+        
+          pandas
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        pandas 分类汇总
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+          
 
           <h1>pandas 分类汇总</h1>
 
           <div class="article-style">
-            <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span></code></pre></div><p>分类汇总 <code>group by</code> 指的是如下的一个或多个步骤的数据分组：</p>
+            <pre><code class="language-python">import pandas as pd
+import numpy as np
+</code></pre>
+<p>分类汇总 <code>group by</code> 指的是如下的一个或多个步骤的数据分组：</p>
 <ul>
 <li><strong>Splitting</strong>: 根据某些标准将数据分成若干组。</li>
 <li><strong>Applying</strong>: 将一个函数独立应用于每个组。</li>
@@ -776,19 +895,20 @@
 </ul>
 <h2 id="分组">分组</h2>
 <p>pandas 对象可以在其任意轴上拆分。分组的抽象定义是提供标签到组名的映射。分组需要创建 <code>GroupBy</code> 对象。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span>
-</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="s2">&#34;bird&#34;</span><span class="p">,</span> <span class="s2">&#34;Falconiformes&#34;</span><span class="p">,</span> <span class="mf">389.0</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="s2">&#34;bird&#34;</span><span class="p">,</span> <span class="s2">&#34;Psittaciformes&#34;</span><span class="p">,</span> <span class="mf">24.0</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="s2">&#34;mammal&#34;</span><span class="p">,</span> <span class="s2">&#34;Carnivora&#34;</span><span class="p">,</span> <span class="mf">80.2</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="s2">&#34;mammal&#34;</span><span class="p">,</span> <span class="s2">&#34;Primates&#34;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="s2">&#34;mammal&#34;</span><span class="p">,</span> <span class="s2">&#34;Carnivora&#34;</span><span class="p">,</span> <span class="mi">58</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">    <span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;falcon&#34;</span><span class="p">,</span> <span class="s2">&#34;parrot&#34;</span><span class="p">,</span> <span class="s2">&#34;lion&#34;</span><span class="p">,</span> <span class="s2">&#34;monkey&#34;</span><span class="p">,</span> <span class="s2">&#34;leopard&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">columns</span><span class="o">=</span><span class="p">(</span><span class="s2">&#34;class&#34;</span><span class="p">,</span> <span class="s2">&#34;order&#34;</span><span class="p">,</span> <span class="s2">&#34;max_speed&#34;</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">df</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">df = pd.DataFrame(
+    [
+        (&quot;bird&quot;, &quot;Falconiformes&quot;, 389.0),
+        (&quot;bird&quot;, &quot;Psittaciformes&quot;, 24.0),
+        (&quot;mammal&quot;, &quot;Carnivora&quot;, 80.2),
+        (&quot;mammal&quot;, &quot;Primates&quot;, np.nan),
+        (&quot;mammal&quot;, &quot;Carnivora&quot;, 58),
+    ],
+    index=[&quot;falcon&quot;, &quot;parrot&quot;, &quot;lion&quot;, &quot;monkey&quot;, &quot;leopard&quot;],
+    columns=(&quot;class&quot;, &quot;order&quot;, &quot;max_speed&quot;),
+)
+df
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -845,28 +965,32 @@
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x0000021B59E47F10&gt;
+<pre><code class="language-python">df.groupby('class')
+</code></pre>
+<pre><code>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x0000021B59E47F10&gt;
 </code></pre>
 <p><code>axis</code> 为 <code>1</code> 或 <code>columns</code> 表示按列分组，默认值为 <code>0</code> 或 <code>index</code> 即按行分组。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;order&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;columns&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x0000021B59E47BE0&gt;
+<pre><code class="language-python">df.groupby('order', axis='columns')
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;order&#39;</span><span class="p">])</span>
-</span></span></code></pre></div><pre><code>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x0000021B576F6BB0&gt;
+<pre><code>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x0000021B59E47BE0&gt;
+</code></pre>
+<pre><code class="language-python">df.groupby(['class', 'order'])
+</code></pre>
+<pre><code>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x0000021B576F6BB0&gt;
 </code></pre>
 <h2 id="应用与合并">应用与合并</h2>
 <h3 id="汇总">汇总</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;A&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;foo&#34;</span><span class="p">,</span> <span class="s2">&#34;bar&#34;</span><span class="p">,</span> <span class="s2">&#34;foo&#34;</span><span class="p">,</span> <span class="s2">&#34;bar&#34;</span><span class="p">,</span> <span class="s2">&#34;foo&#34;</span><span class="p">,</span> <span class="s2">&#34;bar&#34;</span><span class="p">,</span> <span class="s2">&#34;foo&#34;</span><span class="p">,</span> <span class="s2">&#34;foo&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;B&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;one&#34;</span><span class="p">,</span> <span class="s2">&#34;one&#34;</span><span class="p">,</span> <span class="s2">&#34;two&#34;</span><span class="p">,</span> <span class="s2">&#34;three&#34;</span><span class="p">,</span> <span class="s2">&#34;two&#34;</span><span class="p">,</span> <span class="s2">&#34;two&#34;</span><span class="p">,</span> <span class="s2">&#34;one&#34;</span><span class="p">,</span> <span class="s2">&#34;three&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;C&#34;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;D&#34;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">df</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">df = pd.DataFrame(
+    {
+        &quot;A&quot;: [&quot;foo&quot;, &quot;bar&quot;, &quot;foo&quot;, &quot;bar&quot;, &quot;foo&quot;, &quot;bar&quot;, &quot;foo&quot;, &quot;foo&quot;],
+        &quot;B&quot;: [&quot;one&quot;, &quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;two&quot;, &quot;two&quot;, &quot;one&quot;, &quot;three&quot;],
+        &quot;C&quot;: np.random.randn(8),
+        &quot;D&quot;: np.random.randn(8),
+    }
+)
+df
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -951,10 +1075,12 @@
 </table>
 </div>
 <p><code>GroupBy</code> 对象后索引 column 表示需要汇总的属性，会返回一个新的 <code>GroupBy</code> 对象。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">grouped</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)[[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">]]</span>
-</span></span></code></pre></div><h4 id="求和">求和</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">grouped</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">grouped = df.groupby('A')[['C', 'D']]
+</code></pre>
+<h4 id="求和">求和</h4>
+<pre><code class="language-python">grouped.sum()
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -996,8 +1122,9 @@
 </table>
 </div>
 <h4 id="平均值">平均值</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">grouped</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">grouped.mean()
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1039,8 +1166,9 @@
 </table>
 </div>
 <h4 id="中位数">中位数</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">grouped</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">grouped.median()
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1082,8 +1210,9 @@
 </table>
 </div>
 <h4 id="最小值">最小值</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">grouped</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">grouped.min()
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1125,8 +1254,9 @@
 </table>
 </div>
 <h4 id="最大值">最大值</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">grouped</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">grouped.max()
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1168,8 +1298,9 @@
 </table>
 </div>
 <h4 id="标准差">标准差</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">grouped</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">grouped.std()
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1211,8 +1342,9 @@
 </table>
 </div>
 <p>可以使用 <code>agg</code> 来使用任何可以进行汇总和统计的函数，包括用户自定义的函数。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">grouped</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span> <span class="s1">&#39;mean&#39;</span><span class="p">])</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">grouped.agg(['sum', 'mean'])
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1271,13 +1403,14 @@
 </table>
 </div>
 <h3 id="次序">次序</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">    <span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Jim&#39;</span><span class="p">,</span> <span class="s1">&#39;Jim&#39;</span><span class="p">,</span> <span class="s1">&#39;Jim&#39;</span><span class="p">,</span> <span class="s1">&#39;Pam&#39;</span><span class="p">,</span> <span class="s1">&#39;Pam&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="s1">&#39;Attempt&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;First&#39;</span><span class="p">,</span> <span class="s1">&#39;Second&#39;</span><span class="p">,</span> <span class="s1">&#39;Third&#39;</span><span class="p">,</span> <span class="s1">&#39;First&#39;</span><span class="p">,</span> <span class="s1">&#39;Second&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="s1">&#39;GRE Score&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">298</span><span class="p">,</span> <span class="mi">321</span><span class="p">,</span> <span class="mi">314</span><span class="p">,</span> <span class="mi">318</span><span class="p">,</span> <span class="mi">330</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="p">})</span>
-</span></span><span class="line"><span class="cl"><span class="n">df</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">df = pd.DataFrame({
+    'Name': ['Jim', 'Jim', 'Jim', 'Pam', 'Pam'],
+    'Attempt': ['First', 'Second', 'Third', 'First', 'Second'],
+    'GRE Score': [298, 321, 314, 318, 330]
+})
+df
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1335,31 +1468,35 @@
 </table>
 </div>
 <p>返回每个人最后一次 GRE 考试成绩：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Name&#39;</span><span class="p">)[</span><span class="s1">&#39;GRE Score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">last</span><span class="p">()</span>
-</span></span></code></pre></div><pre><code>Name
+<pre><code class="language-python">df.groupby('Name')['GRE Score'].last()
+</code></pre>
+<pre><code>Name
 Jim    314
 Pam    330
 Name: GRE Score, dtype: int64
 </code></pre>
 <p>返回每个人第一次 GRE 考试成绩：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Name&#39;</span><span class="p">)[</span><span class="s1">&#39;GRE Score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
-</span></span></code></pre></div><pre><code>Name
+<pre><code class="language-python">df.groupby('Name')['GRE Score'].first()
+</code></pre>
+<pre><code>Name
 Jim    298
 Pam    318
 Name: GRE Score, dtype: int64
 </code></pre>
 <p>使用 <code>nth</code> 可以返回第任意次 GRE 考试成绩：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Name&#39;</span><span class="p">)[</span><span class="s1">&#39;GRE Score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nth</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>Name
+<pre><code class="language-python">df.groupby('Name')['GRE Score'].nth(1)
+</code></pre>
+<pre><code>Name
 Jim    321
 Pam    330
 Name: GRE Score, dtype: int64
 </code></pre>
 <h3 id="排序">排序</h3>
 <p>给每次 GRE 考试都加上名次。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Rank&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Name&#39;</span><span class="p">)[</span><span class="s1">&#39;GRE Score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rank</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">df</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">df['Rank'] = df.groupby('Name')['GRE Score'].rank(ascending=False).astype(int)
+df
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1423,8 +1560,9 @@ Name: GRE Score, dtype: int64
 </table>
 </div>
 <p>如要给每组数据都排序，建议先对原 DataFrame 对象排序，再分组。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;GRE Score&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Name&#39;</span><span class="p">)[</span><span class="s1">&#39;GRE Score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
-</span></span></code></pre></div><pre><code>Name
+<pre><code class="language-python">df.sort_values('GRE Score', ascending=False).groupby('Name')['GRE Score'].first()
+</code></pre>
+<pre><code>Name
 Jim    321
 Pam    330
 Name: GRE Score, dtype: int64
@@ -1468,12 +1606,19 @@ Name: GRE Score, dtype: int64
 
 
 
-          
-
-
 
 
           
+
+
+
+
+          
+
+
+  
+  
+
 
 
         </div>
@@ -1496,11 +1641,6 @@ Name: GRE Score, dtype: int64
   
 
 
-
-
-
-
-  
 
 
 
@@ -1532,78 +1672,7 @@ Name: GRE Score, dtype: int64
     
   </div>
 
-      
-
-    
-    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
-
-    
-    
-    
-      
-
-      
-      
-
-      
-
-      
-
-    
-
-    
-    
-    
-
-    
-    
-    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
-    <script>
-      anchors.add();
-    </script>
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-
-    
-
-    
-    
-    
-    <script id="page-data" type="application/json">{"use_headroom":false}</script>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
-
-    
-    
-    
-    
-    
-    
-      
+  
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -1629,7 +1698,119 @@ Name: GRE Score, dtype: int64
   </div>
 </div>
 
-      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 

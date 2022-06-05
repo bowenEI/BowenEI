@@ -148,8 +148,8 @@ M = \frac {PQ} {V}
       <pubDate>Sat, 17 Jul 2021 18:57:59 +0800</pubDate>
       <guid>https://bowenei.gitee.io/learn/marxism/%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E6%94%BF%E6%B2%BB%E7%BB%8F%E6%B5%8E%E5%AD%A6/%E8%B5%84%E6%9C%AC%E4%B8%8E%E5%89%A9%E4%BD%99%E4%BB%B7%E5%80%BC/</guid>
       <description>&lt;h2 id=&#34;资本总公式及其矛盾的解决&#34;&gt;资本总公式及其矛盾的解决&lt;/h2&gt;
-&lt;p&gt;简单商品流通公式：商品－货币－商品（$W-G-W&amp;rsquo;$）。为买而卖、获得使用价值、商品生产者的生产关系。&lt;/p&gt;
-&lt;p&gt;资本总公式：货币－商品－货币（$G-W-G&amp;rsquo;$）。为卖而买、取得价值、资本主义生产关系。&lt;/p&gt;
+&lt;p&gt;简单商品流通公式：商品－货币－商品（$W-G-W&#39;$）。为买而卖、获得使用价值、商品生产者的生产关系。&lt;/p&gt;
+&lt;p&gt;资本总公式：货币－商品－货币（$G-W-G&#39;$）。为卖而买、取得价值、资本主义生产关系。&lt;/p&gt;
 &lt;p&gt;不同点：买卖顺序、内容、目的、体现的生产关系。&lt;/p&gt;
 &lt;p&gt;矛盾：发生了价值增值。&lt;/p&gt;
 &lt;p&gt;矛盾解决：劳动力成为商品。&lt;/p&gt;
@@ -175,14 +175,14 @@ M = \frac {PQ} {V}
 &lt;p&gt;&lt;strong&gt;不变资本 $c$：购买生产资料的资本&lt;/strong&gt;。价值转移，改变物质形态，不发生增值。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;可变资本 $v$：购买劳动力的资本&lt;/strong&gt;。改变了价值量。具体劳动转移生产资料的价值，抽象劳动创造新价值（包括补偿劳动力的价值和剩余价值）。&lt;/p&gt;
 &lt;h2 id=&#34;剩余价值生产的方法&#34;&gt;剩余价值生产的方法&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;剩余价值率 $m&amp;rsquo;$：剩余价值 $m$ 与可变资本 $v$ 的比率。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;剩余价值率 $m&#39;$：剩余价值 $m$ 与可变资本 $v$ 的比率。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;\begin{align}
-m&amp;rsquo; = \frac {m} {v} \times 100 \%
+m&#39; = \frac {m} {v} \times 100 \%
 \end{align}&lt;/p&gt;
 &lt;p&gt;\begin{align}
 \mbox{剩余价值率} = \frac {\mbox{剩余劳动}} {\mbox{必要劳动}} = \frac {\mbox{剩余劳动时间}} {\mbox{必要劳动时间}}
 \end{align}&lt;/p&gt;
-&lt;p&gt;特别地，若 $m&amp;rsquo; = 0$，则不产生任何剩余价值，此时应该称呼该资本家为慈善家；若 $m&amp;rsquo; \rightarrow + \infty$，则劳动者的劳动力被完全剥削没有任何价值，此时应该称呼该资本家为奴隶主。&lt;/p&gt;
+&lt;p&gt;特别地，若 $m&#39; = 0$，则不产生任何剩余价值，此时应该称呼该资本家为慈善家；若 $m&#39; \rightarrow + \infty$，则劳动者的劳动力被完全剥削没有任何价值，此时应该称呼该资本家为奴隶主。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;绝对剩余价值&lt;/strong&gt;：必要劳动时间不变，工作时间绝对延长（996）或劳动强度绝对增大。局限：生理界限和社会道德界限。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;相对剩余价值&lt;/strong&gt;：工作时间不变，缩短必要劳动时间从而延长剩余劳动时间。优点：促进生产力的发展。&lt;/p&gt;
 &lt;p&gt;超额剩余价值：个别资本家通过提高个别劳动生产率，通过市场竞争使其他资本家也提高劳动生产率，这样社会的劳动生产率也就提高了，就会导致商品的社会价值下降（超额利润消失），于是（劳动者所需的）生活资料的价值下降，劳动力价值下降，必要劳动时间缩短，这样个别资本家获得的相对剩余价值就是超额剩余价值。&lt;/p&gt;

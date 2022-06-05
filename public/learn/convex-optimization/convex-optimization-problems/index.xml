@@ -292,15 +292,13 @@ $$&lt;/p&gt;
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-optimization-problems/4-1-1_hu147decd722ff938c0ef363720dcaaa6e_59607_a32ece057d286a9c3fc65a6379ded901.webp 400w,
-               /media/learn/convex-optimization/convex-optimization-problems/4-1-1_hu147decd722ff938c0ef363720dcaaa6e_59607_ddb41c1983cc6d8ce60347facc0447a8.webp 760w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-1-1_hu147decd722ff938c0ef363720dcaaa6e_59607_584594b4787b2f7470a121948f9510b6.webp 400w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-1-1_hu147decd722ff938c0ef363720dcaaa6e_59607_83dc26c862f2d099e33a667de325c20b.webp 760w,
                /media/learn/convex-optimization/convex-optimization-problems/4-1-1_hu147decd722ff938c0ef363720dcaaa6e_59607_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-1-1_hu147decd722ff938c0ef363720dcaaa6e_59607_a32ece057d286a9c3fc65a6379ded901.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-1-1_hu147decd722ff938c0ef363720dcaaa6e_59607_584594b4787b2f7470a121948f9510b6.webp&#34;
                width=&#34;760&#34;
                height=&#34;522&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -488,7 +486,7 @@ $$&lt;/p&gt;
 \begin{aligned}
 \mathrm{minimize} \quad &amp;amp; f_0(x) \\
 \mathrm{subject\ to} \quad &amp;amp; f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\
-&amp;amp; A^Tx = b
+&amp;amp; A^Tx = b 
 \end{aligned}
 $$&lt;/p&gt;
 &lt;p&gt;其中不等式约束函数 $f_1,\cdots,f_m$ 是凸的，而目标函数 $f_0$ 是拟凸的。拟凸约束函数可以等价的替换为凸约束函数，即具有相同的 $0$- 下水平集的凸函数。&lt;/p&gt;
@@ -509,15 +507,13 @@ $$&lt;/p&gt;
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-optimization-problems/4-2-1_hu039e0310f185b4c5236c0dc611bb3f22_55969_e37c4f1e735b2e85b530bded6afeb4d4.webp 400w,
-               /media/learn/convex-optimization/convex-optimization-problems/4-2-1_hu039e0310f185b4c5236c0dc611bb3f22_55969_748853ebc323732d9191239c06222d4d.webp 760w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-2-1_hu039e0310f185b4c5236c0dc611bb3f22_55969_8c2f2eb6dd0ea152b25f7f94591ebf07.webp 400w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-2-1_hu039e0310f185b4c5236c0dc611bb3f22_55969_0c85291a1b5277cc12545786ed0f0580.webp 760w,
                /media/learn/convex-optimization/convex-optimization-problems/4-2-1_hu039e0310f185b4c5236c0dc611bb3f22_55969_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-2-1_hu039e0310f185b4c5236c0dc611bb3f22_55969_e37c4f1e735b2e85b530bded6afeb4d4.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-2-1_hu039e0310f185b4c5236c0dc611bb3f22_55969_8c2f2eb6dd0ea152b25f7f94591ebf07.webp&#34;
                width=&#34;760&#34;
                height=&#34;473&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -552,7 +548,7 @@ $$&lt;/p&gt;
 \begin{aligned}
 \mathrm{minimize} \quad &amp;amp; c^Tx+d \\
 \mathrm{subject\ to} \quad &amp;amp; Gx \preceq h \\
-\quad &amp;amp; Ax=b
+\quad &amp;amp; Ax=b 
 \end{aligned}
 $$&lt;/p&gt;
 &lt;p&gt;其中 $G \in \mathbf{R}^{m \times n}$ 并且 $A \in \mathbf{R}^{p \times n}$。显然，线性规划问题是凸优化问题。&lt;/p&gt;
@@ -571,15 +567,13 @@ $$&lt;/p&gt;
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-optimization-problems/4-3-1_hu5f3db8c02de60c9eed3ecc5d3453ca29_114497_22cd7ec0d3643fc9cb08c8cae8747ac1.webp 400w,
-               /media/learn/convex-optimization/convex-optimization-problems/4-3-1_hu5f3db8c02de60c9eed3ecc5d3453ca29_114497_7a2165d9a03022bcbb4676b9025c49c7.webp 760w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-3-1_hu5f3db8c02de60c9eed3ecc5d3453ca29_114497_f1f30eadb24f49791f585af72d108c1a.webp 400w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-3-1_hu5f3db8c02de60c9eed3ecc5d3453ca29_114497_37a6995d062c56254fda11e2617b3936.webp 760w,
                /media/learn/convex-optimization/convex-optimization-problems/4-3-1_hu5f3db8c02de60c9eed3ecc5d3453ca29_114497_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-3-1_hu5f3db8c02de60c9eed3ecc5d3453ca29_114497_22cd7ec0d3643fc9cb08c8cae8747ac1.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-3-1_hu5f3db8c02de60c9eed3ecc5d3453ca29_114497_f1f30eadb24f49791f585af72d108c1a.webp&#34;
                width=&#34;760&#34;
                height=&#34;681&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -678,15 +672,13 @@ $$&lt;/p&gt;
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-optimization-problems/4-4-1_hu2b84c963f55b795d3080b758c576c591_97154_71f2ba232dd3c1208ceeab04f28d9b12.webp 400w,
-               /media/learn/convex-optimization/convex-optimization-problems/4-4-1_hu2b84c963f55b795d3080b758c576c591_97154_017312147cc9e4948002db54832d6c8a.webp 760w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-4-1_hu2b84c963f55b795d3080b758c576c591_97154_8fd04802e5c1040844c8cca0b5d52bce.webp 400w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-4-1_hu2b84c963f55b795d3080b758c576c591_97154_da3dbdb0cd8c68b74e63d8ae35878ba7.webp 760w,
                /media/learn/convex-optimization/convex-optimization-problems/4-4-1_hu2b84c963f55b795d3080b758c576c591_97154_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-4-1_hu2b84c963f55b795d3080b758c576c591_97154_71f2ba232dd3c1208ceeab04f28d9b12.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-4-1_hu2b84c963f55b795d3080b758c576c591_97154_8fd04802e5c1040844c8cca0b5d52bce.webp&#34;
                width=&#34;749&#34;
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -963,15 +955,13 @@ $$&lt;/p&gt;
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-optimization-problems/4-7-1_hu264b1294689eb6eb878571c803748059_49583_bd28b024db788504d0299299adcdfd55.webp 400w,
-               /media/learn/convex-optimization/convex-optimization-problems/4-7-1_hu264b1294689eb6eb878571c803748059_49583_028ca8f1ae6f9b25b125eecca94bd00a.webp 760w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-7-1_hu264b1294689eb6eb878571c803748059_49583_fdfae892e029d933e03bc02ffc309487.webp 400w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-7-1_hu264b1294689eb6eb878571c803748059_49583_db8c6a65c9ed26dc51c565ebf7f86d4e.webp 760w,
                /media/learn/convex-optimization/convex-optimization-problems/4-7-1_hu264b1294689eb6eb878571c803748059_49583_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-7-1_hu264b1294689eb6eb878571c803748059_49583_bd28b024db788504d0299299adcdfd55.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-7-1_hu264b1294689eb6eb878571c803748059_49583_fdfae892e029d933e03bc02ffc309487.webp&#34;
                width=&#34;760&#34;
                height=&#34;685&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -1005,15 +995,13 @@ $$&lt;/p&gt;
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-optimization-problems/4-7-2_hu30a082d3ddfb81337bf1f663118fcb0e_57046_07038d30c5b09f4b82873a6ba8eddf01.webp 400w,
-               /media/learn/convex-optimization/convex-optimization-problems/4-7-2_hu30a082d3ddfb81337bf1f663118fcb0e_57046_a2920edea1ffea42306a9c7fcec0563f.webp 760w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-7-2_hu30a082d3ddfb81337bf1f663118fcb0e_57046_487d33241f91fd2bfa51b053eb2b0f8a.webp 400w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-7-2_hu30a082d3ddfb81337bf1f663118fcb0e_57046_f3bbb0bcebe26315abb73b2c201c9323.webp 760w,
                /media/learn/convex-optimization/convex-optimization-problems/4-7-2_hu30a082d3ddfb81337bf1f663118fcb0e_57046_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-7-2_hu30a082d3ddfb81337bf1f663118fcb0e_57046_07038d30c5b09f4b82873a6ba8eddf01.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-7-2_hu30a082d3ddfb81337bf1f663118fcb0e_57046_487d33241f91fd2bfa51b053eb2b0f8a.webp&#34;
                width=&#34;760&#34;
                height=&#34;758&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -1048,15 +1036,13 @@ $$&lt;/p&gt;
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-optimization-problems/4-7-3_huc49b5ee6a174e89858c782e49d3afc94_72743_3d02952bdadb6e819f6eeeec2f4dc732.webp 400w,
-               /media/learn/convex-optimization/convex-optimization-problems/4-7-3_huc49b5ee6a174e89858c782e49d3afc94_72743_cddf4cd17688f80940cb241eaff727cd.webp 760w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-7-3_huc49b5ee6a174e89858c782e49d3afc94_72743_968a01bb44c7d3a8789de4f429d66297.webp 400w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-7-3_huc49b5ee6a174e89858c782e49d3afc94_72743_19e708ea1861d4e0eff2bc58aa0343d6.webp 760w,
                /media/learn/convex-optimization/convex-optimization-problems/4-7-3_huc49b5ee6a174e89858c782e49d3afc94_72743_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-7-3_huc49b5ee6a174e89858c782e49d3afc94_72743_3d02952bdadb6e819f6eeeec2f4dc732.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-7-3_huc49b5ee6a174e89858c782e49d3afc94_72743_968a01bb44c7d3a8789de4f429d66297.webp&#34;
                width=&#34;760&#34;
                height=&#34;753&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;

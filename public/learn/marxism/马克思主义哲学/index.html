@@ -8,7 +8,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
   
 
   
@@ -22,11 +22,7 @@
 
 
 
-
   
-
-
-
 
 
 
@@ -72,15 +68,18 @@
   
   
   
-    <meta name="theme-color" content="#bbdefb" />
+    <meta name="theme-color" content="#1565c0" />
   
 
   
   
+    
+    <script src="/js/mathjax-config.js"></script>
+  
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
 
   
   
@@ -101,120 +100,132 @@
     
     
     
-    
-
-    
-    
-    
-
-    
-
-    
-    
-      
-      
-
-      
-      
-
       
     
-      
-      
-
-      
-      
-
-      
     
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
       
       
         
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
       
 
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -240,7 +251,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
 
   
 
@@ -248,9 +259,7 @@
 
   
 
-
   
-
 
   
 
@@ -321,7 +330,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="06dc821feca44719116e510c540c1c1b" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="06dc821feca44719116e510c540c1c1b" >
 
   
   
@@ -332,10 +341,47 @@
   
   
   
-  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
 
   
 
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
 
 
 
@@ -584,9 +630,29 @@
 
         
         
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
 
         
         
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
         
 
         
@@ -603,10 +669,7 @@
 
   <div class="page-body">
     
-    
-    
 
-    
 
 
 
@@ -626,6 +689,12 @@
     </div>
   </button>
 
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
   
 </form>
 
@@ -899,12 +968,19 @@
       <nav id="TableOfContents">
   <ul>
     <li><a href="#what-you-will-learn">What you will learn</a></li>
+    <li><a href="#什么是哲学">什么是哲学</a>
+      <ul>
+        <li><a href="#世界观与方法论">世界观与方法论</a></li>
+        <li><a href="#哲学是对自然社会和思维知识的概况和总结">哲学是对自然、社会和思维知识的概况和总结</a></li>
+      </ul>
+    </li>
     <li><a href="#哲学的基本问题及不同流派">哲学的基本问题及不同流派</a>
       <ul>
         <li><a href="#哲学基本问题的两个方面">哲学基本问题的两个方面</a></li>
         <li><a href="#哲学不同流派的区别和联系">哲学不同流派的区别和联系</a></li>
       </ul>
     </li>
+    <li><a href="#马克思主义哲学的基本特征">马克思主义哲学的基本特征</a></li>
   </ul>
 </nav>
 
@@ -917,6 +993,55 @@
       <article class="article">
 
         <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/">
+        
+          Learn
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/marxism/">
+        
+          Marxism
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        马克思主义哲学
+      </li>
+    </ol>
+  </nav>
+
+
+
+
           
 
           <h1>马克思主义哲学</h1>
@@ -950,31 +1075,44 @@
   </ul>
 
 
+<h2 id="什么是哲学">什么是哲学</h2>
+<p><strong>哲学是系统化理论化的世界观</strong>。哲学是哲学家依据一定的自然知识、社会知识和思维知识，把不自觉的、不系统的世界观加以系统化、理论化而形成的思想体系。</p>
+<p>它同人们在日常生活中产生的零散的、不自觉的世界观既有联系，又有区别。我们既反对把哲学简单化，把零散的、不自觉的世界观当作哲学学说，也反对把哲学神秘化，认为哲学与普通人无关。</p>
+<h3 id="世界观与方法论">世界观与方法论</h3>
+<p>哲学既是<strong>世界观</strong>，也是<strong>方法论</strong>。人们关于世界是什么、怎么样的根本观点是世界观，用这种观点作指导去认识世界和改造世界，就成了方法论。一般说来，<strong>世界观决定方法论，方法论体现世界观</strong>，有什么样的世界观就有什么样的方法论。不存在脱离世界观的方法论，也不存在脱离方法论的世界观。<strong>哲学是世界观和方法论的统一</strong>。</p>
+<h3 id="哲学是对自然社会和思维知识的概况和总结">哲学是对自然、社会和思维知识的概况和总结</h3>
+<p>人类在实践中逐渐形成了各种各样的具体知识，这些知识大致可以概括为三类：</p>
+<ol>
+<li>认识和改造自然的知识，即<strong>自然科学</strong>知识，如物理学、化学、生物学等；</li>
+<li>认识和改造社会的知识，即<strong>社会科学</strong>知识，如经济学、政治学、法学等；</li>
+<li>关于人的认识和思维的知识，即<strong>思维科学</strong>知识，如心理学、逻辑学等。</li>
+</ol>
+<p>具体科学揭示的是自然、社会和思维某一具体领域的规律，哲学则对其进行概括和升华，从中抽象出最一般的本质和最普遍的规律。</p>
 <h2 id="哲学的基本问题及不同流派">哲学的基本问题及不同流派</h2>
 <h3 id="哲学基本问题的两个方面">哲学基本问题的两个方面</h3>
 <ol>
-<li>物质和意识何者为第一性</li>
+<li>物质和意识何者为第一性（思维和存在何者为第一性）</li>
 </ol>
 <ul>
-<li>唯物主义：先有物质后有意识</li>
-<li>唯心主义：先有意识后有物质</li>
+<li><strong>唯物主义</strong>：先有物质后有意识</li>
+<li><strong>唯心主义</strong>：先有意识后有物质</li>
 </ul>
 <ol start="2">
-<li>物质和意识是否具有同一性</li>
+<li>物质和意识是否具有同一性（思维和存在是否具有同一性）</li>
 </ol>
 <ul>
-<li>可知论：人的意识可以认识客观世界</li>
-<li>不可知论：人的意识不可以认识客观世界</li>
+<li><strong>可知论</strong>：人的意识可以认识客观世界</li>
+<li><strong>不可知论</strong>：人的意识不可以认识客观世界</li>
 </ul>
 <h3 id="哲学不同流派的区别和联系">哲学不同流派的区别和联系</h3>
 <p>一般认为，唯物主义者、唯心主义者都是可知论者。二元论者是不可知论者，但一般称二元论者为不彻底的唯心主义者。</p>
-<p>唯心主义：</p>
+<h4 id="唯心主义">唯心主义</h4>
 <ol>
 <li>主观唯心主义：王阳明（心外无物）、笛卡尔（我思故我在）</li>
 <li>客观唯心主义：朱熹（理在事先）、老子（道法自然）</li>
 <li>二元论（不彻底的唯心主义）：柏拉图</li>
 </ol>
-<p>唯物主义：</p>
+<h4 id="唯物主义">唯物主义</h4>
 <ol>
 <li>（古代）朴素唯物主义：总是把某种或具体的物质形态看作是世界的物质本原的物质基础</li>
 <li>（近代）形而上学唯物主义（机械唯物主义）：单纯地认为物质是由原子或分子构成</li>
@@ -985,6 +1123,13 @@
 <li>形而上学：孤立、片面、静止、无矛盾</li>
 <li>唯物辨证法：联系、全面、发展、矛盾</li>
 </ul>
+<h2 id="马克思主义哲学的基本特征">马克思主义哲学的基本特征</h2>
+<ol>
+<li><strong>科学性</strong>：马克思主义是对自然、社会和人类思维发展本质和规律的正确反映。马克思主义之所以是科学的，就在于它正确揭示了世界的本质和运动规律，它的全部理论都来自实践，又经过实践的反复检验。</li>
+<li><strong>革命性（阶级性）</strong>：马克思主义的革命性集中表现为它的彻底的批判精神和鲜明的无产阶级立场。马克思主义哲学之所以是（无产）阶级的，就在于它是改变世界的科学、指导人类解放的科学，是无产阶级的科学的世界观和方法论。</li>
+<li><strong>实践性</strong>：马克思主义是从实践中来，到实践中去，在实践中接受检验，并随实践而不断发展的学说。马克思主义具有突出的实践精神，它始终强调理论与实践的统一，始终坚持与社会主义实际运动紧密结合。</li>
+<li><strong>发展性</strong>：马克思主义是不断发展的学说，具有与时俱进的理论品质。马克思主义是时代的产物，并随着时代、实践和科学的发展而不断发展。</li>
+</ol>
           </div>
 
           
@@ -1011,12 +1156,19 @@
 
 
 
-          
-
-
 
 
           
+
+
+
+
+          
+
+
+  
+  
+
 
 
         </div>
@@ -1039,11 +1191,6 @@
   
 
 
-
-
-
-
-  
 
 
 
@@ -1075,78 +1222,7 @@
     
   </div>
 
-      
-
-    
-    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
-
-    
-    
-    
-      
-
-      
-      
-
-      
-
-      
-
-    
-
-    
-    
-    
-
-    
-    
-    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
-    <script>
-      anchors.add();
-    </script>
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-
-    
-
-    
-    
-    
-    <script id="page-data" type="application/json">{"use_headroom":false}</script>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
-
-    
-    
-    
-    
-    
-    
-      
+  
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -1172,7 +1248,119 @@
   </div>
 </div>
 
-      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 

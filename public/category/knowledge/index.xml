@@ -466,8 +466,6 @@
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
@@ -497,8 +495,6 @@
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
@@ -510,8 +506,6 @@
 &lt;p&gt;而有了 PaaS 以后，炒锅、灶台也是现成的——家庭烹饪并不需要饭店那样对烹饪工具特别大的需求，只需要考虑今天吃什么、怎么做就可以了。&lt;/p&gt;
 &lt;p&gt;那么有了 SaaS 以后，我们就彻底解放了——我们只需要考虑我们今天想吃什么，完全不需要考虑菜是怎么做出来的。&lt;/p&gt;
 &lt;h2 id=&#34;云计算服务模式的层次划分&#34;&gt;云计算服务模式的层次划分&lt;/h2&gt;
-
-
 
 
 
@@ -558,8 +552,6 @@
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.openstack.org/themes/openstack/home_images/Diagram/overview-diagram-new.svg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -581,15 +573,11 @@
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://docs.docker.com/engine/images/architecture.svg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;p&gt;Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iOS 的 app）。Docker 几乎没有性能开销，可以很容易地在机器和数据中心中运行。最重要的是，它不依赖于任何语言、框架包括系统。&lt;/p&gt;
-
-
 
 
 

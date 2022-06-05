@@ -154,15 +154,13 @@ z^Tx \leqslant \|x\| \|z\|
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/mathematical-background/1-2-1_huee4b216398525f3a5db517b1ae63af4c_61210_f7b47b0ab4fc52dbeee909d9ba5759b1.webp 400w,
-               /media/learn/convex-optimization/mathematical-background/1-2-1_huee4b216398525f3a5db517b1ae63af4c_61210_8b41f91cdb19ca1b0bfb8a22c50f7769.webp 760w,
+               /media/learn/convex-optimization/mathematical-background/1-2-1_huee4b216398525f3a5db517b1ae63af4c_61210_6685f83b4d613bba51b50dc3495a91cc.webp 400w,
+               /media/learn/convex-optimization/mathematical-background/1-2-1_huee4b216398525f3a5db517b1ae63af4c_61210_9eaf547ff81da3fd6806f54dc0013c91.webp 760w,
                /media/learn/convex-optimization/mathematical-background/1-2-1_huee4b216398525f3a5db517b1ae63af4c_61210_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/mathematical-background/1-2-1_huee4b216398525f3a5db517b1ae63af4c_61210_f7b47b0ab4fc52dbeee909d9ba5759b1.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/mathematical-background/1-2-1_huee4b216398525f3a5db517b1ae63af4c_61210_6685f83b4d613bba51b50dc3495a91cc.webp&#34;
                width=&#34;760&#34;
                height=&#34;388&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -272,7 +270,7 @@ D f(x) _{ij}=\frac{\partial f _{i}(x)}{\partial x _{j}}, \quad i=1, \cdots, m, \
 &lt;h2 id=&#34;链式规则&#34;&gt;链式规则&lt;/h2&gt;
 &lt;p&gt;设复合函数 $h(x) = g(f(x))$，则&lt;/p&gt;
 &lt;p&gt;\begin{align}
-\nabla h(x) &amp;amp;= g&amp;rsquo;(f(x))f(x) \\
+\nabla h(x) &amp;amp;= g&#39;(f(x))f(x) \\
 &amp;amp;= \nabla g(f(x))^T f(x)
 \end{align}&lt;/p&gt;
 &lt;h3 id=&#34;仿射函数&#34;&gt;仿射函数&lt;/h3&gt;
