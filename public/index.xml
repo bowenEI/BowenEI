@@ -6123,10 +6123,10 @@ f27f2ad HEAD@{1}: add README.md
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/mathematical-background/1-2-1_huee4b216398525f3a5db517b1ae63af4c_61210_6685f83b4d613bba51b50dc3495a91cc.webp 400w,
-               /media/learn/convex-optimization/mathematical-background/1-2-1_huee4b216398525f3a5db517b1ae63af4c_61210_9eaf547ff81da3fd6806f54dc0013c91.webp 760w,
+               /media/learn/convex-optimization/mathematical-background/1-2-1_huee4b216398525f3a5db517b1ae63af4c_61210_f7b47b0ab4fc52dbeee909d9ba5759b1.webp 400w,
+               /media/learn/convex-optimization/mathematical-background/1-2-1_huee4b216398525f3a5db517b1ae63af4c_61210_8b41f91cdb19ca1b0bfb8a22c50f7769.webp 760w,
                /media/learn/convex-optimization/mathematical-background/1-2-1_huee4b216398525f3a5db517b1ae63af4c_61210_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/mathematical-background/1-2-1_huee4b216398525f3a5db517b1ae63af4c_61210_6685f83b4d613bba51b50dc3495a91cc.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/mathematical-background/1-2-1_huee4b216398525f3a5db517b1ae63af4c_61210_f7b47b0ab4fc52dbeee909d9ba5759b1.webp&#34;
                width=&#34;760&#34;
                height=&#34;388&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -21402,10 +21402,10 @@ C = \{x \in \mathbf{R}^{3} \mid -1 \leqslant x_1 \leqslant 1, -1 \leqslant x_2 \
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-sets/2-1-1_hu6f020e9a5a98cd15735f632f29f0cc47_88741_71edccb96d2346fc8896bc9315228b61.webp 400w,
-               /media/learn/convex-optimization/convex-sets/2-1-1_hu6f020e9a5a98cd15735f632f29f0cc47_88741_7c359cfe70786df0f379098e022a80aa.webp 760w,
+               /media/learn/convex-optimization/convex-sets/2-1-1_hu6f020e9a5a98cd15735f632f29f0cc47_88741_2dab653b50d57b1574e7b05c6ffe5343.webp 400w,
+               /media/learn/convex-optimization/convex-sets/2-1-1_hu6f020e9a5a98cd15735f632f29f0cc47_88741_ca99b4bd890799c8145b895d4adcbb21.webp 760w,
                /media/learn/convex-optimization/convex-sets/2-1-1_hu6f020e9a5a98cd15735f632f29f0cc47_88741_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-1-1_hu6f020e9a5a98cd15735f632f29f0cc47_88741_71edccb96d2346fc8896bc9315228b61.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-1-1_hu6f020e9a5a98cd15735f632f29f0cc47_88741_2dab653b50d57b1574e7b05c6ffe5343.webp&#34;
                width=&#34;760&#34;
                height=&#34;188&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -21433,10 +21433,10 @@ C = \{x \in \mathbf{R}^{3} \mid -1 \leqslant x_1 \leqslant 1, -1 \leqslant x_2 \
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-sets/2-1-2_hu9cb8334007aa79fcf1b40330d77e0568_57342_0368a65322decef7acdd5fc6e03fc733.webp 400w,
-               /media/learn/convex-optimization/convex-sets/2-1-2_hu9cb8334007aa79fcf1b40330d77e0568_57342_72f94e142a64d63de05d0585e8b74f17.webp 760w,
+               /media/learn/convex-optimization/convex-sets/2-1-2_hu9cb8334007aa79fcf1b40330d77e0568_57342_ec00abdaca5d94ea3362cea1c38e9e65.webp 400w,
+               /media/learn/convex-optimization/convex-sets/2-1-2_hu9cb8334007aa79fcf1b40330d77e0568_57342_5f8ae496ea29dffd89d2e1e78cf28087.webp 760w,
                /media/learn/convex-optimization/convex-sets/2-1-2_hu9cb8334007aa79fcf1b40330d77e0568_57342_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-1-2_hu9cb8334007aa79fcf1b40330d77e0568_57342_0368a65322decef7acdd5fc6e03fc733.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-1-2_hu9cb8334007aa79fcf1b40330d77e0568_57342_ec00abdaca5d94ea3362cea1c38e9e65.webp&#34;
                width=&#34;760&#34;
                height=&#34;308&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -21471,10 +21471,10 @@ C = \{x \in \mathbf{R}^{3} \mid -1 \leqslant x_1 \leqslant 1, -1 \leqslant x_2 \
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-sets/2-1-3_huc85c141b546f46d05f057eba94a5cbf3_47740_4a2043b2baf89138352e558a8c710dae.webp 400w,
-               /media/learn/convex-optimization/convex-sets/2-1-3_huc85c141b546f46d05f057eba94a5cbf3_47740_0c3c5b81274730753748f1b4f6c88d7e.webp 760w,
+               /media/learn/convex-optimization/convex-sets/2-1-3_huc85c141b546f46d05f057eba94a5cbf3_47740_13dc1ce3df64ebe45a41b0b5d24a34f7.webp 400w,
+               /media/learn/convex-optimization/convex-sets/2-1-3_huc85c141b546f46d05f057eba94a5cbf3_47740_578438b58c3980722049be6075bcd465.webp 760w,
                /media/learn/convex-optimization/convex-sets/2-1-3_huc85c141b546f46d05f057eba94a5cbf3_47740_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-1-3_huc85c141b546f46d05f057eba94a5cbf3_47740_4a2043b2baf89138352e558a8c710dae.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-1-3_huc85c141b546f46d05f057eba94a5cbf3_47740_13dc1ce3df64ebe45a41b0b5d24a34f7.webp&#34;
                width=&#34;760&#34;
                height=&#34;457&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -22926,10 +22926,10 @@ f(S) = \{f(x) \mid x \in S\}
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-sets/2-3-1_hubab0e488020f9591d80009f10865c73d_73351_89364996e34e90d4cfc9b7beb11773e7.webp 400w,
-               /media/learn/convex-optimization/convex-sets/2-3-1_hubab0e488020f9591d80009f10865c73d_73351_45ef86551fc84392ae03487cf17d062e.webp 760w,
+               /media/learn/convex-optimization/convex-sets/2-3-1_hubab0e488020f9591d80009f10865c73d_73351_33d7654f7cb8e1abfc58d939230e40f6.webp 400w,
+               /media/learn/convex-optimization/convex-sets/2-3-1_hubab0e488020f9591d80009f10865c73d_73351_1bb0826ac7282d53e9d768492bd2c9e7.webp 760w,
                /media/learn/convex-optimization/convex-sets/2-3-1_hubab0e488020f9591d80009f10865c73d_73351_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-3-1_hubab0e488020f9591d80009f10865c73d_73351_89364996e34e90d4cfc9b7beb11773e7.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-3-1_hubab0e488020f9591d80009f10865c73d_73351_33d7654f7cb8e1abfc58d939230e40f6.webp&#34;
                width=&#34;760&#34;
                height=&#34;759&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -24436,10 +24436,10 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch    # хо
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-sets/2-5-1_hu98d90096b41752dbc3e068fb2c7b4ddf_59169_97fa4f9898c765fb1608968b54d9984e.webp 400w,
-               /media/learn/convex-optimization/convex-sets/2-5-1_hu98d90096b41752dbc3e068fb2c7b4ddf_59169_3a9e20f37536f84fd07760dbc74420e9.webp 760w,
+               /media/learn/convex-optimization/convex-sets/2-5-1_hu98d90096b41752dbc3e068fb2c7b4ddf_59169_6e31f94f31f81fece2f79b04efa689f8.webp 400w,
+               /media/learn/convex-optimization/convex-sets/2-5-1_hu98d90096b41752dbc3e068fb2c7b4ddf_59169_986f4d538895078e3a7db5fe4584d2cb.webp 760w,
                /media/learn/convex-optimization/convex-sets/2-5-1_hu98d90096b41752dbc3e068fb2c7b4ddf_59169_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-5-1_hu98d90096b41752dbc3e068fb2c7b4ddf_59169_97fa4f9898c765fb1608968b54d9984e.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-5-1_hu98d90096b41752dbc3e068fb2c7b4ddf_59169_6e31f94f31f81fece2f79b04efa689f8.webp&#34;
                width=&#34;760&#34;
                height=&#34;486&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -24468,10 +24468,10 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch    # хо
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-sets/2-5-2_hu62def45deef7b3fb9192e74b5455ece2_20386_acfe51a457fa5b9911bde2dd8b32322e.webp 400w,
-               /media/learn/convex-optimization/convex-sets/2-5-2_hu62def45deef7b3fb9192e74b5455ece2_20386_20ce5ae199c4ba0fd74facb3ce420428.webp 760w,
+               /media/learn/convex-optimization/convex-sets/2-5-2_hu62def45deef7b3fb9192e74b5455ece2_20386_e86966a5cc3b91c5fec591fa781454a8.webp 400w,
+               /media/learn/convex-optimization/convex-sets/2-5-2_hu62def45deef7b3fb9192e74b5455ece2_20386_fdd0f48eabf8ca0b78a52b96be6af181.webp 760w,
                /media/learn/convex-optimization/convex-sets/2-5-2_hu62def45deef7b3fb9192e74b5455ece2_20386_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-5-2_hu62def45deef7b3fb9192e74b5455ece2_20386_acfe51a457fa5b9911bde2dd8b32322e.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-5-2_hu62def45deef7b3fb9192e74b5455ece2_20386_e86966a5cc3b91c5fec591fa781454a8.webp&#34;
                width=&#34;760&#34;
                height=&#34;543&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -24947,10 +24947,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-sets/2-6-1_hu58654e660b070747b7b986f888d9190a_29959_a7e30209f6d4ae0ceaa961e07e1af1b6.webp 400w,
-               /media/learn/convex-optimization/convex-sets/2-6-1_hu58654e660b070747b7b986f888d9190a_29959_0b50ae0335cf560ea0cbed273627a97e.webp 760w,
+               /media/learn/convex-optimization/convex-sets/2-6-1_hu58654e660b070747b7b986f888d9190a_29959_618bc6ba3c9823554bcd541ac09cac2f.webp 400w,
+               /media/learn/convex-optimization/convex-sets/2-6-1_hu58654e660b070747b7b986f888d9190a_29959_02aa7493cefb3a8ecdd09d33d241112c.webp 760w,
                /media/learn/convex-optimization/convex-sets/2-6-1_hu58654e660b070747b7b986f888d9190a_29959_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-6-1_hu58654e660b070747b7b986f888d9190a_29959_a7e30209f6d4ae0ceaa961e07e1af1b6.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-6-1_hu58654e660b070747b7b986f888d9190a_29959_618bc6ba3c9823554bcd541ac09cac2f.webp&#34;
                width=&#34;760&#34;
                height=&#34;285&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -24990,10 +24990,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-sets/2-6-2_huf7638d9f15301dbd074282ca1a39ad34_15911_9e3bb9312eab8fbc8e961b56ec99ba96.webp 400w,
-               /media/learn/convex-optimization/convex-sets/2-6-2_huf7638d9f15301dbd074282ca1a39ad34_15911_c8a427ea6a128873f2b65d2cb7b493f4.webp 760w,
+               /media/learn/convex-optimization/convex-sets/2-6-2_huf7638d9f15301dbd074282ca1a39ad34_15911_240ef5077eaae3a814d60473c1050692.webp 400w,
+               /media/learn/convex-optimization/convex-sets/2-6-2_huf7638d9f15301dbd074282ca1a39ad34_15911_c479dd8b739388584ab1bbe14df08bf8.webp 760w,
                /media/learn/convex-optimization/convex-sets/2-6-2_huf7638d9f15301dbd074282ca1a39ad34_15911_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-6-2_huf7638d9f15301dbd074282ca1a39ad34_15911_9e3bb9312eab8fbc8e961b56ec99ba96.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-6-2_huf7638d9f15301dbd074282ca1a39ad34_15911_240ef5077eaae3a814d60473c1050692.webp&#34;
                width=&#34;659&#34;
                height=&#34;688&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -25017,10 +25017,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-sets/2-6-3_hubbbbedc8be900346002662e0d9199933_21930_45c376a3819fc6612f4a52de5cd2b134.webp 400w,
-               /media/learn/convex-optimization/convex-sets/2-6-3_hubbbbedc8be900346002662e0d9199933_21930_41525b2fae89ca7fae80096655b0cc42.webp 760w,
+               /media/learn/convex-optimization/convex-sets/2-6-3_hubbbbedc8be900346002662e0d9199933_21930_28662cd34b3bba580132ad8208e154a1.webp 400w,
+               /media/learn/convex-optimization/convex-sets/2-6-3_hubbbbedc8be900346002662e0d9199933_21930_0b9213ced3df749e76e57c2517346952.webp 760w,
                /media/learn/convex-optimization/convex-sets/2-6-3_hubbbbedc8be900346002662e0d9199933_21930_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-6-3_hubbbbedc8be900346002662e0d9199933_21930_45c376a3819fc6612f4a52de5cd2b134.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-sets/2-6-3_hubbbbedc8be900346002662e0d9199933_21930_28662cd34b3bba580132ad8208e154a1.webp&#34;
                width=&#34;760&#34;
                height=&#34;567&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -27160,10 +27160,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-functions/3-1-1_hu37251866f56bfd83a1beabf63324a349_79978_03bb6a52161da1a76ec28182b0309448.webp 400w,
-               /media/learn/convex-optimization/convex-functions/3-1-1_hu37251866f56bfd83a1beabf63324a349_79978_368f7fdc6f7045c88434d992cdc7cb3a.webp 760w,
+               /media/learn/convex-optimization/convex-functions/3-1-1_hu37251866f56bfd83a1beabf63324a349_79978_5fbbf19cdcbd1416ab730b649b1e04f9.webp 400w,
+               /media/learn/convex-optimization/convex-functions/3-1-1_hu37251866f56bfd83a1beabf63324a349_79978_9a4eba08021927c3eaf56c4cf5ce86fc.webp 760w,
                /media/learn/convex-optimization/convex-functions/3-1-1_hu37251866f56bfd83a1beabf63324a349_79978_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-functions/3-1-1_hu37251866f56bfd83a1beabf63324a349_79978_03bb6a52161da1a76ec28182b0309448.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-functions/3-1-1_hu37251866f56bfd83a1beabf63324a349_79978_5fbbf19cdcbd1416ab730b649b1e04f9.webp&#34;
                width=&#34;760&#34;
                height=&#34;391&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -27539,10 +27539,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-functions/3-2-1_hu75d4e64085f8b10cf0af7c48ae4c3d42_88332_a2b5b8494f33ed4e96447ba5916e06f7.webp 400w,
-               /media/learn/convex-optimization/convex-functions/3-2-1_hu75d4e64085f8b10cf0af7c48ae4c3d42_88332_7efab8c0c4efa7a29357ed134fdcffa5.webp 760w,
+               /media/learn/convex-optimization/convex-functions/3-2-1_hu75d4e64085f8b10cf0af7c48ae4c3d42_88332_0ebfaf468e5269dafd5b13af7e56650e.webp 400w,
+               /media/learn/convex-optimization/convex-functions/3-2-1_hu75d4e64085f8b10cf0af7c48ae4c3d42_88332_1ad5f98bb85e8b3498b778afa5abda9a.webp 760w,
                /media/learn/convex-optimization/convex-functions/3-2-1_hu75d4e64085f8b10cf0af7c48ae4c3d42_88332_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-functions/3-2-1_hu75d4e64085f8b10cf0af7c48ae4c3d42_88332_a2b5b8494f33ed4e96447ba5916e06f7.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-functions/3-2-1_hu75d4e64085f8b10cf0af7c48ae4c3d42_88332_0ebfaf468e5269dafd5b13af7e56650e.webp&#34;
                width=&#34;760&#34;
                height=&#34;509&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -27567,10 +27567,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-functions/3-2-2_hu4301a040191a76c2e65fdf2e07cc36d1_174572_6c92390942f1a44bea1516d352b1d846.webp 400w,
-               /media/learn/convex-optimization/convex-functions/3-2-2_hu4301a040191a76c2e65fdf2e07cc36d1_174572_b2124350556092e75d604a48ea48afd8.webp 760w,
+               /media/learn/convex-optimization/convex-functions/3-2-2_hu4301a040191a76c2e65fdf2e07cc36d1_174572_f9677627ed7bfe2b1314389755c4a475.webp 400w,
+               /media/learn/convex-optimization/convex-functions/3-2-2_hu4301a040191a76c2e65fdf2e07cc36d1_174572_562cea748609fb05964843be06152718.webp 760w,
                /media/learn/convex-optimization/convex-functions/3-2-2_hu4301a040191a76c2e65fdf2e07cc36d1_174572_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-functions/3-2-2_hu4301a040191a76c2e65fdf2e07cc36d1_174572_6c92390942f1a44bea1516d352b1d846.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-functions/3-2-2_hu4301a040191a76c2e65fdf2e07cc36d1_174572_f9677627ed7bfe2b1314389755c4a475.webp&#34;
                width=&#34;760&#34;
                height=&#34;509&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -28654,10 +28654,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-functions/3-4-1_hue050d6d747700ecf77577ee5859d294e_92803_e15809913d2e7e244b90a928a2472422.webp 400w,
-               /media/learn/convex-optimization/convex-functions/3-4-1_hue050d6d747700ecf77577ee5859d294e_92803_c4927f96cae3f6be75037b6548477257.webp 760w,
+               /media/learn/convex-optimization/convex-functions/3-4-1_hue050d6d747700ecf77577ee5859d294e_92803_7949bbec89999ec9081bb80f060f6a72.webp 400w,
+               /media/learn/convex-optimization/convex-functions/3-4-1_hue050d6d747700ecf77577ee5859d294e_92803_adca6d2683613fc432087aa93a7139f3.webp 760w,
                /media/learn/convex-optimization/convex-functions/3-4-1_hue050d6d747700ecf77577ee5859d294e_92803_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-functions/3-4-1_hue050d6d747700ecf77577ee5859d294e_92803_e15809913d2e7e244b90a928a2472422.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-functions/3-4-1_hue050d6d747700ecf77577ee5859d294e_92803_7949bbec89999ec9081bb80f060f6a72.webp&#34;
                width=&#34;760&#34;
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -29165,10 +29165,10 @@ dp[i, j] = w[i, j] + \min\{dp[i, k - 1], dp[k, j]\}, i &amp;lt; k \le j
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-functions/3-5-1_hu369ca6cb72db27dd51009e8a72c148d4_61169_ad31b8c8ed72ae0cf1122ad4bf8b89a9.webp 400w,
-               /media/learn/convex-optimization/convex-functions/3-5-1_hu369ca6cb72db27dd51009e8a72c148d4_61169_418b000bcfd94dabbcfcc5907432c8fc.webp 760w,
+               /media/learn/convex-optimization/convex-functions/3-5-1_hu369ca6cb72db27dd51009e8a72c148d4_61169_abfcb6f82ebe7c248661ce3ebe482fef.webp 400w,
+               /media/learn/convex-optimization/convex-functions/3-5-1_hu369ca6cb72db27dd51009e8a72c148d4_61169_89173c9b67cca6d38d1c8e2b44f77bd0.webp 760w,
                /media/learn/convex-optimization/convex-functions/3-5-1_hu369ca6cb72db27dd51009e8a72c148d4_61169_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-functions/3-5-1_hu369ca6cb72db27dd51009e8a72c148d4_61169_ad31b8c8ed72ae0cf1122ad4bf8b89a9.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-functions/3-5-1_hu369ca6cb72db27dd51009e8a72c148d4_61169_abfcb6f82ebe7c248661ce3ebe482fef.webp&#34;
                width=&#34;760&#34;
                height=&#34;384&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -30649,10 +30649,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-optimization-problems/4-1-1_hu147decd722ff938c0ef363720dcaaa6e_59607_584594b4787b2f7470a121948f9510b6.webp 400w,
-               /media/learn/convex-optimization/convex-optimization-problems/4-1-1_hu147decd722ff938c0ef363720dcaaa6e_59607_83dc26c862f2d099e33a667de325c20b.webp 760w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-1-1_hu147decd722ff938c0ef363720dcaaa6e_59607_a32ece057d286a9c3fc65a6379ded901.webp 400w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-1-1_hu147decd722ff938c0ef363720dcaaa6e_59607_ddb41c1983cc6d8ce60347facc0447a8.webp 760w,
                /media/learn/convex-optimization/convex-optimization-problems/4-1-1_hu147decd722ff938c0ef363720dcaaa6e_59607_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-1-1_hu147decd722ff938c0ef363720dcaaa6e_59607_584594b4787b2f7470a121948f9510b6.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-1-1_hu147decd722ff938c0ef363720dcaaa6e_59607_a32ece057d286a9c3fc65a6379ded901.webp&#34;
                width=&#34;760&#34;
                height=&#34;522&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -31017,10 +31017,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-optimization-problems/4-2-1_hu039e0310f185b4c5236c0dc611bb3f22_55969_8c2f2eb6dd0ea152b25f7f94591ebf07.webp 400w,
-               /media/learn/convex-optimization/convex-optimization-problems/4-2-1_hu039e0310f185b4c5236c0dc611bb3f22_55969_0c85291a1b5277cc12545786ed0f0580.webp 760w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-2-1_hu039e0310f185b4c5236c0dc611bb3f22_55969_e37c4f1e735b2e85b530bded6afeb4d4.webp 400w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-2-1_hu039e0310f185b4c5236c0dc611bb3f22_55969_748853ebc323732d9191239c06222d4d.webp 760w,
                /media/learn/convex-optimization/convex-optimization-problems/4-2-1_hu039e0310f185b4c5236c0dc611bb3f22_55969_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-2-1_hu039e0310f185b4c5236c0dc611bb3f22_55969_8c2f2eb6dd0ea152b25f7f94591ebf07.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-2-1_hu039e0310f185b4c5236c0dc611bb3f22_55969_e37c4f1e735b2e85b530bded6afeb4d4.webp&#34;
                width=&#34;760&#34;
                height=&#34;473&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -31458,10 +31458,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-optimization-problems/4-3-1_hu5f3db8c02de60c9eed3ecc5d3453ca29_114497_f1f30eadb24f49791f585af72d108c1a.webp 400w,
-               /media/learn/convex-optimization/convex-optimization-problems/4-3-1_hu5f3db8c02de60c9eed3ecc5d3453ca29_114497_37a6995d062c56254fda11e2617b3936.webp 760w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-3-1_hu5f3db8c02de60c9eed3ecc5d3453ca29_114497_22cd7ec0d3643fc9cb08c8cae8747ac1.webp 400w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-3-1_hu5f3db8c02de60c9eed3ecc5d3453ca29_114497_7a2165d9a03022bcbb4676b9025c49c7.webp 760w,
                /media/learn/convex-optimization/convex-optimization-problems/4-3-1_hu5f3db8c02de60c9eed3ecc5d3453ca29_114497_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-3-1_hu5f3db8c02de60c9eed3ecc5d3453ca29_114497_f1f30eadb24f49791f585af72d108c1a.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-3-1_hu5f3db8c02de60c9eed3ecc5d3453ca29_114497_22cd7ec0d3643fc9cb08c8cae8747ac1.webp&#34;
                width=&#34;760&#34;
                height=&#34;681&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -31800,10 +31800,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-optimization-problems/4-4-1_hu2b84c963f55b795d3080b758c576c591_97154_8fd04802e5c1040844c8cca0b5d52bce.webp 400w,
-               /media/learn/convex-optimization/convex-optimization-problems/4-4-1_hu2b84c963f55b795d3080b758c576c591_97154_da3dbdb0cd8c68b74e63d8ae35878ba7.webp 760w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-4-1_hu2b84c963f55b795d3080b758c576c591_97154_71f2ba232dd3c1208ceeab04f28d9b12.webp 400w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-4-1_hu2b84c963f55b795d3080b758c576c591_97154_017312147cc9e4948002db54832d6c8a.webp 760w,
                /media/learn/convex-optimization/convex-optimization-problems/4-4-1_hu2b84c963f55b795d3080b758c576c591_97154_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-4-1_hu2b84c963f55b795d3080b758c576c591_97154_8fd04802e5c1040844c8cca0b5d52bce.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-4-1_hu2b84c963f55b795d3080b758c576c591_97154_71f2ba232dd3c1208ceeab04f28d9b12.webp&#34;
                width=&#34;749&#34;
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -32230,10 +32230,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-optimization-problems/4-7-1_hu264b1294689eb6eb878571c803748059_49583_fdfae892e029d933e03bc02ffc309487.webp 400w,
-               /media/learn/convex-optimization/convex-optimization-problems/4-7-1_hu264b1294689eb6eb878571c803748059_49583_db8c6a65c9ed26dc51c565ebf7f86d4e.webp 760w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-7-1_hu264b1294689eb6eb878571c803748059_49583_bd28b024db788504d0299299adcdfd55.webp 400w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-7-1_hu264b1294689eb6eb878571c803748059_49583_028ca8f1ae6f9b25b125eecca94bd00a.webp 760w,
                /media/learn/convex-optimization/convex-optimization-problems/4-7-1_hu264b1294689eb6eb878571c803748059_49583_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-7-1_hu264b1294689eb6eb878571c803748059_49583_fdfae892e029d933e03bc02ffc309487.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-7-1_hu264b1294689eb6eb878571c803748059_49583_bd28b024db788504d0299299adcdfd55.webp&#34;
                width=&#34;760&#34;
                height=&#34;685&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -32270,10 +32270,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-optimization-problems/4-7-2_hu30a082d3ddfb81337bf1f663118fcb0e_57046_487d33241f91fd2bfa51b053eb2b0f8a.webp 400w,
-               /media/learn/convex-optimization/convex-optimization-problems/4-7-2_hu30a082d3ddfb81337bf1f663118fcb0e_57046_f3bbb0bcebe26315abb73b2c201c9323.webp 760w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-7-2_hu30a082d3ddfb81337bf1f663118fcb0e_57046_07038d30c5b09f4b82873a6ba8eddf01.webp 400w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-7-2_hu30a082d3ddfb81337bf1f663118fcb0e_57046_a2920edea1ffea42306a9c7fcec0563f.webp 760w,
                /media/learn/convex-optimization/convex-optimization-problems/4-7-2_hu30a082d3ddfb81337bf1f663118fcb0e_57046_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-7-2_hu30a082d3ddfb81337bf1f663118fcb0e_57046_487d33241f91fd2bfa51b053eb2b0f8a.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-7-2_hu30a082d3ddfb81337bf1f663118fcb0e_57046_07038d30c5b09f4b82873a6ba8eddf01.webp&#34;
                width=&#34;760&#34;
                height=&#34;758&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -32311,10 +32311,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/convex-optimization-problems/4-7-3_huc49b5ee6a174e89858c782e49d3afc94_72743_968a01bb44c7d3a8789de4f429d66297.webp 400w,
-               /media/learn/convex-optimization/convex-optimization-problems/4-7-3_huc49b5ee6a174e89858c782e49d3afc94_72743_19e708ea1861d4e0eff2bc58aa0343d6.webp 760w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-7-3_huc49b5ee6a174e89858c782e49d3afc94_72743_3d02952bdadb6e819f6eeeec2f4dc732.webp 400w,
+               /media/learn/convex-optimization/convex-optimization-problems/4-7-3_huc49b5ee6a174e89858c782e49d3afc94_72743_cddf4cd17688f80940cb241eaff727cd.webp 760w,
                /media/learn/convex-optimization/convex-optimization-problems/4-7-3_huc49b5ee6a174e89858c782e49d3afc94_72743_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-7-3_huc49b5ee6a174e89858c782e49d3afc94_72743_968a01bb44c7d3a8789de4f429d66297.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-optimization-problems/4-7-3_huc49b5ee6a174e89858c782e49d3afc94_72743_3d02952bdadb6e819f6eeeec2f4dc732.webp&#34;
                width=&#34;760&#34;
                height=&#34;753&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -32399,10 +32399,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/duality/5-1-1_hud81269e60a1137d69efa8d08366904ed_85944_1925de32d6ba452479225f0075369c1b.webp 400w,
-               /media/learn/convex-optimization/duality/5-1-1_hud81269e60a1137d69efa8d08366904ed_85944_ad1caf57010dbd18c6cde710794bc279.webp 760w,
+               /media/learn/convex-optimization/duality/5-1-1_hud81269e60a1137d69efa8d08366904ed_85944_a918b4b88d5812cfefc42db04525ca26.webp 400w,
+               /media/learn/convex-optimization/duality/5-1-1_hud81269e60a1137d69efa8d08366904ed_85944_5600f80abedde6a9218f84aecab73f2c.webp 760w,
                /media/learn/convex-optimization/duality/5-1-1_hud81269e60a1137d69efa8d08366904ed_85944_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/duality/5-1-1_hud81269e60a1137d69efa8d08366904ed_85944_1925de32d6ba452479225f0075369c1b.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/duality/5-1-1_hud81269e60a1137d69efa8d08366904ed_85944_a918b4b88d5812cfefc42db04525ca26.webp&#34;
                width=&#34;760&#34;
                height=&#34;460&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -33174,10 +33174,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/duality/5-3-1_hub2cda1f81cbc9b1816e8af29902fe725_79615_a704a342dd73a2c6352a1cc33f17b13c.webp 400w,
-               /media/learn/convex-optimization/duality/5-3-1_hub2cda1f81cbc9b1816e8af29902fe725_79615_41b4de29d4813e4948dc68a443e80dbb.webp 760w,
+               /media/learn/convex-optimization/duality/5-3-1_hub2cda1f81cbc9b1816e8af29902fe725_79615_55c4e22195f22a27b12239561ddae683.webp 400w,
+               /media/learn/convex-optimization/duality/5-3-1_hub2cda1f81cbc9b1816e8af29902fe725_79615_7ebcf33a8ab175ab3a210ab8a5178f3d.webp 760w,
                /media/learn/convex-optimization/duality/5-3-1_hub2cda1f81cbc9b1816e8af29902fe725_79615_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/duality/5-3-1_hub2cda1f81cbc9b1816e8af29902fe725_79615_a704a342dd73a2c6352a1cc33f17b13c.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/duality/5-3-1_hub2cda1f81cbc9b1816e8af29902fe725_79615_55c4e22195f22a27b12239561ddae683.webp&#34;
                width=&#34;760&#34;
                height=&#34;484&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -33200,10 +33200,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/duality/5-3-2_hu27d5e83b6f97c056047e29d2dcfc6341_116820_9fbc1766655c6501eba0b4387a00356a.webp 400w,
-               /media/learn/convex-optimization/duality/5-3-2_hu27d5e83b6f97c056047e29d2dcfc6341_116820_f79a3cb0839a19ea9450d9c62cd66bc1.webp 760w,
+               /media/learn/convex-optimization/duality/5-3-2_hu27d5e83b6f97c056047e29d2dcfc6341_116820_e177dc5af954b183568faefd7266f7cd.webp 400w,
+               /media/learn/convex-optimization/duality/5-3-2_hu27d5e83b6f97c056047e29d2dcfc6341_116820_d1a65747040090b338668ed578cea1b4.webp 760w,
                /media/learn/convex-optimization/duality/5-3-2_hu27d5e83b6f97c056047e29d2dcfc6341_116820_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/duality/5-3-2_hu27d5e83b6f97c056047e29d2dcfc6341_116820_9fbc1766655c6501eba0b4387a00356a.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/duality/5-3-2_hu27d5e83b6f97c056047e29d2dcfc6341_116820_e177dc5af954b183568faefd7266f7cd.webp&#34;
                width=&#34;760&#34;
                height=&#34;484&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -33254,10 +33254,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/duality/5-3-3_hu52fc544feec137ae5e56a4911ba039da_83554_4f08ab954e760ce5456342e3b01b7b91.webp 400w,
-               /media/learn/convex-optimization/duality/5-3-3_hu52fc544feec137ae5e56a4911ba039da_83554_3597f4b57994763c10b68dda6f3907de.webp 760w,
+               /media/learn/convex-optimization/duality/5-3-3_hu52fc544feec137ae5e56a4911ba039da_83554_0385ac8fbe84c49c81e2616224ecd732.webp 400w,
+               /media/learn/convex-optimization/duality/5-3-3_hu52fc544feec137ae5e56a4911ba039da_83554_db5e670192d9649e51db9f65554d3e8d.webp 760w,
                /media/learn/convex-optimization/duality/5-3-3_hu52fc544feec137ae5e56a4911ba039da_83554_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/duality/5-3-3_hu52fc544feec137ae5e56a4911ba039da_83554_4f08ab954e760ce5456342e3b01b7b91.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/duality/5-3-3_hu52fc544feec137ae5e56a4911ba039da_83554_0385ac8fbe84c49c81e2616224ecd732.webp&#34;
                width=&#34;760&#34;
                height=&#34;484&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -34072,10 +34072,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/duality/5-5-1_hubbf0e61e6b3fbda1e727b98e7eab9f01_52679_e00c0834ab2167638957fe0204fc07ef.webp 400w,
-               /media/learn/convex-optimization/duality/5-5-1_hubbf0e61e6b3fbda1e727b98e7eab9f01_52679_1bc5c6322e99b7c866c59d0fe746e730.webp 760w,
+               /media/learn/convex-optimization/duality/5-5-1_hubbf0e61e6b3fbda1e727b98e7eab9f01_52679_1f15e548591edbfe7d588b7570d3103e.webp 400w,
+               /media/learn/convex-optimization/duality/5-5-1_hubbf0e61e6b3fbda1e727b98e7eab9f01_52679_65eda8bec320c866bbcc0ad78251663e.webp 760w,
                /media/learn/convex-optimization/duality/5-5-1_hubbf0e61e6b3fbda1e727b98e7eab9f01_52679_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/duality/5-5-1_hubbf0e61e6b3fbda1e727b98e7eab9f01_52679_e00c0834ab2167638957fe0204fc07ef.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/duality/5-5-1_hubbf0e61e6b3fbda1e727b98e7eab9f01_52679_1f15e548591edbfe7d588b7570d3103e.webp&#34;
                width=&#34;760&#34;
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -34181,10 +34181,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/duality/5-5-2_hu280ce75c2f830aeaea4f221af7328dde_66452_66a130385f74c7acc4a1fc17d646eb75.webp 400w,
-               /media/learn/convex-optimization/duality/5-5-2_hu280ce75c2f830aeaea4f221af7328dde_66452_0d6b0495349154a1aa4930a598e08ee0.webp 760w,
+               /media/learn/convex-optimization/duality/5-5-2_hu280ce75c2f830aeaea4f221af7328dde_66452_5a8bad3471d1643808b701727bb6d78a.webp 400w,
+               /media/learn/convex-optimization/duality/5-5-2_hu280ce75c2f830aeaea4f221af7328dde_66452_f41f85ae2e9345242fddfde3e46cbb78.webp 760w,
                /media/learn/convex-optimization/duality/5-5-2_hu280ce75c2f830aeaea4f221af7328dde_66452_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/duality/5-5-2_hu280ce75c2f830aeaea4f221af7328dde_66452_66a130385f74c7acc4a1fc17d646eb75.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/duality/5-5-2_hu280ce75c2f830aeaea4f221af7328dde_66452_5a8bad3471d1643808b701727bb6d78a.webp&#34;
                width=&#34;760&#34;
                height=&#34;720&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -34243,10 +34243,10 @@ $$&lt;/p&gt;
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /media/learn/convex-optimization/duality/5-6-1_hub81f9571a74d984984ae6c6e1f4e3f18_23124_448c818358e0667192034830f76a5f63.webp 400w,
-               /media/learn/convex-optimization/duality/5-6-1_hub81f9571a74d984984ae6c6e1f4e3f18_23124_6726895d3550d67293c21f0c1a1abb60.webp 760w,
+               /media/learn/convex-optimization/duality/5-6-1_hub81f9571a74d984984ae6c6e1f4e3f18_23124_c97e12d150231d9a9ffacd797708fde9.webp 400w,
+               /media/learn/convex-optimization/duality/5-6-1_hub81f9571a74d984984ae6c6e1f4e3f18_23124_ebc5b24b03d962c8eaab508dbd71cfc3.webp 760w,
                /media/learn/convex-optimization/duality/5-6-1_hub81f9571a74d984984ae6c6e1f4e3f18_23124_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/duality/5-6-1_hub81f9571a74d984984ae6c6e1f4e3f18_23124_448c818358e0667192034830f76a5f63.webp&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/duality/5-6-1_hub81f9571a74d984984ae6c6e1f4e3f18_23124_c97e12d150231d9a9ffacd797708fde9.webp&#34;
                width=&#34;760&#34;
                height=&#34;401&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -38351,10 +38351,10 @@ public:
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /post/system-blasting-the-western-discourse-system/fig1_huee1b7ffebc7f5fdfff4510d9bfe9a72c_659280_0bb0f858b796909349f0a880050865b9.webp 400w,
+               /post/system-blasting-the-western-discourse-system/fig1_huee1b7ffebc7f5fdfff4510d9bfe9a72c_659280_f230b11c73bcbe65421eccb6c7026580.webp 400w,
                /post/system-blasting-the-western-discourse-system/fig1_huee1b7ffebc7f5fdfff4510d9bfe9a72c_659280_1f1617e8c35ba3fefd2067de5bcd1d53.webp 760w,
                /post/system-blasting-the-western-discourse-system/fig1_huee1b7ffebc7f5fdfff4510d9bfe9a72c_659280_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/post/system-blasting-the-western-discourse-system/fig1_huee1b7ffebc7f5fdfff4510d9bfe9a72c_659280_0bb0f858b796909349f0a880050865b9.webp&#34;
+               src=&#34;https://bowenei.gitee.io/post/system-blasting-the-western-discourse-system/fig1_huee1b7ffebc7f5fdfff4510d9bfe9a72c_659280_f230b11c73bcbe65421eccb6c7026580.webp&#34;
                width=&#34;760&#34;
                height=&#34;412&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -38377,10 +38377,10 @@ public:
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /post/system-blasting-the-western-discourse-system/fig2_huf99c8040b89f31faf24c6cee60e1e370_832969_b024d48cbad5ab33eee03ee4043ee00b.webp 400w,
+               /post/system-blasting-the-western-discourse-system/fig2_huf99c8040b89f31faf24c6cee60e1e370_832969_baa9e40b69b46771ca2c773cf4d5c898.webp 400w,
                /post/system-blasting-the-western-discourse-system/fig2_huf99c8040b89f31faf24c6cee60e1e370_832969_fd13490d1c4e9bc2426efbf10cffb6bf.webp 760w,
                /post/system-blasting-the-western-discourse-system/fig2_huf99c8040b89f31faf24c6cee60e1e370_832969_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/post/system-blasting-the-western-discourse-system/fig2_huf99c8040b89f31faf24c6cee60e1e370_832969_b024d48cbad5ab33eee03ee4043ee00b.webp&#34;
+               src=&#34;https://bowenei.gitee.io/post/system-blasting-the-western-discourse-system/fig2_huf99c8040b89f31faf24c6cee60e1e370_832969_baa9e40b69b46771ca2c773cf4d5c898.webp&#34;
                width=&#34;760&#34;
                height=&#34;412&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -38517,10 +38517,10 @@ public:
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
-               /post/system-blasting-the-western-discourse-system/fig3_hu806960bd106afc45e09df0c6daaa5372_562729_cfdea69418e25ecfd16e8ff3a8ab8b5c.webp 400w,
+               /post/system-blasting-the-western-discourse-system/fig3_hu806960bd106afc45e09df0c6daaa5372_562729_eef2caf8f4656b3523f36efd0e35b184.webp 400w,
                /post/system-blasting-the-western-discourse-system/fig3_hu806960bd106afc45e09df0c6daaa5372_562729_1b0c0afa798eacf58e635fa78ed9f3e7.webp 760w,
                /post/system-blasting-the-western-discourse-system/fig3_hu806960bd106afc45e09df0c6daaa5372_562729_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;https://bowenei.gitee.io/post/system-blasting-the-western-discourse-system/fig3_hu806960bd106afc45e09df0c6daaa5372_562729_cfdea69418e25ecfd16e8ff3a8ab8b5c.webp&#34;
+               src=&#34;https://bowenei.gitee.io/post/system-blasting-the-western-discourse-system/fig3_hu806960bd106afc45e09df0c6daaa5372_562729_eef2caf8f4656b3523f36efd0e35b184.webp&#34;
                width=&#34;760&#34;
                height=&#34;412&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -40770,7 +40770,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-197538426&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-538472196&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -40780,7 +40780,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-197538426&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-538472196&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
