@@ -8,7 +8,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
   
 
   
@@ -22,11 +22,7 @@
 
 
 
-
   
-
-
-
 
 
 
@@ -72,15 +68,18 @@
   
   
   
-    <meta name="theme-color" content="#bbdefb" />
+    <meta name="theme-color" content="#1565c0" />
   
 
   
   
+    
+    <script src="/js/mathjax-config.js"></script>
+  
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
 
   
   
@@ -101,120 +100,132 @@
     
     
     
-    
-
-    
-    
-    
-
-    
-
-    
-    
-      
-      
-
-      
-      
-
       
     
-      
-      
-
-      
-      
-
-      
     
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
       
       
         
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
       
 
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -240,7 +251,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
 
   
 
@@ -248,9 +259,7 @@
 
   
 
-
   
-
 
   
 
@@ -325,7 +334,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="85d5f1ea2fac9b8634bd2c63debf68fc" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="85d5f1ea2fac9b8634bd2c63debf68fc" >
 
   
   
@@ -336,10 +345,47 @@
   
   
   
-  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
 
   
 
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
 
 
 
@@ -588,9 +634,29 @@
 
         
         
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
 
         
         
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
         
 
         
@@ -607,10 +673,7 @@
 
   <div class="page-body">
     
-    
-    
 
-    
 
 
 
@@ -630,6 +693,12 @@
     </div>
   </button>
 
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
   
 </form>
 
@@ -761,17 +830,69 @@
 
         <div class="docs-article-container">
           
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/">
+        
+          Learn
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/pandas/">
+        
+          pandas
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        pandas 合并与连接
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+          
 
           <h1>pandas 合并与连接</h1>
 
           <div class="article-style">
-            <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</span></span></code></pre></div><h2 id="concat-合并多个-dataframe-和-series">concat: 合并多个 DataFrame 和 Series</h2>
+            <pre><code class="language-python">import pandas as pd
+</code></pre>
+<h2 id="concat-合并多个-dataframe-和-series">concat: 合并多个 DataFrame 和 Series</h2>
 <h3 id="垂直合并">垂直合并</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Sam&#39;</span><span class="p">,</span> <span class="s1">&#39;Emma&#39;</span><span class="p">],</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">]})</span>
-</span></span><span class="line"><span class="cl"><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Karen&#39;</span><span class="p">,</span> <span class="s1">&#39;Rahul&#39;</span><span class="p">],</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">13</span><span class="p">]})</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df1</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">df1 = pd.DataFrame({'Name': ['Sam', 'Emma'], 'Age': [14, 15]})
+df2 = pd.DataFrame({'Name': ['Karen', 'Rahul'], 'Age': [10, 13]})
+</code></pre>
+<pre><code class="language-python">df1
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -807,8 +928,9 @@
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df2</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">df2
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -845,8 +967,9 @@
 </table>
 </div>
 <p>垂直合并即按列合并，一般需要 DataFrame 的 column 完全一致。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">])</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">pd.concat([df1, df2])
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -893,8 +1016,9 @@
 </table>
 </div>
 <p>不过，上面的结果仍然保留了这些 DataFrame 原来的索引。我们可以重置索引：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">pd.concat([df1, df2]).reset_index(drop=True)
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -941,10 +1065,12 @@
 </table>
 </div>
 <h3 id="水平合并">水平合并</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Sam&#39;</span><span class="p">,</span> <span class="s1">&#39;Emma&#39;</span><span class="p">],</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">]})</span>
-</span></span><span class="line"><span class="cl"><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Math&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A+&#39;</span><span class="p">],</span> <span class="s1">&#39;Science&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B+&#39;</span><span class="p">]})</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df1</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">df1 = pd.DataFrame({'Name': ['Sam', 'Emma'], 'Age': [14, 15]})
+df2 = pd.DataFrame({'Math': ['B', 'A+'], 'Science': ['A', 'B+']})
+</code></pre>
+<pre><code class="language-python">df1
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -980,8 +1106,9 @@
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df2</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">df2
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1018,8 +1145,9 @@
 </table>
 </div>
 <p>设置 <code>axis=1</code> 即可实现水平合并，即按行合并，一般要求 DataFrame 的 index 完全一致。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">pd.concat([df1, df2], axis=1)
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1068,17 +1196,18 @@
 <li><code>inner</code>：类似于关系代数的自然连接运算，先求笛卡尔积中对应相等的元组，再去掉其中重复的属性值。</li>
 </ul>
 <p>注：与关系代数不同的是，<strong>pandas</strong> 对 DataFrame 的连接可以在 index 和 column 上都可以进行。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;A&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;A0&#34;</span><span class="p">,</span> <span class="s2">&#34;A1&#34;</span><span class="p">,</span> <span class="s2">&#34;A2&#34;</span><span class="p">,</span> <span class="s2">&#34;A3&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;B&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;B0&#34;</span><span class="p">,</span> <span class="s2">&#34;B1&#34;</span><span class="p">,</span> <span class="s2">&#34;B2&#34;</span><span class="p">,</span> <span class="s2">&#34;B3&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;C&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;C0&#34;</span><span class="p">,</span> <span class="s2">&#34;C1&#34;</span><span class="p">,</span> <span class="s2">&#34;C2&#34;</span><span class="p">,</span> <span class="s2">&#34;C3&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;D&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;D0&#34;</span><span class="p">,</span> <span class="s2">&#34;D1&#34;</span><span class="p">,</span> <span class="s2">&#34;D2&#34;</span><span class="p">,</span> <span class="s2">&#34;D3&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">df1</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">df1 = pd.DataFrame(
+    {
+        &quot;A&quot;: [&quot;A0&quot;, &quot;A1&quot;, &quot;A2&quot;, &quot;A3&quot;],
+        &quot;B&quot;: [&quot;B0&quot;, &quot;B1&quot;, &quot;B2&quot;, &quot;B3&quot;],
+        &quot;C&quot;: [&quot;C0&quot;, &quot;C1&quot;, &quot;C2&quot;, &quot;C3&quot;],
+        &quot;D&quot;: [&quot;D0&quot;, &quot;D1&quot;, &quot;D2&quot;, &quot;D3&quot;],
+    },
+    index=[0, 1, 2, 3],
+)
+df1
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1134,16 +1263,17 @@
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;B&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;B2&#34;</span><span class="p">,</span> <span class="s2">&#34;B3&#34;</span><span class="p">,</span> <span class="s2">&#34;B6&#34;</span><span class="p">,</span> <span class="s2">&#34;B7&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;D&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;D2&#34;</span><span class="p">,</span> <span class="s2">&#34;D3&#34;</span><span class="p">,</span> <span class="s2">&#34;D6&#34;</span><span class="p">,</span> <span class="s2">&#34;D7&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;F&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;F2&#34;</span><span class="p">,</span> <span class="s2">&#34;F3&#34;</span><span class="p">,</span> <span class="s2">&#34;F6&#34;</span><span class="p">,</span> <span class="s2">&#34;F7&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">df2</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">df2 = pd.DataFrame(
+    {
+        &quot;B&quot;: [&quot;B2&quot;, &quot;B3&quot;, &quot;B6&quot;, &quot;B7&quot;],
+        &quot;D&quot;: [&quot;D2&quot;, &quot;D3&quot;, &quot;D6&quot;, &quot;D7&quot;],
+        &quot;F&quot;: [&quot;F2&quot;, &quot;F3&quot;, &quot;F6&quot;, &quot;F7&quot;],
+    },
+    index=[2, 3, 6, 7],
+)
+df2
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1194,8 +1324,9 @@
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">pd.concat([df1, df2], axis=1, join='outer')
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1286,8 +1417,9 @@
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">pd.concat([df1, df2], axis=1, join='inner')
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1338,8 +1470,9 @@
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">pd.concat([df1, df2], axis=0, join='outer')
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1432,8 +1565,9 @@
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">pd.concat([df1, df2], axis=0, join='inner')
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1500,8 +1634,9 @@
 </table>
 </div>
 <p>可以设置忽略 index，index 将按照顺序递增。这样就和关系代数中的连接运算完全一致了。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">pd.concat([df1, df2], ignore_index=True)
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1595,16 +1730,18 @@
 </table>
 </div>
 <h3 id="dataframe-和-series-可以直接合并">DataFrame 和 Series 可以直接合并</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s2">&#34;X0&#34;</span><span class="p">,</span> <span class="s2">&#34;X1&#34;</span><span class="p">,</span> <span class="s2">&#34;X2&#34;</span><span class="p">,</span> <span class="s2">&#34;X3&#34;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;X&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">s</span>
-</span></span></code></pre></div><pre><code>0    X0
+<pre><code class="language-python">s = pd.Series([&quot;X0&quot;, &quot;X1&quot;, &quot;X2&quot;, &quot;X3&quot;], name=&quot;X&quot;)
+s
+</code></pre>
+<pre><code>0    X0
 1    X1
 2    X2
 3    X3
 Name: X, dtype: object
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">s</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">pd.concat([df1, s], axis=1)
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1666,15 +1803,16 @@ Name: X, dtype: object
 </table>
 </div>
 <h2 id="merge-功能更强大的数据库连接操作">merge: 功能更强大的数据库连接操作</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">left</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;key&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;K0&#34;</span><span class="p">,</span> <span class="s2">&#34;K1&#34;</span><span class="p">,</span> <span class="s2">&#34;K2&#34;</span><span class="p">,</span> <span class="s2">&#34;K3&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;A&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;A0&#34;</span><span class="p">,</span> <span class="s2">&#34;A1&#34;</span><span class="p">,</span> <span class="s2">&#34;A2&#34;</span><span class="p">,</span> <span class="s2">&#34;A3&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;B&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;B0&#34;</span><span class="p">,</span> <span class="s2">&#34;B1&#34;</span><span class="p">,</span> <span class="s2">&#34;B2&#34;</span><span class="p">,</span> <span class="s2">&#34;B3&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">left</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">left = pd.DataFrame(
+    {
+        &quot;key&quot;: [&quot;K0&quot;, &quot;K1&quot;, &quot;K2&quot;, &quot;K3&quot;],
+        &quot;A&quot;: [&quot;A0&quot;, &quot;A1&quot;, &quot;A2&quot;, &quot;A3&quot;],
+        &quot;B&quot;: [&quot;B0&quot;, &quot;B1&quot;, &quot;B2&quot;, &quot;B3&quot;],
+    }
+)
+left
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1725,15 +1863,16 @@ Name: X, dtype: object
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">right</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;key&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;K0&#34;</span><span class="p">,</span> <span class="s2">&#34;K1&#34;</span><span class="p">,</span> <span class="s2">&#34;K2&#34;</span><span class="p">,</span> <span class="s2">&#34;K3&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;C&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;C0&#34;</span><span class="p">,</span> <span class="s2">&#34;C1&#34;</span><span class="p">,</span> <span class="s2">&#34;C2&#34;</span><span class="p">,</span> <span class="s2">&#34;C3&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;D&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;D0&#34;</span><span class="p">,</span> <span class="s2">&#34;D1&#34;</span><span class="p">,</span> <span class="s2">&#34;D2&#34;</span><span class="p">,</span> <span class="s2">&#34;D3&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">right</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">right = pd.DataFrame(
+    {
+        &quot;key&quot;: [&quot;K0&quot;, &quot;K1&quot;, &quot;K2&quot;, &quot;K3&quot;],
+        &quot;C&quot;: [&quot;C0&quot;, &quot;C1&quot;, &quot;C2&quot;, &quot;C3&quot;],
+        &quot;D&quot;: [&quot;D0&quot;, &quot;D1&quot;, &quot;D2&quot;, &quot;D3&quot;],
+    }
+)
+right
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1784,8 +1923,9 @@ Name: X, dtype: object
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;key&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">pd.merge(left, right, on='key')
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1856,16 +1996,17 @@ Name: X, dtype: object
 <li><code>cross</code>：笛卡尔积</li>
 </ul>
 <p>这种运算要求左表和右表有交叉点 <code>intersection</code> 存在，因此连接方式默认值为 <code>inner</code>。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">left</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;key1&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;K0&#34;</span><span class="p">,</span> <span class="s2">&#34;K0&#34;</span><span class="p">,</span> <span class="s2">&#34;K1&#34;</span><span class="p">,</span> <span class="s2">&#34;K2&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;key2&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;K0&#34;</span><span class="p">,</span> <span class="s2">&#34;K1&#34;</span><span class="p">,</span> <span class="s2">&#34;K0&#34;</span><span class="p">,</span> <span class="s2">&#34;K1&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;A&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;A0&#34;</span><span class="p">,</span> <span class="s2">&#34;A1&#34;</span><span class="p">,</span> <span class="s2">&#34;A2&#34;</span><span class="p">,</span> <span class="s2">&#34;A3&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;B&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;B0&#34;</span><span class="p">,</span> <span class="s2">&#34;B1&#34;</span><span class="p">,</span> <span class="s2">&#34;B2&#34;</span><span class="p">,</span> <span class="s2">&#34;B3&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">left</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">left = pd.DataFrame(
+    {
+        &quot;key1&quot;: [&quot;K0&quot;, &quot;K0&quot;, &quot;K1&quot;, &quot;K2&quot;],
+        &quot;key2&quot;: [&quot;K0&quot;, &quot;K1&quot;, &quot;K0&quot;, &quot;K1&quot;],
+        &quot;A&quot;: [&quot;A0&quot;, &quot;A1&quot;, &quot;A2&quot;, &quot;A3&quot;],
+        &quot;B&quot;: [&quot;B0&quot;, &quot;B1&quot;, &quot;B2&quot;, &quot;B3&quot;],
+    }
+)
+left
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1921,16 +2062,17 @@ Name: X, dtype: object
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">right</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;key1&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;K0&#34;</span><span class="p">,</span> <span class="s2">&#34;K1&#34;</span><span class="p">,</span> <span class="s2">&#34;K1&#34;</span><span class="p">,</span> <span class="s2">&#34;K2&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;key2&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;K0&#34;</span><span class="p">,</span> <span class="s2">&#34;K0&#34;</span><span class="p">,</span> <span class="s2">&#34;K0&#34;</span><span class="p">,</span> <span class="s2">&#34;K0&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;C&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;C0&#34;</span><span class="p">,</span> <span class="s2">&#34;C1&#34;</span><span class="p">,</span> <span class="s2">&#34;C2&#34;</span><span class="p">,</span> <span class="s2">&#34;C3&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;D&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;D0&#34;</span><span class="p">,</span> <span class="s2">&#34;D1&#34;</span><span class="p">,</span> <span class="s2">&#34;D2&#34;</span><span class="p">,</span> <span class="s2">&#34;D3&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">right</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">right = pd.DataFrame(
+    {
+        &quot;key1&quot;: [&quot;K0&quot;, &quot;K1&quot;, &quot;K1&quot;, &quot;K2&quot;],
+        &quot;key2&quot;: [&quot;K0&quot;, &quot;K0&quot;, &quot;K0&quot;, &quot;K0&quot;],
+        &quot;C&quot;: [&quot;C0&quot;, &quot;C1&quot;, &quot;C2&quot;, &quot;C3&quot;],
+        &quot;D&quot;: [&quot;D0&quot;, &quot;D1&quot;, &quot;D2&quot;, &quot;D3&quot;],
+    }
+)
+right
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1987,8 +2129,9 @@ Name: X, dtype: object
 </table>
 </div>
 <p>这个例子是由两个字段组成主码的表的连接操作。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;key1&#34;</span><span class="p">,</span> <span class="s2">&#34;key2&#34;</span><span class="p">])</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">pd.merge(left, right, on=[&quot;key1&quot;, &quot;key2&quot;])
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2046,8 +2189,9 @@ Name: X, dtype: object
 </table>
 </div>
 <h4 id="自然连接">自然连接</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&#34;inner&#34;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;key1&#34;</span><span class="p">,</span> <span class="s2">&#34;key2&#34;</span><span class="p">])</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">pd.merge(left, right, how=&quot;inner&quot;, on=[&quot;key1&quot;, &quot;key2&quot;])
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2105,8 +2249,9 @@ Name: X, dtype: object
 </table>
 </div>
 <h4 id="外连接">外连接</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&#34;outer&#34;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;key1&#34;</span><span class="p">,</span> <span class="s2">&#34;key2&#34;</span><span class="p">])</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">pd.merge(left, right, how=&quot;outer&quot;, on=[&quot;key1&quot;, &quot;key2&quot;])
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2191,8 +2336,9 @@ Name: X, dtype: object
 </table>
 </div>
 <h4 id="左连接">左连接</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&#34;left&#34;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;key1&#34;</span><span class="p">,</span> <span class="s2">&#34;key2&#34;</span><span class="p">])</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">pd.merge(left, right, how=&quot;left&quot;, on=[&quot;key1&quot;, &quot;key2&quot;])
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2268,8 +2414,9 @@ Name: X, dtype: object
 </table>
 </div>
 <h4 id="右连接">右连接</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&#34;right&#34;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;key1&#34;</span><span class="p">,</span> <span class="s2">&#34;key2&#34;</span><span class="p">])</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">pd.merge(left, right, how=&quot;right&quot;, on=[&quot;key1&quot;, &quot;key2&quot;])
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2336,8 +2483,9 @@ Name: X, dtype: object
 </table>
 </div>
 <h4 id="笛卡尔积">笛卡尔积</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&#34;cross&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">pd.merge(left, right, how=&quot;cross&quot;)
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2546,11 +2694,12 @@ Name: X, dtype: object
 </table>
 </div>
 <h2 id="join-dataframe-对象的强大连接操作">join: DataFrame 对象的强大连接操作</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">left</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s2">&#34;A&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;A0&#34;</span><span class="p">,</span> <span class="s2">&#34;A1&#34;</span><span class="p">,</span> <span class="s2">&#34;A2&#34;</span><span class="p">],</span> <span class="s2">&#34;B&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;B0&#34;</span><span class="p">,</span> <span class="s2">&#34;B1&#34;</span><span class="p">,</span> <span class="s2">&#34;B2&#34;</span><span class="p">]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;K0&#34;</span><span class="p">,</span> <span class="s2">&#34;K1&#34;</span><span class="p">,</span> <span class="s2">&#34;K2&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">left</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">left = pd.DataFrame(
+    {&quot;A&quot;: [&quot;A0&quot;, &quot;A1&quot;, &quot;A2&quot;], &quot;B&quot;: [&quot;B0&quot;, &quot;B1&quot;, &quot;B2&quot;]}, index=[&quot;K0&quot;, &quot;K1&quot;, &quot;K2&quot;]
+)
+left
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2591,11 +2740,12 @@ Name: X, dtype: object
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">right</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s2">&#34;C&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;C0&#34;</span><span class="p">,</span> <span class="s2">&#34;C2&#34;</span><span class="p">,</span> <span class="s2">&#34;C3&#34;</span><span class="p">],</span> <span class="s2">&#34;D&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;D0&#34;</span><span class="p">,</span> <span class="s2">&#34;D2&#34;</span><span class="p">,</span> <span class="s2">&#34;D3&#34;</span><span class="p">]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;K0&#34;</span><span class="p">,</span> <span class="s2">&#34;K2&#34;</span><span class="p">,</span> <span class="s2">&#34;K3&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">right</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">right = pd.DataFrame(
+    {&quot;C&quot;: [&quot;C0&quot;, &quot;C2&quot;, &quot;C3&quot;], &quot;D&quot;: [&quot;D0&quot;, &quot;D2&quot;, &quot;D3&quot;]}, index=[&quot;K0&quot;, &quot;K2&quot;, &quot;K3&quot;]
+)
+right
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2636,8 +2786,9 @@ Name: X, dtype: object
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">left</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">right</span><span class="p">)</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">left.join(right)
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2686,8 +2837,9 @@ Name: X, dtype: object
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">right</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">left</span><span class="p">)</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">right.join(left)
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2737,8 +2889,9 @@ Name: X, dtype: object
 </table>
 </div>
 <p>DataFrame 的 <code>join</code> 默认值为 <code>left</code>，可以设置为除笛卡尔积外的连接方式。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">left</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><div>
+<pre><code class="language-python">left.join(right, how='inner')
+</code></pre>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2819,12 +2972,19 @@ Name: X, dtype: object
 
 
 
-          
-
-
 
 
           
+
+
+
+
+          
+
+
+  
+  
+
 
 
         </div>
@@ -2847,11 +3007,6 @@ Name: X, dtype: object
   
 
 
-
-
-
-
-  
 
 
 
@@ -2883,78 +3038,7 @@ Name: X, dtype: object
     
   </div>
 
-      
-
-    
-    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
-
-    
-    
-    
-      
-
-      
-      
-
-      
-
-      
-
-    
-
-    
-    
-    
-
-    
-    
-    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
-    <script>
-      anchors.add();
-    </script>
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-
-    
-
-    
-    
-    
-    <script id="page-data" type="application/json">{"use_headroom":false}</script>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
-
-    
-    
-    
-    
-    
-    
-      
+  
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -2980,7 +3064,119 @@ Name: X, dtype: object
   </div>
 </div>
 
-      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 

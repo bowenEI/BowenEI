@@ -8,7 +8,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
   
 
   
@@ -22,11 +22,7 @@
 
 
 
-
   
-
-
-
 
 
 
@@ -72,15 +68,18 @@
   
   
   
-    <meta name="theme-color" content="#bbdefb" />
+    <meta name="theme-color" content="#1565c0" />
   
 
   
   
+    
+    <script src="/js/mathjax-config.js"></script>
+  
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
 
   
   
@@ -101,120 +100,132 @@
     
     
     
-    
-
-    
-    
-    
-
-    
-
-    
-    
-      
-      
-
-      
-      
-
       
     
-      
-      
-
-      
-      
-
-      
     
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
       
       
         
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
       
 
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -240,7 +251,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
 
   
 
@@ -248,9 +259,7 @@
 
   
 
-
   
-
 
   
 
@@ -325,7 +334,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="9266af2f837d16cb3eee9ad6ba26e9fb" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="9266af2f837d16cb3eee9ad6ba26e9fb" >
 
   
   
@@ -336,10 +345,47 @@
   
   
   
-  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
 
   
 
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
 
 
 
@@ -588,9 +634,29 @@
 
         
         
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
 
         
         
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
         
 
         
@@ -607,10 +673,7 @@
 
   <div class="page-body">
     
-    
-    
 
-    
 
 
 
@@ -630,6 +693,12 @@
     </div>
   </button>
 
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
   
 </form>
 
@@ -752,23 +821,73 @@
 
         <div class="docs-article-container">
           
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/">
+        
+          Learn
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/matplotlib/">
+        
+          Matplotlib
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Matplotlib 条形图
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+          
 
           <h1>Matplotlib 条形图</h1>
 
           <div class="article-style">
-            <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span></code></pre></div><h2 id="入门">入门</h2>
+            <pre><code class="language-python">import matplotlib.pyplot as plt
+import numpy as np
+</code></pre>
+<h2 id="入门">入门</h2>
 <p>我们首先生成随机的数据：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
-</span></span></code></pre></div><p>直接调用 <code>plt</code> 的绘图方法：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>&lt;BarContainer object of 6 artists&gt;
+<pre><code class="language-python">x = np.arange(1, 7)
+y = np.abs(np.random.randn(6))
+</code></pre>
+<p>直接调用 <code>plt</code> 的绘图方法：</p>
+<pre><code class="language-python">plt.bar(x, y)
+</code></pre>
+<pre><code>&lt;BarContainer object of 6 artists&gt;
 </code></pre>
 <p>​ <br>
-
-
 
 
 
@@ -796,14 +915,13 @@
   </div></figure>
 ​</p>
 <p>当然，一个好的习惯是使用 <code>Axes</code> 对象：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>&lt;BarContainer object of 6 artists&gt;
+<pre><code class="language-python">fig = plt.figure()
+ax = fig.add_axes([0.1, 0.1, 0.8, 0.8])
+ax.bar(x, y)
+</code></pre>
+<pre><code>&lt;BarContainer object of 6 artists&gt;
 </code></pre>
 <p>​ <br>
-
-
 
 
 
@@ -830,15 +948,15 @@
                loading="lazy" data-zoomable /></div>
   </div></figure>
 ​</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-</span></span></code></pre></div><h2 id="图像美化">图像美化</h2>
+<pre><code class="language-python">ax.clear()
+</code></pre>
+<h2 id="图像美化">图像美化</h2>
 <h3 id="设置颜色">设置颜色</h3>
 <p>我们可以使用 <code>color</code> 参数来改变条形图的颜色：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span>
-</span></span></code></pre></div><p>​ <br>
-
-
+<pre><code class="language-python">ax.bar(x, y, color='g')
+fig
+</code></pre>
+<p>​ <br>
 
 
 
@@ -865,13 +983,13 @@
                loading="lazy" data-zoomable /></div>
   </div></figure>
 ​</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-</span></span></code></pre></div><p>甚至可以指定每个柱子都是不同颜色：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span>
-</span></span></code></pre></div><p>​ <br>
-
-
+<pre><code class="language-python">ax.clear()
+</code></pre>
+<p>甚至可以指定每个柱子都是不同颜色：</p>
+<pre><code class="language-python">ax.bar(x, y, color=['r', 'g', 'b', 'y', 'c', 'm'])
+fig
+</code></pre>
+<p>​ <br>
 
 
 
@@ -898,14 +1016,14 @@
                loading="lazy" data-zoomable /></div>
   </div></figure>
 ​</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-</span></span></code></pre></div><h3 id="设置轮廓">设置轮廓</h3>
+<pre><code class="language-python">ax.clear()
+</code></pre>
+<h3 id="设置轮廓">设置轮廓</h3>
 <p>我们可以使用 <code>edgecolor</code> 参数来改变条形图的轮廓颜色：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span>
-</span></span></code></pre></div><p>​ <br>
-
-
+<pre><code class="language-python">ax.bar(x, y, edgecolor='k')
+fig
+</code></pre>
+<p>​ <br>
 
 
 
@@ -932,13 +1050,13 @@
                loading="lazy" data-zoomable /></div>
   </div></figure>
 ​</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-</span></span></code></pre></div><p>而 <code>linewidth</code> 参数可以调节边缘的粗细：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span>
-</span></span></code></pre></div><p>​ <br>
-
-
+<pre><code class="language-python">ax.clear()
+</code></pre>
+<p>而 <code>linewidth</code> 参数可以调节边缘的粗细：</p>
+<pre><code class="language-python">ax.bar(x, y, edgecolor='k', linewidth=3)
+fig
+</code></pre>
+<p>​ <br>
 
 
 
@@ -965,15 +1083,15 @@
                loading="lazy" data-zoomable /></div>
   </div></figure>
 ​</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-</span></span></code></pre></div><p><code>linestyle</code> 参数与二维绘图 <code>plot</code> 同理，此处不再赘述。</p>
+<pre><code class="language-python">ax.clear()
+</code></pre>
+<p><code>linestyle</code> 参数与二维绘图 <code>plot</code> 同理，此处不再赘述。</p>
 <h3 id="设置填充">设置填充</h3>
 <p>我们可以使用 <code>hatch</code> 参数来指定条形图的填充形状：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">hatch</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span>
-</span></span></code></pre></div><p>​ <br>
-
-
+<pre><code class="language-python">ax.bar(x, y, hatch='\\', edgecolor='k', color='w')
+fig
+</code></pre>
+<p>​ <br>
 
 
 
@@ -1000,14 +1118,14 @@
                loading="lazy" data-zoomable /></div>
   </div></figure>
 ​</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-</span></span></code></pre></div><h3 id="设置宽度">设置宽度</h3>
+<pre><code class="language-python">ax.clear()
+</code></pre>
+<h3 id="设置宽度">设置宽度</h3>
 <p>我们可以使用 <code>width</code> 参数来设置条形图的宽度：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span>
-</span></span></code></pre></div><p>​ <br>
-
-
+<pre><code class="language-python">ax.bar(x, y, width=0.5)
+fig
+</code></pre>
+<p>​ <br>
 
 
 
@@ -1035,25 +1153,28 @@
   </div></figure>
 ​</p>
 <p><code>width</code> 参数的取值范围一般为 $(0, 1]$ 之间的浮点数。如果 <code>width=1</code>，那么每个柱子之间就没有空隙。这个浮点数的几何意义相当于缩放比例。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-</span></span></code></pre></div><h2 id="系列条形图">系列条形图</h2>
+<pre><code class="language-python">ax.clear()
+</code></pre>
+<h2 id="系列条形图">系列条形图</h2>
 <p>现在，我们需要统计 CSGO 七张服役地图 T 和 CT 的胜率，数据如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">maps</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Dust2&#39;</span><span class="p">,</span> <span class="s1">&#39;Inferno&#39;</span><span class="p">,</span> <span class="s1">&#39;Mirage&#39;</span><span class="p">,</span> <span class="s1">&#39;Nuke&#39;</span><span class="p">,</span> <span class="s1">&#39;Overpass&#39;</span><span class="p">,</span> <span class="s1">&#39;Train&#39;</span><span class="p">,</span> <span class="s1">&#39;Vertigo&#39;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">CT_win_rate</span> <span class="o">=</span> <span class="p">[</span><span class="mf">53.7</span><span class="p">,</span> <span class="mf">49.8</span><span class="p">,</span> <span class="mf">48.1</span><span class="p">,</span> <span class="mf">50.7</span><span class="p">,</span> <span class="mf">57.9</span><span class="p">,</span> <span class="mf">53.4</span><span class="p">,</span> <span class="mf">58.6</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">T_win_rate</span> <span class="o">=</span> <span class="p">[</span><span class="mf">46.3</span><span class="p">,</span> <span class="mf">50.2</span><span class="p">,</span> <span class="mf">51.9</span><span class="p">,</span> <span class="mf">49.3</span><span class="p">,</span> <span class="mf">42.1</span><span class="p">,</span> <span class="mf">46.6</span><span class="p">,</span> <span class="mf">41.4</span><span class="p">]</span>
-</span></span></code></pre></div><p>我们需要设置好条形图的宽度。由于实例一共有两个系列（CT 和 T），我们可以将每个柱子的宽度设为 0.35，这样加起来一共 0.7，每一组柱子之间也有缝隙。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">width</span> <span class="o">=</span> <span class="mf">0.35</span>
-</span></span></code></pre></div><p>下面设置条形图的绘制位置，它由 <code>width</code> 和标签的索引位置 <code>x</code> 决定：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">maps</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="n">x_CT</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">width</span><span class="o">/</span><span class="mi">2</span>
-</span></span><span class="line"><span class="cl"><span class="n">x_T</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">width</span><span class="o">/</span><span class="mi">2</span>
-</span></span></code></pre></div><p>绘制系列条形图：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">y_CT</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x_CT</span><span class="p">,</span> <span class="n">CT_win_rate</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;CT&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">y_T</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x_T</span><span class="p">,</span> <span class="n">T_win_rate</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;T&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span>
-</span></span></code></pre></div><p>​ <br>
-
-
+<pre><code class="language-python">maps = ['Dust2', 'Inferno', 'Mirage', 'Nuke', 'Overpass', 'Train', 'Vertigo']
+CT_win_rate = [53.7, 49.8, 48.1, 50.7, 57.9, 53.4, 58.6]
+T_win_rate = [46.3, 50.2, 51.9, 49.3, 42.1, 46.6, 41.4]
+</code></pre>
+<p>我们需要设置好条形图的宽度。由于实例一共有两个系列（CT 和 T），我们可以将每个柱子的宽度设为 0.35，这样加起来一共 0.7，每一组柱子之间也有缝隙。</p>
+<pre><code class="language-python">width = 0.35
+</code></pre>
+<p>下面设置条形图的绘制位置，它由 <code>width</code> 和标签的索引位置 <code>x</code> 决定：</p>
+<pre><code class="language-python">x = np.arange(len(maps))
+x_CT = x - width/2
+x_T = x + width/2
+</code></pre>
+<p>绘制系列条形图：</p>
+<pre><code class="language-python">y_CT = ax.bar(x_CT, CT_win_rate, color='blue', width=width, label='CT')
+y_T = ax.bar(x_T, T_win_rate, color='orange', width=width, label='T')
+fig
+</code></pre>
+<p>​ <br>
 
 
 
@@ -1081,15 +1202,14 @@
   </div></figure>
 ​</p>
 <p>添加标签、标题和图例：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">maps</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Win Rate (%)&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span>
-</span></span></code></pre></div><p>​ <br>
-
-
+<pre><code class="language-python">ax.set_xticks(x)
+ax.set_ylim(40, 60)
+ax.set_xticklabels(maps)
+ax.set_ylabel('Win Rate (%)')
+ax.legend(loc='upper right')
+fig
+</code></pre>
+<p>​ <br>
 
 
 
@@ -1117,11 +1237,10 @@
   </div></figure>
 ​</p>
 <p>为其添加水平网格线：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-.&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span>
-</span></span></code></pre></div><p>​ <br>
-
-
+<pre><code class="language-python">ax.grid(linestyle='-.', axis='y')
+fig
+</code></pre>
+<p>​ <br>
 
 
 
@@ -1149,21 +1268,20 @@
   </div></figure>
 ​</p>
 <p>网格线显示在了条形图上方，使用 <code>zorder</code> 参数改变各个元素的层数。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">y_CT</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x_CT</span><span class="p">,</span> <span class="n">CT_win_rate</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;CT&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">y_T</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x_T</span><span class="p">,</span> <span class="n">T_win_rate</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">maps</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Win Rate (%)&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-.&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">fig</span>
-</span></span></code></pre></div><p>​ <br>
+<pre><code class="language-python">ax.clear()
 
+y_CT = ax.bar(x_CT, CT_win_rate, color='blue', width=width, label='CT', zorder=2)
+y_T = ax.bar(x_T, T_win_rate, color='orange', width=width, label='T', zorder=2)
+ax.set_ylim(40, 60)
+ax.set_xticks(x)
+ax.set_xticklabels(maps)
+ax.set_ylabel('Win Rate (%)')
+ax.legend(loc='upper right')
+ax.grid(linestyle='-.', axis='y', zorder=1)
 
+fig
+</code></pre>
+<p>​ <br>
 
 
 
@@ -1190,16 +1308,17 @@
                loading="lazy" data-zoomable /></div>
   </div></figure>
 ​</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-</span></span></code></pre></div><h2 id="水平条形图">水平条形图</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
-</span></span></code></pre></div><p><strong>Matplotlib</strong> 中使用 <code>barh</code> 来绘制水平条形图。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span>
-</span></span></code></pre></div><p>​ <br>
-
-
+<pre><code class="language-python">ax.clear()
+</code></pre>
+<h2 id="水平条形图">水平条形图</h2>
+<pre><code class="language-python">x = np.arange(1, 7)
+y = np.abs(np.random.randn(6))
+</code></pre>
+<p><strong>Matplotlib</strong> 中使用 <code>barh</code> 来绘制水平条形图。</p>
+<pre><code class="language-python">ax.barh(x, y)
+fig
+</code></pre>
+<p>​ <br>
 
 
 
@@ -1227,22 +1346,23 @@
   </div></figure>
 ​</p>
 <p>其余设置与普通的条形图几乎没有任何区别。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-</span></span></code></pre></div><h2 id="堆叠条形图">堆叠条形图</h2>
+<pre><code class="language-python">ax.clear()
+</code></pre>
+<h2 id="堆叠条形图">堆叠条形图</h2>
 <p>我们现在给定一个 $3 \times 6$ 的矩阵，这三行数值都属于不同的系列，并且我们希望对其求和。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="n">y1</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span>
-</span></span><span class="line"><span class="cl"><span class="n">y2</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
-</span></span><span class="line"><span class="cl"><span class="n">y3</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span>
-</span></span></code></pre></div><p>下面我们绘制堆叠条形图，我们通过 <code>bottom</code> 参数来设置条形图的底部坐标。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="n">y1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y3</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="p">(</span><span class="n">y1</span> <span class="o">+</span> <span class="n">y2</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span>
-</span></span></code></pre></div><p>​ <br>
-
-
+<pre><code class="language-python">x = np.arange(1, 7)
+y = np.abs(np.random.randn(3, 6))
+y1 = y[0, :]
+y2 = y[1, :]
+y3 = y[2, :]
+</code></pre>
+<p>下面我们绘制堆叠条形图，我们通过 <code>bottom</code> 参数来设置条形图的底部坐标。</p>
+<pre><code class="language-python">ax.bar(x, y1)
+ax.bar(x, y2, bottom=y1)
+ax.bar(x, y3, bottom=(y1 + y2))
+fig
+</code></pre>
+<p>​ <br>
 
 
 
@@ -1269,21 +1389,23 @@
                loading="lazy" data-zoomable /></div>
   </div></figure>
 ​</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-</span></span></code></pre></div><h2 id="条形图与折线图的综合应用">条形图与折线图的综合应用</h2>
+<pre><code class="language-python">ax.clear()
+</code></pre>
+<h2 id="条形图与折线图的综合应用">条形图与折线图的综合应用</h2>
 <p>我们经常会碰到如下情况：需要对比两个不在同一数量级的量。这个时候我们经常用一张图、两个纵坐标轴的方法来绘图。数据如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
-</span></span></code></pre></div><p>使用 <code>Axes</code> 对象的 <code>twinx</code> 方法可以让返回的新 <code>Axes</code> 对象和原来的 <code>Axes</code> 对象共用同一个 $x$ 轴。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax_t</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
-</span></span></code></pre></div><p>两个的 <code>Axes</code> 对象分别绘制条形图和折线图。我们希望折线图显示在条形图的上方，故使用 <code>zorder</code> 参数。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax_t</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span>
-</span></span></code></pre></div><p>​ <br>
-
-
+<pre><code class="language-python">x = np.arange(1, 7)
+y1 = np.abs(np.random.rand(6))
+y2 = np.abs(100 * np.random.rand(6))
+</code></pre>
+<p>使用 <code>Axes</code> 对象的 <code>twinx</code> 方法可以让返回的新 <code>Axes</code> 对象和原来的 <code>Axes</code> 对象共用同一个 $x$ 轴。</p>
+<pre><code class="language-python">ax_t = ax.twinx()
+</code></pre>
+<p>两个的 <code>Axes</code> 对象分别绘制条形图和折线图。我们希望折线图显示在条形图的上方，故使用 <code>zorder</code> 参数。</p>
+<pre><code class="language-python">ax.bar(x, y1, zorder=1)
+ax_t.plot(x, y2, zorder=1, linewidth=2, marker='^', color='r')
+fig
+</code></pre>
+<p>​ <br>
 
 
 
@@ -1349,12 +1471,19 @@
 
 
 
-          
-
-
 
 
           
+
+
+
+
+          
+
+
+  
+  
+
 
 
         </div>
@@ -1377,11 +1506,6 @@
   
 
 
-
-
-
-
-  
 
 
 
@@ -1413,78 +1537,7 @@
     
   </div>
 
-      
-
-    
-    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
-
-    
-    
-    
-      
-
-      
-      
-
-      
-
-      
-
-    
-
-    
-    
-    
-
-    
-    
-    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
-    <script>
-      anchors.add();
-    </script>
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-
-    
-
-    
-    
-    
-    <script id="page-data" type="application/json">{"use_headroom":false}</script>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
-
-    
-    
-    
-    
-    
-    
-      
+  
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -1510,7 +1563,119 @@
   </div>
 </div>
 
-      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 

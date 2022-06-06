@@ -8,7 +8,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
   
 
   
@@ -22,11 +22,7 @@
 
 
 
-
   
-
-
-
 
 
 
@@ -72,15 +68,18 @@
   
   
   
-    <meta name="theme-color" content="#bbdefb" />
+    <meta name="theme-color" content="#1565c0" />
   
 
   
   
+    
+    <script src="/js/mathjax-config.js"></script>
+  
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
 
   
   
@@ -101,120 +100,132 @@
     
     
     
-    
-
-    
-    
-    
-
-    
-
-    
-    
-      
-      
-
-      
-      
-
       
     
-      
-      
-
-      
-      
-
-      
     
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
       
       
         
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
       
 
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -240,7 +251,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
 
   
 
@@ -248,9 +259,7 @@
 
   
 
-
   
-
 
   
 
@@ -325,7 +334,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="814f9a237e8a207a019b4db21fcab693" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="814f9a237e8a207a019b4db21fcab693" >
 
   
   
@@ -336,10 +345,47 @@
   
   
   
-  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
 
   
 
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
 
 
 
@@ -588,9 +634,29 @@
 
         
         
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
 
         
         
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
         
 
         
@@ -607,10 +673,7 @@
 
   <div class="page-body">
     
-    
-    
 
-    
 
 
 
@@ -630,6 +693,12 @@
     </div>
   </button>
 
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
   
 </form>
 
@@ -766,19 +835,70 @@
 
         <div class="docs-article-container">
           
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/">
+        
+          Learn
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/pandas/">
+        
+          pandas
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        pandas Series 对象
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+          
 
           <h1>pandas Series 对象</h1>
 
           <div class="article-style">
-            <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span></code></pre></div><p><code>Series</code> 是一个带标签的一维数组，能够保存任何数据类型（整数、字符串、浮点数、Python 对象等）。轴 <code>axis</code> 标签统称为索引 <code>index</code>。</p>
+            <pre><code class="language-python">import pandas as pd
+import numpy as np
+</code></pre>
+<p><code>Series</code> 是一个带标签的一维数组，能够保存任何数据类型（整数、字符串、浮点数、Python 对象等）。轴 <code>axis</code> 标签统称为索引 <code>index</code>。</p>
 <h2 id="创建-series-对象">创建 Series 对象</h2>
 <p>创建 <code>Serires</code> 对象需要提供 <code>data</code> 和 <code>index</code> 两个参数。其中 <code>index</code> 是需要传入的索引，即轴标签列表。因此，根据数据类型可以分为如下几种情况：</p>
 <h3 id="ndarray">ndarray</h3>
 <p>如果 <code>data</code> 是 <code>ndarray</code>，则 <code>index</code> 必须与 <code>data</code> 的长度相同。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">])</span>
-</span></span></code></pre></div><pre><code>a   -0.840342
+<pre><code class="language-python">pd.Series(np.random.randn(5), index=['a', 'b', 'c', 'd', 'e'])
+</code></pre>
+<pre><code>a   -0.840342
 b    1.301792
 c   -0.542978
 d   -0.057463
@@ -786,8 +906,9 @@ e   -2.716027
 dtype: float64
 </code></pre>
 <p>如果没有传递索引，则将创建一个具有值 <code>[0, ..., len(data) - 1]</code> 的索引。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
-</span></span></code></pre></div><pre><code>0   -0.237221
+<pre><code class="language-python">pd.Series(np.random.randn(5))
+</code></pre>
+<pre><code>0   -0.237221
 1   -0.126770
 2    0.737682
 3   -0.093711
@@ -795,16 +916,18 @@ dtype: float64
 dtype: float64
 </code></pre>
 <h3 id="dict">dict</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
-</span></span></code></pre></div><pre><code>b    1
+<pre><code class="language-python">pd.Series({'b': 1, 'a': 0, 'c': 2})
+</code></pre>
+<pre><code>b    1
 a    0
 c    2
 dtype: int64
 </code></pre>
 <h3 id="标量值">标量值</h3>
 <p>如果数据是标量值，则必须提供索引。该值将重复以匹配索引的长度。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">])</span>
-</span></span></code></pre></div><pre><code>a    5.0
+<pre><code class="language-python">pd.Series(5.0, index=['a', 'b', 'c', 'd', 'e'])
+</code></pre>
+<pre><code>a    5.0
 b    5.0
 c    5.0
 d    5.0
@@ -815,39 +938,45 @@ dtype: float64
 <p><code>Series</code> 的行为与 <code>ndarray</code> 非常相似，并且是大多数 <strong>NumPy</strong> 函数的有效参数。</p>
 <h3 id="索引和切片">索引和切片</h3>
 <p>注意：切片等操作也会对索引进行切片。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;a&#34;</span><span class="p">,</span> <span class="s2">&#34;b&#34;</span><span class="p">,</span> <span class="s2">&#34;c&#34;</span><span class="p">,</span> <span class="s2">&#34;d&#34;</span><span class="p">,</span> <span class="s2">&#34;e&#34;</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl"><span class="n">s</span>
-</span></span></code></pre></div><pre><code>a   -0.669858
+<pre><code class="language-python">s = pd.Series(np.random.randn(5), index=[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;])
+s
+</code></pre>
+<pre><code>a   -0.669858
 b   -0.669152
 c   -0.228237
 d   -2.224927
 e    0.038875
 dtype: float64
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span></span></code></pre></div><pre><code>-0.6698575320970594
+<pre><code class="language-python">s[0]
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
-</span></span></code></pre></div><pre><code>a   -0.669858
+<pre><code>-0.6698575320970594
+</code></pre>
+<pre><code class="language-python">s[:3]
+</code></pre>
+<pre><code>a   -0.669858
 b   -0.669152
 c   -0.228237
 dtype: float64
 </code></pre>
 <h3 id="矩阵索引">矩阵索引</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span><span class="p">[</span><span class="n">s</span> <span class="o">&gt;</span> <span class="n">s</span><span class="o">.</span><span class="n">median</span><span class="p">()]</span>
-</span></span></code></pre></div><pre><code>c   -0.228237
+<pre><code class="language-python">s[s &gt; s.median()]
+</code></pre>
+<pre><code>c   -0.228237
 e    0.038875
 dtype: float64
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span><span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
-</span></span></code></pre></div><pre><code>e    0.038875
+<pre><code class="language-python">s[[4, 3, 1]]
+</code></pre>
+<pre><code>e    0.038875
 d   -2.224927
 b   -0.669152
 dtype: float64
 </code></pre>
 <h3 id="数学运算">数学运算</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>a    0.511781
+<pre><code class="language-python">np.exp(s)
+</code></pre>
+<pre><code>a    0.511781
 b    0.512143
 c    0.795935
 d    0.108075
@@ -855,60 +984,71 @@ e    1.039641
 dtype: float64
 </code></pre>
 <h3 id="ndarry-属性">ndarry 属性</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span><span class="o">.</span><span class="n">array</span>
-</span></span></code></pre></div><pre><code>&lt;PandasArray&gt;
+<pre><code class="language-python">s.array
+</code></pre>
+<pre><code>&lt;PandasArray&gt;
 [ -0.6698575320970594,  -0.6691515909398379, -0.22823732871328664,
    -2.224927424376556,  0.03887527676649628]
 Length: 5, dtype: float64
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span><span class="o">.</span><span class="n">dtype</span>
-</span></span></code></pre></div><pre><code>dtype('float64')
+<pre><code class="language-python">s.dtype
+</code></pre>
+<pre><code>dtype('float64')
 </code></pre>
 <h3 id="强制类型转换">强制类型转换</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-</span></span></code></pre></div><pre><code>array([-0.66985753, -0.66915159, -0.22823733, -2.22492742,  0.03887528])
+<pre><code class="language-python">s.to_numpy()
+</code></pre>
+<pre><code>array([-0.66985753, -0.66915159, -0.22823733, -2.22492742,  0.03887528])
 </code></pre>
 <h2 id="series-类似-dict">Series 类似 dict</h2>
 <p><code>Series</code> 就像一个固定大小的 <code>dict</code>，可以通过索引标签获取和设置值：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
-</span></span></code></pre></div><pre><code>-0.6698575320970594
+<pre><code class="language-python">s['a']
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span><span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">12.0</span>
-</span></span><span class="line"><span class="cl"><span class="n">s</span>
-</span></span></code></pre></div><pre><code>a    -0.669858
+<pre><code>-0.6698575320970594
+</code></pre>
+<pre><code class="language-python">s['e'] = 12.0
+s
+</code></pre>
+<pre><code>a    -0.669858
 b    -0.669152
 c    -0.228237
 d    -2.224927
 e    12.000000
 dtype: float64
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s1">&#39;e&#39;</span> <span class="ow">in</span> <span class="n">s</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span> <span class="ow">in</span> <span class="n">s</span>
-</span></span></code></pre></div><pre><code>(True, False)
+<pre><code class="language-python">'e' in s, 'f' in s
+</code></pre>
+<pre><code>(True, False)
 </code></pre>
 <p>如果未包含标签，会抛出异常：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">try</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;KeyError&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>KeyError
+<pre><code class="language-python">try:
+    s['f']
+except KeyError:
+    print('KeyError')
+</code></pre>
+<pre><code>KeyError
 </code></pre>
 <p>使用 <code>get</code> 方法，缺少的标签将返回 <code>None</code> 或指定的默认值：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>nan
+<pre><code class="language-python">s.get('f')
+</code></pre>
+<pre><code class="language-python">s.get('f', np.nan)
+</code></pre>
+<pre><code>nan
 </code></pre>
 <h2 id="向量化操作和标签对齐">向量化操作和标签对齐</h2>
 <p>使用原始 <strong>NumPy</strong> 数组时，通常不需要逐个值循环。在 <strong>pandas</strong> 中使用 <code>Series</code> 时也是如此。<code>Series</code> 也可以传递给大多数需要 <code>ndarray</code> 的 <strong>NumPy</strong> 方法。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span> <span class="o">+</span> <span class="n">s</span>
-</span></span></code></pre></div><pre><code>a    -1.339715
+<pre><code class="language-python">s + s
+</code></pre>
+<pre><code>a    -1.339715
 b    -1.338303
 c    -0.456475
 d    -4.449855
 e    24.000000
 dtype: float64
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span> <span class="o">*</span> <span class="mi">2</span>
-</span></span></code></pre></div><pre><code>a    -1.339715
+<pre><code class="language-python">s * 2
+</code></pre>
+<pre><code>a    -1.339715
 b    -1.338303
 c    -0.456475
 d    -4.449855
@@ -916,8 +1056,9 @@ e    24.000000
 dtype: float64
 </code></pre>
 <p><code>Series</code> 和 <code>ndarray</code> 之间的一个关键区别是 <code>Series</code> 之间的操作会根据标签自动对齐数据。因此，您可以编写计算而不考虑所涉及的系列是否具有相同的标签。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span></span></code></pre></div><pre><code>a         NaN
+<pre><code class="language-python">s[1:] + s[:-1]
+</code></pre>
+<pre><code>a         NaN
 b   -1.338303
 c   -0.456475
 d   -4.449855
@@ -926,22 +1067,25 @@ dtype: float64
 </code></pre>
 <p>未对齐系列之间的操作结果将包含所涉及的索引的并集。如果在一个系列或另一个系列中找不到标签，则结果将被标记为缺失 <code>NaN</code>。</p>
 <h2 id="name-属性">name 属性</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;something&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">s</span>
-</span></span></code></pre></div><pre><code>0    0.042130
+<pre><code class="language-python">s = pd.Series(np.random.randn(5), name=&quot;something&quot;)
+s
+</code></pre>
+<pre><code>0    0.042130
 1    0.067907
 2   -1.121646
 3   -1.390116
 4   -0.990718
 Name: something, dtype: float64
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span><span class="o">.</span><span class="n">name</span>
-</span></span></code></pre></div><pre><code>'something'
+<pre><code class="language-python">s.name
+</code></pre>
+<pre><code>'something'
 </code></pre>
 <p>在许多情况下，<code>Series</code> 名称将自动分配，特别是在获取 <code>DataFrame</code> 的一维切片时。详见 <code>DataFrame</code> 章节。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s2</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;different&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">s2</span><span class="o">.</span><span class="n">name</span>
-</span></span></code></pre></div><pre><code>'different'
+<pre><code class="language-python">s2 = s.rename('different')
+s2.name
+</code></pre>
+<pre><code>'different'
 </code></pre>
 <p>请注意，<code>s</code> 和 <code>s2</code> 指的是不同的对象。</p>
           </div>
@@ -976,12 +1120,19 @@ Name: something, dtype: float64
 
 
 
-          
-
-
 
 
           
+
+
+
+
+          
+
+
+  
+  
+
 
 
         </div>
@@ -1004,11 +1155,6 @@ Name: something, dtype: float64
   
 
 
-
-
-
-
-  
 
 
 
@@ -1040,78 +1186,7 @@ Name: something, dtype: float64
     
   </div>
 
-      
-
-    
-    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
-
-    
-    
-    
-      
-
-      
-      
-
-      
-
-      
-
-    
-
-    
-    
-    
-
-    
-    
-    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
-    <script>
-      anchors.add();
-    </script>
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-
-    
-
-    
-    
-    
-    <script id="page-data" type="application/json">{"use_headroom":false}</script>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
-
-    
-    
-    
-    
-    
-    
-      
+  
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -1137,7 +1212,119 @@ Name: something, dtype: float64
   </div>
 </div>
 
-      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 

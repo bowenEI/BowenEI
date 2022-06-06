@@ -230,10 +230,10 @@
 &lt;p&gt;&lt;strong&gt;解&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;第(1)小题，我们可以根据题干当中的已知条件，通过极值点的性质列关于 $a$ 的方程，即可反解出 $a$。首先，我们对 $y$ 求导：&lt;/p&gt;
 &lt;p&gt;$$\begin{align}
-y&amp;rsquo; &amp;amp;= f(x) + xf&amp;rsquo;(x) \\
+y&#39; &amp;amp;= f(x) + xf&#39;(x) \\
 &amp;amp;= \ln (a-x)-\frac{x}{a-x}
 \end{align}$$&lt;/p&gt;
-&lt;p&gt;然后，我们令 $x = 0$，$y&amp;rsquo; = 0$，即可反解出 $a$：&lt;/p&gt;
+&lt;p&gt;然后，我们令 $x = 0$，$y&#39; = 0$，即可反解出 $a$：&lt;/p&gt;
 &lt;p&gt;$$\begin{align}
 \ln a = 0\\
 \Rightarrow a = 1
@@ -241,23 +241,23 @@ y&amp;rsquo; &amp;amp;= f(x) + xf&amp;rsquo;(x) \\
 &lt;p&gt;第(2)小题，如果直接对 $g(x)$ 求导，分母是幂函数和对数函数的复合函数，而且求导后在分子上会出现二次，计算量极其巨大。因此，去分母是本题的关键。&lt;/p&gt;
 &lt;p&gt;历年来的全国卷导数题都有这样一个特点：第(1)小题的结论可以在第(2)小题当中使用。我们做完第(1)小题后，其实只是求出了一个未知参数，没有得到某一个具体函数的性质。这个时候，我们来观察第(2)小题当中的目标函数 $g(x)$。我们发现，$g(x)$ 的分母恰好是函数 $y$。因此，研究函数 $y$ 是非常有必要的。&lt;/p&gt;
 &lt;p&gt;另一方面，第(2)小题让我们证明一个不等式，而不是等式。因此，我们要想直接去掉分母比较困难。如果分母是恒正或恒负，能够大大降低我们的计算量，方便我们解题。所以，我们期望函数 $y$ 的值域应当恒正或恒负。即使不是，我们也可以在不同的区间上讨论。&lt;/p&gt;
-&lt;p&gt;由(1)可知：$f(x) = \ln (1-x)$，那么 $y = x\ln (1-x)$。显然，它们的定义域都是 $(-\infty, 1)$。根据(1)的求导结果，我们可以很容易写出 $y&amp;rsquo;$ 的解析式：&lt;/p&gt;
-&lt;p&gt;$$y&amp;rsquo; = \ln (1-x)+\frac{x}{x-1}$$&lt;/p&gt;
+&lt;p&gt;由(1)可知：$f(x) = \ln (1-x)$，那么 $y = x\ln (1-x)$。显然，它们的定义域都是 $(-\infty, 1)$。根据(1)的求导结果，我们可以很容易写出 $y&#39;$ 的解析式：&lt;/p&gt;
+&lt;p&gt;$$y&#39; = \ln (1-x)+\frac{x}{x-1}$$&lt;/p&gt;
 &lt;p&gt;解析式还存在对数函数，很难一眼看出单调性。但是对数函数求导一次就能变成分式，因此我们对函数 $y$ 求二阶导数：&lt;/p&gt;
 &lt;p&gt;$$\begin{align}
-y&amp;rsquo;&amp;rsquo; &amp;amp;= \frac{1}{x-1} - \frac{1}{(x-1)^2} \\
+y&#39;&#39; &amp;amp;= \frac{1}{x-1} - \frac{1}{(x-1)^2} \\
 &amp;amp;= \frac{x-2}{(x-1)^2}
 \end{align}$$&lt;/p&gt;
-&lt;p&gt;由于函数 $y$ 的定义域是 $(-\infty, 1)$，显然 $y&amp;rsquo;&amp;rsquo; &amp;lt; 0$，$y&amp;rsquo;$ 在定义域内单调递减。而 $x = 0$ 是 $y$ 的极值点，也就是 $y&amp;rsquo;$ 的零点。故 $y$ 在 $(-\infty, 0)$ 上单调递增，在$(0, 1)$ 上单调递减。因此我们可以判断：&lt;/p&gt;
+&lt;p&gt;由于函数 $y$ 的定义域是 $(-\infty, 1)$，显然 $y&#39;&#39; &amp;lt; 0$，$y&#39;$ 在定义域内单调递减。而 $x = 0$ 是 $y$ 的极值点，也就是 $y&#39;$ 的零点。故 $y$ 在 $(-\infty, 0)$ 上单调递增，在$(0, 1)$ 上单调递减。因此我们可以判断：&lt;/p&gt;
 &lt;p&gt;$$y &amp;lt; y(0) = 0$$&lt;/p&gt;
 &lt;p&gt;这是一个非常漂亮的结论：$g(x)$ 的分母是恒负的。因此，要证 $g(x) &amp;lt; 1$，只需证 $x + f(x) &amp;gt; xf(x)$。于是我们令 $h(x) = x + f(x) - xf(x)$，并对其求导：&lt;/p&gt;
-&lt;p&gt;$$h&amp;rsquo;(x) = 1 - \frac{1}{1-x} - \ln (1-x) + \frac{x}{1-x}$$&lt;/p&gt;
+&lt;p&gt;$$h&#39;(x) = 1 - \frac{1}{1-x} - \ln (1-x) + \frac{x}{1-x}$$&lt;/p&gt;
 &lt;p&gt;解析式当中还含有对数函数，我们需要求二阶导数，才能把对数消掉：&lt;/p&gt;
 &lt;p&gt;$$\begin{align}
-h&amp;rsquo;&amp;rsquo;(x) &amp;amp;= - \frac{1}{(x-1)^2} + \frac{1}{1-x} + \frac{1}{(x-1)^2} \\
+h&#39;&#39;(x) &amp;amp;= - \frac{1}{(x-1)^2} + \frac{1}{1-x} + \frac{1}{(x-1)^2} \\
 &amp;amp;= \frac{1}{1-x} &amp;gt; 0
 \end{align}$$&lt;/p&gt;
-&lt;p&gt;因此，$h&amp;rsquo;(x)$ 在定义域内单调递增。而 $h&amp;rsquo;(0) = 0$，故 $h(x)$ 在 $(-\infty, 0)$ 上单调递减，在 $(0, 1)$ 上单调递增。因此，我们可以判断：&lt;/p&gt;
+&lt;p&gt;因此，$h&#39;(x)$ 在定义域内单调递增。而 $h&#39;(0) = 0$，故 $h(x)$ 在 $(-\infty, 0)$ 上单调递减，在 $(0, 1)$ 上单调递增。因此，我们可以判断：&lt;/p&gt;
 &lt;p&gt;$$h(x) &amp;gt; h(0) = 0$$&lt;/p&gt;
 &lt;p&gt;证毕。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;&lt;/p&gt;
@@ -297,7 +297,7 @@ x^2 = 4y
 &lt;p&gt;相切的条件该怎么用呢？我们可以把抛物线改写成二次函数求导：&lt;/p&gt;
 &lt;p&gt;\begin{align}
 y &amp;amp;= \frac{1}{4}x^2  \\
-\Rightarrow y&amp;rsquo; &amp;amp;= \frac{1}{2}x
+\Rightarrow y&#39; &amp;amp;= \frac{1}{2}x
 \end{align}&lt;/p&gt;
 &lt;p&gt;然后利用导数和切线斜率的关系列方程：&lt;/p&gt;
 &lt;p&gt;\begin{cases}

@@ -75,8 +75,6 @@ $$&lt;/p&gt;
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -165,8 +163,6 @@ $$&lt;/p&gt;
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -181,8 +177,6 @@ $$&lt;/p&gt;
 &lt;h3 id=&#34;指数和的对数&#34;&gt;指数和的对数&lt;/h3&gt;
 &lt;p&gt;函数 $f(x) = \log{(e^{x_1} + \cdots + e^{x_n})}$ 在 $\mathbf{R}^n$ 上是凸函数。&lt;/p&gt;
 &lt;p&gt;下面是函数 $f(x) = \log{(e^x + e^y)}$ 的图像。&lt;/p&gt;
-
-
 
 
 
@@ -413,8 +407,6 @@ $$&lt;/p&gt;
 f^{*}(y)=\sup _{x \in \operatorname{dom} f}\left(y^{T} x-f(x)\right)
 $$&lt;/p&gt;
 &lt;h3 id=&#34;几何意义&#34;&gt;几何意义&lt;/h3&gt;
-
-
 
 
 

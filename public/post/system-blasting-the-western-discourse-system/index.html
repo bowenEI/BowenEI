@@ -8,7 +8,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
   
 
   
@@ -22,11 +22,7 @@
 
 
 
-
   
-
-
-
 
 
 
@@ -74,15 +70,18 @@
   
   
   
-    <meta name="theme-color" content="#bbdefb" />
+    <meta name="theme-color" content="#1565c0" />
   
 
   
   
+    
+    <script src="/js/mathjax-config.js"></script>
+  
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
 
   
   
@@ -103,120 +102,132 @@
     
     
     
-    
-
-    
-    
-    
-
-    
-
-    
-    
-      
-      
-
-      
-      
-
       
     
-      
-      
-
-      
-      
-
-      
     
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
       
       
         
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
       
 
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -242,7 +253,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
 
   
 
@@ -250,9 +261,7 @@
 
   
 
-
   
-
 
   
 
@@ -375,7 +384,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="358c606de9772cde87c99188e59c050a" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="358c606de9772cde87c99188e59c050a" >
 
   
   
@@ -386,10 +395,47 @@
   
   
   
-  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
 
   
 
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
 
 
 
@@ -638,9 +684,29 @@
 
         
         
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
 
         
         
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
         
 
         
@@ -656,10 +722,6 @@
   </div>
 
   <div class="page-body">
-    
-    
-    
-
     <article class="article">
 
   
@@ -726,6 +788,8 @@
   
   
   
+  
+  
 
   
   
@@ -763,13 +827,13 @@
 <div class="alert alert-note">
   <div>
     <p><strong>特别鸣谢</strong></p>
-<p>本文根据复旦大学中国研究院副院长<a href="http://www.cifu.fudan.edu.cn/95/39/c521a103737/page.htm" target="_blank" rel="noopener">范勇鹏</a>教授在 bilibili 上创作的相关视频进行整理，链接如下：</p>
+<p>本文根据复旦大学中国研究院副院长<a href="http://www.cifu.fudan.edu.cn/95/39/c521a103737/page.htm">范勇鹏</a>教授在 bilibili 上创作的相关视频进行整理，链接如下：</p>
 <ul>
-<li><a href="https://www.bilibili.com/video/BV1yg411F7MF" target="_blank" rel="noopener">【范神论】范勇鹏：谁在定义自由？人民，贵族还是资本家</a></li>
-<li><a href="https://www.bilibili.com/video/BV19Q4y1z7Fh" target="_blank" rel="noopener">【范神论】美国：中国善良、负责任、有道德，但他是个坏人</a></li>
-<li><a href="https://www.bilibili.com/video/BV12u411f7wf" target="_blank" rel="noopener">【范神论】美国：我花了100年，让“民主”成为资本主义话语的一员</a></li>
-<li><a href="https://www.bilibili.com/video/BV1EU4y1w7Ag" target="_blank" rel="noopener">【范神论】范勇鹏：当资本抛弃美国的时候，美国也就走上了解体之路</a></li>
-<li><a href="https://www.bilibili.com/video/BV1gv41137wa" target="_blank" rel="noopener">【合集·收藏向】范勇鹏：教你如何爆破西方话术</a></li>
+<li><a href="https://www.bilibili.com/video/BV1yg411F7MF">【范神论】范勇鹏：谁在定义自由？人民，贵族还是资本家</a></li>
+<li><a href="https://www.bilibili.com/video/BV19Q4y1z7Fh">【范神论】美国：中国善良、负责任、有道德，但他是个坏人</a></li>
+<li><a href="https://www.bilibili.com/video/BV12u411f7wf">【范神论】美国：我花了100年，让“民主”成为资本主义话语的一员</a></li>
+<li><a href="https://www.bilibili.com/video/BV1EU4y1w7Ag">【范神论】范勇鹏：当资本抛弃美国的时候，美国也就走上了解体之路</a></li>
+<li><a href="https://www.bilibili.com/video/BV1gv41137wa">【合集·收藏向】范勇鹏：教你如何爆破西方话术</a></li>
 </ul>
 
   </div>
@@ -830,8 +894,6 @@
 
 
 
-
-
 <figure  >
   <div class="d-flex justify-content-center">
     <div class="w-100" ><img alt="" srcset="
@@ -844,8 +906,6 @@
                loading="lazy" data-zoomable /></div>
   </div></figure>
 <p>任何一个理论体系都是始于一些基本概念的，理论本质上是对这些现实的概念化解释。因此，在形式上理论必然表现为一系列相互关联的概念的联系。例如西方的民主化理论由如下相互关联的概念组成：</p>
-
-
 
 
 
@@ -961,7 +1021,7 @@
     <p><strong>社会主义民主</strong></p>
 <p>民主这一概念起源于世界社会主义运动，它通常和“集中”一词成对出现，即民主集中制。苏联全称“苏维埃社会主义共和国联盟”，这里面的俄语苏维埃 совет 的含义就是“委员会”、“代表会议”，是一种工人和农民的民主形式。</p>
 <p>今天的新中国也采用这一体制，就是这种民主集中制，或者说人民民主专政。中国的根本政治制度——人民代表大会制度，其核心是人民当家作主，是社会主义民主政治的实现形式。</p>
-<p>复旦大学中国研究院院长<a href="http://www.cifu.fudan.edu.cn/14/1d/c521a136221/page.htm" target="_blank" rel="noopener">张维为</a>教授指出，我国的社会主义民主是一种<strong>实质民主</strong>。不同于西方<strong>程序民主</strong>的是，我国的实质民主指的是民主所要实现的目标，它应该是良政善治，是解决人民最关切的问题，是提高人民的福祉和尊严。如果比较中美两国的民主制度，张维为教授认为在程序民主上，双方都有很大的改进余地，但在实质民主方面，中国做的更好，好很多。</p>
+<p>复旦大学中国研究院院长<a href="http://www.cifu.fudan.edu.cn/14/1d/c521a136221/page.htm">张维为</a>教授指出，我国的社会主义民主是一种<strong>实质民主</strong>。不同于西方<strong>程序民主</strong>的是，我国的实质民主指的是民主所要实现的目标，它应该是良政善治，是解决人民最关切的问题，是提高人民的福祉和尊严。如果比较中美两国的民主制度，张维为教授认为在程序民主上，双方都有很大的改进余地，但在实质民主方面，中国做的更好，好很多。</p>
 
   </div>
 </div>
@@ -1000,8 +1060,6 @@
 
 
 
-
-
 <figure  >
   <div class="d-flex justify-content-center">
     <div class="w-100" ><img alt="" srcset="
@@ -1024,6 +1082,8 @@
     </div>
 
     
+
+
 
 
 
@@ -1242,6 +1302,20 @@
 
 
 
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/from-corporation-to-country-a-historical-explanation-of-americas-institutional-dilemma/">从公司到国家：美国制度困局的历史解释</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
 
 
   </div>
@@ -1272,11 +1346,6 @@
 
 
 
-  
-
-
-
-
   <p class="powered-by">
     
     
@@ -1296,74 +1365,7 @@
     
   </div>
 
-      
-
-    
-    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
-
-    
-    
-    
-      
-
-      
-      
-
-      
-
-      
-
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-
-    
-
-    
-    
-    
-    <script id="page-data" type="application/json">{"use_headroom":true}</script>
-
-    
-    
-      <script src="/js/wowchemy-headroom.c251366b4128fd5e6b046d4c97a62a51.js" type="module"></script>
-    
-    
-    
-    
-    
-    
-    
-    
-    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
-
-    
-    
-    
-    
-    
-    
-      
+  
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -1389,7 +1391,115 @@
   </div>
 </div>
 
-      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+    
+    
+      <script src="/js/wowchemy-headroom.1cb9e2fc8399acee94eab837265b73bf.js" type="module"></script>
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 

@@ -154,8 +154,6 @@ z^Tx \leqslant \|x\| \|z\|
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -272,7 +270,7 @@ D f(x) _{ij}=\frac{\partial f _{i}(x)}{\partial x _{j}}, \quad i=1, \cdots, m, \
 &lt;h2 id=&#34;链式规则&#34;&gt;链式规则&lt;/h2&gt;
 &lt;p&gt;设复合函数 $h(x) = g(f(x))$，则&lt;/p&gt;
 &lt;p&gt;\begin{align}
-\nabla h(x) &amp;amp;= g&amp;rsquo;(f(x))f(x) \\
+\nabla h(x) &amp;amp;= g&#39;(f(x))f(x) \\
 &amp;amp;= \nabla g(f(x))^T f(x)
 \end{align}&lt;/p&gt;
 &lt;h3 id=&#34;仿射函数&#34;&gt;仿射函数&lt;/h3&gt;

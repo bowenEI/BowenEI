@@ -8,7 +8,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
   
 
   
@@ -22,11 +22,7 @@
 
 
 
-
   
-
-
-
 
 
 
@@ -72,15 +68,18 @@
   
   
   
-    <meta name="theme-color" content="#bbdefb" />
+    <meta name="theme-color" content="#1565c0" />
   
 
   
   
+    
+    <script src="/js/mathjax-config.js"></script>
+  
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
 
   
   
@@ -101,120 +100,132 @@
     
     
     
-    
-
-    
-    
-    
-
-    
-
-    
-    
-      
-      
-
-      
-      
-
       
     
-      
-      
-
-      
-      
-
-      
     
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
       
       
         
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
       
 
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -240,7 +251,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
 
   
 
@@ -248,9 +259,7 @@
 
   
 
-
   
-
 
   
 
@@ -325,7 +334,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="46f6ca097037a6dbe3102563d874d6c1" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="46f6ca097037a6dbe3102563d874d6c1" >
 
   
   
@@ -336,10 +345,47 @@
   
   
   
-  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
 
   
 
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
 
 
 
@@ -588,9 +634,29 @@
 
         
         
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
 
         
         
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
         
 
         
@@ -607,10 +673,7 @@
 
   <div class="page-body">
     
-    
-    
 
-    
 
 
 
@@ -630,6 +693,12 @@
     </div>
   </button>
 
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
   
 </form>
 
@@ -790,16 +859,67 @@
 
         <div class="docs-article-container">
           
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/">
+        
+          Learn
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/python/">
+        
+          Python
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Python 系统环境交互
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+          
 
           <h1>Python 系统环境交互</h1>
 
           <div class="article-style">
             <p><strong>Python</strong> 中的标准模块 <code>sys</code> 提供了 <strong>Python</strong> 脚本和其运行环境交互的方法。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
-</span></span></code></pre></div><h2 id="命令行参数">命令行参数</h2>
+<pre><code class="language-python">import sys
+</code></pre>
+<h2 id="命令行参数">命令行参数</h2>
 <p><code>sys.argv</code> 实现从程序外部向程序传递参数。其返回值是一个列表，其中索引 <code>0</code> 为 <strong>Python</strong> 脚本名，后面的则为命令行参数。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">argv</span>
-</span></span></code></pre></div><pre><code>['/home/fourier/miniconda3/lib/python3.9/site-packages/ipykernel_launcher.py',
+<pre><code class="language-python">sys.argv
+</code></pre>
+<pre><code>['/home/fourier/miniconda3/lib/python3.9/site-packages/ipykernel_launcher.py',
  '--ip=127.0.0.1',
  '--stdin=9008',
  '--control=9006',
@@ -814,10 +934,12 @@
 <p>这里是在 iPython kernel 里运行的，可以看到输出了很多的命令行参数。</p>
 <h3 id="处理命令行参数">处理命令行参数</h3>
 <p><strong>Python</strong> 提供了 <code>getopt</code> 包来专门处理命令行参数。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">getopt</span> <span class="kn">import</span> <span class="n">getopt</span>
-</span></span></code></pre></div><p>现在有一个 <strong>Python</strong> 脚本如下：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">!</span> <span class="n">cat</span> <span class="n">src</span><span class="o">/</span><span class="n">argv</span><span class="o">.</span><span class="n">py</span>
-</span></span></code></pre></div><pre><code>import sys
+<pre><code class="language-python">from getopt import getopt
+</code></pre>
+<p>现在有一个 <strong>Python</strong> 脚本如下：</p>
+<pre><code class="language-python">! cat src/argv.py
+</code></pre>
+<pre><code>import sys
 from getopt import getopt
 
 try:
@@ -845,25 +967,29 @@ except getopt.GetoptError:
 </ul>
 <p>下面用几个具体的例子来说明 <code>getopt</code> 的用法。</p>
 <p><code>-i:</code> 中的 <code>:</code> 表示该参数必须提供，否则会抛出异常。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">run</span> <span class="n">src</span><span class="o">/</span><span class="n">argv</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">i</span> <span class="n">foo</span><span class="o">.</span><span class="n">txt</span>
-</span></span></code></pre></div><pre><code>[('-i', 'foo.txt')] []
+<pre><code class="language-python">%run src/argv.py -i foo.txt
+</code></pre>
+<pre><code>[('-i', 'foo.txt')] []
 input file: foo.txt
 </code></pre>
 <p>如果有长命令行参数，原则上最好和短命令行参数一一对应。长命令行参数中如果有 <code>=</code> 表示需要提供值，否则不需要提供值。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">run</span> <span class="n">src</span><span class="o">/</span><span class="n">argv</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">help</span>
-</span></span></code></pre></div><pre><code>[('--help', '')] []
+<pre><code class="language-python">%run src/argv.py --help
+</code></pre>
+<pre><code>[('--help', '')] []
 usage: argv.py -i &lt;inputfile&gt; -o &lt;outputfile&gt;
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">run</span> <span class="n">src</span><span class="o">/</span><span class="n">argv</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">ifile</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">txt</span> <span class="o">--</span><span class="n">ofile</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">log</span>
-</span></span></code></pre></div><pre><code>[('--ifile', 'foo.txt'), ('--ofile', 'foo.log')] []
+<pre><code class="language-python">%run src/argv.py --ifile=foo.txt --ofile=foo.log
+</code></pre>
+<pre><code>[('--ifile', 'foo.txt'), ('--ofile', 'foo.log')] []
 input file: foo.txt
 output_file: foo.log
 </code></pre>
 <h2 id="模块与路径">模块与路径</h2>
 <p><code>sys.modules</code> 是一个全局字典，该字典是 <strong>Python</strong> 启动后就加载在内存中。每当程序员导入新的模块，<code>sys.modules</code> 将自动记录该模块。</p>
 <p>当第二次再导入该模块时，<strong>Python</strong> 会直接到字典中查找，从而加快了程序运行的速度。它拥有字典所拥有的一切方法。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">modules</span>
-</span></span></code></pre></div><pre><code>{'sys': &lt;module 'sys' (built-in)&gt;,
+<pre><code class="language-python">sys.modules
+</code></pre>
+<pre><code>{'sys': &lt;module 'sys' (built-in)&gt;,
  'builtins': &lt;module 'builtins' (built-in)&gt;,
  '_frozen_importlib': &lt;module 'importlib._bootstrap' (frozen)&gt;,
  '_imp': &lt;module '_imp' (built-in)&gt;,
@@ -1621,8 +1747,9 @@ output_file: foo.log
 </code></pre>
 <p><code>sys.path</code> 获取指定模块搜索路径的字符串集合，可以将写好的模块放在得到的某个路径下，就可以在程序中 import 时正确找到。</p>
 <p>在 import 导入 module_name 时，就是根据 sys.path 的路径来搜索 module.name。也可以自定义添加模块路径。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">path</span>
-</span></span></code></pre></div><pre><code>['/home/fourier/Documents/Jupyter-Notebook/Python Basics/Advanced',
+<pre><code class="language-python">sys.path
+</code></pre>
+<pre><code>['/home/fourier/Documents/Jupyter-Notebook/Python Basics/Advanced',
  '/home/fourier/miniconda3/lib/python39.zip',
  '/home/fourier/miniconda3/lib/python3.9',
  '/home/fourier/miniconda3/lib/python3.9/lib-dynload',
@@ -1632,15 +1759,18 @@ output_file: foo.log
  '/home/fourier/.ipython',
  '/home/fourier/.local/lib/python3.9/site-packages']
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;../my_module.py&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><h2 id="其他">其他</h2>
+<pre><code class="language-python">sys.path.append('../my_module.py')
+</code></pre>
+<h2 id="其他">其他</h2>
 <p>获取当前系统平台</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">platform</span>
-</span></span></code></pre></div><pre><code>'linux'
+<pre><code class="language-python">sys.platform
+</code></pre>
+<pre><code>'linux'
 </code></pre>
 <p>获取文件系统使用的编码方式</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">getfilesystemencoding</span><span class="p">()</span>
-</span></span></code></pre></div><pre><code>'utf-8'
+<pre><code class="language-python">sys.getfilesystemencoding()
+</code></pre>
+<pre><code>'utf-8'
 </code></pre>
           </div>
 
@@ -1675,12 +1805,19 @@ output_file: foo.log
 
 
 
-          
-
-
 
 
           
+
+
+
+
+          
+
+
+  
+  
+
 
 
         </div>
@@ -1703,11 +1840,6 @@ output_file: foo.log
   
 
 
-
-
-
-
-  
 
 
 
@@ -1739,78 +1871,7 @@ output_file: foo.log
     
   </div>
 
-      
-
-    
-    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
-
-    
-    
-    
-      
-
-      
-      
-
-      
-
-      
-
-    
-
-    
-    
-    
-
-    
-    
-    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
-    <script>
-      anchors.add();
-    </script>
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-
-    
-
-    
-    
-    
-    <script id="page-data" type="application/json">{"use_headroom":false}</script>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
-
-    
-    
-    
-    
-    
-    
-      
+  
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -1836,7 +1897,119 @@ output_file: foo.log
   </div>
 </div>
 
-      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 

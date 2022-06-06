@@ -89,8 +89,6 @@ C = \{x \in \mathbf{R}^{3} \mid -1 \leqslant x_1 \leqslant 1, -1 \leqslant x_2 \
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -108,8 +106,6 @@ C = \{x \in \mathbf{R}^{3} \mid -1 \leqslant x_1 \leqslant 1, -1 \leqslant x_2 \
 &lt;p&gt;\begin{align}
 \operatorname{conv} C=\{\theta_1 x_1+\cdots+\theta_k x_k \mid x_i \in C, \theta_i \geqslant 0, \\ i=1, \cdots, k, \theta_1+\cdots+\theta_k=1\}
 \end{align}&lt;/p&gt;
-
-
 
 
 
@@ -148,8 +144,6 @@ C = \{x \in \mathbf{R}^{3} \mid -1 \leqslant x_1 \leqslant 1, -1 \leqslant x_2 \
 \end{align}&lt;/p&gt;
 &lt;p&gt;半径为 $\infty$ 的扇形和母线长为 $\infty$ 的圆锥面是典型的凸锥。&lt;/p&gt;
 &lt;p&gt;和凸组合和凸包类似，可以定义锥组合和锥包。集合 $C$ 的锥包是 $C$ 中元素的所有锥组合的集合，如图所示：&lt;/p&gt;
-
-
 
 
 
@@ -341,7 +335,7 @@ C = \operatorname{conv}\{v_0, \cdots, v_k\} = \{\theta_0v_0 + \cdots + \theta_kv
 X=\left[\begin{array}{ll}
 x &amp;amp; y \\
 y &amp;amp; z
-\end{array}\right] \in \mathbf{S}_{+}^{2} \Longleftrightarrow
+\end{array}\right] \in \mathbf{S}_{+}^{2} \Longleftrightarrow 
 \left\{\begin{matrix}
 x \geqslant 0 \\
 z \geqslant 0 \\
@@ -494,8 +488,6 @@ S \subseteq x + K
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -514,8 +506,6 @@ S \subseteq x + K
 &lt;/ul&gt;
 &lt;h2 id=&#34;支撑超平面&#34;&gt;支撑超平面&lt;/h2&gt;
 &lt;p&gt;设 $C \subseteq \mathbf{R}^{n}$ 而 $x_0$ 是其边界 $\operatorname{bd} C$ 上的一点。如果 $a \ne 0$，并且对 $\forall x \in C$ 有 $a^T x = a^T x_0$，那么称超平面 $\{x \mid a^T x = a^T x_0\}$ 为集合 $C$ 在点 $x_0$ 处的&lt;strong&gt;支撑超平面&lt;/strong&gt;。从几何上看，超平面 $\{x \mid a^T x = a^T x_0\}$ 与 $C$ 相切于点 $x_0$，半空间 $\{x \mid a^T x \leqslant a^T x_0\}$ 包含 $C$，如图所示：&lt;/p&gt;
-
-
 
 
 
@@ -556,8 +546,6 @@ K^{*} = \{y \mid x^{T} y \geqslant 0, \forall x \in K\}
 \end{align}
 $$&lt;/p&gt;
 &lt;p&gt;称为 $K$ 的对偶锥。从几何上看，对偶锥 $K^{*}$ 是与锥 $K$ 内的所有向量夹角不超过 $90$ 度的所有向量组成的集合。如图所示，以 $y$ 为法向量的半空间包含锥 $K$，因此 $y \in K^{*}$；而以 $z$ 为法向量的半空间不包含锥 $K$，因此 $z \notin K^{*}$。&lt;/p&gt;
-
-
 
 
 
@@ -615,8 +603,6 @@ $$&lt;/p&gt;
 
 
 
-
-
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -630,8 +616,6 @@ $$&lt;/p&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;极小元的对偶性质&#34;&gt;极小元的对偶性质&lt;/h3&gt;
 &lt;p&gt;如果 $\lambda \succ _{K^{*}} 0$ 并且 $x$ 在 $z \in S$ 上极小化 $\lambda^T z$，那么 $x$ 是极小的，如图所示。&lt;/p&gt;
-
-
 
 
 

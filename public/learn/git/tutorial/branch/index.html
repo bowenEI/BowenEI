@@ -8,7 +8,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
   
 
   
@@ -22,11 +22,7 @@
 
 
 
-
   
-
-
-
 
 
 
@@ -72,15 +68,18 @@
   
   
   
-    <meta name="theme-color" content="#bbdefb" />
+    <meta name="theme-color" content="#1565c0" />
   
 
   
   
+    
+    <script src="/js/mathjax-config.js"></script>
+  
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
 
   
   
@@ -101,120 +100,132 @@
     
     
     
-    
-
-    
-    
-    
-
-    
-
-    
-    
-      
-      
-
-      
-      
-
       
     
-      
-      
-
-      
-      
-
-      
     
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
       
       
         
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
       
 
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -240,7 +251,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
 
   
 
@@ -248,9 +259,7 @@
 
   
 
-
   
-
 
   
 
@@ -325,7 +334,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="8321f17da8139542880dbc86f7da0d93" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="8321f17da8139542880dbc86f7da0d93" >
 
   
   
@@ -336,10 +345,47 @@
   
   
   
-  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
 
   
 
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
 
 
 
@@ -588,9 +634,29 @@
 
         
         
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
 
         
         
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
         
 
         
@@ -607,10 +673,7 @@
 
   <div class="page-body">
     
-    
-    
 
-    
 
 
 
@@ -630,6 +693,12 @@
     </div>
   </button>
 
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
   
 </form>
 
@@ -840,6 +909,66 @@
 
         <div class="docs-article-container">
           
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/">
+        
+          Learn
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/git/">
+        
+          Git
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/git/tutorial/">
+        
+          Git 使用教程
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Git 分支管理
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+          
 
           <h1>Git 分支管理</h1>
 
@@ -849,62 +978,74 @@
 <p>在版本回退一章中，我们知道，每次提交，<strong>Git</strong> 都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在 <strong>Git</strong> 里，这个分支叫主分支，即 <code>master</code> 分支。<code>HEAD</code> 严格来说不是指向提交，而是指向 <code>master</code>，<code>master</code> 才是指向提交的，所以，<code>HEAD</code> 指向的就是当前分支。</p>
 <p>一开始的时候，<code>master</code> 分支是一条线，<strong>Git</strong> 用 <code>master</code> 指向最新的提交，再用 <code>HEAD</code> 指向 <code>master</code>，就能确定当前分支，以及当前分支的提交点。每次提交，<code>master</code> 分支都会向前移动一步，这样，随着你不断提交，<code>master</code> 分支的线也越来越长。</p>
 <p>现在我们来创建一个新的分支 <code>dev</code>：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout -b dev
-</span></span></code></pre></div><p>它相当于以下两条命令：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch dev
-</span></span><span class="line"><span class="cl">git checkout dev
-</span></span><span class="line"><span class="cl">git branch			<span class="c1">#可以使用此命令列出所有分支</span>
-</span></span></code></pre></div><h3 id="合并分支">合并分支</h3>
+<pre><code class="language-sh">git checkout -b dev
+</code></pre>
+<p>它相当于以下两条命令：</p>
+<pre><code class="language-sh">git branch dev
+git checkout dev
+git branch			#可以使用此命令列出所有分支
+</code></pre>
+<h3 id="合并分支">合并分支</h3>
 <p>当我们在 <code>dev</code> 分支下进行开发时，会修改本地仓库的一些文件。此时如果切换回主分支：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout master
-</span></span></code></pre></div><p>会发现刚才工作编辑的文件都丢失了，因为那个提交是在 <code>dev</code> 分支上，而 <code>master</code> 分支此刻的提交点并没有变。</p>
+<pre><code class="language-sh">git checkout master
+</code></pre>
+<p>会发现刚才工作编辑的文件都丢失了，因为那个提交是在 <code>dev</code> 分支上，而 <code>master</code> 分支此刻的提交点并没有变。</p>
 <p>现在，我们把 <code>dev</code> 分支的工作成果合并到 <code>master</code> 分支上：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git merge dev		<span class="c1">#合并指定分支到当前分支</span>
-</span></span></code></pre></div><p><strong>快进模式</strong></p>
-<pre tabindex="0"><code>Updating d46f35e..b17d20e
+<pre><code class="language-sh">git merge dev		#合并指定分支到当前分支
+</code></pre>
+<p><strong>快进模式</strong></p>
+<pre><code>Updating d46f35e..b17d20e
 Fast-forward
  readme.txt | 1 +
  1 file changed, 1 insertion(+)
-</code></pre><p>注意到上面的 <code>Fast-forward</code> 信息，<strong>Git</strong> 告诉我们，这次合并是“快进模式”，也就是直接把 <code>master</code> 指向 <code>dev</code> 的当前提交，所以合并速度非常快。</p>
+</code></pre>
+<p>注意到上面的 <code>Fast-forward</code> 信息，<strong>Git</strong> 告诉我们，这次合并是“快进模式”，也就是直接把 <code>master</code> 指向 <code>dev</code> 的当前提交，所以合并速度非常快。</p>
 <p>当然，也不是每次合并都能 <code>Fast-forward</code>，我们后面会讲其他方式的合并。</p>
 <h3 id="删除分支">删除分支</h3>
 <p>合并完成后，就可以放心地删除 <code>dev</code> 分支了：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch -d dev
-</span></span></code></pre></div><h3 id="切换分支">切换分支</h3>
+<pre><code class="language-sh">git branch -d dev
+</code></pre>
+<h3 id="切换分支">切换分支</h3>
 <p>现在 <strong>Git</strong> 建议使用 <code>switch</code> 命令来切换分支，一来是为了更容易理解，二来前面讲过的撤销修改则是 <code>git checkout -- &lt;file&gt;</code>，同一个命令，有两种作用，确实有点令人迷惑。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git switch -c dev	<span class="c1">#创建并切换到新的dev分支</span>
-</span></span><span class="line"><span class="cl">git switch master	<span class="c1">#直接切换到已有的master分支</span>
-</span></span></code></pre></div><h2 id="解决冲突">解决冲突</h2>
+<pre><code class="language-sh">git switch -c dev	#创建并切换到新的dev分支
+git switch master	#直接切换到已有的master分支
+</code></pre>
+<h2 id="解决冲突">解决冲突</h2>
 <p>人生不如意之事十之八九，合并分支往往也不是一帆风顺的。</p>
 <p>现在我们的仓库下有一个文本文件 <code>readme.txt</code>，内容为：</p>
-<pre tabindex="0"><code>Creating a new branch is quick and simple.
-</code></pre><p>准备新的 <code>feature1</code> 分支，继续我们的新分支开发：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git switch -c feature1
-</span></span><span class="line"><span class="cl">Switched to a new branch <span class="s1">&#39;feature1&#39;</span>
-</span></span></code></pre></div><p>修改 <code>readme.txt</code> 最后一行，改为：</p>
-<pre tabindex="0"><code>Creating a new branch is quick AND simple.
-</code></pre><p>在 <code>feature1</code> 分支上提交：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git add readme.txt
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">$ git commit -m <span class="s2">&#34;AND simple&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span>feature1 14096d0<span class="o">]</span> AND simple
-</span></span><span class="line"><span class="cl"> <span class="m">1</span> file changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>, <span class="m">1</span> deletion<span class="o">(</span>-<span class="o">)</span>
-</span></span></code></pre></div><p>切换到 <code>master</code> 分支：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git switch master
-</span></span><span class="line"><span class="cl">Switched to branch <span class="s1">&#39;master&#39;</span>
-</span></span><span class="line"><span class="cl">Your branch is ahead of <span class="s1">&#39;origin/master&#39;</span> by <span class="m">1</span> commit.
-</span></span><span class="line"><span class="cl">  <span class="o">(</span>use <span class="s2">&#34;git push&#34;</span> to publish your <span class="nb">local</span> commits<span class="o">)</span>
-</span></span></code></pre></div><p><strong>Git</strong> 还会自动提示我们当前 <code>master</code> 分支比远程的 <code>master</code> 分支要超前1个提交。</p>
+<pre><code>Creating a new branch is quick and simple.
+</code></pre>
+<p>准备新的 <code>feature1</code> 分支，继续我们的新分支开发：</p>
+<pre><code class="language-sh">$ git switch -c feature1
+Switched to a new branch 'feature1'
+</code></pre>
+<p>修改 <code>readme.txt</code> 最后一行，改为：</p>
+<pre><code>Creating a new branch is quick AND simple.
+</code></pre>
+<p>在 <code>feature1</code> 分支上提交：</p>
+<pre><code class="language-sh">$ git add readme.txt
+
+$ git commit -m &quot;AND simple&quot;
+[feature1 14096d0] AND simple
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+</code></pre>
+<p>切换到 <code>master</code> 分支：</p>
+<pre><code class="language-sh">$ git switch master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use &quot;git push&quot; to publish your local commits)
+</code></pre>
+<p><strong>Git</strong> 还会自动提示我们当前 <code>master</code> 分支比远程的 <code>master</code> 分支要超前1个提交。</p>
 <p>在 <code>master</code> 分支上把 <code>readme.txt</code> 文件的最后一行改为：</p>
-<pre tabindex="0"><code>Creating a new branch is quick &amp; simple.
-</code></pre><p>提交：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git add readme.txt 
-</span></span><span class="line"><span class="cl">$ git commit -m <span class="s2">&#34;&amp; simple&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span>master 5dc6824<span class="o">]</span> <span class="p">&amp;</span> simple
-</span></span><span class="line"><span class="cl"> <span class="m">1</span> file changed, <span class="m">1</span> insertion<span class="o">(</span>+<span class="o">)</span>, <span class="m">1</span> deletion<span class="o">(</span>-<span class="o">)</span>
-</span></span></code></pre></div><p>现在，<code>master</code> 分支和 <code>feature1</code> 分支各自都分别有新的提交，变成了这样：</p>
-
-
+<pre><code>Creating a new branch is quick &amp; simple.
+</code></pre>
+<p>提交：</p>
+<pre><code class="language-sh">$ git add readme.txt 
+$ git commit -m &quot;&amp; simple&quot;
+[master 5dc6824] &amp; simple
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+</code></pre>
+<p>现在，<code>master</code> 分支和 <code>feature1</code> 分支各自都分别有新的提交，变成了这样：</p>
 
 
 
@@ -924,28 +1065,30 @@ Fast-forward
     <div class="w-100" ><img src="https://www.liaoxuefeng.com/files/attachments/919023000423040/0" alt="" loading="lazy" data-zoomable /></div>
   </div></figure>
 <p>当在不同的分支中对同一个文件的同一个地方作了不同的修改，像例子中把小写的 <code>and</code> 分别改成大写的 <code>AND</code> 和 <code>&amp;</code>，<strong>Git</strong> 无法执行“快速合并”，只能试图把各自的修改合并起来，但这种合并就可能会有冲突，我们试试看：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git merge feature1
-</span></span><span class="line"><span class="cl">Auto-merging readme.txt
-</span></span><span class="line"><span class="cl">CONFLICT <span class="o">(</span>content<span class="o">)</span>: Merge conflict in readme.txt
-</span></span><span class="line"><span class="cl">Automatic merge failed<span class="p">;</span> fix conflicts and <span class="k">then</span> commit the result.
-</span></span></code></pre></div><p>果然冲突了！ <strong>Git</strong> 告诉我们，<code>readme.txt</code> 文件存在冲突，必须手动解决冲突后再提交。<code>git status</code> 也可以告诉我们冲突的文件：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git status
-</span></span><span class="line"><span class="cl">On branch master
-</span></span><span class="line"><span class="cl">Your branch is ahead of <span class="s1">&#39;origin/master&#39;</span> by <span class="m">2</span> commits.
-</span></span><span class="line"><span class="cl">  <span class="o">(</span>use <span class="s2">&#34;git push&#34;</span> to publish your <span class="nb">local</span> commits<span class="o">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">You have unmerged paths.
-</span></span><span class="line"><span class="cl">  <span class="o">(</span>fix conflicts and run <span class="s2">&#34;git commit&#34;</span><span class="o">)</span>
-</span></span><span class="line"><span class="cl">  <span class="o">(</span>use <span class="s2">&#34;git merge --abort&#34;</span> to abort the merge<span class="o">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Unmerged paths:
-</span></span><span class="line"><span class="cl">  <span class="o">(</span>use <span class="s2">&#34;git add &lt;file&gt;...&#34;</span> to mark resolution<span class="o">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	both modified:   readme.txt
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">no changes added to commit <span class="o">(</span>use <span class="s2">&#34;git add&#34;</span> and/or <span class="s2">&#34;git commit -a&#34;</span><span class="o">)</span>
-</span></span></code></pre></div><p>我们可以直接查看 <code>readme.txt</code> 的内容：</p>
-<pre tabindex="0"><code> **Git**  is a distributed version control system.
+<pre><code class="language-sh">$ git merge feature1
+Auto-merging readme.txt
+CONFLICT (content): Merge conflict in readme.txt
+Automatic merge failed; fix conflicts and then commit the result.
+</code></pre>
+<p>果然冲突了！ <strong>Git</strong> 告诉我们，<code>readme.txt</code> 文件存在冲突，必须手动解决冲突后再提交。<code>git status</code> 也可以告诉我们冲突的文件：</p>
+<pre><code class="language-sh">$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use &quot;git push&quot; to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run &quot;git commit&quot;)
+  (use &quot;git merge --abort&quot; to abort the merge)
+
+Unmerged paths:
+  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
+
+	both modified:   readme.txt
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+<p>我们可以直接查看 <code>readme.txt</code> 的内容：</p>
+<pre><code> **Git**  is a distributed version control system.
  **Git**  is free software distributed under the GPL.
  **Git**  has a mutable index called stage.
  **Git**  tracks changes of files.
@@ -954,15 +1097,16 @@ Creating a new branch is quick &amp; simple.
 =======
 Creating a new branch is quick AND simple.
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; feature1
-</code></pre><p><strong>Git</strong> 用 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>，<code>=======</code>，<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> 标记出不同分支的内容，我们修改如下后保存：</p>
-<pre tabindex="0"><code>Creating a new branch is quick and simple.
-</code></pre><p>再提交：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git add readme.txt 
-</span></span><span class="line"><span class="cl">$ git commit -m <span class="s2">&#34;conflict fixed&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span>master cf810e4<span class="o">]</span> conflict fixed
-</span></span></code></pre></div><p>现在，<code>master</code> 分支和 <code>feature1</code> 分支变成了下图所示：</p>
-
-
+</code></pre>
+<p><strong>Git</strong> 用 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>，<code>=======</code>，<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> 标记出不同分支的内容，我们修改如下后保存：</p>
+<pre><code>Creating a new branch is quick and simple.
+</code></pre>
+<p>再提交：</p>
+<pre><code class="language-sh">$ git add readme.txt 
+$ git commit -m &quot;conflict fixed&quot;
+[master cf810e4] conflict fixed
+</code></pre>
+<p>现在，<code>master</code> 分支和 <code>feature1</code> 分支变成了下图所示：</p>
 
 
 
@@ -982,40 +1126,46 @@ Creating a new branch is quick AND simple.
     <div class="w-100" ><img src="https://www.liaoxuefeng.com/files/attachments/919023031831104/0" alt="" loading="lazy" data-zoomable /></div>
   </div></figure>
 <p>用带参数的 <code>git log</code> 也可以看到分支的合并情况：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git log --graph --pretty<span class="o">=</span>oneline --abbrev-commit
-</span></span><span class="line"><span class="cl">*   cf810e4 <span class="o">(</span>HEAD -&gt; master<span class="o">)</span> conflict fixed
-</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="se">\ </span> 
-</span></span><span class="line"><span class="cl"><span class="p">|</span> * 14096d0 <span class="o">(</span>feature1<span class="o">)</span> AND simple
-</span></span><span class="line"><span class="cl">* <span class="p">|</span> 5dc6824 <span class="p">&amp;</span> simple
-</span></span><span class="line"><span class="cl"><span class="p">|</span>/  
-</span></span><span class="line"><span class="cl">* b17d20e branch <span class="nb">test</span>
-</span></span><span class="line"><span class="cl">* d46f35e <span class="o">(</span>origin/master<span class="o">)</span> remove test.txt
-</span></span><span class="line"><span class="cl">* b84166e add test.txt
-</span></span><span class="line"><span class="cl">* 519219b git tracks changes
-</span></span><span class="line"><span class="cl">* e43a48b understand how stage works
-</span></span><span class="line"><span class="cl">* 1094adb append GPL
-</span></span><span class="line"><span class="cl">* e475afc add distributed
-</span></span><span class="line"><span class="cl">* eaadf4e wrote a readme file
-</span></span></code></pre></div><p>最后，删除 <code>feature1</code> 分支：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git branch -d feature1
-</span></span><span class="line"><span class="cl">Deleted branch feature1 <span class="o">(</span>was 14096d0<span class="o">)</span>.
-</span></span></code></pre></div><h2 id="分支管理策略">分支管理策略</h2>
+<pre><code class="language-sh">$ git log --graph --pretty=oneline --abbrev-commit
+*   cf810e4 (HEAD -&gt; master) conflict fixed
+|\  
+| * 14096d0 (feature1) AND simple
+* | 5dc6824 &amp; simple
+|/  
+* b17d20e branch test
+* d46f35e (origin/master) remove test.txt
+* b84166e add test.txt
+* 519219b git tracks changes
+* e43a48b understand how stage works
+* 1094adb append GPL
+* e475afc add distributed
+* eaadf4e wrote a readme file
+</code></pre>
+<p>最后，删除 <code>feature1</code> 分支：</p>
+<pre><code class="language-sh">$ git branch -d feature1
+Deleted branch feature1 (was 14096d0).
+</code></pre>
+<h2 id="分支管理策略">分支管理策略</h2>
 <h3 id="禁用快进模式">禁用快进模式</h3>
 <p>通常，合并分支时，如果可能，<strong>Git</strong> 会用 <code>Fast forward</code> 模式，但这种模式下，删除分支后，会丢掉分支信息。</p>
 <p>如果要强制禁用 <code>Fast forward</code> 模式，<strong>Git</strong> 就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git merge --no-ff -m <span class="s2">&#34;merge with no-ff&#34;</span> dev
-</span></span></code></pre></div><p>因为本次合并要创建一个新的commit，所以加上 <code>-m</code> 参数，把commit描述写进去。</p>
+<pre><code class="language-sh">git merge --no-ff -m &quot;merge with no-ff&quot; dev
+</code></pre>
+<p>因为本次合并要创建一个新的commit，所以加上 <code>-m</code> 参数，把commit描述写进去。</p>
 <h3 id="新功能分支">新功能分支</h3>
 <p>软件开发中，总有无穷无尽的新的功能要不断添加进来。当我们在 <code>dev</code> 分支上工作时，突然项目经理下了一个新任务，要实现一个名为 <code>Make America Grete Again</code> 的新功能。</p>
 <p>添加一个新功能时，你肯定不希望因为一些实验性质的代码，把主分支搞乱了，所以，每添加一个新功能，最好新建一个 <code>feature</code> 分支，在上面开发，完成后，合并，最后，删除该 <code>feature</code> 分支。</p>
 <p>准备开发，创建新分支：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git switch -c feature-MAGA
-</span></span></code></pre></div><p>你很牛逼，5分钟就实现了这个功能并且测试通过提交，然后你切回 <code>dev</code> 分支准备合并。突然，项目经理说经（川）费（普）不（败）足（选），新功能必须取消！</p>
+<pre><code class="language-sh">git switch -c feature-MAGA
+</code></pre>
+<p>你很牛逼，5分钟就实现了这个功能并且测试通过提交，然后你切回 <code>dev</code> 分支准备合并。突然，项目经理说经（川）费（普）不（败）足（选），新功能必须取消！</p>
 <p>虽然白干了，但是这个包含机密资料的分支还是必须就地销毁：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch -d feature-MAGA
-</span></span></code></pre></div><p>此时是无法删除分支的，因为 <code>feature-MAGA</code> 分支还没有被合并。如果删除，将丢失掉修改，如果要强行删除，需要使用大写的 <code>-D</code> 参数：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch -D feature-MAGA
-</span></span></code></pre></div><p><strong>小结</strong></p>
+<pre><code class="language-sh">git branch -d feature-MAGA
+</code></pre>
+<p>此时是无法删除分支的，因为 <code>feature-MAGA</code> 分支还没有被合并。如果删除，将丢失掉修改，如果要强行删除，需要使用大写的 <code>-D</code> 参数：</p>
+<pre><code class="language-sh">git branch -D feature-MAGA
+</code></pre>
+<p><strong>小结</strong></p>
 <ul>
 <li>开发一个新 <code>feature</code>，最好新建一个分支；</li>
 <li>如果要丢弃一个没有被合并过的分支，可以通过 <code>git branch -D &lt;name&gt;</code> 强行删除。</li>
@@ -1033,11 +1183,13 @@ Creating a new branch is quick AND simple.
 <li><strong>Git</strong> 鼓励在开发过程中使用分支，随着开发的进度逐步走向尾声，分支会逐渐合并，最后往往只剩下一个 <code>master</code> 分支。</li>
 </ul>
 <p>当其他同事推送了他的工作后，正确的做法是先拉取他的修改与本地合并，然后再将自己的工作推送。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git pull origin dev
-</span></span></code></pre></div><p>它相当于：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git fetch origin dev
-</span></span><span class="line"><span class="cl">git merge dev
-</span></span></code></pre></div><p>显然，如果直接 <code>pull</code>，很可能会产生冲突，需要手动解决。</p>
+<pre><code class="language-sh">git pull origin dev
+</code></pre>
+<p>它相当于：</p>
+<pre><code class="language-sh">git fetch origin dev
+git merge dev
+</code></pre>
+<p>显然，如果直接 <code>pull</code>，很可能会产生冲突，需要手动解决。</p>
 <h3 id="多人协作的工作模式">多人协作的工作模式</h3>
 <ol>
 <li>首先，可以试图用 <code>git push origin &lt;branch-name&gt;</code> 推送自己的修改；</li>
@@ -1053,8 +1205,9 @@ Creating a new branch is quick AND simple.
 <h3 id="变基技术">变基技术</h3>
 <p>多人在同一个分支上协作时，很容易出现冲突。即使没有冲突，后 <code>push</code> 的童鞋不得不先 <code>pull</code>，在本地合并，然后才能 <code>push</code> 成功。</p>
 <p><strong>Git</strong> 有没有办法让提交历史是一条干净的直线？这就是 <code>rebase</code>：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git rebase
-</span></span></code></pre></div><p><code>rebase</code> 的原理是把我们本地的提交“挪动”了位置，但是最终提交的内容是一样的。这就是 <code>rebase</code> 操作的特点：把分叉的提交历史“整理”成一条直线，看上去更直观。缺点是本地的分叉提交已经被修改过了。</p>
+<pre><code class="language-sh">git rebase
+</code></pre>
+<p><code>rebase</code> 的原理是把我们本地的提交“挪动”了位置，但是最终提交的内容是一样的。这就是 <code>rebase</code> 操作的特点：把分叉的提交历史“整理”成一条直线，看上去更直观。缺点是本地的分叉提交已经被修改过了。</p>
           </div>
 
           
@@ -1094,12 +1247,19 @@ Creating a new branch is quick AND simple.
 
 
 
-          
-
-
 
 
           
+
+
+
+
+          
+
+
+  
+  
+
 
 
         </div>
@@ -1122,11 +1282,6 @@ Creating a new branch is quick AND simple.
   
 
 
-
-
-
-
-  
 
 
 
@@ -1158,78 +1313,7 @@ Creating a new branch is quick AND simple.
     
   </div>
 
-      
-
-    
-    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
-
-    
-    
-    
-      
-
-      
-      
-
-      
-
-      
-
-    
-
-    
-    
-    
-
-    
-    
-    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
-    <script>
-      anchors.add();
-    </script>
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-
-    
-
-    
-    
-    
-    <script id="page-data" type="application/json">{"use_headroom":false}</script>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
-
-    
-    
-    
-    
-    
-    
-      
+  
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -1255,7 +1339,119 @@ Creating a new branch is quick AND simple.
   </div>
 </div>
 
-      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 

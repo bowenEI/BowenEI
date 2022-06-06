@@ -8,7 +8,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
   
 
   
@@ -22,11 +22,7 @@
 
 
 
-
   
-
-
-
 
 
 
@@ -72,15 +68,18 @@
   
   
   
-    <meta name="theme-color" content="#bbdefb" />
+    <meta name="theme-color" content="#1565c0" />
   
 
   
   
+    
+    <script src="/js/mathjax-config.js"></script>
+  
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
 
   
   
@@ -101,120 +100,132 @@
     
     
     
-    
-
-    
-    
-    
-
-    
-
-    
-    
-      
-      
-
-      
-      
-
       
     
-      
-      
-
-      
-      
-
-      
     
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
       
       
         
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
       
 
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -240,7 +251,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
 
   
 
@@ -248,9 +259,7 @@
 
   
 
-
   
-
 
   
 
@@ -325,7 +334,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="0fa3ae3f2ac7dc41f97757cd8f0bf51c" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="0fa3ae3f2ac7dc41f97757cd8f0bf51c" >
 
   
   
@@ -336,10 +345,47 @@
   
   
   
-  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
 
   
 
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
 
 
 
@@ -588,9 +634,29 @@
 
         
         
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
 
         
         
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
         
 
         
@@ -607,10 +673,7 @@
 
   <div class="page-body">
     
-    
-    
 
-    
 
 
 
@@ -630,6 +693,12 @@
     </div>
   </button>
 
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
   
 </form>
 
@@ -829,6 +898,66 @@
 
         <div class="docs-article-container">
           
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/">
+        
+          Learn
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/linux/">
+        
+          Linux
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/linux/linux-commands/">
+        
+          Linux 常用命令一览
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        文档编辑
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+          
 
           <h1>文档编辑</h1>
 
@@ -892,13 +1021,14 @@
 </tbody>
 </table>
 <p><strong>参考实例</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cat filename.txt                        <span class="c1"># 查看文件的内容</span>
-</span></span><span class="line"><span class="cl">cat -n filename.txt                     <span class="c1"># 查看文件的内容，并显示行数编号</span>
-</span></span><span class="line"><span class="cl">cat -n linuxcool.log &gt; linuxprobe.log   <span class="c1"># 查看文件的内容，并添加行数编号后输出到另外一个文件中</span>
-</span></span><span class="line"><span class="cl">cat /dev/null &gt; /root/filename.txt      <span class="c1"># 清空文件的内容</span>
-</span></span><span class="line"><span class="cl">cat &gt; filename.txt <span class="s">&lt;&lt;EOF                # 持续写入文件内容，碰到EOF</span>符后结束并保存
-</span></span><span class="line"><span class="cl">cat /dev/fd0 &gt; fdisk.iso                <span class="c1"># 将软盘设备制作成镜像文件</span>
-</span></span></code></pre></div><h2 id="echo-命令输出字符串或提取shell变量的值">echo 命令：输出字符串或提取Shell变量的值</h2>
+<pre><code class="language-bash">cat filename.txt                        # 查看文件的内容
+cat -n filename.txt                     # 查看文件的内容，并显示行数编号
+cat -n linuxcool.log &gt; linuxprobe.log   # 查看文件的内容，并添加行数编号后输出到另外一个文件中
+cat /dev/null &gt; /root/filename.txt      # 清空文件的内容
+cat &gt; filename.txt &lt;&lt;EOF                # 持续写入文件内容，碰到EOF符后结束并保存
+cat /dev/fd0 &gt; fdisk.iso                # 将软盘设备制作成镜像文件
+</code></pre>
+<h2 id="echo-命令输出字符串或提取shell变量的值">echo 命令：输出字符串或提取Shell变量的值</h2>
 <p><code>echo</code> 命令用于在终端设备上输出字符串或变量提取后的值，这是在 <strong>Linux</strong> 系统中最常用的几个命令之一，但操作却非常简单。</p>
 <p>人们一般使用在变量前加上 <code>$</code> 符号的方式提取出变量的值，例如：<code>PATH</code>，然后再用 <code>echo</code> 命令予以输出。或者直接使用 <code>echo</code> 命令输出一段字符串到屏幕上，起到给用户提示的作用。</p>
 <p><strong>常用参数</strong></p>
@@ -953,14 +1083,15 @@
 </tbody>
 </table>
 <p><strong>参考实例</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Hello World!&#34;</span>                 <span class="c1"># 输出一段字符串</span>
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$PATH</span>                          <span class="c1"># 输出变量提取后的值</span>
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="se">\$</span>PATH                         <span class="c1"># 对内容进行转义，不让$符号的提取变量值功能生效</span>
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Hello World!&#34;</span> &gt; linuxcool     <span class="c1"># 结合输出重定向符，将字符串信息导入文件中</span>
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="sb">`</span>date<span class="sb">`</span>                         <span class="c1"># 使用反引号符执行命令，并输出其结果到终端</span>
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> -e <span class="s2">&#34;a\nb\nc&#34;</span>                   <span class="c1"># 输出带有换行符的内容</span>
-</span></span><span class="line"><span class="cl"><span class="nb">echo</span> -e <span class="s2">&#34;123\b456&#34;</span>                  <span class="c1"># 输出信息中删除某个字符，注意看数字3消失了</span>
-</span></span></code></pre></div><h2 id="tail-命令查看文件尾部内容">tail 命令：查看文件尾部内容</h2>
+<pre><code class="language-bash">echo &quot;Hello World!&quot;                 # 输出一段字符串
+echo $PATH                          # 输出变量提取后的值
+echo \$PATH                         # 对内容进行转义，不让$符号的提取变量值功能生效
+echo &quot;Hello World!&quot; &gt; linuxcool     # 结合输出重定向符，将字符串信息导入文件中
+echo `date`                         # 使用反引号符执行命令，并输出其结果到终端
+echo -e &quot;a\nb\nc&quot;                   # 输出带有换行符的内容
+echo -e &quot;123\b456&quot;                  # 输出信息中删除某个字符，注意看数字3消失了
+</code></pre>
+<h2 id="tail-命令查看文件尾部内容">tail 命令：查看文件尾部内容</h2>
 <p><code>tail</code> 用于显示文件尾部的内容，默认在屏幕上显示指定文件的末尾10行。如果给定的文件不止一个，则在显示的每个文件前面加一个文件名标题。如果没有指定文件或者文件名为 <code>-</code>，则读取标准输入。</p>
 <p><strong>常用参数</strong></p>
 <table>
@@ -1006,11 +1137,12 @@
 </tbody>
 </table>
 <p><strong>参考实例</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tail file           <span class="c1"># 显示文件file的最后10行</span>
-</span></span><span class="line"><span class="cl">tail +20 file       <span class="c1"># 显示文件file的内容，从第20行至文件末尾</span>
-</span></span><span class="line"><span class="cl">tail -c <span class="m">10</span> file     <span class="c1"># 显示文件file的最后10个字符</span>
-</span></span><span class="line"><span class="cl">tail -f <span class="m">10</span> file     <span class="c1"># 一直变化的文件总是显示后10行</span>
-</span></span></code></pre></div><h2 id="grep-命令强大的文本搜索工具">grep 命令：强大的文本搜索工具</h2>
+<pre><code class="language-bash">tail file           # 显示文件file的最后10行
+tail +20 file       # 显示文件file的内容，从第20行至文件末尾
+tail -c 10 file     # 显示文件file的最后10个字符
+tail -f 10 file     # 一直变化的文件总是显示后10行
+</code></pre>
+<h2 id="grep-命令强大的文本搜索工具">grep 命令：强大的文本搜索工具</h2>
 <p><code>grep</code> 是 global search regular expression and print out the line 的简称，意思是全面搜索正则表达式，并将其打印出来。这个命令可以结合正则表达式使用，它也是Linux使用最为广泛的命令。</p>
 <p><code>grep</code> 命令的选项用于对搜索过程的补充，而其命令的模式十分灵活，可以是变量、字符串、正则表达式。需要注意的是：一当模式中包含了空格，务必要用双引号将其引起来。</p>
 <p><strong>Linux</strong> 系统支持三种形式的 <code>grep</code> 命令，大儿子就是 <code>grep</code>，标准，模仿的代表。二儿子兴趣爱好多 <code>-egrep</code>，简称扩展 <code>grep</code> 命令，其实和 <code>grep -E</code> 等价，支持基本和扩展的正则表达式。小儿子跑的最快 <code>-fgrep</code>，简称快速 <code>grep</code> 命令，其实和 <code>grep -F</code> 等价，不支持正则表达式，按照字符串表面意思进行匹配。</p>
@@ -1078,11 +1210,11 @@
 </tbody>
 </table>
 <p><strong>参考实例</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">grep zwx file_* /etc/hosts  <span class="c1"># 对所有以file_开头的文件和/etc下的hosts文件匹配zwx</span>
-</span></span><span class="line"><span class="cl">grep -c zwx file_*          <span class="c1"># 输出匹配字符串行的数量</span>
-</span></span><span class="line"><span class="cl">grep -n zwx file_*          <span class="c1"># 列出所有的匹配行，并显示行号</span>
-</span></span><span class="line"><span class="cl">grep -vc zwx file_*         <span class="c1"># 显示不包含模式的所有行</span>
-</span></span></code></pre></div>
+<pre><code class="language-bash">grep zwx file_* /etc/hosts  # 对所有以file_开头的文件和/etc下的hosts文件匹配zwx
+grep -c zwx file_*          # 输出匹配字符串行的数量
+grep -n zwx file_*          # 列出所有的匹配行，并显示行号
+grep -vc zwx file_*         # 显示不包含模式的所有行
+</code></pre>
           </div>
 
           
@@ -1122,12 +1254,19 @@
 
 
 
-          
-
-
 
 
           
+
+
+
+
+          
+
+
+  
+  
+
 
 
         </div>
@@ -1150,11 +1289,6 @@
   
 
 
-
-
-
-
-  
 
 
 
@@ -1186,78 +1320,7 @@
     
   </div>
 
-      
-
-    
-    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
-
-    
-    
-    
-      
-
-      
-      
-
-      
-
-      
-
-    
-
-    
-    
-    
-
-    
-    
-    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
-    <script>
-      anchors.add();
-    </script>
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-
-    
-
-    
-    
-    
-    <script id="page-data" type="application/json">{"use_headroom":false}</script>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
-
-    
-    
-    
-    
-    
-    
-      
+  
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -1283,7 +1346,119 @@
   </div>
 </div>
 
-      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 

@@ -8,7 +8,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.5.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
   
 
   
@@ -22,11 +22,7 @@
 
 
 
-
   
-
-
-
 
 
 
@@ -72,15 +68,18 @@
   
   
   
-    <meta name="theme-color" content="#bbdefb" />
+    <meta name="theme-color" content="#1565c0" />
   
 
   
   
+    
+    <script src="/js/mathjax-config.js"></script>
+  
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
 
   
   
@@ -101,120 +100,132 @@
     
     
     
-    
-
-    
-    
-    
-
-    
-
-    
-    
-      
-      
-
-      
-      
-
       
     
-      
-      
-
-      
-      
-
-      
     
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
       
       
         
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
       
 
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
       
     
       
@@ -240,7 +251,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.203f2c59849b28ac745ea919daa02e66.css" />
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
 
   
 
@@ -248,9 +259,7 @@
 
   
 
-
   
-
 
   
 
@@ -325,7 +334,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper  dark " data-wc-page-id="4bce8d48f6a7a3d7d1b3f6c87492c082" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="4bce8d48f6a7a3d7d1b3f6c87492c082" >
 
   
   
@@ -336,10 +345,47 @@
   
   
   
-  <script src="/js/wowchemy-init.min.6a6813e7ed475370e052267c3a688edc.js"></script>
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
 
   
 
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
 
 
 
@@ -588,9 +634,29 @@
 
         
         
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
 
         
         
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
         
 
         
@@ -607,10 +673,7 @@
 
   <div class="page-body">
     
-    
-    
 
-    
 
 
 
@@ -630,6 +693,12 @@
     </div>
   </button>
 
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
   
 </form>
 
@@ -800,6 +869,55 @@
 
         <div class="docs-article-container">
           
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/">
+        
+          Learn
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/python/">
+        
+          Python
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Python 列表
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+          
 
           <h1>Python 列表</h1>
 
@@ -807,309 +925,358 @@
             <h2 id="创建列表">创建列表</h2>
 <p>在 <strong>Python</strong> 中，列表 <code>list</code> 是一个有序的序列。</p>
 <p>列表用一对 <code>[]</code> 生成，中间的元素用 <code>,</code> 隔开，其中的元素不需要是同一类型，同时列表的长度也不固定。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">l</span>
-</span></span></code></pre></div><pre><code>[1, 2.0, 'hello']
+<pre><code class="language-python">l = [1, 2.0, 'hello']
+l
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">empty_list</span> <span class="o">=</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl"><span class="n">empty_list</span>
-</span></span></code></pre></div><pre><code>[]
+<pre><code>[1, 2.0, 'hello']
+</code></pre>
+<pre><code class="language-python">empty_list = []
+empty_list
+</code></pre>
+<pre><code>[]
 </code></pre>
 <p>空列表可以用 <code>[]</code> 或者 <code>list()</code> 生成：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">empty_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="n">empty_list</span>
-</span></span></code></pre></div><pre><code>[]
+<pre><code class="language-python">empty_list = list()
+empty_list
+</code></pre>
+<pre><code>[]
 </code></pre>
 <p>列表可以通过其他数据类型强制转换得到，例如元组：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">list</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>[1, 2, 3]
+<pre><code class="language-python">t = (1, 2, 3)
+list(t)
+</code></pre>
+<pre><code>[1, 2, 3]
 </code></pre>
 <h2 id="列表操作">列表操作</h2>
 <p>与字符串类似，列表也支持以下的操作：</p>
 <h3 id="长度">长度</h3>
 <p>用 <code>len</code> 查看列表长度：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>3
+<pre><code class="language-python">len(l)
+</code></pre>
+<pre><code>3
 </code></pre>
 <h3 id="加法和乘法">加法和乘法</h3>
 <p>列表加法，相当于将两个列表按顺序连接：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.2</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-</span></span></code></pre></div><pre><code>[1, 2, 3, 3.2, 'hello']
+<pre><code class="language-python">a = [1, 2, 3]
+b = [3.2, 'hello']
+a + b
+</code></pre>
+<pre><code>[1, 2, 3, 3.2, 'hello']
 </code></pre>
 <p>列表与整数相乘，相当于将列表重复相加：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">l</span> <span class="o">*</span> <span class="mi">2</span>
-</span></span></code></pre></div><pre><code>[1, 2.0, 'hello', 1, 2.0, 'hello']
+<pre><code class="language-python">l * 2
+</code></pre>
+<pre><code>[1, 2.0, 'hello', 1, 2.0, 'hello']
 </code></pre>
 <h3 id="索引和切片">索引和切片</h3>
 <p>列表和字符串一样可以通过索引和分片来查看它的元素。</p>
 <p>索引：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span></span></code></pre></div><pre><code>10
+<pre><code class="language-python">a = [10, 11, 12, 13, 14]
+a[0]
+</code></pre>
+<pre><code>10
 </code></pre>
 <p>反向索引：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span></span></code></pre></div><pre><code>14
+<pre><code class="language-python">a[-1]
+</code></pre>
+<pre><code>14
 </code></pre>
 <p>分片：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span></span></code></pre></div><pre><code>[12, 13]
+<pre><code class="language-python">a[2:-1]
+</code></pre>
+<pre><code>[12, 13]
 </code></pre>
 <p>与字符串不同的是，列表的元素可以通过索引来修改：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span>
-</span></span></code></pre></div><pre><code>[100, 11, 12, 13, 14]
+<pre><code class="language-python">a = [10, 11, 12, 13, 14]
+a[0] = 100
+a
+</code></pre>
+<pre><code>[100, 11, 12, 13, 14]
 </code></pre>
 <p>这种赋值也适用于分片，例如，将列表的第2，3两个元素换掉：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span>
-</span></span></code></pre></div><pre><code>[100, 1, 2, 13, 14]
+<pre><code class="language-python">a[1:3] = [1, 2]
+a
+</code></pre>
+<pre><code>[100, 1, 2, 13, 14]
 </code></pre>
 <p>事实上，对于连续的分片（即步长为 $1$），<strong>Python</strong> 采用的是整段替换的方法，两者的元素个数并不需要相同，例如，将 <code>[11,12]</code> 替换为 <code>[1, 2, 3, 4]</code>：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span>
-</span></span></code></pre></div><pre><code>[10, 1, 2, 3, 4, 13, 14]
+<pre><code class="language-python">a = [10, 11, 12, 13, 14]
+a[1:3] = [1, 2, 3, 4]
+a
+</code></pre>
+<pre><code>[10, 1, 2, 3, 4, 13, 14]
 </code></pre>
 <p>这意味着，可以用这种方法来删除列表中一个连续的分片：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span>
-</span></span></code></pre></div><pre><code>[10, 11, 12]
+<pre><code class="language-python">a = [10, 1, 2, 11, 12]
+a[1:3] = []
+a
+</code></pre>
+<pre><code>[10, 11, 12]
 </code></pre>
 <p>对于不连续（间隔 <code>step</code> 不为 $1$）的片段进行修改时，两者的元素数目必须一致：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span>
-</span></span></code></pre></div><pre><code>[1, 11, 2, 13, 3]
+<pre><code class="language-python">a = [10, 11, 12, 13, 14]
+a[::2] = [1, 2, 3]
+a
+</code></pre>
+<pre><code>[1, 11, 2, 13, 3]
 </code></pre>
 <h3 id="删除元素">删除元素</h3>
 <p><strong>Python</strong> 提供了删除列表中元素的方法 <code>del</code>。</p>
 <p>删除列表中的第一个元素：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1002</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="k">del</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span>
-</span></span></code></pre></div><pre><code>['a', 'b', 'c']
+<pre><code class="language-python">a = [1002, 'a', 'b', 'c']
+del a[0]
+a
+</code></pre>
+<pre><code>['a', 'b', 'c']
 </code></pre>
 <p>删除第二到最后一个元素：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1002</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="k">del</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span>
-</span></span></code></pre></div><pre><code>[1002]
+<pre><code class="language-python">a = [1002, 'a', 'b', 'c']
+del a[1:]
+a
+</code></pre>
+<pre><code>[1002]
 </code></pre>
 <p>删除间隔的元素：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="k">del</span> <span class="n">a</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span>
-</span></span></code></pre></div><pre><code>[1, 2]
+<pre><code class="language-python">a = ['a', 1, 'b', 2, 'c']
+del a[::2]
+a
+</code></pre>
+<pre><code>[1, 2]
 </code></pre>
 <h3 id="测试从属关系">测试从属关系</h3>
 <p>用 <code>in</code> 来看某个元素是否在某个序列（不仅仅是列表）中，用 <code>not in</code> 来判断是否不在某个序列中。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="mi">10</span> <span class="ow">in</span> <span class="n">a</span><span class="p">,</span> <span class="mi">11</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">a</span>
-</span></span></code></pre></div><pre><code>(True, False)
+<pre><code class="language-python">a = [10, 11, 12, 13, 14]
+10 in a, 11 not in a
+</code></pre>
+<pre><code>(True, False)
 </code></pre>
 <p>也可以作用于字符串：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;hello world&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="s1">&#39;he&#39;</span> <span class="ow">in</span> <span class="n">s</span><span class="p">,</span> <span class="s1">&#39;world&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span>
-</span></span></code></pre></div><pre><code>(True, False)
+<pre><code class="language-python">s = 'hello world'
+'he' in s, 'world' not in s
+</code></pre>
+<pre><code>(True, False)
 </code></pre>
 <p>列表中可以包含各种对象，甚至可以包含列表：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;eleven&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-</span></span></code></pre></div><pre><code>[12, 13]
+<pre><code class="language-python">a = [10, 'eleven', [12, 13]]
+a[2]
+</code></pre>
+<pre><code>[12, 13]
 </code></pre>
 <p><code>a[2]</code> 是列表，可以对它再进行索引：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-</span></span></code></pre></div><pre><code>13
+<pre><code class="language-python">a[2][1]
+</code></pre>
+<pre><code>13
 </code></pre>
 <h2 id="列表方法">列表方法</h2>
 <h3 id="不改变列表的方法">不改变列表的方法</h3>
 <h4 id="列表中某个元素个数-count">列表中某个元素个数 count</h4>
 <p><code>l.count(ob)</code> 返回列表中元素 <code>ob</code> 出现的次数。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>2
+<pre><code class="language-python">a = [11, 12, 13, 12, 11]
+a.count(11)
+</code></pre>
+<pre><code>2
 </code></pre>
 <h4 id="列表中某个元素位置-index">列表中某个元素位置 index</h4>
 <p><code>l.index(ob)</code> 返回列表中元素 <code>ob</code> 第一次出现的索引位置，如果 <code>ob</code> 不在 <code>l</code> 中会报错。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>1
+<pre><code class="language-python">a.index(12)
+</code></pre>
+<pre><code>1
 </code></pre>
 <h3 id="改变列表的方法">改变列表的方法</h3>
 <h4 id="向列表添加单个元素">向列表添加单个元素</h4>
 <p><code>l.append(ob)</code> 将元素 <code>ob</code> 添加到列表 <code>l</code> 的最后。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span>
-</span></span></code></pre></div><pre><code>[10, 11, 12, 11]
+<pre><code class="language-python">a = [10, 11, 12]
+a.append(11)
+a
+</code></pre>
+<pre><code>[10, 11, 12, 11]
 </code></pre>
 <p><code>append</code> 每次只添加一个元素，并不会因为这个元素是序列而将其展开：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span>
-</span></span></code></pre></div><pre><code>[10, 11, 12, 11, [11, 12]]
+<pre><code class="language-python">a.append([11, 12])
+a
+</code></pre>
+<pre><code>[10, 11, 12, 11, [11, 12]]
 </code></pre>
 <h4 id="向列表添加序列">向列表添加序列</h4>
 <p><code>l.extend(lst)</code> 将序列 <code>lst</code> 的元素依次添加到列表 <code>l</code> 的最后，作用相当于 <code>l += lst</code>。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span>
-</span></span></code></pre></div><pre><code>[10, 11, 12, 11, 1, 2]
+<pre><code class="language-python">a = [10, 11, 12, 11]
+a.extend([1, 2])
+a
+</code></pre>
+<pre><code>[10, 11, 12, 11, 1, 2]
 </code></pre>
 <h4 id="插入元素">插入元素</h4>
 <p><code>l.insert(idx, ob)</code> 在索引 <code>idx</code> 处插入 <code>ob</code>，之后的元素依次后移。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 在索引 3 插入 &#39;a&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span>
-</span></span></code></pre></div><pre><code>[10, 11, 12, 'a', 13, 11]
+<pre><code class="language-python">a = [10, 11, 12, 13, 11]
+# 在索引 3 插入 'a'
+a.insert(3, 'a')
+a
+</code></pre>
+<pre><code>[10, 11, 12, 'a', 13, 11]
 </code></pre>
 <h4 id="移除元素">移除元素</h4>
 <p><code>l.remove(ob)</code> 会将列表中第一个出现的 <code>ob</code> 删除，如果 <code>ob</code> 不在 <code>l</code> 中会报错。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 移除了第一个 11</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span>
-</span></span></code></pre></div><pre><code>[10, 12, 13, 11]
+<pre><code class="language-python">a = [10, 11, 12, 13, 11]
+# 移除了第一个 11
+a.remove(11)
+a
+</code></pre>
+<pre><code>[10, 12, 13, 11]
 </code></pre>
 <h4 id="弹出元素">弹出元素</h4>
 <p><code>l.pop(idx)</code> 会将索引 <code>idx</code> 处的元素删除，并返回这个元素。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>12
+<pre><code class="language-python">a = [10, 11, 12, 13, 11]
+a.pop(2)
+</code></pre>
+<pre><code>12
 </code></pre>
 <h4 id="列表排序">列表排序</h4>
 <p><code>l.sort()</code> 会将列表中的元素按照一定的规则排序：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span>
-</span></span></code></pre></div><pre><code>[1, 2, 10, 11, 11, 13]
+<pre><code class="language-python">a = [10, 1, 11, 13, 11, 2]
+a.sort()
+a
+</code></pre>
+<pre><code>[1, 2, 10, 11, 11, 13]
 </code></pre>
 <p>也可以降序排列：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span>
-</span></span></code></pre></div><pre><code>[13, 11, 11, 10, 2, 1]
+<pre><code class="language-python">a.sort(reverse=True)
+a
+</code></pre>
+<pre><code>[13, 11, 11, 10, 2, 1]
 </code></pre>
 <p>如果不想改变原来列表中的值，可以使用<code>sorted</code>函数：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>a = [10, 1, 11, 13, 11, 2]
+<pre><code class="language-python">a = [10, 1, 11, 13, 11, 2]
+b = sorted(a)
+print('a =', a)
+print('b =', b)
+</code></pre>
+<pre><code>a = [10, 1, 11, 13, 11, 2]
 b = [1, 2, 10, 11, 11, 13]
 </code></pre>
 <p>还可以利用 <code>lambda</code> 表达式对一些复杂的数据类型进行排序，例如下面的例子是按照年龄排序：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">data_list</span> <span class="o">=</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;ABC&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">17</span><span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;DEF&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">19</span><span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;GHI&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="s1">&#39;JKL&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">sorted</span><span class="p">(</span><span class="n">data_list</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">])</span>
-</span></span></code></pre></div><pre><code>[{'Name': 'GHI', 'Age': 16},
+<pre><code class="language-python">data_list = [
+    {'Name': 'ABC', 'Age': 17},
+    {'Name': 'DEF', 'Age': 19},
+    {'Name': 'GHI', 'Age': 16},
+    {'Name': 'JKL', 'Age': 18}
+]
+
+sorted(data_list, key=lambda x:x['Age'])
+</code></pre>
+<pre><code>[{'Name': 'GHI', 'Age': 16},
  {'Name': 'ABC', 'Age': 17},
  {'Name': 'JKL', 'Age': 18},
  {'Name': 'DEF', 'Age': 19}]
 </code></pre>
 <p>甚至可以对具有多个属性的对象进行主次关键字排序：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">operator</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">grade</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">grade</span> <span class="o">=</span> <span class="n">grade</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s1">&#39;Name: </span><span class="si">{}</span><span class="s1">, Age: </span><span class="si">{}</span><span class="s1">, Grade: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> \
-</span></span><span class="line"><span class="cl">                                                    <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">grade</span><span class="p">)</span>
-</span></span></code></pre></div><p>定义比较函数，先按成绩排序再按年龄排序：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">cmpfun</span> <span class="o">=</span> <span class="n">operator</span><span class="o">.</span><span class="n">attrgetter</span><span class="p">(</span><span class="s1">&#39;grade&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><p>验证结果：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">student_list</span> <span class="o">=</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;ABC&#39;</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;DEF&#39;</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">85</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;GHI&#39;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Student</span><span class="p">(</span><span class="s1">&#39;JKL&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">95</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">student_list</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">cmpfun</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">student_list</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>Name: DEF, Age: 19, Grade: 85
+<pre><code class="language-python">import operator
+
+class Student:
+    def __init__(self, name, age, grade):
+        self.name = name
+        self.age = age
+        self.grade = grade
+        
+    def __str__(self):
+        return 'Name: {}, Age: {}, Grade: {}'.format(self.name, \
+                                                    self.age, self.grade)
+</code></pre>
+<p>定义比较函数，先按成绩排序再按年龄排序：</p>
+<pre><code class="language-python">cmpfun = operator.attrgetter('grade', 'age')
+</code></pre>
+<p>验证结果：</p>
+<pre><code class="language-python">student_list = [
+    Student('ABC', 17, 90),
+    Student('DEF', 19, 85),
+    Student('GHI', 16, 90),
+    Student('JKL', 18, 95)
+]
+
+student_list.sort(key=cmpfun)
+for i in student_list:
+    print(i)
+</code></pre>
+<pre><code>Name: DEF, Age: 19, Grade: 85
 Name: GHI, Age: 16, Grade: 90
 Name: ABC, Age: 17, Grade: 90
 Name: JKL, Age: 18, Grade: 95
 </code></pre>
 <h4 id="列表反向">列表反向</h4>
 <p><code>l.reverse()</code> 会将列表中的元素从后向前排列。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span>
-</span></span></code></pre></div><pre><code>[6, 5, 4, 3, 2, 1]
+<pre><code class="language-python">a = [1, 2, 3, 4, 5, 6]
+a.reverse()
+a
+</code></pre>
+<pre><code>[6, 5, 4, 3, 2, 1]
 </code></pre>
 <p>如果不想改变原来列表中的值，可以使用切片的方法：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>a = [1, 2, 3, 4, 5, 6]
+<pre><code class="language-python">a = [1, 2, 3, 4, 5, 6]
+b = a[::-1]
+print('a =', a)
+print('b =', b)
+</code></pre>
+<pre><code>a = [1, 2, 3, 4, 5, 6]
 b = [6, 5, 4, 3, 2, 1]
 </code></pre>
 <h2 id="列表推导式">列表推导式</h2>
 <p>循环可以用来生成列表：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">squares</span> <span class="o">=</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">squares</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">squares</span>
-</span></span></code></pre></div><pre><code>[100, 441, 16, 49, 144]
+<pre><code class="language-python">values = [10, 21, 4, 7, 12]
+squares = []
+for x in values:
+    squares.append(x**2)
+squares
+</code></pre>
+<pre><code>[100, 441, 16, 49, 144]
 </code></pre>
 <p>列表推导式可以使用更简单的方法来创建这个列表：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">values</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">squares</span>
-</span></span></code></pre></div><pre><code>[100, 441, 16, 49, 144]
+<pre><code class="language-python">values = [10, 21, 4, 7, 12]
+squares = [x**2 for x in values]
+squares
+</code></pre>
+<pre><code>[100, 441, 16, 49, 144]
 </code></pre>
 <p>还可以在列表推导式中加入条件进行筛选。例如在上面的例子中，假如只想保留列表中不大于 $10$ 的数的平方：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">values</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">squares</span>
-</span></span></code></pre></div><pre><code>[100, 16, 49]
+<pre><code class="language-python">values = [10, 21, 4, 7, 12]
+squares = [x**2 for x in values if x &lt;= 10]
+squares
+</code></pre>
+<pre><code>[100, 16, 49]
 </code></pre>
 <p>也可以使用推导式生成集合和字典：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">square_set</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">values</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="n">square_set</span>
-</span></span></code></pre></div><pre><code>{16, 49, 100}
+<pre><code class="language-python">square_set = {x**2 for x in values if x &lt;= 10}
+square_set
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">square_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">values</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="n">square_dict</span>
-</span></span></code></pre></div><pre><code>{10: 100, 4: 16, 7: 49}
+<pre><code>{16, 49, 100}
+</code></pre>
+<pre><code class="language-python">square_dict = {x: x**2 for x in values if x &lt;= 10}
+square_dict
+</code></pre>
+<pre><code>{10: 100, 4: 16, 7: 49}
 </code></pre>
 <p>再如，计算上面例子中生成的列表中所有元素的和：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">values</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl"><span class="n">total</span>
-</span></span></code></pre></div><pre><code>165
+<pre><code class="language-python">total = sum([x**2 for x in values if x &lt;= 10])
+total
+</code></pre>
+<pre><code>165
 </code></pre>
 <p>但是，<strong>Python</strong> 会生成这个列表，然后在将它放到垃圾回收机制中（因为没有变量指向它），这毫无疑问是种浪费。</p>
 <p>为了解决这种问题，与 <code>xrange()</code> 类似，<strong>Python</strong> 使用产生式表达式来解决这个问题：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">values</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">total</span>
-</span></span></code></pre></div><pre><code>165
+<pre><code class="language-python">total = sum(x**2 for x in values if x &lt;= 10)
+total
+</code></pre>
+<pre><code>165
 </code></pre>
 <p>与上面相比，只是去掉了括号，但这里并不会一次性的生成这个列表。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">)</span>
-</span></span></code></pre></div><p>比较一下两者的用时：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">timeit</span> <span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
-</span></span></code></pre></div><pre><code>268 ms ± 717 µs per loop (mean ± std. dev. of 7 runs, 1 loop each)
+<pre><code class="language-python">x = range(1000000)
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%</span><span class="n">timeit</span> <span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>259 ms ± 53.9 µs per loop (mean ± std. dev. of 7 runs, 1 loop each)
+<p>比较一下两者的用时：</p>
+<pre><code class="language-python">%timeit total = sum([i**2 for i in x])
+</code></pre>
+<pre><code>268 ms ± 717 µs per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</code></pre>
+<pre><code class="language-python">%timeit total = sum(i**2 for i in x)
+</code></pre>
+<pre><code>259 ms ± 53.9 µs per loop (mean ± std. dev. of 7 runs, 1 loop each)
 </code></pre>
           </div>
 
@@ -1143,12 +1310,19 @@ b = [6, 5, 4, 3, 2, 1]
 
 
 
-          
-
-
 
 
           
+
+
+
+
+          
+
+
+  
+  
+
 
 
         </div>
@@ -1171,11 +1345,6 @@ b = [6, 5, 4, 3, 2, 1]
   
 
 
-
-
-
-
-  
 
 
 
@@ -1207,78 +1376,7 @@ b = [6, 5, 4, 3, 2, 1]
     
   </div>
 
-      
-
-    
-    <script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
-
-    
-    
-    
-      
-
-      
-      
-
-      
-
-      
-
-    
-
-    
-    
-    
-
-    
-    
-    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
-    <script>
-      anchors.add();
-    </script>
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-
-    
-
-    
-    
-    
-    <script id="page-data" type="application/json">{"use_headroom":false}</script>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script src="/en/js/wowchemy.min.1ef277d8053d14264aea363e8f95ba13.js"></script>
-
-    
-    
-    
-    
-    
-    
-      
+  
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -1304,7 +1402,119 @@ b = [6, 5, 4, 3, 2, 1]
   </div>
 </div>
 
-      <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 

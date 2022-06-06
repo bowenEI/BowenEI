@@ -2,8 +2,8 @@
   "name": "Bowen's Academic Home",
   "short_name": "Bowen's Academic Home",
   "lang": "en-us",
-  "theme_color": "#bbdefb",
-  "background_color": "#bbdefb",
+  "theme_color": "#1565c0",
+  "background_color": "#1565c0",
   "icons": [{
     "src": "/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_192x192_fill_lanczos_center_3.png",
     "sizes": "192x192",
