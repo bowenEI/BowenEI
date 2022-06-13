@@ -941,7 +941,7 @@ $$&lt;/p&gt;
 &lt;p&gt;下面考虑非严格不等式系统&lt;/p&gt;
 &lt;p&gt;$$
 \begin{aligned}
-f_i(x) &amp;amp; \leqslant 0, \quad i=1,\cdots,m \\ 
+f_i(x) &amp;amp; \leqslant 0, \quad i=1,\cdots,m \\
 Ax &amp;amp;= b
 \end{aligned}
 $$&lt;/p&gt;

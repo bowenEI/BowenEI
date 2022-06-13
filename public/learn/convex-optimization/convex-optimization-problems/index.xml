@@ -486,7 +486,7 @@ $$&lt;/p&gt;
 \begin{aligned}
 \mathrm{minimize} \quad &amp;amp; f_0(x) \\
 \mathrm{subject\ to} \quad &amp;amp; f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\
-&amp;amp; A^Tx = b 
+&amp;amp; A^Tx = b
 \end{aligned}
 $$&lt;/p&gt;
 &lt;p&gt;其中不等式约束函数 $f_1,\cdots,f_m$ 是凸的，而目标函数 $f_0$ 是拟凸的。拟凸约束函数可以等价的替换为凸约束函数，即具有相同的 $0$- 下水平集的凸函数。&lt;/p&gt;
@@ -548,7 +548,7 @@ $$&lt;/p&gt;
 \begin{aligned}
 \mathrm{minimize} \quad &amp;amp; c^Tx+d \\
 \mathrm{subject\ to} \quad &amp;amp; Gx \preceq h \\
-\quad &amp;amp; Ax=b 
+\quad &amp;amp; Ax=b
 \end{aligned}
 $$&lt;/p&gt;
 &lt;p&gt;其中 $G \in \mathbf{R}^{m \times n}$ 并且 $A \in \mathbf{R}^{p \times n}$。显然，线性规划问题是凸优化问题。&lt;/p&gt;
