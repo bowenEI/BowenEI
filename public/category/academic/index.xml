@@ -72,61 +72,61 @@
 &lt;p&gt;作者在相关工作一节主要介绍了一些已发表的综述，它们都介绍了物联网领域的人工智能和机器学习或深度学习方法。相关内容见下表：&lt;/p&gt;
 &lt;style type=&#34;text/css&#34;&gt;
 .tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
-  padding:10px 5px;word-break:normal;}
-.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-7jts{border-color:inherit;font-size:18px;text-align:center;vertical-align:top}
-.tg .tg-fuxe{border-color:inherit;font-size:18px;text-align:left;vertical-align:top}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-mya0{border-color:#000000;font-size:18px;text-align:center;vertical-align:top}
+.tg .tg-m916{border-color:#000000;font-size:18px;text-align:left;vertical-align:top}
 &lt;/style&gt;
 &lt;table class=&#34;tg&#34;&gt;
 &lt;thead&gt;
   &lt;tr&gt;
-    &lt;th class=&#34;tg-7jts&#34;&gt;Title&lt;/th&gt;
-    &lt;th class=&#34;tg-7jts&#34;&gt;Year&lt;/th&gt;
-    &lt;th class=&#34;tg-7jts&#34;&gt;Topic&lt;/th&gt;
+    &lt;th class=&#34;tg-mya0&#34;&gt;Title&lt;/th&gt;
+    &lt;th class=&#34;tg-mya0&#34;&gt;Year&lt;/th&gt;
+    &lt;th class=&#34;tg-mya0&#34;&gt;Topic&lt;/th&gt;
   &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
   &lt;tr&gt;
-    &lt;td class=&#34;tg-7jts&#34;&gt;&lt;a href=&#34;https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/trit.2018.1008&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Artificial intelligence in Internet of Things&lt;/a&gt;&lt;/td&gt;
-    &lt;td class=&#34;tg-fuxe&#34;&gt;2018&lt;/td&gt;
-    &lt;td class=&#34;tg-7jts&#34;&gt;AIoT&lt;/td&gt;
+    &lt;td class=&#34;tg-mya0&#34;&gt;&lt;a href=&#34;https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/trit.2018.1008&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Artificial intelligence in Internet of Things&lt;/a&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-m916&#34;&gt;2018&lt;/td&gt;
+    &lt;td class=&#34;tg-mya0&#34;&gt;AIoT&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;td class=&#34;tg-7jts&#34;&gt;&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0167739X19304030&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Machine learning in the Internet of Things: Designed techniques for smart cities&lt;/a&gt;&lt;/td&gt;
-    &lt;td class=&#34;tg-fuxe&#34;&gt;2019&lt;/td&gt;
-    &lt;td class=&#34;tg-7jts&#34;&gt;ML; IoT&lt;/td&gt;
+    &lt;td class=&#34;tg-mya0&#34;&gt;&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0167739X19304030&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Machine learning in the Internet of Things: Designed techniques for smart cities&lt;/a&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-m916&#34;&gt;2019&lt;/td&gt;
+    &lt;td class=&#34;tg-mya0&#34;&gt;ML; IoT&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;td class=&#34;tg-7jts&#34;&gt;&lt;a href=&#34;https://ieeexplore.ieee.org/document/9052677&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Edge intelligence: The confluence of edge computing and artificial intelligence&lt;/a&gt;&lt;/td&gt;
-    &lt;td class=&#34;tg-fuxe&#34;&gt;2020&lt;/td&gt;
-    &lt;td class=&#34;tg-7jts&#34;&gt;Edge Intelligence&lt;/td&gt;
+    &lt;td class=&#34;tg-mya0&#34;&gt;&lt;a href=&#34;https://ieeexplore.ieee.org/document/9052677&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Edge intelligence: The confluence of edge computing and artificial intelligence&lt;/a&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-m916&#34;&gt;2020&lt;/td&gt;
+    &lt;td class=&#34;tg-mya0&#34;&gt;Edge Intelligence&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;td class=&#34;tg-7jts&#34;&gt;&lt;a href=&#34;https://link.springer.com/article/10.1007/s13042-018-0834-5&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;A survey on application of machine learning for Internet of Things&lt;/a&gt;&lt;/td&gt;
-    &lt;td class=&#34;tg-fuxe&#34;&gt;2018&lt;/td&gt;
-    &lt;td class=&#34;tg-7jts&#34;&gt;ML; IoT&lt;/td&gt;
+    &lt;td class=&#34;tg-mya0&#34;&gt;&lt;a href=&#34;https://link.springer.com/article/10.1007/s13042-018-0834-5&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;A survey on application of machine learning for Internet of Things&lt;/a&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-m916&#34;&gt;2018&lt;/td&gt;
+    &lt;td class=&#34;tg-mya0&#34;&gt;ML; IoT&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;td class=&#34;tg-7jts&#34;&gt;&lt;a href=&#34;https://ieeexplore.ieee.org/document/8373692&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Deep learning for IoT big data and streaming analytics: A survey&lt;/a&gt;&lt;/td&gt;
-    &lt;td class=&#34;tg-fuxe&#34;&gt;2018&lt;/td&gt;
-    &lt;td class=&#34;tg-7jts&#34;&gt;IoT; DL&lt;/td&gt;
+    &lt;td class=&#34;tg-mya0&#34;&gt;&lt;a href=&#34;https://ieeexplore.ieee.org/document/8373692&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Deep learning for IoT big data and streaming analytics: A survey&lt;/a&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-m916&#34;&gt;2018&lt;/td&gt;
+    &lt;td class=&#34;tg-mya0&#34;&gt;IoT; DL&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;td class=&#34;tg-7jts&#34;&gt;&lt;a href=&#34;https://dl.acm.org/doi/10.1145/3398209&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Deep Learning on Mobile and Embedded Devices: State-of-the-art, Challenges, and Future Directions&lt;/a&gt;&lt;/td&gt;
-    &lt;td class=&#34;tg-fuxe&#34;&gt;2021&lt;/td&gt;
-    &lt;td class=&#34;tg-7jts&#34;&gt;DL; Mobile and Embedded Devices&lt;/td&gt;
+    &lt;td class=&#34;tg-mya0&#34;&gt;&lt;a href=&#34;https://dl.acm.org/doi/10.1145/3398209&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Deep Learning on Mobile and Embedded Devices: State-of-the-art, Challenges, and Future Directions&lt;/a&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-m916&#34;&gt;2021&lt;/td&gt;
+    &lt;td class=&#34;tg-mya0&#34;&gt;DL; Mobile and Embedded Devices&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;td class=&#34;tg-7jts&#34;&gt;&lt;a href=&#34;https://ieeexplore.ieee.org/document/8270639&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Learning IoT in Edge: Deep Learning for the Internet of Things with Edge Computing&lt;/a&gt;&lt;/td&gt;
-    &lt;td class=&#34;tg-fuxe&#34;&gt;2018&lt;/td&gt;
-    &lt;td class=&#34;tg-7jts&#34;&gt;IoT; Edge Computing&lt;/td&gt;
+    &lt;td class=&#34;tg-mya0&#34;&gt;&lt;a href=&#34;https://ieeexplore.ieee.org/document/8270639&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Learning IoT in Edge: Deep Learning for the Internet of Things with Edge Computing&lt;/a&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-m916&#34;&gt;2018&lt;/td&gt;
+    &lt;td class=&#34;tg-mya0&#34;&gt;IoT; Edge Computing&lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-    &lt;td class=&#34;tg-7jts&#34;&gt;&lt;a href=&#34;https://ieeexplore.ieee.org/document/8763885&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Deep Learning With Edge Computing: A Review&lt;/a&gt;&lt;/td&gt;
-    &lt;td class=&#34;tg-fuxe&#34;&gt;2019&lt;/td&gt;
-    &lt;td class=&#34;tg-7jts&#34;&gt;DL; Edge Computing&lt;/td&gt;
+    &lt;td class=&#34;tg-mya0&#34;&gt;&lt;a href=&#34;https://ieeexplore.ieee.org/document/8763885&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;Deep Learning With Edge Computing: A Review&lt;/a&gt;&lt;/td&gt;
+    &lt;td class=&#34;tg-m916&#34;&gt;2019&lt;/td&gt;
+    &lt;td class=&#34;tg-mya0&#34;&gt;DL; Edge Computing&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
