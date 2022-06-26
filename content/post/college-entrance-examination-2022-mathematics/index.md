@@ -423,7 +423,7 @@ $$
 此时 $g(0)=0$，$f^{\prime}(0)=0$，而 $g(x)$ 在 $(1-\sqrt{2},1+\sqrt{2})$ 上单调递增，$f^{\prime}(x)$ 也有着和 $g(x)$ 同样的增减性。虽然 $g(x)$ 在 $(1+\sqrt{2},+\infty)$ 上单调递减，但下列极限
 
 $$
-\lim_{x\rightarrow+\infty} g(x) = \lim_{x\rightarrow+\infty} 1 + \frac{x^2-1}{e^x} = 1 > 0
+\lim_{x\rightarrow+\infty} g(x) = \lim_{x\rightarrow+\infty} (1 + \frac{x^2-1}{e^x}) = 1 > 0
 $$
 
 因此，可以判断 $g(x)>0$ 在 $(0,+\infty)$ 上恒成立，即 $f^{\prime}(x)>0$ 在 $(0,+\infty)$ 上恒成立。因此，$f(x)$ 在 $(0,+\infty)$ 上单调递增，$f(x)>f(0)=0$。这样也并不符合题意。
