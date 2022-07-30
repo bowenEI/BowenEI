@@ -40,7 +40,7 @@ $$
 ### 对偶函数
 
 $$
-g(\lambda, \nu)=\inf _{x \in \mathcal{D}}\left(\sum_{i=1}^{m} \lambda_{i} f_{i}(x)+\sum_{i=1}^{p} \nu_{i} h_{i}(x)\right)
+g(\lambda, \nu)=\inf_{x \in \mathcal{D}}\left(\sum_{i=1}^{m} \lambda_{i} f_{i}(x)+\sum_{i=1}^{p} \nu_{i} h_{i}(x)\right)
 $$
 
 同理，对偶问题的最优值同样也只有两种情况：

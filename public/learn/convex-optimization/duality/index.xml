@@ -877,7 +877,7 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;对偶函数&#34;&gt;对偶函数&lt;/h3&gt;
 &lt;p&gt;$$
-g(\lambda, \nu)=\inf &lt;em&gt;{x \in \mathcal{D}}\left(\sum&lt;/em&gt;{i=1}^{m} \lambda_{i} f_{i}(x)+\sum_{i=1}^{p} \nu_{i} h_{i}(x)\right)
+g(\lambda, \nu)=\inf_{x \in \mathcal{D}}\left(\sum_{i=1}^{m} \lambda_{i} f_{i}(x)+\sum_{i=1}^{p} \nu_{i} h_{i}(x)\right)
 $$&lt;/p&gt;
 &lt;p&gt;同理，对偶问题的最优值同样也只有两种情况：&lt;/p&gt;
 &lt;ul&gt;
@@ -941,7 +941,7 @@ $$&lt;/p&gt;
 &lt;p&gt;下面考虑非严格不等式系统&lt;/p&gt;
 &lt;p&gt;$$
 \begin{aligned}
-f_i(x) &amp;amp; \leqslant 0, \quad i=1,\cdots,m \\
+f_i(x) &amp;amp; \leqslant 0, \quad i=1,\cdots,m \\ 
 Ax &amp;amp;= b
 \end{aligned}
 $$&lt;/p&gt;
