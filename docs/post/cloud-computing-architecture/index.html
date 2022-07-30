@@ -1,0 +1,1387 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Bowen Zhou" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="云计算是一种计算模式，其概念最早于 2006 年由 Google 公司提出，具体核心思想是将大量用网络连接的资源进行统一管理，构成一个共享资源池（包含计算设施、存储设备、应用程序等），并以按需支付、弹性扩展的方式向用户提供服务。
+本文旨在生动形象地介绍云计算的体系结构，方便大家理解其中的一些抽象概念。" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/post/cloud-computing-architecture/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://bowenei.gitee.io/post/cloud-computing-architecture/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+  <meta property="og:url" content="https://bowenei.gitee.io/post/cloud-computing-architecture/" />
+  <meta property="og:title" content="Cloud Computing Architecture | Bowen&#39;s Academic Home" />
+  <meta property="og:description" content="云计算是一种计算模式，其概念最早于 2006 年由 Google 公司提出，具体核心思想是将大量用网络连接的资源进行统一管理，构成一个共享资源池（包含计算设施、存储设备、应用程序等），并以按需支付、弹性扩展的方式向用户提供服务。
+本文旨在生动形象地介绍云计算的体系结构，方便大家理解其中的一些抽象概念。" /><meta property="og:image" content="https://bowenei.gitee.io/post/cloud-computing-architecture/featured.jpg" />
+    <meta property="twitter:image" content="https://bowenei.gitee.io/post/cloud-computing-architecture/featured.jpg" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2022-03-07T16:31:12&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2022-03-07T16:31:12&#43;08:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://bowenei.gitee.io/post/cloud-computing-architecture/"
+  },
+  "headline": "Cloud Computing Architecture",
+  
+  "image": [
+    "https://bowenei.gitee.io/post/cloud-computing-architecture/featured.jpg"
+  ],
+  
+  "datePublished": "2022-03-07T16:31:12+08:00",
+  "dateModified": "2022-03-07T16:31:12+08:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Bowen Zhou"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bowen's Academic Home",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "\u003cp\u003e云计算是一种计算模式，其概念最早于 2006 年由 Google 公司提出，具体核心思想是将大量用网络连接的资源进行统一管理，构成一个共享资源池（包含计算设施、存储设备、应用程序等），并以按需支付、弹性扩展的方式向用户提供服务。\u003c/p\u003e\n\u003cp\u003e本文旨在生动形象地介绍云计算的体系结构，方便大家理解其中的一些抽象概念。\u003c/p\u003e"
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Cloud Computing Architecture | Bowen&#39;s Academic Home</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="b3dcc9c5aebe86d51833318376d3efe6" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blogs"><span>Blogs</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallery"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/learn/"><span>Learn</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/bowenEI/" data-toggle="tooltip" data-placement="bottom" title="Follow me on Github" target="_blank" rel="noopener" aria-label="Follow me on Github">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Cloud Computing Architecture</h1>
+
+  
+  <p class="page-subtitle">云计算体系结构</p>
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Mar 7, 2022
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/knowledge/">Knowledge</a></span>
+  
+
+</div>
+
+  
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 480px;">
+  <div style="position: relative">
+    <img src="/post/cloud-computing-architecture/featured_hucaec035cb322e1e47169062e74ad79c5_169576_720x2500_fit_q75_h2_lanczos.webp" width="720" height="480" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>云计算是一种计算模式，其概念最早于 2006 年由 Google 公司提出，具体核心思想是将大量用网络连接的资源进行统一管理，构成一个共享资源池（包含计算设施、存储设备、应用程序等），并以按需支付、弹性扩展的方式向用户提供服务。</p>
+<p>本文旨在生动形象地介绍云计算的体系结构，方便大家理解其中的一些抽象概念。</p>
+<h2 id="概述">概述</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt=""
+           src="/post/cloud-computing-architecture/architecture.svg"
+           loading="lazy" data-zoomable class=" img-dark" /></div>
+  </div></figure>
+<p>云计算体系结构由 IaaS、PaaS 和 SaaS 三大核心服务以及服务管理构成，并且提供用户访问接口。</p>
+<p>IaaS（Infrastructure as a Service）提供硬件基础设施部署服务，为用户按需提供实体或虚拟的计算、存储和网络等资源。</p>
+<p>PaaS（Platform as a Service）是一种分布式平台服务，为用户提供一个包括应用设计、应用开发、应用测试及应用托管的完整的计算机平台。</p>
+<p>SaaS（Software as a Service）是基于云计算基础平台所开发的应用程序，以软件的形式提供服务。</p>
+<p>服务管理层对核心服务层的可用性、可靠性和安全性提供保障。如服务质量保证、安全管理、计费管理等。</p>
+<p>用户访问接口实现了云计算服务的泛在访问，通常包括命令行、Web 服务、Web 门户等形式。</p>
+<hr>
+<p>不过，直接来看这些概念太过于抽象了。下面我们用一个形象的例子，并结合一些我们身边的具体例子来解释这些概念。</p>
+<h2 id="一个形象的例子烹饪">一个形象的例子：烹饪</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt=""
+           src="/post/cloud-computing-architecture/cooking.svg"
+           loading="lazy" data-zoomable class=" img-dark" /></div>
+  </div></figure>
+<p>假设我们现在想要做饭，可是却一无所有，该怎么办呢？我们可以摆路边摊，就当小推车是厨房，并且装着煤气罐。这样我们就有了做饭的基本条件了。但是所有的这些基本条件和资源都需要我们自己来管理，特别麻烦，而且还不稳定。</p>
+<p>有了 IaaS 以后，我们就很像是在经营一家餐馆，需要考虑安装几个灶台、用几口锅才能满足经营需要，而并不需要太关心厨房和煤气还能不能使用的问题——只需要租用或购买一家门店，并且缴纳煤气费就可以使用了。</p>
+<p>而有了 PaaS 以后，炒锅、灶台也是现成的——家庭烹饪并不需要饭店那样对烹饪工具特别大的需求，只需要考虑今天吃什么、怎么做就可以了。</p>
+<p>那么有了 SaaS 以后，我们就彻底解放了——我们只需要考虑我们今天想吃什么，完全不需要考虑菜是怎么做出来的。</p>
+<h2 id="云计算服务模式的层次划分">云计算服务模式的层次划分</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /post/cloud-computing-architecture/layer-partition_hu0515c347778e5eaad6f56836bc16fc32_87721_338441f157d42b0d3f5359b6ccf3d2b7.webp 400w,
+               /post/cloud-computing-architecture/layer-partition_hu0515c347778e5eaad6f56836bc16fc32_87721_07ffe225ca4caa73375b72fc5c206b29.webp 760w,
+               /post/cloud-computing-architecture/layer-partition_hu0515c347778e5eaad6f56836bc16fc32_87721_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/cloud-computing-architecture/layer-partition_hu0515c347778e5eaad6f56836bc16fc32_87721_338441f157d42b0d3f5359b6ccf3d2b7.webp"
+               width="760"
+               height="357"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>云计算服务模式主要分为网络、存储、服务器、虚拟化、操作系统、中间件、运行环境、数据和应用九层。</p>
+<p>如果我们在纯裸机上部署云计算服务，就需要考虑到上述九层。我们需要购买部署服务所需的服务器设备，并且从零开始搭建，这特别像我们一无所有摆路边摊的感觉。</p>
+<p>有了 IaaS 以后，诸如 Vmware 的虚拟化服务帮助我们管理底层的网络、存储、服务器等资源，使得我们不再关注底层逻辑，而专注于操作系统之上的环境部署问题。于是，我们只需要找提供商租用我们需要的服务器即可，利用 IaaS 来管理这些服务器资源。</p>
+<p>而有了 PaaS 以后，诸如 Docker 的容器技术帮助我们管理操作系统和运行环境，使得我们不再关注应用程序的运行环境，而专注于应用程序本身的开发与部署。于是，我们只需要下载相应的 Docker 镜像，并且根据需要创建相应的容器，即可进入应用程序的开发环境。</p>
+<p>那么有了 SaaS 以后，软件的开发、管理、部署完全交给第三方，我们几乎什么都不需要关心了，专注于使用应用程序带给我们的服务。于是，我们只需要通过客户端连接到应用程序的服务端，通过一些命令和请求获取我们想要的服务。</p>
+<h2 id="iaas">IaaS</h2>
+<p>IaaS 其实是云计算服务的最底层，主要提供一些基础资源。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://www.openstack.org/themes/openstack/home_images/Diagram/overview-diagram-new.svg" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>OpenStack 就是目前公认的云计算 IaaS 平台，其管理的核心目标对象是机器（虚拟机或物理机），当然也可以管理存储和网络，但那些也大都是围绕着机器所提供的配套资源。近年来容器技术火了之后，OpenStack 也开始通过各种方式增加对容器的支持，但目前 OpenStack 还不被视为管理容器的主流平台。</p>
+<h2 id="paas">PaaS</h2>
+<p>PaaS 提供软件部署平台（runtime），抽象掉了硬件和操作系统细节，可以无缝地扩展（scaling）。开发者只需要关注自己的业务逻辑，不需要关注底层。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://docs.docker.com/engine/images/architecture.svg" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iOS 的 app）。Docker 几乎没有性能开销，可以很容易地在机器和数据中心中运行。最重要的是，它不依赖于任何语言、框架包括系统。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://www.upgrad.com/blog/wp-content/uploads/2020/10/Kubernetes-architecture-1536x1046.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>Kubernetes（简称 k8s）是 Google 开源的容器集群管理系统。它构建于 Docker 技术之上，为容器化的应用提供资源调度、部署运行、服务发现、扩容缩容等整一套功能。k8s 本质上可看作是基于容器技术的 Micro-PaaS 平台，即第三代 PaaS 的代表性项目。</p>
+<p>再比如，本文依赖的博客框架 hugo 也属于 PaaS。我并不需要关注代码托管平台安装的操作系统和运行环境，我只需要将我的博客框架 hugo 推送上去，然后在远程运行环境下编译即可部署。</p>
+<h2 id="saas">SaaS</h2>
+<p>SaaS 就是软件的开发、管理、部署都交给第三方，不需要关心技术问题，可以拿来即用。普通用户接触到的互联网服务，几乎都是 SaaS。</p>
+<p>以百度网盘为例，我们将文件存储在百度网盘的服务器中。我们并不需要关心百度网盘是如何存储我们的文件的，而且我们使用的百度网盘客户端也不需要实现存储文件的逻辑，只需要将文件和请求发送给百度网盘服务器即可。</p>
+<p>再比如 Gmail，我们通过 Gmail 客户端收发电子邮件。我们并不需要关心邮件服务器是如何收发我们的邮件的，而且我们使用的 Gmail 客户端或者浏览器网页也不需要实现收发邮件的功能，只需要将请求发送给 Gmail 服务器即可。</p>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://bowenei.gitee.io/post/cloud-computing-architecture/&amp;text=Cloud%20Computing%20Architecture" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://bowenei.gitee.io/post/cloud-computing-architecture/&amp;t=Cloud%20Computing%20Architecture" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Cloud%20Computing%20Architecture&amp;body=https://bowenei.gitee.io/post/cloud-computing-architecture/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://bowenei.gitee.io/post/cloud-computing-architecture/&amp;title=Cloud%20Computing%20Architecture" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Cloud%20Computing%20Architecture%20https://bowenei.gitee.io/post/cloud-computing-architecture/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://bowenei.gitee.io/post/cloud-computing-architecture/&amp;title=Cloud%20Computing%20Architecture" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://bowenei.gitee.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu959be2af7a8864c84028cc52887853eb_9808_270x270_fill_q75_lanczos_center.jpg" alt="Bowen Zhou"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://bowenei.gitee.io/">Bowen Zhou</a></h5>
+      <h6 class="card-subtitle">Student pursuing a PhD degree of Computer Science and Technology</h6>
+      <p class="card-text">My research interests include Edge Computing and Edge Intelligence.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/bowenEI/" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+    
+    
+      <script src="/js/wowchemy-headroom.1cb9e2fc8399acee94eab837265b73bf.js" type="module"></script>
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

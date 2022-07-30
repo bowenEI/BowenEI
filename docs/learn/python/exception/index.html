@@ -1,0 +1,1502 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Bowen Zhou" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/python/exception/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://bowenei.gitee.io/learn/python/exception/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+  <meta property="og:url" content="https://bowenei.gitee.io/learn/python/exception/" />
+  <meta property="og:title" content="Python 异常处理 | Bowen&#39;s Academic Home" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2022-02-18T14:47:24&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2022-02-18T14:47:24&#43;08:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Python 异常处理 | Bowen&#39;s Academic Home</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="07acdc359ce42180dfbceb288d89a4ba" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blogs"><span>Blogs</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallery"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/learn/"><span>Learn</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/bowenEI/" data-toggle="tooltip" data-placement="bottom" title="Follow me on Github" target="_blank" rel="noopener" aria-label="Follow me on Github">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Python
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/learn/"><i class="fas fa-arrow-left pr-1"></i>Learn</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/python/">Python</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/python/list/">Python 列表</a></li>
+
+
+
+  <li class=""><a href="/learn/python/tuple/">Python 元组</a></li>
+
+
+
+  <li class=""><a href="/learn/python/dict/">Python 字典</a></li>
+
+
+
+  <li class=""><a href="/learn/python/set/">Python 集合</a></li>
+
+
+
+  <li class=""><a href="/learn/python/str/">Python 字符串</a></li>
+
+
+
+  <li class=""><a href="/learn/python/function/">Python 函数</a></li>
+
+
+
+  <li class="active"><a href="/learn/python/exception/">Python 异常处理</a></li>
+
+
+
+  <li class=""><a href="/learn/python/magic/">Python 魔法函数</a></li>
+
+
+
+  <li class=""><a href="/learn/python/o-o/">Python 面向对象</a></li>
+
+
+
+  <li class=""><a href="/learn/python/thread/">Python 多线程编程</a></li>
+
+
+
+  <li class=""><a href="/learn/python/regex/">Python 正则表达式</a></li>
+
+
+
+  <li class=""><a href="/learn/python/json/">Python 处理 json 数据</a></li>
+
+
+
+  <li class=""><a href="/learn/python/ipython/">iPython: Python 交互式 Shell</a></li>
+
+
+
+  <li class=""><a href="/learn/python/os/">Python 操作系统调用</a></li>
+
+
+
+  <li class=""><a href="/learn/python/decorator/">Python 装饰器</a></li>
+
+
+
+  <li class=""><a href="/learn/python/pkg-manager/">Python 包管理器</a></li>
+
+
+
+  <li class=""><a href="/learn/python/sys/">Python 系统环境交互</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#tryexcept-块">try/except 块</a></li>
+    <li><a href="#捕捉不同的错误类型">捕捉不同的错误类型</a></li>
+    <li><a href="#捕捉所有异常">捕捉所有异常</a></li>
+    <li><a href="#指定特定值">指定特定值</a></li>
+    <li><a href="#得到异常的具体信息">得到异常的具体信息</a></li>
+    <li><a href="#自定义异常">自定义异常</a></li>
+    <li><a href="#finally">finally</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/">
+        
+          Learn
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/python/">
+        
+          Python
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Python 异常处理
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+          
+
+          <h1>Python 异常处理</h1>
+
+          <div class="article-style">
+            <h2 id="tryexcept-块">try/except 块</h2>
+<p>写代码的时候，出现错误必不可免，即使代码没有问题，也可能遇到别的问题。</p>
+<p>看下面这段代码：</p>
+<pre><code class="language-python">import math
+
+while True:
+    text = input('&gt; ')
+    if text[0] == 'q':
+        break
+    x = float(text)
+    y = math.log10(x)
+    print(&quot;log10({0}) = {1}&quot;.format(x, y))
+</code></pre>
+<p>这段代码接收命令行的输入，当输入为数字时，计算它的对数并输出，直到输入值为 <code>q</code> 为止。</p>
+<p>乍看没什么问题，然而当我们输入 <code>0</code> 或者负数时：</p>
+<blockquote>
+<p>&gt; 0</p>
+</blockquote>
+<pre><code class="language-python">import math
+
+while True:
+    text = input('&gt; ')
+    if text[0] == 'q':
+        break
+    x = float(text)
+    y = math.log10(x)
+    print(&quot;log10({0}) = {1}&quot;.format(x, y))
+</code></pre>
+<pre><code>---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+~\AppData\Local\Temp/ipykernel_2200/3405246205.py in &lt;module&gt;
+      6         break
+      7     x = float(text)
+----&gt; 8     y = math.log10(x)
+      9     print(&quot;log10({0}) = {1}&quot;.format(x, y))
+
+
+ValueError: math domain error
+</code></pre>
+<p><code>log10</code> 函数会报错，因为不能接受非正值。</p>
+<p>一旦报错，程序就会停止执行，如果不希望程序停止执行，那么我们可以添加一对 <code>try/except</code>：</p>
+<blockquote>
+<p>&gt; 0</p>
+<p>&gt; q</p>
+</blockquote>
+<pre><code class="language-python">import math
+
+while True:
+    try:
+        text = input('&gt; ')
+        if text[0] == 'q':
+            break
+        x = float(text)
+        y = math.log10(x)
+        print(&quot;log10({0}) = {1}&quot;.format(x, y))
+    except ValueError:
+        print(&quot;the value must be greater than 0&quot;)
+</code></pre>
+<pre><code>the value must be greater than 0
+</code></pre>
+<p>一旦 <code>try</code> 块中的内容出现了异常，那么 <code>try</code> 块后面的内容会被忽略，<strong>Python</strong> 会寻找 <code>except</code> 里面有没有对应的内容，如果找到，就执行对应的块，没有则抛出这个异常。</p>
+<p>在上面的例子中，<code>try</code> 抛出的是 <code>ValueError</code>，<code>except</code> 中有对应的内容，所以这个异常被 <code>except</code> 捕捉到，程序可以继续执行。</p>
+<h2 id="捕捉不同的错误类型">捕捉不同的错误类型</h2>
+<p>假设我们将这里的 <code>y</code> 更改为 <code>1 / math.log10(x)</code>，此时输入 <code>1</code>：</p>
+<blockquote>
+<p>&gt; 1</p>
+</blockquote>
+<pre><code class="language-python">import math
+
+while True:
+    try:
+        text = input('&gt; ')
+        if text[0] == 'q':
+            break
+        x = float(text)
+        y = 1 / math.log10(x)
+        print(&quot;log10({0}) = {1}&quot;.format(x, y))
+    except ValueError:
+        print(&quot;the value must be greater than 0&quot;)
+</code></pre>
+<pre><code>---------------------------------------------------------------------------
+
+ZeroDivisionError                         Traceback (most recent call last)
+
+~\AppData\Local\Temp/ipykernel_2200/1390458657.py in &lt;module&gt;
+      7             break
+      8         x = float(text)
+----&gt; 9         y = 1 / math.log10(x)
+     10         print(&quot;log10({0}) = {1}&quot;.format(x, y))
+     11     except ValueError:
+
+
+ZeroDivisionError: float division by zero
+</code></pre>
+<p>因为我们的 <code>except</code> 里面并没有 <code>ZeroDivisionError</code>，所以会抛出这个异常，我们可以通过下面的两种方式解决这个问题：</p>
+<h2 id="捕捉所有异常">捕捉所有异常</h2>
+<p>将 <code>except</code> 的值改成 <code>Exception</code> 类，来捕获所有的异常。</p>
+<blockquote>
+<p>&gt; 1</p>
+<p>&gt; q</p>
+</blockquote>
+<pre><code class="language-python">import math
+
+while True:
+    try:
+        text = input('&gt; ')
+        if text[0] == 'q':
+            break
+        x = float(text)
+        y = 1 / math.log10(x)
+        print(&quot;1 / log10({0}) = {1}&quot;.format(x, y))
+    except Exception:
+        print(&quot;invalid value&quot;)
+</code></pre>
+<pre><code>invalid value
+</code></pre>
+<h2 id="指定特定值">指定特定值</h2>
+<p>这里，我们把 <code>ZeroDivisionError</code> 加入 <code>except</code>。</p>
+<blockquote>
+<p>&gt; 1</p>
+<p>&gt; q</p>
+</blockquote>
+<pre><code class="language-python">import math
+
+while True:
+    try:
+        text = input('&gt; ')
+        if text[0] == 'q':
+            break
+        x = float(text)
+        y = 1 / math.log10(x)
+        print(&quot;1 / log10({0}) = {1}&quot;.format(x, y))
+    except (ValueError, ZeroDivisionError):
+        print(&quot;invalid value&quot;)
+</code></pre>
+<pre><code>invalid value
+</code></pre>
+<p>或者另加处理：</p>
+<blockquote>
+<p>&gt; 1</p>
+<p>&gt; q</p>
+</blockquote>
+<pre><code class="language-python">import math
+
+while True:
+    try:
+        text = input('&gt; ')
+        if text[0] == 'q':
+            break
+        x = float(text)
+        y = 1 / math.log10(x)
+        print(&quot;1 / log10({0}) = {1}&quot;.format(x, y))
+    except ValueError:
+        print(&quot;the value must be greater than 0&quot;)
+    except ZeroDivisionError:
+        print(&quot;the value must not be 1&quot;)
+</code></pre>
+<pre><code>the value must not be 1
+</code></pre>
+<p>事实上，我们还可以将这两种方式结合起来，用 <code>Exception</code> 来捕捉其他的错误：</p>
+<blockquote>
+<p>&gt; 0</p>
+<p>&gt; 1</p>
+<p>&gt; !@#$%^&amp;*</p>
+<p>&gt; q</p>
+</blockquote>
+<pre><code class="language-python">import math
+
+while True:
+    try:
+        text = input('&gt; ')
+        if text[0] == 'q':
+            break
+        x = float(text)
+        y = 1 / math.log10(x)
+        print(&quot;1 / log10({0}) = {1}&quot;.format(x, y))
+    except ValueError:
+        print(&quot;the value must be greater than 0&quot;)
+    except ZeroDivisionError:
+        print(&quot;the value must not be 1&quot;)
+    except Exception:
+        print(&quot;unexpected error&quot;)
+</code></pre>
+<pre><code>the value must be greater than 0
+the value must not be 1
+the value must be greater than 0
+</code></pre>
+<h2 id="得到异常的具体信息">得到异常的具体信息</h2>
+<p>在上面的例子中，当我们输入不能转换为浮点数的字符串时，它输出的是 <code>the value must be greater than 0</code>，这并没有反映出实际情况。</p>
+<pre><code class="language-python">float('a')
+</code></pre>
+<pre><code>---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+~\AppData\Local\Temp/ipykernel_2200/1629398556.py in &lt;module&gt;
+----&gt; 1 float('a')
+
+
+ValueError: could not convert string to float: 'a'
+</code></pre>
+<p>为了得到异常的具体信息，我们将这个 <code>ValueError</code> 具现化。</p>
+<blockquote>
+<p>&gt; 0</p>
+<p>&gt; 1</p>
+<p>&gt; !@#$%^&amp;*</p>
+<p>&gt; q</p>
+</blockquote>
+<pre><code class="language-python">import math
+
+while True:
+    try:
+        text = input('&gt; ')
+        if text[0] == 'q':
+            break
+        x = float(text)
+        y = 1 / math.log10(x)
+        print(&quot;1 / log10({0}) = {1}&quot;.format(x, y))
+    except ValueError as exc:
+        message = exc.args[0]
+        if message == &quot;math domain error&quot;:
+            print(&quot;the value must be greater than 0&quot;)
+        else:
+            print(&quot;could not convert '%s' to float&quot; % text)
+    except ZeroDivisionError:
+        print(&quot;the value must not be 1&quot;)
+    except Exception as exc:
+        message = exc.args[0]
+        print(&quot;unexpected error:&quot;, message)
+</code></pre>
+<pre><code>the value must be greater than 0
+the value must not be 1
+could not convert '!@#$%^&amp;*' to float
+</code></pre>
+<p>当我们使用 <code>except Exception</code> 时，会捕获所有的 <code>Exception</code> 和它派生出来的子类，但不是所有的异常都是从 <code>Exception</code> 类派生出来的，可能会出现一些不能捕获的情况，因此，更加一般的做法是使用这样的形式：</p>
+<pre><code class="language-python">try:
+    pass
+except:
+    pass
+</code></pre>
+<p>这样不指定异常的类型会捕获所有的异常，但是这样的形式并不推荐。</p>
+<h2 id="自定义异常">自定义异常</h2>
+<p>异常是标准库中的类，这意味着我们可以自定义异常类：</p>
+<pre><code class="language-python">class CommandError(ValueError):
+    pass
+</code></pre>
+<p>这里我们定义了一个继承自 <code>ValueError</code> 的异常类，异常类一般接收一个字符串作为输入，并把这个字符串当作异常信息，例如：</p>
+<blockquote>
+<p>&gt; back</p>
+</blockquote>
+<pre><code class="language-python">valid_commands = {'start', 'stop', 'pause'}
+
+while True:
+    command = input('&gt; ')
+    if command.lower() not in valid_commands:
+        raise CommandError('Invalid commmand: %s' % command)
+</code></pre>
+<pre><code>---------------------------------------------------------------------------
+
+CommandError                              Traceback (most recent call last)
+
+~\AppData\Local\Temp/ipykernel_2200/1947621995.py in &lt;module&gt;
+      4     command = input('&gt; ')
+      5     if command.lower() not in valid_commands:
+----&gt; 6         raise CommandError('Invalid commmand: %s' % command)
+
+
+CommandError: Invalid commmand: back
+</code></pre>
+<p>这里，我们使用 <code>raise</code> 关键词来抛出异常。</p>
+<p>我们可以使用 <code>try/except</code> 块来捕捉这个异常：</p>
+<blockquote>
+<p>&gt; back</p>
+<p>&gt; stop</p>
+</blockquote>
+<pre><code class="language-python">valid_commands = {'start', 'stop', 'pause'}
+
+while True:
+    command = input('&gt; ')
+    try:
+        if command.lower() not in valid_commands:
+            raise CommandError('Invalid commmand: %s' % command)
+        if command.lower() == 'stop':
+            break
+    except CommandError:
+        print('Bad command string: &quot;%s&quot;' % command)
+</code></pre>
+<pre><code>Bad command string: &quot;back&quot;
+</code></pre>
+<p>由于 <code>CommandError</code> 继承自 <code>ValueError</code>，我们也可以使用 <code>except ValueError</code> 来捕获这个异常。</p>
+<h2 id="finally">finally</h2>
+<p><code>try/except</code> 块还有一个可选的关键词 <code>finally</code>。</p>
+<p>不管 <code>try</code> 块有没有异常，<code>finally</code> 块的内容总是会被执行，而且会在抛出异常前执行，因此可以用来作为安全保证，比如确保打开的文件被关闭。</p>
+<pre><code class="language-python">try:
+    print(1)
+finally:
+    print('finally was called')
+</code></pre>
+<pre><code>1
+finally was called
+</code></pre>
+<p>在抛出异常前执行：</p>
+<pre><code class="language-python">try:
+    print(1 / 0)
+finally:
+    print('finally was called.')
+</code></pre>
+<pre><code>finally was called.
+
+
+
+---------------------------------------------------------------------------
+
+ZeroDivisionError                         Traceback (most recent call last)
+
+~\AppData\Local\Temp/ipykernel_2200/3900254831.py in &lt;module&gt;
+      1 try:
+----&gt; 2     print(1 / 0)
+      3 finally:
+      4     print('finally was called.')
+
+
+ZeroDivisionError: division by zero
+</code></pre>
+<p>如果异常被捕获了，在最后执行：</p>
+<pre><code class="language-python">try:
+    print(1 / 0)
+except ZeroDivisionError:
+    print('divide by 0.')
+finally:
+    print('finally was called.')
+</code></pre>
+<pre><code>divide by 0.
+finally was called.
+</code></pre>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/learn/python/function/" rel="next">Python 函数</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/learn/python/magic/" rel="prev">Python 魔法函数</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Feb 18, 2022</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

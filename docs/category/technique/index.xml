@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technique | Bowen&#39;s Academic Home</title>
+    <link>https://bowenei.gitee.io/category/technique/</link>
+      <atom:link href="https://bowenei.gitee.io/category/technique/index.xml" rel="self" type="application/rss+xml" />
+    <description>Technique</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 15 Apr 2022 22:55:54 +0800</lastBuildDate>
+    <image>
+      <url>https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png</url>
+      <title>Technique</title>
+      <link>https://bowenei.gitee.io/category/technique/</link>
+    </image>
+    
+    <item>
+      <title>在服务器上部署 Overleaf</title>
+      <link>https://bowenei.gitee.io/post/overleaf-server-deployment/</link>
+      <pubDate>Fri, 15 Apr 2022 22:55:54 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/post/overleaf-server-deployment/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://cn.overleaf.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Overleaf&lt;/a&gt; 是开源的在线实时协作 $\LaTeX$ 编辑器。官方还提供了&lt;a href=&#34;https://github.com/overleaf/overleaf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;开源镜像&lt;/a&gt;，可以在服务器上部署。由于课题组需要多人在线协作撰写论文，特写此文记录 Overleaf 环境部署的说明。&lt;/p&gt;
+&lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;
+&lt;p&gt;官方镜像是基于 Docker 的，最好部署在 Ubuntu 系统上。因此，如果服务器上没有部署 Docker，需要先安装 Docker。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;安装-docker-compose&#34;&gt;安装 Docker Compose&lt;/h3&gt;
+&lt;p&gt;不过，仅仅通过官方安装脚本安装的 Docker 还不够。还需要安装 Docker Compose：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo curl -L &amp;quot;https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-$(uname -s)-$(uname -m)&amp;quot; -o /usr/local/bin/docker-compose
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果要安装其他版本的 Docker Compose，替换路径中的 &lt;code&gt;v2.2.2&lt;/code&gt;。（&lt;code&gt;v2.2.2&lt;/code&gt; 是目前的稳定版本）&lt;/p&gt;
+&lt;p&gt;下面，将可执行权限应用于二进制文件 &lt;code&gt;docker-compose&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo chmod +x /usr/local/bin/docker-compose
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;创建软链接：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;测试是否安装成功：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker-compose --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;拉取-overleaf-镜像&#34;&gt;拉取 Overleaf 镜像&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker pull sharelatex/sharelatex
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们可以新建一个空文件夹，在该文件夹下工作。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir overleaf
+cd overleaf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;官方镜像是通过 Docker Compose 启动的，因此需要一个 &lt;a href=&#34;docker-compose.yml&#34;&gt;&lt;code&gt;docker-compose.yml&lt;/code&gt;&lt;/a&gt; 配置文件。（单击文件名可以下载官方提供的 &lt;code&gt;yml&lt;/code&gt; 文件）&lt;/p&gt;
+&lt;p&gt;接下来，使用下面的命令运行 Docker 容器：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker compose up -d
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;由于完整安装 $\LaTeX$ 环境需要安装很多包，全部打包到 Docker 镜像中的话太大，不利于网络传输。因此，Overleaf 官方仅仅在 Docker 镜像中部署了很少一部分 $\LaTeX$ 的功能。完整的 $\LaTeX$ 功能需要我们手动安装。&lt;/p&gt;
+&lt;h2 id=&#34;安装完整的-latex-环境&#34;&gt;安装完整的 LaTeX 环境&lt;/h2&gt;
+&lt;p&gt;在运行的容器内部，我们手动安装如下包：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker exec sharelatex tlmgr install scheme-full
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装的过程很漫长，需要耐心等待。&lt;/p&gt;
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;我在安装过程中出现了报错如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tlmgr: Local TeX Live (2021) is older than remote repository (2022).
+Cross release updates are only supported with
+  update-tlmgr-latest(.sh/.exe) --update
+See https://tug.org/texlive/upgrade.html for details.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;根据报错的信息，我判断是 &lt;code&gt;tlmgr&lt;/code&gt; 的版本过低需要更新。按照相应网站的提示，将一些必要命令转化为 Docker 容器可以运行的命令如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker exec sharelatex wget https://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.sh
+docker exec sharelatex sh update-tlmgr-latest.sh -- --upgrade
+docker exec sharelatex tlmgr update --self --all
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后再运行上面的安装命令，就可以成功。&lt;/p&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker exec&lt;/code&gt; 命令对 Docker 容器的更改是暂时的。如果用 Docker Compose 重新创建容器，之前所做的更改（安装完整的 $\LaTeX$）将会丢失。因此，可以使用 &lt;code&gt;docker commit&lt;/code&gt; 命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker commit sharelatex sharelatex/sharelatex:with-texlive-full
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后编辑 &lt;code&gt;docker-compose.yml&lt;/code&gt; 文件：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;vim docker-compose.yml
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;找到镜像设置，并且更改为：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-yml&#34;&gt;# ...
+services:
+    sharelatex:
+        image: sharelatex/sharelatex:with-texlive-full
+# ...
+&lt;/code&gt;&lt;/pre&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;overleaf-配置&#34;&gt;Overleaf 配置&lt;/h2&gt;
+&lt;p&gt;只要 Overleaf 容器运行起来，我们就可以访问 &lt;code&gt;/launchpad&lt;/code&gt; 页面来初始化管理员用户。我们可以使用下面的命令创建第一个管理员：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker exec sharelatex /bin/bash -c &amp;quot;cd /var/www/sharelatex; grunt user:create-admin --email=joe@example.com&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们将得到一个带有 &lt;code&gt;token&lt;/code&gt; 的网址，访问该网址就可以为管理员用户设置密码。&lt;/p&gt;
+&lt;p&gt;进入 Overleaf 前端界面后，可以进行创建工程、添加用户等操作，基本具有和 Overleaf 官方相同的功能。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

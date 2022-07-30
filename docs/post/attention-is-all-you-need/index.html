@@ -1,0 +1,1614 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Bowen Zhou" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Transformer 是目前人工智能和深度学习领域最著名的模型之一，由 Google 团队于 2017 年 6 月提出，发表在 NeuralPS（Conference on Neural Information Processing Systems）上。起初是为了解决自然语言处理（Natural Language Processing, NLP）领域中的机器翻译问题，没想到它的效果竟然超越了循环神经网络（Recurrent Neural Networks, RNN），只需要用 encoder 和 decoder 以及注意力 attention 机制就可以达到很好的效果。
+Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将图像等数据编码和序列化之后同样可以放进 Transformer 中进行训练，并且也能让模型达到和卷积神经网络（Convolutional Neural Networks, CNN）和深度神经网络（Deep Neural Networks, DNN）相比更加出其不意的效果。这才让 Transformer 在计算机视觉领域大火了起来。
+原文链接" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/post/attention-is-all-you-need/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://bowenei.gitee.io/post/attention-is-all-you-need/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+  <meta property="og:url" content="https://bowenei.gitee.io/post/attention-is-all-you-need/" />
+  <meta property="og:title" content="Attention Is All You Need | Bowen&#39;s Academic Home" />
+  <meta property="og:description" content="Transformer 是目前人工智能和深度学习领域最著名的模型之一，由 Google 团队于 2017 年 6 月提出，发表在 NeuralPS（Conference on Neural Information Processing Systems）上。起初是为了解决自然语言处理（Natural Language Processing, NLP）领域中的机器翻译问题，没想到它的效果竟然超越了循环神经网络（Recurrent Neural Networks, RNN），只需要用 encoder 和 decoder 以及注意力 attention 机制就可以达到很好的效果。
+Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将图像等数据编码和序列化之后同样可以放进 Transformer 中进行训练，并且也能让模型达到和卷积神经网络（Convolutional Neural Networks, CNN）和深度神经网络（Deep Neural Networks, DNN）相比更加出其不意的效果。这才让 Transformer 在计算机视觉领域大火了起来。
+原文链接" /><meta property="og:image" content="https://bowenei.gitee.io/post/attention-is-all-you-need/featured.png" />
+    <meta property="twitter:image" content="https://bowenei.gitee.io/post/attention-is-all-you-need/featured.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-11-09T22:59:13&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-11-09T22:59:13&#43;08:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://bowenei.gitee.io/post/attention-is-all-you-need/"
+  },
+  "headline": "Attention Is All You Need",
+  
+  "image": [
+    "https://bowenei.gitee.io/post/attention-is-all-you-need/featured.png"
+  ],
+  
+  "datePublished": "2021-11-09T22:59:13+08:00",
+  "dateModified": "2021-11-09T22:59:13+08:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Bowen Zhou"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Bowen's Academic Home",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "\u003cp\u003e\u003cstrong\u003eTransformer\u003c/strong\u003e 是目前人工智能和深度学习领域最著名的模型之一，由 Google 团队于 2017 年 6 月提出，发表在 NeuralPS（Conference on Neural Information Processing Systems）上。起初是为了解决自然语言处理（Natural Language Processing, NLP）领域中的机器翻译问题，没想到它的效果竟然超越了循环神经网络（Recurrent Neural Networks, RNN），只需要用 \u003ccode\u003eencoder\u003c/code\u003e 和 \u003ccode\u003edecoder\u003c/code\u003e 以及注意力 \u003ccode\u003eattention\u003c/code\u003e 机制就可以达到很好的效果。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eTransformer\u003c/strong\u003e 本身是专门为 NLP 领域量身定制的，但是后来人们将图像等数据编码和序列化之后同样可以放进 \u003cstrong\u003eTransformer\u003c/strong\u003e 中进行训练，并且也能让模型达到和卷积神经网络（Convolutional Neural Networks, CNN）和深度神经网络（Deep Neural Networks, DNN）相比更加出其不意的效果。这才让 \u003cstrong\u003eTransformer\u003c/strong\u003e 在计算机视觉领域大火了起来。\u003c/p\u003e\n\u003cp\u003e\u003ca href=\"https://dl.acm.org/doi/abs/10.5555/3295222.3295349\" target=\"_blank\" rel=\"noopener\"\u003e原文链接\u003c/a\u003e\u003c/p\u003e"
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Attention Is All You Need | Bowen&#39;s Academic Home</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="dccdb620b5a5bb8f7d576bd4a4305be7" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blogs"><span>Blogs</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallery"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/learn/"><span>Learn</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/bowenEI/" data-toggle="tooltip" data-placement="bottom" title="Follow me on Github" target="_blank" rel="noopener" aria-label="Follow me on Github">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Attention Is All You Need</h1>
+
+  
+  <p class="page-subtitle">【文献精读】Transformer</p>
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Nov 9, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    8 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/academic/">Academic</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p><strong>Transformer</strong> 是目前人工智能和深度学习领域最著名的模型之一，由 Google 团队于 2017 年 6 月提出，发表在 NeuralPS（Conference on Neural Information Processing Systems）上。起初是为了解决自然语言处理（Natural Language Processing, NLP）领域中的机器翻译问题，没想到它的效果竟然超越了循环神经网络（Recurrent Neural Networks, RNN），只需要用 <code>encoder</code> 和 <code>decoder</code> 以及注意力 <code>attention</code> 机制就可以达到很好的效果。</p>
+<p><strong>Transformer</strong> 本身是专门为 NLP 领域量身定制的，但是后来人们将图像等数据编码和序列化之后同样可以放进 <strong>Transformer</strong> 中进行训练，并且也能让模型达到和卷积神经网络（Convolutional Neural Networks, CNN）和深度神经网络（Deep Neural Networks, DNN）相比更加出其不意的效果。这才让 <strong>Transformer</strong> 在计算机视觉领域大火了起来。</p>
+<p><a href="https://dl.acm.org/doi/abs/10.5555/3295222.3295349" target="_blank" rel="noopener">原文链接</a></p>
+<div class="alert alert-note">
+  <div>
+    <p><strong>特别鸣谢</strong></p>
+<p>本文结合亚马逊首席科学家<a href="https://github.com/mli">李沐</a>的<a href="https://www.bilibili.com/video/BV1pu411o7BE">深度学习论文精读系列视频</a>进行整理。</p>
+
+  </div>
+</div>
+
+<p>这篇文章最具特色的就是标题 Attention Is All You Need，翻译成中文就是“你需要注意”。后来这个标题成为了一个梗，即 xxx Is All You Need。</p>
+<p>值得注意的是，这篇文章的每一位作者后面都打了 <code>*</code> 号，这说明这几位作者的贡献是均等的，论文首先下的注释已经充分说明了这一点。通常我们会认为论文的第一作者是主要贡献者，但是这篇文章是个例外。</p>
+<details class="toc-inpage d-print-none  " open>
+  <summary class="font-weight-bold">Table of Contents</summary>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#7-conclusion">7 Conclusion</a></li>
+    <li><a href="#1-introduction">1 Introduction</a></li>
+    <li><a href="#2-background">2 Background</a></li>
+    <li><a href="#3-model-architecture">3 Model Architecture</a>
+      <ul>
+        <li><a href="#31-encoder-and-decoder-stacks">3.1 Encoder and Decoder Stacks</a></li>
+        <li><a href="#32-attention">3.2 Attention</a></li>
+        <li><a href="#33-position-wise-feed-forward-networks">3.3 Position-wise Feed-Forward Networks</a></li>
+        <li><a href="#34-embeddings-and-softmax">3.4 Embeddings and Softmax</a></li>
+        <li><a href="#35-positional-encoding">3.5 Positional Encoding</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-why-self-attention">4 Why Self-Attention</a></li>
+    <li><a href="#5-training">5 Training</a>
+      <ul>
+        <li><a href="#51-training-data-and-batching">5.1 Training Data and Batching</a></li>
+        <li><a href="#52-hardware-and-schedule">5.2 Hardware and Schedule</a></li>
+        <li><a href="#53-optimizer">5.3 Optimizer</a></li>
+        <li><a href="#54-regularization">5.4 Regularization</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-results">6 Results</a>
+      <ul>
+        <li><a href="#61-machine-translation">6.1 Machine Translation</a></li>
+        <li><a href="#62-model-variations">6.2 Model Variations</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</details>
+
+<h2 id="abstract">Abstract</h2>
+<blockquote>
+<p>The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 Englishto-German translation task, improving over the existing best results, including ensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.0 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature.</p>
+</blockquote>
+<p>所谓序列转录模型 <code>sequence transduction models</code> 是指输入为一个序列，输出也为一个序列的模型。例如在机器翻译中，输入一段中文，然后输出其对应的英文翻译。当时（作者写这篇文章的时候），主流的序列转录模型主要基于复杂的 CNN 和 RNN，一般采用 <code>encoder</code> 和 <code>decoder</code> 架构。作者提出了一种基于注意力机制 <code>attention mechanisms</code> 的网络结构 <strong>Transformer</strong>。作者做了两个机器翻译的实验，证明了他们提出的模型效果非常好。</p>
+<h2 id="7-conclusion">7 Conclusion</h2>
+<blockquote>
+<p>In this work, we presented the Transformer, the first sequence transduction model based entirely on attention, replacing the recurrent layers most commonly used in encoder-decoder architectures with multi-headed self-attention.</p>
+<p>For translation tasks, the Transformer can be trained significantly faster than architectures based on recurrent or convolutional layers. On both WMT 2014 English-to-German and WMT 2014 English-to-French translation tasks, we achieve a new state of the art. In the former task our best model outperforms even all previously reported ensembles.</p>
+<p>We are excited about the future of attention-based models and plan to apply them to other tasks. We plan to extend the Transformer to problems involving input and output modalities other than text and to investigate local, restricted attention mechanisms to efficiently handle large inputs and outputs such as images, audio and video. Making generation less sequential is another research goals of ours.</p>
+</blockquote>
+<p>按照沐神读论文的习惯，摘要读完以后直接跳到结论。沐神总结的结论主要有如下几点：</p>
+<ol>
+<li><strong>Transformer</strong> 是当时第一个完全基于注意力的序列转录模型，它把过去常用的循环层全部换成了 <code>multi-headed self-attention</code>。</li>
+<li><strong>Transformer</strong> 在机器翻译的任务中比基于循环层和卷积层的架构要快很多。</li>
+<li><strong>Transformer</strong> 未来可以用在文本以外的数据类型上，例如图像、音频、视频等。现在看来，作者在当时多多少少是预测到未来的研究方向的，我十分佩服！</li>
+</ol>
+<ul>
+<li><a href="https://github.com/tensorflow/tensor2tensor" target="_blank" rel="noopener">仓库链接</a></li>
+</ul>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>这篇文章的导言 <code>Introduction</code> 相对来说比较短，基本上是摘要 <code>Abstract</code> 的扩充。</p>
+<blockquote>
+<p>Recurrent neural networks, long short-term memory<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> and gated recurrent<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> neural networks in particular, have been firmly established as state of the art approaches in sequence modeling and transduction problems such as language modeling and machine translation. Numerous efforts have since continued to push the boundaries of recurrent language models and encoder-decoder architectures.</p>
+</blockquote>
+<p>当时机器翻译最常用的模型是 RNN，主要包括如下两个著名的网络模型：</p>
+<ul>
+<li><strong>LSTM</strong> (Long Short-Term Memory): 长短期记忆网络。它是一种时间循环神经网络，是为了解决一般的 RNN 存在的长期依赖问题而专门设计出来的，所有的 RNN 都具有一种重复神经网络模块的链式形式。</li>
+<li><strong>GRU</strong> (Gate Recurrent Unit): 门控循环单元。是 LSTM 网络的一种效果很好的变体，它较 LSTM 网络的结构更加简单，而且效果也很好，因此也是当前非常流形的一种网络。</li>
+</ul>
+<p>后续的工作主要围绕着循环语言模型 <code>recurrent language models</code> 和编码器/解码器 <code>encoder-decoder</code> 架构展开。</p>
+<blockquote>
+<p>Recurrent models typically factor computation along the symbol positions of the input and output sequences.</p>
+</blockquote>
+<p>RNN 的特点是序列从左向右移一步一步往前做。当前时刻 $t$ 的隐藏状态 <code>hidden states</code> 记作 $h_t$，它由上一个隐藏状态 $h_{t-1}$ 和当前时刻 $t$ 的输入决定。这就是为什么 RNN 能够处理时序信息的原因。也正因为 RNN 的这一特点，导致 RNN 存在如下问题：</p>
+<ul>
+<li>计算难以并行，主流的多线程 GPU 只能按照时序一个一个计算。</li>
+<li>序列长度和 $h_t$ 的长度之间的矛盾。如果序列长度特别长而 $h_t$ 不够长的话，前面的信息很可能会丢掉；但如果 $h_t$ 也设计得很长的话，内存开销太大。</li>
+</ul>
+<p>针对 RNN 的这些问题，近年来的改进工作很多，但都没有从根本上解决问题。</p>
+<blockquote>
+<p>Attention mechanisms have become an integral part of compelling sequence modeling and transduction models in various tasks, allowing modeling of dependencies without regard to their distance in the input or output sequences.</p>
+</blockquote>
+<p>注意力机制并不是本文的创新点。在现有的工作中，注意力机制已经被成功地用在编码器/解码器里面了。</p>
+<blockquote>
+<p>In this work we propose the Transformer, a model architecture eschewing recurrence and instead relying entirely on an attention mechanism to draw global dependencies between input and output. The Transformer allows for significantly more parallelization and can reach a new state of the art in translation quality after being trained for as little as twelve hours on eight P100 GPUs.</p>
+</blockquote>
+<p>作者在本文提出的 <strong>Transformer</strong> 则与 RNN 不同，是完全依赖注意力机制的一种模型架构。作者特别强调了他们在训练时候的并行性 <code>parallelization</code>。</p>
+<h2 id="2-background">2 Background</h2>
+<blockquote>
+<p>The goal of reducing sequential computation also forms the foundation of the Extended Neural GPU, ByteNet and ConvS2S, all of which use convolutional neural networks as basic building block, computing hidden representations in parallel for all input and output positions.</p>
+<p>In the Transformer this is reduced to a constant number of operations, albeit at the cost of reduced effective resolution due to averaging attention-weighted positions, an effect we counteract with Multi-Head Attention as described in section 3.2.</p>
+</blockquote>
+<p>为了解决 RNN 训练的并行性问题，有很多工作考虑采用 CNN 来代替 RNN 以增加并行性，但问题是 CNN 对长序列难以建模。例如相隔很远的两个像素块，需要多层卷积才能建立起联系。不过卷积计算的好处是可以做多个输出通道，基于此作者提出了多头注意力 <code>Multi-Head Attention</code> 机制。</p>
+<blockquote>
+<p>Self-attention, sometimes called intra-attention is an attention mechanism relating different positions of a single sequence in order to compute a representation of the sequence.</p>
+</blockquote>
+<p>接下来就是自注意力 <code>Self-attention</code> 机制，这其实也是 <strong>Transformer</strong> 中很重要的一点。不过该工作并不是 <strong>Transformer</strong> 的创新点，已经有不少相关工作了。</p>
+<h2 id="3-model-architecture">3 Model Architecture</h2>
+<p>为了解释清楚 <code>encoder-decoder</code>，作者首先给出如下 3 个非常重要的定义：</p>
+<ul>
+<li>$\left(x_1, x_2, &hellip;, x_n\right)$：表示一个序列。假设这个序列是一个英文句子，那么 $x_t$ 就表示第 $t$ 个单词。</li>
+<li>$\textbf{z} = \left(z_1, z_2, &hellip;, z_n\right)$：编码器的输出。$z_t$ 是 $x_t$ 的一个向量表示。</li>
+<li>$\left(y_1, y_2, &hellip;, y_m\right)$：编码器的输出，是一个长为 $m$ 的序列。和编码器不同的是，解码器的词是一个个生成的，这叫做自回归 <code>auto-regressive</code>。自回归的意思是当前的输出也会作为输入参与下一轮的输出。换句话说就是，翻译的结果出来是一个个词往外蹦儿的。</li>
+</ul>
+<p>这样也就弄清楚 <strong>Transformer</strong> 的输入和输出了，后文则主要对这里面的每个块进行说明。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-the-transformer---model-architecture">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="The Transformer - model architecture." srcset="
+               /post/attention-is-all-you-need/featured_hu8b54ce84adafe40779efe33571820b6c_96849_69939f503c2e2d5c874ab43c5d89ab3f.webp 400w,
+               /post/attention-is-all-you-need/featured_hu8b54ce84adafe40779efe33571820b6c_96849_7401b658ad7641a955eec6102478b257.webp 760w,
+               /post/attention-is-all-you-need/featured_hu8b54ce84adafe40779efe33571820b6c_96849_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/attention-is-all-you-need/featured_hu8b54ce84adafe40779efe33571820b6c_96849_69939f503c2e2d5c874ab43c5d89ab3f.webp"
+               width="536"
+               height="760"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+      The Transformer - model architecture.
+    </figcaption></figure>
+<h3 id="31-encoder-and-decoder-stacks">3.1 Encoder and Decoder Stacks</h3>
+<p><strong>Encoder</strong></p>
+<ul>
+<li>layers: $N=6$</li>
+<li>sub-layers:
+<ul>
+<li>multi-head self-attention mechanism: 多头自注意力机制</li>
+<li>position-wise fully connected feed-forward network: 本质上就是一个 MLP（多层感知机，Multilayer Perceptron）</li>
+</ul>
+</li>
+<li>output: $\textrm{LayerNorm}(x + \textrm{Sublayer}(x))$</li>
+<li>dimension: $d_{model} = 512$</li>
+</ul>
+<div class="alert alert-note">
+  <div>
+    <p><strong>BatchNorm 和 LayerNorm 的区别</strong></p>
+<p>沐神就 <code>BatchNorm</code> 和 <code>LayerNorm</code> 的区别作了详细讲解。我们知道，<code>Norm</code> 即 <code>Normalization</code>，对数据进行归一化处理。这和概率论中对随机变量进行标准化的操作类似，即把原向量化为均值为 $0$ 方差为 $1$ 的标准化向量。</p>
+<p>\begin{align}
+Y = \frac{X - \mu}{\sigma}
+\end{align}</p>
+<p>如图所示，<code>BatchNorm</code> 和 <code>LayerNorm</code> 的区别一目了然。<code>BatchNorm</code> 是在每一个特征 <code>feature</code> 上对 <code>batch</code> 进行归一化，而 <code>LayerNorm</code> 是在每一个样本 <code>batch</code> 上对 <code>feature</code> 进行归一化。</p>
+<figure  id="figure-difference-between-batchnorm-and-layernorm">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Difference between BatchNorm and LayerNorm." srcset="
+               /post/attention-is-all-you-need/layernorm-batchnorm_huf61da6cf384951cc94fe6d875380b93b_18215_3780baf8790d7bad91ed2224590b2089.webp 400w,
+               /post/attention-is-all-you-need/layernorm-batchnorm_huf61da6cf384951cc94fe6d875380b93b_18215_190a222c2ad3ad97c203eeb42329026d.webp 760w,
+               /post/attention-is-all-you-need/layernorm-batchnorm_huf61da6cf384951cc94fe6d875380b93b_18215_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/attention-is-all-you-need/layernorm-batchnorm_huf61da6cf384951cc94fe6d875380b93b_18215_3780baf8790d7bad91ed2224590b2089.webp"
+               width="657"
+               height="276"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+      Difference between BatchNorm and LayerNorm.
+    </figcaption></figure>
+<p>为什么要使用 <code>LayerNorm</code> 呢？一个原因是样本长度可能发生变化（即 <code>sequence</code> 的长度 $n$），如果使用 <code>BatchNorm</code> 的话，切片的结果可能长度参差不齐，会有很多零填充。而使用 <code>LayerNorm</code> 则不会出现这样的问题，因为是同一个样本（即同一个序列）。由于序列长度不一有零填充，计算均值和方差的时候每个样本的计算方法不一样，不能把零算进去，因为零不是有效值。</p>
+<p>还有一点原因是，假如在做预测的时候，序列特别特别长以至于训练所得的均值和方差并不好用。而使用 <code>LayerNorm</code> 则不会出现这样的问题，因为它是每个样本独立计算的，最后也并不像 <code>BatchNorm</code> 那样需要算出一个全局的均值和方差。因此不管序列有多长，均值和方差都是在序列本身的基础上算的。</p>
+
+  </div>
+</div>
+
+<p><strong>Decoder</strong></p>
+<ul>
+<li>layers: $N=6$</li>
+<li>sub-layers:
+<ul>
+<li>multi-head self-attention mechanism: 和 <code>encoder</code> 相同</li>
+<li>position-wise fully connected feed-forward network: 和 <code>encoder</code> 相同</li>
+<li>masked multi-head attention: 带掩码的多头注意力机制</li>
+</ul>
+</li>
+<li>masking: 确保位置 $i$ 的预测只能依赖于小于 $i$ 位置的已知输出。因为训练时 <code>decoder</code> 的输入是上面一些时刻在 <code>encoder</code> 的输出，不应该看到后面时刻的输入。</li>
+</ul>
+<h3 id="32-attention">3.2 Attention</h3>
+<blockquote>
+<p>An attention function can be described as mapping a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors. The output is computed as a weighted sum of the values, where the weight assigned to each value is computed by a compatibility function of the query with the corresponding key.</p>
+</blockquote>
+<p>注意力函数是将 <code>query</code> 和一些键值对 <code>key-value pairs</code> 映射成一个输出 <code>output</code> 的函数，这里面的 <code>query</code>、<code>keys</code>、<code>values</code>、<code>output</code> 都是向量 <code>vectors</code>。具体来说，<code>output</code> 是 <code>values</code> 的加权，其输出维度和 <code>value</code> 的维度是一样的。权重是通过每个 <code>value</code> 对应的 <code>key</code> 和 <code>query</code> 计算相似度 <code>compatibility function</code> 得来的。这里的相似度针对不同的注意力机制有不同的算法。</p>
+<h4 id="321-scaled-dot-product-attention">3.2.1 Scaled Dot-Product Attention</h4>
+<p>作者在本小节主要说明了 <strong>Transformer</strong> 采用的注意力机制。作者将之命名为 <code>Scaled Dot-Product Attention</code>，如图所示。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-scaled-dot-product-attention">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Scaled Dot-Product Attention." srcset="
+               /post/attention-is-all-you-need/Scaled%20Dot-Product%20Attention_hu70c1dc728f23523ace7510001a2e738b_44270_c58055229fb3f7179931f9e847824dec.webp 400w,
+               /post/attention-is-all-you-need/Scaled%20Dot-Product%20Attention_hu70c1dc728f23523ace7510001a2e738b_44270_e6cb6d0f00c311b886504a93a84edf8a.webp 760w,
+               /post/attention-is-all-you-need/Scaled%20Dot-Product%20Attention_hu70c1dc728f23523ace7510001a2e738b_44270_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/attention-is-all-you-need/Scaled%20Dot-Product%20Attention_hu70c1dc728f23523ace7510001a2e738b_44270_c58055229fb3f7179931f9e847824dec.webp"
+               width="415"
+               height="681"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+      Scaled Dot-Product Attention.
+    </figcaption></figure>
+<p>注意力函数的计算公式如下：</p>
+<p>\begin{align}
+\textrm{Attention}\left(Q, K, V\right) = \textrm{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+\end{align}</p>
+<p>$Q$ 即 <code>query</code>，$K$ 即 <code>key</code>，$QK^T$ 即 <code>query</code> 和 <code>key</code> 做内积。作者认为，两个向量的内积值越大，说明相似度越高。除以 $\sqrt{d_k}$ 则表示单位化，然后再用 softmax 得到权重。这里的道理其实就是机器学习中的余弦相似度（余弦距离）：</p>
+<p>\begin{align}
+\textrm{similarity} = \cos{\theta} = \frac{\alpha \cdot \beta}{||\alpha|| \cdot ||\beta||}
+\end{align}</p>
+<p>注意这里 <code>Mask</code> 的作用是为了避免 $t$ 时刻看到后面的输入。在数学上的具体实现方式是以一个绝对值非常大的负数（$-\infty$）作为指数，计算出来的幂趋向于零，这样就实现了掩盖 $t$ 时刻后面的输入的效果。</p>
+<h4 id="322-multi-head-attention">3.2.2 Multi-Head Attention</h4>
+<p>作者认为，与其计算单个的注意力函数，不如把 <code>query</code>、<code>key</code>、<code>value</code> 投影到一个更低的维度上，投影 $h$ 次，然后再计算 $h$ 次注意力函数，最后每一个函数的输出合并再投影得到最终的输出。如图所示。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-multi-head-attention">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Multi-Head Attention." srcset="
+               /post/attention-is-all-you-need/Multi-Head%20Attention_hua1dcc6ec3dc6caf1927d2a8edcfb7688_72171_b0ffdf9e71d8f398d7da638889de4d27.webp 400w,
+               /post/attention-is-all-you-need/Multi-Head%20Attention_hua1dcc6ec3dc6caf1927d2a8edcfb7688_72171_5b175683df723a45c4ed255077096fd1.webp 760w,
+               /post/attention-is-all-you-need/Multi-Head%20Attention_hua1dcc6ec3dc6caf1927d2a8edcfb7688_72171_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/attention-is-all-you-need/Multi-Head%20Attention_hua1dcc6ec3dc6caf1927d2a8edcfb7688_72171_b0ffdf9e71d8f398d7da638889de4d27.webp"
+               width="551"
+               height="685"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+      Multi-Head Attention.
+    </figcaption></figure>
+<p>多头注意力函数的计算公式如下：</p>
+<p>\begin{align}
+\textrm{MultiHead}\left(Q, K, V\right) &amp;= \textrm{Concat}\left(\textrm{head}_1, &hellip;, \textrm{head}_h\right)W^O \\
+\textbf{where}\quad\textrm{head}_i &amp;= \textrm{Attention}\left(QW^Q_i, KW^K_i, VW^V_i\right)
+\end{align}</p>
+<p>在本文中作者定义 $h=8$，于是 $d_k = d_v = d_{model}/h = 64$，也就是输出维度。</p>
+<h4 id="323-applications-of-attention-in-our-model">3.2.3 Applications of Attention in our Model</h4>
+<p>这一小节作者主要介绍 <strong>Transformer</strong> 是如何使用注意力的，归结起来一共有如下 3 种情况：</p>
+<blockquote>
+<p>In &ldquo;encoder-decoder attention&rdquo; layers, the queries come from the previous decoder layer, and the memory keys and values come from the output of the encoder. This allows every position in the decoder to attend over all positions in the input sequence.</p>
+<p>The encoder contains self-attention layers. In a self-attention layer all of the keys, values and queries come from the same place, in this case, the output of the previous layer in the encoder. Each position in the encoder can attend to all positions in the previous layer of the encoder.</p>
+<p>Similarly, self-attention layers in the decoder allow each position in the decoder to attend to all positions in the decoder up to and including that position. We need to prevent leftward information flow in the decoder to preserve the auto-regressive property. We implement this inside of scaled dot-product attention by masking out (setting to $-\infty$) all values in the input of the softmax which correspond to illegal connections.</p>
+</blockquote>
+<ol>
+<li><code>encoder</code> 的 <code>Multi-Head Attention</code> 以 <code>key</code>、<code>value</code>、<code>query</code> 作为输入。图中的箭头一分为三，表示同一数据复制三次，这就叫做自注意力机制。输出的维度和输入一致。</li>
+<li><code>decoder</code> 的 <code>Masked Multi-Head Attention</code> 和 <code>encoder</code> 的 <code>Multi-Head Attention</code> 类似，只不过需要掩盖后面的输入，前文已详述。</li>
+<li><code>decoder</code> 的 <code>Multi-Head Attention</code> 则不再像 <code>encoder</code> 那样是自注意力了，而是 <code>key</code> 和 <code>value</code> 来自于编码器的输出，<code>query</code> 来自于解码器下一个 <code>attention</code> 的输入。</li>
+</ol>
+<p>为了更便于大家理解，沐神举了一个非常简单的机器翻译的例子：</p>
+<blockquote>
+<p>Hello world</p>
+<p>你好世界</p>
+</blockquote>
+<p>显然，输入的英文序列 $n=2$，输出的中文序列 $m=4$。当 <strong>Transformer</strong> 在计算“好”字时，把“好”字对应的向量作为 <code>query</code> 时，计算和 <code>Hello</code> 对应的向量的相似度会更高一些，就会赋一个较大的权重。这就是注意力机制给我们最直观的感受！</p>
+<h3 id="33-position-wise-feed-forward-networks">3.3 Position-wise Feed-Forward Networks</h3>
+<blockquote>
+<p>In addition to attention sub-layers, each of the layers in our encoder and decoder contains a fully connected feed-forward network, which is applied to each position separately and identically. This consists of two linear transformations with a ReLU activation in between.</p>
+</blockquote>
+<p>\begin{align}
+\textrm{FFN}\left(x\right) = \max \left(0, xW_1 + b_1\right)W_2 + b_2
+\end{align}</p>
+<p>在注意力层之后，<code>encoder</code> 和 <code>decoder</code> 都会有一个前馈网络层，首先是一个全连接层，然后是 ReLU 激活函数，最后再过一个全连接层。</p>
+<h3 id="34-embeddings-and-softmax">3.4 Embeddings and Softmax</h3>
+<blockquote>
+<p>Similarly to other sequence transduction models, we use learned embeddings to convert the input tokens and output tokens to vectors of dimension $d_{model}$. We also use the usual learned linear transformation and softmax function to convert the decoder output to predicted next-token probabilities.</p>
+</blockquote>
+<p><code>Embeddings</code> 将输入的每一个词 <code>token</code> 映射成维度为 $d_{model}$ 的向量。<code>Softmax</code> 的作用是归一化。</p>
+<h3 id="35-positional-encoding">3.5 Positional Encoding</h3>
+<blockquote>
+<p>Since our model contains no recurrence and no convolution, in order for the model to make use of the order of the sequence, we must inject some information about the relative or absolute position of the tokens in the sequence. To this end, we add &ldquo;positional encodings&rdquo; to the input embeddings at the bottoms of the encoder and decoder stacks. The positional encodings have the same dimension $d_{model}$ as the embeddings, so that the two can be summed.</p>
+</blockquote>
+<p>为什么需要位置编码呢？因为 <code>attention</code> 本身并没有时序信息，它只是计算了 <code>key</code> 和 <code>query</code> 之间的余弦距离，它与序列的时序性无关。例如我们阅读下面这句话：</p>
+<blockquote>
+<p>序语倒颠不响影读阅。</p>
+</blockquote>
+<p>我们会觉得有些别扭，因为语义发生变化了。但其实 <code>attention</code> 在计算的时候根本处理不了这种情况，这个时候就需要把时序信息加进来。与 RNN 不同的是，<strong>Transformer</strong> 在输入里面加入时序信息，而 RNN 则是以上一时刻的输出作为部分输入。</p>
+<h2 id="4-why-self-attention">4 Why Self-Attention</h2>
+<p>本节作者介绍了为什么要采用自注意力机制。沐神认为，作者并没有把这个原因讲得特别清楚。不过，我们可以首先来看看下表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Layer Type</th>
+<th style="text-align:center">Complexity per Layer</th>
+<th style="text-align:center">Sequential Operations</th>
+<th style="text-align:center">Maximum Path Length</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Self-Attention</td>
+<td style="text-align:center">$O(n^2 \cdot d)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">$O(1)$</td>
+</tr>
+<tr>
+<td style="text-align:center">Recurrent</td>
+<td style="text-align:center">$O(n \cdot d^2)$</td>
+<td style="text-align:center">$O(n)$</td>
+<td style="text-align:center">$O(n)$</td>
+</tr>
+<tr>
+<td style="text-align:center">Convolutional</td>
+<td style="text-align:center">$O(k \cdot n \cdot d^2)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">$O(\log_k{n})$</td>
+</tr>
+<tr>
+<td style="text-align:center">Self-Attention (restricted)</td>
+<td style="text-align:center">$O(r \cdot n \cdot d)$</td>
+<td style="text-align:center">$O(1)$</td>
+<td style="text-align:center">$O(n/r)$</td>
+</tr>
+</tbody>
+</table>
+<p>作者对比了自注意力机制、RNN、CNN 和受限制的 <code>restricted</code> 自注意力机制的三个方面：计算复杂度、顺序计算、最大路径长度。显然计算复杂度越低越好；顺序计算是指下一步计算必须等前面几步计算完成才能计算，当然越低越好，并行度越高；最大路径长度是指一个序列信息从一个数据点走到另一个数据点需要走多远，当然越短越好。</p>
+<p>这里需要额外解释的是受限制的自注意力机制。为什么相比与自注意力机制，其计算复杂度会有所降低？是因为 <code>query</code> 只跟最近的 $r$ 个邻居做运算。但带来的问题是最大路径长度的增加。</p>
+<div class="alert alert-note">
+  <div>
+    至此，已经可以基本了解 <strong>Transformer</strong> 的基本架构了。后面的章节是训练和模型效果，如有需要再进行补充。
+  </div>
+</div>
+
+<h2 id="5-training">5 Training</h2>
+<h3 id="51-training-data-and-batching">5.1 Training Data and Batching</h3>
+<h3 id="52-hardware-and-schedule">5.2 Hardware and Schedule</h3>
+<h3 id="53-optimizer">5.3 Optimizer</h3>
+<h3 id="54-regularization">5.4 Regularization</h3>
+<h2 id="6-results">6 Results</h2>
+<h3 id="61-machine-translation">6.1 Machine Translation</h3>
+<h3 id="62-model-variations">6.2 Model Variations</h3>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Hochreiter S, Schmidhuber J. Long short-term memory[J]. Neural computation, 1997, 9(8): 1735-1780.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Chung J, Gulcehre C, Cho K H, et al. Empirical evaluation of gated recurrent neural networks on sequence modeling[J]. arXiv preprint arXiv:1412.3555, 2014.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/transformer/">Transformer</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://bowenei.gitee.io/post/attention-is-all-you-need/&amp;text=Attention%20Is%20All%20You%20Need" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://bowenei.gitee.io/post/attention-is-all-you-need/&amp;t=Attention%20Is%20All%20You%20Need" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Attention%20Is%20All%20You%20Need&amp;body=https://bowenei.gitee.io/post/attention-is-all-you-need/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://bowenei.gitee.io/post/attention-is-all-you-need/&amp;title=Attention%20Is%20All%20You%20Need" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Attention%20Is%20All%20You%20Need%20https://bowenei.gitee.io/post/attention-is-all-you-need/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://bowenei.gitee.io/post/attention-is-all-you-need/&amp;title=Attention%20Is%20All%20You%20Need" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://bowenei.gitee.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu959be2af7a8864c84028cc52887853eb_9808_270x270_fill_q75_lanczos_center.jpg" alt="Bowen Zhou"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://bowenei.gitee.io/">Bowen Zhou</a></h5>
+      <h6 class="card-subtitle">Student pursuing a PhD degree of Computer Science and Technology</h6>
+      <p class="card-text">My research interests include Edge Computing and Edge Intelligence.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/bowenEI/" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/an-image-is-worth-16x16-words-transformers-for-image-recognition-at-scale/">An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+    
+    
+      <script src="/js/wowchemy-headroom.1cb9e2fc8399acee94eab837265b73bf.js" type="module"></script>
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

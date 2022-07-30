@@ -1,0 +1,1524 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Bowen Zhou" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/python/list/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://bowenei.gitee.io/learn/python/list/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+  <meta property="og:url" content="https://bowenei.gitee.io/learn/python/list/" />
+  <meta property="og:title" content="Python 列表 | Bowen&#39;s Academic Home" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-01-01T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-01-01T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Python 列表 | Bowen&#39;s Academic Home</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="4bce8d48f6a7a3d7d1b3f6c87492c082" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blogs"><span>Blogs</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallery"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/learn/"><span>Learn</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/bowenEI/" data-toggle="tooltip" data-placement="bottom" title="Follow me on Github" target="_blank" rel="noopener" aria-label="Follow me on Github">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Python
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/learn/"><i class="fas fa-arrow-left pr-1"></i>Learn</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/python/">Python</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class="active"><a href="/learn/python/list/">Python 列表</a></li>
+
+
+
+  <li class=""><a href="/learn/python/tuple/">Python 元组</a></li>
+
+
+
+  <li class=""><a href="/learn/python/dict/">Python 字典</a></li>
+
+
+
+  <li class=""><a href="/learn/python/set/">Python 集合</a></li>
+
+
+
+  <li class=""><a href="/learn/python/str/">Python 字符串</a></li>
+
+
+
+  <li class=""><a href="/learn/python/function/">Python 函数</a></li>
+
+
+
+  <li class=""><a href="/learn/python/exception/">Python 异常处理</a></li>
+
+
+
+  <li class=""><a href="/learn/python/magic/">Python 魔法函数</a></li>
+
+
+
+  <li class=""><a href="/learn/python/o-o/">Python 面向对象</a></li>
+
+
+
+  <li class=""><a href="/learn/python/thread/">Python 多线程编程</a></li>
+
+
+
+  <li class=""><a href="/learn/python/regex/">Python 正则表达式</a></li>
+
+
+
+  <li class=""><a href="/learn/python/json/">Python 处理 json 数据</a></li>
+
+
+
+  <li class=""><a href="/learn/python/ipython/">iPython: Python 交互式 Shell</a></li>
+
+
+
+  <li class=""><a href="/learn/python/os/">Python 操作系统调用</a></li>
+
+
+
+  <li class=""><a href="/learn/python/decorator/">Python 装饰器</a></li>
+
+
+
+  <li class=""><a href="/learn/python/pkg-manager/">Python 包管理器</a></li>
+
+
+
+  <li class=""><a href="/learn/python/sys/">Python 系统环境交互</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#创建列表">创建列表</a></li>
+    <li><a href="#列表操作">列表操作</a>
+      <ul>
+        <li><a href="#长度">长度</a></li>
+        <li><a href="#加法和乘法">加法和乘法</a></li>
+        <li><a href="#索引和切片">索引和切片</a></li>
+        <li><a href="#删除元素">删除元素</a></li>
+        <li><a href="#测试从属关系">测试从属关系</a></li>
+      </ul>
+    </li>
+    <li><a href="#列表方法">列表方法</a>
+      <ul>
+        <li><a href="#不改变列表的方法">不改变列表的方法</a></li>
+        <li><a href="#改变列表的方法">改变列表的方法</a></li>
+      </ul>
+    </li>
+    <li><a href="#列表推导式">列表推导式</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/">
+        
+          Learn
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/python/">
+        
+          Python
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Python 列表
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+          
+
+          <h1>Python 列表</h1>
+
+          <div class="article-style">
+            <h2 id="创建列表">创建列表</h2>
+<p>在 <strong>Python</strong> 中，列表 <code>list</code> 是一个有序的序列。</p>
+<p>列表用一对 <code>[]</code> 生成，中间的元素用 <code>,</code> 隔开，其中的元素不需要是同一类型，同时列表的长度也不固定。</p>
+<pre><code class="language-python">l = [1, 2.0, 'hello']
+l
+</code></pre>
+<pre><code>[1, 2.0, 'hello']
+</code></pre>
+<pre><code class="language-python">empty_list = []
+empty_list
+</code></pre>
+<pre><code>[]
+</code></pre>
+<p>空列表可以用 <code>[]</code> 或者 <code>list()</code> 生成：</p>
+<pre><code class="language-python">empty_list = list()
+empty_list
+</code></pre>
+<pre><code>[]
+</code></pre>
+<p>列表可以通过其他数据类型强制转换得到，例如元组：</p>
+<pre><code class="language-python">t = (1, 2, 3)
+list(t)
+</code></pre>
+<pre><code>[1, 2, 3]
+</code></pre>
+<h2 id="列表操作">列表操作</h2>
+<p>与字符串类似，列表也支持以下的操作：</p>
+<h3 id="长度">长度</h3>
+<p>用 <code>len</code> 查看列表长度：</p>
+<pre><code class="language-python">len(l)
+</code></pre>
+<pre><code>3
+</code></pre>
+<h3 id="加法和乘法">加法和乘法</h3>
+<p>列表加法，相当于将两个列表按顺序连接：</p>
+<pre><code class="language-python">a = [1, 2, 3]
+b = [3.2, 'hello']
+a + b
+</code></pre>
+<pre><code>[1, 2, 3, 3.2, 'hello']
+</code></pre>
+<p>列表与整数相乘，相当于将列表重复相加：</p>
+<pre><code class="language-python">l * 2
+</code></pre>
+<pre><code>[1, 2.0, 'hello', 1, 2.0, 'hello']
+</code></pre>
+<h3 id="索引和切片">索引和切片</h3>
+<p>列表和字符串一样可以通过索引和分片来查看它的元素。</p>
+<p>索引：</p>
+<pre><code class="language-python">a = [10, 11, 12, 13, 14]
+a[0]
+</code></pre>
+<pre><code>10
+</code></pre>
+<p>反向索引：</p>
+<pre><code class="language-python">a[-1]
+</code></pre>
+<pre><code>14
+</code></pre>
+<p>分片：</p>
+<pre><code class="language-python">a[2:-1]
+</code></pre>
+<pre><code>[12, 13]
+</code></pre>
+<p>与字符串不同的是，列表的元素可以通过索引来修改：</p>
+<pre><code class="language-python">a = [10, 11, 12, 13, 14]
+a[0] = 100
+a
+</code></pre>
+<pre><code>[100, 11, 12, 13, 14]
+</code></pre>
+<p>这种赋值也适用于分片，例如，将列表的第2，3两个元素换掉：</p>
+<pre><code class="language-python">a[1:3] = [1, 2]
+a
+</code></pre>
+<pre><code>[100, 1, 2, 13, 14]
+</code></pre>
+<p>事实上，对于连续的分片（即步长为 $1$），<strong>Python</strong> 采用的是整段替换的方法，两者的元素个数并不需要相同，例如，将 <code>[11,12]</code> 替换为 <code>[1, 2, 3, 4]</code>：</p>
+<pre><code class="language-python">a = [10, 11, 12, 13, 14]
+a[1:3] = [1, 2, 3, 4]
+a
+</code></pre>
+<pre><code>[10, 1, 2, 3, 4, 13, 14]
+</code></pre>
+<p>这意味着，可以用这种方法来删除列表中一个连续的分片：</p>
+<pre><code class="language-python">a = [10, 1, 2, 11, 12]
+a[1:3] = []
+a
+</code></pre>
+<pre><code>[10, 11, 12]
+</code></pre>
+<p>对于不连续（间隔 <code>step</code> 不为 $1$）的片段进行修改时，两者的元素数目必须一致：</p>
+<pre><code class="language-python">a = [10, 11, 12, 13, 14]
+a[::2] = [1, 2, 3]
+a
+</code></pre>
+<pre><code>[1, 11, 2, 13, 3]
+</code></pre>
+<h3 id="删除元素">删除元素</h3>
+<p><strong>Python</strong> 提供了删除列表中元素的方法 <code>del</code>。</p>
+<p>删除列表中的第一个元素：</p>
+<pre><code class="language-python">a = [1002, 'a', 'b', 'c']
+del a[0]
+a
+</code></pre>
+<pre><code>['a', 'b', 'c']
+</code></pre>
+<p>删除第二到最后一个元素：</p>
+<pre><code class="language-python">a = [1002, 'a', 'b', 'c']
+del a[1:]
+a
+</code></pre>
+<pre><code>[1002]
+</code></pre>
+<p>删除间隔的元素：</p>
+<pre><code class="language-python">a = ['a', 1, 'b', 2, 'c']
+del a[::2]
+a
+</code></pre>
+<pre><code>[1, 2]
+</code></pre>
+<h3 id="测试从属关系">测试从属关系</h3>
+<p>用 <code>in</code> 来看某个元素是否在某个序列（不仅仅是列表）中，用 <code>not in</code> 来判断是否不在某个序列中。</p>
+<pre><code class="language-python">a = [10, 11, 12, 13, 14]
+10 in a, 11 not in a
+</code></pre>
+<pre><code>(True, False)
+</code></pre>
+<p>也可以作用于字符串：</p>
+<pre><code class="language-python">s = 'hello world'
+'he' in s, 'world' not in s
+</code></pre>
+<pre><code>(True, False)
+</code></pre>
+<p>列表中可以包含各种对象，甚至可以包含列表：</p>
+<pre><code class="language-python">a = [10, 'eleven', [12, 13]]
+a[2]
+</code></pre>
+<pre><code>[12, 13]
+</code></pre>
+<p><code>a[2]</code> 是列表，可以对它再进行索引：</p>
+<pre><code class="language-python">a[2][1]
+</code></pre>
+<pre><code>13
+</code></pre>
+<h2 id="列表方法">列表方法</h2>
+<h3 id="不改变列表的方法">不改变列表的方法</h3>
+<h4 id="列表中某个元素个数-count">列表中某个元素个数 count</h4>
+<p><code>l.count(ob)</code> 返回列表中元素 <code>ob</code> 出现的次数。</p>
+<pre><code class="language-python">a = [11, 12, 13, 12, 11]
+a.count(11)
+</code></pre>
+<pre><code>2
+</code></pre>
+<h4 id="列表中某个元素位置-index">列表中某个元素位置 index</h4>
+<p><code>l.index(ob)</code> 返回列表中元素 <code>ob</code> 第一次出现的索引位置，如果 <code>ob</code> 不在 <code>l</code> 中会报错。</p>
+<pre><code class="language-python">a.index(12)
+</code></pre>
+<pre><code>1
+</code></pre>
+<h3 id="改变列表的方法">改变列表的方法</h3>
+<h4 id="向列表添加单个元素">向列表添加单个元素</h4>
+<p><code>l.append(ob)</code> 将元素 <code>ob</code> 添加到列表 <code>l</code> 的最后。</p>
+<pre><code class="language-python">a = [10, 11, 12]
+a.append(11)
+a
+</code></pre>
+<pre><code>[10, 11, 12, 11]
+</code></pre>
+<p><code>append</code> 每次只添加一个元素，并不会因为这个元素是序列而将其展开：</p>
+<pre><code class="language-python">a.append([11, 12])
+a
+</code></pre>
+<pre><code>[10, 11, 12, 11, [11, 12]]
+</code></pre>
+<h4 id="向列表添加序列">向列表添加序列</h4>
+<p><code>l.extend(lst)</code> 将序列 <code>lst</code> 的元素依次添加到列表 <code>l</code> 的最后，作用相当于 <code>l += lst</code>。</p>
+<pre><code class="language-python">a = [10, 11, 12, 11]
+a.extend([1, 2])
+a
+</code></pre>
+<pre><code>[10, 11, 12, 11, 1, 2]
+</code></pre>
+<h4 id="插入元素">插入元素</h4>
+<p><code>l.insert(idx, ob)</code> 在索引 <code>idx</code> 处插入 <code>ob</code>，之后的元素依次后移。</p>
+<pre><code class="language-python">a = [10, 11, 12, 13, 11]
+# 在索引 3 插入 'a'
+a.insert(3, 'a')
+a
+</code></pre>
+<pre><code>[10, 11, 12, 'a', 13, 11]
+</code></pre>
+<h4 id="移除元素">移除元素</h4>
+<p><code>l.remove(ob)</code> 会将列表中第一个出现的 <code>ob</code> 删除，如果 <code>ob</code> 不在 <code>l</code> 中会报错。</p>
+<pre><code class="language-python">a = [10, 11, 12, 13, 11]
+# 移除了第一个 11
+a.remove(11)
+a
+</code></pre>
+<pre><code>[10, 12, 13, 11]
+</code></pre>
+<h4 id="弹出元素">弹出元素</h4>
+<p><code>l.pop(idx)</code> 会将索引 <code>idx</code> 处的元素删除，并返回这个元素。</p>
+<pre><code class="language-python">a = [10, 11, 12, 13, 11]
+a.pop(2)
+</code></pre>
+<pre><code>12
+</code></pre>
+<h4 id="列表排序">列表排序</h4>
+<p><code>l.sort()</code> 会将列表中的元素按照一定的规则排序：</p>
+<pre><code class="language-python">a = [10, 1, 11, 13, 11, 2]
+a.sort()
+a
+</code></pre>
+<pre><code>[1, 2, 10, 11, 11, 13]
+</code></pre>
+<p>也可以降序排列：</p>
+<pre><code class="language-python">a.sort(reverse=True)
+a
+</code></pre>
+<pre><code>[13, 11, 11, 10, 2, 1]
+</code></pre>
+<p>如果不想改变原来列表中的值，可以使用<code>sorted</code>函数：</p>
+<pre><code class="language-python">a = [10, 1, 11, 13, 11, 2]
+b = sorted(a)
+print('a =', a)
+print('b =', b)
+</code></pre>
+<pre><code>a = [10, 1, 11, 13, 11, 2]
+b = [1, 2, 10, 11, 11, 13]
+</code></pre>
+<p>还可以利用 <code>lambda</code> 表达式对一些复杂的数据类型进行排序，例如下面的例子是按照年龄排序：</p>
+<pre><code class="language-python">data_list = [
+    {'Name': 'ABC', 'Age': 17},
+    {'Name': 'DEF', 'Age': 19},
+    {'Name': 'GHI', 'Age': 16},
+    {'Name': 'JKL', 'Age': 18}
+]
+
+sorted(data_list, key=lambda x:x['Age'])
+</code></pre>
+<pre><code>[{'Name': 'GHI', 'Age': 16},
+ {'Name': 'ABC', 'Age': 17},
+ {'Name': 'JKL', 'Age': 18},
+ {'Name': 'DEF', 'Age': 19}]
+</code></pre>
+<p>甚至可以对具有多个属性的对象进行主次关键字排序：</p>
+<pre><code class="language-python">import operator
+
+class Student:
+    def __init__(self, name, age, grade):
+        self.name = name
+        self.age = age
+        self.grade = grade
+        
+    def __str__(self):
+        return 'Name: {}, Age: {}, Grade: {}'.format(self.name, \
+                                                    self.age, self.grade)
+</code></pre>
+<p>定义比较函数，先按成绩排序再按年龄排序：</p>
+<pre><code class="language-python">cmpfun = operator.attrgetter('grade', 'age')
+</code></pre>
+<p>验证结果：</p>
+<pre><code class="language-python">student_list = [
+    Student('ABC', 17, 90),
+    Student('DEF', 19, 85),
+    Student('GHI', 16, 90),
+    Student('JKL', 18, 95)
+]
+
+student_list.sort(key=cmpfun)
+for i in student_list:
+    print(i)
+</code></pre>
+<pre><code>Name: DEF, Age: 19, Grade: 85
+Name: GHI, Age: 16, Grade: 90
+Name: ABC, Age: 17, Grade: 90
+Name: JKL, Age: 18, Grade: 95
+</code></pre>
+<h4 id="列表反向">列表反向</h4>
+<p><code>l.reverse()</code> 会将列表中的元素从后向前排列。</p>
+<pre><code class="language-python">a = [1, 2, 3, 4, 5, 6]
+a.reverse()
+a
+</code></pre>
+<pre><code>[6, 5, 4, 3, 2, 1]
+</code></pre>
+<p>如果不想改变原来列表中的值，可以使用切片的方法：</p>
+<pre><code class="language-python">a = [1, 2, 3, 4, 5, 6]
+b = a[::-1]
+print('a =', a)
+print('b =', b)
+</code></pre>
+<pre><code>a = [1, 2, 3, 4, 5, 6]
+b = [6, 5, 4, 3, 2, 1]
+</code></pre>
+<h2 id="列表推导式">列表推导式</h2>
+<p>循环可以用来生成列表：</p>
+<pre><code class="language-python">values = [10, 21, 4, 7, 12]
+squares = []
+for x in values:
+    squares.append(x**2)
+squares
+</code></pre>
+<pre><code>[100, 441, 16, 49, 144]
+</code></pre>
+<p>列表推导式可以使用更简单的方法来创建这个列表：</p>
+<pre><code class="language-python">values = [10, 21, 4, 7, 12]
+squares = [x**2 for x in values]
+squares
+</code></pre>
+<pre><code>[100, 441, 16, 49, 144]
+</code></pre>
+<p>还可以在列表推导式中加入条件进行筛选。例如在上面的例子中，假如只想保留列表中不大于 $10$ 的数的平方：</p>
+<pre><code class="language-python">values = [10, 21, 4, 7, 12]
+squares = [x**2 for x in values if x &lt;= 10]
+squares
+</code></pre>
+<pre><code>[100, 16, 49]
+</code></pre>
+<p>也可以使用推导式生成集合和字典：</p>
+<pre><code class="language-python">square_set = {x**2 for x in values if x &lt;= 10}
+square_set
+</code></pre>
+<pre><code>{16, 49, 100}
+</code></pre>
+<pre><code class="language-python">square_dict = {x: x**2 for x in values if x &lt;= 10}
+square_dict
+</code></pre>
+<pre><code>{10: 100, 4: 16, 7: 49}
+</code></pre>
+<p>再如，计算上面例子中生成的列表中所有元素的和：</p>
+<pre><code class="language-python">total = sum([x**2 for x in values if x &lt;= 10])
+total
+</code></pre>
+<pre><code>165
+</code></pre>
+<p>但是，<strong>Python</strong> 会生成这个列表，然后在将它放到垃圾回收机制中（因为没有变量指向它），这毫无疑问是种浪费。</p>
+<p>为了解决这种问题，与 <code>xrange()</code> 类似，<strong>Python</strong> 使用产生式表达式来解决这个问题：</p>
+<pre><code class="language-python">total = sum(x**2 for x in values if x &lt;= 10)
+total
+</code></pre>
+<pre><code>165
+</code></pre>
+<p>与上面相比，只是去掉了括号，但这里并不会一次性的生成这个列表。</p>
+<pre><code class="language-python">x = range(1000000)
+</code></pre>
+<p>比较一下两者的用时：</p>
+<pre><code class="language-python">%timeit total = sum([i**2 for i in x])
+</code></pre>
+<pre><code>268 ms ± 717 µs per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</code></pre>
+<pre><code class="language-python">%timeit total = sum(i**2 for i in x)
+</code></pre>
+<pre><code>259 ms ± 53.9 µs per loop (mean ± std. dev. of 7 runs, 1 loop each)
+</code></pre>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/learn/python/tuple/" rel="prev">Python 元组</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 1, 2021</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

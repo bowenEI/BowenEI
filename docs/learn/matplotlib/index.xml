@@ -1,0 +1,2777 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learn Matplotlib | Bowen&#39;s Academic Home</title>
+    <link>https://bowenei.gitee.io/learn/matplotlib/</link>
+      <atom:link href="https://bowenei.gitee.io/learn/matplotlib/index.xml" rel="self" type="application/rss+xml" />
+    <description>Learn Matplotlib</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 24 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png</url>
+      <title>Learn Matplotlib</title>
+      <link>https://bowenei.gitee.io/learn/matplotlib/</link>
+    </image>
+    
+    <item>
+      <title>Matplotlib 概述</title>
+      <link>https://bowenei.gitee.io/learn/matplotlib/overview/</link>
+      <pubDate>Sun, 11 Apr 2021 21:02:34 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/matplotlib/overview/</guid>
+      <description>&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/overview/anatomy_hu0d4d1f7fd2f20ddf972469e932a4d085_89288_5283f7f8af52592770888839ae0e0c1a.webp 400w,
+               /media/learn/matplotlib/overview/anatomy_hu0d4d1f7fd2f20ddf972469e932a4d085_89288_540315548333597ba0d916b53df1c8ee.webp 760w,
+               /media/learn/matplotlib/overview/anatomy_hu0d4d1f7fd2f20ddf972469e932a4d085_89288_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/overview/anatomy_hu0d4d1f7fd2f20ddf972469e932a4d085_89288_5283f7f8af52592770888839ae0e0c1a.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;%matplotlib inline
+import matplotlib.pyplot as plt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;matplotlib-绘图对象&#34;&gt;Matplotlib 绘图对象&lt;/h2&gt;
+&lt;h3 id=&#34;figure-对象&#34;&gt;Figure 对象&lt;/h3&gt;
+&lt;p&gt;即绘图面板，&lt;code&gt;matplotlib&lt;/code&gt; 中的所有图像都是位于 &lt;code&gt;Figure&lt;/code&gt; 对象中，一个图像只能有一个 &lt;code&gt;Figure&lt;/code&gt; 对象。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig = plt.figure()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以指定 &lt;code&gt;Figure&lt;/code&gt; 的宽和高，单位为英寸：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig = plt.figure(figsize=(640, 480))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以用 &lt;code&gt;dpi&lt;/code&gt; 参数指定绘图对象的分辨率，即每英寸有多少像素。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig = plt.figure(dpi=300)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以指定背景颜色 &lt;code&gt;facecolor&lt;/code&gt; 和边框颜色 &lt;code&gt;edgecolor&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig = plt.figure(facecolor=&#39;y&#39;, edgecolor=&#39;g&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;也可以不显示边框：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig = plt.figure(frameon=False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;axes-对象&#34;&gt;Axes 对象&lt;/h3&gt;
+&lt;p&gt;一个 &lt;code&gt;Figure&lt;/code&gt; 对象可以有多个 &lt;code&gt;Axes&lt;/code&gt; 对象，而一个 &lt;code&gt;Axes&lt;/code&gt; 对象就代表一个独立的绘图区域，拥有一套独立的坐标系统。&lt;/p&gt;
+&lt;p&gt;我们可以向 &lt;code&gt;Figure&lt;/code&gt; 对象中添加 &lt;code&gt;Axes&lt;/code&gt; 对象：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig.add_axes([0.1, 0.1, 0.8, 0.8])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;list&lt;/code&gt; 中的 4 个参数分别为横纵坐标、宽和高，范围是 $[0, 1]$。&lt;/p&gt;
+&lt;h3 id=&#34;axis-对象&#34;&gt;Axis 对象&lt;/h3&gt;
+&lt;p&gt;一个 &lt;code&gt;Axes&lt;/code&gt; 对象可以有多个 &lt;code&gt;Axis&lt;/code&gt; 对象，而一个 &lt;code&gt;Axis&lt;/code&gt; 对象就是一个坐标轴。对于 2D 图像，&lt;code&gt;Axis&lt;/code&gt; 对象就是 x 轴和 y 轴；对于 3D 图像，&lt;code&gt;Axis&lt;/code&gt; 对象就是 x 轴、y 轴和 z 轴。&lt;/p&gt;
+&lt;p&gt;不过，有时候许多数据会共用同一个坐标轴（一般是横轴），这个时候 &lt;code&gt;Axis&lt;/code&gt; 对象上也存在 &lt;code&gt;Axes&lt;/code&gt; 对象。&lt;/p&gt;
+&lt;h2 id=&#34;matplotlib-绘图元素&#34;&gt;Matplotlib 绘图元素&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;title: 图像标题，&lt;code&gt;Figure&lt;/code&gt; 对象和 &lt;code&gt;Axes&lt;/code&gt; 对象都可以设置。&lt;/li&gt;
+&lt;li&gt;data: 绘图数据，隶属于 &lt;code&gt;Axes&lt;/code&gt; 对象。&lt;/li&gt;
+&lt;li&gt;label: 坐标轴标题，隶属于 &lt;code&gt;Axis&lt;/code&gt; 对象。&lt;/li&gt;
+&lt;li&gt;tick: 刻度，隶属于 &lt;code&gt;Axis&lt;/code&gt; 对象。&lt;/li&gt;
+&lt;li&gt;ticklabel: 刻度说明，隶属于 &lt;code&gt;Axis&lt;/code&gt; 对象。&lt;/li&gt;
+&lt;li&gt;legend: 图例，&lt;code&gt;Figure&lt;/code&gt; 对象和 &lt;code&gt;Axes&lt;/code&gt; 对象都可以设置。&lt;/li&gt;
+&lt;li&gt;lim: 取值范围，隶属于 &lt;code&gt;Axis&lt;/code&gt; 对象。&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Matplotlib 绘图样式</title>
+      <link>https://bowenei.gitee.io/learn/matplotlib/style/</link>
+      <pubDate>Mon, 12 Apr 2021 17:18:29 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/matplotlib/style/</guid>
+      <description>&lt;h2 id=&#34;线条样式&#34;&gt;线条样式&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;matplotlib&lt;/code&gt; 中一般通过 &lt;code&gt;linestyle&lt;/code&gt; 或 &lt;code&gt;ls&lt;/code&gt; 参数来设置线条样式，主要包括以下几种：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-&lt;/code&gt; 或 &lt;code&gt;solid&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;实线&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;--&lt;/code&gt; 或 &lt;code&gt;dashed&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;虚线&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-.&lt;/code&gt; 或 &lt;code&gt;dashdot&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;点划线&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:&lt;/code&gt; 或 &lt;code&gt;dotted&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;点线&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;None&lt;/code&gt; 或 &lt;code&gt;‘ ’ &lt;/code&gt; 或 &lt;code&gt;‘’ &lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;不绘制线条&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;标记样式&#34;&gt;标记样式&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;matplotlib&lt;/code&gt; 中一般通过 &lt;code&gt;marker&lt;/code&gt; 参数来设置标记样式，主要包括以下几种：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;o&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;圆圈&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;d&lt;/code&gt; 和 &lt;code&gt;D&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;菱形&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;s&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;正方形&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;h&lt;/code&gt; 和 &lt;code&gt;H&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;六边形&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;星号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;_&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;水平线&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;^&lt;/code&gt; &lt;code&gt;v&lt;/code&gt; &lt;code&gt;&amp;lt;&lt;/code&gt; &lt;code&gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;上下左右三角形&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;8&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;八边形&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;p&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;五边形&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;,&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;像素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;+&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;加号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;竖线&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;x&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;叉号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;颜色&#34;&gt;颜色&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;matplotlib&lt;/code&gt; 中一般通过 &lt;code&gt;color&lt;/code&gt; 或 &lt;code&gt;c&lt;/code&gt; 参数来设置标记样式，主要包括以下几种：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;blue &lt;code&gt;b&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;蓝色&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;green &lt;code&gt;g&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;绿色&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;red &lt;code&gt;r&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;红色&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;yellow &lt;code&gt;y&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;黄色&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cyan-blue &lt;code&gt;c&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;青色&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;black &lt;code&gt;k&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;黑色&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;magenta &lt;code&gt;m&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;洋红色&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;white &lt;code&gt;w&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;白色&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;如果以上的颜色不够用，需要自定义颜色，可以使用下面两种方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 HTML 十六进制颜色字符串，例如 &lt;code&gt;#0F0F0F&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;使用一个三元归一化的元组，例如 &lt;code&gt;(0.3, 0.4, 0.5)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;填充样式&#34;&gt;填充样式&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;matplotlib&lt;/code&gt; 中一般通过 &lt;code&gt;hatch&lt;/code&gt; 参数来设置条形图的填充样式。以下是一些简单的填充样式：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig, axs = plt.subplots(2, 5, constrained_layout=True, figsize=(6.4, 3.2))
+
+hatches = [&#39;/&#39;, &#39;\\&#39;, &#39;|&#39;, &#39;-&#39;, &#39;+&#39;, &#39;x&#39;, &#39;o&#39;, &#39;O&#39;, &#39;.&#39;, &#39;*&#39;]
+
+
+def hatches_plot(ax, h):
+    ax.add_patch(Rectangle((0, 0), 2, 2, fill=False, hatch=h))
+    ax.text(1, -0.5, f&amp;quot;&#39; {h} &#39;&amp;quot;, size=15, ha=&amp;quot;center&amp;quot;)
+    ax.axis(&#39;equal&#39;)
+    ax.axis(&#39;off&#39;)
+
+for ax, h in zip(axs.flat, hatches):
+    hatches_plot(ax, h)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/style/output_15_0_hue2bfb8a31bc6fa04a41c9ffe76f7ebb8_6857_7710fb8a269058c4a493b6647d9d3981.webp 400w,
+               /media/learn/matplotlib/style/output_15_0_hue2bfb8a31bc6fa04a41c9ffe76f7ebb8_6857_1d1222aa11445389cbeb8c1637c4f9e2.webp 760w,
+               /media/learn/matplotlib/style/output_15_0_hue2bfb8a31bc6fa04a41c9ffe76f7ebb8_6857_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/style/output_15_0_hue2bfb8a31bc6fa04a41c9ffe76f7ebb8_6857_7710fb8a269058c4a493b6647d9d3981.webp&#34;
+               width=&#34;469&#34;
+               height=&#34;240&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;如果将参数值重复一遍，则会得到更密集的效果：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig, axs = plt.subplots(2, 5, constrained_layout=True, figsize=(6.4, 3.2))
+
+hatches = [&#39;//&#39;, &#39;\\\\&#39;, &#39;||&#39;, &#39;--&#39;, &#39;++&#39;, &#39;xx&#39;, &#39;oo&#39;, &#39;OO&#39;, &#39;..&#39;, &#39;**&#39;]
+
+for ax, h in zip(axs.flat, hatches):
+    hatches_plot(ax, h)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/style/output_17_0_hucfb5cb913ba50af4f7893f40e7e4691a_7500_c865fd84e507df091733e19bc6dc26b9.webp 400w,
+               /media/learn/matplotlib/style/output_17_0_hucfb5cb913ba50af4f7893f40e7e4691a_7500_8b3f7d6d7d07cf6c584d64993360a9b2.webp 760w,
+               /media/learn/matplotlib/style/output_17_0_hucfb5cb913ba50af4f7893f40e7e4691a_7500_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/style/output_17_0_hucfb5cb913ba50af4f7893f40e7e4691a_7500_c865fd84e507df091733e19bc6dc26b9.webp&#34;
+               width=&#34;469&#34;
+               height=&#34;240&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;参数字符串也可以混合使用：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig, axs = plt.subplots(2, 5, constrained_layout=True, figsize=(6.4, 3.2))
+
+hatches = [&#39;/o&#39;, &#39;\\|&#39;, &#39;|*&#39;, &#39;-\\&#39;, &#39;+o&#39;, &#39;x*&#39;, &#39;o-&#39;, &#39;O|&#39;, &#39;O.&#39;, &#39;*-&#39;]
+
+for ax, h in zip(axs.flat, hatches):
+    hatches_plot(ax, h)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/style/output_19_0_huf13e9369e042137cf90edef353a0bbc9_11872_fdd3e39c35fe23168ff83276452fced8.webp 400w,
+               /media/learn/matplotlib/style/output_19_0_huf13e9369e042137cf90edef353a0bbc9_11872_7ea5787957000a10992381b41030c5b0.webp 760w,
+               /media/learn/matplotlib/style/output_19_0_huf13e9369e042137cf90edef353a0bbc9_11872_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/style/output_19_0_huf13e9369e042137cf90edef353a0bbc9_11872_fdd3e39c35fe23168ff83276452fced8.webp&#34;
+               width=&#34;469&#34;
+               height=&#34;241&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Matplotlib 二维绘图</title>
+      <link>https://bowenei.gitee.io/learn/matplotlib/plot/</link>
+      <pubDate>Sun, 18 Apr 2021 22:37:51 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/matplotlib/plot/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;%matplotlib inline
+import matplotlib.pyplot as plt
+import numpy as np
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;入门&#34;&gt;入门&lt;/h2&gt;
+&lt;p&gt;下面，我们用描点法来画正弦函数 $y = \sin{x}$ 一个周期内的图像。&lt;/p&gt;
+&lt;p&gt;首先，我们要生成一系列均匀的散点 &lt;code&gt;x&lt;/code&gt;，并计算出对应的函数值 &lt;code&gt;y&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = np.linspace(0, 2*np.pi, num=25, endpoint=True)
+y = np.sin(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后直接调用 &lt;code&gt;plt.plot&lt;/code&gt; 方法绘图即可：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;plt.plot(x, y)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[&amp;lt;matplotlib.lines.Line2D at 0x18edab70a30&amp;gt;]
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_7_1_hu51231c906018dbd7ca23a99db5e4f7b7_12156_8e348cb06f98e0d2b1b31379d1f4974e.webp 400w,
+               /media/learn/matplotlib/plot/output_7_1_hu51231c906018dbd7ca23a99db5e4f7b7_12156_5022480a10a112442a5d5b5c18c274bd.webp 760w,
+               /media/learn/matplotlib/plot/output_7_1_hu51231c906018dbd7ca23a99db5e4f7b7_12156_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_7_1_hu51231c906018dbd7ca23a99db5e4f7b7_12156_8e348cb06f98e0d2b1b31379d1f4974e.webp&#34;
+               width=&#34;386&#34;
+               height=&#34;248&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;但是，我们的教程非常不推荐这种绘图方法，因为这种绘图方法只适用于简单图像的绘制，如果需要对图像的各个元素进行更细致化的设置是不行的。&lt;/p&gt;
+&lt;h2 id=&#34;用-axes-对象绘图&#34;&gt;用 Axes 对象绘图&lt;/h2&gt;
+&lt;p&gt;首先，我们获取 &lt;code&gt;Figure&lt;/code&gt; 对象。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig = plt.figure()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;Figure size 432x288 with 0 Axes&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;不过 &lt;code&gt;Figure&lt;/code&gt; 对象只是一个空白的 &lt;code&gt;Figure&lt;/code&gt; 窗口，它没有任何的坐标系可以绘制图像。因此，我们需要在 &lt;code&gt;Figure&lt;/code&gt; 对象中添加 &lt;code&gt;Axes&lt;/code&gt; 对象：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax = fig.add_axes([0.1, 0.1, 0.8, 0.8])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;传入的四元组参数表示绘图区域 &lt;code&gt;Axes&lt;/code&gt; 的横纵坐标、宽度和高度，都是 $[0, 1]$ 之间的浮点数。&lt;/p&gt;
+&lt;p&gt;这样，当我们显示绘图窗口时，会发现是一张有坐标系的白纸：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_16_0_hu510c0ef0842aef3e9c5e79d6c35eb18b_3569_7644ebc38d6c49c4146218caf518af95.webp 400w,
+               /media/learn/matplotlib/plot/output_16_0_hu510c0ef0842aef3e9c5e79d6c35eb18b_3569_630ce6b3146b6a2a71989c1fa88aa909.webp 760w,
+               /media/learn/matplotlib/plot/output_16_0_hu510c0ef0842aef3e9c5e79d6c35eb18b_3569_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_16_0_hu510c0ef0842aef3e9c5e79d6c35eb18b_3569_7644ebc38d6c49c4146218caf518af95.webp&#34;
+               width=&#34;391&#34;
+               height=&#34;265&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;下面，我们调用 &lt;code&gt;Axes&lt;/code&gt; 对象的 &lt;code&gt;plot&lt;/code&gt; 绘图方法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sin_line = ax.plot(x, y)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;Figure&lt;/code&gt; 对象是整个绘图窗口，它不能画图。只有控制整个绘图区域的 &lt;code&gt;Axes&lt;/code&gt; 对象才能画图。&lt;/p&gt;
+&lt;p&gt;现在来看看绘图窗口，会发现已经有图像显示了：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_21_0_hu5802433aceb7b98d784f5313ad4747c4_12700_51d5c7c4b5a56b6a6a0dd54a04bcf524.webp 400w,
+               /media/learn/matplotlib/plot/output_21_0_hu5802433aceb7b98d784f5313ad4747c4_12700_dfb4b47db921c5753a5c3736a6b69c6f.webp 760w,
+               /media/learn/matplotlib/plot/output_21_0_hu5802433aceb7b98d784f5313ad4747c4_12700_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_21_0_hu5802433aceb7b98d784f5313ad4747c4_12700_51d5c7c4b5a56b6a6a0dd54a04bcf524.webp&#34;
+               width=&#34;397&#34;
+               height=&#34;261&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.clear()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;美化图像&#34;&gt;美化图像&lt;/h2&gt;
+&lt;p&gt;我们可以用一些简单的参数美化图像，例如设置线条颜色为绿色，线条样式为点划线，并用实心点标注。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sin_line = ax.plot(x, y, &#39;go-.&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_26_0_hub2bec7c7120ee7ee069a4baf7cd6c87c_11999_11fabc0adac7f247206c460f1121b325.webp 400w,
+               /media/learn/matplotlib/plot/output_26_0_hub2bec7c7120ee7ee069a4baf7cd6c87c_11999_621a3a0543539e09ee1c409b9ab79034.webp 760w,
+               /media/learn/matplotlib/plot/output_26_0_hub2bec7c7120ee7ee069a4baf7cd6c87c_11999_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_26_0_hub2bec7c7120ee7ee069a4baf7cd6c87c_11999_11fabc0adac7f247206c460f1121b325.webp&#34;
+               width=&#34;397&#34;
+               height=&#34;261&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.clear()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;颜色、线条样式和标注样式可以分别设置：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sin_line = ax.plot(x, y, color=&#39;r&#39;, ls=&#39;--&#39;, marker=&#39;^&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_30_0_hu810c6884172a429ceac8ddcb084655e1_10698_8348100ef8ecfda85a796df0ee988d51.webp 400w,
+               /media/learn/matplotlib/plot/output_30_0_hu810c6884172a429ceac8ddcb084655e1_10698_5c68a0cefcab4deed9c97038b1f16f7f.webp 760w,
+               /media/learn/matplotlib/plot/output_30_0_hu810c6884172a429ceac8ddcb084655e1_10698_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_30_0_hu810c6884172a429ceac8ddcb084655e1_10698_8348100ef8ecfda85a796df0ee988d51.webp&#34;
+               width=&#34;397&#34;
+               height=&#34;261&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;坐标轴设置&#34;&gt;坐标轴设置&lt;/h2&gt;
+&lt;h3 id=&#34;坐标轴范围&#34;&gt;坐标轴范围&lt;/h3&gt;
+&lt;p&gt;坐标轴范围即定义域，也就是 &lt;code&gt;x&lt;/code&gt; 的取值范围；以及值域，也就是 &lt;code&gt;y&lt;/code&gt; 的取值范围。&lt;/p&gt;
+&lt;p&gt;我们绘制的是正弦函数一个周期内的图像，因此可以设置其横轴的取值范围为 $[0, 2 \pi]$。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.set_xlim(0, 2*np.pi)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;(0.0, 6.283185307179586)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_36_0_hu033717df1ccd863c78007142b5b3b2d5_10942_58c18d52cca5bd60469d6c6fffe56a2e.webp 400w,
+               /media/learn/matplotlib/plot/output_36_0_hu033717df1ccd863c78007142b5b3b2d5_10942_918ba5addc548780c1dca10aaf128df6.webp 760w,
+               /media/learn/matplotlib/plot/output_36_0_hu033717df1ccd863c78007142b5b3b2d5_10942_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_36_0_hu033717df1ccd863c78007142b5b3b2d5_10942_58c18d52cca5bd60469d6c6fffe56a2e.webp&#34;
+               width=&#34;397&#34;
+               height=&#34;261&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;也可以设置其值域为 $[-1, 1]$。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.set_ylim(-1, 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;(-1.0, 1.0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_39_0_hua97be4d272870965ca87d9822ce0eb4e_11161_9897a0a7526503571a07ede57ed4334d.webp 400w,
+               /media/learn/matplotlib/plot/output_39_0_hua97be4d272870965ca87d9822ce0eb4e_11161_854c0140dc891bc808e64f2af1cb8508.webp 760w,
+               /media/learn/matplotlib/plot/output_39_0_hua97be4d272870965ca87d9822ce0eb4e_11161_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_39_0_hua97be4d272870965ca87d9822ce0eb4e_11161_9897a0a7526503571a07ede57ed4334d.webp&#34;
+               width=&#34;397&#34;
+               height=&#34;265&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;坐标轴刻度&#34;&gt;坐标轴刻度&lt;/h3&gt;
+&lt;p&gt;三角函数在 $\pi$ 的有理数倍处往往可以取到特殊值，而绘图时默认横轴的刻度是整数，我们可以进行如下调整：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;xticks = np.linspace(0, 2*np.pi, num=7)
+ax.set_xticks(xticks)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[&amp;lt;matplotlib.axis.XTick at 0x18edb3363d0&amp;gt;,
+ &amp;lt;matplotlib.axis.XTick at 0x18edb336520&amp;gt;,
+ &amp;lt;matplotlib.axis.XTick at 0x18edb351220&amp;gt;,
+ &amp;lt;matplotlib.axis.XTick at 0x18edb34b2b0&amp;gt;,
+ &amp;lt;matplotlib.axis.XTick at 0x18edb3212b0&amp;gt;,
+ &amp;lt;matplotlib.axis.XTick at 0x18edb321130&amp;gt;,
+ &amp;lt;matplotlib.axis.XTick at 0x18edb344700&amp;gt;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_43_0_hub97d01af8acd82971ae05e7040e57227_12339_69f172f6f82bebe26be087202da4d07f.webp 400w,
+               /media/learn/matplotlib/plot/output_43_0_hub97d01af8acd82971ae05e7040e57227_12339_bf8763678c8412eaa5d1b9f4cc04a23b.webp 760w,
+               /media/learn/matplotlib/plot/output_43_0_hub97d01af8acd82971ae05e7040e57227_12339_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_43_0_hub97d01af8acd82971ae05e7040e57227_12339_69f172f6f82bebe26be087202da4d07f.webp&#34;
+               width=&#34;412&#34;
+               height=&#34;265&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;同理，纵轴的刻度也可以进行类似的调整：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;yticks = np.linspace(-1, 1, num=5)
+ax.set_yticks(yticks)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[&amp;lt;matplotlib.axis.YTick at 0x18edb310eb0&amp;gt;,
+ &amp;lt;matplotlib.axis.YTick at 0x18edb310df0&amp;gt;,
+ &amp;lt;matplotlib.axis.YTick at 0x18edb33bc70&amp;gt;,
+ &amp;lt;matplotlib.axis.YTick at 0x18edb2e3310&amp;gt;,
+ &amp;lt;matplotlib.axis.YTick at 0x18edb2e33a0&amp;gt;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_46_0_huf11d67f41c07d615b8ed296d37ffc591_10870_af087b4c83edc9b774158d8705fc7ff4.webp 400w,
+               /media/learn/matplotlib/plot/output_46_0_huf11d67f41c07d615b8ed296d37ffc591_10870_a5a8b0ebd4f8d60be441f64e976406ce.webp 760w,
+               /media/learn/matplotlib/plot/output_46_0_huf11d67f41c07d615b8ed296d37ffc591_10870_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_46_0_huf11d67f41c07d615b8ed296d37ffc591_10870_af087b4c83edc9b774158d8705fc7ff4.webp&#34;
+               width=&#34;405&#34;
+               height=&#34;265&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;坐标轴子刻度&#34;&gt;坐标轴子刻度&lt;/h3&gt;
+&lt;p&gt;坐标轴子刻度不能用标签或者值进行标注。访问坐标轴子刻度需要通过 &lt;code&gt;Axis&lt;/code&gt; 坐标轴对象。&lt;code&gt;MultipleLocator&lt;/code&gt; 类按照指定间隔设定刻度 &lt;code&gt;tick&lt;/code&gt;。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;miloc = plt.MultipleLocator(np.pi/6)
+ax.xaxis.set_minor_locator(miloc)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_50_0_huf11d67f41c07d615b8ed296d37ffc591_10930_fae3c7b810138bc78e239872babfb6c4.webp 400w,
+               /media/learn/matplotlib/plot/output_50_0_huf11d67f41c07d615b8ed296d37ffc591_10930_4e9651275a46cf5a7e8c67360f5530d7.webp 760w,
+               /media/learn/matplotlib/plot/output_50_0_huf11d67f41c07d615b8ed296d37ffc591_10930_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_50_0_huf11d67f41c07d615b8ed296d37ffc591_10930_fae3c7b810138bc78e239872babfb6c4.webp&#34;
+               width=&#34;405&#34;
+               height=&#34;265&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;miloc = plt.MultipleLocator(1/4)
+ax.yaxis.set_minor_locator(miloc)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_52_0_hu8df15c6ad9e30edf613a302d6a763973_11038_858f51720de4235c49d9c4a7b4992407.webp 400w,
+               /media/learn/matplotlib/plot/output_52_0_hu8df15c6ad9e30edf613a302d6a763973_11038_4e9c5192ddbb80f5a8d14ea6124b1ecb.webp 760w,
+               /media/learn/matplotlib/plot/output_52_0_hu8df15c6ad9e30edf613a302d6a763973_11038_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_52_0_hu8df15c6ad9e30edf613a302d6a763973_11038_858f51720de4235c49d9c4a7b4992407.webp&#34;
+               width=&#34;405&#34;
+               height=&#34;265&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;坐标轴刻度标签&#34;&gt;坐标轴刻度标签&lt;/h3&gt;
+&lt;p&gt;我们发现，前面一小节设置的横轴刻度还不能够满足我们的需求。如果刻度线下面显示刻度值是含有 $\pi$ 的无理数就更完美了。因此，需要设置坐标轴刻度标签。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;xticklabels = [0, r&#39;$\frac {\pi} {3}$&#39;, r&#39;$\frac {2 \pi} {3}$&#39;, r&#39;$\pi$&#39;,
+               r&#39;$\frac {4 \pi} {3}$&#39;, r&#39;$\frac {5 \pi} {3}$&#39;, r&#39;$2 \pi$&#39;]
+ax.set_xticklabels(xticklabels)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[Text(0.0, 0, &#39;0&#39;),
+ Text(1.0471975511965976, 0, &#39;$\\frac {\\pi} {3}$&#39;),
+ Text(2.0943951023931953, 0, &#39;$\\frac {2 \\pi} {3}$&#39;),
+ Text(3.141592653589793, 0, &#39;$\\pi$&#39;),
+ Text(4.1887902047863905, 0, &#39;$\\frac {4 \\pi} {3}$&#39;),
+ Text(5.235987755982988, 0, &#39;$\\frac {5 \\pi} {3}$&#39;),
+ Text(6.283185307179586, 0, &#39;$2 \\pi$&#39;)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;要注意的是，如果需要渲染 &lt;strong&gt;LaTeX&lt;/strong&gt; 公式，需要在字符串首尾添加 &lt;code&gt;$&lt;/code&gt; 符。而且，由于 &lt;strong&gt;LaTeX&lt;/strong&gt; 代码涉及 &lt;code&gt;\&lt;/code&gt; 转义符，而 &lt;strong&gt;Python&lt;/strong&gt; 字符串中也有类似语法，故字符串前需要加上 &lt;code&gt;r&lt;/code&gt; 或者使用双反斜杠 &lt;code&gt;\\&lt;/code&gt;。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_57_0_hua851f138c8220be107cc85b81a13ac8e_9910_aa6134b4c278d24e3186bebb9fc35eca.webp 400w,
+               /media/learn/matplotlib/plot/output_57_0_hua851f138c8220be107cc85b81a13ac8e_9910_a5a07dfe2b5d15711a9f531ac4549cf8.webp 760w,
+               /media/learn/matplotlib/plot/output_57_0_hua851f138c8220be107cc85b81a13ac8e_9910_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_57_0_hua851f138c8220be107cc85b81a13ac8e_9910_aa6134b4c278d24e3186bebb9fc35eca.webp&#34;
+               width=&#34;398&#34;
+               height=&#34;274&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;同理，纵轴的标签也可以这样设置：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;yticklabels = [&#39;-1&#39;, r&#39;$- \frac {1} {2}$&#39;, &#39;0&#39;, r&#39;$\frac {1} {2}$&#39;, &#39;1&#39;]
+ax.set_yticklabels(yticklabels)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[Text(0, -1.0, &#39;-1&#39;),
+ Text(0, -0.5, &#39;$- \\frac {1} {2}$&#39;),
+ Text(0, 0.0, &#39;0&#39;),
+ Text(0, 0.5, &#39;$\\frac {1} {2}$&#39;),
+ Text(0, 1.0, &#39;1&#39;)]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_60_0_hue63b1e1568089734917a313dd573dd37_9645_c96fbcedd464f6ad533e35b88932c707.webp 400w,
+               /media/learn/matplotlib/plot/output_60_0_hue63b1e1568089734917a313dd573dd37_9645_b2ff047d28680f48f652b83dd401d1df.webp 760w,
+               /media/learn/matplotlib/plot/output_60_0_hue63b1e1568089734917a313dd573dd37_9645_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_60_0_hue63b1e1568089734917a313dd573dd37_9645_c96fbcedd464f6ad533e35b88932c707.webp&#34;
+               width=&#34;389&#34;
+               height=&#34;274&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;坐标轴标题&#34;&gt;坐标轴标题&lt;/h3&gt;
+&lt;p&gt;坐标轴的标题同样也可以设置，并且支持 &lt;strong&gt;LaTeX&lt;/strong&gt;，本小节不再赘述。&lt;/p&gt;
+&lt;p&gt;有些时候，坐标轴标题需要中文显示，而如果采用默认设置就会出现乱码。因此，需要进行如下设置：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from pylab import mpl
+mpl.rcParams[&#39;font.sans-serif&#39;] = [&#39;SimHei&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;现在，我们添加横纵坐标轴标题：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.set_xlabel(&#39;相位&#39;)
+ax.set_ylabel(&#39;幅度&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Text(3.200000000000003, 0.5, &#39;幅度&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_67_0_hu7eb7ebec16cc66a3cc8f3d7a14024f48_10273_a31028837b290d895b2f5c1ee025becb.webp 400w,
+               /media/learn/matplotlib/plot/output_67_0_hu7eb7ebec16cc66a3cc8f3d7a14024f48_10273_1261e74111572e9ada269f6fb066e35a.webp 760w,
+               /media/learn/matplotlib/plot/output_67_0_hu7eb7ebec16cc66a3cc8f3d7a14024f48_10273_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_67_0_hu7eb7ebec16cc66a3cc8f3d7a14024f48_10273_a31028837b290d895b2f5c1ee025becb.webp&#34;
+               width=&#34;402&#34;
+               height=&#34;286&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;标题字体的大小也可以设置：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.set_xlabel(&#39;相位&#39;, fontsize=16)
+ax.set_ylabel(&#39;幅度&#39;, fontsize=16)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Text(16.403125000000003, 0.5, &#39;幅度&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_70_0_hu265ebd4de641f6a07a43c3dbf14357ba_11092_2032dc016cf16705e21be0472d19ab13.webp 400w,
+               /media/learn/matplotlib/plot/output_70_0_hu265ebd4de641f6a07a43c3dbf14357ba_11092_df51bd0399fd05e8843cc536fc94e45a.webp 760w,
+               /media/learn/matplotlib/plot/output_70_0_hu265ebd4de641f6a07a43c3dbf14357ba_11092_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_70_0_hu265ebd4de641f6a07a43c3dbf14357ba_11092_2032dc016cf16705e21be0472d19ab13.webp&#34;
+               width=&#34;407&#34;
+               height=&#34;292&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;网格线&#34;&gt;网格线&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Axes&lt;/code&gt; 对象的 &lt;code&gt;grid&lt;/code&gt; 方法可以添加网格线。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.grid()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_74_0_hu198eac112cfc42e27dc9ef18913e2f88_11271_cd3ba2abd8d5945cd7887e0b55a4842a.webp 400w,
+               /media/learn/matplotlib/plot/output_74_0_hu198eac112cfc42e27dc9ef18913e2f88_11271_c5bc60b7f9de17332b2eccf1433d17ae.webp 760w,
+               /media/learn/matplotlib/plot/output_74_0_hu198eac112cfc42e27dc9ef18913e2f88_11271_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_74_0_hu198eac112cfc42e27dc9ef18913e2f88_11271_cd3ba2abd8d5945cd7887e0b55a4842a.webp&#34;
+               width=&#34;407&#34;
+               height=&#34;292&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.grid(None)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以设置网格线的样式：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.grid(ls=&#39;-.&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_78_0_huf61ac3a783d548372f5d5c7d1cf13773_15413_85001ba1b4876f4aa225bb891391367f.webp 400w,
+               /media/learn/matplotlib/plot/output_78_0_huf61ac3a783d548372f5d5c7d1cf13773_15413_b076cdf423a49f828cca8c19bf05b105.webp 760w,
+               /media/learn/matplotlib/plot/output_78_0_huf61ac3a783d548372f5d5c7d1cf13773_15413_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_78_0_huf61ac3a783d548372f5d5c7d1cf13773_15413_85001ba1b4876f4aa225bb891391367f.webp&#34;
+               width=&#34;407&#34;
+               height=&#34;292&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.grid(None)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以只设置一个轴显示网格线：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.grid(axis=&#39;x&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_82_0_hub154a2d96f7455cdc0f594b14c25e614_13598_3e6b2e93eed38a3278862e977011e3e3.webp 400w,
+               /media/learn/matplotlib/plot/output_82_0_hub154a2d96f7455cdc0f594b14c25e614_13598_5d3570ec6fda3fc6569a3c216a220077.webp 760w,
+               /media/learn/matplotlib/plot/output_82_0_hub154a2d96f7455cdc0f594b14c25e614_13598_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_82_0_hub154a2d96f7455cdc0f594b14c25e614_13598_3e6b2e93eed38a3278862e977011e3e3.webp&#34;
+               width=&#34;407&#34;
+               height=&#34;292&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.grid(None)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;设置网格线的粗细：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.grid(linewidth=2)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_86_0_hu9d24884ed17b5a874e91b5b62be7c3df_12533_4923042411a35c96de5a242e78d1dcd3.webp 400w,
+               /media/learn/matplotlib/plot/output_86_0_hu9d24884ed17b5a874e91b5b62be7c3df_12533_8fec8359414cc54ac1abd890fbffda22.webp 760w,
+               /media/learn/matplotlib/plot/output_86_0_hu9d24884ed17b5a874e91b5b62be7c3df_12533_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_86_0_hu9d24884ed17b5a874e91b5b62be7c3df_12533_4923042411a35c96de5a242e78d1dcd3.webp&#34;
+               width=&#34;407&#34;
+               height=&#34;292&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;图例&#34;&gt;图例&lt;/h2&gt;
+&lt;p&gt;添加图例首先需要设置图像的 &lt;code&gt;label&lt;/code&gt; 参数。我们首先要找到表示正弦曲线的 &lt;code&gt;Line2D&lt;/code&gt; 对象：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sin_line?
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[1;31mType:[0m        list
+[1;31mString form:[0m [&amp;lt;matplotlib.lines.Line2D object at 0x0000018EDB35B5B0&amp;gt;]
+[1;31mLength:[0m      1
+[1;31mDocstring:[0m  
+Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sin_line[0].set_label(r&#39;$y = \sin{x}$&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;loc&lt;/code&gt; 用于确定图例的位置，&lt;code&gt;upper right&lt;/code&gt; 表示图例的显示位置为右上角。其他方位以此类推。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.legend(loc=&#39;upper right&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;matplotlib.legend.Legend at 0x18edb5ad280&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_93_0_hu1b4e3b7c75ffbec31dbfeabf19fa38cf_13397_de1c6e0124c0b100ec5ce9c124218aa4.webp 400w,
+               /media/learn/matplotlib/plot/output_93_0_hu1b4e3b7c75ffbec31dbfeabf19fa38cf_13397_3df5b054dd1396d03ad3ed60bacd2579.webp 760w,
+               /media/learn/matplotlib/plot/output_93_0_hu1b4e3b7c75ffbec31dbfeabf19fa38cf_13397_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_93_0_hu1b4e3b7c75ffbec31dbfeabf19fa38cf_13397_de1c6e0124c0b100ec5ce9c124218aa4.webp&#34;
+               width=&#34;407&#34;
+               height=&#34;292&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.legend_.remove()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果不希望图例显示在绘图区域，则需要通过 &lt;code&gt;Figure&lt;/code&gt; 对象，将图例绘制在窗口内。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig.legend(loc=&#39;upper center&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;matplotlib.legend.Legend at 0x18edb2e30d0&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_97_0_hu045eae641595841d4c98c4afb2247139_13668_b54386c7f8541d60442dc66c910fbd82.webp 400w,
+               /media/learn/matplotlib/plot/output_97_0_hu045eae641595841d4c98c4afb2247139_13668_5707621ff2db99f37521cadb3a4a0b05.webp 760w,
+               /media/learn/matplotlib/plot/output_97_0_hu045eae641595841d4c98c4afb2247139_13668_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_97_0_hu045eae641595841d4c98c4afb2247139_13668_b54386c7f8541d60442dc66c910fbd82.webp&#34;
+               width=&#34;407&#34;
+               height=&#34;312&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;注解&#34;&gt;注解&lt;/h2&gt;
+&lt;p&gt;在 &lt;strong&gt;Matplotlib&lt;/strong&gt; 中，我们可以使用 &lt;code&gt;annotate&lt;/code&gt; 方法来创建一个注解。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.annotate(
+    text=&#39;max&#39;,
+    fontsize=20,
+    xy=(np.pi/2, 1),
+    xytext=(np.pi/2, 0.7),
+    horizontalalignment=&#39;center&#39;
+)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_100_0_hu8147d6fc54616c98d790534f38eb2185_14340_af8d6d42332324750a4c7bc8ac7ab2ea.webp 400w,
+               /media/learn/matplotlib/plot/output_100_0_hu8147d6fc54616c98d790534f38eb2185_14340_4de37dbc2058df18aacd9b13a816418b.webp 760w,
+               /media/learn/matplotlib/plot/output_100_0_hu8147d6fc54616c98d790534f38eb2185_14340_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_100_0_hu8147d6fc54616c98d790534f38eb2185_14340_af8d6d42332324750a4c7bc8ac7ab2ea.webp&#34;
+               width=&#34;407&#34;
+               height=&#34;312&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;其中，参数 &lt;code&gt;text&lt;/code&gt; 表示注解的文本内容，参数 &lt;code&gt;xy&lt;/code&gt; 表示被注解的点的坐标，参数 &lt;code&gt;xytext&lt;/code&gt; 表示注解的文本框的坐标。&lt;/p&gt;
+&lt;p&gt;我们还可以创建带有箭头的注解，这需要用到 &lt;code&gt;arrowprops&lt;/code&gt; 参数。默认情况下，该参数取空值 &lt;code&gt;None&lt;/code&gt;。如果需要绘制箭头，则需要传入指定格式的字典。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.annotate(
+    text=&#39;min&#39;,
+    fontsize=20,
+    xy=(np.pi*3/2, -1),
+    xytext=(np.pi*3/2, -0.5),
+    horizontalalignment=&#39;center&#39;,
+    arrowprops=dict(shrink=0.05)
+)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_103_0_hu6da2fef7fd7f26c31d200ab3f3f58484_15113_b96266f3c05c581697ada85e15cdf752.webp 400w,
+               /media/learn/matplotlib/plot/output_103_0_hu6da2fef7fd7f26c31d200ab3f3f58484_15113_3d47fd75e421353c27bdbecd8eec4667.webp 760w,
+               /media/learn/matplotlib/plot/output_103_0_hu6da2fef7fd7f26c31d200ab3f3f58484_15113_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_103_0_hu6da2fef7fd7f26c31d200ab3f3f58484_15113_b96266f3c05c581697ada85e15cdf752.webp&#34;
+               width=&#34;407&#34;
+               height=&#34;312&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;箭头参数主要包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;width&lt;/code&gt; 箭头宽度&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;headwidth&lt;/code&gt; 箭头头部宽度&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;headlength&lt;/code&gt; 箭头头部长度&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;shrink&lt;/code&gt; 箭头两端收缩的百分比&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们也可以采用内置的模板直接绘制，即指定 &lt;code&gt;arrowstyle&lt;/code&gt; 参数。这个时候，不能手动设置箭头参数。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.annotate(
+    text=r&#39;$\frac {T} {2}$&#39;,
+    fontsize=20,
+    xy=(np.pi, 0),
+    xytext=(4, 0.5),
+    horizontalalignment=&#39;right&#39;,
+    verticalalignment=&#39;top&#39;,
+    arrowprops=dict(arrowstyle=&#39;-&amp;gt;&#39;)
+)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot/output_106_0_hu103790f27975de6597f4f97fe24e02b9_16207_886731bf2b0174fdc4c686f40377a2e6.webp 400w,
+               /media/learn/matplotlib/plot/output_106_0_hu103790f27975de6597f4f97fe24e02b9_16207_e32afc4e65df400ef89ebaecd1883882.webp 760w,
+               /media/learn/matplotlib/plot/output_106_0_hu103790f27975de6597f4f97fe24e02b9_16207_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot/output_106_0_hu103790f27975de6597f4f97fe24e02b9_16207_886731bf2b0174fdc4c686f40377a2e6.webp&#34;
+               width=&#34;407&#34;
+               height=&#34;312&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;</description>
+    </item>
+    
+    <item>
+      <title>Matplotlib 条形图</title>
+      <link>https://bowenei.gitee.io/learn/matplotlib/bar/</link>
+      <pubDate>Mon, 26 Apr 2021 16:31:43 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/matplotlib/bar/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import matplotlib.pyplot as plt
+import numpy as np
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;入门&#34;&gt;入门&lt;/h2&gt;
+&lt;p&gt;我们首先生成随机的数据：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = np.arange(1, 7)
+y = np.abs(np.random.randn(6))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;直接调用 &lt;code&gt;plt&lt;/code&gt; 的绘图方法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;plt.bar(x, y)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;BarContainer object of 6 artists&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/bar/output_6_1_hu5f34db8fef0416349240920cd4473481_3197_96f208424e6e2195d9e0e146c1d0bdb3.webp 400w,
+               /media/learn/matplotlib/bar/output_6_1_hu5f34db8fef0416349240920cd4473481_3197_cb38f7eb9a708b13f10174e01f66ac16.webp 760w,
+               /media/learn/matplotlib/bar/output_6_1_hu5f34db8fef0416349240920cd4473481_3197_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/bar/output_6_1_hu5f34db8fef0416349240920cd4473481_3197_96f208424e6e2195d9e0e146c1d0bdb3.webp&#34;
+               width=&#34;372&#34;
+               height=&#34;248&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;当然，一个好的习惯是使用 &lt;code&gt;Axes&lt;/code&gt; 对象：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig = plt.figure()
+ax = fig.add_axes([0.1, 0.1, 0.8, 0.8])
+ax.bar(x, y)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;BarContainer object of 6 artists&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/bar/output_8_1_hub853861f2dba6d36a387d464f17996c9_3262_bff186308c531ba61bec0f7a82268775.webp 400w,
+               /media/learn/matplotlib/bar/output_8_1_hub853861f2dba6d36a387d464f17996c9_3262_75967e37a4f467c6e8c145fc1335dc6e.webp 760w,
+               /media/learn/matplotlib/bar/output_8_1_hub853861f2dba6d36a387d464f17996c9_3262_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/bar/output_8_1_hub853861f2dba6d36a387d464f17996c9_3262_bff186308c531ba61bec0f7a82268775.webp&#34;
+               width=&#34;382&#34;
+               height=&#34;261&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.clear()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;图像美化&#34;&gt;图像美化&lt;/h2&gt;
+&lt;h3 id=&#34;设置颜色&#34;&gt;设置颜色&lt;/h3&gt;
+&lt;p&gt;我们可以使用 &lt;code&gt;color&lt;/code&gt; 参数来改变条形图的颜色：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.bar(x, y, color=&#39;g&#39;)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/bar/output_13_0_hu6dc3929814363f283482b98f2eb5d462_3258_1f93f69ea3b6b0bcf2ca5ac1c87d5103.webp 400w,
+               /media/learn/matplotlib/bar/output_13_0_hu6dc3929814363f283482b98f2eb5d462_3258_2310d69f5c0761a06b0a9bc4bae1c796.webp 760w,
+               /media/learn/matplotlib/bar/output_13_0_hu6dc3929814363f283482b98f2eb5d462_3258_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/bar/output_13_0_hu6dc3929814363f283482b98f2eb5d462_3258_1f93f69ea3b6b0bcf2ca5ac1c87d5103.webp&#34;
+               width=&#34;382&#34;
+               height=&#34;261&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.clear()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;甚至可以指定每个柱子都是不同颜色：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.bar(x, y, color=[&#39;r&#39;, &#39;g&#39;, &#39;b&#39;, &#39;y&#39;, &#39;c&#39;, &#39;m&#39;])
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/bar/output_16_0_hu5f2a8e709520895074a6e1fe60608973_3290_55b2cc75ba06bc36f545c889d536ae98.webp 400w,
+               /media/learn/matplotlib/bar/output_16_0_hu5f2a8e709520895074a6e1fe60608973_3290_4eea2cc0666790c472fa3521f3bb45cd.webp 760w,
+               /media/learn/matplotlib/bar/output_16_0_hu5f2a8e709520895074a6e1fe60608973_3290_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/bar/output_16_0_hu5f2a8e709520895074a6e1fe60608973_3290_55b2cc75ba06bc36f545c889d536ae98.webp&#34;
+               width=&#34;382&#34;
+               height=&#34;261&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.clear()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;设置轮廓&#34;&gt;设置轮廓&lt;/h3&gt;
+&lt;p&gt;我们可以使用 &lt;code&gt;edgecolor&lt;/code&gt; 参数来改变条形图的轮廓颜色：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.bar(x, y, edgecolor=&#39;k&#39;)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/bar/output_20_0_hua66922e8195452b78210fc6026d5e212_3344_e69273ed73a91d05305fa2af1d1b327b.webp 400w,
+               /media/learn/matplotlib/bar/output_20_0_hua66922e8195452b78210fc6026d5e212_3344_004eac1cc3fb545eab4e3c0698636b02.webp 760w,
+               /media/learn/matplotlib/bar/output_20_0_hua66922e8195452b78210fc6026d5e212_3344_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/bar/output_20_0_hua66922e8195452b78210fc6026d5e212_3344_e69273ed73a91d05305fa2af1d1b327b.webp&#34;
+               width=&#34;382&#34;
+               height=&#34;261&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.clear()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;而 &lt;code&gt;linewidth&lt;/code&gt; 参数可以调节边缘的粗细：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.bar(x, y, edgecolor=&#39;k&#39;, linewidth=3)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/bar/output_23_0_hu947f5171f82851ad684462bbd5fdc51f_3357_a8a35f0c407c1094c019280945a91ecb.webp 400w,
+               /media/learn/matplotlib/bar/output_23_0_hu947f5171f82851ad684462bbd5fdc51f_3357_488343a1bd49039cfc617b5bf0e218b8.webp 760w,
+               /media/learn/matplotlib/bar/output_23_0_hu947f5171f82851ad684462bbd5fdc51f_3357_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/bar/output_23_0_hu947f5171f82851ad684462bbd5fdc51f_3357_a8a35f0c407c1094c019280945a91ecb.webp&#34;
+               width=&#34;382&#34;
+               height=&#34;261&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.clear()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;linestyle&lt;/code&gt; 参数与二维绘图 &lt;code&gt;plot&lt;/code&gt; 同理，此处不再赘述。&lt;/p&gt;
+&lt;h3 id=&#34;设置填充&#34;&gt;设置填充&lt;/h3&gt;
+&lt;p&gt;我们可以使用 &lt;code&gt;hatch&lt;/code&gt; 参数来指定条形图的填充形状：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.bar(x, y, hatch=&#39;\\&#39;, edgecolor=&#39;k&#39;, color=&#39;w&#39;)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/bar/output_28_0_hu87bffb4db782a6341f708ba1c1cfaa36_5892_6a7113ea553e6e7bc5b81f0a8dc58836.webp 400w,
+               /media/learn/matplotlib/bar/output_28_0_hu87bffb4db782a6341f708ba1c1cfaa36_5892_eff60d8e8ad86b06d7bf9d392da35705.webp 760w,
+               /media/learn/matplotlib/bar/output_28_0_hu87bffb4db782a6341f708ba1c1cfaa36_5892_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/bar/output_28_0_hu87bffb4db782a6341f708ba1c1cfaa36_5892_6a7113ea553e6e7bc5b81f0a8dc58836.webp&#34;
+               width=&#34;382&#34;
+               height=&#34;261&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.clear()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;设置宽度&#34;&gt;设置宽度&lt;/h3&gt;
+&lt;p&gt;我们可以使用 &lt;code&gt;width&lt;/code&gt; 参数来设置条形图的宽度：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.bar(x, y, width=0.5)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/bar/output_32_0_hubef24cadc4ab14e3baee2f6fed21ac53_3260_f3a8c20810f78e1168fef700329853a9.webp 400w,
+               /media/learn/matplotlib/bar/output_32_0_hubef24cadc4ab14e3baee2f6fed21ac53_3260_86d18afe78b637e37b24a4cd3ce41969.webp 760w,
+               /media/learn/matplotlib/bar/output_32_0_hubef24cadc4ab14e3baee2f6fed21ac53_3260_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/bar/output_32_0_hubef24cadc4ab14e3baee2f6fed21ac53_3260_f3a8c20810f78e1168fef700329853a9.webp&#34;
+               width=&#34;382&#34;
+               height=&#34;261&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;width&lt;/code&gt; 参数的取值范围一般为 $(0, 1]$ 之间的浮点数。如果 &lt;code&gt;width=1&lt;/code&gt;，那么每个柱子之间就没有空隙。这个浮点数的几何意义相当于缩放比例。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.clear()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;系列条形图&#34;&gt;系列条形图&lt;/h2&gt;
+&lt;p&gt;现在，我们需要统计 CSGO 七张服役地图 T 和 CT 的胜率，数据如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;maps = [&#39;Dust2&#39;, &#39;Inferno&#39;, &#39;Mirage&#39;, &#39;Nuke&#39;, &#39;Overpass&#39;, &#39;Train&#39;, &#39;Vertigo&#39;]
+CT_win_rate = [53.7, 49.8, 48.1, 50.7, 57.9, 53.4, 58.6]
+T_win_rate = [46.3, 50.2, 51.9, 49.3, 42.1, 46.6, 41.4]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们需要设置好条形图的宽度。由于实例一共有两个系列（CT 和 T），我们可以将每个柱子的宽度设为 0.35，这样加起来一共 0.7，每一组柱子之间也有缝隙。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;width = 0.35
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;下面设置条形图的绘制位置，它由 &lt;code&gt;width&lt;/code&gt; 和标签的索引位置 &lt;code&gt;x&lt;/code&gt; 决定：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = np.arange(len(maps))
+x_CT = x - width/2
+x_T = x + width/2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;绘制系列条形图：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;y_CT = ax.bar(x_CT, CT_win_rate, color=&#39;blue&#39;, width=width, label=&#39;CT&#39;)
+y_T = ax.bar(x_T, T_win_rate, color=&#39;orange&#39;, width=width, label=&#39;T&#39;)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/bar/output_43_0_hu2aa0af38ba2044f8093cd5dc548a0a58_3662_d9003a5951a191dc3836d30bfe9809b4.webp 400w,
+               /media/learn/matplotlib/bar/output_43_0_hu2aa0af38ba2044f8093cd5dc548a0a58_3662_9c24c6128175e94a6b7ee9ec678dc7fa.webp 760w,
+               /media/learn/matplotlib/bar/output_43_0_hu2aa0af38ba2044f8093cd5dc548a0a58_3662_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/bar/output_43_0_hu2aa0af38ba2044f8093cd5dc548a0a58_3662_d9003a5951a191dc3836d30bfe9809b4.webp&#34;
+               width=&#34;379&#34;
+               height=&#34;261&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;添加标签、标题和图例：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.set_xticks(x)
+ax.set_ylim(40, 60)
+ax.set_xticklabels(maps)
+ax.set_ylabel(&#39;Win Rate (%)&#39;)
+ax.legend(loc=&#39;upper right&#39;)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/bar/output_45_0_hu68b2b0c5f17ebc053275af78cf866e3d_8100_7165a49dfc807eae85ec1fedd737dff0.webp 400w,
+               /media/learn/matplotlib/bar/output_45_0_hu68b2b0c5f17ebc053275af78cf866e3d_8100_50645cc5af4122d3294c576b1d087394.webp 760w,
+               /media/learn/matplotlib/bar/output_45_0_hu68b2b0c5f17ebc053275af78cf866e3d_8100_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/bar/output_45_0_hu68b2b0c5f17ebc053275af78cf866e3d_8100_7165a49dfc807eae85ec1fedd737dff0.webp&#34;
+               width=&#34;403&#34;
+               height=&#34;265&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;为其添加水平网格线：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.grid(linestyle=&#39;-.&#39;, axis=&#39;y&#39;)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/bar/output_47_0_huc08cd86a57978935dcbb385382028266_13451_2694ebf75558c2ed8460067f0fbde479.webp 400w,
+               /media/learn/matplotlib/bar/output_47_0_huc08cd86a57978935dcbb385382028266_13451_02d823c59478355008454c7d6519e82e.webp 760w,
+               /media/learn/matplotlib/bar/output_47_0_huc08cd86a57978935dcbb385382028266_13451_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/bar/output_47_0_huc08cd86a57978935dcbb385382028266_13451_2694ebf75558c2ed8460067f0fbde479.webp&#34;
+               width=&#34;403&#34;
+               height=&#34;265&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;网格线显示在了条形图上方，使用 &lt;code&gt;zorder&lt;/code&gt; 参数改变各个元素的层数。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.clear()
+
+y_CT = ax.bar(x_CT, CT_win_rate, color=&#39;blue&#39;, width=width, label=&#39;CT&#39;, zorder=2)
+y_T = ax.bar(x_T, T_win_rate, color=&#39;orange&#39;, width=width, label=&#39;T&#39;, zorder=2)
+ax.set_ylim(40, 60)
+ax.set_xticks(x)
+ax.set_xticklabels(maps)
+ax.set_ylabel(&#39;Win Rate (%)&#39;)
+ax.legend(loc=&#39;upper right&#39;)
+ax.grid(linestyle=&#39;-.&#39;, axis=&#39;y&#39;, zorder=1)
+
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/bar/output_49_0_hu5e314233e7b735c647f715e07fc5a149_11665_bb0f5c385d32eed1719319de51306a42.webp 400w,
+               /media/learn/matplotlib/bar/output_49_0_hu5e314233e7b735c647f715e07fc5a149_11665_cbcfc767fcb1f1da898941ccf02cb5c3.webp 760w,
+               /media/learn/matplotlib/bar/output_49_0_hu5e314233e7b735c647f715e07fc5a149_11665_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/bar/output_49_0_hu5e314233e7b735c647f715e07fc5a149_11665_bb0f5c385d32eed1719319de51306a42.webp&#34;
+               width=&#34;403&#34;
+               height=&#34;265&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.clear()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;水平条形图&#34;&gt;水平条形图&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = np.arange(1, 7)
+y = np.abs(np.random.randn(6))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Matplotlib&lt;/strong&gt; 中使用 &lt;code&gt;barh&lt;/code&gt; 来绘制水平条形图。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.barh(x, y)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/bar/output_54_0_hu6a8e98a17393192bceb713dd55a4c49a_3298_0002642e0de8364b18f60bc661211d55.webp 400w,
+               /media/learn/matplotlib/bar/output_54_0_hu6a8e98a17393192bceb713dd55a4c49a_3298_009c14c431067476b2583cba9a08383b.webp 760w,
+               /media/learn/matplotlib/bar/output_54_0_hu6a8e98a17393192bceb713dd55a4c49a_3298_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/bar/output_54_0_hu6a8e98a17393192bceb713dd55a4c49a_3298_0002642e0de8364b18f60bc661211d55.webp&#34;
+               width=&#34;373&#34;
+               height=&#34;261&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;其余设置与普通的条形图几乎没有任何区别。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.clear()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;堆叠条形图&#34;&gt;堆叠条形图&lt;/h2&gt;
+&lt;p&gt;我们现在给定一个 $3 \times 6$ 的矩阵，这三行数值都属于不同的系列，并且我们希望对其求和。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = np.arange(1, 7)
+y = np.abs(np.random.randn(3, 6))
+y1 = y[0, :]
+y2 = y[1, :]
+y3 = y[2, :]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;下面我们绘制堆叠条形图，我们通过 &lt;code&gt;bottom&lt;/code&gt; 参数来设置条形图的底部坐标。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.bar(x, y1)
+ax.bar(x, y2, bottom=y1)
+ax.bar(x, y3, bottom=(y1 + y2))
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/bar/output_61_0_hu43e9a2f1a74b3b99e6589425b7cd1ca7_4340_f2a8b09398b977736a3af6bf7d6168e1.webp 400w,
+               /media/learn/matplotlib/bar/output_61_0_hu43e9a2f1a74b3b99e6589425b7cd1ca7_4340_0815341fe07740d5e23cae1606b8f9ec.webp 760w,
+               /media/learn/matplotlib/bar/output_61_0_hu43e9a2f1a74b3b99e6589425b7cd1ca7_4340_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/bar/output_61_0_hu43e9a2f1a74b3b99e6589425b7cd1ca7_4340_f2a8b09398b977736a3af6bf7d6168e1.webp&#34;
+               width=&#34;382&#34;
+               height=&#34;261&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.clear()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;条形图与折线图的综合应用&#34;&gt;条形图与折线图的综合应用&lt;/h2&gt;
+&lt;p&gt;我们经常会碰到如下情况：需要对比两个不在同一数量级的量。这个时候我们经常用一张图、两个纵坐标轴的方法来绘图。数据如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = np.arange(1, 7)
+y1 = np.abs(np.random.rand(6))
+y2 = np.abs(100 * np.random.rand(6))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用 &lt;code&gt;Axes&lt;/code&gt; 对象的 &lt;code&gt;twinx&lt;/code&gt; 方法可以让返回的新 &lt;code&gt;Axes&lt;/code&gt; 对象和原来的 &lt;code&gt;Axes&lt;/code&gt; 对象共用同一个 $x$ 轴。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax_t = ax.twinx()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;两个的 &lt;code&gt;Axes&lt;/code&gt; 对象分别绘制条形图和折线图。我们希望折线图显示在条形图的上方，故使用 &lt;code&gt;zorder&lt;/code&gt; 参数。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.bar(x, y1, zorder=1)
+ax_t.plot(x, y2, zorder=1, linewidth=2, marker=&#39;^&#39;, color=&#39;r&#39;)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/bar/output_69_0_hu31c8d98afeccbd5a4713a1782d0193a8_11662_7682f18df8d99f0e18b497adb7434ecf.webp 400w,
+               /media/learn/matplotlib/bar/output_69_0_hu31c8d98afeccbd5a4713a1782d0193a8_11662_652c888d820b145e4eca7ccc4ad71bd4.webp 760w,
+               /media/learn/matplotlib/bar/output_69_0_hu31c8d98afeccbd5a4713a1782d0193a8_11662_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/bar/output_69_0_hu31c8d98afeccbd5a4713a1782d0193a8_11662_7682f18df8d99f0e18b497adb7434ecf.webp&#34;
+               width=&#34;402&#34;
+               height=&#34;261&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Matplotlib 子图</title>
+      <link>https://bowenei.gitee.io/learn/matplotlib/subplot/</link>
+      <pubDate>Mon, 26 Apr 2021 21:01:26 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/matplotlib/subplot/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import matplotlib.pyplot as plt
+import numpy as np
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;入门&#34;&gt;入门&lt;/h2&gt;
+&lt;p&gt;下面，我们将指数函数和对数函数的图像绘制在同一个绘图窗口中。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ex = np.linspace(-1, 1, num=101)
+ey = np.exp(ex)
+
+lnx = np.linspace(0.02, 1, num=51)
+lny = np.log(lnx)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用 &lt;code&gt;subplot&lt;/code&gt; 可以指定子图的排列方式以及索引。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;plt.subplot(121)
+plt.plot(ex, ey)
+
+plt.subplot(122)
+plt.plot(lnx, lny)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[&amp;lt;matplotlib.lines.Line2D at 0x7fa93eb835d0&amp;gt;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_6_1_hu461e1329263ef7ef5add41e3125a91b1_12219_01d8e5b0905ea2aaa185a796b2679cae.webp 400w,
+               /media/learn/matplotlib/subplot/output_6_1_hu461e1329263ef7ef5add41e3125a91b1_12219_15745bf3b0ea2e6c90abd60f0ecb83f7.webp 760w,
+               /media/learn/matplotlib/subplot/output_6_1_hu461e1329263ef7ef5add41e3125a91b1_12219_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_6_1_hu461e1329263ef7ef5add41e3125a91b1_12219_01d8e5b0905ea2aaa185a796b2679cae.webp&#34;
+               width=&#34;376&#34;
+               height=&#34;248&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;subplot&lt;/code&gt; 返回 &lt;code&gt;Axes&lt;/code&gt; 对象。因此，上面的绘图代码也可以这样来写：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax1 = plt.subplot(121)
+ax1.plot(ex, ey)
+
+ax2 = plt.subplot(122)
+ax2.plot(lnx, lny)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[&amp;lt;matplotlib.lines.Line2D at 0x7fa93ea6ba50&amp;gt;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_8_1_hu461e1329263ef7ef5add41e3125a91b1_12219_d3b9b86b104634fb63e5aa0f3be9efcf.webp 400w,
+               /media/learn/matplotlib/subplot/output_8_1_hu461e1329263ef7ef5add41e3125a91b1_12219_ca6fcfa98889455c0a91bb566d9e0e8c.webp 760w,
+               /media/learn/matplotlib/subplot/output_8_1_hu461e1329263ef7ef5add41e3125a91b1_12219_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_8_1_hu461e1329263ef7ef5add41e3125a91b1_12219_d3b9b86b104634fb63e5aa0f3be9efcf.webp&#34;
+               width=&#34;376&#34;
+               height=&#34;248&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;但是，&lt;code&gt;subplot&lt;/code&gt; 方法不能够直接返回 &lt;code&gt;Figure&lt;/code&gt; 对象，这会在设置 &lt;code&gt;Figure&lt;/code&gt; 对象属性的时候造成一些麻烦。因此，我们要介绍更一般的方法。&lt;/p&gt;
+&lt;h2 id=&#34;创建指定排布的子图&#34;&gt;创建指定排布的子图&lt;/h2&gt;
+&lt;p&gt;在 &lt;strong&gt;Matplotlib&lt;/strong&gt; 中，我们使用 &lt;code&gt;subplots&lt;/code&gt; 创建可以指定子图排布的窗口。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig, ax = plt.subplots()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_12_0_hua71c6ff33d313ace5dd8f5d3487aba12_3541_59e45b3a9a0b1d725ef8e0dccd10ba09.webp 400w,
+               /media/learn/matplotlib/subplot/output_12_0_hua71c6ff33d313ace5dd8f5d3487aba12_3541_ddd90efbf2d291237b551524907843a6.webp 760w,
+               /media/learn/matplotlib/subplot/output_12_0_hua71c6ff33d313ace5dd8f5d3487aba12_3541_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_12_0_hua71c6ff33d313ace5dd8f5d3487aba12_3541_59e45b3a9a0b1d725ef8e0dccd10ba09.webp&#34;
+               width=&#34;380&#34;
+               height=&#34;252&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;如果不给 &lt;code&gt;subplots&lt;/code&gt; 指定任何参数，那么默认就会创建一个 &lt;code&gt;Axes&lt;/code&gt; 对象，即只有一个绘图区域。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;subplots&lt;/code&gt; 函数返回两个值：一是绘图窗口 &lt;code&gt;Figure&lt;/code&gt; 对象，二是指向每个子图绘图区域的 &lt;code&gt;Axes&lt;/code&gt; 数组。&lt;/p&gt;
+&lt;p&gt;当然，我们也可以用 &lt;code&gt;Figure&lt;/code&gt; 对象来创建子图绘图区域。下面的代码与上面的等价：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig = plt.figure()
+ax = fig.subplots()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_16_0_hua71c6ff33d313ace5dd8f5d3487aba12_3541_1814d7a06505629632e860f28cb2bbe8.webp 400w,
+               /media/learn/matplotlib/subplot/output_16_0_hua71c6ff33d313ace5dd8f5d3487aba12_3541_a17207a60af36dfa73a1b23c6b8ff882.webp 760w,
+               /media/learn/matplotlib/subplot/output_16_0_hua71c6ff33d313ace5dd8f5d3487aba12_3541_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_16_0_hua71c6ff33d313ace5dd8f5d3487aba12_3541_1814d7a06505629632e860f28cb2bbe8.webp&#34;
+               width=&#34;380&#34;
+               height=&#34;252&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;一般地，我们在绘制子图时先要确定好子图的排布情况。例如现在我们要绘制 $6$ 幅子图，按照 $2 \times 3$ 排列：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig, ax = plt.subplots(nrows=2, ncols=3)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_18_0_hu540d7c5b23fc0c8a543f0a327ab95e30_6937_6d1730194cd46ecb01164ffbe7209159.webp 400w,
+               /media/learn/matplotlib/subplot/output_18_0_hu540d7c5b23fc0c8a543f0a327ab95e30_6937_f855269fb68e253ad48f1da927d48df6.webp 760w,
+               /media/learn/matplotlib/subplot/output_18_0_hu540d7c5b23fc0c8a543f0a327ab95e30_6937_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_18_0_hu540d7c5b23fc0c8a543f0a327ab95e30_6937_6d1730194cd46ecb01164ffbe7209159.webp&#34;
+               width=&#34;386&#34;
+               height=&#34;252&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;nrows&lt;/code&gt; 和 &lt;code&gt;ncols&lt;/code&gt; 分别指子图排布的行数和列数。&lt;/p&gt;
+&lt;p&gt;我们通过简单的下标索引就能够确定每个子图绘图区域的 &lt;code&gt;Axes&lt;/code&gt; 对象。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax[0, 0].plot(ex, ey)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_21_0_huf7719807d75674b318106a3a354235ac_8880_c0cbd2ee6959e2fe0fe5b82c4e5918f7.webp 400w,
+               /media/learn/matplotlib/subplot/output_21_0_huf7719807d75674b318106a3a354235ac_8880_9beca5e1f7abd267597d14de225b9b38.webp 760w,
+               /media/learn/matplotlib/subplot/output_21_0_huf7719807d75674b318106a3a354235ac_8880_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_21_0_huf7719807d75674b318106a3a354235ac_8880_c0cbd2ee6959e2fe0fe5b82c4e5918f7.webp&#34;
+               width=&#34;386&#34;
+               height=&#34;252&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;如果子图不多，也可以采用下面的方法直接得到每个子图对象，而不需要索引：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig, (ax1, ax2) = plt.subplots(2, 1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_23_0_hu66b43ce72124c84391a922c81d8c4df6_5451_322830bc18d08046f0f459efb5c1a1e3.webp 400w,
+               /media/learn/matplotlib/subplot/output_23_0_hu66b43ce72124c84391a922c81d8c4df6_5451_9a9723ba929403bc70643ba3c5141197.webp 760w,
+               /media/learn/matplotlib/subplot/output_23_0_hu66b43ce72124c84391a922c81d8c4df6_5451_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_23_0_hu66b43ce72124c84391a922c81d8c4df6_5451_322830bc18d08046f0f459efb5c1a1e3.webp&#34;
+               width=&#34;386&#34;
+               height=&#34;252&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;上面的 &lt;code&gt;Figure&lt;/code&gt; 对象只包含 $2$ 个 &lt;code&gt;Axes&lt;/code&gt; 子图，可以直接以元祖的形式来接收返回值。&lt;/p&gt;
+&lt;h2 id=&#34;共享坐标轴&#34;&gt;共享坐标轴&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;sharex&lt;/code&gt; 和 &lt;code&gt;sharey&lt;/code&gt; 参数分别表示是否共享同一个 $x$ 轴或 $y$ 轴。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_27_0_hu2fd1fed87f7406a1f79cda8e7ac90a10_4821_063620b7c77603b94e4f331a3cbc208b.webp 400w,
+               /media/learn/matplotlib/subplot/output_27_0_hu2fd1fed87f7406a1f79cda8e7ac90a10_4821_916743a4ebd00a433039cbe81f6e8238.webp 760w,
+               /media/learn/matplotlib/subplot/output_27_0_hu2fd1fed87f7406a1f79cda8e7ac90a10_4821_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_27_0_hu2fd1fed87f7406a1f79cda8e7ac90a10_4821_063620b7c77603b94e4f331a3cbc208b.webp&#34;
+               width=&#34;386&#34;
+               height=&#34;252&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;同理：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_29_0_hu9f53f394a33c22ec81690d5b7b4c830c_3697_dd90785c1c9094855cd58e94813b24f3.webp 400w,
+               /media/learn/matplotlib/subplot/output_29_0_hu9f53f394a33c22ec81690d5b7b4c830c_3697_f99ad1644a2779f527428e1092428d7c.webp 760w,
+               /media/learn/matplotlib/subplot/output_29_0_hu9f53f394a33c22ec81690d5b7b4c830c_3697_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_29_0_hu9f53f394a33c22ec81690d5b7b4c830c_3697_dd90785c1c9094855cd58e94813b24f3.webp&#34;
+               width=&#34;380&#34;
+               height=&#34;252&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;如果我们的子图排布较为复杂，可以这样来共享坐标轴：&lt;/p&gt;
+&lt;p&gt;指定每一列共享 $x$ 轴：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig, ax = plt.subplots(2, 2, sharex=True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_32_0_hu5262cac4573933e5960bba6e28f035b4_5210_f7d9b1414ff35f325819454f7a05624c.webp 400w,
+               /media/learn/matplotlib/subplot/output_32_0_hu5262cac4573933e5960bba6e28f035b4_5210_19ee31ac4f566cbbb99630bc329d8eaa.webp 760w,
+               /media/learn/matplotlib/subplot/output_32_0_hu5262cac4573933e5960bba6e28f035b4_5210_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_32_0_hu5262cac4573933e5960bba6e28f035b4_5210_f7d9b1414ff35f325819454f7a05624c.webp&#34;
+               width=&#34;386&#34;
+               height=&#34;252&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;指定每一行共享 $y$ 轴：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig, ax = plt.subplots(2, 2, sharey=True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_34_0_hua72eaf55bbb5032b27017a211ce03281_5765_7ebbaa5d51e05222aeff90afe7fbb027.webp 400w,
+               /media/learn/matplotlib/subplot/output_34_0_hua72eaf55bbb5032b27017a211ce03281_5765_353669b95390a2eb93885af0b1c7ceb7.webp 760w,
+               /media/learn/matplotlib/subplot/output_34_0_hua72eaf55bbb5032b27017a211ce03281_5765_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_34_0_hua72eaf55bbb5032b27017a211ce03281_5765_7ebbaa5d51e05222aeff90afe7fbb027.webp&#34;
+               width=&#34;386&#34;
+               height=&#34;252&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;$x$ 轴和 $y$ 轴均共享：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig, ax = plt.subplots(2, 2, sharex=True, sharey=True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_36_0_hu4bbc3ec9930b68f2850f1ef7ad7a9e06_5024_60cc54c65e3d07dc781c4547a94a3378.webp 400w,
+               /media/learn/matplotlib/subplot/output_36_0_hu4bbc3ec9930b68f2850f1ef7ad7a9e06_5024_0759043b666bb46e7d7f1d8929cb4aa8.webp 760w,
+               /media/learn/matplotlib/subplot/output_36_0_hu4bbc3ec9930b68f2850f1ef7ad7a9e06_5024_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_36_0_hu4bbc3ec9930b68f2850f1ef7ad7a9e06_5024_60cc54c65e3d07dc781c4547a94a3378.webp&#34;
+               width=&#34;386&#34;
+               height=&#34;252&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;h2 id=&#34;自定义布局&#34;&gt;自定义布局&lt;/h2&gt;
+&lt;p&gt;如果我们只希望画 $3$ 副子图，又希望其中一副能够完整填充空白区域。一个简单的方法就是直接使用 &lt;code&gt;subplot&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;plt.subplot(221)
+plt.plot(ex, ey)
+
+plt.subplot(222)
+plt.plot(lnx, lny)
+
+plt.subplot(212)
+plt.plot(ex, ey)
+plt.plot(lnx, lny)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[&amp;lt;matplotlib.lines.Line2D at 0x7fa93e1ec310&amp;gt;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_39_1_hu3977105a8297b360091d92826349b2c3_12737_86dbb19e3dab7e4c9825847eb30bcad1.webp 400w,
+               /media/learn/matplotlib/subplot/output_39_1_hu3977105a8297b360091d92826349b2c3_12737_55575705a4066f1be363d126ac88fed9.webp 760w,
+               /media/learn/matplotlib/subplot/output_39_1_hu3977105a8297b360091d92826349b2c3_12737_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_39_1_hu3977105a8297b360091d92826349b2c3_12737_86dbb19e3dab7e4c9825847eb30bcad1.webp&#34;
+               width=&#34;375&#34;
+               height=&#34;248&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;上面代码的前两部分将 &lt;code&gt;Figure&lt;/code&gt; 对象看作是 $2 \times 2$ 的矩阵，然后只用到第一行。然后再将 &lt;code&gt;Figure&lt;/code&gt; 对象看作是 $2 \times 1$ 的矩阵，然后继续绘制第二行。这种绘制方法较为简单，但是需要确定好布局，否则会出现运行时错误。&lt;/p&gt;
+&lt;p&gt;另一种方法是采用 &lt;code&gt;Figure&lt;/code&gt; 对象的 &lt;code&gt;add_subplot&lt;/code&gt; 方法。首先，我们需要导入 &lt;code&gt;GridSpec&lt;/code&gt; 子图布局模块。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from matplotlib.gridspec import GridSpec
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;首先，我们创建 &lt;code&gt;Figure&lt;/code&gt; 对象。最好我们设置它的布局为约束布局，这样当我们在向其中添加一些元素或修改属性时，&lt;strong&gt;Matplotlib&lt;/strong&gt; 会帮助我们自动调整间距，避免重叠。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig = plt.figure(constrained_layout=True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;Figure size 432x288 with 0 Axes&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后，我们创建子图布局对象：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;gs = GridSpec(3, 3, figure=fig)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;子图布局对象的作用就是辅助我们去构建我们想要的绘图区域 &lt;code&gt;Axes&lt;/code&gt; 的形状。配合 &lt;code&gt;Figure&lt;/code&gt; 对象的 &lt;code&gt;add_subplot&lt;/code&gt; 方法以及矩阵的索引与切片机制，我们可以自由地创建各种各样的 &lt;code&gt;Axes&lt;/code&gt; 绘图区域。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax1 = fig.add_subplot(gs[0, :])
+ax2 = fig.add_subplot(gs[1, :-1])
+ax3 = fig.add_subplot(gs[1:, -1])
+ax4 = fig.add_subplot(gs[-1, 0])
+ax5 = fig.add_subplot(gs[-1, -2])
+
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_48_0_hu1f2e2f58c030688cdc91dfe3276bb954_6222_8d5a77979e18ef063f5ba31b329d6d83.webp 400w,
+               /media/learn/matplotlib/subplot/output_48_0_hu1f2e2f58c030688cdc91dfe3276bb954_6222_51ea7aa39ccf0024a50ae01c1e2d9845.webp 760w,
+               /media/learn/matplotlib/subplot/output_48_0_hu1f2e2f58c030688cdc91dfe3276bb954_6222_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_48_0_hu1f2e2f58c030688cdc91dfe3276bb954_6222_8d5a77979e18ef063f5ba31b329d6d83.webp&#34;
+               width=&#34;440&#34;
+               height=&#34;296&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;上面的 &lt;code&gt;Figure&lt;/code&gt; 的坐标轴数字都没有挤在一起，说明了约束布局的重要性。&lt;/p&gt;
+&lt;p&gt;我们可以定义下面的函数，稍微美化一下这个绘图窗口：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def format_axes(fig):
+    for i, ax in enumerate(fig.axes):
+        ax.text(0.5, 0.5, &amp;quot;ax%d&amp;quot; % (i+1), va=&amp;quot;center&amp;quot;, ha=&amp;quot;center&amp;quot;)
+        ax.tick_params(labelbottom=False, labelleft=False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;结果如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;format_axes(fig)
+fig.suptitle(&amp;quot;GridSpec&amp;quot;)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_53_0_hufb9e4c16d36d18e4e7311e8b25bd09c8_4728_2817c9d60ba581d193752dba37c71d3b.webp 400w,
+               /media/learn/matplotlib/subplot/output_53_0_hufb9e4c16d36d18e4e7311e8b25bd09c8_4728_97ac835cf50ee654e1cfff479ecbac5f.webp 760w,
+               /media/learn/matplotlib/subplot/output_53_0_hufb9e4c16d36d18e4e7311e8b25bd09c8_4728_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_53_0_hufb9e4c16d36d18e4e7311e8b25bd09c8_4728_2817c9d60ba581d193752dba37c71d3b.webp&#34;
+               width=&#34;440&#34;
+               height=&#34;296&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;h2 id=&#34;子图的属性与窗口的属性&#34;&gt;子图的属性与窗口的属性&lt;/h2&gt;
+&lt;p&gt;在概述中，我们就强调了 &lt;code&gt;Figure&lt;/code&gt; 对象和 &lt;code&gt;Axes&lt;/code&gt; 对象的本质不同。而直到学习到绘制子图，我们才能够渐渐地明白子图的属性和窗口的属性是有很大不同的，是会产生不同的效果的。&lt;/p&gt;
+&lt;h3 id=&#34;设置图例&#34;&gt;设置图例&lt;/h3&gt;
+&lt;p&gt;图例的设置是一个非常经典的例子。假设目前我们一共有 $4$ 组数据，每组数据一共有 $3$ 个指标 $5$ 个系列。现在，我们先生成这个 $4 \times 3 \times 5$ 的矩阵。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;data = np.abs(np.random.randn(4, 3, 5))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;由于一共有 $4$ 组数据，于是我们用 &lt;code&gt;subplots&lt;/code&gt; 方法来生成一个 $2 \times 2$ 布局的子图绘制窗口。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig, ax = plt.subplots(2, 2, constrained_layout=True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_60_0_hu36718797859026ee34882dddab3b3c2c_6333_4a433abee972bbe73340b7e4cc5914dd.webp 400w,
+               /media/learn/matplotlib/subplot/output_60_0_hu36718797859026ee34882dddab3b3c2c_6333_fb71efdfee5a8413f7c64d972254bdd2.webp 760w,
+               /media/learn/matplotlib/subplot/output_60_0_hu36718797859026ee34882dddab3b3c2c_6333_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_60_0_hu36718797859026ee34882dddab3b3c2c_6333_4a433abee972bbe73340b7e4cc5914dd.webp&#34;
+               width=&#34;440&#34;
+               height=&#34;296&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;下面绘制系列条形图：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = np.arange(1, 6)
+width = 0.24
+
+ax[0, 0].bar(x - width, data[0, 0, :], width=width, label=&#39;A&#39;)
+ax[0, 0].bar(x, data[0, 1, :], width=width, label=&#39;B&#39;)
+ax[0, 0].bar(x + width, data[0, 2, :], width=width, label=&#39;C&#39;)
+
+ax[0, 1].bar(x - width, data[1, 0, :], width=width, label=&#39;A&#39;)
+ax[0, 1].bar(x, data[1, 1, :], width=width, label=&#39;B&#39;)
+ax[0, 1].bar(x + width, data[1, 2, :], width=width, label=&#39;C&#39;)
+
+ax[1, 0].bar(x - width, data[2, 0, :], width=width, label=&#39;A&#39;)
+ax[1, 0].bar(x, data[2, 1, :], width=width, label=&#39;B&#39;)
+ax[1, 0].bar(x + width, data[2, 2, :], width=width, label=&#39;C&#39;)
+
+ax[1, 1].bar(x - width, data[3, 0, :], width=width, label=&#39;A&#39;)
+ax[1, 1].bar(x, data[3, 1, :], width=width, label=&#39;B&#39;)
+ax[1, 1].bar(x + width, data[3, 2, :], width=width, label=&#39;C&#39;)
+
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_62_0_huf677920b43ec6047b4cd8cb1026ba7f1_6049_7c8617dd33784a08e3a8d558bf099ea6.webp 400w,
+               /media/learn/matplotlib/subplot/output_62_0_huf677920b43ec6047b4cd8cb1026ba7f1_6049_788557debbf20a41c7825360f1f72089.webp 760w,
+               /media/learn/matplotlib/subplot/output_62_0_huf677920b43ec6047b4cd8cb1026ba7f1_6049_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_62_0_huf677920b43ec6047b4cd8cb1026ba7f1_6049_7c8617dd33784a08e3a8d558bf099ea6.webp&#34;
+               width=&#34;440&#34;
+               height=&#34;296&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;现在，我们给每个子图添加图例：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax[0, 0].legend()
+ax[0, 1].legend()
+ax[1, 0].legend()
+ax[1, 1].legend()
+
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_64_0_hu3052f935313e3fb9541694159c54eeff_7746_becebc96079767355b99e0f2ed5c6cd4.webp 400w,
+               /media/learn/matplotlib/subplot/output_64_0_hu3052f935313e3fb9541694159c54eeff_7746_321cb759c0609233a061504cf4685f8e.webp 760w,
+               /media/learn/matplotlib/subplot/output_64_0_hu3052f935313e3fb9541694159c54eeff_7746_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_64_0_hu3052f935313e3fb9541694159c54eeff_7746_becebc96079767355b99e0f2ed5c6cd4.webp&#34;
+               width=&#34;440&#34;
+               height=&#34;296&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;然而，实际上我们没有必要为每个子图都添加图例。这个问题的本质在于，&lt;code&gt;legend&lt;/code&gt; 是从属于子图的 &lt;code&gt;Axes&lt;/code&gt; 对象，还是从属于 &lt;code&gt;Figure&lt;/code&gt; 对象？&lt;/p&gt;
+&lt;p&gt;如果我们只需要绘制从属于 &lt;code&gt;Figure&lt;/code&gt; 对象的一份图例，&lt;code&gt;Figure&lt;/code&gt; 对象就必须知道数据和对应的标签，这需要捕获 &lt;code&gt;Bar&lt;/code&gt; 对象。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig, ax = plt.subplots(2, 2, constrained_layout=True)
+
+rects1 = ax[0, 0].bar(x - width, data[0, 0, :], width=width, label=&#39;A&#39;)
+rects2 = ax[0, 0].bar(x, data[0, 1, :], width=width, label=&#39;B&#39;)
+rects3 = ax[0, 0].bar(x + width, data[0, 2, :], width=width, label=&#39;C&#39;)
+
+ax[0, 1].bar(x - width, data[1, 0, :], width=width, label=&#39;A&#39;)
+ax[0, 1].bar(x, data[1, 1, :], width=width, label=&#39;B&#39;)
+ax[0, 1].bar(x + width, data[1, 2, :], width=width, label=&#39;C&#39;)
+
+ax[1, 0].bar(x - width, data[2, 0, :], width=width, label=&#39;A&#39;)
+ax[1, 0].bar(x, data[2, 1, :], width=width, label=&#39;B&#39;)
+ax[1, 0].bar(x + width, data[2, 2, :], width=width, label=&#39;C&#39;)
+
+ax[1, 1].bar(x - width, data[3, 0, :], width=width, label=&#39;A&#39;)
+ax[1, 1].bar(x, data[3, 1, :], width=width, label=&#39;B&#39;)
+ax[1, 1].bar(x + width, data[3, 2, :], width=width, label=&#39;C&#39;)
+
+lg = fig.legend((rects1, rects2, rects3), (&#39;A&#39;, &#39;B&#39;, &#39;C&#39;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_67_0_hu719a75dd930e9f62bc595dddd52c921a_6823_bfb3450c2294d4a4500621df746c894d.webp 400w,
+               /media/learn/matplotlib/subplot/output_67_0_hu719a75dd930e9f62bc595dddd52c921a_6823_085a1c5e1122b4dd262406a6f74ccb3a.webp 760w,
+               /media/learn/matplotlib/subplot/output_67_0_hu719a75dd930e9f62bc595dddd52c921a_6823_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_67_0_hu719a75dd930e9f62bc595dddd52c921a_6823_bfb3450c2294d4a4500621df746c894d.webp&#34;
+               width=&#34;440&#34;
+               height=&#34;296&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;下面我们来美化一下这个图例。我们希望它显示在窗口右上角，并且不要遮挡图像。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;lg.set_bbox_to_anchor(bbox=(0.13, 0, 1, 1))
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/subplot/output_69_0_hu3f941fb892ccf41553cb33266221ee17_7128_97f9b6ddd59671396b62f6ff69a66ce2.webp 400w,
+               /media/learn/matplotlib/subplot/output_69_0_hu3f941fb892ccf41553cb33266221ee17_7128_438e3a6c3c9a9d3148d701a5f32c030c.webp 760w,
+               /media/learn/matplotlib/subplot/output_69_0_hu3f941fb892ccf41553cb33266221ee17_7128_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/subplot/output_69_0_hu3f941fb892ccf41553cb33266221ee17_7128_97f9b6ddd59671396b62f6ff69a66ce2.webp&#34;
+               width=&#34;494&#34;
+               height=&#34;296&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;其中，参数 &lt;code&gt;bbox&lt;/code&gt; 接收的四元组中，前两个分量分别代表横坐标和纵坐标的相对位置。我们是希望图例向右偏移一些不遮挡图像，因此给横坐标一个较小的增量。后两个分量代表宽和高，一般来说均设置为 $1$，这样不会有任何调整。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Matplotlib 三维绘图</title>
+      <link>https://bowenei.gitee.io/learn/matplotlib/plot3d/</link>
+      <pubDate>Tue, 27 Apr 2021 17:50:23 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/matplotlib/plot3d/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib import cm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;绘制空间曲线&#34;&gt;绘制空间曲线&lt;/h2&gt;
+&lt;p&gt;下面我们绘制圆柱螺旋线两个周期的图像，其参数方程如下：&lt;/p&gt;
+&lt;p&gt;$$
+\begin{cases}
+x = \cos t \\
+y = \sin t \\
+z = \frac{1}{2 \pi} t
+\end{cases}
+$$&lt;/p&gt;
+&lt;p&gt;首先，我们先准备好数据。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;t = np.linspace(0, 4*np.pi, 101)
+x = np.cos(t)
+y = np.sin(t)
+z = t * 2 / np.pi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;接下来我们创建绘图窗口和 &lt;code&gt;Axes3D&lt;/code&gt; 对象，方法和二维是类似的，不过需要额外指定 &lt;code&gt;subplot_kw&lt;/code&gt; 参数。&lt;code&gt;subplot_kw&lt;/code&gt; 参数是一个参数集，绘制三维图像需要指定 &lt;code&gt;projection&lt;/code&gt; 键的值为 &lt;code&gt;3d&lt;/code&gt;。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig, ax = plt.subplots(subplot_kw={&amp;quot;projection&amp;quot;: &amp;quot;3d&amp;quot;})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot3d/output_8_0_hue22f0bab3f43c0a5e421797d36b6097e_23899_83dea6df392ce6ef97bf60601b063739.webp 400w,
+               /media/learn/matplotlib/plot3d/output_8_0_hue22f0bab3f43c0a5e421797d36b6097e_23899_11e141da9bb2ce3f9a4bf2d0418f236a.webp 760w,
+               /media/learn/matplotlib/plot3d/output_8_0_hue22f0bab3f43c0a5e421797d36b6097e_23899_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot3d/output_8_0_hue22f0bab3f43c0a5e421797d36b6097e_23899_83dea6df392ce6ef97bf60601b063739.webp&#34;
+               width=&#34;248&#34;
+               height=&#34;243&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;直接调用 &lt;code&gt;Axes3D&lt;/code&gt; 对象的 &lt;code&gt;plot&lt;/code&gt; 方法就能绘制三维曲线。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.plot(x, y, z)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot3d/output_10_0_hub0b1e0c5f7b474940d23891706846508_27134_7d408955e70a19ab58fc6fa18bcf8f2d.webp 400w,
+               /media/learn/matplotlib/plot3d/output_10_0_hub0b1e0c5f7b474940d23891706846508_27134_55eb63cda218b98167478c6f5967887a.webp 760w,
+               /media/learn/matplotlib/plot3d/output_10_0_hub0b1e0c5f7b474940d23891706846508_27134_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot3d/output_10_0_hub0b1e0c5f7b474940d23891706846508_27134_7d408955e70a19ab58fc6fa18bcf8f2d.webp&#34;
+               width=&#34;244&#34;
+               height=&#34;242&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;h2 id=&#34;绘制空间曲面&#34;&gt;绘制空间曲面&lt;/h2&gt;
+&lt;p&gt;下面我们绘制双曲抛物面（马鞍面）$x^2 - y^2 = 2z$ 的图像。首先我们需要生成一个二维平面离散点集。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = np.linspace(-10, 10, num=101)
+y = np.linspace(-10, 10, num=101)
+x, y = np.meshgrid(x, y)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后将曲面方程转化为二元函数 $z = \frac {1} {2} (x^2 - y^2)$：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;z = (x**2 - y**2) / 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最后我们创建绘图窗口和 &lt;code&gt;Axes3D&lt;/code&gt; 对象，调用 &lt;code&gt;Axes3D&lt;/code&gt; 对象的 &lt;code&gt;plot_surface&lt;/code&gt; 方法绘制空间曲面。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig, ax = plt.subplots(subplot_kw={&amp;quot;projection&amp;quot;: &amp;quot;3d&amp;quot;})
+surf = ax.plot_surface(x, y, z)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot3d/output_17_0_hu15236c8e8f4fed3a5e140e847b50904e_46377_ca27a266b3d1d228906c0e320f7270b3.webp 400w,
+               /media/learn/matplotlib/plot3d/output_17_0_hu15236c8e8f4fed3a5e140e847b50904e_46377_ef55edf028405939ae157c37f39b8b6c.webp 760w,
+               /media/learn/matplotlib/plot3d/output_17_0_hu15236c8e8f4fed3a5e140e847b50904e_46377_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot3d/output_17_0_hu15236c8e8f4fed3a5e140e847b50904e_46377_ca27a266b3d1d228906c0e320f7270b3.webp&#34;
+               width=&#34;248&#34;
+               height=&#34;242&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.clear()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;图像美化&#34;&gt;图像美化&lt;/h3&gt;
+&lt;p&gt;使用 &lt;code&gt;cmap&lt;/code&gt; 参数指定 &lt;code&gt;Colormap&lt;/code&gt; 对象，它是一种渐变效果。&lt;strong&gt;Matplotlib&lt;/strong&gt; 中内置了丰富的 &lt;code&gt;Colormap&lt;/code&gt;。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;surf = ax.plot_surface(x, y, z, cmap=cm.coolwarm)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot3d/output_21_0_hu296dfcf217f0f8cde6a5682f25ea3277_42137_43fc8a227470b38a43a763af54175d57.webp 400w,
+               /media/learn/matplotlib/plot3d/output_21_0_hu296dfcf217f0f8cde6a5682f25ea3277_42137_27b97e4b6e9829e4471f856b1243ef26.webp 760w,
+               /media/learn/matplotlib/plot3d/output_21_0_hu296dfcf217f0f8cde6a5682f25ea3277_42137_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot3d/output_21_0_hu296dfcf217f0f8cde6a5682f25ea3277_42137_43fc8a227470b38a43a763af54175d57.webp&#34;
+               width=&#34;248&#34;
+               height=&#34;242&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;添加颜色条：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig.colorbar(surf, shrink=0.5)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot3d/output_23_0_hu1820fcf42b9483fa948df61f5e517bda_43679_d80724ebc7e13dec5d49963fb70af0fc.webp 400w,
+               /media/learn/matplotlib/plot3d/output_23_0_hu1820fcf42b9483fa948df61f5e517bda_43679_c8bf9c1369bba877ed05749b2c06b1a2.webp 760w,
+               /media/learn/matplotlib/plot3d/output_23_0_hu1820fcf42b9483fa948df61f5e517bda_43679_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot3d/output_23_0_hu1820fcf42b9483fa948df61f5e517bda_43679_d80724ebc7e13dec5d49963fb70af0fc.webp&#34;
+               width=&#34;282&#34;
+               height=&#34;242&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;h2 id=&#34;绘制三维条形图&#34;&gt;绘制三维条形图&lt;/h2&gt;
+&lt;p&gt;下面我们来绘制阶梯形状的条形图。首先我们准备数据：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;_x = np.arange(4)
+_y = np.arange(4)
+_xx, _yy = np.meshgrid(_x, _y)
+x, y = _xx.ravel(), _yy.ravel()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中，&lt;code&gt;ravel&lt;/code&gt; 方法可以将任意多维数组展平为一维数组。这一步必不可少！&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x, y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;(array([0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3]),
+ array([0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3]))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;接下来，我们初始化条形图的底部和顶部值。底部都是 $0$，顶部则满足 $z = x + y$。初始化的方式采用根据已有形状创建。&lt;/p&gt;
+&lt;p&gt;条形图的宽度和深度两个参数其实就是主视图和左视图二维条形图的宽度。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;top = x + y
+bottom = np.zeros_like(top)
+width = depth = 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;下面是一种创建 &lt;code&gt;Axes3D&lt;/code&gt; 对象的另一种方法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig = plt.figure()
+ax = plt.axes(projection=&#39;3d&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot3d/output_33_0_hue22f0bab3f43c0a5e421797d36b6097e_23899_dc765f64250990bedd7f4ef66da34ded.webp 400w,
+               /media/learn/matplotlib/plot3d/output_33_0_hue22f0bab3f43c0a5e421797d36b6097e_23899_987e1d0f262c5bed88433a5db5444a79.webp 760w,
+               /media/learn/matplotlib/plot3d/output_33_0_hue22f0bab3f43c0a5e421797d36b6097e_23899_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot3d/output_33_0_hue22f0bab3f43c0a5e421797d36b6097e_23899_dc765f64250990bedd7f4ef66da34ded.webp&#34;
+               width=&#34;248&#34;
+               height=&#34;243&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;Axes3D&lt;/code&gt; 对象的 &lt;code&gt;bar3d&lt;/code&gt; 方法就可以绘制三维条形图。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ax.bar3d(x, y, bottom, width, depth, top)
+fig
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​ &lt;br&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/matplotlib/plot3d/output_35_0_hu5e5b8ea4508b813d2a65bdb73aed5faa_23266_17125fe2084b9a6f33ee1d66e8c43c10.webp 400w,
+               /media/learn/matplotlib/plot3d/output_35_0_hu5e5b8ea4508b813d2a65bdb73aed5faa_23266_db982d3e630081b51e305c8500376468.webp 760w,
+               /media/learn/matplotlib/plot3d/output_35_0_hu5e5b8ea4508b813d2a65bdb73aed5faa_23266_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/matplotlib/plot3d/output_35_0_hu5e5b8ea4508b813d2a65bdb73aed5faa_23266_17125fe2084b9a6f33ee1d66e8c43c10.webp&#34;
+               width=&#34;244&#34;
+               height=&#34;242&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+​&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>进阶知识 | Bowen&#39;s Academic Home</title>
+    <link>https://bowenei.gitee.io/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/</link>
+      <atom:link href="https://bowenei.gitee.io/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    <description>进阶知识</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 21 Dec 2021 15:11:02 +0800</lastBuildDate>
+    <image>
+      <url>https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png</url>
+      <title>进阶知识</title>
+      <link>https://bowenei.gitee.io/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/</link>
+    </image>
+    
+    <item>
+      <title>NP 完全理论</title>
+      <link>https://bowenei.gitee.io/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/np-complete/</link>
+      <pubDate>Wed, 29 Dec 2021 20:38:53 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/np-complete/</guid>
+      <description>&lt;h2 id=&#34;问题类型&#34;&gt;问题类型&lt;/h2&gt;
+&lt;h3 id=&#34;易解问题和难解问题&#34;&gt;易解问题和难解问题&lt;/h3&gt;
+&lt;p&gt;通常将存在&lt;strong&gt;多项式&lt;/strong&gt;时间算法的问题看作是易解问题（Easy Problem）。例如排序问题、查找问题等。&lt;/p&gt;
+&lt;p&gt;而将需要&lt;strong&gt;指数&lt;/strong&gt;时间算法解决的问题看作是难解问题（Hard Problem）。例如旅行商问题、图着色问题等。&lt;/p&gt;
+&lt;p&gt;图灵停机问题则属于不可解问题。&lt;/p&gt;
+&lt;h3 id=&#34;p-类问题和-np-类问题&#34;&gt;P 类问题和 NP 类问题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;P 类问题可以用多项式时间的确定性算法来进行判定或求解。具体来说，P 问题是指多项式时间内可解的问题&lt;/li&gt;
+&lt;li&gt;NP 类问题可用多项式时间的非确定性算法来进行判定或求解。具体来说，NP 问题是指多项式时间内可以验证一个解的问题。所有 NP 问题都是判定问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;多项式时间：$O(n)$、$O(\log n)$、$O(n^c)$；非多项式时间：$O(2^n)$、$O(n!)$。&lt;/li&gt;
+&lt;li&gt;$\textnormal{P} \subseteq \textnormal{NP}$&lt;/li&gt;
+&lt;li&gt;判定问题：仅仅要求回答 &lt;code&gt;True&lt;/code&gt; 或 &lt;code&gt;False&lt;/code&gt; 的问题。判定问题的特点是证明比求解容易。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;np-问题&#34;&gt;NP 问题&lt;/h2&gt;
+&lt;p&gt;最优化问题可以与一个判断问题对应：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最优化问题：$x$ 取何值时，$f(x)$ 取最小（大）值？&lt;/li&gt;
+&lt;li&gt;判定问题：给定 $f(x)$，问是否存在常数 $k$ 使得 $f(x)$ 取最小（大）值？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如何对应？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;若判定问题多项式时间可解，则采用二分搜索策略即可。&lt;/li&gt;
+&lt;li&gt;反之，若已求解最优化问题，就已求解判定问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;np-完全问题&#34;&gt;NP 完全问题&lt;/h2&gt;
+&lt;p&gt;定义：问题 $A$ 是一个 NP 完全问题，则有&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$A \in \textnormal{NP}$（多项式时间可验证解是否正确）&lt;/li&gt;
+&lt;li&gt;且对 $\forall B \in \textnormal{NP}, B \leqslant_p A$（任意 NP 问题 $B$ 都可在多项式时间归约到 $A$）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;NP 问题包含 P 问题和 NP 完全问题。&lt;/li&gt;
+&lt;li&gt;P 问题和 NP 问题是否存在交集尚未定论，但目前学界普遍认为二者不存在交集。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;&lt;strong&gt;一些基本的 NP 完全问题&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SAT 问题（布尔可满足性问题）&lt;/li&gt;
+&lt;li&gt;最大团问题&lt;/li&gt;
+&lt;li&gt;图着色问题&lt;/li&gt;
+&lt;li&gt;哈密尔顿回路问题&lt;/li&gt;
+&lt;li&gt;TSP 问题（旅行商问题）&lt;/li&gt;
+&lt;li&gt;顶点覆盖问题&lt;/li&gt;
+&lt;li&gt;最长路径问题&lt;/li&gt;
+&lt;li&gt;子集和问题&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;np-完全性的意义&#34;&gt;NP 完全性的意义&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;若某个 NP 完全问题多项式时间可解，则所有 NP 问题均可多项式时间求解，从而有 $\textnormal{P} = \textnormal{NP}$。&lt;/li&gt;
+&lt;li&gt;若能证明某个 NP 问题不存在多项式时间求解算法（即 $\textnormal{P} \ne \textnormal{NP}$），则所有 NP 完全问题都不存在多项式时间求解算法，从而有 $\textnormal{NP-C} \cap P = \emptyset$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因此，NP 完全问题是 NP 问题中最难的。&lt;/p&gt;
+&lt;p&gt;我们可以用下面的 Venn 图来表示这些概念之间的关系：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/NP-C_hue71a5b04f7a857c4de5e4e0e2cfb4a2a_38016_ce0d7b6b24d99bd90ab4381d2f1bd7c0.webp 400w,
+               /media/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/NP-C_hue71a5b04f7a857c4de5e4e0e2cfb4a2a_38016_55533da33e32dbd062193336a253c56b.webp 760w,
+               /media/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/NP-C_hue71a5b04f7a857c4de5e4e0e2cfb4a2a_38016_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/NP-C_hue71a5b04f7a857c4de5e4e0e2cfb4a2a_38016_ce0d7b6b24d99bd90ab4381d2f1bd7c0.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;396&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;np-完全性的证明&#34;&gt;NP 完全性的证明&lt;/h3&gt;
+&lt;p&gt;证明问题 $A$ 是 NP 完全问题分两步：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$A$ 是一个 NP 问题（多项式时间可验证解是否正确）。&lt;/li&gt;
+&lt;li&gt;从一个已知的 NP 完全问题 $A&#39;$，多项式时间归约到 $A$ 的一个实例 $A&#39;&#39;$，证明 $A&#39;$ 有解当且仅当 $A&#39;&#39;$ 有解。&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>回溯剪枝</title>
+      <link>https://bowenei.gitee.io/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/%E5%9B%9E%E6%BA%AF%E5%89%AA%E6%9E%9D/</link>
+      <pubDate>Thu, 30 Dec 2021 12:16:47 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/%E5%9B%9E%E6%BA%AF%E5%89%AA%E6%9E%9D/</guid>
+      <description>&lt;h2 id=&#34;回溯法&#34;&gt;回溯法&lt;/h2&gt;
+&lt;p&gt;回顾动态规划和贪心算法中的剪枝策略：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;动态规划：考虑搜索空间中子问题的重叠性。&lt;/li&gt;
+&lt;li&gt;贪心算法：以贪心选择策略为依据，遍历搜索空间的部分分支。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;回溯法是一种相较于动态规划、贪心算法更一般的通用的解法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将问题建模为解空间树&lt;/li&gt;
+&lt;li&gt;深度优先搜索&lt;/li&gt;
+&lt;li&gt;搜索过程中剪枝&lt;/li&gt;
+&lt;li&gt;适合解组合数相当大的问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;解空间树&#34;&gt;解空间树&lt;/h3&gt;
+&lt;p&gt;首先，我们先给出问题的解向量的定义：$n$ 元式 $(x_1, x_2, \cdots, x_n)$ 的形式。其中包含如下的一些概念：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;显约束：对分量 $x_i$ 的取值限定&lt;/li&gt;
+&lt;li&gt;隐约束：为满足问题的解而对不同分量之间施加的约束&lt;/li&gt;
+&lt;li&gt;解空间：满足显式约束条件的所有 $n$ 元组&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;针对回溯问题，我们有解空间树的概念：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;问题的解空间的表示方式&lt;/li&gt;
+&lt;li&gt;第 $0$ 层为初始状态&lt;/li&gt;
+&lt;li&gt;第 $k$ 层为第 $k$ 个分量做出选择后到达的状态&lt;/li&gt;
+&lt;li&gt;从树的根结点到叶子结点的路径&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如在 0-1 背包问题中，有如下解空间树：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/0-1%E8%83%8C%E5%8C%85%E8%A7%A3%E7%A9%BA%E9%97%B4%E6%A0%91_hu3c137f1e9d82ef768608d96731f9b9d3_160443_3179bd0fb73ba894910724426a83ff92.webp 400w,
+               /media/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/0-1%E8%83%8C%E5%8C%85%E8%A7%A3%E7%A9%BA%E9%97%B4%E6%A0%91_hu3c137f1e9d82ef768608d96731f9b9d3_160443_e733cd23cd157c0e03a82582534b69e8.webp 760w,
+               /media/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/0-1%E8%83%8C%E5%8C%85%E8%A7%A3%E7%A9%BA%E9%97%B4%E6%A0%91_hu3c137f1e9d82ef768608d96731f9b9d3_160443_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/0-1%E8%83%8C%E5%8C%85%E8%A7%A3%E7%A9%BA%E9%97%B4%E6%A0%91_hu3c137f1e9d82ef768608d96731f9b9d3_160443_3179bd0fb73ba894910724426a83ff92.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;313&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;树中第 $i$ 层与第 $i+1$ 层结点之间的边上给出了对物品 $i$ 的选择结果，$8$ 个叶子代表 $8$ 个可能解。&lt;/p&gt;
+&lt;p&gt;解空间树可以通过 DFS 和 BFS 的方法生成。&lt;/p&gt;
+&lt;h3 id=&#34;回溯法的基本思想&#34;&gt;回溯法的基本思想&lt;/h3&gt;
+&lt;p&gt;问题的求解方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定义整个解空间完成（应注意解空间应当包括所有可能解）&lt;/li&gt;
+&lt;li&gt;确定易于搜索的解空间结构&lt;/li&gt;
+&lt;li&gt;深度优先方式遍历解空间并剪枝&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;回溯法是具有剪枝函数的深度优先生成法。&lt;/p&gt;
+&lt;h3 id=&#34;剪枝的基本思想&#34;&gt;剪枝的基本思想&lt;/h3&gt;
+&lt;p&gt;在搜索至树上任意一点时判断：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;是否满足约束条件&lt;/li&gt;
+&lt;li&gt;是否包含问题的（最优）解
+&lt;ul&gt;
+&lt;li&gt;不包含：跳过对以该结点为根的子树的搜索——剪枝 &lt;code&gt;pruning&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;包含：进入以该结点为根的子树，继续按深度优先搜索&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;两种用于剪枝的函数：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;约束函数：用约束条件剪去得不到可行解的子树。例如在 0-1 背包问题中，约束条件“商品体积不能超过背包容量”就可以用约束函数来刻画。&lt;/li&gt;
+&lt;li&gt;限界函数：用目标函数减去得不到最优解的子树。例如在 0-1 背包问题中，目标“购买商品的价格尽可能高”就可以用限界函数来刻画。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;利用剪枝函数可避免无效搜索，使算法无需搜索整个搜索树。&lt;/p&gt;
+&lt;h2 id=&#34;算法框架&#34;&gt;算法框架&lt;/h2&gt;
+&lt;h3 id=&#34;递归回溯&#34;&gt;递归回溯&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;int[] backtrack(int t) {
+    if (t &amp;gt; n) {
+        // 到达叶子结点，返回结果
+        return x;
+    }
+    else {
+        for (int i = f(n, t); i &amp;lt;= g(n, t); ++i) {
+            // f(n, t): 第 t 层未搜索过子树的起始编号
+            // g(n, t): 第 t 层未搜索过子树的终止编号
+            x[t] = h(i);
+            if (constraint(x, t) &amp;amp;&amp;amp; bound(x, t)) {
+                // constraint: 约束函数，bound: 限界函数
+                backtrack(t + 1);
+            }
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;迭代回溯&#34;&gt;迭代回溯&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;void iterativeBacktrack() {
+    int t = 1;
+    while (t &amp;gt; 0) {
+        if (f(n, t) &amp;lt;= g(n, t)) {
+            for (int i = f(n, t); i &amp;lt;= g(n, t); ++i) {
+                x[t] = h(i);
+                if (constraint(x, t) &amp;amp;&amp;amp; bound(x, t)) {
+                    if (solution(t)) {
+                        return x;
+                    }
+                    else {
+                        ++i;
+                        break;
+                    }
+                }
+            }
+        }
+        else {
+            --t;
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;算法分析&#34;&gt;算法分析&lt;/h2&gt;
+&lt;h3 id=&#34;空间复杂度&#34;&gt;空间复杂度&lt;/h3&gt;
+&lt;p&gt;回溯法的存储特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;动态产生问题的解空间&lt;/li&gt;
+&lt;li&gt;只保存从根结点到当前扩展结点的路径&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;空间复杂度：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;根到叶子的最长路径的长度为 $h(n)$&lt;/li&gt;
+&lt;li&gt;空间复杂度通常为 $O(h(n))$&lt;/li&gt;
+&lt;li&gt;显式地存储整个解空间则需要 $O(2h(n))$ 或 $O(h(n)!)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;时间复杂度&#34;&gt;时间复杂度&lt;/h3&gt;
+&lt;p&gt;在讨论回溯法的时间复杂度之前，我们首先要给出两个概念：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;子集树：从 $n$ 个元素中找出满足某种性质的子集，相应的解空间为子集树。例如 0-1 背包问题的解空间树就是子集树。&lt;/li&gt;
+&lt;li&gt;排列树：当所给问题是确定的 $n$ 个元素满足某种性质的排列时，相应的解空间为排序树。例如 TSP 问题的解空间树就是排列树。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;回溯法的最坏时间复杂度取决于解空间树的类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;子集树：$O(2^n)$&lt;/li&gt;
+&lt;li&gt;排列树：$O(n!)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果采用蛮力穷举法进行回溯，回溯法的时间复杂度必然是最坏情况。因此，需要设计较好的剪枝函数以降低时间复杂度。&lt;/p&gt;
+&lt;h3 id=&#34;回溯法同其他算法比较&#34;&gt;回溯法同其他算法比较&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;动态规划：避免计算重叠子问题&lt;/li&gt;
+&lt;li&gt;贪心算法：只考虑局部最优解&lt;/li&gt;
+&lt;li&gt;回溯法：利用剪枝函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;回溯剪枝的应用&#34;&gt;回溯剪枝的应用&lt;/h2&gt;
+&lt;h3 id=&#34;tsp旅行商问题&#34;&gt;TSP：旅行商问题&lt;/h3&gt;
+&lt;p&gt;一个旅行商需要在 $n$ 个城市销售商品，已知任两个城市之间的距离，求一条每个城市恰好经过一次的回路，使得总长度最小。&lt;/p&gt;
+&lt;h4 id=&#34;问题建模&#34;&gt;问题建模&lt;/h4&gt;
+&lt;p&gt;输入：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;城市集 $C = \{ c_1, c_2, \cdots, c_n \}$&lt;/li&gt;
+&lt;li&gt;距离 $d(c_i, c_j) = d(c_j, c_i)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;输出：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;城市 $c_1, c_2, \cdots c_n$ 的排列 $c_{k_1}, c_{k_2}, c_{k_n}$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;约束条件：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+\min \left \{ \sum_{i=1}^{n-1} {d(c_{k_i}, c_{k_{i+1}}) + d(c_{k_n}, c_{k_1})} \right \}
+\end{align}&lt;/p&gt;
+&lt;h4 id=&#34;问题分析&#34;&gt;问题分析&lt;/h4&gt;
+&lt;p&gt;旅行商问题是典型的以排序树为解空间树结构的回溯法问题。&lt;/p&gt;
+&lt;h3 id=&#34;n-皇后问题&#34;&gt;$n$ 皇后问题&lt;/h3&gt;
+&lt;p&gt;在一个 $n \times n$ 的方格内放置 $n$ 个皇后，使得没有两个皇后互相“攻击”（在同一行、同一列、也不在同一条斜线上）。问有多少种可能的布局？&lt;/p&gt;
+&lt;p&gt;计算机体系结构的很多问题和 $n$ 皇后问题很相似。例如并行内存系统的存储模式，超大规模集成电路设计，检测程序中的死锁问题。&lt;/p&gt;
+&lt;h4 id=&#34;问题分析-1&#34;&gt;问题分析&lt;/h4&gt;
+&lt;p&gt;$n$ 皇后问题的解空间树是 $n$ 叉树，按深度优先次序遍历 $n$ 叉树即可找到所有解。&lt;/p&gt;
+&lt;h4 id=&#34;算法代码&#34;&gt;算法代码&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/n-queens/description/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LeetCode Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;class Solution
+{
+public:
+    vector&amp;lt;bool&amp;gt; columns;          // 当前纵向是否不被攻击
+    map&amp;lt;int, bool&amp;gt; mains, seconds; // 当前斜线方向是否不被攻击
+
+    vector&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt; solveNQueens(int n)
+    {
+        columns = vector&amp;lt;bool&amp;gt;(n, true);
+        for (int i = 0; i &amp;lt; n; ++i) {
+            mains[i] = mains[-i] = true;        // 计算方法：行号-列号
+            seconds[i] = seconds[i + n] = true; // 计算方法：行号+列号
+        }
+        vector&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt; ans;
+        vector&amp;lt;string&amp;gt; temp;
+        backtrack(0, n, ans, temp);
+        return ans;
+    }
+
+    void backtrack(int row, const int n, vector&amp;lt;vector&amp;lt;string&amp;gt;&amp;gt; &amp;amp;ans, vector&amp;lt;string&amp;gt; &amp;amp;temp)
+    {
+        if (row == n) {
+            // 搜到底，要回溯
+            ans.push_back(temp);
+            return;
+        }
+        for (int j = 0; j &amp;lt; n; ++j) {
+            // 根据行、列、主对角线、次对角线的下标特点，构造了标志位的索引器方便判断
+            if (columns[j] &amp;amp;&amp;amp; mains[row - j] &amp;amp;&amp;amp; seconds[row + j]) {
+                // 表示当前行皇后摆放位置
+                string line(n, &#39;.&#39;);
+                line[j] = &#39;Q&#39;;
+                // 递归深入之前修改相应标志位，使得棋盘某些位置不能放（被攻击）
+                columns[j] = mains[row - j] = seconds[row + j] = false;
+                // 当前行的摆放结果压栈
+                temp.push_back(line);
+                // 开始递归下一层
+                backtrack(row + 1, n, ans, temp);
+                // 回溯，当前行之前的结果退栈（前面几行结果仍保留）
+                temp.pop_back();
+                // 相应标志位复位，表示这些位置又可以继续摆放皇后
+                columns[j] = mains[row - j] = seconds[row + j] = true;
+            } // if语句结束后，当前行可能有多解，这就是回溯再递归
+        }
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;剪枝函数的设计&#34;&gt;剪枝函数的设计&lt;/h2&gt;
+&lt;h3 id=&#34;可行性约束函数&#34;&gt;可行性约束函数&lt;/h3&gt;
+&lt;h4 id=&#34;图着色问题&#34;&gt;图着色问题&lt;/h4&gt;
+&lt;p&gt;给定无向连通图 $G = (V, E)$，是否可以使用 $k$ 种颜色对 $G$ 中顶点着色，使得任意两个相邻顶点之间的着色都不同。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;是与否的判定问题&lt;/li&gt;
+&lt;li&gt;解向量 $(x_1, x_2, \cdots, x_n)$（$x_i$ 表示顶点 $i$ 所着颜色）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;图着色问题中的描述“任意两个相邻顶点之间的着色都不同”即可视为一种可行性约束函数。$k$ 着色问题对应的解空间为 $k$ 叉树。&lt;/p&gt;
+&lt;h3 id=&#34;限界函数&#34;&gt;限界函数&lt;/h3&gt;
+&lt;h4 id=&#34;组合优化问题&#34;&gt;组合优化问题&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;目标函数（极大化或极小化）&lt;/li&gt;
+&lt;li&gt;约束条件&lt;/li&gt;
+&lt;li&gt;可行解：搜索空间满足约束条件的解&lt;/li&gt;
+&lt;li&gt;最优解：使目标函数达到极大&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如我们熟知的 0-1 背包问题就是一个组合优化问题。&lt;/p&gt;
+&lt;h4 id=&#34;代价函数&#34;&gt;代价函数&lt;/h4&gt;
+&lt;p&gt;在搜索树的每个结点都有定义代价函数。对于极大化问题，代价函数的值为以该点为根的子树所有可行解的值的上界，并且父结点的代价不小于子结点的代价。（极小化问题则相反）&lt;/p&gt;
+&lt;p&gt;这里还有一个&lt;strong&gt;界&lt;/strong&gt;的概念，即当前得到可行解的目标函数的最大值。界的初值为 $0$，每当得到更好的可行解时，界值更新。&lt;/p&gt;
+&lt;h2 id=&#34;分支限界法&#34;&gt;分支限界法&lt;/h2&gt;
+&lt;h3 id=&#34;非对称旅行商问题&#34;&gt;非对称旅行商问题&lt;/h3&gt;
+&lt;p&gt;现实场景：在城市双向道路两侧车道拥堵状况不一的情况下，如何选择道路行驶能最快到达目的地？&lt;/p&gt;
+&lt;p&gt;非对称旅行商问题和旅行商问题的区别：距离不对称，即&lt;/p&gt;
+&lt;p&gt;\begin{align}
+d(c_i, c_j) \ne d(c_j, c_i)$
+\end{align}&lt;/p&gt;
+&lt;p&gt;使用普通的回溯法当然没有问题，那么在使用回溯法的时候是否可以知道应该&lt;strong&gt;优先&lt;/strong&gt;遍历哪些子树？&lt;/p&gt;
+&lt;p&gt;为了尽快能够访问到最优解，我们可以尝试：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不用深度优先搜索&lt;/li&gt;
+&lt;li&gt;优先访问更靠近最优解的节点&lt;/li&gt;
+&lt;li&gt;设置代价函数计算优先级&lt;/li&gt;
+&lt;li&gt;利用优先级队列管理节点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;什么是优先级函数呢？可以令优先级函数等于代价函数。&lt;/p&gt;
+&lt;h3 id=&#34;分支限界法的基本思想&#34;&gt;分支限界法的基本思想&lt;/h3&gt;
+&lt;p&gt;分支限界法是一种与回溯法类似的算法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将问题建模为解空间树&lt;/li&gt;
+&lt;li&gt;通常用代价函数估算每个分支的最优值&lt;/li&gt;
+&lt;li&gt;优先选择当前看来最好的分支&lt;/li&gt;
+&lt;li&gt;通常用广度优先搜索&lt;/li&gt;
+&lt;li&gt;搜索过程中剪枝&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;算法代码-1&#34;&gt;算法代码&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;void branchBound(int x) {
+    queue&amp;lt;int&amp;gt; Q;
+    Q.push(x);
+    int bestX = 0;
+
+    while (!Q.empty()) {
+        s = Q.front();
+        Q.pop();
+        if (constraint(s) &amp;amp;&amp;amp; bound(s, bestX)) {
+            vector&amp;lt;int&amp;gt; S = partition(s);
+            for (int s : S) {
+                if (isLeaf(s)) {
+                    update(bestX);
+                }
+                else {
+                    Q.push(s);
+                }
+            }
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;分支限界法与回溯法的对比&#34;&gt;分支限界法与回溯法的对比&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;回溯法&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;分支限界法&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;搜索方式&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;DFS&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;BFS、优先级队列&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;搜索目标&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;所有解、可行解、最优解&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;最优解&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;约束函数、限界函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;约束函数、限界函数、优先级函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;空间&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;树的高度&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;队列的长度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;a-算法&#34;&gt;$A^*$ 算法&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Best-first&lt;/strong&gt; 策略：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+f(n) = g(n) + h(n)
+\end{align}&lt;/p&gt;
+&lt;p&gt;其中，$g(n)$ 是从根到 $n$ 的路径代价，$h(n)$ 是从 $n$ 到某个目标节点的优化路径代价。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

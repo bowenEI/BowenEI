@@ -1,0 +1,1513 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Bowen Zhou" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/linux/linux-commands/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://bowenei.gitee.io/learn/linux/linux-commands/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+  <meta property="og:url" content="https://bowenei.gitee.io/learn/linux/linux-commands/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/" />
+  <meta property="og:title" content="权限管理 | Bowen&#39;s Academic Home" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-10-29T18:59:42&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-10-29T18:59:42&#43;08:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>权限管理 | Bowen&#39;s Academic Home</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="97ee106e91c3dccea93224ed2a262799" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blogs"><span>Blogs</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallery"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/learn/"><span>Learn</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/bowenEI/" data-toggle="tooltip" data-placement="bottom" title="Follow me on Github" target="_blank" rel="noopener" aria-label="Follow me on Github">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Linux 常用命令一览
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/learn/"><i class="fas fa-arrow-left pr-1"></i>Learn</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/linux/">Linux</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/linux/linux-commands/">Linux 常用命令一览</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/linux/linux-commands/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/">文件管理</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/linux-commands/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91/">文档编辑</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/linux-commands/%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">系统管理</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/linux-commands/%E8%BD%AF%E4%BB%B6%E5%8C%85%E7%AE%A1%E7%90%86/">软件包管理</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/linux-commands/%E5%A4%87%E4%BB%BD%E5%8E%8B%E7%BC%A9/">备份压缩</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/linux-commands/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/">网络通信</a></li>
+
+
+
+  <li class="active"><a href="/learn/linux/linux-commands/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/">权限管理</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/linux-commands/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/">进程管理</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/linux/ubuntu-desktop/">Ubuntu Desktop 快速部署</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/linux/ubuntu-desktop/install/">系统安装</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/ubuntu-desktop/apt-source/">更换软件源</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/ubuntu-desktop/oh-my-zsh/">终端美化</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/ubuntu-desktop/softwares/">必备软件</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/ubuntu-desktop/cuda/">CUDA</a></li>
+
+
+
+  <li class=""><a href="/learn/linux/ubuntu-desktop/others/">其他注意事项</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#chomd-命令改变文件或目录权限">chomd 命令：改变文件或目录权限</a></li>
+    <li><a href="#chown-命令改变文件或目录用户和用户组">chown 命令：改变文件或目录用户和用户组</a></li>
+    <li><a href="#chgrp-命令更改文件用户组">chgrp 命令：更改文件用户组</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/">
+        
+          Learn
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/linux/">
+        
+          Linux
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/linux/linux-commands/">
+        
+          Linux 常用命令一览
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        权限管理
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+          
+
+          <h1>权限管理</h1>
+
+          <div class="article-style">
+            <h2 id="chomd-命令改变文件或目录权限">chomd 命令：改变文件或目录权限</h2>
+<p><code>chmod</code> 命令的英文原意是 change the permissions mode of a file，我们简称为 change mode，意为用来改变文件或目录权限的命令，但是只有文件的属主和超级用户 root 才能执行这个命令。有两种模式，一种是采用权限字母和操作符表达式；另一种是采用数字。</p>
+<p>Linux/Unix 的文件调用权限分为三级：文件所有者（Owner）、用户组（Group）、其它用户（Other Users）。只有文件所有者和超级用户可以修改文件或目录的权限。可以使用绝对模式（八进制数字模式），符号模式指定文件的权限。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://www.runoob.com/wp-content/uploads/2014/08/file-permissions-rwx.jpg" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p><strong>常用参数</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-c</td>
+<td>若该文件权限确实已经更改，才显示其更改动作</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>若该文件权限无法被更改也不显示错误讯息</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>显示权限变更的详细资料</td>
+</tr>
+<tr>
+<td>-R</td>
+<td>对目前目录下的所有文件与子目录进行相同的权限变更(即以递回的方式逐个变更)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>符号模式</strong></p>
+<p>使用符号模式可以设置多个项目：who（用户类型），operator（操作符）和 permission（权限），每个项目的设置可以用逗号隔开。</p>
+<table>
+<thead>
+<tr>
+<th>who</th>
+<th>用户类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>u</code></td>
+<td>user</td>
+<td>文件所有者</td>
+</tr>
+<tr>
+<td><code>g</code></td>
+<td>group</td>
+<td>文件所有者所在组</td>
+</tr>
+<tr>
+<td><code>o</code></td>
+<td>others</td>
+<td>所有其他用户</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>all</td>
+<td>所用用户, 相当于<code>ugo</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>为指定的用户类型增加权限</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>去除指定用户类型的权限</td>
+</tr>
+<tr>
+<td><code>=</code></td>
+<td>设置指定用户权限的设置，即将用户类型的所有权限重新设置</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>名字</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>r</code></td>
+<td>读</td>
+<td>设置为可读权限</td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td>写</td>
+<td>设置为可写权限</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>执行权限</td>
+<td>设置为可执行权限</td>
+</tr>
+<tr>
+<td><code>X</code></td>
+<td>特殊执行权限</td>
+<td>只有当文件为目录文件，或者其他类型的用户有可执行权限时，才将文件权限设置可执行</td>
+</tr>
+<tr>
+<td><code>s</code></td>
+<td>setuid/gid</td>
+<td>当文件被执行时，根据who参数指定的用户类型设置文件的setuid或者setgid权限</td>
+</tr>
+<tr>
+<td><code>t</code></td>
+<td>粘贴位</td>
+<td>设置粘贴位，只有超级用户可以设置该位，只有文件所有者u可以使用该位</td>
+</tr>
+</tbody>
+</table>
+<p><strong>八进制语法</strong></p>
+<p><code>chmod</code> 命令可以使用八进制数来指定权限。文件或目录的权限位是由9个权限位来控制，每三位为一组，它们分别是文件所有者（User）的读、写、执行，用户组（Group）的读、写、执行以及其它用户（Other）的读、写、执行。历史上，文件权限被放在一个比特掩码中，掩码中指定的比特位设为1，用来说明一个类具有相应的优先级。</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>权限</th>
+<th>rwx</th>
+<th>二进制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7</td>
+<td>读 + 写 + 执行</td>
+<td>rwx</td>
+<td>111</td>
+</tr>
+<tr>
+<td>6</td>
+<td>读 + 写</td>
+<td>rw-</td>
+<td>110</td>
+</tr>
+<tr>
+<td>5</td>
+<td>读 + 执行</td>
+<td>r-x</td>
+<td>101</td>
+</tr>
+<tr>
+<td>4</td>
+<td>只读</td>
+<td>r&ndash;</td>
+<td>100</td>
+</tr>
+<tr>
+<td>3</td>
+<td>写 + 执行</td>
+<td>-wx</td>
+<td>011</td>
+</tr>
+<tr>
+<td>2</td>
+<td>只写</td>
+<td>-w-</td>
+<td>010</td>
+</tr>
+<tr>
+<td>1</td>
+<td>只执行</td>
+<td>&ndash;x</td>
+<td>001</td>
+</tr>
+<tr>
+<td>0</td>
+<td>无</td>
+<td>&mdash;</td>
+<td>000</td>
+</tr>
+</tbody>
+</table>
+<p>例如， 765 将这样解释：</p>
+<ul>
+<li>所有者的权限用数字表达：属主的那三个权限位的数字加起来的总和。如 rwx ，也就是 4+2+1 ，应该是 7。</li>
+<li>用户组的权限用数字表达：属组的那个权限位数字的相加的总和。如 rw- ，也就是 4+2+0 ，应该是 6。</li>
+<li>其它用户的权限数字表达：其它用户权限位的数字相加的总和。如 r-x ，也就是 4+0+1 ，应该是 5。</li>
+</ul>
+<p><strong>参考实例</strong></p>
+<pre><code class="language-bash">chmod a+r file.txt                      # 将文件 file.txt 设为所有人皆可读取
+chmod -R a+r *                          # 将目前目录下的所有文件与子目录皆设为任何人可读取
+chmod u+x file.txt                      # 将 file.txt 设定为只有该文件拥有者可以执行
+chmod ug+w, o-w file1.txt file2.txt     # 将文件 file1.txt 与 file2.txt 设为该文件拥有者，与其所属同一个群体者可写入，但其他以外的人则不可写入
+chmod 777 file.txt                      # 将文件 file.txt 设为所有人可以读写执行
+</code></pre>
+<h2 id="chown-命令改变文件或目录用户和用户组">chown 命令：改变文件或目录用户和用户组</h2>
+<p>Linux/Unix 属于多用户多任务操作系统，所有的文件皆有拥有者。利用 <code>chown</code> 命令可以将指定文件的拥有者改为指定的用户或组，用户可以是用户名或者用户 ID，组可以是组名或者组 ID，文件是以空格分开的要改变权限的文件列表，支持通配符。一般来说，这个指令仅限系统管理者 root 所使用，普通用户没有权限改变文件所属者及所属组。</p>
+<p><strong>常用参数</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-R</td>
+<td>对目前目录下的所有文件与子目录进行相同的拥有者变更</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>若该文件拥有者确实已经更改，才显示其更改动作</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>若该文件拥有者无法被更改也不要显示错误讯息</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>只对于连结 link 进行变更，而非该 link 真正指向的文件</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>显示拥有者变更的详细资料</td>
+</tr>
+</tbody>
+</table>
+<p><strong>参考实例</strong></p>
+<pre><code class="language-bash">chown user1 file1           # 改变一个文件的所有人属性
+chown -R user1 directory1   # 改变一个目录的所有人属性并同时改变该目录下所有文件的属性
+chown user1:group1 file1    # 改变一个文件的所有人和群组属性
+</code></pre>
+<h2 id="chgrp-命令更改文件用户组">chgrp 命令：更改文件用户组</h2>
+<p><code>chgrp</code> 是英语单词 change group 的缩写，命令的作用和其中文释义一样，为用于变更文件或目录的所属群组。</p>
+<p><strong>常用参数</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-c</td>
+<td>效果类似”-v”参数，但仅回报更改的部分</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>不显示错误信息</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>对符号连接的文件作修改，而不更动其他任何相关文件</td>
+</tr>
+<tr>
+<td>-R</td>
+<td>递归处理，将指定目录下的所有文件及子目录一并处理</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>显示指令执行过程</td>
+</tr>
+<tr>
+<td>&ndash;reference</td>
+<td>把指定文件或目录的所属群组全部设成和参考文件或目录的所属群组相同</td>
+</tr>
+</tbody>
+</table>
+<p><strong>参考实例</strong></p>
+<pre><code class="language-bash">chgrp group1 file1                  # 改变文件的群组
+chgrp --reference=file_1 file_2     # 根据指定文件改变文件的群组属性
+chgrp -R cool /usr/linuxcool        # 将/usr/linuxcool及其子目录下的所有文件的用户组改为cool
+</code></pre>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/learn/linux/linux-commands/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/" rel="next">网络通信</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/learn/linux/linux-commands/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" rel="prev">进程管理</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Oct 29, 2021</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

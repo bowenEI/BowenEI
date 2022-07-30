@@ -1,0 +1,1755 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Bowen Zhou" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/%E5%9B%9E%E6%BA%AF%E5%89%AA%E6%9E%9D/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://bowenei.gitee.io/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/%E5%9B%9E%E6%BA%AF%E5%89%AA%E6%9E%9D/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+  <meta property="og:url" content="https://bowenei.gitee.io/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/%E5%9B%9E%E6%BA%AF%E5%89%AA%E6%9E%9D/" />
+  <meta property="og:title" content="回溯剪枝 | Bowen&#39;s Academic Home" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-12-30T12:16:47&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-12-30T12:16:47&#43;08:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>回溯剪枝 | Bowen&#39;s Academic Home</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="c7a5eacb7353eb96a2a20a801630a194" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blogs"><span>Blogs</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallery"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/learn/"><span>Learn</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/bowenEI/" data-toggle="tooltip" data-placement="bottom" title="Follow me on Github" target="_blank" rel="noopener" aria-label="Follow me on Github">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          进阶知识
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/learn/"><i class="fas fa-arrow-left pr-1"></i>Learn</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/">算法分析与设计</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">基础知识</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/">算法分析</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E9%80%92%E5%BD%92%E6%96%B9%E7%A8%8B/">递归方程</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/">分治算法</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E5%A4%A7%E6%95%B4%E6%95%B0%E4%B9%98%E6%B3%95/">大整数乘法</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/">矩阵乘法</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">快速排序</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E6%B1%82%E7%AC%ACk%E5%B0%8F%E5%85%83%E7%B4%A0/">求第 k 小元素</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B9/">最近点对</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">快速傅里叶变换</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E5%AF%BB%E6%89%BE%E5%87%B8%E5%8C%85/">寻找凸包</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E4%BD%9C%E4%B8%9A/">作业</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E7%9F%A9%E9%98%B5%E8%BF%9E%E4%B9%98/">矩阵连乘</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E9%92%A2%E6%9D%A1%E5%88%87%E5%89%B2/">钢条切割</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97/">最长公共子序列</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%9C%80%E4%BC%98%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">最优二叉搜索树</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%B5%81%E6%B0%B4%E4%BD%9C%E4%B8%9A%E8%B0%83%E5%BA%A6/">流水作业调度</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/0-1%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">0-1背包问题</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E5%A4%9A%E7%BA%A7%E5%9B%BE%E9%97%AE%E9%A2%98/">多级图问题</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E4%BD%9C%E4%B8%9A/">作业</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">贪心算法</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%B4%BB%E5%8A%A8%E9%80%89%E6%8B%A9/">活动选择</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/">哈夫曼编码</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/">最小生成树</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E4%BD%9C%E4%B8%9A/">作业</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/">图论算法</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/">图的遍历</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E5%9B%BE%E7%9A%84%E8%BF%9E%E9%80%9A/">图的连通</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/">最短路径</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/">拓扑排序</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E4%BD%9C%E4%B8%9A/">作业</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/">进阶知识</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/np-complete/">NP 完全理论</a></li>
+
+
+
+  <li class="active"><a href="/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/%E5%9B%9E%E6%BA%AF%E5%89%AA%E6%9E%9D/">回溯剪枝</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#回溯法">回溯法</a>
+      <ul>
+        <li><a href="#解空间树">解空间树</a></li>
+        <li><a href="#回溯法的基本思想">回溯法的基本思想</a></li>
+        <li><a href="#剪枝的基本思想">剪枝的基本思想</a></li>
+      </ul>
+    </li>
+    <li><a href="#算法框架">算法框架</a>
+      <ul>
+        <li><a href="#递归回溯">递归回溯</a></li>
+        <li><a href="#迭代回溯">迭代回溯</a></li>
+      </ul>
+    </li>
+    <li><a href="#算法分析">算法分析</a>
+      <ul>
+        <li><a href="#空间复杂度">空间复杂度</a></li>
+        <li><a href="#时间复杂度">时间复杂度</a></li>
+        <li><a href="#回溯法同其他算法比较">回溯法同其他算法比较</a></li>
+      </ul>
+    </li>
+    <li><a href="#回溯剪枝的应用">回溯剪枝的应用</a>
+      <ul>
+        <li><a href="#tsp旅行商问题">TSP：旅行商问题</a></li>
+        <li><a href="#n-皇后问题">$n$ 皇后问题</a></li>
+      </ul>
+    </li>
+    <li><a href="#剪枝函数的设计">剪枝函数的设计</a>
+      <ul>
+        <li><a href="#可行性约束函数">可行性约束函数</a></li>
+        <li><a href="#限界函数">限界函数</a></li>
+      </ul>
+    </li>
+    <li><a href="#分支限界法">分支限界法</a>
+      <ul>
+        <li><a href="#非对称旅行商问题">非对称旅行商问题</a></li>
+        <li><a href="#分支限界法的基本思想">分支限界法的基本思想</a></li>
+        <li><a href="#算法代码-1">算法代码</a></li>
+        <li><a href="#分支限界法与回溯法的对比">分支限界法与回溯法的对比</a></li>
+      </ul>
+    </li>
+    <li><a href="#a-算法">$A^*$ 算法</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/">
+        
+          Learn
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/algorithm/">
+        
+          算法分析与设计
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/">
+        
+          进阶知识
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        回溯剪枝
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+          
+
+          <h1>回溯剪枝</h1>
+
+          <div class="article-style">
+            <h2 id="回溯法">回溯法</h2>
+<p>回顾动态规划和贪心算法中的剪枝策略：</p>
+<ul>
+<li>动态规划：考虑搜索空间中子问题的重叠性。</li>
+<li>贪心算法：以贪心选择策略为依据，遍历搜索空间的部分分支。</li>
+</ul>
+<p>回溯法是一种相较于动态规划、贪心算法更一般的通用的解法：</p>
+<ul>
+<li>将问题建模为解空间树</li>
+<li>深度优先搜索</li>
+<li>搜索过程中剪枝</li>
+<li>适合解组合数相当大的问题</li>
+</ul>
+<h3 id="解空间树">解空间树</h3>
+<p>首先，我们先给出问题的解向量的定义：$n$ 元式 $(x_1, x_2, \cdots, x_n)$ 的形式。其中包含如下的一些概念：</p>
+<ul>
+<li>显约束：对分量 $x_i$ 的取值限定</li>
+<li>隐约束：为满足问题的解而对不同分量之间施加的约束</li>
+<li>解空间：满足显式约束条件的所有 $n$ 元组</li>
+</ul>
+<p>针对回溯问题，我们有解空间树的概念：</p>
+<ul>
+<li>问题的解空间的表示方式</li>
+<li>第 $0$ 层为初始状态</li>
+<li>第 $k$ 层为第 $k$ 个分量做出选择后到达的状态</li>
+<li>从树的根结点到叶子结点的路径</li>
+</ul>
+<p>例如在 0-1 背包问题中，有如下解空间树：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/0-1%E8%83%8C%E5%8C%85%E8%A7%A3%E7%A9%BA%E9%97%B4%E6%A0%91_hu3c137f1e9d82ef768608d96731f9b9d3_160443_3179bd0fb73ba894910724426a83ff92.webp 400w,
+               /media/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/0-1%E8%83%8C%E5%8C%85%E8%A7%A3%E7%A9%BA%E9%97%B4%E6%A0%91_hu3c137f1e9d82ef768608d96731f9b9d3_160443_e733cd23cd157c0e03a82582534b69e8.webp 760w,
+               /media/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/0-1%E8%83%8C%E5%8C%85%E8%A7%A3%E7%A9%BA%E9%97%B4%E6%A0%91_hu3c137f1e9d82ef768608d96731f9b9d3_160443_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/0-1%E8%83%8C%E5%8C%85%E8%A7%A3%E7%A9%BA%E9%97%B4%E6%A0%91_hu3c137f1e9d82ef768608d96731f9b9d3_160443_3179bd0fb73ba894910724426a83ff92.webp"
+               width="760"
+               height="313"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>树中第 $i$ 层与第 $i+1$ 层结点之间的边上给出了对物品 $i$ 的选择结果，$8$ 个叶子代表 $8$ 个可能解。</p>
+<p>解空间树可以通过 DFS 和 BFS 的方法生成。</p>
+<h3 id="回溯法的基本思想">回溯法的基本思想</h3>
+<p>问题的求解方式：</p>
+<ul>
+<li>定义整个解空间完成（应注意解空间应当包括所有可能解）</li>
+<li>确定易于搜索的解空间结构</li>
+<li>深度优先方式遍历解空间并剪枝</li>
+</ul>
+<p>回溯法是具有剪枝函数的深度优先生成法。</p>
+<h3 id="剪枝的基本思想">剪枝的基本思想</h3>
+<p>在搜索至树上任意一点时判断：</p>
+<ul>
+<li>是否满足约束条件</li>
+<li>是否包含问题的（最优）解
+<ul>
+<li>不包含：跳过对以该结点为根的子树的搜索——剪枝 <code>pruning</code></li>
+<li>包含：进入以该结点为根的子树，继续按深度优先搜索</li>
+</ul>
+</li>
+</ul>
+<p>两种用于剪枝的函数：</p>
+<ul>
+<li>约束函数：用约束条件剪去得不到可行解的子树。例如在 0-1 背包问题中，约束条件“商品体积不能超过背包容量”就可以用约束函数来刻画。</li>
+<li>限界函数：用目标函数减去得不到最优解的子树。例如在 0-1 背包问题中，目标“购买商品的价格尽可能高”就可以用限界函数来刻画。</li>
+</ul>
+<p>利用剪枝函数可避免无效搜索，使算法无需搜索整个搜索树。</p>
+<h2 id="算法框架">算法框架</h2>
+<h3 id="递归回溯">递归回溯</h3>
+<pre><code class="language-cpp">int[] backtrack(int t) {
+    if (t &gt; n) {
+        // 到达叶子结点，返回结果
+        return x;
+    }
+    else {
+        for (int i = f(n, t); i &lt;= g(n, t); ++i) {
+            // f(n, t): 第 t 层未搜索过子树的起始编号
+            // g(n, t): 第 t 层未搜索过子树的终止编号
+            x[t] = h(i);
+            if (constraint(x, t) &amp;&amp; bound(x, t)) {
+                // constraint: 约束函数，bound: 限界函数
+                backtrack(t + 1);
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="迭代回溯">迭代回溯</h3>
+<pre><code class="language-cpp">void iterativeBacktrack() {
+    int t = 1;
+    while (t &gt; 0) {
+        if (f(n, t) &lt;= g(n, t)) {
+            for (int i = f(n, t); i &lt;= g(n, t); ++i) {
+                x[t] = h(i);
+                if (constraint(x, t) &amp;&amp; bound(x, t)) {
+                    if (solution(t)) {
+                        return x;
+                    }
+                    else {
+                        ++i;
+                        break;
+                    }
+                }
+            }
+        }
+        else {
+            --t;
+        }
+    }
+}
+</code></pre>
+<h2 id="算法分析">算法分析</h2>
+<h3 id="空间复杂度">空间复杂度</h3>
+<p>回溯法的存储特点：</p>
+<ul>
+<li>动态产生问题的解空间</li>
+<li>只保存从根结点到当前扩展结点的路径</li>
+</ul>
+<p>空间复杂度：</p>
+<ul>
+<li>根到叶子的最长路径的长度为 $h(n)$</li>
+<li>空间复杂度通常为 $O(h(n))$</li>
+<li>显式地存储整个解空间则需要 $O(2h(n))$ 或 $O(h(n)!)$</li>
+</ul>
+<h3 id="时间复杂度">时间复杂度</h3>
+<p>在讨论回溯法的时间复杂度之前，我们首先要给出两个概念：</p>
+<ul>
+<li>子集树：从 $n$ 个元素中找出满足某种性质的子集，相应的解空间为子集树。例如 0-1 背包问题的解空间树就是子集树。</li>
+<li>排列树：当所给问题是确定的 $n$ 个元素满足某种性质的排列时，相应的解空间为排序树。例如 TSP 问题的解空间树就是排列树。</li>
+</ul>
+<p>回溯法的最坏时间复杂度取决于解空间树的类型：</p>
+<ul>
+<li>子集树：$O(2^n)$</li>
+<li>排列树：$O(n!)$</li>
+</ul>
+<p>如果采用蛮力穷举法进行回溯，回溯法的时间复杂度必然是最坏情况。因此，需要设计较好的剪枝函数以降低时间复杂度。</p>
+<h3 id="回溯法同其他算法比较">回溯法同其他算法比较</h3>
+<ul>
+<li>动态规划：避免计算重叠子问题</li>
+<li>贪心算法：只考虑局部最优解</li>
+<li>回溯法：利用剪枝函数</li>
+</ul>
+<h2 id="回溯剪枝的应用">回溯剪枝的应用</h2>
+<h3 id="tsp旅行商问题">TSP：旅行商问题</h3>
+<p>一个旅行商需要在 $n$ 个城市销售商品，已知任两个城市之间的距离，求一条每个城市恰好经过一次的回路，使得总长度最小。</p>
+<h4 id="问题建模">问题建模</h4>
+<p>输入：</p>
+<ul>
+<li>城市集 $C = \{ c_1, c_2, \cdots, c_n \}$</li>
+<li>距离 $d(c_i, c_j) = d(c_j, c_i)$</li>
+</ul>
+<p>输出：</p>
+<ul>
+<li>城市 $c_1, c_2, \cdots c_n$ 的排列 $c_{k_1}, c_{k_2}, c_{k_n}$</li>
+</ul>
+<p>约束条件：</p>
+<p>\begin{align}
+\min \left \{ \sum_{i=1}^{n-1} {d(c_{k_i}, c_{k_{i+1}}) + d(c_{k_n}, c_{k_1})} \right \}
+\end{align}</p>
+<h4 id="问题分析">问题分析</h4>
+<p>旅行商问题是典型的以排序树为解空间树结构的回溯法问题。</p>
+<h3 id="n-皇后问题">$n$ 皇后问题</h3>
+<p>在一个 $n \times n$ 的方格内放置 $n$ 个皇后，使得没有两个皇后互相“攻击”（在同一行、同一列、也不在同一条斜线上）。问有多少种可能的布局？</p>
+<p>计算机体系结构的很多问题和 $n$ 皇后问题很相似。例如并行内存系统的存储模式，超大规模集成电路设计，检测程序中的死锁问题。</p>
+<h4 id="问题分析-1">问题分析</h4>
+<p>$n$ 皇后问题的解空间树是 $n$ 叉树，按深度优先次序遍历 $n$ 叉树即可找到所有解。</p>
+<h4 id="算法代码">算法代码</h4>
+<ul>
+<li><a href="https://leetcode-cn.com/problems/n-queens/description/" target="_blank" rel="noopener">LeetCode Link</a></li>
+</ul>
+<pre><code class="language-cpp">class Solution
+{
+public:
+    vector&lt;bool&gt; columns;          // 当前纵向是否不被攻击
+    map&lt;int, bool&gt; mains, seconds; // 当前斜线方向是否不被攻击
+
+    vector&lt;vector&lt;string&gt;&gt; solveNQueens(int n)
+    {
+        columns = vector&lt;bool&gt;(n, true);
+        for (int i = 0; i &lt; n; ++i) {
+            mains[i] = mains[-i] = true;        // 计算方法：行号-列号
+            seconds[i] = seconds[i + n] = true; // 计算方法：行号+列号
+        }
+        vector&lt;vector&lt;string&gt;&gt; ans;
+        vector&lt;string&gt; temp;
+        backtrack(0, n, ans, temp);
+        return ans;
+    }
+
+    void backtrack(int row, const int n, vector&lt;vector&lt;string&gt;&gt; &amp;ans, vector&lt;string&gt; &amp;temp)
+    {
+        if (row == n) {
+            // 搜到底，要回溯
+            ans.push_back(temp);
+            return;
+        }
+        for (int j = 0; j &lt; n; ++j) {
+            // 根据行、列、主对角线、次对角线的下标特点，构造了标志位的索引器方便判断
+            if (columns[j] &amp;&amp; mains[row - j] &amp;&amp; seconds[row + j]) {
+                // 表示当前行皇后摆放位置
+                string line(n, '.');
+                line[j] = 'Q';
+                // 递归深入之前修改相应标志位，使得棋盘某些位置不能放（被攻击）
+                columns[j] = mains[row - j] = seconds[row + j] = false;
+                // 当前行的摆放结果压栈
+                temp.push_back(line);
+                // 开始递归下一层
+                backtrack(row + 1, n, ans, temp);
+                // 回溯，当前行之前的结果退栈（前面几行结果仍保留）
+                temp.pop_back();
+                // 相应标志位复位，表示这些位置又可以继续摆放皇后
+                columns[j] = mains[row - j] = seconds[row + j] = true;
+            } // if语句结束后，当前行可能有多解，这就是回溯再递归
+        }
+    }
+};
+</code></pre>
+<h2 id="剪枝函数的设计">剪枝函数的设计</h2>
+<h3 id="可行性约束函数">可行性约束函数</h3>
+<h4 id="图着色问题">图着色问题</h4>
+<p>给定无向连通图 $G = (V, E)$，是否可以使用 $k$ 种颜色对 $G$ 中顶点着色，使得任意两个相邻顶点之间的着色都不同。</p>
+<ul>
+<li>是与否的判定问题</li>
+<li>解向量 $(x_1, x_2, \cdots, x_n)$（$x_i$ 表示顶点 $i$ 所着颜色）</li>
+</ul>
+<p>图着色问题中的描述“任意两个相邻顶点之间的着色都不同”即可视为一种可行性约束函数。$k$ 着色问题对应的解空间为 $k$ 叉树。</p>
+<h3 id="限界函数">限界函数</h3>
+<h4 id="组合优化问题">组合优化问题</h4>
+<ul>
+<li>目标函数（极大化或极小化）</li>
+<li>约束条件</li>
+<li>可行解：搜索空间满足约束条件的解</li>
+<li>最优解：使目标函数达到极大</li>
+</ul>
+<p>例如我们熟知的 0-1 背包问题就是一个组合优化问题。</p>
+<h4 id="代价函数">代价函数</h4>
+<p>在搜索树的每个结点都有定义代价函数。对于极大化问题，代价函数的值为以该点为根的子树所有可行解的值的上界，并且父结点的代价不小于子结点的代价。（极小化问题则相反）</p>
+<p>这里还有一个<strong>界</strong>的概念，即当前得到可行解的目标函数的最大值。界的初值为 $0$，每当得到更好的可行解时，界值更新。</p>
+<h2 id="分支限界法">分支限界法</h2>
+<h3 id="非对称旅行商问题">非对称旅行商问题</h3>
+<p>现实场景：在城市双向道路两侧车道拥堵状况不一的情况下，如何选择道路行驶能最快到达目的地？</p>
+<p>非对称旅行商问题和旅行商问题的区别：距离不对称，即</p>
+<p>\begin{align}
+d(c_i, c_j) \ne d(c_j, c_i)$
+\end{align}</p>
+<p>使用普通的回溯法当然没有问题，那么在使用回溯法的时候是否可以知道应该<strong>优先</strong>遍历哪些子树？</p>
+<p>为了尽快能够访问到最优解，我们可以尝试：</p>
+<ul>
+<li>不用深度优先搜索</li>
+<li>优先访问更靠近最优解的节点</li>
+<li>设置代价函数计算优先级</li>
+<li>利用优先级队列管理节点</li>
+</ul>
+<p>什么是优先级函数呢？可以令优先级函数等于代价函数。</p>
+<h3 id="分支限界法的基本思想">分支限界法的基本思想</h3>
+<p>分支限界法是一种与回溯法类似的算法：</p>
+<ul>
+<li>将问题建模为解空间树</li>
+<li>通常用代价函数估算每个分支的最优值</li>
+<li>优先选择当前看来最好的分支</li>
+<li>通常用广度优先搜索</li>
+<li>搜索过程中剪枝</li>
+</ul>
+<h3 id="算法代码-1">算法代码</h3>
+<pre><code class="language-cpp">void branchBound(int x) {
+    queue&lt;int&gt; Q;
+    Q.push(x);
+    int bestX = 0;
+
+    while (!Q.empty()) {
+        s = Q.front();
+        Q.pop();
+        if (constraint(s) &amp;&amp; bound(s, bestX)) {
+            vector&lt;int&gt; S = partition(s);
+            for (int s : S) {
+                if (isLeaf(s)) {
+                    update(bestX);
+                }
+                else {
+                    Q.push(s);
+                }
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="分支限界法与回溯法的对比">分支限界法与回溯法的对比</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">回溯法</th>
+<th style="text-align:center">分支限界法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">搜索方式</td>
+<td style="text-align:center">DFS</td>
+<td style="text-align:center">BFS、优先级队列</td>
+</tr>
+<tr>
+<td style="text-align:center">搜索目标</td>
+<td style="text-align:center">所有解、可行解、最优解</td>
+<td style="text-align:center">最优解</td>
+</tr>
+<tr>
+<td style="text-align:center">函数</td>
+<td style="text-align:center">约束函数、限界函数</td>
+<td style="text-align:center">约束函数、限界函数、优先级函数</td>
+</tr>
+<tr>
+<td style="text-align:center">空间</td>
+<td style="text-align:center">树的高度</td>
+<td style="text-align:center">队列的长度</td>
+</tr>
+</tbody>
+</table>
+<h2 id="a-算法">$A^*$ 算法</h2>
+<p><strong>Best-first</strong> 策略：</p>
+<p>\begin{align}
+f(n) = g(n) + h(n)
+\end{align}</p>
+<p>其中，$g(n)$ 是从根到 $n$ 的路径代价，$h(n)$ 是从 $n$ 到某个目标节点的优化路径代价。</p>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/np-complete/" rel="next">NP 完全理论</a>
+  </div>
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Dec 30, 2021</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

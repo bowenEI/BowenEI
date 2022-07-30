@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>贪心算法 | Bowen&#39;s Academic Home</title>
+    <link>https://bowenei.gitee.io/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/</link>
+      <atom:link href="https://bowenei.gitee.io/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <description>贪心算法</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 24 Oct 2021 21:40:57 +0800</lastBuildDate>
+    <image>
+      <url>https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png</url>
+      <title>贪心算法</title>
+      <link>https://bowenei.gitee.io/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/</link>
+    </image>
+    
+    <item>
+      <title>活动选择</title>
+      <link>https://bowenei.gitee.io/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%B4%BB%E5%8A%A8%E9%80%89%E6%8B%A9/</link>
+      <pubDate>Sun, 07 Nov 2021 15:14:56 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%B4%BB%E5%8A%A8%E9%80%89%E6%8B%A9/</guid>
+      <description>&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
+&lt;h3 id=&#34;形式化描述&#34;&gt;形式化描述&lt;/h3&gt;
+&lt;p&gt;输入：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$n$ 个活动组成的集合 $S = \{ a_1, a_2, \cdots, a_n \}$&lt;/li&gt;
+&lt;li&gt;每个活动 $a_i$ 的开始时间 $s_i$ 和结束时间 $f_i$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;输出：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;活动集合 $S$ 的子集 $S&#39;$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;优化目标：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+\max \left | S&#39; \right |
+\end{align}&lt;/p&gt;
+&lt;p&gt;约束条件：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+\mathbf{s.t.} \forall a_i, a_j \in S&#39;, s_i \geqslant f_j \vee s_j \geqslant f_i
+\end{align}&lt;/p&gt;
+&lt;h2 id=&#34;问题分析&#34;&gt;问题分析&lt;/h2&gt;
+&lt;p&gt;我们可以很容易想到如下策略：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;最短活动优先&lt;/li&gt;
+&lt;li&gt;最早开始活动优先&lt;/li&gt;
+&lt;li&gt;最早结束活动优先&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;上面三种策略到底哪一种正确呢？还是都不正确？&lt;/p&gt;
+&lt;h3 id=&#34;最短活动优先&#34;&gt;最短活动优先&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%B4%BB%E5%8A%A8%E9%80%89%E6%8B%A91_hu0e56ef44d01ad2e8bd261af2d0870ccd_11560_1a859d3e8828633a3a5b0dbf55782149.webp 400w,
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%B4%BB%E5%8A%A8%E9%80%89%E6%8B%A91_hu0e56ef44d01ad2e8bd261af2d0870ccd_11560_d320077830f520625a52e91c6b062a5a.webp 760w,
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%B4%BB%E5%8A%A8%E9%80%89%E6%8B%A91_hu0e56ef44d01ad2e8bd261af2d0870ccd_11560_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%B4%BB%E5%8A%A8%E9%80%89%E6%8B%A91_hu0e56ef44d01ad2e8bd261af2d0870ccd_11560_1a859d3e8828633a3a5b0dbf55782149.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;113&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;最早开始活动优先&#34;&gt;最早开始活动优先&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%B4%BB%E5%8A%A8%E9%80%89%E6%8B%A92_hu96be676db6d03ff090a3476b4b280241_11432_17dff8b4ee50558248d04eb5e1161832.webp 400w,
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%B4%BB%E5%8A%A8%E9%80%89%E6%8B%A92_hu96be676db6d03ff090a3476b4b280241_11432_c87a24773b896d7754f38f263a4a5f7b.webp 760w,
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%B4%BB%E5%8A%A8%E9%80%89%E6%8B%A92_hu96be676db6d03ff090a3476b4b280241_11432_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%B4%BB%E5%8A%A8%E9%80%89%E6%8B%A92_hu96be676db6d03ff090a3476b4b280241_11432_17dff8b4ee50558248d04eb5e1161832.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;112&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;最早结束活动优先&#34;&gt;最早结束活动优先&lt;/h3&gt;
+&lt;p&gt;因为选择最早结束的活动，可以给后面的活动留更大的选择空间。然而这只是我们的直观感受，这是否可以保证最优解？需要证明。&lt;/p&gt;
+&lt;h4 id=&#34;证明&#34;&gt;证明&lt;/h4&gt;
+&lt;p&gt;先证明问题具有最优子结构性质，用反证法。再证明贪心选择性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设贪心最优解 $A$ 也按结束时间递增排序，设其第一个活动为 $k$，第二个活动为 $j$。&lt;/li&gt;
+&lt;li&gt;若 $k=1$，显然成立。&lt;/li&gt;
+&lt;li&gt;若 $k \ne 1$，由于 $A$ 中的活动相容，有 $f_k \leqslant s_j$。由于 $f_1 \leqslant f_k$，因此可以用活动 $1$ 代替活动 $k$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;算法代码&#34;&gt;算法代码&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;void activitySelection(vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; &amp;amp;activities) {
+    // lambda表达式：按结束时间排序，若相同则按最早开始时间排序
+    auto lambda = [](const pair&amp;lt;int, int&amp;gt; &amp;amp;a1,
+                     const pair&amp;lt;int, int&amp;gt; &amp;amp;a2) {
+        return a1.second &amp;lt; a2.second;
+    };
+    sort(activities.begin(), activities.end(), lambda);
+    auto iter = activities.begin();
+    while (iter != activities.end()) {
+        // 删除所有与iter所指活动时间冲突的活动
+        for (auto it = iter + 1; it != activities.end();) {
+            if (it-&amp;gt;first &amp;lt; iter-&amp;gt;second) {
+                it = activities.erase(it); // erase函数返回删除后的下一个元素的迭代器
+            } else {
+                ++it;
+            }
+        }
+        ++iter;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>哈夫曼编码</title>
+      <link>https://bowenei.gitee.io/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/</link>
+      <pubDate>Sun, 07 Nov 2021 15:15:33 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/</guid>
+      <description>&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
+&lt;p&gt;前缀码：编码的任意前缀不是其他编码。&lt;/p&gt;
+&lt;p&gt;问题：如何求得编码后二进制串总长最短的前缀码？&lt;/p&gt;
+&lt;h3 id=&#34;形式化定义&#34;&gt;形式化定义&lt;/h3&gt;
+&lt;p&gt;输入：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;字符数 $n$ 以及各个字符的频数 $F = &amp;lt;f_1, f_2, \cdots, f_n&amp;gt;$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;输出：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;解析结果唯一的二进制编码方案 $C = &amp;lt;c_1, c_2, \cdots, c_n&amp;gt;$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;优化目标：&lt;/p&gt;
+&lt;p&gt;$\min \sum_{i=1}^{n}{\left | c_i \right | f_i}$&lt;/p&gt;
+&lt;p&gt;其中 $c_i$ 为字符 $i$ 的编码二进制串长度。&lt;/p&gt;
+&lt;h2 id=&#34;问题分析&#34;&gt;问题分析&lt;/h2&gt;
+&lt;p&gt;我们可以很容易想到如下策略：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;优先处理高频字符&lt;/li&gt;
+&lt;li&gt;优先处理低频字符&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;上述两种策略到底哪种是最优方案呢？会不会还有其他更优的方案？&lt;/p&gt;
+&lt;p&gt;实际上，优先处理低频字符是最优的方案。为什么呢？我们首先来看看带权路径长度的概念。&lt;/p&gt;
+&lt;h2 id=&#34;带权路径长度&#34;&gt;带权路径长度&lt;/h2&gt;
+&lt;p&gt;假设二叉树中每个叶子结点有一个权值 $w_i$，到根的路径长度为 $l_i$，其他结点权值为 $0$。则有 $n$ 个叶子结点的树的带权路径长度为&lt;/p&gt;
+&lt;p&gt;\begin{align}
+WPL = \sum_{i=0}^{n-1} w_i l_i
+\end{align}&lt;/p&gt;
+&lt;h2 id=&#34;huffman-树&#34;&gt;Huffman 树&lt;/h2&gt;
+&lt;p&gt;带权路径长度达到最小的二叉树即为 Huffman 树。在 Huffman 树中，权值越大的结点离根越近。&lt;/p&gt;
+&lt;h3 id=&#34;构造-huffman-树&#34;&gt;构造 Huffman 树&lt;/h3&gt;
+&lt;p&gt;首先构造 $n$ 棵二叉树的森林 $F = \{ T_1, T_2, \cdots, T_n \}$，每棵二叉树 $T_i$ 只有一个带权值为 $w_i$ 的根结点。然后重复以下步骤，直到只剩一棵树为止：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在 $F$ 中选两棵根结点权值最小的二叉树，作为左右子树构造一棵新的二叉树，新树的根结点权值等于其左右子树根结点权值之和。&lt;/li&gt;
+&lt;li&gt;在 $F$ 中删除这两棵二叉树。&lt;/li&gt;
+&lt;li&gt;把新构造的二叉树加入 $F$。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;算法代码&#34;&gt;算法代码&lt;/h2&gt;
+&lt;h3 id=&#34;结点定义&#34;&gt;结点定义&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;struct HuffmanNode
+{
+    int freq; // 频数
+    char ch;  // 字符，如果是非叶子结点则为空
+    struct HuffmanNode *left;
+    struct HuffmanNode *right;
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;初始化-huffman-树&#34;&gt;初始化 Huffman 树&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;struct HuffmanNode *initHuffmanTree(map&amp;lt;char, int&amp;gt; &amp;amp;F, vector&amp;lt;struct HuffmanNode&amp;gt; &amp;amp;treeNode)
+{
+    const int chNum = F.size();
+    auto p = F.begin();
+    for (int i = 0; i &amp;lt; chNum &amp;amp;&amp;amp; p != F.end(); ++i, ++p)
+    {
+        treeNode[i].ch = p-&amp;gt;first;
+        treeNode[i].freq = p-&amp;gt;second;
+        treeNode[i].left = treeNode[i].right = nullptr;
+    }
+    auto begin = treeNode.begin(), end = begin + chNum;
+    while (end != treeNode.end())
+    {
+        auto lambda = [](struct HuffmanNode &amp;amp;n1,
+                         struct HuffmanNode &amp;amp;n2) { return n1.freq &amp;lt; n2.freq; };
+        sort(begin, end, lambda);
+        end-&amp;gt;ch = &#39;\0&#39;;
+        end-&amp;gt;freq = begin-&amp;gt;freq + (begin + 1)-&amp;gt;freq;
+        end-&amp;gt;left = &amp;amp;(*begin);
+        end-&amp;gt;right = &amp;amp;(*(begin + 1));
+        begin += 2;
+        ++end;
+    }
+    return &amp;amp;treeNode.at(treeNode.size() - 1);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;先序遍历&#34;&gt;先序遍历&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;void LDR(HuffmanNode *p,
+         string &amp;amp;code,
+         map&amp;lt;char, string&amp;gt; &amp;amp;encodeTable)
+{
+    if (!p-&amp;gt;left &amp;amp;&amp;amp; !p-&amp;gt;right)
+    {
+        encodeTable[p-&amp;gt;ch] = code;
+        return;
+    }
+    if (p-&amp;gt;left)
+    {
+        code.push_back(&#39;0&#39;);
+        LDR(p-&amp;gt;left, code, encodeTable);
+        code.pop_back();
+    }
+    if (p-&amp;gt;right)
+    {
+        code.push_back(&#39;1&#39;);
+        LDR(p-&amp;gt;right, code, encodeTable);
+        code.pop_back();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;编码&#34;&gt;编码&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;map&amp;lt;char, string&amp;gt; encode(struct HuffmanNode *root)
+{
+    map&amp;lt;char, string&amp;gt; encodeTable;
+    string code = &amp;quot;&amp;quot;;
+    LDR(root, code, encodeTable);
+    return encodeTable;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;主调函数&#34;&gt;主调函数&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;int main()
+{
+    map&amp;lt;char, int&amp;gt; F = {
+        {&#39;a&#39;, 45},
+        {&#39;b&#39;, 13},
+        {&#39;c&#39;, 12},
+        {&#39;d&#39;, 16},
+        {&#39;e&#39;, 9},
+        {&#39;f&#39;, 5}};
+    vector&amp;lt;struct HuffmanNode&amp;gt; node(F.size() * 2 - 1);
+    auto ans = encode(initHuffmanTree(F, node));
+    for (auto &amp;amp;i : ans)
+    {
+        cout &amp;lt;&amp;lt; i.first &amp;lt;&amp;lt; &amp;quot;: &amp;quot; &amp;lt;&amp;lt; i.second &amp;lt;&amp;lt; endl;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>最小生成树</title>
+      <link>https://bowenei.gitee.io/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</link>
+      <pubDate>Sun, 07 Nov 2021 15:16:06 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</guid>
+      <description>&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
+&lt;h3 id=&#34;生成树&#34;&gt;生成树&lt;/h3&gt;
+&lt;p&gt;设 $G = (V, E)$ 是一个边加权无向连通图。$G$ 的生成树是无向树 $S = (V, T)$，$T \subseteq E$。$W$ 是 $G$ 的权函数，$T$ 权值定义为 $W(T) = \sum_{(u, v) \in T}{W(u, v)}$。&lt;/p&gt;
+&lt;h3 id=&#34;最小生成树&#34;&gt;最小生成树&lt;/h3&gt;
+&lt;p&gt;$G$ 的最小生成树是使 $W(T)$ 最小的 $G$ 的生成树。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;输入：无向连通图 $G = (V, E)$，权函数 $W$。&lt;/li&gt;
+&lt;li&gt;输出：$G$ 的最小生成树。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;kruskal-算法&#34;&gt;Kruskal 算法&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;初始时所有顶点自成一集合。&lt;/li&gt;
+&lt;li&gt;在图上选权值最小的边 $e_{min}$，判断 $e_{min}$ 两端点是否属于不同集合 $c_i$ 和 $c_j$。
+&lt;ul&gt;
+&lt;li&gt;若是，将 $c_i$ 和 $c_j$ 用 $e_{min}$ 连接成同一个集合。&lt;/li&gt;
+&lt;li&gt;否则，舍弃 $e_{min}$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;重复上一过程，直到所有顶点在同一集合。&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/Kruskal_hu02e712d2b5f442f2876199b732b60317_98386_5833dd2c96fba77f6d2d783251a6558e.webp 400w,
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/Kruskal_hu02e712d2b5f442f2876199b732b60317_98386_978c9554e11a6527c2992ebafe6ab1ca.webp 760w,
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/Kruskal_hu02e712d2b5f442f2876199b732b60317_98386_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/Kruskal_hu02e712d2b5f442f2876199b732b60317_98386_5833dd2c96fba77f6d2d783251a6558e.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;376&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;并查集&#34;&gt;并查集&lt;/h3&gt;
+&lt;p&gt;并查集是一种数据结构，类似于《离散数学》中等价类的划分。这种数据结构非常适合处理如下两大问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要经常合并集合&lt;/li&gt;
+&lt;li&gt;需要经常查找元素属于哪个集合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;采用并查集的数据结构，可以提高 Kruskal 算法中判断边的两端点是否属于不同集合的效率。&lt;/p&gt;
+&lt;p&gt;并查集支持以下操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;初始化 &lt;code&gt;UFSets(s)&lt;/code&gt;：将 &lt;code&gt;s&lt;/code&gt; 中的每个元素自成一个集合。&lt;/li&gt;
+&lt;li&gt;合并 &lt;code&gt;Union(root1, root2)&lt;/code&gt;：合并集合 &lt;code&gt;root1&lt;/code&gt; 和 &lt;code&gt;root2&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;查找 &lt;code&gt;Find(x)&lt;/code&gt;：查找元素 &lt;code&gt;x&lt;/code&gt; 属于哪个集合。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;并查集的表示&#34;&gt;并查集的表示&lt;/h4&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E5%B9%B6%E6%9F%A5%E9%9B%86_hu843763b27065783956baed3cb3741a98_58139_4806ba6cfbae19e1dcc408167031e473.webp 400w,
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E5%B9%B6%E6%9F%A5%E9%9B%86_hu843763b27065783956baed3cb3741a98_58139_81f1bb81f2e48221dc73e87dc88a6b28.webp 760w,
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E5%B9%B6%E6%9F%A5%E9%9B%86_hu843763b27065783956baed3cb3741a98_58139_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E5%B9%B6%E6%9F%A5%E9%9B%86_hu843763b27065783956baed3cb3741a98_58139_4806ba6cfbae19e1dcc408167031e473.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;369&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;通常用双亲表示法表示的树作为并查集的基础数据结构（在内存中是连续的存储空间）。数组下标对应每个元素，数组的值表示指向父结点的指针。负数表示没有父结点，其绝对值表示集合中一共有多少个元素。&lt;/p&gt;
+&lt;p&gt;记录集合中总的元素个数的意义在于，将结点数更少的集合作为结点数更多的集合的根的子树能够提高并查集的查询效率。&lt;/p&gt;
+&lt;h4 id=&#34;路径压缩&#34;&gt;路径压缩&lt;/h4&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E8%B7%AF%E5%BE%84%E5%8E%8B%E7%BC%A9_hue7670d42ba572df1c1e5174f98d1b019_17885_cc90e8aab5e9e9b0755d79012f70b054.webp 400w,
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E8%B7%AF%E5%BE%84%E5%8E%8B%E7%BC%A9_hue7670d42ba572df1c1e5174f98d1b019_17885_489218a61a20072defc3b3d92aeb1497.webp 760w,
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E8%B7%AF%E5%BE%84%E5%8E%8B%E7%BC%A9_hue7670d42ba572df1c1e5174f98d1b019_17885_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E8%B7%AF%E5%BE%84%E5%8E%8B%E7%BC%A9_hue7670d42ba572df1c1e5174f98d1b019_17885_cc90e8aab5e9e9b0755d79012f70b054.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;306&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;并查集的代码实现&#34;&gt;并查集的代码实现&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;TODO&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;算法代码&#34;&gt;算法代码&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;TODO&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;prim-算法&#34;&gt;Prim 算法&lt;/h2&gt;
+&lt;p&gt;Prim 算法非常类似于点灯游戏。它首先“点亮”一个源，然后结合广度优先搜索算法，每次找边权重最小的相邻结点“点亮”，直到所有的结点均“点亮”。&lt;/p&gt;
+&lt;h3 id=&#34;算法代码-1&#34;&gt;算法代码&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;TODO&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>作业</title>
+      <link>https://bowenei.gitee.io/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E4%BD%9C%E4%B8%9A/</link>
+      <pubDate>Sun, 07 Nov 2021 15:16:42 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E4%BD%9C%E4%B8%9A/</guid>
+      <description>&lt;h2 id=&#34;跳跃游戏-iihttpsleetcode-cncomproblemsjump-game-ii&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/jump-game-ii/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;跳跃游戏 II&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;问题描述&#34;&gt;问题描述&lt;/h3&gt;
+&lt;p&gt;给你一个非负整数数组 &lt;code&gt;nums&lt;/code&gt;，你最初位于数组的第一个位置。&lt;/p&gt;
+&lt;p&gt;数组中的每个元素代表你在该位置可以跳跃的最大长度。&lt;/p&gt;
+&lt;p&gt;你的目标是使用最少的跳跃次数到达数组的最后一个位置。&lt;/p&gt;
+&lt;p&gt;假设你总是可以到达数组的最后一个位置。&lt;/p&gt;
+&lt;h3 id=&#34;方法一反向查找出发位置&#34;&gt;方法一：反向查找出发位置&lt;/h3&gt;
+&lt;p&gt;我们的目标是到达数组的最后一个位置，因此我们可以考虑最后一步跳跃前所在的位置，该位置通过跳跃能够到达最后一个位置。&lt;/p&gt;
+&lt;p&gt;如果有多个位置通过跳跃都能够到达最后一个位置，那么我们应该如何进行选择呢？直观上来看，我们可以“贪心”地选择距离最后一个位置最远的那个位置，也就是对应下标最小的那个位置。因此，我们可以从左到右遍历数组，选择第一个满足要求的位置。&lt;/p&gt;
+&lt;p&gt;找到最后一步跳跃前所在的位置之后，我们继续贪心地寻找倒数第二步跳跃前所在的位置，以此类推，直到找到数组的开始位置。&lt;/p&gt;
+&lt;h4 id=&#34;算法代码&#34;&gt;算法代码&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;int jump(vector&amp;lt;int&amp;gt; &amp;amp;nums) {
+    int pos = nums.size() - 1; // 当前位置
+    int step = 0;              // 统计步数
+    while (pos &amp;gt; 0) {
+        for (int i = 0; i &amp;lt; pos; ++i) {
+            if (nums[i] + i &amp;gt;= pos) {
+                // 说明位置 i 可以一步跳到当前位置
+                pos = i;
+                ++step;
+                break;
+            }
+        }
+    }
+    return step;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;算法分析&#34;&gt;算法分析&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;时间复杂度：$O(n^2)$&lt;/li&gt;
+&lt;li&gt;空间复杂度：$O(1)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;方法二正向查找可到达的最大位置&#34;&gt;方法二：正向查找可到达的最大位置&lt;/h3&gt;
+&lt;p&gt;方法一虽然直观，但是时间复杂度比较高，有没有办法降低时间复杂度呢？&lt;/p&gt;
+&lt;p&gt;如果我们“贪心”地进行正向查找，每次找到可到达的最远位置，就可以在线性时间内得到最少的跳跃次数。&lt;/p&gt;
+&lt;p&gt;在具体的实现中，我们维护当前能够到达的最大下标位置，记为边界。我们从左到右遍历数组，到达边界时，更新边界并将跳跃次数增加 1。&lt;/p&gt;
+&lt;p&gt;在遍历数组时，我们不访问最后一个元素，这是因为在访问最后一个元素之前，我们的边界一定大于等于最后一个位置，否则就无法跳到最后一个位置了。如果访问最后一个元素，在边界正好为最后一个位置的情况下，我们会增加一次&lt;strong&gt;不必要的跳跃次数&lt;/strong&gt;，因此我们不必访问最后一个元素。&lt;/p&gt;
+&lt;h4 id=&#34;算法代码-1&#34;&gt;算法代码&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;int jump(vector&amp;lt;int&amp;gt; &amp;amp;nums) {
+    int len = nums.size();
+    int end = 0;    // 上次可达最远位置，下次的起点
+    int maxPos = 0; // 目前能跳到的最远位置
+    int steps = 0;  // 跳跃次数
+    for (int i = 0; i &amp;lt; len - 1; ++i) {
+        maxPos = max(maxPos, i + nums[i]);
+        if (i == end) {
+            end = maxPos;
+            ++steps;
+        }
+    }
+    return steps;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;算法分析-1&#34;&gt;算法分析&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;时间复杂度：$O(n)$&lt;/li&gt;
+&lt;li&gt;空间复杂度：$O(1)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;无重叠区间httpsleetcode-cncomproblemsnon-overlapping-intervals&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/non-overlapping-intervals/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;无重叠区间&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;问题描述-1&#34;&gt;问题描述&lt;/h3&gt;
+&lt;p&gt;给定一个区间的集合，找到需要移除区间的最小数量，使剩余区间互不重叠。&lt;/p&gt;
+&lt;h3 id=&#34;问题分析&#34;&gt;问题分析&lt;/h3&gt;
+&lt;p&gt;本题的贪心思想和活动选择问题类似。&lt;/p&gt;
+&lt;p&gt;我们可以不断地寻找右端点在首个区间右端点左侧的新区间，将首个区间替换成该区间。那么当我们无法替换时，&lt;strong&gt;首个区间就是所有可以选择的区间中右端点最小的那个区间&lt;/strong&gt;。因此我们将所有区间按照右端点从小到大进行排序，那么排完序之后的首个区间，就是我们选择的首个区间。&lt;/p&gt;
+&lt;p&gt;由于我们选择的是首个区间，因此在左侧不会有其它的区间，那么左端点在何处是不重要的，我们只要任意选择一个右端点最小的区间即可。&lt;/p&gt;
+&lt;p&gt;当确定了首个区间之后，所有与首个区间不重合的区间就组成了一个规模更小的子问题。由于我们已经在初始时将所有区间按照右端点排好序了，因此对于这个子问题，我们无需再次进行排序，只要找出其中&lt;strong&gt;与首个区间不重合并且右端点最小的区间&lt;/strong&gt;即可。用相同的方法，我们可以依次确定后续的所有区间。&lt;/p&gt;
+&lt;h3 id=&#34;算法代码-2&#34;&gt;算法代码&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;int eraseOverlapIntervals(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; &amp;amp;intervals) {
+    if (intervals.empty()) {
+        return 0;
+    }
+    auto lambda = [](const vector&amp;lt;int&amp;gt; &amp;amp;a, const vector&amp;lt;int&amp;gt; &amp;amp;b) {
+        return a[1] &amp;lt; b[1];
+    }; // lambda 表达式：按右端点升序排列
+    sort(intervals.begin(), intervals.end(), lambda);
+
+    const int n = intervals.size();
+    int right = intervals[0][1];
+    int ans = 1;
+    for (int i = 1; i &amp;lt; n; ++i) {
+        if (intervals[i][0] &amp;gt;= right) {
+            ++ans;
+            right = intervals[i][1];
+        }
+    }
+    return n - ans;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;算法分析-2&#34;&gt;算法分析&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;时间复杂度：$O(n \log {n})$&lt;/li&gt;
+&lt;li&gt;空间复杂度：$O(\log {n})$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;分发糖果httpsleetcode-cncomproblemscandy&#34;&gt;&lt;a href=&#34;https://leetcode-cn.com/problems/candy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;分发糖果&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;问题描述-2&#34;&gt;问题描述&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;n&lt;/code&gt; 个孩子站成一排。给你一个整数数组 &lt;code&gt;ratings&lt;/code&gt; 表示每个孩子的评分。&lt;/p&gt;
+&lt;p&gt;你需要按照以下要求，给这些孩子分发糖果：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个孩子至少分配到 1 个糖果。&lt;/li&gt;
+&lt;li&gt;相邻两个孩子评分更高的孩子会获得更多的糖果。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;请你给每个孩子分发糖果，计算并返回需要准备的最少糖果数目。&lt;/p&gt;
+&lt;h3 id=&#34;问题分析-1&#34;&gt;问题分析&lt;/h3&gt;
+&lt;p&gt;我们可以将&lt;strong&gt;相邻的孩子中，评分高的孩子必须获得更多的糖果&lt;/strong&gt;这句话拆分为两个规则，分别处理。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;左规则：当 $\textit{ratings}[i - 1] &amp;lt; \textit{ratings}[i]ratings[i−1]&amp;lt;ratings[i]$ 时，$i$ 号学生的糖果数量将比 $i - 1$ 号孩子的糖果数量多。&lt;/li&gt;
+&lt;li&gt;右规则：当 $\textit{ratings}[i] &amp;gt; \textit{ratings}[i + 1]ratings[i]&amp;gt;ratings[i+1]$ 时，$i$ 号学生的糖果数量将比 $i + 1$ 号孩子的糖果数量多。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们遍历该数组两次，处理出每一个学生分别满足左规则或右规则时，最少需要被分得的糖果数量。每个人最终分得的糖果数量即为这两个数量的最大值。&lt;/p&gt;
+&lt;h3 id=&#34;算法代码-3&#34;&gt;算法代码&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;int candy(vector&amp;lt;int&amp;gt; &amp;amp;ratings) {
+    const int n = ratings.size();
+    vector&amp;lt;int&amp;gt; left(n, 1); // 初始化时给每个孩子发一个糖果
+    // 第一次遍历，满足左规则
+    for (int i = 1; i &amp;lt; n; ++i) {
+        if (ratings[i] &amp;gt; ratings[i - 1]) {
+            // i 比 i-1 多一个糖果
+            left[i] = left[i - 1] + 1;
+        }
+    }
+    
+    int right = 0, ret = 0;
+    // 第二次遍历，满足右规则
+    for (int i = n - 1; i &amp;gt;= 0; --i) {
+        if (i &amp;lt; n - 1 &amp;amp;&amp;amp; ratings[i] &amp;gt; ratings[i + 1]) {
+            // i 比 i+1 多一个糖果
+            right++;
+        } else {
+            right = 1;
+        }
+        ret += max(left[i], right); // 左规则右规则取最大
+    }
+    return ret;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;算法分析-3&#34;&gt;算法分析&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;时间复杂度：$O(n)$&lt;/li&gt;
+&lt;li&gt;空间复杂度：$O(n)$&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>凸函数 | Bowen&#39;s Academic Home</title>
+    <link>https://bowenei.gitee.io/learn/convex-optimization/convex-functions/</link>
+      <atom:link href="https://bowenei.gitee.io/learn/convex-optimization/convex-functions/index.xml" rel="self" type="application/rss+xml" />
+    <description>凸函数</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 07 Nov 2021 17:20:06 +0800</lastBuildDate>
+    <image>
+      <url>https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png</url>
+      <title>凸函数</title>
+      <link>https://bowenei.gitee.io/learn/convex-optimization/convex-functions/</link>
+    </image>
+    
+    <item>
+      <title>基本性质</title>
+      <link>https://bowenei.gitee.io/learn/convex-optimization/convex-functions/basic-properties/</link>
+      <pubDate>Tue, 07 Dec 2021 11:30:11 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/convex-optimization/convex-functions/basic-properties/</guid>
+      <description>&lt;h2 id=&#34;定义&#34;&gt;定义&lt;/h2&gt;
+&lt;p&gt;如果 $\operatorname{dom} f$ 是凸集，且对于任意的 $x, y \in \operatorname{dom} f$ 和任意的 $0 \leqslant \theta \leqslant 1$，若有&lt;/p&gt;
+&lt;p&gt;$$
+f(\theta x+(1-\theta) y) \leqslant \theta f(x)+(1-\theta) f(y)
+$$&lt;/p&gt;
+&lt;p&gt;则称函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$ 是凸的。&lt;/p&gt;
+&lt;p&gt;从几何意义上看，上述不等式意味着点 $(x, f(x))$ 和点 $(y, f(y))$ 之间的线段，即从 $x$ 到 $y$ 的弦，在函数 $f$ 图像的上方。如果不等式中当 $x \ne y$ 时 $0 \leqslant \theta \leqslant 1$ 严格成立，则称函数 $f$ 是严格凸的。&lt;/p&gt;
+&lt;h2 id=&#34;扩展值延伸&#34;&gt;扩展值延伸&lt;/h2&gt;
+&lt;p&gt;通常可以定义凸函数的定义域外的值为 $\infty$，从而将这个凸函数延伸至全空间 $\mathbf{R}^n$。我们定义凸函数 $f$ 的扩展值延伸：$\tilde{f}: \mathbf{R}^n \rightarrow \mathbf{R} \cup \{\infty\}$ 如下：&lt;/p&gt;
+&lt;p&gt;$$
+\tilde{f}(x)=\left\{\begin{array}{ll}
+f(x) &amp;amp; x \in \operatorname{dom} f \\
+\infty &amp;amp; x \notin \operatorname{dom} f
+\end{array}\right.
+$$&lt;/p&gt;
+&lt;h2 id=&#34;一阶条件&#34;&gt;一阶条件&lt;/h2&gt;
+&lt;p&gt;假设 $f$ 可微（即其梯度 $\nabla f$ 在开集 $\operatorname{dom} f$ 内处处存在），则函数 $f$ 是凸函数的充要条件是 $\operatorname{dom} f$ 是凸集，且对于任意的 $x, y \in \operatorname{dom} f$，有&lt;/p&gt;
+&lt;p&gt;$$
+f(y) \geqslant f(x)+\nabla f(x)^{T}(y-x)
+$$&lt;/p&gt;
+&lt;p&gt;由此得出的仿射函数 $y$ 即为函数 $f$ 在点 $x$ 附近的 Taylor 近似。上面的不等式表明，对于一个凸函数，其一阶 Taylor 近似实质上是原函数的一个全局下估计。反之，如果某个函数的一阶 Taylor 近似总是其全局下估计，那么这个函数是凸的。&lt;/p&gt;
+&lt;p&gt;同理，可以定义凹函数及其一阶条件。&lt;/p&gt;
+&lt;h2 id=&#34;二阶条件&#34;&gt;二阶条件&lt;/h2&gt;
+&lt;p&gt;现在假设函数 $f$ 二阶可微（即对于开集 $\operatorname{dom} f$ 内的任意一点，它的 Hessian 矩阵或者二阶导数 $\nabla ^2 f$ 存在），则函数 $f$ 是凸函数的充要条件是，其 Hessian 矩阵是半正定矩阵，即对所有的 $x \in \operatorname{dom} f$，有&lt;/p&gt;
+&lt;p&gt;$$
+\nabla ^2 f(x) \succeq 0
+$$&lt;/p&gt;
+&lt;h2 id=&#34;下水平集&#34;&gt;下水平集&lt;/h2&gt;
+&lt;p&gt;函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$ 的 α-下水平集定义为&lt;/p&gt;
+&lt;p&gt;$$
+C_\alpha = \{ x \in \operatorname{dom} f \mid f(x) \leqslant \alpha \}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;上境图&#34;&gt;上境图&lt;/h2&gt;
+&lt;p&gt;函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$ 的图像定义为&lt;/p&gt;
+&lt;p&gt;$$
+\{ (x, f(x)) \mid x \in \operatorname{dom} f \}
+$$&lt;/p&gt;
+&lt;p&gt;它是 $\mathbf{R}^{n+1}$ 空间的一个子集。&lt;/p&gt;
+&lt;p&gt;函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$ 的上镜图定义为&lt;/p&gt;
+&lt;p&gt;$$
+\operatorname{epi} f = \{ (x, f(x)) \mid x \in \operatorname{dom} f, f(x) \leqslant t \}
+$$&lt;/p&gt;
+&lt;p&gt;上镜图的概念很像是下水平集和函数图像二者的结合。从几何上看，上镜图即为在函数图像之上。&lt;/p&gt;
+&lt;p&gt;定义在 $\mathbf{R}^n$ 上的凸函数 $f$ 的上镜图是 $\mathbf{R}^{n+1}$ 空间的一个凸集，其支撑超平面和一阶条件有着如下图所示的联系：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/convex-optimization/convex-functions/3-1-1_hu37251866f56bfd83a1beabf63324a349_79978_5fbbf19cdcbd1416ab730b649b1e04f9.webp 400w,
+               /media/learn/convex-optimization/convex-functions/3-1-1_hu37251866f56bfd83a1beabf63324a349_79978_9a4eba08021927c3eaf56c4cf5ce86fc.webp 760w,
+               /media/learn/convex-optimization/convex-functions/3-1-1_hu37251866f56bfd83a1beabf63324a349_79978_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-functions/3-1-1_hu37251866f56bfd83a1beabf63324a349_79978_5fbbf19cdcbd1416ab730b649b1e04f9.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;391&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;从图中可以直观地看到，凸函数 $f$ 在点 $x$ 处的一阶 Taylor 近似即为其上镜图在 $x$ 处的支撑超平面。&lt;/p&gt;
+&lt;h2 id=&#34;jensen-不等式及其扩展&#34;&gt;Jensen 不等式及其扩展&lt;/h2&gt;
+&lt;p&gt;基本不等式&lt;/p&gt;
+&lt;p&gt;$$
+f(\theta x+(1-\theta) y) \leqslant \theta f(x)+(1-\theta) f(y)
+$$&lt;/p&gt;
+&lt;p&gt;有时也称作 Jensen 不等式。此不等式可以很方便地扩展至更多点的凸组合：如果函数 $f$ 是凸函数，$x_1, \cdots, x_k \in \operatorname{f}$，$\theta_1, \cdot, \theta_k \geqslant 0$ 且 $\theta_1 + \cdots + \theta_k = 1$，则下式成立&lt;/p&gt;
+&lt;p&gt;$$
+f(\theta_1 x_1 + \cdots + \theta_k x_k) \leqslant \theta_1 f(x_1) + \cdots + \theta_k f(x_k)
+$$&lt;/p&gt;
+&lt;p&gt;考虑凸集时，此不等式还可以扩展至无穷项和、积分以及期望。&lt;/p&gt;
+&lt;p&gt;例如，若在 $S \subseteq \operatorname{dom} f$ 上 $p(x) \geqslant 0$ 且 $\int_{S} p(x) \mathrm{d} x = 1$，则&lt;/p&gt;
+&lt;p&gt;$$
+f\left(\int_{S} p(x) x \mathrm{~d} x\right) \leqslant \int_{S} f(x) p(x) \mathrm{d} x
+$$&lt;/p&gt;
+&lt;p&gt;再比如，设 $x$ 是随机变量，若函数 $f$ 是凸函数，则&lt;/p&gt;
+&lt;p&gt;$$
+f(\mathbf{E}x) \leqslant \mathbf{E} f(x)
+$$&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;我们不妨来回忆以下高中时期我们接触到的凸函数定义，如下&lt;/p&gt;
+&lt;p&gt;$$
+f\left(\frac{x+y}{2}\right) \leqslant \frac{f(x)+f(y)}{2}
+$$&lt;/p&gt;
+&lt;p&gt;其实这就是由 Jensen 提出的最初的一个最简单的不等式。现在，我们可以称上述所有的不等式为 Jensen 不等式。&lt;/p&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>重要凸函数</title>
+      <link>https://bowenei.gitee.io/learn/convex-optimization/convex-functions/important-convex-functions/</link>
+      <pubDate>Tue, 07 Dec 2021 11:37:41 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/convex-optimization/convex-functions/important-convex-functions/</guid>
+      <description>&lt;h2 id=&#34;基本初等函数&#34;&gt;基本初等函数&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;指数函数：对任意 $a \in \mathbf{R}$，函数 $f(x) = e^{ax}$ 在 $\mathbf{R}$ 上是凸的。&lt;/li&gt;
+&lt;li&gt;对数函数：函数 $f(x) = \log{x}$ 在 $\mathbf{R} _{++}$ 上是凸函数。&lt;/li&gt;
+&lt;li&gt;幂函数：当 $a \geqslant 1$ 或 $a \leqslant 0$ 时，$f(x) = x^a$ 在 $\mathbf{R} _{++}$ 上是凸函数；当 $0 \leqslant a \leqslant 1$，函数 $x^a$ 在 $\mathbf{R} _{++}$ 上是凹函数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;复合函数&#34;&gt;复合函数&lt;/h2&gt;
+&lt;h3 id=&#34;负熵&#34;&gt;负熵&lt;/h3&gt;
+&lt;p&gt;函数 $f(x) = x \log{x}$ 在其定义域上是凸函数。其定义域为 $\mathbf{R} _{++}$，但也可以定义在 $\mathbf{R} _+$ 上（$f(0) = 0$），这是因为&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\lim _{x \rightarrow 0^{+}} x \log{x} &amp;amp;= \lim _{x \rightarrow 0^{+}} \frac{\log{x}}{1/x}  \\
+&amp;amp;= \lim _{x \rightarrow 0^{+}} \frac{1/x}{-1/x^2} \\
+&amp;amp;= 0
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;函数 $f$ 的导数和二阶导数为&lt;/p&gt;
+&lt;p&gt;$$
+f^{\prime}(x) = \log{x} + 1, \quad f^{\prime \prime}(x) = \frac{1}{x} &amp;gt; 0
+$$&lt;/p&gt;
+&lt;h3 id=&#34;范数&#34;&gt;范数&lt;/h3&gt;
+&lt;p&gt;$\mathbf{R}^n$ 上的任意范数均为凸函数。&lt;/p&gt;
+&lt;h3 id=&#34;二次-线性分式函数&#34;&gt;二次-线性分式函数&lt;/h3&gt;
+&lt;p&gt;二元函数 $f(x,y) = \frac{x^2}{y}$ 是凸函数，其定义域为&lt;/p&gt;
+&lt;p&gt;$$
+\operatorname{dom} f = \mathbf{R} \times \mathbf{R} _{++} = \{ (x, y) \in \mathbf{R} ^2 \mid y &amp;gt; 0 \}
+$$&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/convex-optimization/convex-functions/3-2-1_hu75d4e64085f8b10cf0af7c48ae4c3d42_88332_0ebfaf468e5269dafd5b13af7e56650e.webp 400w,
+               /media/learn/convex-optimization/convex-functions/3-2-1_hu75d4e64085f8b10cf0af7c48ae4c3d42_88332_1ad5f98bb85e8b3498b778afa5abda9a.webp 760w,
+               /media/learn/convex-optimization/convex-functions/3-2-1_hu75d4e64085f8b10cf0af7c48ae4c3d42_88332_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-functions/3-2-1_hu75d4e64085f8b10cf0af7c48ae4c3d42_88332_0ebfaf468e5269dafd5b13af7e56650e.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;509&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;指数和的对数&#34;&gt;指数和的对数&lt;/h3&gt;
+&lt;p&gt;函数 $f(x) = \log{(e^{x_1} + \cdots + e^{x_n})}$ 在 $\mathbf{R}^n$ 上是凸函数。&lt;/p&gt;
+&lt;p&gt;下面是函数 $f(x) = \log{(e^x + e^y)}$ 的图像。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/convex-optimization/convex-functions/3-2-2_hu4301a040191a76c2e65fdf2e07cc36d1_174572_f9677627ed7bfe2b1314389755c4a475.webp 400w,
+               /media/learn/convex-optimization/convex-functions/3-2-2_hu4301a040191a76c2e65fdf2e07cc36d1_174572_562cea748609fb05964843be06152718.webp 760w,
+               /media/learn/convex-optimization/convex-functions/3-2-2_hu4301a040191a76c2e65fdf2e07cc36d1_174572_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-functions/3-2-2_hu4301a040191a76c2e65fdf2e07cc36d1_174572_f9677627ed7bfe2b1314389755c4a475.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;509&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;几何平均数&#34;&gt;几何平均数&lt;/h3&gt;
+&lt;p&gt;几何平均数函数 $f(x)=\left(\prod_{i=1}^{n} x_{i}\right)^{1 / n}$ 在定义域 $\operatorname{dom} f=\mathbf{R}_{++}^{n}$ 上是凹函数。&lt;/p&gt;
+&lt;h2 id=&#34;分段函数&#34;&gt;分段函数&lt;/h2&gt;
+&lt;h3 id=&#34;绝对值幂函数&#34;&gt;绝对值幂函数&lt;/h3&gt;
+&lt;p&gt;当 $p \geqslant 1$ 时，函数 $|x|^p$ 在 $\mathbf{R}$ 上是凸函数。&lt;/p&gt;
+&lt;h3 id=&#34;最大值&#34;&gt;最大值&lt;/h3&gt;
+&lt;p&gt;最大值函数是凸函数是很显然的。&lt;/p&gt;
+&lt;h2 id=&#34;证明&#34;&gt;证明&lt;/h2&gt;
+&lt;p&gt;判断上述函数的凸性可以通过多种途径。可以直接验证一阶条件是否成立，亦可以验证其 Hessian 矩阵是否半正定，或者可以将函数转换到与其定义域相交的任意直线上，通过得到的单变量函数判断原函数的凸性。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>保凸运算</title>
+      <link>https://bowenei.gitee.io/learn/convex-optimization/convex-functions/operations-that-preserve-convexity/</link>
+      <pubDate>Tue, 07 Dec 2021 11:38:15 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/convex-optimization/convex-functions/operations-that-preserve-convexity/</guid>
+      <description>&lt;h2 id=&#34;非负加权求和&#34;&gt;非负加权求和&lt;/h2&gt;
+&lt;p&gt;如果函数 $f_1, \cdots, f_m$ 都是凸函数，$\omega_1, \cdots, \omega_m \in \mathbf{R}_+$，那么&lt;/p&gt;
+&lt;p&gt;$$
+f = \omega_1 f_1 + \cdots + \omega_m f_m
+$$&lt;/p&gt;
+&lt;p&gt;是凸函数。&lt;/p&gt;
+&lt;p&gt;类似地，凹函数的非负加权求和仍然是凹函数。当然，严格凸函数的非零加权求和也是严格凸函数。&lt;/p&gt;
+&lt;p&gt;这个性质可以扩展至无限项求和以及积分的情形。例如，如果固定任意 $y \in \mathcal{A}$，有 $\omega(y) \geqslant 0$，则函数&lt;/p&gt;
+&lt;p&gt;$$
+g(x) = \int _\mathcal{A} \omega(y) f(x,y) \mathrm{d} y
+$$&lt;/p&gt;
+&lt;p&gt;是关于 $x$ 的凸函数。&lt;/p&gt;
+&lt;h2 id=&#34;复合仿射映射&#34;&gt;复合仿射映射&lt;/h2&gt;
+&lt;p&gt;假设函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，$A \in \mathbf{R}^{n \times m}$，以及 $b \in \mathbf{R}^n$，定义函数 $g: \mathbf{R}^m \rightarrow \mathbf{R}$ 为&lt;/p&gt;
+&lt;p&gt;$$
+g(x) = f(Ax + b)
+$$&lt;/p&gt;
+&lt;p&gt;其中 $\operatorname{dom} g = \{ x \mid Ax + b \in \operatorname{dom} f \}$。若函数 $f$ 是凸函数，则函数 $g$ 也是凸函数。&lt;/p&gt;
+&lt;h2 id=&#34;逐点最大和逐点上确界&#34;&gt;逐点最大和逐点上确界&lt;/h2&gt;
+&lt;p&gt;如果函数 $f_1$ 和 $f_2$ 均为凸函数，则它们的逐点最大函数&lt;/p&gt;
+&lt;p&gt;$$
+f(x) = \max \{ f_1(x), f_2(x) \}
+$$&lt;/p&gt;
+&lt;p&gt;和逐点上确界函数&lt;/p&gt;
+&lt;p&gt;$$
+g(x) = \sup \{ f_1(x), f_2(x) \}
+$$&lt;/p&gt;
+&lt;p&gt;都是凸函数，并且可以推广至 $m$ 个凸函数的情形。同理，$m$ 个凹函数的逐点最小和逐点下确界函数也都是凹函数。&lt;/p&gt;
+&lt;h2 id=&#34;复合&#34;&gt;复合&lt;/h2&gt;
+&lt;p&gt;给定函数 $h: \mathbf{R}^k \rightarrow \mathbf{R}$ 以及 $g: \mathbf{R}^n \rightarrow \mathbf{R}^k$，定义复合函数 $f = h \circ g : \mathbf{R}^n \rightarrow \mathbf{R}$ 为&lt;/p&gt;
+&lt;p&gt;$$
+f(x) = h(g(x))
+$$&lt;/p&gt;
+&lt;p&gt;判断其凸性还需要 $h$ 和 $g$ 满足一定的条件。&lt;/p&gt;
+&lt;h3 id=&#34;标量复合&#34;&gt;标量复合&lt;/h3&gt;
+&lt;p&gt;现在我们考虑 $k=1$ 这个简单的情形。如果我们仅考虑 $n=1$ 的情况，其实就是我们高中所学习的复合函数。为了判断 $f$ 的凸性，我们需要求其二阶导数：&lt;/p&gt;
+&lt;p&gt;$$
+f^{\prime \prime}(x)=h^{\prime \prime}(g(x)) g^{\prime}(x)^{2}+h^{\prime}(g(x)) g^{\prime \prime}(x)
+$$&lt;/p&gt;
+&lt;p&gt;根据非负加权求和的保凸性质，我们可以得出如下结论：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$h$ 的凸性&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$h$ 的单调性&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$g$ 的凸性&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$f$ 的凸性&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单调递增&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单调递减&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凹函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凹函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单调递增&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凹函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凹函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凹函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单调递减&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凹函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;只有上表当中的四种情况可以判断函数 $f$ 的凸性，而还有另外四种情况不能够判断函数 $f$ 的凸性。&lt;/p&gt;
+&lt;p&gt;现在考虑更一般的情况，即 $n&amp;gt;1$，那么相似的复合规则仍然成立：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$h$ 的凸性&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$\tilde {h}$ 的单调性&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$g$ 的凸性&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$f$ 的凸性&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单调递增&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单调递减&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凹函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凹函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单调递增&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凹函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凹函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凹函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单调递减&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凹函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;其中，$\tilde {h}$ 表示函数 $h$ 的扩展值延伸。&lt;/p&gt;
+&lt;p&gt;我们可以通过我们在高中时学习的一些初等函数来更好地理解复合定理中函数 $h$ 需要满足的条件。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;函数 $h(x) = \log{x}$，定义域为 $\mathbf{R}_{++}$，为凹函数且 $\tilde {h}$ 单调递增。&lt;/li&gt;
+&lt;li&gt;函数 $h(x) = \sqrt{x}$，定义域为 $\mathbf{R}_{+}$，为凹函数且 $\tilde {h}$ 单调递增。&lt;/li&gt;
+&lt;li&gt;函数 $h(x) = x^{3/2}$，定义域为 $\mathbf{R}_{+}$，为凸函数，但是不满足 $\tilde {h}$ 单调递增的条件。例如 $\tilde {h}(-1) = \infty$，但  $\tilde {h}(1) = 1$。如果我们定义当 $x&amp;lt;0$ 时，$h(x) = 0$，使得 $\operatorname{dom} h = \mathbf{R}$，那么 $h$ 是凸函数且满足 $\tilde {h}$ 单调递增的条件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有如下简单的复合结论成立：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果 $g$ 是凸函数，那么 $\exp g(x)$ 是凸函数。&lt;/li&gt;
+&lt;li&gt;如果 $g$ 是凹函数且恒正，则 $\log g(x)$ 是凹函数。&lt;/li&gt;
+&lt;li&gt;如果 $g$ 是凹函数且恒正，则 $1/g(x)$ 是凸函数。&lt;/li&gt;
+&lt;li&gt;如果 $g$ 是凸函数且非负，$p \geqslant 1$，则 $(g(x))^p$ 是凸函数。&lt;/li&gt;
+&lt;li&gt;如果 $g$ 是凸函数，则 $-\log (-g(x))$ 在 $\{ x \mid g(x) &amp;lt; 0 \}$ 上是凸函数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;矢量复合&#34;&gt;矢量复合&lt;/h3&gt;
+&lt;p&gt;下面考虑 $k \geqslant 1$ 的情况，虽然情况更复杂一些，但也可以得到类似标量的结论。同样地，我们求出 $f$ 的二阶导数：
+$$
+f^{\prime \prime}(x)=g^{\prime}(x)^{T} \nabla^{2} h(g(x)) g^{\prime}(x)+\nabla h(g(x))^{T} g^{\prime \prime}(x)
+$$
+根据标量复合的结论，我们得到矢量复合的类似性质如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$h$ 的凸性&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$h$ 的每维分量的单调性&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$g$ 的凸性&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$f$ 的凸性&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单调递增&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单调递减&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凹函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凸函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凹函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单调递增&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凹函数&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;凹函数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;最小化&#34;&gt;最小化&lt;/h2&gt;
+&lt;p&gt;我们已经得到，任意个凸函数的逐点最大或者上确界仍然是凸函数。事实上，一些特殊形式的最小化同样可以得到凸函数。如果函数 $f(x, y)$ 是凸函数，集合 $C$ 是非空凸集，那么函数
+$$
+g(x) = \inf _{y \in C} f(x, y)
+$$
+是凸函数只需要满足 $g(x)$ 可以取得有限值即可。函数 $g$ 的定义域是 $\operatorname{dom} f$ 在 $x$ 方向上的投影，即
+$$
+\operatorname{dom} g = \{ x \mid \exists y \in C, \operatorname{s.t.} (x, y) \in \operatorname{dom} f \}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;透视函数&#34;&gt;透视函数&lt;/h2&gt;
+&lt;p&gt;我们已经知道透视运算是保凸运算。那么显然，如果函数 $f$ 是凸函数，则其透视函数 $g(x, t) = tf(x/t)$ 也是凸函数。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>共轭函数</title>
+      <link>https://bowenei.gitee.io/learn/convex-optimization/convex-functions/conjugate-function/</link>
+      <pubDate>Tue, 07 Dec 2021 11:38:57 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/convex-optimization/convex-functions/conjugate-function/</guid>
+      <description>&lt;h2 id=&#34;定义&#34;&gt;定义&lt;/h2&gt;
+&lt;p&gt;设函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，其共轭函数 $f^{*}: \mathbf{R}^n \rightarrow \mathbf{R}$ 为&lt;/p&gt;
+&lt;p&gt;$$
+f^{*}(y)=\sup _{x \in \operatorname{dom} f}\left(y^{T} x-f(x)\right)
+$$&lt;/p&gt;
+&lt;h3 id=&#34;几何意义&#34;&gt;几何意义&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/convex-optimization/convex-functions/3-4-1_hue050d6d747700ecf77577ee5859d294e_92803_7949bbec89999ec9081bb80f060f6a72.webp 400w,
+               /media/learn/convex-optimization/convex-functions/3-4-1_hue050d6d747700ecf77577ee5859d294e_92803_adca6d2683613fc432087aa93a7139f3.webp 760w,
+               /media/learn/convex-optimization/convex-functions/3-4-1_hue050d6d747700ecf77577ee5859d294e_92803_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-functions/3-4-1_hue050d6d747700ecf77577ee5859d294e_92803_7949bbec89999ec9081bb80f060f6a72.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;共轭函数的几何意义如图所示。教材当中仅仅只是简略说明了这张图，但实际上这张图并不是特别容易理解。下面详细说明如何将这张图和共轭函数的定义结合起来理解。&lt;/p&gt;
+&lt;p&gt;首先，我们要明确的一点是，在共轭函数的定义中，自变量是 $y$，而不是 $x$，$x$ 应该当成常数或者参数。而在上面的函数图像中，自变量是 $x$，而不是 $y$，$y$ 应该当成常数或者参数。&lt;/p&gt;
+&lt;p&gt;因此，一元函数 $f(x)$ 的图像就可以画在平面直角坐标系中（图中蓝色曲线）。这里为了方便并且直观地说明，假设 $f: \mathbf{R} \rightarrow \mathbf{R}$。由于 $y$ 被当成常数，$yx$ 就是正比例函数，其图像是过原点的倾斜直线（图中上方虚线）。&lt;/p&gt;
+&lt;p&gt;因此，共轭函数的定义可以用自然语言描述为：直线（超平面）$y^Tx$ 与 $f(x)$ 函数值的最大差值，并且该差值的取值与 $y^T$ 的取值一一对应——任意改变直线的斜率（超平面的方向向量），都有唯一确定的一个值与之对应。&lt;/p&gt;
+&lt;p&gt;显然，$f^{*}$ 是凸函数，这是因为它是在求一系列值的逐点上确界。而且，无论 $f$ 是否为凸函数，$f^{*}$ 都是凸函数。如果 $f$ 是凸函数，那么就没必要限制 $x \in \operatorname{dom} f$ 了。这是因为根据之前关于扩展值延伸的定义，对于 $x \notin \operatorname{dom} f$，$y^Tx - f(x) = -\infty$。&lt;/p&gt;
+&lt;h3 id=&#34;举例&#34;&gt;举例&lt;/h3&gt;
+&lt;h4 id=&#34;仿射函数&#34;&gt;仿射函数&lt;/h4&gt;
+&lt;p&gt;$$
+f(x) = ax + b
+$$&lt;/p&gt;
+&lt;p&gt;当且仅当 $y=a$ 时，$yx - ax - b = -b$ 有界。因此，仿射函数的共轭函数为&lt;/p&gt;
+&lt;p&gt;$$
+f^{*}(y) = -b, \quad \operatorname{dom} f^{*} = \{a\}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;负对数函数&#34;&gt;负对数函数&lt;/h4&gt;
+&lt;p&gt;$$
+f(x) = -\log x, \quad \operatorname{dom} f = \mathbf{R}_{++}
+$$&lt;/p&gt;
+&lt;p&gt;当 $y &amp;gt; 0$ 时，函数 $xy + \log x$ 无上界；当 $y &amp;lt; 0$ 时，在 $x = - \frac{1}{y}$ 处取最大值。因此，负对数函数的共轭函数为&lt;/p&gt;
+&lt;p&gt;$$
+f^{*}(y) = -\log (-y) - 1, \quad \operatorname{dom} f^{*} = -\mathbf{R}_{++}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;指数函数&#34;&gt;指数函数&lt;/h4&gt;
+&lt;p&gt;$$
+f(x) = e^x
+$$&lt;/p&gt;
+&lt;p&gt;当 $y &amp;lt; 0$ 时，函数 $xy - e^x$ 无界；当 $y &amp;gt; 0$ 时，函数 $xy - e^x$ 在 $x = \ln y$ 处取最大值；当 $y = 0$ 时，$f^{*}(y) = \sup \{-e^x\} = 0$。因此，指数函数的共轭函数为&lt;/p&gt;
+&lt;p&gt;$$
+f^{*}(y) = y \log y - y, \quad \operatorname{dom} f^{*} = \mathbf{R}_{+}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;负熵函数&#34;&gt;负熵函数&lt;/h4&gt;
+&lt;p&gt;$$
+f(x) = x \log x, \quad \operatorname{dom} f = \mathbf{R}_{+}
+$$&lt;/p&gt;
+&lt;p&gt;对所有 $y$，函数 $xy - x \log x$ 关于 $x$ 在 $\mathbf{R}_{+}$ 上有上界，且在 $x = e^{y-1}$ 处取最大值。因此，负熵函数的共轭函数为&lt;/p&gt;
+&lt;p&gt;$$
+f^{*}(y) = e^{y-1}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;反比例函数&#34;&gt;反比例函数&lt;/h4&gt;
+&lt;p&gt;$$
+f(x) = \frac{1}{x}, \quad \operatorname{dom} f = \mathbf{R}_{++}
+$$&lt;/p&gt;
+&lt;p&gt;当 $y &amp;gt; 0$ 时，$yx - 1/x$ 无上界；当 $y = 0$ 时，函数有上确界 $0$；当 $y &amp;lt; 0$ 时，在 $x = (-y)^{1/2}$ 处达到上确界。因此，反比例函数的共轭函数为&lt;/p&gt;
+&lt;p&gt;$$
+f^{*}(y) = -2 (-y)^{1/2}, \quad \operatorname{dom} f^{*} = \mathbf{R}_{+}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;严格凸的二次函数&#34;&gt;严格凸的二次函数&lt;/h4&gt;
+&lt;p&gt;$$
+f(x)=\frac{1}{2} x^{T} Q x, \quad Q \in \mathbf{S}_{++}^{n}
+$$&lt;/p&gt;
+&lt;p&gt;对所有的 $y$，关于 $x$ 的函数 $y^{T} x-\frac{1}{2} x^{T} Q x$ 都有上界并在 $x = Q^{-1}y$ 处达到上确界。因此&lt;/p&gt;
+&lt;p&gt;$$
+f^{*}(y)=\frac{1}{2} y^{T} Q^{-1} y
+$$&lt;/p&gt;
+&lt;p&gt;这是一个很好的性质，严格凸的二次函数求共轭函数只需要求其二次型矩阵的逆矩阵即可。&lt;/p&gt;
+&lt;h4 id=&#34;对数-行列式&#34;&gt;对数-行列式&lt;/h4&gt;
+&lt;p&gt;$$
+f(X) = \log \det X^{-1}, \quad X \in \mathbf{S}_{++}^{n}
+$$&lt;/p&gt;
+&lt;p&gt;其共轭函数定义为&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+f^{*}(Y) &amp;amp;= \sup _{X \succ 0} \{ \operatorname{tr}(Y X)+\log \det X \} \\
+&amp;amp;= \log \det (-Y)^{-1} - n, \quad \operatorname{dom} f^{*} = -\mathbf{S} ^{n} _{++}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;指数和的对数函数&#34;&gt;指数和的对数函数&lt;/h4&gt;
+&lt;p&gt;$$
+f(x) = \log (\sum_{i=1}^{n} e^{x_i})
+$$&lt;/p&gt;
+&lt;p&gt;其共轭函数的推到稍微有些复杂，这里直接给出结果。&lt;/p&gt;
+&lt;p&gt;$$
+f^{*}(y)=\left\{\begin{array}{ll}
+\sum_{i=1}^{n} y_{i} \log y_{i} &amp;amp; y \succeq 0 \wedge \mathbf{1}^{T} y=1 \\
+\infty &amp;amp; \text { otherwise }
+\end{array}\right.
+$$&lt;/p&gt;
+&lt;p&gt;也就是说，指数和的对数函数的共轭函数是概率单纯形内的负熵函数。&lt;/p&gt;
+&lt;h4 id=&#34;范数&#34;&gt;范数&lt;/h4&gt;
+&lt;p&gt;我们知道，$\mathbf{R}^n$ 上的范数 $\|\cdot\|$ 的对偶范数为 $\|\cdot\|_{*}$。$f(x) = \|x\|$ 的共轭函数为&lt;/p&gt;
+&lt;p&gt;$$
+f^{*}(y) = \left \{\begin{array}{ll}
+0 &amp;amp; \|y\|_{*} \leqslant 1 \\
+\infty &amp;amp; \text { otherwise }
+\end{array}\right.
+$$&lt;/p&gt;
+&lt;h2 id=&#34;基本性质&#34;&gt;基本性质&lt;/h2&gt;
+&lt;h3 id=&#34;fenchel-不等式&#34;&gt;Fenchel 不等式&lt;/h3&gt;
+&lt;p&gt;$$
+f(x)+f^{*}(y) \geqslant x^{T} y
+$$&lt;/p&gt;
+&lt;p&gt;如果 $f$ 可微，上式亦可称为 Young 不等式。&lt;/p&gt;
+&lt;p&gt;令 $f(x) = \frac{1}{2} x^TQx$，其中 $Q \in \mathbf{S}_{++}$，利用 Fenchel 不等式，我们可以如下结论：&lt;/p&gt;
+&lt;p&gt;$$
+x^Ty \leqslant \frac{1}{2} x^TQx + \frac{1}{2} y^TQ^{-1}y
+$$&lt;/p&gt;
+&lt;h3 id=&#34;共轭的共轭&#34;&gt;共轭的共轭&lt;/h3&gt;
+&lt;p&gt;我们学过的很多概念当中都包含“共轭”，例如共轭根式、共轭复数等。实际上“共轭”包含了“成对出现”这么一层意思。因此，共轭函数也有类似的性质。&lt;/p&gt;
+&lt;p&gt;$$
+f^{**} = f
+$$&lt;/p&gt;
+&lt;p&gt;上述等式要求函数 $f$ 是凸的而且闭的。&lt;/p&gt;
+&lt;h3 id=&#34;legendre-变换&#34;&gt;Legendre 变换&lt;/h3&gt;
+&lt;p&gt;可微函数 $f$ 的共轭函数亦称为函数 $f$ 的 Legendre 变换。&lt;/p&gt;
+&lt;p&gt;设函数 $f$ 是凸函数且可微，其定义域为 $\operatorname{dom} f = \mathbf{R}^n$，使 $y^Tx - f(x)$ 取最大的 $x^{*}$ 满足 $y = \nabla f(x^{*})$，并且若 $x^{*}$ 满足 $y = \nabla f(x^{*})$，$y^Tx - f(x)$ 在 $x^{*}$ 处取最大值（二者等价）。因此，我们可以得到&lt;/p&gt;
+&lt;p&gt;$$
+f^{*}(y)=x^{* T} \nabla f\left(x^{*}\right)-f\left(x^{*}\right)
+$$&lt;/p&gt;
+&lt;p&gt;有了这个结论，给定任意 $y$，我们可以求解梯度方程 $y = \nabla f(z)$，从而得到 $y$ 处的共轭函数 $f^{*}(y)$。&lt;/p&gt;
+&lt;p&gt;我们也可以换一个角度理解。$\forall z \in \mathbf{R}^n$，令 $y = \nabla f(z)$，则&lt;/p&gt;
+&lt;p&gt;$$
+f^{*}(y)=z^T \nabla f\left(z\right)-f\left(z\right)
+$$&lt;/p&gt;
+&lt;h3 id=&#34;伸缩变换和复合仿射变换&#34;&gt;伸缩变换和复合仿射变换&lt;/h3&gt;
+&lt;p&gt;设 $a &amp;gt; 0$，$b \in \mathbf{R}$，则伸缩变换及其共轭函数为&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+g(x) &amp;amp;= a f(x) + b \\
+g^{*}(y) &amp;amp;= a f^{*}(y / a)-b
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;设 $A \in \mathbf{R}^{n \times n}$ 非奇异，$b \in \mathbf{R}^n$，则复合仿射变换及其共轭函数为&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+g(x) &amp;amp;= f(Ax + b) \\
+g^{*}(y) &amp;amp;= f^{*}\left(A^{-T} y\right)-b^{T} A^{-T} y
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;其定义域为 $\operatorname{dom} g^{*} = A^T \operatorname{dom} f^{*}$。&lt;/p&gt;
+&lt;h3 id=&#34;独立函数的和&#34;&gt;独立函数的和&lt;/h3&gt;
+&lt;p&gt;设函数 $f_1$ 和 $f_2$ 都是凸函数，它们的独立函数&lt;/p&gt;
+&lt;p&gt;$$
+f(u, v) = f_1(u) + f_2(v)
+$$&lt;/p&gt;
+&lt;p&gt;的共轭函数为&lt;/p&gt;
+&lt;p&gt;$$
+f^{*}(w, z) = f_1^{*}(w) + f_2^{*}(z)
+$$&lt;/p&gt;
+&lt;p&gt;也就是说，独立凸函数的和的共轭函数是各个凸函数的共轭函数的和。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>拟凸函数</title>
+      <link>https://bowenei.gitee.io/learn/convex-optimization/convex-functions/quasiconvex-functions/</link>
+      <pubDate>Tue, 07 Dec 2021 11:39:31 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/convex-optimization/convex-functions/quasiconvex-functions/</guid>
+      <description>&lt;h2 id=&#34;定义&#34;&gt;定义&lt;/h2&gt;
+&lt;p&gt;如果函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$ 的定义域及所有下水平集 $\{ x \mid f(x) \leqslant \alpha \}$ 都是凸集，则称函数 $f$ 是&lt;strong&gt;拟凸函数&lt;/strong&gt;（或者&lt;strong&gt;单峰函数&lt;/strong&gt;）。&lt;/p&gt;
+&lt;p&gt;同理，如果函数 $-f$ 是拟凸函数，并且所有上水平集 $\{ x \mid f(x) \geqslant \alpha \}$ 都是凸集，那么函数 $f$ 是拟凹函数。&lt;/p&gt;
+&lt;p&gt;如果函数 $f$ 既是拟凸函数又是拟凹函数，则称函数 $f$ 为拟线性函数，并且其定义域和其所有的水平集 $\{ x \mid f(x) = \alpha \}$ 都是凸集。&lt;/p&gt;
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;凸函数具有凸的下水平集，所以也是拟凸函数。但是拟凸函数不一定是凸函数。下图是一个反例。&lt;/p&gt;
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /media/learn/convex-optimization/convex-functions/3-5-1_hu369ca6cb72db27dd51009e8a72c148d4_61169_abfcb6f82ebe7c248661ce3ebe482fef.webp 400w,
+               /media/learn/convex-optimization/convex-functions/3-5-1_hu369ca6cb72db27dd51009e8a72c148d4_61169_89173c9b67cca6d38d1c8e2b44f77bd0.webp 760w,
+               /media/learn/convex-optimization/convex-functions/3-5-1_hu369ca6cb72db27dd51009e8a72c148d4_61169_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/media/learn/convex-optimization/convex-functions/3-5-1_hu369ca6cb72db27dd51009e8a72c148d4_61169_abfcb6f82ebe7c248661ce3ebe482fef.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;384&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;如图所示，$f(x)$ 有一条水平渐近线（图中绿色虚线）。对于任意的 $\alpha$，下水平集 $[a, b]$ 是凸集。对于任意的 $\beta$，下水平集 $(-\infty, c]$ 是凸集。因此，$f(x)$ 是拟凸函数。&lt;/p&gt;
+&lt;p&gt;然而，如图中红色线段所示，该部分不满足凸函数的定义，因此 $f(x)$ 不是凸函数。&lt;/p&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;举例&#34;&gt;举例&lt;/h3&gt;
+&lt;h4 id=&#34;一元函数&#34;&gt;一元函数&lt;/h4&gt;
+&lt;p&gt;定义在 $\mathbf{R}_{++}$ 上的对数函数 $f(x) = \log x$ 是拟凸函数，也是拟凹函数，因此是拟线性函数。&lt;/p&gt;
+&lt;p&gt;上取整函数 $\mathrm{ceil}(x) = \inf \{ z \in Z \mid z \geqslant x \}$ 是拟凸函数，也是拟凹函数，因此是拟线性函数。&lt;/p&gt;
+&lt;h4 id=&#34;多元函数&#34;&gt;多元函数&lt;/h4&gt;
+&lt;p&gt;线性分式函数&lt;/p&gt;
+&lt;p&gt;$$
+f(x)=\frac{a^{T} x+b}{c^{T} x+d}
+$$&lt;/p&gt;
+&lt;p&gt;是拟凸函数，也是拟凹函数，因此是拟线性函数。其 α-下水平集为&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+S_{\alpha} &amp;amp;=\left\{x \mid c^{T} x+d&amp;gt;0,\left(a^{T} x+b\right) /\left(c^{T} x+d\right) \leqslant \alpha\right\} \\
+&amp;amp;=\left\{x \mid c^{T} x+d&amp;gt;0, a^{T} x+b \leqslant \alpha\left(c^{T} x+d\right)\right\}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;它是凸集，因为它是一个开端半平面和闭的半平面的交集。&lt;/p&gt;
+&lt;p&gt;距离比函数&lt;/p&gt;
+&lt;p&gt;$$
+f(x)=\frac{\|x-a\| _{2}}{\|x-b\| _{2}}
+$$&lt;/p&gt;
+&lt;p&gt;在半平面 $\{ x \mid \| x - a \|_2 \leqslant \| x - b \|_2 \}$ 上是拟凸函数。&lt;/p&gt;
+&lt;h2 id=&#34;基本性质&#34;&gt;基本性质&lt;/h2&gt;
+&lt;h3 id=&#34;拟凸函数的-jensen-不等式&#34;&gt;拟凸函数的 Jensen 不等式&lt;/h3&gt;
+&lt;p&gt;函数 $f$ 是拟凸函数的充要条件是，$\operatorname{dom} f$ 是凸集，且对于任意的 $x, y \in \operatorname{dom} f$ 以及 $0 \leqslant \theta \leqslant 1$，有&lt;/p&gt;
+&lt;p&gt;$$
+f(\theta x + (1 - \theta) y) \leqslant \max \{ f(x), f(y) \}
+$$&lt;/p&gt;
+&lt;p&gt;上式的几何意义在于，如果 $f$ 是拟凸函数，那么 $x$ 和 $y$ 之间的函数值不超过 $f(x)$ 和 $f(y)$ 之间的最大值。这很好的说明了为什么拟凸函数又被称为单峰函数。&lt;/p&gt;
+&lt;h3 id=&#34;连续函数的拟凸性&#34;&gt;连续函数的拟凸性&lt;/h3&gt;
+&lt;p&gt;连续函数 $f: \mathbf{R} \rightarrow \mathbf{R}$ 是拟凸的，当且仅当下述条件至少有一个成立：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;函数 $f$ 是非减的（单调递增）&lt;/li&gt;
+&lt;li&gt;函数 $f$ 是非增的（单调递减）&lt;/li&gt;
+&lt;li&gt;$\exists c \in \operatorname{dom} f$，使得对于 $t \leqslant c$，$f$ 非增；对于 $t \geqslant c$，$f$ 非减。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;简单来说，如果一个函数是拟凸函数，那么它在定义域内要么具有单调性，要么有且仅有一个峰。&lt;/p&gt;
+&lt;h2 id=&#34;可微拟凸函数&#34;&gt;可微拟凸函数&lt;/h2&gt;
+&lt;h3 id=&#34;一阶条件&#34;&gt;一阶条件&lt;/h3&gt;
+&lt;p&gt;设函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$ 可微，则函数 $f$ 是拟凸函数的充要条件是，$\operatorname{dom} f$ 是凸集，且对于 $\forall x, y \in \operatorname{dom} f$ 有&lt;/p&gt;
+&lt;p&gt;$$
+f(y) \leqslant f(x) \Longrightarrow \nabla f(x)^{T}(y-x) \leqslant 0
+$$&lt;/p&gt;
+&lt;p&gt;一阶条件的几何意义实际上就是定义了水平集 $\{ y \mid f(y) \leqslant f(x) \}$ 的一个支撑超平面（$\nabla f(x)$ 为该超平面的法向量）。&lt;/p&gt;
+&lt;p&gt;我们注意到用一阶条件判断凸性和判断拟凸性很相似，但实际上二者存在着重要的差别。例如，如果函数 $f$ 是凸函数且 $\nabla f(x) = 0$，那么 $x$ 是函数 $f$ 的全局极小点。&lt;/p&gt;
+&lt;p&gt;然而，对于拟凸函数，这样的论断并不成立。有可能 $\nabla f(x) = 0$，但是点 $x$ 不是 $f$ 全局最小点。例如 $f(x) = x^3$ 的 $x^{*} = 0$ 处，$\nabla f(x^{*}) = 0$，但不是极小点而是鞍点。因此，$f(x) = x^3$ 是拟凸函数而不是凸函数。&lt;/p&gt;
+&lt;h3 id=&#34;二阶条件&#34;&gt;二阶条件&lt;/h3&gt;
+&lt;p&gt;假设函数 $f$ 二次可微，如果函数 $f$ 是拟凸函数，则对于任意 $x \in \operatorname{dom} f$ 以及任意 $y \in \mathbf{R}^n$ 有&lt;/p&gt;
+&lt;p&gt;$$
+y^{T} \nabla f(x)=0 \Longrightarrow y^{T} \nabla^{2} f(x) y \geqslant 0
+$$&lt;/p&gt;
+&lt;p&gt;对于定义在 $\mathbf{R}$ 上的一元函数，上述条件可以简化为&lt;/p&gt;
+&lt;p&gt;$$
+f^{\prime} (x) = 0 \Longrightarrow f^{\prime \prime} (x) \geqslant 0
+$$&lt;/p&gt;
+&lt;p&gt;这实际上是我们非常熟悉的一阶导数为零且二阶导数非负的判断方法。&lt;/p&gt;
+&lt;h2 id=&#34;保拟凸运算&#34;&gt;保拟凸运算&lt;/h2&gt;
+&lt;h3 id=&#34;非负加权最大&#34;&gt;非负加权最大&lt;/h3&gt;
+&lt;p&gt;$$
+f = \max \{ w_1 f_1, \cdots, w_m f_m \}
+$$&lt;/p&gt;
+&lt;p&gt;其中 $w_i \geqslant 0$，$f_i$ 是拟凸函数。此性质可以扩展到一般的逐点上确界，即&lt;/p&gt;
+&lt;p&gt;$$
+f(x) = \sup _{y \in C} \{ w(y) g(x, y) \}
+$$&lt;/p&gt;
+&lt;p&gt;其中 $w(y) \geqslant 0$，$y$ 视为参数，$g(x, y)$ 是关于 $x$ 的拟凸函数。&lt;/p&gt;
+&lt;h3 id=&#34;复合&#34;&gt;复合&lt;/h3&gt;
+&lt;p&gt;如果函数 $g: \mathbf{R}^n \rightarrow \mathbf{R}$ 是拟凸函数，且函数 $h: \mathbf{R} \rightarrow \mathbf{R}$ 是非减的，则复合函数 $f = h \circ g$ 是拟凸函数。&lt;/p&gt;
+&lt;p&gt;拟凸函数和一个仿射函数或者线性分式函数进行复合可以得到拟凸函数。&lt;/p&gt;
+&lt;h3 id=&#34;最小化&#34;&gt;最小化&lt;/h3&gt;
+&lt;p&gt;如果函数 $f(x, y)$ 是 $x$ 和 $y$ 的联合拟凸函数，且 $C$ 是凸集，则函数&lt;/p&gt;
+&lt;p&gt;$$
+g(x) = \inf _{y \in C} f(x, y)
+$$&lt;/p&gt;
+&lt;p&gt;是拟凸函数。&lt;/p&gt;
+&lt;h2 id=&#34;通过一族凸函数进行表示&#34;&gt;通过一族凸函数进行表示&lt;/h2&gt;
+&lt;p&gt;我们可以很方便地将拟凸函数 $f$ 的下水平集（凸集）表示成凸函数的不等式。选择一族凸函数 $\phi_t: \mathbf{R}^n \rightarrow \mathbf{R}$，$t \in \mathbf{R}$ 表示凸函数的编号，这些函数满足&lt;/p&gt;
+&lt;p&gt;$$
+f(x) \leqslant t \Longleftrightarrow \phi_{t}(x) \leqslant 0
+$$&lt;/p&gt;
+&lt;p&gt;即拟凸函数 $f$ 的 $t$- 下水平集是凸函数 $\phi_t$ 的 $0$-下水平集。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>对数凹函数和对数凸函数</title>
+      <link>https://bowenei.gitee.io/learn/convex-optimization/convex-functions/log-concave-and-log-convex-functions/</link>
+      <pubDate>Tue, 07 Dec 2021 11:40:51 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/convex-optimization/convex-functions/log-concave-and-log-convex-functions/</guid>
+      <description>&lt;h2 id=&#34;定义&#34;&gt;定义&lt;/h2&gt;
+&lt;p&gt;如果对所有的 $x \in \operatorname{dom} f$ 有 $f(x) &amp;gt; 0$ 且 $\log f$ 是凹函数，则称函数 $f$ 是&lt;strong&gt;对数凹函数&lt;/strong&gt;。如果 $\log f$ 是凸函数，则称函数 $f$ 是&lt;strong&gt;对数凸函数&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;因此，函数 $f$ 是对数凸的，等价于函数 $1/f$ 是对数凹的。&lt;/p&gt;
+&lt;p&gt;对数凹凸性可以不借助对数直接表达。考虑函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，其定义域是凸集，且对于 $\forall x \in \operatorname{dom} f$ 有 $f(x) &amp;gt; 0$，则函数是对数凹的，当且仅当对 $\forall x, y \in \operatorname{dom} f$，$0 \leqslant \theta \leqslant 1$，有&lt;/p&gt;
+&lt;p&gt;$$
+f(\theta x+(1-\theta) y) \geqslant f(x)^{\theta} f(y)^{1-\theta}
+$$&lt;/p&gt;
+&lt;p&gt;特别地，若令 $\theta = \frac{1}{2}$，则可以得到如下结论：对数凹函数在两点中间的函数值不小于这两点函数的几何平均值，即&lt;/p&gt;
+&lt;p&gt;$$
+f(\frac{x + y}{2}) \geqslant \sqrt{f(x)f(y)}
+$$&lt;/p&gt;
+&lt;p&gt;根据函数复合规则，我们知道如果函数 $h$ 是凸函数，则函数 $e^h$ 是凸函数，因此对数凸函数是凸函数。类似地，非负凹函数是对数凹函数。此外，由于对数函数是单调增函数，所以对数凸函数是拟凸函数，对数凹函数是拟凹函数。&lt;/p&gt;
+&lt;h3 id=&#34;举例&#34;&gt;举例&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;仿射函数 $f(x) = a^Tx + b$ 在 $\{ x \mid a^Tx + b &amp;gt; 0 \}$ 上是对数凹函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;幂函数 $f(x) = x^a$ 在 $\mathbf{R}_{++}$ 上当 $a \leqslant 0$ 时是对数凸函数，当 $a \geqslant 0$ 时是对数凹函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;指数函数 $f(x) = e^{ax}$ 既是对数凸函数也是对数凹函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gauss 概率密度函数的累积分布函数是对数凹函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\Phi(x)=\frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{x} e^{-u^{2} / 2} \mathrm{d} u
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\Gamma$ 函数在 $[1, +\infty)$ 上是对数凸函数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+\Gamma(x)=\int_{0}^{\infty} u^{x-1} e^{-u} \mathrm{d} u
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;行列式 $\det X$ 在 $\mathbf{S}^n _{++}$ 上是对数凹函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;行列式与迹之比 $\det X / \operatorname{tr} X$ 在 $\mathbf{S}^n _{++}$ 上是对数凹函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;相关性质&#34;&gt;相关性质&lt;/h2&gt;
+&lt;h3 id=&#34;二次可微的对数凸凹函数&#34;&gt;二次可微的对数凸/凹函数&lt;/h3&gt;
+&lt;p&gt;假设函数 $f$ 是二次可微的，并且 $\operatorname{dom} f$ 是凸的，那么&lt;/p&gt;
+&lt;p&gt;$$
+\nabla^{2} \log f(x)=\frac{1}{f(x)} \nabla^{2} f(x)-\frac{1}{f(x)^{2}} \nabla f(x) \nabla f(x)^{T}
+$$&lt;/p&gt;
+&lt;p&gt;因此，判断函数 $f$ 的对数凹凸性，只需要分别令二阶导数大于零（凸）和小于零（凹），即&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+f(x) \nabla^{2} f(x) \succeq \nabla f(x) \nabla f(x)^{T} \\
+f(x) \nabla^{2} f(x) \preceq \nabla f(x) \nabla f(x)^{T}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;乘积求和与积分&#34;&gt;乘积、求和与积分&lt;/h3&gt;
+&lt;p&gt;乘积运算能够保持函数的对数凸性，这是因为对数运算和加法运算是能够保持函数的凸性。&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+h(x) &amp;amp;= f(x)g(x) \\
+\log h(x) &amp;amp;= \log f(x) + \log g(x)
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;然而，求和运算并不能够绝对保证函数的对数凸性。对数凹函数的和一般不是对数凹函数，而对数凸函数的和仍然是对数凸函数。&lt;/p&gt;
+&lt;p&gt;因此，对数凸函数的积分也是对数凸函数。例如，非负函数 $p(x)$ 的 Laplace 变换：&lt;/p&gt;
+&lt;p&gt;$$
+P(z)=\int p(x) e^{-z^{T} x} \mathrm{d} x
+$$&lt;/p&gt;
+&lt;h3 id=&#34;对数凹函数的积分&#34;&gt;对数凹函数的积分&lt;/h3&gt;
+&lt;p&gt;对数凹函数的积分仍然是对数凹函数需要满足如下条件：如果函数 $f: \mathbf{R}^n \times \mathbf{R}^m \rightarrow \mathbf{R}$ 是对数凹函数，那么&lt;/p&gt;
+&lt;p&gt;$$
+g(x) = \int f(x, y) \mathrm{d} y
+$$&lt;/p&gt;
+&lt;p&gt;是对数凹函数（此时是在 $\mathbf{R}^m$ 上求积分）。&lt;/p&gt;
+&lt;p&gt;这个结论具有重要意义。它可以用来证明对数凹性对卷积运算也是封闭的，即如果函数 $f$ 和 $g$ 在 $\mathbf{R}^m$ 上是对数凹函数，则它们的卷积&lt;/p&gt;
+&lt;p&gt;$$
+(f * g)(x)=\int f(x-y) g(y) \mathbf{d} y
+$$&lt;/p&gt;
+&lt;p&gt;仍然是对数凹函数。这是因为：1. 乘积是保对数凹凸性的；2. 对数凹函数的积分仍然是对数凹函数。&lt;/p&gt;
+&lt;p&gt;设 $C \subseteq \mathbf{R}^n$ 是凸集，$w$ 是 $\mathbf{R}^n$ 上的随机向量，设其具有对数凹性的概率密度函数 $p$，则函数&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+f(x) &amp;amp;= \operatorname{prob} (x + w \in C) \\
+&amp;amp;= \int g(x + w)f(w) \mathrm{d} w
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;是 $x$ 的对数凹函数，其中 $g$ 定义为&lt;/p&gt;
+&lt;p&gt;$$
+g(u)=\left\{\begin{array}{ll}
+1 &amp;amp; u \in C \\
+0 &amp;amp; u \notin C
+\end{array}\right.
+$$&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>广义不等式的单调性和凸性</title>
+      <link>https://bowenei.gitee.io/learn/convex-optimization/convex-functions/convexity-with-respect-to-generalized-inequalities/</link>
+      <pubDate>Tue, 07 Dec 2021 11:42:20 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/learn/convex-optimization/convex-functions/convexity-with-respect-to-generalized-inequalities/</guid>
+      <description>&lt;p&gt;现在我们考虑广义的单调性和凸性，采用广义不等式，而不是前面几节中讨论的 $R$ 上的顺序。&lt;/p&gt;
+&lt;h2 id=&#34;广义不等式的单调性&#34;&gt;广义不等式的单调性&lt;/h2&gt;
+&lt;p&gt;设 $K \subseteq \mathbf{R}^n$ 是一个正常锥，其相应的广义不等式为 $\preceq_{K}$。定义函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，若&lt;/p&gt;
+&lt;p&gt;$$
+x \preceq_{K} y \Longrightarrow f(x) \leqslant f(y)
+$$&lt;/p&gt;
+&lt;p&gt;则称函数 $f$ $K$- 非减。若&lt;/p&gt;
+&lt;p&gt;$$
+x \preceq_{K} y \wedge x \ne y \Longrightarrow f(x) &amp;lt; f(y)
+$$&lt;/p&gt;
+&lt;p&gt;则称函数 $f$ $K$- 增。类似地，可以定义 $K$- 非增和 $K$- 减函数。&lt;/p&gt;
+&lt;h3 id=&#34;举例&#34;&gt;举例&lt;/h3&gt;
+&lt;p&gt;向量单调函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$ 在 $\mathbf{R}^n_+$ 上非减，当且仅当&lt;/p&gt;
+&lt;p&gt;$$
+\forall x, y \in \operatorname{dom} f, \quad x_1 \leqslant y_1, \cdots, x_n \leqslant y_n \Longrightarrow f(x) \leqslant f(y)
+$$&lt;/p&gt;
+&lt;p&gt;矩阵单调函数 $f: \mathbf{S}^n \rightarrow \mathbf{R}$ 如果在半正定锥内函数是单调的，那么函数 $f$ 矩阵单调。例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;函数 $\operatorname{tr}(WX)$，其中 $W \in \mathbf{S}^n$。当 $W \succeq 0$ 时，函数是矩阵非减的；当 $W \succ 0$ 时，函数是矩阵增的。（同理可以推出矩阵非增和矩阵减。）&lt;/li&gt;
+&lt;li&gt;函数 $\operatorname{tr}(X^{-1})$ 在 $\mathbf{S}^n_{++}$ 上矩阵减。&lt;/li&gt;
+&lt;li&gt;函数 $\det X$ 在 $\mathbf{S}^n_{++}$ 上矩阵增，在 $\mathbf{S}^n_+$ 上矩阵非减。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;单调性的梯度条件&#34;&gt;单调性的梯度条件&lt;/h3&gt;
+&lt;p&gt;考虑可微函数 $f$，其定义域为凸集，它是 $K$- 非减的，当且仅当对 $\forall x \in \operatorname{dom} f$ 有&lt;/p&gt;
+&lt;p&gt;$$
+\nabla f(x) \succeq_{K^{*}} 0
+$$&lt;/p&gt;
+&lt;p&gt;同理，对于严格的 $K$- 增情况，我们有&lt;/p&gt;
+&lt;p&gt;$$
+\nabla f(x) \succ_{K^{*}} 0
+$$&lt;/p&gt;
+&lt;p&gt;但反过来不一定正确。&lt;/p&gt;
+&lt;h2 id=&#34;广义不等式的凸性&#34;&gt;广义不等式的凸性&lt;/h2&gt;
+&lt;p&gt;设 $K \subseteq \mathbf{R}^m$ 为正常锥，相应的广义不等式为 $\preceq_{K}$。如果对于任意的 $x, y$，以及 $0 \leqslant \theta \leqslant 1$，有&lt;/p&gt;
+&lt;p&gt;$$
+f(\theta x+(1-\theta) y) \preceq_{K} \theta f(x)+(1-\theta) f(y)
+$$&lt;/p&gt;
+&lt;p&gt;则称函数 $f$ 是 $K$- 凸的。如果对于任意的 $x, y \wedge x \ne y$，以及 $0 &amp;lt; \theta &amp;lt; 1$，有&lt;/p&gt;
+&lt;p&gt;$$
+f(\theta x+(1-\theta) y) \prec_{K} \theta f(x)+(1-\theta) f(y)
+$$&lt;/p&gt;
+&lt;p&gt;则称函数 $f$ 是严格 $K$- 凸的。&lt;/p&gt;
+&lt;h3 id=&#34;举例-1&#34;&gt;举例&lt;/h3&gt;
+&lt;p&gt;关于分量不等式的凸性和矩阵凸性，其结论与上述的类似。这里给出一些具有矩阵凸性函数的例子：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;函数 $f(X) = XX^T$，其中 $X \in \mathbf{R}^{n \times m}$，是矩阵凸的。&lt;/li&gt;
+&lt;li&gt;当 $1 \leqslant p \leqslant 2$ 或 $-1 \leqslant p \leqslant 0$ 时，函数 $X^p$ 在 $\mathbf{S}^n_{++}$ 上是矩阵凸的；当 $0 \leqslant p \leqslant 1$ 时，函数是矩阵凹的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;凸函数的很多结论都可以扩展到 $K$- 凸函数。&lt;/p&gt;
+&lt;h3 id=&#34;k--凸的对偶刻画&#34;&gt;$K$- 凸的对偶刻画&lt;/h3&gt;
+&lt;p&gt;函数 $f$ 是 $K$- 凸的，当且仅当对任意的 $\omega \succeq_{K^{*}} 0$，（实值）函数 $\omega^Tf$ 是凸的。&lt;/p&gt;
+&lt;p&gt;函数 $f$ 是严格 $K$- 凸的，当且仅当对任意非零向量 $\omega \succeq_{K^{*}} 0$，函数 $\omega^Tf$ 是严格凸的。&lt;/p&gt;
+&lt;h3 id=&#34;可微的-k--凸函数&#34;&gt;可微的 $K$- 凸函数&lt;/h3&gt;
+&lt;p&gt;可微函数 $f$ 是 $K$- 凸的，当且仅当其定义域是凸集，且对 $\forall x, y \in \operatorname{dom} f$ 有&lt;/p&gt;
+&lt;p&gt;$$
+f(y) \succeq_{K} f(x)+D f(x)(y-x)
+$$&lt;/p&gt;
+&lt;p&gt;类似地，可以得到严格 $K$- 凸的等价条件：对 $\forall x, y \in \operatorname{dom} f \wedge x \ne y$ 有&lt;/p&gt;
+&lt;p&gt;$$
+f(y) \succ_{K} f(x)+D f(x)(y-x)
+$$&lt;/p&gt;
+&lt;h3 id=&#34;复合定理&#34;&gt;复合定理&lt;/h3&gt;
+&lt;p&gt;函数复合暴露凸性的很多结论都可以推广到 $K$- 凸的情形。详见&lt;a href=&#34;../operations-that-preserve-convexity&#34;&gt;保凸运算&lt;/a&gt;一节。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>内点法 | Bowen&#39;s Academic Home</title>
+    <link>https://bowenei.gitee.io/learn/convex-optimization/%E5%86%85%E7%82%B9%E6%B3%95/</link>
+      <atom:link href="https://bowenei.gitee.io/learn/convex-optimization/%E5%86%85%E7%82%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <description>内点法</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 07 Nov 2021 17:27:25 +0800</lastBuildDate>
+    <image>
+      <url>https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png</url>
+      <title>内点法</title>
+      <link>https://bowenei.gitee.io/learn/convex-optimization/%E5%86%85%E7%82%B9%E6%B3%95/</link>
+    </image>
+    
+  </channel>
+</rss>

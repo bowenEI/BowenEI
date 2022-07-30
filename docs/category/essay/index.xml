@@ -1,0 +1,1025 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Essay | Bowen&#39;s Academic Home</title>
+    <link>https://bowenei.gitee.io/category/essay/</link>
+      <atom:link href="https://bowenei.gitee.io/category/essay/index.xml" rel="self" type="application/rss+xml" />
+    <description>Essay</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 19:51:34 +0800</lastBuildDate>
+    <image>
+      <url>https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png</url>
+      <title>Essay</title>
+      <link>https://bowenei.gitee.io/category/essay/</link>
+    </image>
+    
+    <item>
+      <title>挑战 2022 年高考全国乙卷数学压轴大题</title>
+      <link>https://bowenei.gitee.io/post/college-entrance-examination-2022-mathematics/</link>
+      <pubDate>Wed, 15 Jun 2022 19:51:34 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/post/college-entrance-examination-2022-mathematics/</guid>
+      <description>&lt;p&gt;2022 年高考已落下帷幕，不少考生表示今年的数学是“历史第二难”。于是，我打算尝试一下今年全国乙卷数学的最后两道大题，切身体会一下今年学子们的不易。&lt;/p&gt;
+&lt;h2 id=&#34;解析几何&#34;&gt;解析几何&lt;/h2&gt;
+&lt;p&gt;已知椭圆 $E$ 的中心为坐标原点，对称轴为 $x$ 轴、$y$ 轴，且过 $A(0,-2),B(\frac{3}{2},-1)$ 两点。&lt;/p&gt;
+&lt;p&gt;$(1)$ 求 $E$ 的方程；&lt;/p&gt;
+&lt;p&gt;$(2)$ 设过点 $P(1,-2)$ 的直线交 $E$ 于 $M,N$ 两点，过 $M$ 且平行于 $x$ 轴的直线与线段 $AB$ 交于点 $T$，点 $H$ 满足 $\vec{MT} = \vec{TH}$。证明：直线 $HN$ 过定点。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;设椭圆 $E$ 的方程为&lt;/p&gt;
+&lt;p&gt;$$
+\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \quad (a,b&amp;gt;0)
+$$&lt;/p&gt;
+&lt;p&gt;将 $A(0,-2),B(\frac{3}{2},-1)$ 两点坐标代入得&lt;/p&gt;
+&lt;p&gt;$$
+\begin{cases}
+\frac{4}{b^2} = 1 \\
+\frac{9}{4a^2} + \frac{1}{b^2} = 1
+\end{cases}
+$$&lt;/p&gt;
+&lt;p&gt;解得&lt;/p&gt;
+&lt;p&gt;$$
+\begin{cases}
+a^2 = 3 \\
+b^2 = 4
+\end{cases}
+$$&lt;/p&gt;
+&lt;p&gt;因此椭圆 $E$ 的方程为&lt;/p&gt;
+&lt;p&gt;$$
+\frac{x^2}{3} + \frac{y^2}{4} = 1
+$$&lt;/p&gt;
+&lt;p&gt;第 $(2)$ 小题给出的条件特别多，我们慢慢梳理这些条件。首先条件中提到了线段 $AB$，并且有一条直线与线段 $AB$ 有交点。因此需要给出直线 $AB$ 的方程，用两点式表示，得到&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+\frac{y + 2}{x} &amp;amp;= \frac{2}{3}
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;化为一般式&lt;/p&gt;
+&lt;p&gt;$$
+l_{AB}: 2x - 3y - 6 = 0
+$$&lt;/p&gt;
+&lt;p&gt;由于本题是证明题，我们可以通过特例得出答案，然后再证明其一般性。因此，我们考察过 $P$ 点的竖直直线这一情况。此时 $M$ 点的横坐标为 $1$，代入椭圆方程得到&lt;/p&gt;
+&lt;p&gt;$$
+\frac{1}{3} + \frac{y^2}{4} = 1
+$$&lt;/p&gt;
+&lt;p&gt;解得&lt;/p&gt;
+&lt;p&gt;$$
+y = \pm \frac{2\sqrt{6}}{3}
+$$&lt;/p&gt;
+&lt;p&gt;即 $M,N$ 两点的坐标分别为 $(1,-\frac{2\sqrt{6}}{3}),(1,\frac{2\sqrt{6}}{3})$。于是将 $y=-\frac{2\sqrt{6}}{3}$ 代入直线 $AB$ 的方程&lt;/p&gt;
+&lt;p&gt;$$
+2x + 2\sqrt{6} - 6 = 0
+$$&lt;/p&gt;
+&lt;p&gt;解得&lt;/p&gt;
+&lt;p&gt;$$
+x = 3 - \sqrt{6}
+$$&lt;/p&gt;
+&lt;p&gt;即 $T$ 点的坐标为 $(3-\sqrt{6},-\frac{2\sqrt{6}}{3})$。依题意，$\vec{MT} = \vec{TH}$，我们可以求出 $\vec{MT}$ 的坐标：&lt;/p&gt;
+&lt;p&gt;$$
+\vec{MT} = (2-\sqrt{6},0)
+$$&lt;/p&gt;
+&lt;p&gt;于是 $H$ 点的坐标为 $(5-2\sqrt{6}, -\frac{2\sqrt{6}}{3})$。下面就可以利用两点式写出直线 $HN$ 的方程：&lt;/p&gt;
+&lt;p&gt;$$
+\frac{y - \frac{2\sqrt{6}}{3}}{x - 1} = \frac{-\frac{2\sqrt{6}}{3} - \frac{2\sqrt{6}}{3}}{4-2\sqrt{6}}
+$$&lt;/p&gt;
+&lt;p&gt;整理之后得到&lt;/p&gt;
+&lt;p&gt;$$
+y = (2 - \frac{2\sqrt{6}}{3})x - 2
+$$&lt;/p&gt;
+&lt;p&gt;可以看出，直线 $HN$ 过点 $(0,-2)$。那么是不是一定过定点 $(0,-2)$ 呢？目前得出的结论是无法判断的，但我们可以猜想直线 $HN$ 过定点 $(0,-2)$。为了证明这个猜想，我们还需要进行不失一般性的计算。&lt;/p&gt;
+&lt;p&gt;过点 $P(1,-2)$ 的直线与椭圆 $E$ 相交与 $M,N$ 两点，我们设其点斜式方程为：&lt;/p&gt;
+&lt;p&gt;$$
+l_{MN}: y + 2 = k(x - 1)
+$$&lt;/p&gt;
+&lt;p&gt;将其与椭圆 $E$ 的方程联立，并代入得&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+4x^2 + 3[k^2(x-1)^2 - 4k(x-1) + 4] - 12 &amp;amp;= 0 \\
+(3k^2+4)x^2 - 6k(k + 2)x + 3k(k+4) &amp;amp;= 0
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;设 $M,N$ 两点坐标分别为 $(x_1,y_1),(x_2,y_2)$，由韦达定理得&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+x_1+x_2 &amp;amp;= \frac{6k(k+2)}{3k^2+4} \tag{1} \\
+x_1x_2 &amp;amp;= \frac{3k(k+4)}{3k^2+4} \tag{2}
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;进一步可以得到&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+y_1+y_2 &amp;amp;= k(x_1+x_2) - 2k - 4 \\
+&amp;amp;= \frac{6k^2(k+2)}{3k^2+4} - \frac{(2k+4)(3k^2+4)}{3k^2+4} \\
+&amp;amp;= -\frac{8(k+2)}{3k^2+4} \tag{3} \\
+y_1y_2 &amp;amp;= [k(x_1-1) - 2][k(x_2-1) - 2] \\
+&amp;amp;= k^2(x_1x_2 - x_1 - x_2 + 1) - 2k(x_1 - 1) - 2k(x_2 - 1) + 4 \\
+&amp;amp;= k^2x_1x_2 - k(k+2)(x_1+x_2) + (k+2)^2 \\
+&amp;amp;= \frac{3k^3(k+4)}{3k^2+4} - \frac{6k^2(k+2)^2}{3k^2+4} + \frac{(k+2)^2(3k^2+4)}{3k^2+4} \\
+&amp;amp;= -\frac{8(k^2 - 2k - 2)}{3k^2+4} \tag{4} \\
+x_1y_2 + x_2y_1 &amp;amp;= x_1(kx_2 - k - 2) + x_2(kx_1 - k - 2) \\
+&amp;amp;= 2kx_1x_2 - (k+2)(x_1+x_2) \\
+&amp;amp;= \frac{6k^2(k+4)}{3k^2+4} - \frac{6k(k+2)^2}{3k^2+4} \\
+&amp;amp;= -\frac{24k}{3k^2+4} \tag{5}
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;式 $(1)$-$(5)$ 是下面计算化简的依据，我们在这里提前准备好。&lt;/p&gt;
+&lt;p&gt;依题意，过 $M$ 且平行于 $x$ 的直线交线段 $AB$ 于点 $T$。我们将 $y=y_1$ 代入直线 $AB$ 的方程，得到&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+2x - 3y_1 - 6 &amp;amp;= 0 \\
+x &amp;amp;= \frac{3}{2}y_1+3
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;于是可以得到 $T$ 点的坐标为&lt;/p&gt;
+&lt;p&gt;$$
+(\frac{3}{2}y_1+3, y_1)
+$$&lt;/p&gt;
+&lt;p&gt;依题意，$\vec{MT} = \vec{TH}$，说明 $T$ 是线段 $HM$ 的中点。并且线段 $HM$ 显然与 $x$ 轴平行，$H$ 点的纵坐标与 $T$ 点相同，横坐标可以用如下的中点坐标公式求得&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+x_H &amp;amp;= 2 \times (\frac{3}{2}y_1+3) - x_1 \\
+&amp;amp;= 3y_1 - x_1 + 6
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;于是可以得到 $H$ 点的坐标为&lt;/p&gt;
+&lt;p&gt;$$
+(3y_1 - x_1 + 6, y_1)
+$$&lt;/p&gt;
+&lt;p&gt;现在，可以用两点式写出直线 $HN$ 的方程&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+l_{HN}: \frac{y - y_2}{x - x_2} &amp;amp;= \frac{y_1 - y_2}{3y_1 - x_1 + 6 - x_2}
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;化简以后得到&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+(y_1-y_2)x - (3y_1-x_1-x_2+6)y + 3y_1y_2 + 6y_2 - x_1y_2 - x_2y_1 &amp;amp;= 0
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;我们仔细观察上式，发现有很多项已经在我们之前利用韦达定理以及由其导出的结果中出现，例如 $y_1y_2$、$x_1y_2 + x_2y_1$。但是还有个别的 $y_1$、$y_2$ 之前的系数待定，甚至还出现了 $y_1-y_2$。很巧妙的一点是，我们将点 $(0, -2)$ 代入得&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+6(y_1+y_2) - 2(x_1+x_2) + 12 + 3y_1y_2 - x_1y_2 - x_2y_1 &amp;amp;= 0 \\
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;发现所有那些无法配对的项都可以成功配对了！我们尝试将所有的 $x_1,x_2,y_1,y_2$ 都用 $k$ 来表示，得到&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+6(y_1+y_2) - 2(x_1+x_2) + 12 + 3y_1y_2 - x_1y_2 - x_2y_1 &amp;amp;= 0 \\
+-\frac{48(k+2)}{3k^2+4} - \frac{12k(k+2)}{3k^2+4} + 12 - \frac{24(k^2 - 2k - 2)}{3k^2+4} &amp;amp;+ \frac{24k}{3k^2+4} = 0 \\
+48(k+2) + 12k(k+2) + 24(k^2-2k-2) - 24k &amp;amp;= 12(3k^2 + 4) \\
+36k^2 + 48 &amp;amp;= 12(3k^2 + 4)
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;可以看到上述等式恒成立，与 $k$ 的取值无关。&lt;/p&gt;
+&lt;p&gt;综上所述，直线 $HN$ 过定点 $(0,-2)$。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /post/college-entrance-examination-2022-mathematics/ellipse_hu2cdc033a8eba5e67444b581ccefb8792_14238_ea6ae7d6efb6f8a3a600b7cd37e9e11a.webp 400w,
+               /post/college-entrance-examination-2022-mathematics/ellipse_hu2cdc033a8eba5e67444b581ccefb8792_14238_807adc1edcb2b6aea2cc19b3c24dd977.webp 760w,
+               /post/college-entrance-examination-2022-mathematics/ellipse_hu2cdc033a8eba5e67444b581ccefb8792_14238_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/post/college-entrance-examination-2022-mathematics/ellipse_hu2cdc033a8eba5e67444b581ccefb8792_14238_ea6ae7d6efb6f8a3a600b7cd37e9e11a.webp&#34;
+               width=&#34;269&#34;
+               height=&#34;265&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;点评&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;本题题型较为常规，是一个证明直线过定点的问题。证明直线过定点的问题一般有如下两种思路：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;直接整理出带参数的直线点斜式方程，然后直接看出直线所过定点。&lt;/li&gt;
+&lt;li&gt;首先通过特例判断定点坐标，然后再加以不失一般性的证明。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;然而，本题的条件特别多，这需要我们认真捋顺各点的关系。直线 $MN$ 的过定点 $P$，$MN$ 倾斜角的变化带动 $M,N$ 两点坐标的变化。后又出现 $T,H$ 两点，且和 $M$ 点满足一定的数量关系。最后又将 $H,N$ 两点连接起来。&lt;/p&gt;
+&lt;p&gt;我们经过一步步的推导，将直线 $HN$ 的方程最终表示为与 $M,N$ 两点相关的带参数的方程。但是，这个时候并不能将所有参数用某一个参数表示，因此通过因式分解等方法化简直线方程以看出直线过定点的方法行不通。&lt;/p&gt;
+&lt;p&gt;但本题是证明题，我们就可以先通过特例尝试猜想直线 $HN$ 过哪个定点。特例的选取应当具有一定的特殊性，并且计算简便。平行于坐标轴的直线由于其方程仅含 $x$ 或 $y$ 而计算简便，根据本题的具体情况，我们选择和 $y$ 轴平行的竖直直线，并且很容易地得到了它的方程。&lt;/p&gt;
+&lt;p&gt;我们之所以可以猜想直线 $HN$ 过定点 $(0,-2)$，是因为&lt;/p&gt;
+&lt;p&gt;$$
+\begin{cases}
+x = 0 \\
+y = -2
+\end{cases}
+$$&lt;/p&gt;
+&lt;p&gt;是二元一次方程&lt;/p&gt;
+&lt;p&gt;$$
+y = (2 - \frac{2\sqrt{6}}{3})x - 2
+$$&lt;/p&gt;
+&lt;p&gt;唯一的一对有理数解。从 $x$ 前的系数是无理数就可以看出来这一性质。如果直线 $HN$ 所经过定点的坐标包含无理数，那么不失一般性的计算必然无法化简。换而言之，我们也只有尝试 $(0,-2)$ 这一点的可能。结果，经过我们的证明，直线 $HN$ 确实过定点 $(0,-2)$。&lt;/p&gt;
+&lt;p&gt;本题巧妙之处就在于，我们所选择的特例仅过 $(0,-2)$ 唯一一个有理数点，这为我们判断直线 $HN$ 过定点 $(0,-2)$ 带来了极大的方便。如果特例的方程不含无理数，我们仍然难以判断直线 $HN$ 究竟过哪个定点。&lt;/p&gt;
+&lt;p&gt;不过，本题的难点在于计算量较大。除了韦达定理本身以外，还需要导出一些其他的结果以便于将所有点的坐标用 $k$ 表示。此外，还需要对式子有敏锐的观察力，每项如何凑在一起可以“消灭”。如果不能够冷静观察式子的结构，在考场上很难有信心继续算下去。&lt;/p&gt;
+&lt;h2 id=&#34;函数与导数&#34;&gt;函数与导数&lt;/h2&gt;
+&lt;p&gt;已知函数 $f(x) = \ln (1+x) + axe^{-x}$。&lt;/p&gt;
+&lt;p&gt;$(1)$ 当 $a = 1$ 时，求曲线 $y = f(x)$ 在点 $(0,f(0))$ 处的切线方程；&lt;/p&gt;
+&lt;p&gt;$(2)$ 若 $f(x)$ 在区间 $(-1,0),(0,+\infty)$ 各恰有一个零点，求 $a$ 的取值范围。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;依题意，当 $a=1$ 时，&lt;/p&gt;
+&lt;p&gt;$$
+f(x) = \ln (1+x) + xe^{-x}
+$$&lt;/p&gt;
+&lt;p&gt;第 $(1)$ 小题要求切线方程，因此需要利用导数。我们对 $f(x)$ 求导得&lt;/p&gt;
+&lt;p&gt;$$
+f^{\prime}(x) = \frac{1}{1 + x} + (1-x) e^{-x}
+$$&lt;/p&gt;
+&lt;p&gt;于是点 $(0,f(0))$ 处的切线斜率为&lt;/p&gt;
+&lt;p&gt;$$
+f^{\prime}(0) = 2
+$$&lt;/p&gt;
+&lt;p&gt;故点 $(0,f(0))$ 处的切线方程为&lt;/p&gt;
+&lt;p&gt;$$
+y = 2x
+$$&lt;/p&gt;
+&lt;p&gt;要回答第 $(2)$ 小题，我们需要直接对 $f(x)$ 求导，得到&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+f^{\prime}(x) &amp;amp;= \frac{1}{1 + x} + a(1-x) e^{-x} \\
+&amp;amp;= \frac{1 + a(1-x^2)e^{-x}}{1+x}
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;这个式子很难判断零点和单调性。但考虑到函数 $f(x)$ 的定义域为 $(-1,+\infty)$，因此分母恒正。下面我们单独来处理导函数的分子，令&lt;/p&gt;
+&lt;p&gt;$$
+g(x) = 1 + a(1-x^2)e^{-x}
+$$&lt;/p&gt;
+&lt;p&gt;对 $g(x)$ 求导，得到&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+g^{\prime}(x) &amp;amp;= a[-2xe^{-x} + (x^2-1)e^{-x}] \\
+&amp;amp;= a(x^2 - 2x - 1)e^{-x}
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;于是，我们令 $g^{\prime}(x)=0$，可以解得两根&lt;/p&gt;
+&lt;p&gt;$$
+\begin{cases}
+x_1 = 1 - \sqrt{2} \\
+x_2 = 1 + \sqrt{2}
+\end{cases}
+$$&lt;/p&gt;
+&lt;p&gt;由于 $e^{-x}&amp;gt;0$ 恒成立，$g^{\prime}(x)$ 的正负就取决于 $a$ 的正负了。因此，我们按照如下情况进行分类讨论：&lt;/p&gt;
+&lt;h4 id=&#34;1-a0&#34;&gt;1. $a=0$&lt;/h4&gt;
+&lt;p&gt;若 $a=0$，则 $g^{\prime}(x)=0$ 恒成立，$g(x) \equiv 1$。于是 $f^{\prime}(x) &amp;gt; 0$ 恒成立，这说明 $f(x)$ 在整个定义域 $(-1,+\infty)$ 上单调递增。这无论如何都不符合题意，因为 $f(x)$ 至多只可能有一个零点。&lt;/p&gt;
+&lt;h4 id=&#34;2-a0&#34;&gt;2. $a&amp;gt;0$&lt;/h4&gt;
+&lt;p&gt;若 $a&amp;gt;0$，则 $g^{\prime}(x)$ 的正负性以及 $g(x)$ 的单调性如下表：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;区间&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$g^{\prime}(x)$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$g(x)$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(-1,1-\sqrt{2})$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$+$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\nearrow$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(1-\sqrt{2},1+\sqrt{2})$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$-$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\searrow$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(1+\sqrt{2},+\infty)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$+$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\nearrow$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;下面，我们分别计算驻点和一些关键点的函数值，并判断它们的正负。&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+g(-1) &amp;amp;= 1 &amp;gt; 0 \\
+g(1-\sqrt{2}) &amp;amp;= 1 + \sqrt{2}a(2-\sqrt{2})e^{\sqrt{2}-1} &amp;gt; 0 \\
+g(0) &amp;amp;= a + 1 &amp;gt; 0 \\
+g(1) &amp;amp;= 1 &amp;gt; 0 \\
+g(1+\sqrt{2}) &amp;amp;= 1 - \sqrt{2}a(2+\sqrt{2})e^{-(\sqrt{2}+1)} \\
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;由于 $-1$ 不在 $f^{\prime}(x)$ 的定义域内，不过我们可以根据 $g(x)$ 的正负以及单调性判断 $f^{\prime}(x)&amp;gt;0$ 在 $(-1,0)$ 上恒成立，当然也可以利用下列极限来判断：&lt;/p&gt;
+&lt;p&gt;$$
+\lim_{x\rightarrow-1^+} f^{\prime}(x) = \lim_{x\rightarrow-1^+}[\frac{1}{1 + x} + a(1-x) e^{-x}] = +\infty
+$$&lt;/p&gt;
+&lt;p&gt;因此 $f(x)$ 在 $(-1,0)$ 上单调递增。不过，根据对数函数的性质，我们可以判断下列极限&lt;/p&gt;
+&lt;p&gt;$$
+\lim_{x\rightarrow-1^+} f(x) = \lim_{x\rightarrow-1^+} [\ln (1+x) + axe^{-x}] = -\infty
+$$&lt;/p&gt;
+&lt;p&gt;而 $f(0)=0$。因此可以判断，$f(x)&amp;lt;0$ 在 $(-1,0)$ 上恒成立，这并不符合题意中的 $(-1,0)$ 内恰有一个零点。&lt;/p&gt;
+&lt;p&gt;下图是 $a=1$ 时函数 $f(x)$ 的图像，可以帮助我们理解。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /post/college-entrance-examination-2022-mathematics/fx_1_hu5d6abf9d8e64259957dd822f36f72157_7885_9b336c2f3c47cd5ded23ed52f91406c8.webp 400w,
+               /post/college-entrance-examination-2022-mathematics/fx_1_hu5d6abf9d8e64259957dd822f36f72157_7885_f78883df35a74c4ee8f6a5c73a85b4e9.webp 760w,
+               /post/college-entrance-examination-2022-mathematics/fx_1_hu5d6abf9d8e64259957dd822f36f72157_7885_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/post/college-entrance-examination-2022-mathematics/fx_1_hu5d6abf9d8e64259957dd822f36f72157_7885_9b336c2f3c47cd5ded23ed52f91406c8.webp&#34;
+               width=&#34;391&#34;
+               height=&#34;265&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;3-a0&#34;&gt;3. $a&amp;lt;0$&lt;/h4&gt;
+&lt;p&gt;若 $a&amp;lt;0$，则 $g^{\prime}(x)$ 的正负性以及 $g(x)$ 的单调性如下表：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;区间&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$g^{\prime}(x)$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$g(x)$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(-1,1-\sqrt{2})$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$-$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\searrow$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(1-\sqrt{2},1+\sqrt{2})$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$+$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\nearrow$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(1+\sqrt{2},+\infty)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$-$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\searrow$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;同样地，我们还是分别计算驻点和一些关键点的函数值，并判断它们的正负。&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+g(-1) &amp;amp;= 1 &amp;gt; 0 \\
+g(1-\sqrt{2}) &amp;amp;= 1 + \sqrt{2}a(2-\sqrt{2})e^{\sqrt{2}-1} \\
+g(0) &amp;amp;= a + 1 \\
+g(1) &amp;amp;= 1 &amp;gt; 0 \\
+g(1+\sqrt{2}) &amp;amp;= 1 - \sqrt{2}a(2+\sqrt{2})e^{-(\sqrt{2}+1)} &amp;gt; 0 \\
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;可以看到，当 $a&amp;lt;0$ 时，情况有些变化，我们无法判断 $g(1-\sqrt{2})$ 和 $g(0)$ 的正负性。不过，$g(0)$ 是一个关于 $a$ 的函数，并且表达式简单，我们可以再分情况讨论 $g(0)$ 的正负性。&lt;/p&gt;
+&lt;h4 id=&#34;-a---1&#34;&gt;① $a = -1$&lt;/h4&gt;
+&lt;p&gt;此时 $g(0)=0$，$f^{\prime}(0)=0$，而 $g(x)$ 在 $(1-\sqrt{2},1+\sqrt{2})$ 上单调递增，$f^{\prime}(x)$ 也有着和 $g(x)$ 同样的增减性。虽然 $g(x)$ 在 $(1+\sqrt{2},+\infty)$ 上单调递减，但下列极限&lt;/p&gt;
+&lt;p&gt;$$
+\lim_{x\rightarrow+\infty} g(x) = \lim_{x\rightarrow+\infty} (1 + \frac{x^2-1}{e^x}) = 1 &amp;gt; 0
+$$&lt;/p&gt;
+&lt;p&gt;因此，可以判断 $g(x)&amp;gt;0$ 在 $(0,+\infty)$ 上恒成立，即 $f^{\prime}(x)&amp;gt;0$ 在 $(0,+\infty)$ 上恒成立。因此，$f(x)$ 在 $(0,+\infty)$ 上单调递增，$f(x)&amp;gt;f(0)=0$。这样也并不符合题意。&lt;/p&gt;
+&lt;p&gt;下图是 $a=-1$ 时函数 $f(x)$ 的图像。可以看到，函数 $f(x)$ 的图像正好与 $x$ 轴相切于原点。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /post/college-entrance-examination-2022-mathematics/fx_2_huf148b6a987c4e8a6d0adcdeb673d0d58_8465_1767ce6d81ffe88c402d484a1f5172f9.webp 400w,
+               /post/college-entrance-examination-2022-mathematics/fx_2_huf148b6a987c4e8a6d0adcdeb673d0d58_8465_011851150c98e89cb254a9ad483f0c34.webp 760w,
+               /post/college-entrance-examination-2022-mathematics/fx_2_huf148b6a987c4e8a6d0adcdeb673d0d58_8465_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/post/college-entrance-examination-2022-mathematics/fx_2_huf148b6a987c4e8a6d0adcdeb673d0d58_8465_1767ce6d81ffe88c402d484a1f5172f9.webp&#34;
+               width=&#34;391&#34;
+               height=&#34;265&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;--1a0&#34;&gt;② $-1&amp;lt;a&amp;lt;0$&lt;/h4&gt;
+&lt;p&gt;和情况 ① 类似，此时 $g(0)&amp;gt;0$，$f^{\prime}(0) = a+1 &amp;gt; 0$。通过判断极限 $\lim_{x\rightarrow+\infty} g(x) &amp;gt; 0$，可以证明 $g(x)&amp;gt;0$ 在 $(0,+\infty)$ 上恒成立，即 $f^{\prime}(x)&amp;gt;0$ 在 $(0,+\infty)$ 上恒成立。因此，$f(x)$ 在 $(0,+\infty)$ 上单调递增，$f(x)&amp;gt;f(0)=0$。这同样也并不符合题意。&lt;/p&gt;
+&lt;p&gt;下图是 $a=-\frac{1}{2}$ 时函数 $f(x)$ 的图像，和 $a&amp;gt;0$ 的情况类似。&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /post/college-entrance-examination-2022-mathematics/fx_3_hufbc8704c06675784b32ac59258d4078e_8363_66a3c4ac07c2351a6f4b4be7cc5bb4c1.webp 400w,
+               /post/college-entrance-examination-2022-mathematics/fx_3_hufbc8704c06675784b32ac59258d4078e_8363_d2aa3dd68a7d871659dd657d93b43957.webp 760w,
+               /post/college-entrance-examination-2022-mathematics/fx_3_hufbc8704c06675784b32ac59258d4078e_8363_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/post/college-entrance-examination-2022-mathematics/fx_3_hufbc8704c06675784b32ac59258d4078e_8363_66a3c4ac07c2351a6f4b4be7cc5bb4c1.webp&#34;
+               width=&#34;391&#34;
+               height=&#34;265&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;-a-1&#34;&gt;③ $a&amp;lt;-1$&lt;/h4&gt;
+&lt;p&gt;和情况 ①、② 都不同，此时 $g(0)&amp;lt;0$，$f^{\prime}(0) = a+1 &amp;lt; 0$。又因为 $g(-1)&amp;gt;0$，且 $g(x)$ 在 $(-1,1-\sqrt{2})$ 上单调递减，在 $(1-\sqrt{2},0)$ 上单调递增。这样，虽然我们一开始不好判断 $g(1-\sqrt{2})$ 的正负性，但是我们凭借 $g(x)$ 的单调性以及 $g(0)&amp;lt;0$，我们就可以判断 $g(1-\sqrt{2})&amp;lt;0$。因此 $\exists! m \in (-1,1-\sqrt{2})$，使得 $g(m)=f^{\prime}(m)=0$，即&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+1 + a(1-m^2)e^{-m} &amp;amp;= 0 \\
+ae^{-m} &amp;amp;= \frac{1}{m^2-1}
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;同理，$g(1)&amp;gt;0$，且 $g(x)$ 在 $(1-\sqrt{2},1+\sqrt{2})$ 上单调递增。因此 $\exists! n \in (0,1)$，使得 $g(n) = f^{\prime}(n) = 0$，即&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+1 + a(1-n^2)e^{-n} &amp;amp;= 0 \\
+ae^{-n} &amp;amp;= \frac{1}{n^2-1}
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;综合以上，我们可以得出 $f^{\prime}(x)$ 的正负性和 $f(x)$ 的增减性，如下表所示：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;区间&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$f^{\prime}(x)$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$f(x)$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(-1,m)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$+$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\nearrow$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(m,n)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$-$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\searrow$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(n,+\infty)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$+$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\nearrow$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;有了 $f(x)$ 的增减性，我们就容易判断 $f(x)$ 的零点分布了。首先计算并且判断 $f(m)$、$f(n)$ 的大小：&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+f(m) &amp;amp;= \ln (1+m) + ame^{-m} \\
+&amp;amp;= \ln (1+m) + \frac{m}{m^2-1} \\
+f(n) &amp;amp;= \ln (1+n) + ane^{-n} \\
+&amp;amp;= \ln (1+n) + \frac{n}{n^2-1} 
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;不过，$f(m)$、$f(n)$ 的大小难以判断，需要借助导数来帮助判断。令&lt;/p&gt;
+&lt;p&gt;$$
+h(x) = \ln (1+x) + \frac{x}{x^2-1}
+$$&lt;/p&gt;
+&lt;p&gt;对 $h(x)$ 求导，有&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+h^{\prime}(x) &amp;amp;= \frac{1}{1+x} + \frac{x^2-1 - 2x^2}{(x^2-1)^2} \\
+&amp;amp;= \frac{(x+1)(x-1)^2 - x^2 - 1}{(x+1)^2(x-1)^2} \\
+&amp;amp;= \frac{x[(x-1)^2-2]}{(x+1)^2(x-1)^2}
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;分子虽然是三次多项式，但可以根据“穿根引线”法来判断 $h^{\prime}(x)$ 的零点和以及 $h(x)$ 单调性。显然，$h^{\prime}(x)$ 有三个零点：$1-\sqrt{2},0,1+\sqrt{2}$。不过要特别注意的一点是，$h^{\prime}(x)$ 有无穷间断点 $x=1$。于是，我们总结函数 $h^{\prime}(x)$ 的正负性和 $h(x)$ 的单调性如下表所示。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;区间&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$h^{\prime}(x)$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$h(x)$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(-1,1-\sqrt{2})$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$-$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\searrow$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(1-\sqrt{2},0)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$+$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\nearrow$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(0,1)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$-$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\searrow$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(1,1+\sqrt{2})$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$-$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\searrow$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(1+\sqrt{2},+\infty)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$+$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\nearrow$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;$h(x)$ 的图像如下图所示：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /post/college-entrance-examination-2022-mathematics/hx_huef94ef416ea2f3b82ee86f367ae1c675_9153_113fe665b03fde315c237baf04161eab.webp 400w,
+               /post/college-entrance-examination-2022-mathematics/hx_huef94ef416ea2f3b82ee86f367ae1c675_9153_887e3e655554c671ff8583ad5ed9938a.webp 760w,
+               /post/college-entrance-examination-2022-mathematics/hx_huef94ef416ea2f3b82ee86f367ae1c675_9153_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/post/college-entrance-examination-2022-mathematics/hx_huef94ef416ea2f3b82ee86f367ae1c675_9153_113fe665b03fde315c237baf04161eab.webp&#34;
+               width=&#34;391&#34;
+               height=&#34;265&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;p&gt;我们可以很容易得到 $h(0)=0$。并且我们观察到，$h(1)&amp;lt;0$，且 $h(x)$ 在 $(0,1)$ 上单调递减。因此我们可以判断 $f(n)&amp;lt;0$。又 $m \in (-1,1-\sqrt{2})$，$f(0)=0$，且 $f(x)$ 在 $(m,n)$ 上单调递减。这样我们又可以判断 $f(m)&amp;gt;0$。&lt;/p&gt;
+&lt;p&gt;现在所有的结论都已经推导出来了，下面先说明零点的存在性。&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+\lim_{x \rightarrow -1^+} f(x) &amp;amp;= \lim_{x \rightarrow -1^+} [\ln (1+x) + axe^{-x}] = -\infty &amp;lt; 0 \\
+f(m) &amp;amp;&amp;gt; 0
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;并且函数 $f(x)$ 连续。因此，$\exists x_1 \in (-1,m)$，使得 $f(x_1)=0$。同理可得&lt;/p&gt;
+&lt;p&gt;$$
+\begin{align}
+f(n) &amp;amp;&amp;lt; 0 \\
+\lim_{x \rightarrow +\infty} f(x) &amp;amp;= \lim_{x \rightarrow +\infty} [\ln (1+x) + axe^{-x}] = +\infty &amp;gt; 0 \\
+\end{align}
+$$&lt;/p&gt;
+&lt;p&gt;并且函数 $f(x)$ 连续。因此，$\exists x_2 \in (n,+\infty)$，使得 $f(x_2)=0$。存在性得证。&lt;/p&gt;
+&lt;p&gt;下面说明零点的唯一性。首先，$f(0)=0$，$f(x)$ 在 $(m,n)$ 上单调递减。又因为 $f(m)&amp;gt;0$ 且 $f(n)&amp;lt;0$，所以 $f(x)&amp;gt;0$ 在 $(m,0)$ 上恒成立，$f(x)&amp;lt;0$ 在 $(0,n)$ 上恒成立。而 $f(x)$ 分别在 $(-1,m)$ 和 $(n,+\infty)$ 上都是单调的，因此刚才所证明存在的零点分别是 $(-1,0)$ 和 $(0,+\infty)$ 上的唯一零点。具体可以参考下图理解：&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
+               /post/college-entrance-examination-2022-mathematics/fx_4_hu09afd9709a0d4065184aae1bdd99b985_10685_3e21e89330e8848d8cf7b8fcc267fa67.webp 400w,
+               /post/college-entrance-examination-2022-mathematics/fx_4_hu09afd9709a0d4065184aae1bdd99b985_10685_1d08cedce03e4bd36573359d5684de81.webp 760w,
+               /post/college-entrance-examination-2022-mathematics/fx_4_hu09afd9709a0d4065184aae1bdd99b985_10685_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://bowenei.gitee.io/post/college-entrance-examination-2022-mathematics/fx_4_hu09afd9709a0d4065184aae1bdd99b985_10685_3e21e89330e8848d8cf7b8fcc267fa67.webp&#34;
+               width=&#34;391&#34;
+               height=&#34;265&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h4 id=&#34;点评&#34;&gt;点评&lt;/h4&gt;
+&lt;p&gt;本题题型较为常规，是一个判断函数零点的问题。不过，本题的难度较大。一方面，本题的参数 $a$ 需要分类讨论；另一方面，题目中并没有给出不等式的条件，也没有某个其他函数，使得我们可以通过放缩法与之建立不等关系，这样我们想要通过参变分离的方法转化为求值域问题的思路就不再可行。&lt;/p&gt;
+&lt;p&gt;本题对参数 $a$ 的讨论是分为两个层次的。首先，我们对 $a$ 与 $0$ 的大小关系进行讨论。这是因为一阶导数的分子 $g(x)$ 的正负与 $a$ 的正负相关，它会影响到 $f(x)$ 的单调性。&lt;/p&gt;
+&lt;p&gt;其次，当 $a&amp;lt;0$ 时，$g(0)$ 的大小，即 $a+1$ 的正负，对 $g(x)$ 的正负会有很大影响，也会影响到 $f(x)$ 的单调性。所以我们又对 $a$ 和 $-1$ 的关系进行了讨论。不过，我们很容易就判断出 $-1 \leqslant a &amp;lt; 0$ 的情况不合题意，因此只有 $a&amp;lt;-1$ 有进一步讨论的空间。&lt;/p&gt;
+&lt;p&gt;接下来，我们判断出 $f(x)$ 的单调区间，并且是带有参数的，这使得我们难以判断驻点的正负。为此，我们将零点的条件代入 $f(x)$，以消去参数 $a$，并且构造一个新的函数研究其性质。经过研究，我们终于判断出了 $f(x)$ 两个驻点的正负，并且证明两个开区间上零点的存在性和唯一性。&lt;/p&gt;
+&lt;p&gt;虽然本题题型较为常规，但本题在零点问题中是非常难的。它不光考察了考生零点定理的理解和运用，还考察了函数与导数关系的熟练运用，以及分类讨论的思想。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>我的马克思主义爱情观</title>
+      <link>https://bowenei.gitee.io/post/my-marxism-view-of-love/</link>
+      <pubDate>Mon, 09 Aug 2021 22:38:41 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/post/my-marxism-view-of-love/</guid>
+      <description>&lt;p&gt;本文是一篇哲学论文，基于马克思主义基本原理中的辩证唯物论、认识论、唯物辩证法以及人的解放四个方面，对爱情进行了深入剖析，建立起我的马克思主义爱情观。&lt;/p&gt;
+&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#爱情辩证唯物论&#34;&gt;爱情辩证唯物论&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#爱情的物质性&#34;&gt;爱情的物质性&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#爱与爱情的辩证关系&#34;&gt;爱与爱情的辩证关系&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#对爱情唯心主义的批判&#34;&gt;对爱情唯心主义的批判&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#爱情的自然性与社会性的对立统一&#34;&gt;爱情的自然性与社会性的对立统一&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#爱情实践论&#34;&gt;爱情实践论&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#第一阶段爱之初&#34;&gt;第一阶段：爱之初&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#第二阶段恋爱关系&#34;&gt;第二阶段：恋爱关系&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#第三阶段爱情&#34;&gt;第三阶段：爱情&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#爱情矛盾论&#34;&gt;爱情矛盾论&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#爱情的基本矛盾&#34;&gt;爱情的基本矛盾&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#爱情的主要矛盾&#34;&gt;爱情的主要矛盾&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#方法论&#34;&gt;方法论&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#爱情与人的解放&#34;&gt;爱情与人的解放&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#各个社会形态下的爱情与人的解放&#34;&gt;各个社会形态下的爱情与人的解放&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#共产主义下的爱情与人的解放&#34;&gt;共产主义下的爱情与人的解放&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#方法论-1&#34;&gt;方法论&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
+
+&lt;h2 id=&#34;爱情辩证唯物论&#34;&gt;爱情辩证唯物论&lt;/h2&gt;
+&lt;p&gt;马克思主义认为，物质是一切客观实在，不依赖人的感觉而存在。物质和意识具有辩证关系。物质决定意识，意识是物质的反映，对物质具有反作用。&lt;/p&gt;
+&lt;p&gt;爱情同理。&lt;/p&gt;
+&lt;h3 id=&#34;爱情的物质性&#34;&gt;爱情的物质性&lt;/h3&gt;
+&lt;p&gt;个人认为，根据马克思主义辩证唯物论的基本原理，爱情隶属于物质范畴，而不是意识范畴。具体表现在如下几个方面：&lt;/p&gt;
+&lt;h4 id=&#34;1-爱情是男女双方相处过程中在已有关系的基础上在一定条件下随着关系的发展而产生的&#34;&gt;1. 爱情是男女双方相处过程中，在已有关系的基础上，在一定条件下，随着关系的发展而产生的。&lt;/h4&gt;
+&lt;p&gt;首先，爱情必须建立在已有关系的基础上。这种关系可以是男女双方之间的普通朋友关系，也可以是男女双方追求与被追求的关系。因此，“一见钟情”就是爱情的理论应该受到批判，“一见钟情”是一种夸大了人的主观能动性的说法。&lt;/p&gt;
+&lt;p&gt;其次，爱情需要在一定条件下才能发展。这里的一定条件包括男女双方需要同时对对方有一定的好感或者喜欢，或者说同时吸引着彼此，有着共同的理想和目标，性格相合，三观相投等等。&lt;/p&gt;
+&lt;p&gt;最后，爱情的产生必须经历一个从量变到质变的过程。上述所有条件都能够促进男女两性关系的发展，但爱情的产生需要内因外因同时作用于恋爱关系中的男女双方，发生质变产生爱情。爱情产生以后，男女双方通过主观能动性认识到了爱情的产生，进而脑海里产生了对对方的爱。&lt;/p&gt;
+&lt;h4 id=&#34;2-爱情的存在产生是客观的不以人的意志为转移的&#34;&gt;2. 爱情的存在、产生是客观的，不以人的意志为转移的。&lt;/h4&gt;
+&lt;p&gt;谁否定这一点，谁就会犯主观（唯心）主义的错误。在爱情这个二元系统，处于恋爱关系的男女双方是系统中的要素，爱情则是系统中要素间的联系。依系统的整体性原理，是相对独立于系统间要素存在的。即使是处于恋爱关系的男女双方，也不可能纯粹地在主观上决定爱情产生和发展。&lt;/p&gt;
+&lt;h4 id=&#34;3-处于恋爱关系中的男女双方是爱情的创造者&#34;&gt;3. 处于恋爱关系中的男女双方是爱情的创造者。&lt;/h4&gt;
+&lt;p&gt;这就好比马克思主义唯物史观的基本观点——人民群众是历史的创造者一样。处于恋爱关系中的男女双方是爱情的创造者，也是推动两性亲密关系发展的决定力量。&lt;/p&gt;
+&lt;p&gt;因此，我们要像批判唯心史观那样，反对将个人意志凌驾于爱情之上。&lt;/p&gt;
+&lt;h4 id=&#34;4-爱情的产生是有其客观规律可循的&#34;&gt;4. 爱情的产生是有其客观规律可循的。&lt;/h4&gt;
+&lt;p&gt;马克思主义认为，规律可以主观能动地认识，可以主观能动地利用，但不可违背。谁否定这一点谁就会犯不可知论的错误。要在主观上主观能动地在理论上认识规律，客观上主观能动地在实践上利用规律，才能正确的将主观与客观结合起来，推动矛盾向主观所期望的方向发展。反之，不认识、应用规律，或是认识、应用错误的规律，主观与客观就很有可能分离而非结合，这样一来往往事与愿违。&lt;/p&gt;
+&lt;p&gt;因此，我们要树立正确的爱情观。我们首先要认识到，爱情的产生是有其客观规律可循的。男女双方基于已有的关系，彼此相互欣赏、性格相投、志同道合，使得关系不断发展进而促使爱情的产生。然后，我们要学会主观能动地利用规律。例如，积极主动地同对方进行情感的深入交流，就一些事情互相角换看法和观点，以便于彼此之间更加互相了解。如果我们违背了爱情产生的客观规律，例如犯爱情唯心主义错误，认为“我爱你，你也应该爱我”，结果必将适得其反。&lt;/p&gt;
+&lt;h3 id=&#34;爱与爱情的辩证关系&#34;&gt;爱与爱情的辩证关系&lt;/h3&gt;
+&lt;p&gt;爱情，如果我们要用定语来修饰它，我们通常会用“我们的”、“男女双方的”等等。总而言之，爱情是两个人才能够创造的。根据马克思主义辩证唯物论的基本原理，爱情隶属于物质范畴。&lt;/p&gt;
+&lt;p&gt;爱，如果我们要用定语来修饰它，我们通常会用“我的”、“你的”、“我对你的”、“你对我的”等等。总而言之，爱是一个人作用于另一个人并且在另一个人的脑海里产生的一种感觉。根据马克思主义辩证唯物论的基本原理，爱隶属于意识范畴。&lt;/p&gt;
+&lt;p&gt;马克思主义认为，物质决定意识，意识是物质的反映，对物质具有反作用。那么爱与爱情同样具有辩证关系：&lt;strong&gt;（男女双方之间的）爱情决定（男女双方对彼此的）爱，爱能够反映出爱情，并且对爱情具有反作用&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;如何理解爱情决定爱呢？我们之所以爱一个人，或者说我们之所以能够感受到另一个人的爱，是因为爱情已经产生了。爱情的产生不是因为我爱你，你也爱我，而是基于双方一定的关系基础，在一定条件下发展而产生的。相反，正因为爱情的产生，我们通过主观能动性感受到了爱情的存在，这在我们的脑海中就产生了爱的感觉。&lt;/p&gt;
+&lt;p&gt;爱能够反映出爱情相对来说比较容易理解。男女双方对彼此的爱通过实践转化为物质，再被大家认识到，这里的认识就能反映出男女双方的爱情。例如，七夕佳节男女双方对彼此的祝福话语、精心制作的礼物等等。其实不光在男女双方看来，在旁人看来，都是爱情的反映。&lt;/p&gt;
+&lt;p&gt;如何理解爱对爱情具有反作用呢？男女双方舒适的、恰当的表达对对方的爱的方式能够促进爱情的发展，使爱情更加忠贞、牢固；相反，男女双方偏激的、不恰当的表达对对方的爱的方式却会阻碍爱情的发展，使爱情消磨、破裂。&lt;/p&gt;
+&lt;h3 id=&#34;对爱情唯心主义的批判&#34;&gt;对爱情唯心主义的批判&lt;/h3&gt;
+&lt;p&gt;爱情唯心主义归根结底是认为爱情是特定的一个人或者几个人的意志决定的，我们必须要加以批判。具体来说分为以下两类：&lt;/p&gt;
+&lt;h4 id=&#34;1-爱情主观唯心主义&#34;&gt;1. 爱情主观唯心主义&lt;/h4&gt;
+&lt;p&gt;这一类最典型的代表就是“我爱你，你也爱我，我们之间就有了爱情”。这是典型的爱情主观唯心主义观点，认为先有爱，后有爱情。&lt;/p&gt;
+&lt;p&gt;更有甚者认为，“爱情只要我爱你就够了”。这夸大了人的主观能动性，不按客观规律办事，主观与客观相违背，往往适得其反。因此，所谓的“暗恋”、“单相思”绝不是爱情，它们只不过是脑海中的一种意识罢了。&lt;/p&gt;
+&lt;h4 id=&#34;2-爱情客观唯心主义&#34;&gt;2. 爱情客观唯心主义&lt;/h4&gt;
+&lt;p&gt;这一类最典型的代表就是“爱情是上天的眷顾”、“爱情是丘比特创造的”。无产阶级伟大导师恩格斯曾经指出：一切宗教都不过是支配着人们日常生活的外部力量在人们头脑中的幻想的反映，在这种反映中，人间的力量采取了超人间的力量的形式。爱情也是同理，当人们不能够从客观实际中认识爱情时，就会创造一些超人间的力量试图解释爱情产生的原因。例如很多渴望爱情的人找不到自己满意的伴侣，就把原因归结为命不好，不懂得从自己身上和客观环境寻找原因（内因和外因）。&lt;/p&gt;
+&lt;p&gt;受传统儒家文化以及封建礼教的影响，“指腹为婚”、包办婚姻以及传统的门当户对在今天仍然屡见不鲜。它们也都属于爱情客观唯心主义的观点，应当加以批判。恩格斯曾经指出：在整个古代，婚姻的缔结都是由父母包办，当事人则安心顺从。古代所仅有的那一点夫妇之爱，并不是主观的爱好，而是客观的义务，不是婚姻的基础，而是婚姻的附加物。&lt;/p&gt;
+&lt;h3 id=&#34;爱情的自然性与社会性的对立统一&#34;&gt;爱情的自然性与社会性的对立统一&lt;/h3&gt;
+&lt;p&gt;什么是爱情的自然性呢？人类同自然界中的其他高级动物一样，需要繁衍后代，这是人类的生物本能决定的。爱情是建立在性关系的基础之上的，违背这一基本规律是要不得的。如果没有了性关系，爱情则只能退化成友情了。因此，爱情的自然性是必不可少的。&lt;/p&gt;
+&lt;p&gt;什么是爱情的社会性呢？马克思主义认为，人类和自然界中的其他高级动物不同的是，人类拥有他们特有的意识，这来源于人类在生产生活中的实践。人类主观能动地认识世界、改造世界，同他人建立联系，形成了最早的原始社会。而性关系在人们头脑中的反映就逐渐衍化成了爱，性关系本身也随之发展并形成爱情。从原始社会开始，人类社会发展至今，即使私有制、阶级的产生，也依然没有改变人类是社会动物的性质。因此，爱情也是具有社会性的。&lt;/p&gt;
+&lt;p&gt;因此，爱情是自然性和社会性的对立统一。&lt;/p&gt;
+&lt;p&gt;这里的对立体现在爱情的自然性会受到社会性的约束，爱情的社会性也会受到自然性的约束。例如，我们每个人都有正常的生理需求，但是由于人类是社会动物，受到道德和法律的约束，不可能随意同他人发生性关系。这就是爱情的自然性会受到社会性的约束。同理，爱情的社会性也会受到自然性的约束。例如，真心相爱的两个人决定丁克，周围的亲朋好友很可能就会因为他们不繁衍后代而对他们议论纷纷。&lt;/p&gt;
+&lt;p&gt;同样，爱情的自然性和社会性也是统一的，它们相互依存、密不可分。如果这两种特性失去了任意一种，便不再是爱情了，就会退化成纯粹的性关系和友情了。&lt;/p&gt;
+&lt;p&gt;总而言之，爱情的本质，是人的社会属性与人的自然属性相结合的异性间的崇高感情。&lt;/p&gt;
+&lt;h2 id=&#34;爱情实践论&#34;&gt;爱情实践论&lt;/h2&gt;
+&lt;p&gt;马克思主义认为，实践决定认识，认识对实践具有反作用。人的意识可以通过主观能动地实践转化为物质，而物质可以被人们认识从而转化为人的意识。&lt;/p&gt;
+&lt;p&gt;\begin{array}{c}
+\mbox{实践} \\
+\mbox{意识} \rightleftharpoons \mbox{物质} \\
+\mbox{认识} 
+\end{array}&lt;/p&gt;
+&lt;p&gt;上面的公式已经非常清晰地表达了物质、意识、实践、认识四者之间的关系。实际上，爱情也是如此。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;爱情是处于恋爱关系的男女双方实践的产物&lt;/strong&gt;，具体分为如下三个阶段：&lt;/p&gt;
+&lt;h3 id=&#34;第一阶段爱之初&#34;&gt;第一阶段：爱之初&lt;/h3&gt;
+&lt;p&gt;\begin{array}{c}
+\mbox{吸引（认识）} \\
+\mbox{性魅力（物质）} \rightleftharpoons \mbox{好感（意识）} \\
+\mbox{追求（实践）} 
+\end{array}&lt;/p&gt;
+&lt;p&gt;我们经常会听到这样的观点：“爱情是吸引来的，而不是追求来的。”这句话其实说得非常有道理，而且符合爱情唯物主义的基本观点。一开始，男女双方其实是被彼此身上散发的性魅力所吸引，这其实就是物质在人的脑海中的反映，人可以主观能动地认识从而产生感觉。具体来说，这里的性魅力包括男女两性的生理性别特征（第一性征、第二性征）、社会性别特征（例如一提到漂亮的裙子我们就很容易想到美丽的女性，一提到健硕的肌肉我们就很容易想到勇敢的男性）以及相较于其他异性对方所散发出来的独有人格魅力，等等。&lt;/p&gt;
+&lt;p&gt;当人们认识到这些性魅力以后，就会在脑海中产生对对方的好感。正因为有好感，人们才会主观能动地去实践，具体表现为追求对方，想要和对方建立连接。然而，单方面的被吸引和主动追求并不能建立起一定程度上的恋爱关系，男女双方必须同时被彼此吸引并且主动追求对方才可以建立起恋爱关系。&lt;/p&gt;
+&lt;h3 id=&#34;第二阶段恋爱关系&#34;&gt;第二阶段：恋爱关系&lt;/h3&gt;
+&lt;p&gt;\begin{array}{c}
+\mbox{感受好感（认识）} \\
+\mbox{恋爱关系（物质）} \rightleftharpoons \mbox{相互喜欢（意识）} \\
+\mbox{表达好感（实践）} 
+\end{array}&lt;/p&gt;
+&lt;p&gt;男女双方建立起一定的恋爱关系以后，这种关系会使得男女双方认识到对方对自己是有好感的，那么就会在自己的脑海里产生喜欢对方的感觉。正因为喜欢对方，男女双方就会主观能动地去实践，表达自己对对方的好感。例如，跟对方分享自己的日常生活，向对方倾诉自己的情感，和对方一起去做情侣应该做的事情，等等。在不断地认识、实践过程当中，男女双方对彼此之间会更加了解，推动着恋爱关系的不断发展。同时，男女双方在三观、性格、理想等方面进行着深入交流，为恋爱关系发展为爱情提供了必要准备。&lt;/p&gt;
+&lt;h3 id=&#34;第三阶段爱情&#34;&gt;第三阶段：爱情&lt;/h3&gt;
+&lt;p&gt;\begin{array}{c}
+\mbox{感受爱意（认识）} \\
+\mbox{爱情（物质）} \rightleftharpoons \mbox{爱（意识）} \\
+\mbox{表达爱意（实践）} 
+\end{array}&lt;/p&gt;
+&lt;p&gt;男女双方在恋爱关系的基础上，有着共同的理想和目标，性格相合，三观相投，在各自的内心中形成对对方的最真挚的倾心爱慕，并且渴望对方成为自己终生伴侣。在内外因的共同作用下，恋爱关系不断发展，从量变到质变，最终产生了爱情。&lt;/p&gt;
+&lt;p&gt;爱情产生后，相爱的男女双方认识到彼此之间的爱，那么就会在自己的脑海里产生爱对方的感觉。而也正因为爱对方，男女双方就会主观能动地去实践，表达自己对对方的爱。例如，在法律上结为夫妻关系，用婚姻来作为自己爱对方的一种承诺。在不断地认识、实践过程当中，爱情也在不断发展。从一开始的相互吸引，到相识之后的志趣相投，再到进入婚姻以后的责任，最后到年老时的相互依靠。&lt;/p&gt;
+&lt;h2 id=&#34;爱情矛盾论&#34;&gt;爱情矛盾论&lt;/h2&gt;
+&lt;p&gt;马克思主义认为，任何事物都是矛盾的对立统一。矛盾分析方法是联系发展规律的核心方法，掌握了矛盾，就抓住了核心。那么隶属于物质范畴的爱情自然也是一分为二，是多对矛盾的统一体。&lt;/p&gt;
+&lt;p&gt;在所有的矛盾当中，基本矛盾贯穿整个事物的发展，主要矛盾处于支配地位，对事物发展起决定作用。打个比方，基本矛盾就好比天平，而其他各个矛盾就好比质量不一的砝码。主要矛盾则好比那个质量最大的砝码，它处于支配地位。无论将这个质量最大的砝码放在天平的哪一边，都对天平的平衡起决定作用。而次要矛盾就好比其他砝码，它们虽然不处于支配地位，但也对天平的平衡起重要作用。&lt;/p&gt;
+&lt;p&gt;每一个矛盾中的两个方面的力量是不平衡的。其中，处于支配地位，起主导作用的方面叫矛盾的主要方面。事物的性质主要是由矛盾的主要方面决定的。矛盾的主要方面与次要方面既相互排斥，又相互依赖，并在一定条件下相互转化。&lt;/p&gt;
+&lt;h3 id=&#34;爱情的基本矛盾&#34;&gt;爱情的基本矛盾&lt;/h3&gt;
+&lt;p&gt;个人认为，根据马克思主义唯物辩证法的基本原理，爱情的基本矛盾是&lt;strong&gt;男女两性在爱情中投入和收获之间的矛盾&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;一方面，爱情产生以后，男女双方都希望投入到这段感情当中，他们会发挥自己的主观能动性去表达自己的爱，这是爱情的投入方面；另一方面，男女双方可以感受到对方表达的爱意，不论是物质层面还是精神层面，都会有所收获。我们知道，爱情作为不为人的主观意志为转移的男女之间的真挚情感，需要男女双方共同经营。男女两性在爱情中投入和收获之间的矛盾作为爱情的基本矛盾，贯穿爱情发展的始终。&lt;/p&gt;
+&lt;p&gt;爱情的基本矛盾与男女两性在爱情中投入和收获的辩证关系密不可分。在爱情中，男女两性的投入决定收获，与此同时，收获对投入具有反作用。爱情产生之后，男女双方都会投入到这段感情当中，这个时候投入在爱情的基本矛盾中占主要方面。而当男女双方都因感受到对方的爱意而感到愉悦时，这个时候收获在爱情的基本矛盾中占主要方面。正因为男女双方对爱情的投入和在爱情中的收获在爱情的基本矛盾中不断相互转化，爱情才得以发展。而且，这种发展是事物内部矛盾运动的结果（男女双方的投入和收获），而不是外因干预之下的结果。&lt;/p&gt;
+&lt;p&gt;当男女两性在爱情中投入和收获出现不平衡时，一方面能够推动爱情向着更加亲密的男女两性关系发展，另一方面也会阻碍爱情的发展。例如，男女双方一方过多地投入，而另外一方过多地收获，这就造成了男女双方地位的不平等。而我们知道，爱情是平等的，所以这就会阻碍爱情的发展。如果上面例子当中的男女双方意识到了这种不平等，一方主动地减少投入而另外一方主动地增加投入，使爱情回到相对平等的状态，这就促进了爱情向着更加亲密的男女两性关系发展。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;爱情发展的本质是爱情基本矛盾运动的结果&lt;/strong&gt;。而随着爱情基本矛盾的解决，爱情必然要从量变到质变，那么爱情质变的结果就是真爱。真爱是爱情的高级阶段，是爱情不断发展的结果。因此，要树立正确的爱情观，主观能动地利用规律，与伴侣共同创造专属于我们自己的爱情，在实践和认识中不断发展爱情，结为一生一世的真爱。&lt;/p&gt;
+&lt;h3 id=&#34;爱情的主要矛盾&#34;&gt;爱情的主要矛盾&lt;/h3&gt;
+&lt;h4 id=&#34;1-两性的差异性和同一性之间的矛盾&#34;&gt;1. 两性的差异性和同一性之间的矛盾&lt;/h4&gt;
+&lt;p&gt;男女两性本身就是矛盾，这在人的自然属性和社会属性层面均有体现。在自然属性方面，男女两性存在着生理方面的差异，例如第一性征、第二性征等，这些都是差异性；而男女两性在自然属性方面又是统一的，只有两性生殖器官结合进而使得精卵结合才能够繁衍后代。在社会属性方面，男女两性存在着思维和意识方面的差异，例如男性的思维偏理性而女性的思维偏感性，这是人类长期以来的（社会）实践决定的；而男女两性在社会属性方面也是统一的，男女双方都希望找到属于自己的伴侣，在亲密关系中可以给予和感受爱。&lt;/p&gt;
+&lt;p&gt;作为男女两性关系实践的产物，爱情中也存在着男女两性的差异性和同一性。爱情中两性的差异性主要体现在以下几个方面：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;男女双方思维方式的差异：男性的思维方式偏理性，女性的思维方式偏感性。具体来讲，碰到同样的一个问题，男性往往会首先考虑如何解决这个问题，而女性则往往会首先表达自己遇到问题时（不知所措）的感受。&lt;/li&gt;
+&lt;li&gt;男女双方在爱情中的需求的差异：男性通常希望得到女性的鼓励、认可，女性通常希望得到男性的关爱、依靠。&lt;/li&gt;
+&lt;li&gt;男女双方性格、三观之间的差异性。&lt;/li&gt;
+&lt;li&gt;……&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;爱情中两性的同一性主要体现在以下几个方面：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;男女双方主观上都希望有自己的伴侣，他（她）不仅可以满足自己的性需求，而且还能够提供物质价值和精神价值。&lt;/li&gt;
+&lt;li&gt;男女双方性格、三观之间的相似性。&lt;/li&gt;
+&lt;li&gt;……&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;当两性的差异性和同一性之间的矛盾成为爱情的主要矛盾时，表现在具体的亲密关系中就是男女双方相处时的合与不合。当差异性成为矛盾的主要方面时，男女双方眼中的对方就和自己不同，而差异容易导致冲突，冲突就会使得这种不同变成不合。当同一性成为矛盾的主要方面时，男女双方就会觉得对方跟自己很合。&lt;/p&gt;
+&lt;p&gt;不论合与不合，主要矛盾都起决定作用，它通过爱情的基本矛盾推动爱情的发展。当男女双方觉得对方跟自己很合时，此时两性的同一性占主要矛盾的主要方面，他们就会更愿意在爱情中投入，也能在爱情中收获更多的爱。当男女双方觉得对方跟自己有差异，进而觉得对方跟自己不合时，此时两性的差异性占主要矛盾的主要方面，他们就会质疑和否定他们在爱情中的收获，进而减少在爱情中的投入。&lt;/p&gt;
+&lt;p&gt;举一个简单的例子，女生向男生吐槽工作繁忙但是薪资少，这个时候男生就直接建议女生辞职换一个工资高的单位，结果这个女生生气了。这实际上就是两性的差异性占主要矛盾的主要方面了。具体来说，男生遇到问题往往会首先考虑如何解决问题，譬如这个例子中男生直接建议女生辞职，因为工作忙而薪资少，换单位是一种解决方法。但是，女生遇到问题往往比较情绪化，她是希望男生能够安慰和体谅自己工作的不易。女生看到了两性的差异性，并且认为这不合适，在爱情基本矛盾的作用下，女生对爱情中的收获产生质疑，所以才会生气。如果这个时候男生还不能意识到问题之所在，那么两性的差异性就会占据主导地位，由此引发的冲突通过爱情的基本矛盾使爱情逐渐消磨。&lt;/p&gt;
+&lt;p&gt;在男女两性交往和爱情产生的初期，两性的差异性和同一性之间的矛盾往往会成为主要矛盾。男女双方都是独立的个体，彼此在不同的环境下成长起来，此时的差异性占据矛盾的主要方面。需要特别注意的是，差异性并不会阻碍爱情的发展，而是因差异而起的冲突会阻碍爱情的发展。因此，我们既要看到恋爱对象和自己的相似性，又要正视恋爱对象和自己的差异性。&lt;/p&gt;
+&lt;h4 id=&#34;2-物质需求与精神需求之间的矛盾&#34;&gt;2. 物质需求与精神需求之间的矛盾&lt;/h4&gt;
+&lt;p&gt;爱情的自然性与社会性的辩证统一关系决定了人们对爱的需求既包括物质层面又包括精神层面。物质需求与精神需求之间的矛盾常常体现在同一事物上，是同一事物矛盾的不同方面。&lt;/p&gt;
+&lt;p&gt;例如，男生因为工作忙碌的原因没能陪女生过生日，于是双方各执一词。男生觉得如果不工作薪水就会大打折扣，而女生觉得生日这么重要的日子都不能抽出时间，因此感到失望、孤独。看似这个例子是男女双方主观上的冲突，但本质上则是物质需求与精神需求之间的矛盾。男生物质需求相对更多，而女生的精神需求相对更多。而且矛盾的两个方面同时作用于同一事物——时间，使得男女双方的爱情斗争异常激烈。（如果女生的生日和男生的工作不在同一时间，因时间而起的物质需求和精神需求之间的矛盾不可能表现出如此明显的斗争性。）当双方不能够认识到这一点而上纲上线时，极其容易质疑对方是不是不爱自己，那么实际上就是爱情的基本矛盾作用的结果。&lt;/p&gt;
+&lt;h4 id=&#34;3-理想与现实之间的矛盾&#34;&gt;3. 理想与现实之间的矛盾&lt;/h4&gt;
+&lt;p&gt;理想与现实之间的矛盾经常发生在谈婚论嫁的时候。（当然，也不仅仅只在谈婚论嫁的时候，本小节重点探讨这一点。）&lt;/p&gt;
+&lt;p&gt;马克思主义认为，爱情的自然性与社会性是辩证统一的。然而，婚姻并不是男女双方爱情实践的产物，而是家庭社会实践的产物。婚姻没有自然性，只有社会性，这是因为婚姻是家庭、宗族为了维系血缘，保证血统的纯正性而产生的一种契约关系。在古代，婚姻是凌驾于爱情之上的。即使婚姻规定了男女双方发生性关系是合法的，也不能够体现婚姻是具有自然性的。这只能说明性关系是婚姻制度的附加产物，取决于统治阶级的意志。马克思主义认为，社会主义的婚姻关系应当建立在爱情的基础上。&lt;/p&gt;
+&lt;p&gt;我国目前正处于并将长期处于社会主义初级阶段，在我们的社会文化里还是或多或少存在封建的、资产阶级的婚姻观。在谈婚论嫁时，男女双方常常会因为彩礼问题谈崩，还会受到传统的门当户对观念的影响。在日常生活中我们经常听闻的理想与现实之间的矛盾主要有以下两种情况：一是恋爱时间久感情基础牢固但因各种原因不能进入婚姻而被一拍两散的，二是渴望甜甜的恋爱、渴望爱情却不能接受很草率地直接进入婚姻的。&lt;/p&gt;
+&lt;p&gt;与北欧发达国家相比，我们的社会不能接受只有爱情而没有婚姻，我们把婚姻这样一个契约关系看得比爱情重要得多。这里面跟生产力与生产关系、经济基础与上层建筑（社会文化等）许多因素有关，比较复杂，但绝不是社会上人们的主观意愿决定的。因此，理想与现实之间的矛盾非常容易在爱情发展的后期凸显出来。这一主要矛盾处理得当能够极大地促进爱情的发展，反之则极有可能使得爱情加速破裂。&lt;/p&gt;
+&lt;h4 id=&#34;4-空间上的聚离之间的矛盾&#34;&gt;4. 空间上的聚离之间的矛盾&lt;/h4&gt;
+&lt;p&gt;我们通常所说的“异地恋”就是空间上的聚离之间的矛盾成为了主要矛盾。在这样一种矛盾占据支配地位的前提下，一方面，男女双方会因为空间上的分离而朝思暮盼着对方，希望通过事物内部的矛盾运动使相聚成为矛盾的主要方面（即结束异地）。另一方面，男女双方会因为对方长期不在身边无法得到爱的满足而很容易产生不安全感，或者对于两个人的未来感到迷茫，进而否定这段感情。&lt;/p&gt;
+&lt;p&gt;前文曾述，爱情的基本矛盾是男女两性在爱情中投入和收获之间的矛盾。当空间上的聚离之间的矛盾成为爱情的主要矛盾时，爱情的基本矛盾就体现在：男女双方相比于相聚更难在爱情中有所收获，不论是在物质层面还是在精神层面都更难感受到对方的爱。既然爱情的基本矛盾是推动爱情发展的根本原因，那么男女双方就会发挥主观能动性去表达爱意，例如节日制造惊喜、煲电话粥，等等。这在一定程度上缓和了爱情的基本矛盾，使得男女双方能够更多地在爱情中感受到对方的爱。但是，这些实践活动并不能解决当前爱情的主要矛盾，唯一的办法就是结束异地。而随着爱情主要矛盾的解决，男女双方在爱情中的投入和收获不断得到正反馈，爱情在爱情的基本矛盾的作用下发展，男女双方的亲密关系达到了一个前所未有的高度。&lt;/p&gt;
+&lt;p&gt;很多时候，我们会将两个人不合适的原因归结为异地。那么之所以我们会将不合适的原因归结为异地，是因为我们只看到了异地对爱情发展的阻碍作用。实际上，异地对爱情的发展也有促进作用——即上一段中叙述的那样，男女双方发挥主观能动性去表达爱意，积极缓和甚至解决爱情的基本矛盾。实际上，异地是影响因素，或者说是外因。两个人不合适，或者说爱情走向破裂的根本原因是爱情基本矛盾运动的结果。当男女双方因异地而感受不到对方的爱时，他们由于得不到正反馈，主观上表现为不愿意加大在感情中的投入。例如，在物质层面上，异地的男女双方都不愿意到对方的城市生活，特别是女性受远嫁观念影响更加不愿意做出这样的决策。在精神层面上，长期没有联系和来往导致男女双方关系疏远，难以产生精神上的共鸣，进而不愿意主动联系对方，甚至冷战。不过，归根结底是因为男女双方没有认识到爱情的基本矛盾，没有认识到可以发挥主观能动性加大在感情中的投入进而在爱情中有所收获，因为投入决定收获。&lt;/p&gt;
+&lt;p&gt;要特别注意异地恋的时候，不能将爱情的主要矛盾和爱情的基本矛盾混淆。&lt;/p&gt;
+&lt;h3 id=&#34;方法论&#34;&gt;方法论&lt;/h3&gt;
+&lt;p&gt;爱情矛盾论的基本观点告诉我们，爱情是多对矛盾的统一体。我们要把握住爱情的基本矛盾，认识到爱情发展的本质是爱情基本矛盾运动的结果，反对将爱情发展的原因归结为外部事物或条件。在爱情的各个阶段，我们要抓住这个阶段爱情的主要矛盾，让每一阶段爱情的主要矛盾朝着促进爱情发展的方面转化，不断地解决矛盾促进爱情的发展。最终解决爱情的基本矛盾，找到真爱。&lt;/p&gt;
+&lt;h2 id=&#34;爱情与人的解放&#34;&gt;爱情与人的解放&lt;/h2&gt;
+&lt;p&gt;马克思主义认为，人类追求自由的最高境界就是人类的解放。人类的解放就是指从自然力和社会关系的制约中获得自由。所以，人的解放和人的自由是分不开的，如果人不能在自然规律和社会规律面前获得自由，人就不能获得真正的解放。在自然规律面前获得自由就必须能够认识自然、驾驭和使用自然力，不受盲目的自然力的控制和束缚；在社会规律面前获得自由，从根本上讲就是要最终消除人对人的剥削关系、压迫关系和统治关系。&lt;/p&gt;
+&lt;p&gt;马克思指出，“解放”是一种历史活动，而不同于思想活动，“解放”是由历史的关系，是由工业状况、商业状况、农业状况、交往关系的状况促成的。就是说，解放是历史地发展着的，在不同的历史时期具有不同的内容，表现为不同程度的自由。社会历史的每一重大进步，都有人的某种解放的意义，都是人类走向彻底解放的必要环节。&lt;/p&gt;
+&lt;h3 id=&#34;各个社会形态下的爱情与人的解放&#34;&gt;各个社会形态下的爱情与人的解放&lt;/h3&gt;
+&lt;p&gt;与社会形态的变革类似，爱情的发展和变革也伴随着人的解放。在原始社会，人们既无力支配自然，也不是社会关系的主人。大家平等互助，目的只有一个——生存。这个时期，爱情更接近纯粹的性关系，因为如果没有性关系，人类就无法生存繁衍下去。后来进入母系氏族社会，人类开始按性别分工。再后来随着生产力的发展，私有制的产生，进入父系氏族社会。&lt;/p&gt;
+&lt;p&gt;奴隶社会生产力有了发展，社会物质财富有较多增长，人从自然力中争得了一定的自由，使人类在很大程度上摆脱了野蛮状态，跨进了文明的大门。但这个进步是以牺牲原始平等关系，代之以人剥削人的阶级关系为代价的。&lt;/p&gt;
+&lt;p&gt;封建社会同理，依然存在着人剥削人的关系。这一时期，婚姻、家庭、宗族是凌驾在爱情之上的。不论是奴隶主、王侯将相，还是地主、士大夫，他们为了确保血统的纯正以及自己宗族统治阶级的地位，利用国家、法律等统治阶级的工具创造了婚姻这样一种契约制度。“女子无才便是德”、“三从四德”，本质上是统治阶级利用儒家思想作为阶级统治工具在男女两性关系方面的体现。&lt;/p&gt;
+&lt;p&gt;此时的爱情受到社会的极大约束，性关系也只不过是婚姻的附属品。但相较于原始社会，人类从原始的野蛮生活解放出来，性关系不再像原始社会那样混乱，必须遵守一定的社会道德。这就是爱情伴随人的解放第一次产生的重大变革，两性关系从自然的约束中解放出来，被社会牢牢地约束。&lt;/p&gt;
+&lt;p&gt;资本主义制度是私有制范围内最大的历史进步，它不仅带来了生产力的大发展，人从自然力中争得了整套的自由，而且加速了人从社会关系中解放出来的进程。资产阶级法权思想推动着爱情朝着更加自由的方向发展，使得爱情和婚姻不必在一定的范围（贵族）内产生，人人生而平等。&lt;/p&gt;
+&lt;p&gt;科学社会主义理论诞生以后，第二国际为马克思主义的传播尽了极大努力，男女同工同酬、三八妇女节等一定程度上提高了女性的社会地位。五四运动促进了马克思列宁主义在中国的传播，解放后的“妇女能顶半边天”，也都一定程度上推动了女性的觉醒。这就是爱情伴随人的解放第二次产生的重大变革，女性的社会地位不断提高，男女双方的社会关系更加平等。&lt;/p&gt;
+&lt;h3 id=&#34;共产主义下的爱情与人的解放&#34;&gt;共产主义下的爱情与人的解放&lt;/h3&gt;
+&lt;p&gt;马克思主义认为，人类追求自由的最高境界就是人类的解放。&lt;strong&gt;爱情的最终目的就是追求个人的幸福&lt;/strong&gt;。因此，相爱的男女双方应该在爱情中解放自己、解放对方，相互解放、相互给予对方自由，而非相互压迫、相互剥夺自由。&lt;/p&gt;
+&lt;p&gt;随着生产力的发展，私有制、等级制的消灭，国家、家庭的解体，共产主义的逐步实现，爱情也必然要解除与生育、资本、阶级、宗族、家庭、婚姻等的结合，转变为“仅仅和当事人有关而社会无须干预的纯粹私人关系”。无论性别、年龄、其他社会关系等，只要是两个灵魂、两个独立人格间的独立的自由的真诚的相互吸引，即只要是真爱，都会得到马克思主义者在人的解放的立场上的支持。&lt;/p&gt;
+&lt;p&gt;今天的北欧发达国家非常接近马克思设想的共产主义下的理想爱情模式，但也略有不同。在北欧，性关系或者生育常常是被排在结婚之前的，当地人将婚姻看作是一种荣誉，是真爱的象征。这种社会现象与北欧发达国家的高福利制度的关系密不可分。&lt;/p&gt;
+&lt;p&gt;作为中国人，我们一定会对这样的现象感到十分诧异。这是生产力与生产关系、经济基础与上层建筑决定的，而且受到中华传统文化的影响。因为我国是农耕文明，几千年以来自给自足的自然经济要求以家庭为单位进行生产。因此，家庭、国家的消亡在我国必然要经历一个相当漫长的历史过程。&lt;/p&gt;
+&lt;h3 id=&#34;方法论-1&#34;&gt;方法论&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;解放伴侣就是解放自己，追求真爱就是追求幸福。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;今天的新中国已经从三座大山中解放出来七十多年了，然而社会意识是具有滞后性的，封建的、资产阶级的爱情观、婚姻观依然屡见不鲜，并且很可能还要存在一段时间。大男子主义、物化女性、重男轻女、门当户对等传统思想依然对男女双方之间真挚的情感有较大的阻碍。不过，我们乐于见到的是，今天的女性已经从纯粹的家庭生活解放出来，成为职场当中的独立女性。然而，这导致的后果是家庭矛盾、代际矛盾日益尖锐，根本原因是中国自改革开放以来的发展速度之快使得人们的思想观念还不能够适应社会生产力的发展。女性往往要承担来自社会（职场）和家庭的双重压力，而且男性还觉得女性完全承担家庭责任是天经地义的。&lt;/p&gt;
+&lt;p&gt;作为女性，要有意识地解放自己，把自己从传统的、纯粹的家庭生活中解放出来，和男性一样在职场上绽放自己，经济独立，追求属于我们女性自己的价值。与此同时，实际上也是解放了伴侣，一定程度上为伴侣减轻家庭经济压力，使得伴侣可以有更多的时间投入到家庭当中。&lt;/p&gt;
+&lt;p&gt;作为男性，要有意识地解放伴侣，主动为伴侣分担家务劳动，承担养育子女的责任，不搞“丧偶式育儿”，让伴侣从传统的、纯粹的家庭生活和相夫教子中解放出来。与此同时，实际上也是解放我们男性自己，男性可以在家庭生活中收获更多的幸福，而不是过去享受妻子的顺从。&lt;/p&gt;
+&lt;p&gt;最后，始终将追求个人的幸福作为人生的最终目标，实现这一最终目标的一个绝佳途径就是大胆追求真爱。在面对社会、家庭等各方面的压力时，心中始终架起一个天平——这样的决策能让我自己的人生幸福吗？究竟什么样的决策才能够使我自己的人生幸福？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>“不忘初心 一生一誓”——毕业生党员交流会</title>
+      <link>https://bowenei.gitee.io/post/a-lifetime-a-oath/</link>
+      <pubDate>Thu, 24 Jun 2021 20:05:06 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/post/a-lifetime-a-oath/</guid>
+      <description>&lt;p&gt;2021年6月24日，安徽大学计算机科学与技术学院本科生党支部开展了以“不忘初心 一生一誓”为主题的毕业生党员交流会活动。&lt;/p&gt;
+&lt;p&gt;交流会上，每位党员重温入党誓词，面对党旗庄严宣誓。各位学生党员积极发言，感悟四年来的学习与收获。辅导员老师给予同学们祝福和寄语，葛大圣老师即兴作诗一首。蒋伟书记最后做了总结，给全体党员寄语。&lt;/p&gt;
+&lt;p&gt;尊敬的各位领导、老师、党员同志们：&lt;/p&gt;
+&lt;p&gt;大家下午好！在这个收获满满的六月，很荣幸我能够作为计算机科学与技术学院2017级毕业生党员的一员在此发言。&lt;/p&gt;
+&lt;p&gt;四年的大学时光如白驹过隙，转瞬即逝。四年前的那个暑假一次偶然的机会，我接触到计算机编程和软件开发，产生了浓厚的兴趣。大一开学后，我比过去任何一个阶段都更加注重基础知识的学习，尤其是《高等数学》，因为我知道，数学是包括计算机在内的所有理工科的基础。&lt;/p&gt;
+&lt;p&gt;开学后不久，我听说了学校关于转专业的政策。从那时起，我将转入计算机专业作为我的首要目标，自学《C语言程序设计》、《数据结构》等专业核心课程。大一下学期，我终于如愿以偿，成功通过了转专业考试。随后不久，我向党组织递交了入党申请书。&lt;/p&gt;
+&lt;p&gt;新学年伊始，我进入安徽大学智能软件与边缘计算实验室，从此正式踏上了科研生涯的第一步。时任计算机科学与技术学院副院长李学俊老师作为我的导师，在科研方面给了我许多耐心的指导，并且安排一位研究生和我一起合作开展科研。在科研工作的初期，我们在实验室刚刚涉足的领域开展了大量的文献调研，我的师兄形成了很多自己的见解与我分享，这使我受益良多。我运用自己的代码能力将师兄的想法变成现实。在实验结果与设想有所出入的情况下，我认真分析并寻找原因。最终，我们小组的科研论文被CCF A类会议ASE 2020录用。&lt;/p&gt;
+&lt;p&gt;大学四年我不仅在科研成果上收获颇丰，在学业上也没有丝毫放松。我在大二一个学年快速补上了大一落下的公共基础课和专业核心课，大二大三学年度平均学分绩点一直在班级名列前茅。在思想方面，我积极向党组织靠拢。被列入入党积极分子后，我积极参加党课学习，抄写党章，对党的理论有了基本了解。我还十分关心国家大事，关注国际局势，就中美贸易战、香港修例风波、台海局势等以书面形式向党组织做了思想汇报。在保研夏令营中，我积极推荐自己，最终被东南大学计算机科学与工程学院录取为直博生。&lt;/p&gt;
+&lt;p&gt;在两年多的考察期中，我用实际行动和积极表现向党组织证明，我达到了加入中国共产党的要求。成为预备党员以后，我没有辜负党组织对我的教育和培养，继续以更高的标准严格要求自己。保研拟录取之后，我按照实验室的规章制度每个工作日依然坚持来到理工D楼学习和科研，与师兄师姐们一同交流心得与收获，和东南大学那边的课题组线上交流。在学习和科研之余，我还在网络上系统地学习了马克思主义哲学、马克思主义政治经济学、科学社会主义理论，用辩证唯物主义和历史唯物主义树立共产主义世界观。我还用毛泽东思想武装头脑，阅读《毛泽东选集》中脍炙人口的名篇，例如《矛盾论》、《实践论》、《论持久战》等。我积极向我的同学和朋友甚至包括家人宣传马克思主义，并且将我的学习笔记放在我搭建的个人博客上。&lt;/p&gt;
+&lt;p&gt;百年大党正青春，风华正茂再启航。一周之后的今天，我们就要迎来庆祝中国共产党成立100周年的盛大纪念日。可谁曾想到，100年前她还是只是南湖上漂泊的一艘小船。从南昌起义到秋收起义，中国共产党在万里长征中走出来的是中华民族的信仰；从中华民族的抗日战争到解放战争，中国共产党在抗美援朝中打出来的是中华民族的尊严；从一五计划到改革开放，中国共产党在全面小康中建设出来的是中华民族的富强；从两弹一星到航空航天，中国共产党在中国空间站中创造出来的是中华民族的智慧；从和平共处五项原则到人类命运共同体，中国共产党在中国特色大国外交中展现的是中华民族的包容。这艘小船现如今已经发展成拥有9000多万名党员的百年大党，作为中国人，特别是作为中国共产党预备党员，我无比自豪！&lt;/p&gt;
+&lt;p&gt;习近平总书记指出，当今世界正面临百年未有之大变局。2016年，美帝国主义炮制的所谓“南海仲裁案”侵犯中国主权，严重损害中国利益。2018年，美帝国主义单方面对华挑起贸易战，进而发动对中兴、华为的科技战。2019年，美帝国主义与台独、港独分子狼狈为奸，挑起香港修例风波，对华舆论战愈演愈烈。2020年，印度军队在中印边界发起了蓄谋已久的挑衅，悍然越过边界侵犯中国主权。美帝国主义对我国发动大规模的金融战的可能性依然存在，新冠肺炎疫情使得全球经济危机、金融危机爆发的可能性正在变大。毛主席曾经说过，在战略上要藐视敌人，在战术上要重视敌人。作为新时代的青年，我们要明白美帝国主义是纸老虎这一深刻道理，但同时也不要忘记周总理伟大理想——为中华之崛起而读书。实现中华民族伟大复兴的中国梦，建设社会主义现代化强国的光荣使命落在我们身上。&lt;/p&gt;
+&lt;p&gt;邓小平同志曾经指出，科学技术是第一生产力。作为即将入学的博士生，我深知自己更应该挑起科技创新的重担，在计算机网络与分布式计算领域贡献属于自己的一份力量。&lt;/p&gt;
+&lt;p&gt;最后，我想引用无产阶级伟大导师马克思中学毕业论文当中的一段话作为结尾，与各位同志共勉：&lt;/p&gt;
+&lt;p&gt;如果我们选择了最能为人类而工作的职业，那么，重担就不能把我们压倒，因为这是为大家作出的牺牲；那时我们所享受的就不是可怜的、有限的、自私的乐趣，我们的幸福将属于千百万人，我们的事业将悄然无声地存在下去，但是它会永远发挥作用，而面对我们的骨灰，高尚的人们将洒下热泪。&lt;/p&gt;
+&lt;p&gt;谢谢大家！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>挑战2021年高考数学全国Ⅰ卷压轴大题</title>
+      <link>https://bowenei.gitee.io/post/college-entrance-examination-2021-mathematics/</link>
+      <pubDate>Wed, 09 Jun 2021 12:29:21 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/post/college-entrance-examination-2021-mathematics/</guid>
+      <description>&lt;p&gt;2021年高考已落下帷幕，转眼间大学即将毕业。回想当年高考解析几何和导数两个压轴大题没能拿到满分，内心感到非常遗憾。因此，今天我将重新来到高考的古战场，再战解几导数大题。&lt;/p&gt;
+&lt;p&gt;每年高考全国Ⅰ卷数学的题型分布都会有小幅变化。过去，一般解析几何是第20题（倒数第二题，不含选做题），导数是第21题（压轴大题）。今年，解析几何成为压轴大题，导数则是倒数第二题。这究竟会带来怎样的变化？下面我们逐一来看这两题。&lt;/p&gt;
+&lt;h2 id=&#34;导数&#34;&gt;导数&lt;/h2&gt;
+&lt;p&gt;设函数 $f(x) = \ln (a-x)$，已知 $x = 0$ 是函数 $y = xf(x)$ 的极值点。&lt;/p&gt;
+&lt;p&gt;(1) 求 $a$；&lt;/p&gt;
+&lt;p&gt;(2) 设函数 $g(x) = \frac{x+f(x)}{xf(x)} $，证明 $g(x) &amp;lt; 1$。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;第(1)小题，我们可以根据题干当中的已知条件，通过极值点的性质列关于 $a$ 的方程，即可反解出 $a$。首先，我们对 $y$ 求导：&lt;/p&gt;
+&lt;p&gt;$$\begin{align}
+y&#39; &amp;amp;= f(x) + xf&#39;(x) \\
+&amp;amp;= \ln (a-x)-\frac{x}{a-x}
+\end{align}$$&lt;/p&gt;
+&lt;p&gt;然后，我们令 $x = 0$，$y&#39; = 0$，即可反解出 $a$：&lt;/p&gt;
+&lt;p&gt;$$\begin{align}
+\ln a = 0\\
+\Rightarrow a = 1
+\end{align}$$&lt;/p&gt;
+&lt;p&gt;第(2)小题，如果直接对 $g(x)$ 求导，分母是幂函数和对数函数的复合函数，而且求导后在分子上会出现二次，计算量极其巨大。因此，去分母是本题的关键。&lt;/p&gt;
+&lt;p&gt;历年来的全国卷导数题都有这样一个特点：第(1)小题的结论可以在第(2)小题当中使用。我们做完第(1)小题后，其实只是求出了一个未知参数，没有得到某一个具体函数的性质。这个时候，我们来观察第(2)小题当中的目标函数 $g(x)$。我们发现，$g(x)$ 的分母恰好是函数 $y$。因此，研究函数 $y$ 是非常有必要的。&lt;/p&gt;
+&lt;p&gt;另一方面，第(2)小题让我们证明一个不等式，而不是等式。因此，我们要想直接去掉分母比较困难。如果分母是恒正或恒负，能够大大降低我们的计算量，方便我们解题。所以，我们期望函数 $y$ 的值域应当恒正或恒负。即使不是，我们也可以在不同的区间上讨论。&lt;/p&gt;
+&lt;p&gt;由(1)可知：$f(x) = \ln (1-x)$，那么 $y = x\ln (1-x)$。显然，它们的定义域都是 $(-\infty, 1)$。根据(1)的求导结果，我们可以很容易写出 $y&#39;$ 的解析式：&lt;/p&gt;
+&lt;p&gt;$$y&#39; = \ln (1-x)+\frac{x}{x-1}$$&lt;/p&gt;
+&lt;p&gt;解析式还存在对数函数，很难一眼看出单调性。但是对数函数求导一次就能变成分式，因此我们对函数 $y$ 求二阶导数：&lt;/p&gt;
+&lt;p&gt;$$\begin{align}
+y&#39;&#39; &amp;amp;= \frac{1}{x-1} - \frac{1}{(x-1)^2} \\
+&amp;amp;= \frac{x-2}{(x-1)^2}
+\end{align}$$&lt;/p&gt;
+&lt;p&gt;由于函数 $y$ 的定义域是 $(-\infty, 1)$，显然 $y&#39;&#39; &amp;lt; 0$，$y&#39;$ 在定义域内单调递减。而 $x = 0$ 是 $y$ 的极值点，也就是 $y&#39;$ 的零点。故 $y$ 在 $(-\infty, 0)$ 上单调递增，在$(0, 1)$ 上单调递减。因此我们可以判断：&lt;/p&gt;
+&lt;p&gt;$$y &amp;lt; y(0) = 0$$&lt;/p&gt;
+&lt;p&gt;这是一个非常漂亮的结论：$g(x)$ 的分母是恒负的。因此，要证 $g(x) &amp;lt; 1$，只需证 $x + f(x) &amp;gt; xf(x)$。于是我们令 $h(x) = x + f(x) - xf(x)$，并对其求导：&lt;/p&gt;
+&lt;p&gt;$$h&#39;(x) = 1 - \frac{1}{1-x} - \ln (1-x) + \frac{x}{1-x}$$&lt;/p&gt;
+&lt;p&gt;解析式当中还含有对数函数，我们需要求二阶导数，才能把对数消掉：&lt;/p&gt;
+&lt;p&gt;$$\begin{align}
+h&#39;&#39;(x) &amp;amp;= - \frac{1}{(x-1)^2} + \frac{1}{1-x} + \frac{1}{(x-1)^2} \\
+&amp;amp;= \frac{1}{1-x} &amp;gt; 0
+\end{align}$$&lt;/p&gt;
+&lt;p&gt;因此，$h&#39;(x)$ 在定义域内单调递增。而 $h&#39;(0) = 0$，故 $h(x)$ 在 $(-\infty, 0)$ 上单调递减，在 $(0, 1)$ 上单调递增。因此，我们可以判断：&lt;/p&gt;
+&lt;p&gt;$$h(x) &amp;gt; h(0) = 0$$&lt;/p&gt;
+&lt;p&gt;证毕。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;作为倒数第二题，本题难度适中。本题的关键就在于去分母，而去分母的思路来源于第(1)小题。如果不去分母，计算量极其巨大。本题没有涉及到分类讨论，与过去全国Ⅰ卷的导数题相比难度较小。&lt;/p&gt;
+&lt;h2 id=&#34;解析几何&#34;&gt;解析几何&lt;/h2&gt;
+&lt;p&gt;已知抛物线 $C$: $x^2 = 2py (p&amp;gt;0)$ 的焦点为 $F$，且 $F$ 与圆 $M$: $x^2 + (y+4)^2 = 1$ 上点的距离最小值为 $4$。&lt;/p&gt;
+&lt;p&gt;(1) 求 $p$；&lt;/p&gt;
+&lt;p&gt;(2) 若点 $P$ 在圆 $M$ 上，$PA$、$PB$ 是抛物线 $C$ 的两条切线，$A$、$B$ 为切点，求 $\triangle PAB$ 面积的最大值。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;第(1)小问需要求解焦准距 $p$，依题意，抛物线开口向上，小圆圆心在 $y$ 负半轴上。显然，抛物线焦点到圆顶部 $(0, -3)$ 的距离最小。我们可以列出下面这个简单方程求解：&lt;/p&gt;
+&lt;p&gt;$$\begin{align}
+\frac{p}{2} - (-4+1) &amp;amp;= 4 \\
+\Rightarrow p &amp;amp;= 2
+\end{align}$$&lt;/p&gt;
+&lt;p&gt;重点来看第(2)小问。题型很常规，题目也非常易懂，就是求解三角形面积的最值问题。我们首先来梳理一下，三角形面积求解的主要方法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$S = \frac{1}{2}ah$。在解析几何中，我们通常需要先求出一条直线的方程，然后才能求直线上的线段长以及点到直线的距离。&lt;/li&gt;
+&lt;li&gt;$S = \frac{1}{2}ab\sin\theta$。常见于平面几何解三角形，但是在解析几何中，该方法较少使用。原因在于，在解析几何中，一个角的正切值相对好求，可以用斜率的几何意义加上三角恒等变换中的两角正切差公式求出，但是由正切求正弦非常困难。余弦定理虽然可以求出余弦，但是计算量特别大，而正弦定理并不能求出一个角的正弦。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;经过上述分析，我们明确，本题求解三角形面积应当采用第1种方法。那么，谁作底边，谁作顶点？很明显，动点 $P$ 是一定要作为顶点的，因为它是主动点。切点 $A$、$B$ 是从动点，它们是随着 $P$ 点的运动而运动的。这样，直线 $AB$ 就成了三角形底边所在直线。至此，我们的思路已基本明确。&lt;/p&gt;
+&lt;p&gt;解析几何有两种起手式：&lt;strong&gt;设点与设线&lt;/strong&gt;。关于动点 $P$，这是一定要设的，毋庸置疑。难道我们希望联立两条切线以及圆的方程来确定 $P$ 点？这是绝对不可能的。我们应该如何设呢？我一开始想，可以尝试用参数方程，即设 $P$ 点坐标为 $(\cos\theta, \sin\theta - 4)$。但是，使用参数方程涉及到三角函数的计算，相较于有理代数运算困难。而且，抛物线的参数方程不含三角函数。因此，我们就设 $P$ 点坐标为 $(x_0, y_0)$。&lt;/p&gt;
+&lt;p&gt;现在，大难题出现了：究竟是设直线 $AB$ 的方程，还是设 $A$、$B$ 两个端点的坐标？我们下面逐一尝试一下：&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;设线&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;目前来看，直线 $AB$ 不过任何定点。因此，我们只能设直线 $AB$ 的斜截式方程，并与抛物线方程联立：&lt;/p&gt;
+&lt;p&gt;$$\begin{cases}
+y = kx + b \\
+x^2 = 4y
+\end{cases}$$&lt;/p&gt;
+&lt;p&gt;消去 $y$，得到：&lt;/p&gt;
+&lt;p&gt;$$x^2 - 4kx -4b = 0$$&lt;/p&gt;
+&lt;p&gt;弦长很容易就能计算。为了方便，我们计算弦长的平方：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+|AB|^2 &amp;amp;= (x_1 - x_2)^2 + (y_1 - y_2)^2 \\
+&amp;amp;= (1 + k^2)[(x_1 + x_2)^2 - 4 x_1 x_2] \\
+&amp;amp;= 16(1 + k^2)(k^2 + b)
+\end{align}&lt;/p&gt;
+&lt;p&gt;相切的条件该怎么用呢？我们可以把抛物线改写成二次函数求导：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+y &amp;amp;= \frac{1}{4}x^2  \\
+\Rightarrow y&#39; &amp;amp;= \frac{1}{2}x
+\end{align}&lt;/p&gt;
+&lt;p&gt;然后利用导数和切线斜率的关系列方程：&lt;/p&gt;
+&lt;p&gt;\begin{cases}
+\frac{1}{2}x_1 = \frac{y_1 - y_0}{x_1 - x_0}  \\
+\frac{1}{2}x_2 = \frac{y_2 - y_0}{x_2 - x_0}
+\end{cases}&lt;/p&gt;
+&lt;p&gt;计算量正在变大，但是还是可以算下去。我们去分母然后两式相加：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+\frac{1}{2}(x_1^2 + x_2^2) - \frac{1}{2}x_0(x_1 + x_2) &amp;amp;= y_1 + y_2 - 2 y_0 \\
+\frac{1}{2}[(x_1 + x_2)^2 - 2 x_1 x_2] - 2kx_0 &amp;amp;= k(x_1 + x_2) + 2b - 2y_0 \\
+\frac{1}{2}(16k^2 + 8b) - 2kx_0 &amp;amp;= 4k^2 + 2b - 2y_0 \\
+2k^2 + y_0 + b &amp;amp;= kx_0
+\end{align}&lt;/p&gt;
+&lt;p&gt;下面我们来计算点 $P$ 到 $AB$ 的距离。同样为了方便，我们来算距离的平方：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+d_{P \rightarrow AB}^2 &amp;amp;= \frac{(kx_0 + b - y_0)^2}{1 + k^2} 
+\end{align}&lt;/p&gt;
+&lt;p&gt;这样，我们就可以来算三角形的面积了。同样是算面积的平方，要注意这里可以将 $kx_0$ 代入，将 $x_0$ 和 $y_0$ 一并消去：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+S_{\triangle PAB}^2 &amp;amp;= \frac{1}{4} |AB|^2 d_{P \rightarrow AB}^2 \\
+&amp;amp;= 4 (1 + k^2) (k^2 + b) \frac{(kx_0 + b - y_0)^2}{1 + k^2} \\
+&amp;amp;= 4 (k^2 + b) (2k^2 + 2b)^2 \\
+&amp;amp;= 16 (k^2 + b)^3
+\end{align}&lt;/p&gt;
+&lt;p&gt;显然，这里我们可以将 $k^2 + b$ 看成是一个整体。但是，$k^2 + b$ 一定是有取值范围的，我们需要确定这个取值范围。不过不要忘记，点 $P$ 在圆 $M$ 上的条件还没有使用：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+x_0^2 + (y_0 + 4)^2 = 1
+\end{align}&lt;/p&gt;
+&lt;p&gt;然而，我已经感觉很不妙了，怎样才能通过 $x_0$ 和 $y_0$ 的关系确定 $k$ 和 $b$ 的关系呢？我发现了之前计算得到的一个式子：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+2k^2 + y_0 + b &amp;amp;= kx_0
+\end{align}&lt;/p&gt;
+&lt;p&gt;我们将这个式子两边平方，然后将 $x_0^2$ 整体代入得：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+(2k^2 + y_0 + b)^2 &amp;amp;= k^2 [1 - (y_0 + 4)^2]
+\end{align}&lt;/p&gt;
+&lt;p&gt;然而这个式子根本无法消掉 $y_0$。设线的方法宣告失败！&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;设点&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;我们设 $A$ 点坐标为 $(x_1, y_1)$，$B$ 点坐标为 $(x_2, y_2)$。关键来了，下一步应该干什么？是直接写出直线 $AB$ 的两点式方程吗？&lt;/p&gt;
+&lt;p&gt;显然不是的，因为我们有一个非常好的条件还没用——相切。因为我们有 $A$、$B$ 两点坐标，得到切线斜率非常容易，可以直接写出切线的点斜式方程：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+l_{PA}: y - y_1 = \frac{1}{2}x_1(x-x_1) \\
+l_{PB}: y - y_2 = \frac{1}{2}x_2(x-x_2)
+\end{align}&lt;/p&gt;
+&lt;p&gt;由于 $A$、$B$ 两点都在抛物线上，满足抛物线方程，我们可以把上面的直线方程简化一下：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+l_{PA}: y = \frac{1}{2}x_1x-y_1 \\
+l_{PB}: y = \frac{1}{2}x_2x-y_2
+\end{align}&lt;/p&gt;
+&lt;p&gt;这两条切线都经过 $P$ 点，我们将 $P$ 点坐标代入：&lt;/p&gt;
+&lt;p&gt;\begin{cases}
+y_0 = \frac{1}{2}x_1x_0-y_1 \\
+y_0 = \frac{1}{2}x_2x_0-y_2
+\end{cases}&lt;/p&gt;
+&lt;p&gt;本题的破题点来了。你是否能看出直线 $AB$ 的方程？&lt;/p&gt;
+&lt;p&gt;\begin{align}
+l_{AB}: y_0 = \frac{1}{2}x_0x-y
+\end{align}&lt;/p&gt;
+&lt;p&gt;$A$、$B$ 两点都满足上面的方程，而两点确定一条直线，那么上面的方程就表示直线 $AB$。&lt;/p&gt;
+&lt;p&gt;有了直线 $AB$ 的方程，一切都好办了。先把直线方程与抛物线方程联立：&lt;/p&gt;
+&lt;p&gt;\begin{cases}
+y_0 = \frac{1}{2}x_0x-y \\
+x^2 = 4y
+\end{cases}&lt;/p&gt;
+&lt;p&gt;得到：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+x^2 - 2x_0x + 4y_0 = 0
+\end{align}&lt;/p&gt;
+&lt;p&gt;先算弦长：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+|AB|^2 &amp;amp;= (x_1 - x_2)^2 + (y_1 - y_2)^2 \\
+&amp;amp;= (1 + \frac{1}{4} x_0^2)[(x_1 + x_2)^2 - 4 x_1 x_2] \\
+&amp;amp;= (1 + \frac{1}{4} x_0^2)(4x_0^2 - 16y_0)
+\end{align}&lt;/p&gt;
+&lt;p&gt;再算距离：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+d_{P \rightarrow AB}^2 &amp;amp;= \frac{(\frac{1}{2}x_0^2 - 2y_0)^2}{1 + \frac{1}{4}x_0^2}
+\end{align}&lt;/p&gt;
+&lt;p&gt;最后算三角形的面积。要注意，这里我们再用点 $P$ 在圆 $M$ 上的条件来消参就可以成功：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+S_{\triangle PAB}^2 &amp;amp;= \frac{1}{4} |AB|^2 d_{P \rightarrow AB}^2 \\
+&amp;amp;= (x_0^2 - 4y_0) (\frac{1}{2}x_0^2 - 2y_0)^2 \\
+&amp;amp;= 2(\frac{1}{2}x_0^2 - 2y_0)^3 \\
+&amp;amp;= 2[\frac{1}{2}(1 - (y_0 + 4)^2) - 2y_0]^3 \\
+&amp;amp;= 2[\frac{1}{2} - \frac{1}{2}(y_0^2 + 8y_0 + 16) - 2y_0]^3 \\
+&amp;amp;= 2[-\frac{1}{2}y_0^2 - 6y_0 - \frac{15}{2}]^3 \\
+&amp;amp;= 2[-\frac{1}{2}(y_0 + 6)^2 + \frac{21}{2}]^3 \\
+\end{align}&lt;/p&gt;
+&lt;p&gt;配方后，转化为二次函数在闭区间上的最值问题。而 $y_0 \in [-5, -3]$，故 $y_0 = -5$ 时，$S_{\triangle PAB}$ 取最大值，最大值为：&lt;/p&gt;
+&lt;p&gt;\begin{align}
+S_{\triangle PAB} &amp;amp;= \sqrt[]{2[-\frac{1}{2}(-5 + 6)^2 + \frac{21}{2}]^3} \\
+&amp;amp;= 20 \sqrt[]{5} 
+\end{align}&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;解析几何作为全国卷压轴大题的情况较为罕见，但实际上这道题目非常常规，计算量其实不算特别大，但是有一定的技巧性。&lt;/p&gt;
+&lt;p&gt;首先，要明确计算三角形面积的思路。然后，要选择设点作为起手式。这里面的原因在于，设点可以更好地利用相切的已知条件，可以非常方便地写出切线方程。再加上对直线方程的理解，可以不用计算就可以得到弦所在直线方程。虽然设线在一开始就可以得到弦所在直线方程，但是相切的条件就不是那么方便使用，而且计算到最后，利用 $P$ 点在圆上的条件很难消参。&lt;/p&gt;
+&lt;p&gt;另外，本题不适合设线还有一个原因就是，本题的 $P$ 点是主动点，而切点是从动点。设线相当于是把切点当成主动点了，这样就会产生一个问题，需要反过来表示 $P$ 点的时候就会困难，体现在解题步骤当中就是无法消参。&lt;/p&gt;
+&lt;p&gt;在考场上，最大的困难就在于理清思路。如果没有理清思路，就是直接设完就算，最终自己都不知道自己在算什么了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>沉痛悼念杂交水稻之父袁隆平院士</title>
+      <link>https://bowenei.gitee.io/post/deeply-mourns-the-father-of-hybrid-rice-yuan-longping/</link>
+      <pubDate>Sat, 22 May 2021 19:21:28 +0800</pubDate>
+      <guid>https://bowenei.gitee.io/post/deeply-mourns-the-father-of-hybrid-rice-yuan-longping/</guid>
+      <description>&lt;p&gt;5月22日13时07分，当代最伟大的科学家停止科研了。今天上午我才听说有关袁隆平院士逝世的消息系谣言，当我下午打开手机看看新闻时，便发现他真的与世长辞了。&lt;/p&gt;
+&lt;p&gt;这位巨人的逝世，对于中国人民，对于世界人民，对于农学和遗传学，都是不可估量的损失。这位巨人逝世以后所形成的空白，不久就会使人感觉到。&lt;/p&gt;
+&lt;p&gt;不像马克思发现人类历史的发展规律，袁隆平院士只是发现了杂交水稻高产的规律。我们知道，历来为繁芜丛杂的意识形态所掩盖着的一个简单事实：人们首先必须吃、喝、住、穿，然后才能从事政治、科学、艺术、宗教等等。袁隆平院士的伟大之处在于，他的籼型杂交水稻解决了当时中国亿万人口的吃饭问题。在华夏文明的传说中，神农氏尝百草，制耒耜，种五谷，奠定了农工基础，使“民以食为天”的观念深入每一位华夏儿女的心。华夏文明5000多年来，袁隆平院士是当代当之无愧的神农氏！&lt;/p&gt;
+&lt;p&gt;不仅如此，袁隆平院士还研究和培育出了超级杂交水稻。2020年11月2日，在湖南省衡阳市衡南县清竹村进行的袁隆平领衔的杂交水稻双季测产达到了亩产1530.76公斤，其中早稻619.06公斤、第三代杂交水稻晚稻品种“叁优一号”911.7公斤，超过了1500公斤的预期目标。比数字更重要的意义在于：这次测产充分展示了第三代杂交水稻更加契合实际生产的特点，从而有利于进一步保障国家粮食安全。&lt;/p&gt;
+&lt;p&gt;他作为科学家就是这样。但是这在他身上远不是主要的。在袁隆平院士看来，杂交水稻只是一种高产、抗病、抗寒、抗倒的水稻。任何一门理论科学中的每一个新发现——它的实际应用也许还根本无法预见——都使袁隆平院士感到衷心喜悦，而当他看到他的杂交水稻亩产比过去翻番时候，他的喜悦就非同寻常了。&lt;/p&gt;
+&lt;p&gt;因为袁隆平院士首先是一个普通的知识分子。他毕生的真正使命，就是战胜饥饿。科研是他的生命要素。很少有人像他那样满腔热情、坚韧不拔和卓有成效地进行科研。50多年来，袁隆平院士始终在农业科研第一线辛勤耕耘、不懈探索，为人类运用科技手段战胜饥饿带来绿色的希望和金色的收获。不仅为解决中国人民的温饱和保障国家粮食安全做出了贡献，更为世界和平和社会进步树立了丰碑。&lt;/p&gt;
+&lt;p&gt;如今，成长在物质生活丰富的现代社会的我们，难以体会和想象到上个世纪60年代的大饥荒。可是，我看到现在的食堂剩饭剩菜现象屡见不鲜，酒桌饭局的浪费大张旗鼓，婚宴酒席的奢靡之风已成常态。今天，我们真的有颜面在网络上发文，悼念这位伟大的科学家吗？吃水不忘挖井人，我们今天的幸福生活来之不易，珍惜眼前的每一粒粮食！&lt;/p&gt;
+&lt;p&gt;可即使如此，袁隆平院士还是被一些小人忌恨和诬蔑。2018年4月14日，袁隆平院士在接受凤凰财经采访时发表了对转基因的看法。对于转基因大豆，袁隆平院士指出，只要是通过安全检测的转基因作物，都是没有问题的。袁隆平院士表示，“美国转基因大豆加入的是除草基因，这个对人体无害，中国每年从美国进口几千万吨大豆，这个完全没问题。”网络上各路牛鬼蛇神开始竞相歪曲、否定袁隆平院士，对他的言论断章取义和包装，到处散布谣言。现在他逝世了，举国上下，各行各业，14亿中国人民无不对他表示尊敬、爱戴和悼念。而我敢大胆地说：他可能有过许多敌人，但未必有一个私敌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;他的英名和事业将永垂不朽！&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文改编自恩格斯《在马克思墓前的讲话》，转载请注明出处，谢谢！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1526 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Bowen Zhou" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://bowenei.gitee.io/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+  <meta property="og:url" content="https://bowenei.gitee.io/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/" />
+  <meta property="og:title" content="最小生成树 | Bowen&#39;s Academic Home" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-11-07T15:16:06&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-11-07T15:16:06&#43;08:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>最小生成树 | Bowen&#39;s Academic Home</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="4dc840f9740e80327a6cafc8c994863f" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blogs"><span>Blogs</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallery"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/learn/"><span>Learn</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/bowenEI/" data-toggle="tooltip" data-placement="bottom" title="Follow me on Github" target="_blank" rel="noopener" aria-label="Follow me on Github">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          贪心算法
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/learn/"><i class="fas fa-arrow-left pr-1"></i>Learn</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/">算法分析与设计</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">基础知识</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/">算法分析</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E9%80%92%E5%BD%92%E6%96%B9%E7%A8%8B/">递归方程</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/">分治算法</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E5%A4%A7%E6%95%B4%E6%95%B0%E4%B9%98%E6%B3%95/">大整数乘法</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95/">矩阵乘法</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/">快速排序</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E6%B1%82%E7%AC%ACk%E5%B0%8F%E5%85%83%E7%B4%A0/">求第 k 小元素</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B9/">最近点对</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/">快速傅里叶变换</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E5%AF%BB%E6%89%BE%E5%87%B8%E5%8C%85/">寻找凸包</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/%E4%BD%9C%E4%B8%9A/">作业</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">动态规划</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E7%9F%A9%E9%98%B5%E8%BF%9E%E4%B9%98/">矩阵连乘</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E9%92%A2%E6%9D%A1%E5%88%87%E5%89%B2/">钢条切割</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97/">最长公共子序列</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%9C%80%E4%BC%98%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">最优二叉搜索树</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E6%B5%81%E6%B0%B4%E4%BD%9C%E4%B8%9A%E8%B0%83%E5%BA%A6/">流水作业调度</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/0-1%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">0-1背包问题</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E5%A4%9A%E7%BA%A7%E5%9B%BE%E9%97%AE%E9%A2%98/">多级图问题</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/%E4%BD%9C%E4%B8%9A/">作业</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">贪心算法</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%B4%BB%E5%8A%A8%E9%80%89%E6%8B%A9/">活动选择</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/">哈夫曼编码</a></li>
+
+
+
+  <li class="active"><a href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/">最小生成树</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E4%BD%9C%E4%B8%9A/">作业</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/">图论算法</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/">图的遍历</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E5%9B%BE%E7%9A%84%E8%BF%9E%E9%80%9A/">图的连通</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/">最短路径</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E7%BD%91%E7%BB%9C%E6%B5%81/">网络流</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/">拓扑排序</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95/%E4%BD%9C%E4%B8%9A/">作业</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/">进阶知识</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/np-complete/">NP 完全理论</a></li>
+
+
+
+  <li class=""><a href="/learn/algorithm/%E8%BF%9B%E9%98%B6%E7%9F%A5%E8%AF%86/%E5%9B%9E%E6%BA%AF%E5%89%AA%E6%9E%9D/">回溯剪枝</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#问题描述">问题描述</a>
+      <ul>
+        <li><a href="#生成树">生成树</a></li>
+        <li><a href="#最小生成树">最小生成树</a></li>
+      </ul>
+    </li>
+    <li><a href="#kruskal-算法">Kruskal 算法</a>
+      <ul>
+        <li><a href="#并查集">并查集</a></li>
+        <li><a href="#算法代码">算法代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#prim-算法">Prim 算法</a>
+      <ul>
+        <li><a href="#算法代码-1">算法代码</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/">
+        
+          Learn
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/algorithm/">
+        
+          算法分析与设计
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/">
+        
+          贪心算法
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        最小生成树
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+          
+
+          <h1>最小生成树</h1>
+
+          <div class="article-style">
+            <h2 id="问题描述">问题描述</h2>
+<h3 id="生成树">生成树</h3>
+<p>设 $G = (V, E)$ 是一个边加权无向连通图。$G$ 的生成树是无向树 $S = (V, T)$，$T \subseteq E$。$W$ 是 $G$ 的权函数，$T$ 权值定义为 $W(T) = \sum_{(u, v) \in T}{W(u, v)}$。</p>
+<h3 id="最小生成树">最小生成树</h3>
+<p>$G$ 的最小生成树是使 $W(T)$ 最小的 $G$ 的生成树。</p>
+<ul>
+<li>输入：无向连通图 $G = (V, E)$，权函数 $W$。</li>
+<li>输出：$G$ 的最小生成树。</li>
+</ul>
+<h2 id="kruskal-算法">Kruskal 算法</h2>
+<ul>
+<li>初始时所有顶点自成一集合。</li>
+<li>在图上选权值最小的边 $e_{min}$，判断 $e_{min}$ 两端点是否属于不同集合 $c_i$ 和 $c_j$。
+<ul>
+<li>若是，将 $c_i$ 和 $c_j$ 用 $e_{min}$ 连接成同一个集合。</li>
+<li>否则，舍弃 $e_{min}$。</li>
+</ul>
+</li>
+<li>重复上一过程，直到所有顶点在同一集合。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/Kruskal_hu02e712d2b5f442f2876199b732b60317_98386_5833dd2c96fba77f6d2d783251a6558e.webp 400w,
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/Kruskal_hu02e712d2b5f442f2876199b732b60317_98386_978c9554e11a6527c2992ebafe6ab1ca.webp 760w,
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/Kruskal_hu02e712d2b5f442f2876199b732b60317_98386_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/Kruskal_hu02e712d2b5f442f2876199b732b60317_98386_5833dd2c96fba77f6d2d783251a6558e.webp"
+               width="760"
+               height="376"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<h3 id="并查集">并查集</h3>
+<p>并查集是一种数据结构，类似于《离散数学》中等价类的划分。这种数据结构非常适合处理如下两大问题：</p>
+<ul>
+<li>需要经常合并集合</li>
+<li>需要经常查找元素属于哪个集合</li>
+</ul>
+<p>采用并查集的数据结构，可以提高 Kruskal 算法中判断边的两端点是否属于不同集合的效率。</p>
+<p>并查集支持以下操作：</p>
+<ul>
+<li>初始化 <code>UFSets(s)</code>：将 <code>s</code> 中的每个元素自成一个集合。</li>
+<li>合并 <code>Union(root1, root2)</code>：合并集合 <code>root1</code> 和 <code>root2</code>。</li>
+<li>查找 <code>Find(x)</code>：查找元素 <code>x</code> 属于哪个集合。</li>
+</ul>
+<h4 id="并查集的表示">并查集的表示</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E5%B9%B6%E6%9F%A5%E9%9B%86_hu843763b27065783956baed3cb3741a98_58139_4806ba6cfbae19e1dcc408167031e473.webp 400w,
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E5%B9%B6%E6%9F%A5%E9%9B%86_hu843763b27065783956baed3cb3741a98_58139_81f1bb81f2e48221dc73e87dc88a6b28.webp 760w,
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E5%B9%B6%E6%9F%A5%E9%9B%86_hu843763b27065783956baed3cb3741a98_58139_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E5%B9%B6%E6%9F%A5%E9%9B%86_hu843763b27065783956baed3cb3741a98_58139_4806ba6cfbae19e1dcc408167031e473.webp"
+               width="760"
+               height="369"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>通常用双亲表示法表示的树作为并查集的基础数据结构（在内存中是连续的存储空间）。数组下标对应每个元素，数组的值表示指向父结点的指针。负数表示没有父结点，其绝对值表示集合中一共有多少个元素。</p>
+<p>记录集合中总的元素个数的意义在于，将结点数更少的集合作为结点数更多的集合的根的子树能够提高并查集的查询效率。</p>
+<h4 id="路径压缩">路径压缩</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E8%B7%AF%E5%BE%84%E5%8E%8B%E7%BC%A9_hue7670d42ba572df1c1e5174f98d1b019_17885_cc90e8aab5e9e9b0755d79012f70b054.webp 400w,
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E8%B7%AF%E5%BE%84%E5%8E%8B%E7%BC%A9_hue7670d42ba572df1c1e5174f98d1b019_17885_489218a61a20072defc3b3d92aeb1497.webp 760w,
+               /media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E8%B7%AF%E5%BE%84%E5%8E%8B%E7%BC%A9_hue7670d42ba572df1c1e5174f98d1b019_17885_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E8%B7%AF%E5%BE%84%E5%8E%8B%E7%BC%A9_hue7670d42ba572df1c1e5174f98d1b019_17885_cc90e8aab5e9e9b0755d79012f70b054.webp"
+               width="760"
+               height="306"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<h4 id="并查集的代码实现">并查集的代码实现</h4>
+<blockquote>
+<p>TODO</p>
+</blockquote>
+<h3 id="算法代码">算法代码</h3>
+<blockquote>
+<p>TODO</p>
+</blockquote>
+<h2 id="prim-算法">Prim 算法</h2>
+<p>Prim 算法非常类似于点灯游戏。它首先“点亮”一个源，然后结合广度优先搜索算法，每次找边权重最小的相邻结点“点亮”，直到所有的结点均“点亮”。</p>
+<h3 id="算法代码-1">算法代码</h3>
+<blockquote>
+<p>TODO</p>
+</blockquote>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81/" rel="next">哈夫曼编码</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/learn/algorithm/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E4%BD%9C%E4%B8%9A/" rel="prev">作业</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Nov 7, 2021</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1845 @@
+<!DOCTYPE html><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.4.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Bowen Zhou" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/matplotlib/subplot/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.512574799414e7d36471486881070b0f.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://bowenei.gitee.io/learn/matplotlib/subplot/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+  <meta property="og:url" content="https://bowenei.gitee.io/learn/matplotlib/subplot/" />
+  <meta property="og:title" content="Matplotlib 子图 | Bowen&#39;s Academic Home" />
+  <meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-04-26T21:01:26&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-04-26T21:01:26&#43;08:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Matplotlib 子图 | Bowen&#39;s Academic Home</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="ca857e7bb93891de62c5a2c36596616a" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.8f76bdc9e086322ed5147724ebba3d06.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header--fixed">
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Bowen&#39;s Academic Home</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>About</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#blogs"><span>Blogs</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#gallery"><span>Gallery</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link  active" href="/learn/"><span>Learn</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://github.com/bowenEI/" data-toggle="tooltip" data-placement="bottom" title="Follow me on Github" target="_blank" rel="noopener" aria-label="Follow me on Github">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Matplotlib
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/learn/"><i class="fas fa-arrow-left pr-1"></i>Learn</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/learn/matplotlib/">Matplotlib</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/learn/matplotlib/overview/">Matplotlib 概述</a></li>
+
+
+
+  <li class=""><a href="/learn/matplotlib/style/">Matplotlib 绘图样式</a></li>
+
+
+
+  <li class=""><a href="/learn/matplotlib/plot/">Matplotlib 二维绘图</a></li>
+
+
+
+  <li class=""><a href="/learn/matplotlib/bar/">Matplotlib 条形图</a></li>
+
+
+
+  <li class="active"><a href="/learn/matplotlib/subplot/">Matplotlib 子图</a></li>
+
+
+
+  <li class=""><a href="/learn/matplotlib/plot3d/">Matplotlib 三维绘图</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#入门">入门</a></li>
+    <li><a href="#创建指定排布的子图">创建指定排布的子图</a></li>
+    <li><a href="#共享坐标轴">共享坐标轴</a></li>
+    <li><a href="#自定义布局">自定义布局</a></li>
+    <li><a href="#子图的属性与窗口的属性">子图的属性与窗口的属性</a>
+      <ul>
+        <li><a href="#设置图例">设置图例</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+    
+  
+    
+  
+    
+  
+
+    <li class="breadcrumb-item">
+      <a href="/">
+        
+          Home
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/">
+        
+          Learn
+        
+      </a>
+    </li>
+  
+
+    <li class="breadcrumb-item">
+      <a href="/learn/matplotlib/">
+        
+          Matplotlib
+        
+      </a>
+    </li>
+  
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Matplotlib 子图
+      </li>
+    </ol>
+  </nav>
+
+
+
+
+          
+
+          <h1>Matplotlib 子图</h1>
+
+          <div class="article-style">
+            <pre><code class="language-python">import matplotlib.pyplot as plt
+import numpy as np
+</code></pre>
+<h2 id="入门">入门</h2>
+<p>下面，我们将指数函数和对数函数的图像绘制在同一个绘图窗口中。</p>
+<pre><code class="language-python">ex = np.linspace(-1, 1, num=101)
+ey = np.exp(ex)
+
+lnx = np.linspace(0.02, 1, num=51)
+lny = np.log(lnx)
+</code></pre>
+<p>使用 <code>subplot</code> 可以指定子图的排列方式以及索引。</p>
+<pre><code class="language-python">plt.subplot(121)
+plt.plot(ex, ey)
+
+plt.subplot(122)
+plt.plot(lnx, lny)
+</code></pre>
+<pre><code>[&lt;matplotlib.lines.Line2D at 0x7fa93eb835d0&gt;]
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_6_1_hu461e1329263ef7ef5add41e3125a91b1_12219_01d8e5b0905ea2aaa185a796b2679cae.webp 400w,
+               /media/learn/matplotlib/subplot/output_6_1_hu461e1329263ef7ef5add41e3125a91b1_12219_15745bf3b0ea2e6c90abd60f0ecb83f7.webp 760w,
+               /media/learn/matplotlib/subplot/output_6_1_hu461e1329263ef7ef5add41e3125a91b1_12219_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_6_1_hu461e1329263ef7ef5add41e3125a91b1_12219_01d8e5b0905ea2aaa185a796b2679cae.webp"
+               width="376"
+               height="248"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p><code>subplot</code> 返回 <code>Axes</code> 对象。因此，上面的绘图代码也可以这样来写：</p>
+<pre><code class="language-python">ax1 = plt.subplot(121)
+ax1.plot(ex, ey)
+
+ax2 = plt.subplot(122)
+ax2.plot(lnx, lny)
+</code></pre>
+<pre><code>[&lt;matplotlib.lines.Line2D at 0x7fa93ea6ba50&gt;]
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_8_1_hu461e1329263ef7ef5add41e3125a91b1_12219_d3b9b86b104634fb63e5aa0f3be9efcf.webp 400w,
+               /media/learn/matplotlib/subplot/output_8_1_hu461e1329263ef7ef5add41e3125a91b1_12219_ca6fcfa98889455c0a91bb566d9e0e8c.webp 760w,
+               /media/learn/matplotlib/subplot/output_8_1_hu461e1329263ef7ef5add41e3125a91b1_12219_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_8_1_hu461e1329263ef7ef5add41e3125a91b1_12219_d3b9b86b104634fb63e5aa0f3be9efcf.webp"
+               width="376"
+               height="248"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p>但是，<code>subplot</code> 方法不能够直接返回 <code>Figure</code> 对象，这会在设置 <code>Figure</code> 对象属性的时候造成一些麻烦。因此，我们要介绍更一般的方法。</p>
+<h2 id="创建指定排布的子图">创建指定排布的子图</h2>
+<p>在 <strong>Matplotlib</strong> 中，我们使用 <code>subplots</code> 创建可以指定子图排布的窗口。</p>
+<pre><code class="language-python">fig, ax = plt.subplots()
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_12_0_hua71c6ff33d313ace5dd8f5d3487aba12_3541_59e45b3a9a0b1d725ef8e0dccd10ba09.webp 400w,
+               /media/learn/matplotlib/subplot/output_12_0_hua71c6ff33d313ace5dd8f5d3487aba12_3541_ddd90efbf2d291237b551524907843a6.webp 760w,
+               /media/learn/matplotlib/subplot/output_12_0_hua71c6ff33d313ace5dd8f5d3487aba12_3541_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_12_0_hua71c6ff33d313ace5dd8f5d3487aba12_3541_59e45b3a9a0b1d725ef8e0dccd10ba09.webp"
+               width="380"
+               height="252"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p>如果不给 <code>subplots</code> 指定任何参数，那么默认就会创建一个 <code>Axes</code> 对象，即只有一个绘图区域。</p>
+<p><code>subplots</code> 函数返回两个值：一是绘图窗口 <code>Figure</code> 对象，二是指向每个子图绘图区域的 <code>Axes</code> 数组。</p>
+<p>当然，我们也可以用 <code>Figure</code> 对象来创建子图绘图区域。下面的代码与上面的等价：</p>
+<pre><code class="language-python">fig = plt.figure()
+ax = fig.subplots()
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_16_0_hua71c6ff33d313ace5dd8f5d3487aba12_3541_1814d7a06505629632e860f28cb2bbe8.webp 400w,
+               /media/learn/matplotlib/subplot/output_16_0_hua71c6ff33d313ace5dd8f5d3487aba12_3541_a17207a60af36dfa73a1b23c6b8ff882.webp 760w,
+               /media/learn/matplotlib/subplot/output_16_0_hua71c6ff33d313ace5dd8f5d3487aba12_3541_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_16_0_hua71c6ff33d313ace5dd8f5d3487aba12_3541_1814d7a06505629632e860f28cb2bbe8.webp"
+               width="380"
+               height="252"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p>一般地，我们在绘制子图时先要确定好子图的排布情况。例如现在我们要绘制 $6$ 幅子图，按照 $2 \times 3$ 排列：</p>
+<pre><code class="language-python">fig, ax = plt.subplots(nrows=2, ncols=3)
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_18_0_hu540d7c5b23fc0c8a543f0a327ab95e30_6937_6d1730194cd46ecb01164ffbe7209159.webp 400w,
+               /media/learn/matplotlib/subplot/output_18_0_hu540d7c5b23fc0c8a543f0a327ab95e30_6937_f855269fb68e253ad48f1da927d48df6.webp 760w,
+               /media/learn/matplotlib/subplot/output_18_0_hu540d7c5b23fc0c8a543f0a327ab95e30_6937_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_18_0_hu540d7c5b23fc0c8a543f0a327ab95e30_6937_6d1730194cd46ecb01164ffbe7209159.webp"
+               width="386"
+               height="252"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p><code>nrows</code> 和 <code>ncols</code> 分别指子图排布的行数和列数。</p>
+<p>我们通过简单的下标索引就能够确定每个子图绘图区域的 <code>Axes</code> 对象。</p>
+<pre><code class="language-python">ax[0, 0].plot(ex, ey)
+fig
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_21_0_huf7719807d75674b318106a3a354235ac_8880_c0cbd2ee6959e2fe0fe5b82c4e5918f7.webp 400w,
+               /media/learn/matplotlib/subplot/output_21_0_huf7719807d75674b318106a3a354235ac_8880_9beca5e1f7abd267597d14de225b9b38.webp 760w,
+               /media/learn/matplotlib/subplot/output_21_0_huf7719807d75674b318106a3a354235ac_8880_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_21_0_huf7719807d75674b318106a3a354235ac_8880_c0cbd2ee6959e2fe0fe5b82c4e5918f7.webp"
+               width="386"
+               height="252"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p>如果子图不多，也可以采用下面的方法直接得到每个子图对象，而不需要索引：</p>
+<pre><code class="language-python">fig, (ax1, ax2) = plt.subplots(2, 1)
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_23_0_hu66b43ce72124c84391a922c81d8c4df6_5451_322830bc18d08046f0f459efb5c1a1e3.webp 400w,
+               /media/learn/matplotlib/subplot/output_23_0_hu66b43ce72124c84391a922c81d8c4df6_5451_9a9723ba929403bc70643ba3c5141197.webp 760w,
+               /media/learn/matplotlib/subplot/output_23_0_hu66b43ce72124c84391a922c81d8c4df6_5451_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_23_0_hu66b43ce72124c84391a922c81d8c4df6_5451_322830bc18d08046f0f459efb5c1a1e3.webp"
+               width="386"
+               height="252"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p>上面的 <code>Figure</code> 对象只包含 $2$ 个 <code>Axes</code> 子图，可以直接以元祖的形式来接收返回值。</p>
+<h2 id="共享坐标轴">共享坐标轴</h2>
+<p><code>sharex</code> 和 <code>sharey</code> 参数分别表示是否共享同一个 $x$ 轴或 $y$ 轴。</p>
+<pre><code class="language-python">fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True)
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_27_0_hu2fd1fed87f7406a1f79cda8e7ac90a10_4821_063620b7c77603b94e4f331a3cbc208b.webp 400w,
+               /media/learn/matplotlib/subplot/output_27_0_hu2fd1fed87f7406a1f79cda8e7ac90a10_4821_916743a4ebd00a433039cbe81f6e8238.webp 760w,
+               /media/learn/matplotlib/subplot/output_27_0_hu2fd1fed87f7406a1f79cda8e7ac90a10_4821_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_27_0_hu2fd1fed87f7406a1f79cda8e7ac90a10_4821_063620b7c77603b94e4f331a3cbc208b.webp"
+               width="386"
+               height="252"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p>同理：</p>
+<pre><code class="language-python">fig, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_29_0_hu9f53f394a33c22ec81690d5b7b4c830c_3697_dd90785c1c9094855cd58e94813b24f3.webp 400w,
+               /media/learn/matplotlib/subplot/output_29_0_hu9f53f394a33c22ec81690d5b7b4c830c_3697_f99ad1644a2779f527428e1092428d7c.webp 760w,
+               /media/learn/matplotlib/subplot/output_29_0_hu9f53f394a33c22ec81690d5b7b4c830c_3697_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_29_0_hu9f53f394a33c22ec81690d5b7b4c830c_3697_dd90785c1c9094855cd58e94813b24f3.webp"
+               width="380"
+               height="252"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p>如果我们的子图排布较为复杂，可以这样来共享坐标轴：</p>
+<p>指定每一列共享 $x$ 轴：</p>
+<pre><code class="language-python">fig, ax = plt.subplots(2, 2, sharex=True)
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_32_0_hu5262cac4573933e5960bba6e28f035b4_5210_f7d9b1414ff35f325819454f7a05624c.webp 400w,
+               /media/learn/matplotlib/subplot/output_32_0_hu5262cac4573933e5960bba6e28f035b4_5210_19ee31ac4f566cbbb99630bc329d8eaa.webp 760w,
+               /media/learn/matplotlib/subplot/output_32_0_hu5262cac4573933e5960bba6e28f035b4_5210_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_32_0_hu5262cac4573933e5960bba6e28f035b4_5210_f7d9b1414ff35f325819454f7a05624c.webp"
+               width="386"
+               height="252"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p>指定每一行共享 $y$ 轴：</p>
+<pre><code class="language-python">fig, ax = plt.subplots(2, 2, sharey=True)
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_34_0_hua72eaf55bbb5032b27017a211ce03281_5765_7ebbaa5d51e05222aeff90afe7fbb027.webp 400w,
+               /media/learn/matplotlib/subplot/output_34_0_hua72eaf55bbb5032b27017a211ce03281_5765_353669b95390a2eb93885af0b1c7ceb7.webp 760w,
+               /media/learn/matplotlib/subplot/output_34_0_hua72eaf55bbb5032b27017a211ce03281_5765_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_34_0_hua72eaf55bbb5032b27017a211ce03281_5765_7ebbaa5d51e05222aeff90afe7fbb027.webp"
+               width="386"
+               height="252"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p>$x$ 轴和 $y$ 轴均共享：</p>
+<pre><code class="language-python">fig, ax = plt.subplots(2, 2, sharex=True, sharey=True)
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_36_0_hu4bbc3ec9930b68f2850f1ef7ad7a9e06_5024_60cc54c65e3d07dc781c4547a94a3378.webp 400w,
+               /media/learn/matplotlib/subplot/output_36_0_hu4bbc3ec9930b68f2850f1ef7ad7a9e06_5024_0759043b666bb46e7d7f1d8929cb4aa8.webp 760w,
+               /media/learn/matplotlib/subplot/output_36_0_hu4bbc3ec9930b68f2850f1ef7ad7a9e06_5024_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_36_0_hu4bbc3ec9930b68f2850f1ef7ad7a9e06_5024_60cc54c65e3d07dc781c4547a94a3378.webp"
+               width="386"
+               height="252"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<h2 id="自定义布局">自定义布局</h2>
+<p>如果我们只希望画 $3$ 副子图，又希望其中一副能够完整填充空白区域。一个简单的方法就是直接使用 <code>subplot</code>：</p>
+<pre><code class="language-python">plt.subplot(221)
+plt.plot(ex, ey)
+
+plt.subplot(222)
+plt.plot(lnx, lny)
+
+plt.subplot(212)
+plt.plot(ex, ey)
+plt.plot(lnx, lny)
+</code></pre>
+<pre><code>[&lt;matplotlib.lines.Line2D at 0x7fa93e1ec310&gt;]
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_39_1_hu3977105a8297b360091d92826349b2c3_12737_86dbb19e3dab7e4c9825847eb30bcad1.webp 400w,
+               /media/learn/matplotlib/subplot/output_39_1_hu3977105a8297b360091d92826349b2c3_12737_55575705a4066f1be363d126ac88fed9.webp 760w,
+               /media/learn/matplotlib/subplot/output_39_1_hu3977105a8297b360091d92826349b2c3_12737_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_39_1_hu3977105a8297b360091d92826349b2c3_12737_86dbb19e3dab7e4c9825847eb30bcad1.webp"
+               width="375"
+               height="248"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p>上面代码的前两部分将 <code>Figure</code> 对象看作是 $2 \times 2$ 的矩阵，然后只用到第一行。然后再将 <code>Figure</code> 对象看作是 $2 \times 1$ 的矩阵，然后继续绘制第二行。这种绘制方法较为简单，但是需要确定好布局，否则会出现运行时错误。</p>
+<p>另一种方法是采用 <code>Figure</code> 对象的 <code>add_subplot</code> 方法。首先，我们需要导入 <code>GridSpec</code> 子图布局模块。</p>
+<pre><code class="language-python">from matplotlib.gridspec import GridSpec
+</code></pre>
+<p>首先，我们创建 <code>Figure</code> 对象。最好我们设置它的布局为约束布局，这样当我们在向其中添加一些元素或修改属性时，<strong>Matplotlib</strong> 会帮助我们自动调整间距，避免重叠。</p>
+<pre><code class="language-python">fig = plt.figure(constrained_layout=True)
+</code></pre>
+<pre><code>&lt;Figure size 432x288 with 0 Axes&gt;
+</code></pre>
+<p>然后，我们创建子图布局对象：</p>
+<pre><code class="language-python">gs = GridSpec(3, 3, figure=fig)
+</code></pre>
+<p>子图布局对象的作用就是辅助我们去构建我们想要的绘图区域 <code>Axes</code> 的形状。配合 <code>Figure</code> 对象的 <code>add_subplot</code> 方法以及矩阵的索引与切片机制，我们可以自由地创建各种各样的 <code>Axes</code> 绘图区域。</p>
+<pre><code class="language-python">ax1 = fig.add_subplot(gs[0, :])
+ax2 = fig.add_subplot(gs[1, :-1])
+ax3 = fig.add_subplot(gs[1:, -1])
+ax4 = fig.add_subplot(gs[-1, 0])
+ax5 = fig.add_subplot(gs[-1, -2])
+
+fig
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_48_0_hu1f2e2f58c030688cdc91dfe3276bb954_6222_8d5a77979e18ef063f5ba31b329d6d83.webp 400w,
+               /media/learn/matplotlib/subplot/output_48_0_hu1f2e2f58c030688cdc91dfe3276bb954_6222_51ea7aa39ccf0024a50ae01c1e2d9845.webp 760w,
+               /media/learn/matplotlib/subplot/output_48_0_hu1f2e2f58c030688cdc91dfe3276bb954_6222_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_48_0_hu1f2e2f58c030688cdc91dfe3276bb954_6222_8d5a77979e18ef063f5ba31b329d6d83.webp"
+               width="440"
+               height="296"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p>上面的 <code>Figure</code> 的坐标轴数字都没有挤在一起，说明了约束布局的重要性。</p>
+<p>我们可以定义下面的函数，稍微美化一下这个绘图窗口：</p>
+<pre><code class="language-python">def format_axes(fig):
+    for i, ax in enumerate(fig.axes):
+        ax.text(0.5, 0.5, &quot;ax%d&quot; % (i+1), va=&quot;center&quot;, ha=&quot;center&quot;)
+        ax.tick_params(labelbottom=False, labelleft=False)
+</code></pre>
+<p>结果如下：</p>
+<pre><code class="language-python">format_axes(fig)
+fig.suptitle(&quot;GridSpec&quot;)
+fig
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_53_0_hufb9e4c16d36d18e4e7311e8b25bd09c8_4728_2817c9d60ba581d193752dba37c71d3b.webp 400w,
+               /media/learn/matplotlib/subplot/output_53_0_hufb9e4c16d36d18e4e7311e8b25bd09c8_4728_97ac835cf50ee654e1cfff479ecbac5f.webp 760w,
+               /media/learn/matplotlib/subplot/output_53_0_hufb9e4c16d36d18e4e7311e8b25bd09c8_4728_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_53_0_hufb9e4c16d36d18e4e7311e8b25bd09c8_4728_2817c9d60ba581d193752dba37c71d3b.webp"
+               width="440"
+               height="296"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<h2 id="子图的属性与窗口的属性">子图的属性与窗口的属性</h2>
+<p>在概述中，我们就强调了 <code>Figure</code> 对象和 <code>Axes</code> 对象的本质不同。而直到学习到绘制子图，我们才能够渐渐地明白子图的属性和窗口的属性是有很大不同的，是会产生不同的效果的。</p>
+<h3 id="设置图例">设置图例</h3>
+<p>图例的设置是一个非常经典的例子。假设目前我们一共有 $4$ 组数据，每组数据一共有 $3$ 个指标 $5$ 个系列。现在，我们先生成这个 $4 \times 3 \times 5$ 的矩阵。</p>
+<pre><code class="language-python">data = np.abs(np.random.randn(4, 3, 5))
+</code></pre>
+<p>由于一共有 $4$ 组数据，于是我们用 <code>subplots</code> 方法来生成一个 $2 \times 2$ 布局的子图绘制窗口。</p>
+<pre><code class="language-python">fig, ax = plt.subplots(2, 2, constrained_layout=True)
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_60_0_hu36718797859026ee34882dddab3b3c2c_6333_4a433abee972bbe73340b7e4cc5914dd.webp 400w,
+               /media/learn/matplotlib/subplot/output_60_0_hu36718797859026ee34882dddab3b3c2c_6333_fb71efdfee5a8413f7c64d972254bdd2.webp 760w,
+               /media/learn/matplotlib/subplot/output_60_0_hu36718797859026ee34882dddab3b3c2c_6333_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_60_0_hu36718797859026ee34882dddab3b3c2c_6333_4a433abee972bbe73340b7e4cc5914dd.webp"
+               width="440"
+               height="296"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p>下面绘制系列条形图：</p>
+<pre><code class="language-python">x = np.arange(1, 6)
+width = 0.24
+
+ax[0, 0].bar(x - width, data[0, 0, :], width=width, label='A')
+ax[0, 0].bar(x, data[0, 1, :], width=width, label='B')
+ax[0, 0].bar(x + width, data[0, 2, :], width=width, label='C')
+
+ax[0, 1].bar(x - width, data[1, 0, :], width=width, label='A')
+ax[0, 1].bar(x, data[1, 1, :], width=width, label='B')
+ax[0, 1].bar(x + width, data[1, 2, :], width=width, label='C')
+
+ax[1, 0].bar(x - width, data[2, 0, :], width=width, label='A')
+ax[1, 0].bar(x, data[2, 1, :], width=width, label='B')
+ax[1, 0].bar(x + width, data[2, 2, :], width=width, label='C')
+
+ax[1, 1].bar(x - width, data[3, 0, :], width=width, label='A')
+ax[1, 1].bar(x, data[3, 1, :], width=width, label='B')
+ax[1, 1].bar(x + width, data[3, 2, :], width=width, label='C')
+
+fig
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_62_0_huf677920b43ec6047b4cd8cb1026ba7f1_6049_7c8617dd33784a08e3a8d558bf099ea6.webp 400w,
+               /media/learn/matplotlib/subplot/output_62_0_huf677920b43ec6047b4cd8cb1026ba7f1_6049_788557debbf20a41c7825360f1f72089.webp 760w,
+               /media/learn/matplotlib/subplot/output_62_0_huf677920b43ec6047b4cd8cb1026ba7f1_6049_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_62_0_huf677920b43ec6047b4cd8cb1026ba7f1_6049_7c8617dd33784a08e3a8d558bf099ea6.webp"
+               width="440"
+               height="296"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p>现在，我们给每个子图添加图例：</p>
+<pre><code class="language-python">ax[0, 0].legend()
+ax[0, 1].legend()
+ax[1, 0].legend()
+ax[1, 1].legend()
+
+fig
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_64_0_hu3052f935313e3fb9541694159c54eeff_7746_becebc96079767355b99e0f2ed5c6cd4.webp 400w,
+               /media/learn/matplotlib/subplot/output_64_0_hu3052f935313e3fb9541694159c54eeff_7746_321cb759c0609233a061504cf4685f8e.webp 760w,
+               /media/learn/matplotlib/subplot/output_64_0_hu3052f935313e3fb9541694159c54eeff_7746_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_64_0_hu3052f935313e3fb9541694159c54eeff_7746_becebc96079767355b99e0f2ed5c6cd4.webp"
+               width="440"
+               height="296"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p>然而，实际上我们没有必要为每个子图都添加图例。这个问题的本质在于，<code>legend</code> 是从属于子图的 <code>Axes</code> 对象，还是从属于 <code>Figure</code> 对象？</p>
+<p>如果我们只需要绘制从属于 <code>Figure</code> 对象的一份图例，<code>Figure</code> 对象就必须知道数据和对应的标签，这需要捕获 <code>Bar</code> 对象。</p>
+<pre><code class="language-python">fig, ax = plt.subplots(2, 2, constrained_layout=True)
+
+rects1 = ax[0, 0].bar(x - width, data[0, 0, :], width=width, label='A')
+rects2 = ax[0, 0].bar(x, data[0, 1, :], width=width, label='B')
+rects3 = ax[0, 0].bar(x + width, data[0, 2, :], width=width, label='C')
+
+ax[0, 1].bar(x - width, data[1, 0, :], width=width, label='A')
+ax[0, 1].bar(x, data[1, 1, :], width=width, label='B')
+ax[0, 1].bar(x + width, data[1, 2, :], width=width, label='C')
+
+ax[1, 0].bar(x - width, data[2, 0, :], width=width, label='A')
+ax[1, 0].bar(x, data[2, 1, :], width=width, label='B')
+ax[1, 0].bar(x + width, data[2, 2, :], width=width, label='C')
+
+ax[1, 1].bar(x - width, data[3, 0, :], width=width, label='A')
+ax[1, 1].bar(x, data[3, 1, :], width=width, label='B')
+ax[1, 1].bar(x + width, data[3, 2, :], width=width, label='C')
+
+lg = fig.legend((rects1, rects2, rects3), ('A', 'B', 'C'))
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_67_0_hu719a75dd930e9f62bc595dddd52c921a_6823_bfb3450c2294d4a4500621df746c894d.webp 400w,
+               /media/learn/matplotlib/subplot/output_67_0_hu719a75dd930e9f62bc595dddd52c921a_6823_085a1c5e1122b4dd262406a6f74ccb3a.webp 760w,
+               /media/learn/matplotlib/subplot/output_67_0_hu719a75dd930e9f62bc595dddd52c921a_6823_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_67_0_hu719a75dd930e9f62bc595dddd52c921a_6823_bfb3450c2294d4a4500621df746c894d.webp"
+               width="440"
+               height="296"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p>下面我们来美化一下这个图例。我们希望它显示在窗口右上角，并且不要遮挡图像。</p>
+<pre><code class="language-python">lg.set_bbox_to_anchor(bbox=(0.13, 0, 1, 1))
+fig
+</code></pre>
+<p>​ <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="" srcset="
+               /media/learn/matplotlib/subplot/output_69_0_hu3f941fb892ccf41553cb33266221ee17_7128_97f9b6ddd59671396b62f6ff69a66ce2.webp 400w,
+               /media/learn/matplotlib/subplot/output_69_0_hu3f941fb892ccf41553cb33266221ee17_7128_438e3a6c3c9a9d3148d701a5f32c030c.webp 760w,
+               /media/learn/matplotlib/subplot/output_69_0_hu3f941fb892ccf41553cb33266221ee17_7128_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/media/learn/matplotlib/subplot/output_69_0_hu3f941fb892ccf41553cb33266221ee17_7128_97f9b6ddd59671396b62f6ff69a66ce2.webp"
+               width="494"
+               height="296"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+​</p>
+<p>其中，参数 <code>bbox</code> 接收的四元组中，前两个分量分别代表横坐标和纵坐标的相对位置。我们是希望图例向右偏移一些不遮挡图像，因此给横坐标一个较小的增量。后两个分量代表宽和高，一般来说均设置为 $1$，这样不会有任何调整。</p>
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/learn/matplotlib/bar/" rel="next">Matplotlib 条形图</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/learn/matplotlib/plot3d/" rel="prev">Matplotlib 三维绘图</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Apr 26, 2021</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/gh/mermaid-js/mermaid@v8.8.4/dist/mermaid.min.js" integrity="sha512-+TNmhaRJf3jyYHTpzEq/5I6b+aGyhzWb21mGdHAjxSGSYwxN9Grug3Y3B9qVxWfKKY8MscE/6mr9walWvFLFvQ==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/gh/bryanbraun/anchorjs@4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>
