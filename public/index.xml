@@ -13961,6 +13961,7 @@ dpkg -c package.deb     # 列出 deb 包的内容
 &lt;p&gt;&lt;strong&gt;任何事物的发展都是前进性和曲折性的统一&lt;/strong&gt;。事物发展的方向是前进的、上升的，事物前进的道路是曲折的、迂回的，这是一切事物发展的总趋势。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;方法论：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;我们既要对未来充满信心，又要做好充分的思想准备，不断克服前进道路上的困难，勇敢地接受挫折与考验。&lt;/p&gt;
+&lt;p&gt;如果只看到曲折、迂回，而看不到前进、上升，是循环论；如果只看到前进、上升，而看不到曲折、迂回，是直线论。前者容易使人自暴自弃，只会抱怨社会的不公、时运的不济；后者容易使人夜郎自大，看不到风险和挑战从而陷入挫折之中。&lt;/p&gt;
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;前途是光明的，道路是曲折的。&lt;/p&gt;
@@ -22477,7 +22478,7 @@ C = \operatorname{conv}\{v_0, \cdots, v_k\} = \{\theta_0v_0 + \cdots + \theta_kv
 X=\left[\begin{array}{ll}
 x &amp;amp; y \\
 y &amp;amp; z
-\end{array}\right] \in \mathbf{S}_{+}^{2} \Longleftrightarrow 
+\end{array}\right] \in \mathbf{S}_{+}^{2} \Longleftrightarrow
 \left\{\begin{matrix}
 x \geqslant 0 \\
 z \geqslant 0 \\
@@ -25468,18 +25469,18 @@ git checkout dev.branch
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;小故事&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;曾经，有一位在大英博物馆做保洁工作的小男孩，和当时正在撰写《政治经济学批判》（《资本论》前身）的马克思有过这样一段对话。&lt;/p&gt;
-&lt;p&gt;“马克思先生，家里最近没有煤了，我都冻感冒了。我想起来爸爸不是在煤厂工作吗，于是我就问爸爸为什么不去买煤。爸爸说他被煤老板解雇了，买不起煤了。我就接着问爸爸，为什么煤老板要解雇爸爸呢。爸爸说，因为煤太多了。我就觉得奇怪，煤那么多，煤厂应该可以通过卖煤赚更多的钱。爸爸本应该挣更多的钱，可为什么爸爸会丢了工作呢？”&lt;/p&gt;
-&lt;p&gt;“小朋友，这个问题你之所以想不通，是因为煤厂老板有个秘密没有告诉你。”&lt;/p&gt;
-&lt;p&gt;“什么秘密？您快告诉我！”&lt;/p&gt;
-&lt;p&gt;“这就是资本的秘密，也就是剥削的秘密。你爸爸通过劳动创造的一些价值被煤厂老板，也就是资本家悄悄地拿走了。简单点说，你爸爸每天辛辛苦苦在煤厂从早干到晚，其实大部分时间都是在为老板白白干活。白干的部分都装进了老板的腰包，这就是剩余价值。老板们越来越有钱，而你爸爸则只能拿勉强糊口的工资。这就是剥削的秘密啊！”&lt;/p&gt;
-&lt;p&gt;“他凭什么剥削我爸爸？”&lt;/p&gt;
-&lt;p&gt;“凭他有资本，因为煤厂是他的啊。工人们一无所有，想要生活，就只能选择给资本家打工，任凭资本家剥削。”&lt;/p&gt;
-&lt;p&gt;“哦，我知道了。因为剥削，所以爸爸的工资很低。可我还是不明白，怎么爸爸多挖煤，煤越多，老板不奖励爸爸，反而不让爸爸干了呢？”&lt;/p&gt;
-&lt;p&gt;“小朋友，其实，煤不是真的多。想买煤的穷人买不起，买得起的富人又用不了那么多煤。煤只是显得好像有很多的样子，我把这种现象称为生产的相对过剩。煤过剩，也就卖不出去，煤老板赚不到钱，就不给工人发工资了，你爸爸就只能回家了。”&lt;/p&gt;
-&lt;p&gt;“我明白了，煤太多了我爸爸就失去了工作。那为什么煤厂老板不能把煤便宜点卖给那些需要的穷人呢？”&lt;/p&gt;
-&lt;p&gt;“你还能问出这样的问题，太让我吃惊了！这是因为，追逐利润是资本的本性，赚钱是资本家活着的动力。要降价把煤卖出去，这可是要了煤厂老板的命啊！”&lt;/p&gt;
-&lt;p&gt;“那我们应该怎么办呀？”&lt;/p&gt;
-&lt;p&gt;“我们得让更多的工人知道这个秘密。把工厂从老板手里夺过来，让工人说了算。”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;小男孩&lt;/strong&gt;：“马克思先生，家里最近没有煤了，我都冻感冒了。我想起来爸爸不是在煤厂工作吗，于是我就问爸爸为什么不去买煤。爸爸说他被煤老板解雇了，买不起煤了。我就接着问爸爸，为什么煤老板要解雇爸爸呢。爸爸说，因为煤太多了。我就觉得奇怪，煤那么多，煤厂应该可以通过卖煤赚更多的钱。爸爸本应该挣更多的钱，可为什么爸爸会丢了工作呢？”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;马克思&lt;/strong&gt;：“小朋友，这个问题你之所以想不通，是因为煤厂老板有个秘密没有告诉你。”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;小男孩&lt;/strong&gt;：“什么秘密？您快告诉我！”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;马克思&lt;/strong&gt;：“这就是资本的秘密，也就是剥削的秘密。你爸爸通过劳动创造的一些价值被煤厂老板，也就是资本家悄悄地拿走了。简单点说，你爸爸每天辛辛苦苦在煤厂从早干到晚，其实大部分时间都是在为老板白白干活。白干的部分都装进了老板的腰包，这就是剩余价值。老板们越来越有钱，而你爸爸则只能拿勉强糊口的工资。这就是剥削的秘密啊！”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;小男孩&lt;/strong&gt;：“他凭什么剥削我爸爸？”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;马克思&lt;/strong&gt;：“凭他有资本，因为煤厂是他的啊。工人们一无所有，想要生活，就只能选择给资本家打工，任凭资本家剥削。”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;小男孩&lt;/strong&gt;：“哦，我知道了。因为剥削，所以爸爸的工资很低。可我还是不明白，怎么爸爸多挖煤，煤越多，老板不奖励爸爸，反而不让爸爸干了呢？”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;马克思&lt;/strong&gt;：“小朋友，其实，煤不是真的多。想买煤的穷人买不起，买得起的富人又用不了那么多煤。煤只是显得好像有很多的样子，我把这种现象称为生产的相对过剩。煤过剩，也就卖不出去，煤老板赚不到钱，就不给工人发工资了，你爸爸就只能回家了。”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;小男孩&lt;/strong&gt;：“我明白了，煤太多了我爸爸就失去了工作。那为什么煤厂老板不能把煤便宜点卖给那些需要的穷人呢？”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;马克思&lt;/strong&gt;：“你还能问出这样的问题，太让我吃惊了！这是因为，追逐利润是资本的本性，赚钱是资本家活着的动力。要降价把煤卖出去，这可是要了煤厂老板的命啊！”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;小男孩&lt;/strong&gt;：“那我们应该怎么办呀？”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;马克思&lt;/strong&gt;：“我们得让更多的工人知道这个秘密。把工厂从老板手里夺过来，让工人说了算。”&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;/div&gt;
@@ -31206,7 +31207,7 @@ $$&lt;/p&gt;
 \begin{aligned}
 \mathrm{minimize} \quad &amp;amp; f_0(x) \\
 \mathrm{subject\ to} \quad &amp;amp; f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\
-&amp;amp; A^Tx = b 
+&amp;amp; A^Tx = b
 \end{aligned}
 $$&lt;/p&gt;
 &lt;p&gt;其中不等式约束函数 $f_1,\cdots,f_m$ 是凸的，而目标函数 $f_0$ 是拟凸的。拟凸约束函数可以等价的替换为凸约束函数，即具有相同的 $0$- 下水平集的凸函数。&lt;/p&gt;
@@ -31649,7 +31650,7 @@ WPL = \sum_{i=0}^{n-1} w_i l_i
 \begin{aligned}
 \mathrm{minimize} \quad &amp;amp; c^Tx+d \\
 \mathrm{subject\ to} \quad &amp;amp; Gx \preceq h \\
-\quad &amp;amp; Ax=b 
+\quad &amp;amp; Ax=b
 \end{aligned}
 $$&lt;/p&gt;
 &lt;p&gt;其中 $G \in \mathbf{R}^{m \times n}$ 并且 $A \in \mathbf{R}^{p \times n}$。显然，线性规划问题是凸优化问题。&lt;/p&gt;
@@ -36640,7 +36641,7 @@ f(n) = g(n) + h(n)
       <description>&lt;p&gt;“一边是‘精神美国人’，一边是自信阳光的年轻一代。我们应该全力支持中国正能量，走向全世界。”&lt;/p&gt;
 &lt;p&gt;“在这种碎片化、西方化、功利化的环境之下，不少人处处以西为师，学问只为稻粱谋。”&lt;/p&gt;
 &lt;p&gt;近期，人教版小学课本插画事件引起了全社会的广泛关注，也引发了热议。&lt;/p&gt;
-&lt;p&gt;在东方卫视6月20日播出的《这就是中国》第148期节目中，复旦大学中国研究院院长张维为教授和复旦大学中国研究院副院长范勇鹏老师，就从这一事件开始，聊中国人如何“从精神上站立起来”。&lt;/p&gt;
+&lt;p&gt;在东方卫视6月20日播出的&lt;a href=&#34;https://www.bilibili.com/video/BV1fZ4y1v77Z/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;《这就是中国》第148期&lt;/a&gt;节目中，复旦大学中国研究院院长张维为教授和复旦大学中国研究院副院长范勇鹏老师，就从这一事件开始，聊中国人如何“从精神上站立起来”。&lt;/p&gt;
 &lt;h2 id=&#34;张维为教授演讲&#34;&gt;张维为教授演讲&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;最近这个人教版的小学课本一些插图引起了中国社会的广泛的公愤。插图里面的人物形象痴呆、表情怪异、动作不雅，美国星条旗的服饰、倒挂的五星红旗、赤裸裸的性暗示、各组颓废的西方文化符号等等。我个人认为，有一些“精神美国人”是下了决心要毁掉我们下一代的三观，让他们从小就陷入民族自卑、人种自卑、文明自卑。&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;中国网民还顺藤摸瓜，发现许多类似的问题，涉及儿童读物、人文社科书籍内容等等。我们有太多的教训要汲取，我们一定要依法追责、严惩，务必还我们的孩子一片净土，还我们的人文、艺术、社会科学一束中国自信的阳光。&lt;/em&gt;&lt;/p&gt;
@@ -37224,7 +37225,7 @@ $$&lt;/p&gt;
 f(m) &amp;amp;= \ln (1+m) + ame^{-m} \\
 &amp;amp;= \ln (1+m) + \frac{m}{m^2-1} \\
 f(n) &amp;amp;= \ln (1+n) + ane^{-n} \\
-&amp;amp;= \ln (1+n) + \frac{n}{n^2-1} 
+&amp;amp;= \ln (1+n) + \frac{n}{n^2-1}
 \end{align}
 $$&lt;/p&gt;
 &lt;p&gt;不过，$f(m)$、$f(n)$ 的大小难以判断，需要借助导数来帮助判断。令&lt;/p&gt;
@@ -38669,11 +38670,10 @@ services:
       <guid>https://bowenei.gitee.io/post/zheng-qiang-and-yang-lan-talk-about-chinese-education/</guid>
       <description>&lt;p&gt;郑强教授做客杨澜主持的系列节目《毛铺和文化录》第二季，从“双减”政策的话题开始谈到中国教育的问题，给出了十分犀利的观点，非常值得我们思考。&lt;/p&gt;
 &lt;p&gt;本文根据节目内容筛选和整理出郑强教授的部分观点和看法，以郑强和杨澜两人的对话的形式呈现。&lt;/p&gt;
-&lt;hr&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.tyut.edu.cn/info/1036/5023.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;郑强&lt;/a&gt;教授从事材料学及高等教育管理相关研究，先后任浙江大学副教务长、求是学院院长、校党委副书记，贵州大学校长，太原理工大学党委书记。&lt;/p&gt;
 &lt;p&gt;郑强教授先后在全国 20 多个省市进行了 200 多场讲演，因其“敢说话”、犀利、幽默的风格被评为“网红教授”、“2015 年最受学生喜爱大学校长”，被誉为中国教育“郑”能量。&lt;/p&gt;
-&lt;p&gt;节目视频相关链接见文末&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
-&lt;hr&gt;
+&lt;p&gt;节目的相关视频如下：&lt;/p&gt;
+&lt;iframe src=&#34;//player.bilibili.com/player.html?aid=550619888&amp;bvid=BV1Tq4y1A7uV&amp;cid=479564882&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34; width=&#34;100%&#34; height=&#34;480&#34;&gt; &lt;/iframe&gt;
 &lt;h2 id=&#34;session-1&#34;&gt;Session 1&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;杨澜&lt;/strong&gt;：咱们先来谈谈最火热的话题——双减。从一个大学的教育者和大学的管理者的角度，你怎么看待双减这个话题？&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;郑强&lt;/strong&gt;：从教育的阶段来讲，我作为大学教授应该讲跟所谓的双减有一点距离，但是我觉得这些年我恰恰在谈这样的问题。&lt;strong&gt;中国的孩子不是输在起跑线上，中国的孩子实际上是累倒在起跑线上的&lt;/strong&gt;。中国全民的注意力、社会的注意力都是从幼儿园开始的，小学、中学。实际上当我们走入大学以后，中国的孩子对科学的渴望已经比较惨淡了。&lt;/p&gt;
@@ -38746,15 +38746,7 @@ services:
 &lt;p&gt;&lt;strong&gt;杨澜&lt;/strong&gt;：对，这也是你做出的选择。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;郑强&lt;/strong&gt;：对，生活上我可以节俭一点。我说对孩子、对教育的爱，那是我内心的、无悔的。&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;杨澜&lt;/strong&gt;：我觉得今天跟郑强教授的谈话，也是我们整个社会应该进行反思和讨论的一个问题。就是我们究竟如何界定成功？我们究竟需要什么样的人才？我们应该如何以孩子自身的生命的成长为本，去给予他们更加积极的、有利的成长环境。我觉得这些问题可能不仅仅是家长和老师们要问，我们社会当中的每一个人都应该扪心自问吧。&lt;/p&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Tq4y1A7uV&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;郑强教授 | 2022最新访谈 郑强与杨澜对话中国教育！&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/section&gt;</description>
+&lt;p&gt;&lt;strong&gt;杨澜&lt;/strong&gt;：我觉得今天跟郑强教授的谈话，也是我们整个社会应该进行反思和讨论的一个问题。就是我们究竟如何界定成功？我们究竟需要什么样的人才？我们应该如何以孩子自身的生命的成长为本，去给予他们更加积极的、有利的成长环境。我觉得这些问题可能不仅仅是家长和老师们要问，我们社会当中的每一个人都应该扪心自问吧。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -39331,8 +39323,8 @@ services:
       <pubDate>Sat, 01 Jan 2022 11:33:32 +0800</pubDate>
       <guid>https://bowenei.gitee.io/post/wen-tiejun-annual-speech/</guid>
       <description>&lt;p&gt;2021年已经过去，2022年也已到来。在庆祝新年的同时，著名三农问题专家温铁军教授仍然十分关心中国的宏观经济。为此，温教授为国际会议提前预录的跨年演讲，从三个方面解释他对中国明年的经济形势保持乐观的原因。&lt;/p&gt;
-&lt;p&gt;本文是温铁军教授跨年演讲的原文&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;，不代表本文作者观点。&lt;/p&gt;
-&lt;hr&gt;
+&lt;p&gt;本文是温铁军教授跨年演讲的原文（详见下方视频），不代表本文作者观点。&lt;/p&gt;
+&lt;iframe src=&#34;//player.bilibili.com/player.html?aid=252789197&amp;bvid=BV1FY411a7aZ&amp;cid=474169055&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34; width=&#34;100%&#34; height=&#34;480&#34;&gt; &lt;/iframe&gt;
 &lt;p&gt;大家好，我是温铁军。现在是我们2021~2022的跨年之际，我在中国的北京向大家问候新年好，同时也想就人们广泛关注的几个重大问题跟大家做一个交流。&lt;/p&gt;
 &lt;p&gt;首先应该说的是中国的经济发展，很多国际组织包括中国国内的很多学者都在预测，因为2021年是中国最近这10年经济增长速度相对比较低的一年，或者甚至被人说成是经济增长速度下滑到最低的这一年，所以人们往往会认为2022年中国经济的发展前景堪忧。我倒是相对来讲还比较乐观一点，这个乐观产生于客观分析，是因为大家应该知道在2020年，我们因为遭遇到疫情的影响，同时也遭遇到全球经济增长下滑，也遭遇到上一轮贸易制裁所发生的后续影响。&lt;/p&gt;
 &lt;p&gt;实际上在多重影响之下，2020年就是上一个年度，我们曾经出现过300多万家个体经济注销，40万家股份制公司注销2500万沿海的打工者失业等等，就是各种各样的问题，实际上已经在2020年发生过。在2021年应该说从就业的情况看，并没有那么明显，尽管仍然有相当一批的企业注销，但是它的严重性似乎还不及2020年。从发生问题的情况看，应该说不是突发的，而是一个不断演变，甚至是可以说是一个危机延续的过程。&lt;/p&gt;
@@ -39365,15 +39357,7 @@ services:
 &lt;p&gt;减贫就把这个责任不是由他们这些弱势地区贫困村和贫困户承担，而是由政府来承担中国脱贫攻坚的成功，乃至于中国在2020年到2021年完成了所以实现全面小康的世纪任务或者我们叫历史任务，很大程度上靠的就是这种所谓举国体制，以国家不是别的，而是国家承担了欠发达地区，贫困乡村和贫困农户自己不可能形成的资本投资能力，国家承担投资能力，同时国家承担了投资风险，因此就是贫困乡村和贫困户可以零风险的获得投资收益最大化，但它并不就并不做投资，这个投资国家会把80%的投资所形成的资产交给贫困乡村，这样就等于是贫困乡村不投资，却获得了国家投资所形成的设施资产，这样就可以使贫困乡村叫做轻资产的形成了重资产的结构。&lt;/p&gt;
 &lt;p&gt;贫困农户则可以零资本的介入到重资产经营这样一套机制，我想也应该是我们在跨年之际，像世界上其他的各个国家，特别是有反贫困任务的国家，介绍的一个中国脱贫攻坚的经验。&lt;/p&gt;
 &lt;p&gt;好了，我的发言就到这儿，谢谢大家。&lt;/p&gt;
-&lt;p&gt;再次祝各位新年快乐。&lt;/p&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1FY411a7aZ&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;视频链接&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/section&gt;</description>
+&lt;p&gt;再次祝各位新年快乐。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -39739,6 +39723,8 @@ public:
   &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;p&gt;相关完整视频如下：&lt;/p&gt;
+&lt;iframe src=&#34;//player.bilibili.com/player.html?aid=251073544&amp;bvid=BV1gv41137wa&amp;cid=424911016&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34; width=&#34;100%&#34; height=&#34;480&#34;&gt; &lt;/iframe&gt;
 &lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
   &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
   &lt;nav id=&#34;TableOfContents&#34;&gt;
@@ -42216,7 +42202,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-718429356&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-819274365&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -42226,7 +42212,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-718429356&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-819274365&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();

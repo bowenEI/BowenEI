@@ -34,9 +34,9 @@ projects: []
 
 <!--more-->
 
-本文是温铁军教授跨年演讲的原文[^1]，不代表本文作者观点。
+本文是温铁军教授跨年演讲的原文（详见下方视频），不代表本文作者观点。
 
-------
+<iframe src="//player.bilibili.com/player.html?aid=252789197&bvid=BV1FY411a7aZ&cid=474169055&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="480"> </iframe>
 
 大家好，我是温铁军。现在是我们2021~2022的跨年之际，我在中国的北京向大家问候新年好，同时也想就人们广泛关注的几个重大问题跟大家做一个交流。
 
@@ -103,5 +103,3 @@ projects: []
 好了，我的发言就到这儿，谢谢大家。
 
 再次祝各位新年快乐。
-
-[^1]:[视频链接](https://www.bilibili.com/video/BV1FY411a7aZ)

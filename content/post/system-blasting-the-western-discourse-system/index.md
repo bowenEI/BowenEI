@@ -52,6 +52,10 @@ projects: []
 
 {{< /callout >}}
 
+相关完整视频如下：
+
+<iframe src="//player.bilibili.com/player.html?aid=251073544&bvid=BV1gv41137wa&cid=424911016&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="480"> </iframe>
+
 {{< toc >}}
 
 ## 绪论：打破中国话语赤字
