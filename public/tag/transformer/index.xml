@@ -23,7 +23,7 @@
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;特别鸣谢&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;本文结合亚马逊首席科学家&lt;a href=&#34;https://github.com/mli&#34;&gt;李沐&lt;/a&gt;的&lt;a href=&#34;https://www.bilibili.com/video/BV15P4y137jb&#34;&gt;深度学习论文精读系列视频&lt;/a&gt;进行整理。视频的主讲人是&lt;a href=&#34;https://bryanyzhu.github.io/&#34;&gt;朱毅&lt;/a&gt;研究员。&lt;/p&gt;
+&lt;p&gt;本文结合亚马逊首席科学家&lt;a href=&#34;https://github.com/mli&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;李沐&lt;/a&gt;的&lt;a href=&#34;https://www.bilibili.com/video/BV15P4y137jb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;深度学习论文精读系列视频&lt;/a&gt;进行整理。视频的主讲人是&lt;a href=&#34;https://bryanyzhu.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;朱毅&lt;/a&gt;研究员。&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;/div&gt;
@@ -130,6 +130,8 @@
 
 
 
+
+
 &lt;figure  id=&#34;figure-figure-1-model-overview-we-split-an-image-into-fixed-size-patches-linearly-embed-each-of-them-add-position-embeddings-and-feed-the-resulting-sequence-of-vectors-to-a-standard-transformer-encoder-in-order-to-perform-classification-we-use-the-standard-approach-of-adding-an-extra-learnable-classification-token-to-the-sequence&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Figure 1: Model overview. We split an image into fixed-size patches, linearly embed each of them, add position embeddings, and feed the resulting sequence of vectors to a standard Transformer encoder. In order to perform classification, we use the standard approach of adding an extra learnable “classification token” to the sequence.&#34; srcset=&#34;
@@ -148,6 +150,8 @@
 &lt;p&gt;接下来实际上就和 NLP 那边是完全一样了。经过 Transformer Encoder 之后，它会给我们很多输出。那么问题来了，应该用哪个输出去做最后的分类呢？这里还需要再次借鉴 BERT&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt; 当中的 extra learnable [class] embedding，即特殊字符 &lt;code&gt;cls&lt;/code&gt;。在 &lt;strong&gt;ViT&lt;/strong&gt; 中也加入了一个特殊字符，用 &lt;code&gt;*&lt;/code&gt; 代替，它的位置信息永远是 &lt;code&gt;0&lt;/code&gt;。因为自注意力机制使得每个 &lt;code&gt;token&lt;/code&gt; 之间都在互相学习，用一个空的 &lt;code&gt;token&lt;/code&gt; 就可以和图片的每个 &lt;code&gt;patch&lt;/code&gt; 交互学到完整的图片信息，所以只需要根据 &lt;code&gt;cls&lt;/code&gt; 对应的输出来判断即可。MLP Head 就是一个通用的分类头了，最后再用交叉熵函数去进行模型的训练。&lt;/p&gt;
 &lt;p&gt;至于这里的 Transformer Encoder 也是完全标准的，即图中右边的部分。所以说从整体结构上来看，&lt;strong&gt;ViT&lt;/strong&gt; 的结构非常简洁，它的特殊之处就在于如何将一个图片转化成一系列的 &lt;code&gt;token&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;那么下面结合下图 &lt;strong&gt;ViT&lt;/strong&gt; 的 Transformer 部分对 Transformer 模型再做一个回顾。&lt;/p&gt;
+
+
 
 
 
@@ -234,7 +238,7 @@
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;特别鸣谢&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;本文结合亚马逊首席科学家&lt;a href=&#34;https://github.com/mli&#34;&gt;李沐&lt;/a&gt;的&lt;a href=&#34;https://www.bilibili.com/video/BV1pu411o7BE&#34;&gt;深度学习论文精读系列视频&lt;/a&gt;进行整理。&lt;/p&gt;
+&lt;p&gt;本文结合亚马逊首席科学家&lt;a href=&#34;https://github.com/mli&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;李沐&lt;/a&gt;的&lt;a href=&#34;https://www.bilibili.com/video/BV1pu411o7BE&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;深度学习论文精读系列视频&lt;/a&gt;进行整理。&lt;/p&gt;
 
   &lt;/div&gt;
 &lt;/div&gt;
@@ -357,6 +361,8 @@
 
 
 
+
+
 &lt;figure  id=&#34;figure-the-transformer---model-architecture&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;The Transformer - model architecture.&#34; srcset=&#34;
@@ -443,6 +449,8 @@ Y = \frac{X - \mu}{\sigma}
 
 
 
+
+
 &lt;figure  id=&#34;figure-scaled-dot-product-attention&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Scaled Dot-Product Attention.&#34; srcset=&#34;
@@ -467,6 +475,8 @@ Y = \frac{X - \mu}{\sigma}
 &lt;p&gt;注意这里 &lt;code&gt;Mask&lt;/code&gt; 的作用是为了避免 $t$ 时刻看到后面的输入。在数学上的具体实现方式是以一个绝对值非常大的负数（$-\infty$）作为指数，计算出来的幂趋向于零，这样就实现了掩盖 $t$ 时刻后面的输入的效果。&lt;/p&gt;
 &lt;h4 id=&#34;322-multi-head-attention&#34;&gt;3.2.2 Multi-Head Attention&lt;/h4&gt;
 &lt;p&gt;作者认为，与其计算单个的注意力函数，不如把 &lt;code&gt;query&lt;/code&gt;、&lt;code&gt;key&lt;/code&gt;、&lt;code&gt;value&lt;/code&gt; 投影到一个更低的维度上，投影 $h$ 次，然后再计算 $h$ 次注意力函数，最后每一个函数的输出合并再投影得到最终的输出。如图所示。&lt;/p&gt;
+
+
 
 
 

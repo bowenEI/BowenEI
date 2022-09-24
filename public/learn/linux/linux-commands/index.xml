@@ -59,14 +59,13 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ls -a           # 列出所有文件(包括隐藏文件)
-ls -l           # 列出文件的详细信息
-ls /            # 列出根目录(/)下的所有目录
-ls -ltr s*      # 列出当前工作目录下所有名称是 “s” 开头的文件
-ls -lR /bin     # 列出 /bin 目录下的所有目录及文件的详细信息
-ls -AS          # 列出当前工作目录下所有文件及目录并以文件的大小进行排序
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;cp-命令复制文件或目录&#34;&gt;cp 命令：复制文件或目录&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls -a           &lt;span class=&#34;c1&#34;&gt;# 列出所有文件(包括隐藏文件)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls -l           &lt;span class=&#34;c1&#34;&gt;# 列出文件的详细信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls /            &lt;span class=&#34;c1&#34;&gt;# 列出根目录(/)下的所有目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls -ltr s*      &lt;span class=&#34;c1&#34;&gt;# 列出当前工作目录下所有名称是 “s” 开头的文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls -lR /bin     &lt;span class=&#34;c1&#34;&gt;# 列出 /bin 目录下的所有目录及文件的详细信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls -AS          &lt;span class=&#34;c1&#34;&gt;# 列出当前工作目录下所有文件及目录并以文件的大小进行排序&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cp-命令复制文件或目录&#34;&gt;cp 命令：复制文件或目录&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;cp&lt;/code&gt; 命令可以理解为英文单词 copy 的缩写，其功能为复制文件或目录。&lt;code&gt;cp&lt;/code&gt; 命令可以将多个文件复制到一个具体的文件名或一个已经存在的目录下，也可以同时复制多个文件到一个指定的目录中。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;常用参数&lt;/strong&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -120,12 +119,11 @@ ls -AS          # 列出当前工作目录下所有文件及目录并以文件�
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cp -R dir1 dir2/                # 复制目录
-cp -f test1 test2               # 将文件test1改名为test2
-cp -r file1 file2 file3 dir     # 复制多个文件
-cp -r /usr/linuxcool/*.c dir    # 交互式地将目录 /usr/linuxcool 中的所有.c文件复制到目录 dir 中
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;mkdir-命令创建目录&#34;&gt;mkdir 命令：创建目录&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp -R dir1 dir2/                &lt;span class=&#34;c1&#34;&gt;# 复制目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp -f test1 test2               &lt;span class=&#34;c1&#34;&gt;# 将文件test1改名为test2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp -r file1 file2 file3 dir     &lt;span class=&#34;c1&#34;&gt;# 复制多个文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp -r /usr/linuxcool/*.c dir    &lt;span class=&#34;c1&#34;&gt;# 交互式地将目录 /usr/linuxcool 中的所有.c文件复制到目录 dir 中&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;mkdir-命令创建目录&#34;&gt;mkdir 命令：创建目录&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;mkdir&lt;/code&gt; 命令是 make directories 的缩写，用来创建目录。&lt;/p&gt;
 &lt;p&gt;注意：默认状态下，如果要创建的目录已经存在，则提示已存在，而不会继续创建目录。所以在创建目录时，应保证新建的目录与它所在目录下的文件没有重名。&lt;code&gt;mkdir&lt;/code&gt; 命令还可以同时创建多个目录，是不是很强大呢？&lt;/p&gt;
 &lt;table&gt;
@@ -155,12 +153,11 @@ cp -r /usr/linuxcool/*.c dir    # 交互式地将目录 /usr/linuxcool 中的所
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir dir                           # 在工作目录下，建立一个名为 dir 的子目录
-mkdir -m 700 /usr/linuxcool/dir     # 在目录/usr/linuxcool下建立子目录dir，并且设置文件属主有读、写和执行权限，其他人无权访问
-mkdir dir1 dir2 dir3                # 同时创建子目录dir1，dir2，dir3
-mkdir -p linuxcool/dir              # 递归创建目录
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;mv-命令移动文件或目录&#34;&gt;mv 命令：移动文件或目录&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir dir                           &lt;span class=&#34;c1&#34;&gt;# 在工作目录下，建立一个名为 dir 的子目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -m &lt;span class=&#34;m&#34;&gt;700&lt;/span&gt; /usr/linuxcool/dir     &lt;span class=&#34;c1&#34;&gt;# 在目录/usr/linuxcool下建立子目录dir，并且设置文件属主有读、写和执行权限，其他人无权访问&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir dir1 dir2 dir3                &lt;span class=&#34;c1&#34;&gt;# 同时创建子目录dir1，dir2，dir3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p linuxcool/dir              &lt;span class=&#34;c1&#34;&gt;# 递归创建目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;mv-命令移动文件或目录&#34;&gt;mv 命令：移动文件或目录&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;mv&lt;/code&gt;命令是英文单词 move 的缩写，其功能大致和英文含义一样，可以移动文件或对其改名。&lt;/p&gt;
 &lt;p&gt;这是一个使用频率超高的文件管理命令，我们需要特别留意它与复制的区别：&lt;code&gt;mv&lt;/code&gt; 与 &lt;code&gt;cp&lt;/code&gt; 的结果不同。&lt;code&gt;mv&lt;/code&gt; 命令好像文件“搬家”，文件名称发生改变，但个数并未增加。而 &lt;code&gt;cp&lt;/code&gt; 命令是对文件进行复制操作，文件个数是有增加的。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;常用参数&lt;/strong&gt;&lt;/p&gt;
@@ -191,12 +188,11 @@ mkdir -p linuxcool/dir              # 递归创建目录
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mv file_1 file_2        # 将文件file_1重命名为file_2
-mv file /dir            # 将文件file移动到目录dir中
-mv /dir1 /dir2          # 将目录dir1移动目录dir2中(前提是目录dir2已存在，若不存在则改名)
-mv /dir1/* .            # 将目录dir1下的文件移动到当前目录下
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;pwd-命令显示当前路径&#34;&gt;pwd 命令：显示当前路径&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv file_1 file_2        &lt;span class=&#34;c1&#34;&gt;# 将文件file_1重命名为file_2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv file /dir            &lt;span class=&#34;c1&#34;&gt;# 将文件file移动到目录dir中&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv /dir1 /dir2          &lt;span class=&#34;c1&#34;&gt;# 将目录dir1移动目录dir2中(前提是目录dir2已存在，若不存在则改名)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv /dir1/* .            &lt;span class=&#34;c1&#34;&gt;# 将目录dir1下的文件移动到当前目录下&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;pwd-命令显示当前路径&#34;&gt;pwd 命令：显示当前路径&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;pwd&lt;/code&gt; 命令是 print working directory 中每个单词的首字母缩写，其功能正如所示单词一样，为打印工作目录，即显示当前工作目录的绝对路径。&lt;/p&gt;
 &lt;h2 id=&#34;rm-命令移除文件或目录&#34;&gt;rm 命令：移除文件或目录&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;rm&lt;/code&gt; 是常用的命令，该命令的功能为删除一个目录中的一个或多个文件或目录，它也可以将某个目录及其下的所有文件及子目录均删除。对于链接文件，只是删除了链接，原有文件均保持不变。&lt;/p&gt;
@@ -229,13 +225,12 @@ mv /dir1/* .            # 将目录dir1下的文件移动到当前目录下
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rm -i test.txt.bz2      # 删除前逐一询问确认
-rm -f test.txt.bz2      # 直接删除，不会有任何提示
-rm -rf /data/log        # 递归删除目录及目录下所有文件
-rm -rf *                # 删除当前目录下所有文件
-rm -rf /*               # 清空系统中所有的文件(!!!)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;rmdir-命令删除空目录&#34;&gt;rmdir 命令：删除空目录&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -i test.txt.bz2      &lt;span class=&#34;c1&#34;&gt;# 删除前逐一询问确认&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -f test.txt.bz2      &lt;span class=&#34;c1&#34;&gt;# 直接删除，不会有任何提示&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -rf /data/log        &lt;span class=&#34;c1&#34;&gt;# 递归删除目录及目录下所有文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -rf *                &lt;span class=&#34;c1&#34;&gt;# 删除当前目录下所有文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -rf /*               &lt;span class=&#34;c1&#34;&gt;# 清空系统中所有的文件(!!!)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;rmdir-命令删除空目录&#34;&gt;rmdir 命令：删除空目录&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;rmdir&lt;/code&gt; 命令作用是删除空的目录，英文全称为 remove directory。&lt;/p&gt;
 &lt;p&gt;注意：&lt;code&gt;rmdir&lt;/code&gt; 命令只能删除空目录。当要删除非空目录时，就要使用带有 &lt;code&gt;-R&lt;/code&gt; 选项的 &lt;code&gt;rm&lt;/code&gt; 命令。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;rmdir&lt;/code&gt; 命令的 &lt;code&gt;-p&lt;/code&gt; 参数可以递归删除指定的多级目录，但是要求每个目录也必须是空目录。&lt;/p&gt;
@@ -271,12 +266,11 @@ rm -rf /*               # 清空系统中所有的文件(!!!)
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;rmdir dir                       # 删除空目录
-rmdir -p dir/dir_1/dir_2        # 递归删除指定的目录树
-rmdir -v dir                    # 显示指令详细执行过程
-rmdir -p -v dir/dir_1/dir_2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;ln-命令为文件创建链接&#34;&gt;ln 命令：为文件创建链接&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rmdir dir                       &lt;span class=&#34;c1&#34;&gt;# 删除空目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rmdir -p dir/dir_1/dir_2        &lt;span class=&#34;c1&#34;&gt;# 递归删除指定的目录树&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rmdir -v dir                    &lt;span class=&#34;c1&#34;&gt;# 显示指令详细执行过程&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rmdir -p -v dir/dir_1/dir_2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ln-命令为文件创建链接&#34;&gt;ln 命令：为文件创建链接&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;ln&lt;/code&gt; 命令是 &lt;strong&gt;Linux&lt;/strong&gt; 系统中一个非常重要命令，英文全称是 link，即链接的意思，它的功能是为某一个文件在另外一个位置建立一个同步的链接。一种是 hard link，即硬链接；另一种是 symbolic link，即符号链接，又称为软链接。&lt;/p&gt;
 &lt;p&gt;通俗一点理解，可以把硬链接当成源文件的副本，他和源文件一样的大小，但是事实上却不占任何空间。符号链接可以理解为类似Windows一样的快捷方式。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;符号链接&lt;/strong&gt;&lt;/p&gt;
@@ -332,11 +326,11 @@ rmdir -p -v dir/dir_1/dir_2
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ln /root/dir/file.txt ./file_1      # 为源文件file.txt创建硬链接file_1
-ln -s dir ../dir_1                  # 为dir文件夹创建软链接
-ln -v /root/dir/file.txt ./file_1   # 使用-v参数显示命令详细执行过程
-ln -b /root/dir/file.txt ./file_1   # 使用-b参数创建目标文件的备份文件
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln /root/dir/file.txt ./file_1      &lt;span class=&#34;c1&#34;&gt;# 为源文件file.txt创建硬链接file_1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s dir ../dir_1                  &lt;span class=&#34;c1&#34;&gt;# 为dir文件夹创建软链接&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -v /root/dir/file.txt ./file_1   &lt;span class=&#34;c1&#34;&gt;# 使用-v参数显示命令详细执行过程&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -b /root/dir/file.txt ./file_1   &lt;span class=&#34;c1&#34;&gt;# 使用-b参数创建目标文件的备份文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -403,14 +397,13 @@ ln -b /root/dir/file.txt ./file_1   # 使用-b参数创建目标文件的备份�
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat filename.txt                        # 查看文件的内容
-cat -n filename.txt                     # 查看文件的内容，并显示行数编号
-cat -n linuxcool.log &amp;gt; linuxprobe.log   # 查看文件的内容，并添加行数编号后输出到另外一个文件中
-cat /dev/null &amp;gt; /root/filename.txt      # 清空文件的内容
-cat &amp;gt; filename.txt &amp;lt;&amp;lt;EOF                # 持续写入文件内容，碰到EOF符后结束并保存
-cat /dev/fd0 &amp;gt; fdisk.iso                # 将软盘设备制作成镜像文件
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;echo-命令输出字符串或提取shell变量的值&#34;&gt;echo 命令：输出字符串或提取Shell变量的值&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat filename.txt                        &lt;span class=&#34;c1&#34;&gt;# 查看文件的内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat -n filename.txt                     &lt;span class=&#34;c1&#34;&gt;# 查看文件的内容，并显示行数编号&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat -n linuxcool.log &amp;gt; linuxprobe.log   &lt;span class=&#34;c1&#34;&gt;# 查看文件的内容，并添加行数编号后输出到另外一个文件中&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat /dev/null &amp;gt; /root/filename.txt      &lt;span class=&#34;c1&#34;&gt;# 清空文件的内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat &amp;gt; filename.txt &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt;EOF                # 持续写入文件内容，碰到EOF&lt;/span&gt;符后结束并保存
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat /dev/fd0 &amp;gt; fdisk.iso                &lt;span class=&#34;c1&#34;&gt;# 将软盘设备制作成镜像文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;echo-命令输出字符串或提取shell变量的值&#34;&gt;echo 命令：输出字符串或提取Shell变量的值&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;echo&lt;/code&gt; 命令用于在终端设备上输出字符串或变量提取后的值，这是在 &lt;strong&gt;Linux&lt;/strong&gt; 系统中最常用的几个命令之一，但操作却非常简单。&lt;/p&gt;
 &lt;p&gt;人们一般使用在变量前加上 &lt;code&gt;$&lt;/code&gt; 符号的方式提取出变量的值，例如：&lt;code&gt;PATH&lt;/code&gt;，然后再用 &lt;code&gt;echo&lt;/code&gt; 命令予以输出。或者直接使用 &lt;code&gt;echo&lt;/code&gt; 命令输出一段字符串到屏幕上，起到给用户提示的作用。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;常用参数&lt;/strong&gt;&lt;/p&gt;
@@ -465,15 +458,14 @@ cat /dev/fd0 &amp;gt; fdisk.iso                # 将软盘设备制作成镜像�
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;echo &amp;quot;Hello World!&amp;quot;                 # 输出一段字符串
-echo $PATH                          # 输出变量提取后的值
-echo \$PATH                         # 对内容进行转义，不让$符号的提取变量值功能生效
-echo &amp;quot;Hello World!&amp;quot; &amp;gt; linuxcool     # 结合输出重定向符，将字符串信息导入文件中
-echo `date`                         # 使用反引号符执行命令，并输出其结果到终端
-echo -e &amp;quot;a\nb\nc&amp;quot;                   # 输出带有换行符的内容
-echo -e &amp;quot;123\b456&amp;quot;                  # 输出信息中删除某个字符，注意看数字3消失了
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;tail-命令查看文件尾部内容&#34;&gt;tail 命令：查看文件尾部内容&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;                 &lt;span class=&#34;c1&#34;&gt;# 输出一段字符串&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;                          &lt;span class=&#34;c1&#34;&gt;# 输出变量提取后的值&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\$&lt;/span&gt;PATH                         &lt;span class=&#34;c1&#34;&gt;# 对内容进行转义，不让$符号的提取变量值功能生效&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt; &amp;gt; linuxcool     &lt;span class=&#34;c1&#34;&gt;# 结合输出重定向符，将字符串信息导入文件中&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;date&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;                         &lt;span class=&#34;c1&#34;&gt;# 使用反引号符执行命令，并输出其结果到终端&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;a\nb\nc&amp;#34;&lt;/span&gt;                   &lt;span class=&#34;c1&#34;&gt;# 输出带有换行符的内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;123\b456&amp;#34;&lt;/span&gt;                  &lt;span class=&#34;c1&#34;&gt;# 输出信息中删除某个字符，注意看数字3消失了&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;tail-命令查看文件尾部内容&#34;&gt;tail 命令：查看文件尾部内容&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;tail&lt;/code&gt; 用于显示文件尾部的内容，默认在屏幕上显示指定文件的末尾10行。如果给定的文件不止一个，则在显示的每个文件前面加一个文件名标题。如果没有指定文件或者文件名为 &lt;code&gt;-&lt;/code&gt;，则读取标准输入。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;常用参数&lt;/strong&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -519,12 +511,11 @@ echo -e &amp;quot;123\b456&amp;quot;                  # 输出信息中删除某
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;tail file           # 显示文件file的最后10行
-tail +20 file       # 显示文件file的内容，从第20行至文件末尾
-tail -c 10 file     # 显示文件file的最后10个字符
-tail -f 10 file     # 一直变化的文件总是显示后10行
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;grep-命令强大的文本搜索工具&#34;&gt;grep 命令：强大的文本搜索工具&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tail file           &lt;span class=&#34;c1&#34;&gt;# 显示文件file的最后10行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tail +20 file       &lt;span class=&#34;c1&#34;&gt;# 显示文件file的内容，从第20行至文件末尾&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tail -c &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; file     &lt;span class=&#34;c1&#34;&gt;# 显示文件file的最后10个字符&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tail -f &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; file     &lt;span class=&#34;c1&#34;&gt;# 一直变化的文件总是显示后10行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;grep-命令强大的文本搜索工具&#34;&gt;grep 命令：强大的文本搜索工具&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;grep&lt;/code&gt; 是 global search regular expression and print out the line 的简称，意思是全面搜索正则表达式，并将其打印出来。这个命令可以结合正则表达式使用，它也是Linux使用最为广泛的命令。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;grep&lt;/code&gt; 命令的选项用于对搜索过程的补充，而其命令的模式十分灵活，可以是变量、字符串、正则表达式。需要注意的是：一当模式中包含了空格，务必要用双引号将其引起来。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Linux&lt;/strong&gt; 系统支持三种形式的 &lt;code&gt;grep&lt;/code&gt; 命令，大儿子就是 &lt;code&gt;grep&lt;/code&gt;，标准，模仿的代表。二儿子兴趣爱好多 &lt;code&gt;-egrep&lt;/code&gt;，简称扩展 &lt;code&gt;grep&lt;/code&gt; 命令，其实和 &lt;code&gt;grep -E&lt;/code&gt; 等价，支持基本和扩展的正则表达式。小儿子跑的最快 &lt;code&gt;-fgrep&lt;/code&gt;，简称快速 &lt;code&gt;grep&lt;/code&gt; 命令，其实和 &lt;code&gt;grep -F&lt;/code&gt; 等价，不支持正则表达式，按照字符串表面意思进行匹配。&lt;/p&gt;
@@ -592,11 +583,11 @@ tail -f 10 file     # 一直变化的文件总是显示后10行
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;grep zwx file_* /etc/hosts  # 对所有以file_开头的文件和/etc下的hosts文件匹配zwx
-grep -c zwx file_*          # 输出匹配字符串行的数量
-grep -n zwx file_*          # 列出所有的匹配行，并显示行号
-grep -vc zwx file_*         # 显示不包含模式的所有行
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grep zwx file_* /etc/hosts  &lt;span class=&#34;c1&#34;&gt;# 对所有以file_开头的文件和/etc下的hosts文件匹配zwx&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grep -c zwx file_*          &lt;span class=&#34;c1&#34;&gt;# 输出匹配字符串行的数量&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grep -n zwx file_*          &lt;span class=&#34;c1&#34;&gt;# 列出所有的匹配行，并显示行号&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grep -vc zwx file_*         &lt;span class=&#34;c1&#34;&gt;# 显示不包含模式的所有行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -692,12 +683,11 @@ grep -vc zwx file_*         # 显示不包含模式的所有行
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo su                 # 切换到root用户
-sudo -u userb ls -l     # 执行用户userb的指令
-sudo !!                 # 以root权限执行上一条命令
-sudo -l                 # 列出目前的权限
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;su-命令切换用户&#34;&gt;su 命令：切换用户&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo su                 &lt;span class=&#34;c1&#34;&gt;# 切换到root用户&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo -u userb ls -l     &lt;span class=&#34;c1&#34;&gt;# 执行用户userb的指令&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo !!                 &lt;span class=&#34;c1&#34;&gt;# 以root权限执行上一条命令&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo -l                 &lt;span class=&#34;c1&#34;&gt;# 列出目前的权限&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;su-命令切换用户&#34;&gt;su 命令：切换用户&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;su&lt;/code&gt; 命令用于切换当前用户身份到指定用户或者以指定用户的身份执行命令或程序。&lt;/p&gt;
 &lt;p&gt;普通用户切换到root用户，可以使用 &lt;code&gt;su --&lt;/code&gt; 或 &lt;code&gt;su root&lt;/code&gt;，但是必须输入 root 密码才能完成切换。root 用户切换到普通用户，可以使用 &lt;code&gt;su username&lt;/code&gt;，不需要输入任何密码即可完成切换。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;常用参数&lt;/strong&gt;&lt;/p&gt;
@@ -740,11 +730,10 @@ sudo -l                 # 列出目前的权限
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;su linuxcool            # 切换到linuxcool用户，但环境变量仍然是root用户的
-su -l linuxcool         # 切换到linuxcool用户，并改变为linuxcool用户环境变量
-su root -f              # 变更帐号为 root 并传入 -f 参数给新执行的 shell
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;export-命令查看与配置shell变量或函数&#34;&gt;export 命令：查看与配置shell变量或函数&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;su linuxcool            &lt;span class=&#34;c1&#34;&gt;# 切换到linuxcool用户，但环境变量仍然是root用户的&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;su -l linuxcool         &lt;span class=&#34;c1&#34;&gt;# 切换到linuxcool用户，并改变为linuxcool用户环境变量&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;su root -f              &lt;span class=&#34;c1&#34;&gt;# 变更帐号为 root 并传入 -f 参数给新执行的 shell&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;export-命令查看与配置shell变量或函数&#34;&gt;export 命令：查看与配置shell变量或函数&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;export&lt;/code&gt; 命令用于将 shell 变量输出为环境变量，或者将 shell 函数输出为环境变量。&lt;/p&gt;
 &lt;p&gt;一个变量创建时，它不会自动地为在它之后创建的 shell 进程所知。而命令 &lt;code&gt;export&lt;/code&gt; 可以向后面的 shell 传递变量的值。当一个 shell 脚本调用并执行时，它不会自动得到原为脚本（调用者）里定义的变量的访问权，除非这些变量已经被显式地设置为可用。&lt;code&gt;export&lt;/code&gt; 命令可以用于传递一个或多个变量的值到任何后继脚本。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;常用参数&lt;/strong&gt;&lt;/p&gt;
@@ -771,11 +760,10 @@ su root -f              # 变更帐号为 root 并传入 -f 参数给新执行�
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export -p                               # 列出所有环境变量
-export CUDA_PATH                        # 定义环境变量
-export PATH=$PATH:/usr/local/cuda/bin   # 定义cuda的环境变量并赋值，$表示引用环境变量值，:用于分隔这些值
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;unset-命令删除指定的shell变量或函数&#34;&gt;unset 命令：删除指定的shell变量或函数&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; -p                               &lt;span class=&#34;c1&#34;&gt;# 列出所有环境变量&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; CUDA_PATH                        &lt;span class=&#34;c1&#34;&gt;# 定义环境变量&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;:/usr/local/cuda/bin   &lt;span class=&#34;c1&#34;&gt;# 定义cuda的环境变量并赋值，$表示引用环境变量值，:用于分隔这些值&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;unset-命令删除指定的shell变量或函数&#34;&gt;unset 命令：删除指定的shell变量或函数&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;unset&lt;/code&gt; 命令用于删除已定义的 shell 变量（包括环境变量）和 shell 函数。&lt;code&gt;unset&lt;/code&gt; 命令不能够删除具有只读属性的 shell 变量和环境变量。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;常用参数&lt;/strong&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -797,8 +785,8 @@ export PATH=$PATH:/usr/local/cuda/bin   # 定义cuda的环境变量并赋值，$
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;unset -v all_proxy      # 删除变量all_proxy及其对应的值
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;unset&lt;/span&gt; -v all_proxy      &lt;span class=&#34;c1&#34;&gt;# 删除变量all_proxy及其对应的值&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -864,15 +852,14 @@ export PATH=$PATH:/usr/local/cuda/bin   # 定义cuda的环境变量并赋值，$
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;apt update                      # 列出可更新的软件包
-apt upgrade                     # 升级软件包
-apt install gcc                 # 安装gcc
-apt remove g++                  # 卸载g++
-apt -purge remove packagename   # 卸载软件（删除配置文件）
-apt list --installed            # 列出所有已安装的包
-apt show golang                 # 显示 golang 的具体信息，例如：版本号，安装大小，依赖关系等等
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;dpkg-命令deb包管理&#34;&gt;dpkg 命令：deb包管理&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt update                      &lt;span class=&#34;c1&#34;&gt;# 列出可更新的软件包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt upgrade                     &lt;span class=&#34;c1&#34;&gt;# 升级软件包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt install gcc                 &lt;span class=&#34;c1&#34;&gt;# 安装gcc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt remove g++                  &lt;span class=&#34;c1&#34;&gt;# 卸载g++&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt -purge remove packagename   &lt;span class=&#34;c1&#34;&gt;# 卸载软件（删除配置文件）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt list --installed            &lt;span class=&#34;c1&#34;&gt;# 列出所有已安装的包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt show golang                 &lt;span class=&#34;c1&#34;&gt;# 显示 golang 的具体信息，例如：版本号，安装大小，依赖关系等等&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;dpkg-命令deb包管理&#34;&gt;dpkg 命令：deb包管理&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;dpkg&lt;/code&gt; 命令的英文全称是 Debian package，故名意思是 Debian Linux 系统用来安装、创建和管理软件包的实用工具。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;常用参数&lt;/strong&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -905,11 +892,11 @@ apt show golang                 # 显示 golang 的具体信息，例如：版�
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;dpkg -i package.deb     # 安装包
-dpkg -r package.deb     # 删除包
-dpkg -l                 # 列出当前已安装的包
-dpkg -c package.deb     # 列出 deb 包的内容
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dpkg -i package.deb     &lt;span class=&#34;c1&#34;&gt;# 安装包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dpkg -r package.deb     &lt;span class=&#34;c1&#34;&gt;# 删除包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dpkg -l                 &lt;span class=&#34;c1&#34;&gt;# 列出当前已安装的包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dpkg -c package.deb     &lt;span class=&#34;c1&#34;&gt;# 列出 deb 包的内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -1028,12 +1015,12 @@ dpkg -c package.deb     # 列出 deb 包的内容
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;tar -cf all.tar *.jpg                               # 将所有 .jpg 的文件打成一个名为 all.tar 的包
-tar -cvf linuxcool.tar linuxcool --remove-files     # 打包文件之后删除源文件
-tar -zcvf log.tar.gz linuxcool.log                  # 打包文件以后，以 gzip 压缩
-tar -xzvf package.tar.gz                            # 解压 tar.gz 包
-tar -xzJf package.tar.xz                            # 解压 tar.xz 包
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -cf all.tar *.jpg                               &lt;span class=&#34;c1&#34;&gt;# 将所有 .jpg 的文件打成一个名为 all.tar 的包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -cvf linuxcool.tar linuxcool --remove-files     &lt;span class=&#34;c1&#34;&gt;# 打包文件之后删除源文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -zcvf log.tar.gz linuxcool.log                  &lt;span class=&#34;c1&#34;&gt;# 打包文件以后，以 gzip 压缩&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -xzvf package.tar.gz                            &lt;span class=&#34;c1&#34;&gt;# 解压 tar.gz 包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -xzJf package.tar.xz                            &lt;span class=&#34;c1&#34;&gt;# 解压 tar.xz 包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -1104,12 +1091,11 @@ tar -xzJf package.tar.xz                            # 解压 tar.xz 包
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ping www.baidu.com                                      # 检测与百度网站的连通性
-ping -c 4 www.baidu.com                                 # 连续ping4次
-ping -c 4 -i 3 www.baidu.com                            # 设置次数为4，时间间隔为3秒
-ping -c 1 www.baidu.com | grep from | cut -d &amp;quot; &amp;quot; -f 4   # 利用ping命令获取指定网站的IP地址
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;ifconfig-命令显示或设置网络设备&#34;&gt;ifconfig 命令：显示或设置网络设备&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ping www.baidu.com                                      &lt;span class=&#34;c1&#34;&gt;# 检测与百度网站的连通性&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ping -c &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; www.baidu.com                                 &lt;span class=&#34;c1&#34;&gt;# 连续ping4次&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ping -c &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -i &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; www.baidu.com                            &lt;span class=&#34;c1&#34;&gt;# 设置次数为4，时间间隔为3秒&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ping -c &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; www.baidu.com &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep from &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; cut -d &lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt; -f &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# 利用ping命令获取指定网站的IP地址&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ifconfig-命令显示或设置网络设备&#34;&gt;ifconfig 命令：显示或设置网络设备&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;ifconfig&lt;/code&gt; 命令的英文全称是 network interfaces configuring，即用于配置和显示 &lt;strong&gt;Linux&lt;/strong&gt; 内核中网络接口的网络参数。用 &lt;code&gt;ifconfig&lt;/code&gt; 命令配置的网卡信息，在网卡重启后机器重启后，配置就不存在。要想将上述的配置信息永远的存的电脑里，那就要修改网卡的配置文件了。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;常用参数&lt;/strong&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -1236,11 +1222,10 @@ ping -c 1 www.baidu.com | grep from | cut -d &amp;quot; &amp;quot; -f 4   # 利�
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh 202.102.240.88                  # 登录远程服务器
-ssh -l test 202.102.220.88          # 用test用户连接远程服务器
-ssh 202.102.220.88 /sbin/fdisk -l   # 查看分区列表
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;netstat-命令显示网络状态&#34;&gt;netstat 命令：显示网络状态&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh 202.102.240.88                  &lt;span class=&#34;c1&#34;&gt;# 登录远程服务器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -l &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; 202.102.220.88          &lt;span class=&#34;c1&#34;&gt;# 用test用户连接远程服务器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh 202.102.220.88 /sbin/fdisk -l   &lt;span class=&#34;c1&#34;&gt;# 查看分区列表&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;netstat-命令显示网络状态&#34;&gt;netstat 命令：显示网络状态&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;netstat&lt;/code&gt; 命令用于显示各种网络相关信息，如网络连接，路由表，接口状态（Interface Statistics），masquerade 连接，多播成员（Multicast Memberships）等等。&lt;/p&gt;
 &lt;p&gt;从整体上看，&lt;code&gt;netstat&lt;/code&gt; 的输出结果可以分为两个部分：一个是 Active Internet connections，称为有源 TCP 连接，其中 Recv-Q 和 Send-Q 分别指接收队列和发送队列。这些数字一般都应该是 0。如果不是则表示软件包正在队列中堆积。这种情况只能在非常少的情况见到；另一个是 Active UNIX domain sockets，称为有源 Unix 域套接口（和网络套接字一样，但是只能用于本机通信，性能可以提高一倍）。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;常用参数&lt;/strong&gt;&lt;/p&gt;
@@ -1275,12 +1260,12 @@ ssh 202.102.220.88 /sbin/fdisk -l   # 查看分区列表
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;netstat -a          # 显示详细的网络状况
-netstat -u          # 显示当前户籍UDP连接状况
-netstat -apu        # 显示UDP端口号的使用情况
-netstat -i          # 显示网卡列表
-netstat -g          # 显示组播组的关系
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;netstat -a          &lt;span class=&#34;c1&#34;&gt;# 显示详细的网络状况&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;netstat -u          &lt;span class=&#34;c1&#34;&gt;# 显示当前户籍UDP连接状况&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;netstat -apu        &lt;span class=&#34;c1&#34;&gt;# 显示UDP端口号的使用情况&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;netstat -i          &lt;span class=&#34;c1&#34;&gt;# 显示网卡列表&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;netstat -g          &lt;span class=&#34;c1&#34;&gt;# 显示组播组的关系&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -1291,6 +1276,8 @@ netstat -g          # 显示组播组的关系
       <description>&lt;h2 id=&#34;chomd-命令改变文件或目录权限&#34;&gt;chomd 命令：改变文件或目录权限&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;chmod&lt;/code&gt; 命令的英文原意是 change the permissions mode of a file，我们简称为 change mode，意为用来改变文件或目录权限的命令，但是只有文件的属主和超级用户 root 才能执行这个命令。有两种模式，一种是采用权限字母和操作符表达式；另一种是采用数字。&lt;/p&gt;
 &lt;p&gt;Linux/Unix 的文件调用权限分为三级：文件所有者（Owner）、用户组（Group）、其它用户（Other Users）。只有文件所有者和超级用户可以修改文件或目录的权限。可以使用绝对模式（八进制数字模式），符号模式指定文件的权限。&lt;/p&gt;
+
+
 
 
 
@@ -1501,13 +1488,12 @@ netstat -g          # 显示组播组的关系
 &lt;li&gt;其它用户的权限数字表达：其它用户权限位的数字相加的总和。如 r-x ，也就是 4+0+1 ，应该是 5。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;chmod a+r file.txt                      # 将文件 file.txt 设为所有人皆可读取
-chmod -R a+r *                          # 将目前目录下的所有文件与子目录皆设为任何人可读取
-chmod u+x file.txt                      # 将 file.txt 设定为只有该文件拥有者可以执行
-chmod ug+w, o-w file1.txt file2.txt     # 将文件 file1.txt 与 file2.txt 设为该文件拥有者，与其所属同一个群体者可写入，但其他以外的人则不可写入
-chmod 777 file.txt                      # 将文件 file.txt 设为所有人可以读写执行
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;chown-命令改变文件或目录用户和用户组&#34;&gt;chown 命令：改变文件或目录用户和用户组&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod a+r file.txt                      &lt;span class=&#34;c1&#34;&gt;# 将文件 file.txt 设为所有人皆可读取&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod -R a+r *                          &lt;span class=&#34;c1&#34;&gt;# 将目前目录下的所有文件与子目录皆设为任何人可读取&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod u+x file.txt                      &lt;span class=&#34;c1&#34;&gt;# 将 file.txt 设定为只有该文件拥有者可以执行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod ug+w, o-w file1.txt file2.txt     &lt;span class=&#34;c1&#34;&gt;# 将文件 file1.txt 与 file2.txt 设为该文件拥有者，与其所属同一个群体者可写入，但其他以外的人则不可写入&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod &lt;span class=&#34;m&#34;&gt;777&lt;/span&gt; file.txt                      &lt;span class=&#34;c1&#34;&gt;# 将文件 file.txt 设为所有人可以读写执行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;chown-命令改变文件或目录用户和用户组&#34;&gt;chown 命令：改变文件或目录用户和用户组&lt;/h2&gt;
 &lt;p&gt;Linux/Unix 属于多用户多任务操作系统，所有的文件皆有拥有者。利用 &lt;code&gt;chown&lt;/code&gt; 命令可以将指定文件的拥有者改为指定的用户或组，用户可以是用户名或者用户 ID，组可以是组名或者组 ID，文件是以空格分开的要改变权限的文件列表，支持通配符。一般来说，这个指令仅限系统管理者 root 所使用，普通用户没有权限改变文件所属者及所属组。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;常用参数&lt;/strong&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -1541,11 +1527,10 @@ chmod 777 file.txt                      # 将文件 file.txt 设为所有人可�
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;chown user1 file1           # 改变一个文件的所有人属性
-chown -R user1 directory1   # 改变一个目录的所有人属性并同时改变该目录下所有文件的属性
-chown user1:group1 file1    # 改变一个文件的所有人和群组属性
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;chgrp-命令更改文件用户组&#34;&gt;chgrp 命令：更改文件用户组&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chown user1 file1           &lt;span class=&#34;c1&#34;&gt;# 改变一个文件的所有人属性&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chown -R user1 directory1   &lt;span class=&#34;c1&#34;&gt;# 改变一个目录的所有人属性并同时改变该目录下所有文件的属性&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chown user1:group1 file1    &lt;span class=&#34;c1&#34;&gt;# 改变一个文件的所有人和群组属性&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;chgrp-命令更改文件用户组&#34;&gt;chgrp 命令：更改文件用户组&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;chgrp&lt;/code&gt; 是英语单词 change group 的缩写，命令的作用和其中文释义一样，为用于变更文件或目录的所属群组。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;常用参数&lt;/strong&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -1583,10 +1568,10 @@ chown user1:group1 file1    # 改变一个文件的所有人和群组属性
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;chgrp group1 file1                  # 改变文件的群组
-chgrp --reference=file_1 file_2     # 根据指定文件改变文件的群组属性
-chgrp -R cool /usr/linuxcool        # 将/usr/linuxcool及其子目录下的所有文件的用户组改为cool
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chgrp group1 file1                  &lt;span class=&#34;c1&#34;&gt;# 改变文件的群组&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chgrp --reference&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;file_1 file_2     &lt;span class=&#34;c1&#34;&gt;# 根据指定文件改变文件的群组属性&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chgrp -R cool /usr/linuxcool        &lt;span class=&#34;c1&#34;&gt;# 将/usr/linuxcool及其子目录下的所有文件的用户组改为cool&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -1857,15 +1842,14 @@ chgrp -R cool /usr/linuxcool        # 将/usr/linuxcool及其子目录下的所�
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ps -aux                 # 把所有进程显示出来
-ps -A                   # 把所有进程显示出来
-ps -aux &amp;gt; ps.txt        # 把所有进程显示出来，并输出到ps.txt文件
-ps -ef | grep ssh       # 查找特定进程信息
-ps -u root              # 显示指定用户信息
-ps -aux | sort -nk 3    # 按 CPU 资源的使用量对进程进行排序
-ps -aux | sort -rnk 4   # 按内存资源的使用量对进程进行排序
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;kill-命令杀死进程&#34;&gt;kill 命令：杀死进程&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ps -aux                 &lt;span class=&#34;c1&#34;&gt;# 把所有进程显示出来&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ps -A                   &lt;span class=&#34;c1&#34;&gt;# 把所有进程显示出来&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ps -aux &amp;gt; ps.txt        &lt;span class=&#34;c1&#34;&gt;# 把所有进程显示出来，并输出到ps.txt文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ps -ef &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep ssh       &lt;span class=&#34;c1&#34;&gt;# 查找特定进程信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ps -u root              &lt;span class=&#34;c1&#34;&gt;# 显示指定用户信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ps -aux &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort -nk &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;# 按 CPU 资源的使用量对进程进行排序&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ps -aux &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort -rnk &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# 按内存资源的使用量对进程进行排序&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;kill-命令杀死进程&#34;&gt;kill 命令：杀死进程&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;kill&lt;/code&gt; 正如这个单词的意思一样，就是杀死。&lt;strong&gt;Linux&lt;/strong&gt; 系统中 &lt;code&gt;kill&lt;/code&gt; 命令用来删除执行中的程序或工作。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;kill&lt;/code&gt; 命令可将指定的信号发送给相应的进程或工作。&lt;code&gt;kill&lt;/code&gt; 命令默认使用信号为 15，用于结束进程或工作。如果进程或工作忽略此信号，则可以使用信号 9，强制杀死进程或作业。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;常用参数&lt;/strong&gt;&lt;/p&gt;
@@ -1896,10 +1880,9 @@ ps -aux | sort -rnk 4   # 按内存资源的使用量对进程进行排序
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;kill -l         # 列出系统支持的信号列表
-kill -9 1951    # 强制杀死进程 PID 为 1951 的进程
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;常用的信号量&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;kill&lt;/span&gt; -l         &lt;span class=&#34;c1&#34;&gt;# 列出系统支持的信号列表&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;kill&lt;/span&gt; -9 &lt;span class=&#34;m&#34;&gt;1951&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;# 强制杀死进程 PID 为 1951 的进程&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;常用的信号量&lt;/strong&gt;&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -1988,9 +1971,9 @@ kill -9 1951    # 强制杀死进程 PID 为 1951 的进程
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;参考实例&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;killall -9 httpd        # 杀死 httpd 所有进程
-killall -l              # 使用 -l 参数打印所有已知信号列表
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;killall -9 httpd        &lt;span class=&#34;c1&#34;&gt;# 杀死 httpd 所有进程&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;killall -l              &lt;span class=&#34;c1&#34;&gt;# 使用 -l 参数打印所有已知信号列表&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

@@ -292,6 +292,8 @@ $$&lt;/p&gt;
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -486,13 +488,15 @@ $$&lt;/p&gt;
 \begin{aligned}
 \mathrm{minimize} \quad &amp;amp; f_0(x) \\
 \mathrm{subject\ to} \quad &amp;amp; f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\
-&amp;amp; A^Tx = b 
+&amp;amp; A^Tx = b
 \end{aligned}
 $$&lt;/p&gt;
 &lt;p&gt;其中不等式约束函数 $f_1,\cdots,f_m$ 是凸的，而目标函数 $f_0$ 是拟凸的。拟凸约束函数可以等价的替换为凸约束函数，即具有相同的 $0$- 下水平集的凸函数。&lt;/p&gt;
 &lt;p&gt;这里探讨凸优化和拟凸优化本质上的不同，同时也将说明拟凸优化问题可以归结为求解一系列凸优化问题。&lt;/p&gt;
 &lt;h3 id=&#34;局部最优解与最优性条件&#34;&gt;局部最优解与最优性条件&lt;/h3&gt;
 &lt;p&gt;凸优化和拟凸优化之间最重要的区别在于，拟凸优化问题可以有非全局最优解。&lt;/p&gt;
+
+
 
 
 
@@ -548,11 +552,13 @@ $$&lt;/p&gt;
 \begin{aligned}
 \mathrm{minimize} \quad &amp;amp; c^Tx+d \\
 \mathrm{subject\ to} \quad &amp;amp; Gx \preceq h \\
-\quad &amp;amp; Ax=b 
+\quad &amp;amp; Ax=b
 \end{aligned}
 $$&lt;/p&gt;
 &lt;p&gt;其中 $G \in \mathbf{R}^{m \times n}$ 并且 $A \in \mathbf{R}^{p \times n}$。显然，线性规划问题是凸优化问题。&lt;/p&gt;
 &lt;h3 id=&#34;几何意义&#34;&gt;几何意义&lt;/h3&gt;
+
+
 
 
 
@@ -658,6 +664,8 @@ $$&lt;/p&gt;
 \end{aligned}
 $$&lt;/p&gt;
 &lt;p&gt;其中 $P \in \mathbf{S}^n_+$，$G \in \mathbf{R}^{p \times n}$。可以用下图来表示二次规划问题。&lt;/p&gt;
+
+
 
 
 
@@ -955,6 +963,8 @@ $$&lt;/p&gt;
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -981,6 +991,8 @@ $$&lt;/p&gt;
 (f_(0) - K) \cap \mathcal{O} = \{ f_0(x) \}
 $$&lt;/p&gt;
 &lt;p&gt;集合 $f_(0) - K$ 可以解释为比 $f_0(x)$ 好或相等的值的集合。因此，上述条件说明了唯一比 $f_0(x)$ 好或相等的可达值就是 $f_0(x)$ 本身。如下图所示：&lt;/p&gt;
+
+
 
 
 
@@ -1022,6 +1034,8 @@ $$&lt;/p&gt;
 \end{aligned}
 $$&lt;/p&gt;
 &lt;p&gt;并令 $x$ 为最优解。那么，$x$ 对于向量优化问题是 Pareto 最优的。利用表量化，我们可以通过求解普通的标量优化问题，寻找任意向量优化问题的 Pareto 最优解。权向量 $\lambda$ 是一个自由参数，但必须满足 $\lambda \succ _{K^*} 0$。通过改变 $\lambda$，我们（有可能）得到向量优化问题的不同的 Pareto 最优解。如下图所示：&lt;/p&gt;
+
+
 
 
 

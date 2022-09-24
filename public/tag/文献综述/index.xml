@@ -97,6 +97,8 @@
 
 
 
+
+
 &lt;figure  id=&#34;figure-fig-1-the-comparison-of-traditional-intelligence-and-edge-intelligence-from-the-perspective-of-implementation-in-traditional-intelligence-all-data-must-be-uploaded-to-a-central-cloud-server-whilst-in-edge-intelligence-intelligent-application-tasks-are-done-at-the-edge-with-locally-generated-data-in-a-distributed-manner&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Fig. 1. The comparison of traditional intelligence and edge intelligence from the perspective of implementation. In traditional intelligence, all data must be uploaded to a central cloud server, whilst in edge intelligence, intelligent application tasks are done at the edge with locally-generated data in a distributed manner.&#34; srcset=&#34;
@@ -128,6 +130,8 @@
 
 
 
+
+
 &lt;figure  id=&#34;figure-fig-2-the-classification-of-edge-intelligence-literature&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Fig. 2. The classification of edge intelligence literature.&#34; srcset=&#34;
@@ -143,6 +147,8 @@
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;作者将边缘智能的文献分类绘制成上面的图，下面作者将给出这些模块的概述：&lt;/p&gt;
 &lt;h3 id=&#34;a-edge-caching&#34;&gt;A. Edge Caching&lt;/h3&gt;
+
+
 
 
 
@@ -201,6 +207,8 @@
 &lt;/blockquote&gt;
 &lt;p&gt;现有的工作主要集中在三个地方部署缓存：宏基站、微基站和边缘设备。由于宏基站、微基站和边缘设备的存储容量有限，因此必须考虑内容替换。关于这个问题的工作集中在设计替换策略以最大化服务质量。&lt;/p&gt;
 &lt;h3 id=&#34;b-edge-training&#34;&gt;B. Edge Training&lt;/h3&gt;
+
+
 
 
 
@@ -274,6 +282,8 @@
 
 
 
+
+
 &lt;figure  id=&#34;figure-fig-5-the-illustration-of-edge-inference-ai-modelsalgorithms-are-designed-either-by-machines-or-humans-models-could-be-further-compressed-through-compression-technologies-low-rank-approximation-network-pruning-compact-layer-design-parameter-quantisation-and-knowledge-distillation-hardware-and-software-solutions-are-used-to-accelerate-the-inference-with-input-data&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Fig. 5. The illustration of edge inference. AI models/algorithms are designed either by machines or humans. Models could be further compressed through compression technologies: low-rank approximation, network pruning, compact layer design, parameter quantisation, and knowledge distillation. Hardware and software solutions are used to accelerate the inference with input data.&#34; srcset=&#34;
@@ -326,6 +336,8 @@
 
 
 
+
+
 &lt;figure  id=&#34;figure-fig-6-the-illustration-of-edge-offloading-edge-offloading-is-located-at-the-bottom-layer-in-edge-intelligence-which-provides-computing-services-for-edge-caching-edge-training-and-edge-inference-the-computing-architecture-includes-d2c-d2e-d2d-and-hybrid-computing&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Fig. 6. The illustration of edge offloading. Edge offloading is located at the bottom layer in edge intelligence, which provides computing services for edge caching, edge training, and edge inference. The computing architecture includes D2C, D2E, D2D, and hybrid computing.&#34; srcset=&#34;
@@ -356,6 +368,8 @@
 &lt;li&gt;&lt;strong&gt;hybrid offloading&lt;/strong&gt;：混合卸载&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;e-summary&#34;&gt;E. Summary&lt;/h3&gt;
+
+
 
 
 

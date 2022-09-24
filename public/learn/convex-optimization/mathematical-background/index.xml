@@ -28,7 +28,7 @@
 \end{align}&lt;/p&gt;
 &lt;h3 id=&#34;夹角&#34;&gt;夹角&lt;/h3&gt;
 &lt;p&gt;\begin{align}
-\cos \left ( x,y \right ) = \frac{x^Ty}{\|x\|_2\|y\|_2} 
+\cos \left ( x,y \right ) = \frac{x^Ty}{\|x\|_2\|y\|_2}
 \end{align}&lt;/p&gt;
 &lt;p&gt;若 $x^Ty=0$，称 $x$ 和 $y$ &lt;strong&gt;正交&lt;/strong&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;frobenius-范数&#34;&gt;Frobenius 范数&lt;/h2&gt;
@@ -140,6 +140,8 @@ z^Tx \leqslant \|x\| \|z\|
 \{y \mid\|y-x\|_{2} \leqslant \epsilon\} \subseteq C
 \end{align}&lt;/p&gt;
 &lt;p&gt;即存在一个以 $x$ 为中心的完全包含于 $C$ 的球，则称 $x$ 为 $C$ 的&lt;strong&gt;内点&lt;/strong&gt;。$C$ 的所有内点组成的集合称为 $C$ 的内部，记作 $\operatorname{int}C$。若 $\operatorname{int}C = C$，则称集合 $C$ 为&lt;strong&gt;开集&lt;/strong&gt;。若集合 $C \subseteq \mathbf{R}^n$ 的补集 $\mathbf{R}^{n} \backslash C=\{x \in \mathbf{R}^{n} \mid x \notin C\}$ 是开集，则称集合 $C$ 为&lt;strong&gt;闭集&lt;/strong&gt;。&lt;/p&gt;
+
+
 
 
 
@@ -270,7 +272,7 @@ D f(x) _{ij}=\frac{\partial f _{i}(x)}{\partial x _{j}}, \quad i=1, \cdots, m, \
 &lt;h2 id=&#34;链式规则&#34;&gt;链式规则&lt;/h2&gt;
 &lt;p&gt;设复合函数 $h(x) = g(f(x))$，则&lt;/p&gt;
 &lt;p&gt;\begin{align}
-\nabla h(x) &amp;amp;= g&#39;(f(x))f(x) \\
+\nabla h(x) &amp;amp;= g&amp;rsquo;(f(x))f(x) \\
 &amp;amp;= \nabla g(f(x))^T f(x)
 \end{align}&lt;/p&gt;
 &lt;h3 id=&#34;仿射函数&#34;&gt;仿射函数&lt;/h3&gt;
@@ -396,7 +398,7 @@ A^{\dagger}=V \Sigma^{-1} U^{T} \in \mathbf{R}^{n \times m}
 X = \left [ \begin{matrix}
 A &amp;amp; B \\
 B^T &amp;amp; C
-\end{matrix} \right ] 
+\end{matrix} \right ]
 \end{align}&lt;/p&gt;
 &lt;p&gt;其中 $A \in \mathbf{S}^k$。如果 $\det A \ne 0$，矩阵&lt;/p&gt;
 &lt;p&gt;\begin{align}

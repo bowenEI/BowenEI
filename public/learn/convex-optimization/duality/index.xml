@@ -58,6 +58,8 @@ $$&lt;/p&gt;
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -267,6 +269,8 @@ $$&lt;/p&gt;
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -279,6 +283,8 @@ $$&lt;/p&gt;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;p&gt;针对只有一个（不等式）约束的简单问题，对偶函数和下界 $g(\lambda) \leqslant p^{\star}$ 的几何解释如图所示。给定 $\lambda$，在集合 $\mathcal{G} = \{ (f_1(x), f_0(x)) \mid x \in \mathcal{D} \}$ 上极小化 $(\lambda, 1)^T(u, t)$，得到斜率为 $-\lambda$ 的支撑超平面。支撑超平面与坐标轴 $u = 0$ 的交点即为 $g(\lambda)$。&lt;/p&gt;
+
+
 
 
 
@@ -333,6 +339,8 @@ $$&lt;/p&gt;
 p^{\star} = (\lambda, \nu, 1)^T (0, 0, p^{\star}) \geqslant g(\lambda, \nu)
 $$&lt;/p&gt;
 &lt;p&gt;即弱对偶性成立。强对偶性成立，当且仅当存在某些对偶可行变量 $(\lambda, \nu)$，使得上式中的不等号取等号。从几何上看，对于集合 $\mathcal{A}$，存在一个边界点 $(0, 0, p^{\star})$ 处的非竖直的支撑超平面。&lt;/p&gt;
+
+
 
 
 
@@ -559,6 +567,8 @@ $$&lt;/p&gt;
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -668,6 +678,8 @@ $$&lt;/p&gt;
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -716,6 +728,8 @@ $$&lt;/p&gt;
 &lt;li&gt;如果 $\nu_i^{\star}$ 较小且大于零，$v_i &amp;gt; 0$；或者如果 $\nu_i^{\star}$ 较小且小于零，$v_i &amp;lt; 0$，那么最优值 $p^{\star}(u, v)$ 不会减小太多。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;实际上，上述不等式以及上述结论仅仅只是给出了扰动之后最优值的一个下界，但是没有给出上界。因此，放松或者加强一个约束，上述结论并不对称。&lt;/p&gt;
+
+
 
 
 
@@ -941,7 +955,7 @@ $$&lt;/p&gt;
 &lt;p&gt;下面考虑非严格不等式系统&lt;/p&gt;
 &lt;p&gt;$$
 \begin{aligned}
-f_i(x) &amp;amp; \leqslant 0, \quad i=1,\cdots,m \\ 
+f_i(x) &amp;amp; \leqslant 0, \quad i=1,\cdots,m \\
 Ax &amp;amp;= b
 \end{aligned}
 $$&lt;/p&gt;

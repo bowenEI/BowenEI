@@ -19,18 +19,15 @@
       <guid>https://bowenei.gitee.io/learn/git/commands/%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93/</guid>
       <description>&lt;h2 id=&#34;clone-命令克隆远程版本库&#34;&gt;clone 命令：克隆远程版本库&lt;/h2&gt;
 &lt;p&gt;在当前目录下克隆远程仓库，文件夹名称为仓库名称 &lt;code&gt;repo&lt;/code&gt;：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.username/repo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;克隆时指定本地的文件夹名称（必须是空文件夹）：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.username/repo ~/Projects
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;init-命令初始化本地版本库&#34;&gt;init 命令：初始化本地版本库&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.username/repo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;克隆时指定本地的文件夹名称（必须是空文件夹）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.username/repo ~/Projects
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;init-命令初始化本地版本库&#34;&gt;init 命令：初始化本地版本库&lt;/h2&gt;
 &lt;p&gt;在当前目录新建一个 Git 仓库：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在当前目录下新建一个目录，并初始化为 Git 仓库：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git init Project
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在当前目录下新建一个目录，并初始化为 Git 仓库：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init Project
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -39,37 +36,28 @@
       <pubDate>Thu, 02 Dec 2021 23:53:58 +0800</pubDate>
       <guid>https://bowenei.gitee.io/learn/git/commands/%E6%9F%A5%E8%AF%A2%E4%BF%A1%E6%81%AF/</guid>
       <description>&lt;h2 id=&#34;status-命令查看状态&#34;&gt;status 命令：查看状态&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git status
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;code&gt;-s&lt;/code&gt; 参数可以显示更简短的内容：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git status
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;diff-命令查看变更内容&#34;&gt;diff 命令：查看变更内容&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git status
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;-s&lt;/code&gt; 参数可以显示更简短的内容：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git status
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;diff-命令查看变更内容&#34;&gt;diff 命令：查看变更内容&lt;/h2&gt;
 &lt;p&gt;查看尚未暂存的改动：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git diff
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;查看已经缓存的改动：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-basic&#34;&gt;git diff --cached
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;查看已缓存的与未缓存的所有改动：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git diff HEAD
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;显示更简短的摘要信息：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git diff --stat
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;log-命令查看提交历史&#34;&gt;log 命令：查看提交历史&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;code&gt;--patch&lt;/code&gt; 或 &lt;code&gt;-p&lt;/code&gt; 参数可以显示引入的差异：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git log -p
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;也可以只显示最近 2 次提交：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-basic&#34;&gt;git log -2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;reflog-命令查看操作历史&#34;&gt;reflog 命令：查看操作历史&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git diff
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;查看已经缓存的改动：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-basic&#34; data-lang=&#34;basic&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;vg&#34;&gt;git&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;vg&#34;&gt;diff&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;vg&#34;&gt;cached&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;查看已缓存的与未缓存的所有改动：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git diff HEAD
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;显示更简短的摘要信息：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git diff --stat
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;log-命令查看提交历史&#34;&gt;log 命令：查看提交历史&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git log
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;--patch&lt;/code&gt; 或 &lt;code&gt;-p&lt;/code&gt; 参数可以显示引入的差异：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git log -p
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;也可以只显示最近 2 次提交：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-basic&#34; data-lang=&#34;basic&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;vg&#34;&gt;git&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;vg&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;il&#34;&gt;-2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reflog-命令查看操作历史&#34;&gt;reflog 命令：查看操作历史&lt;/h2&gt;
 &lt;p&gt;与 &lt;code&gt;git log&lt;/code&gt; 命令相比，&lt;code&gt;git reflog&lt;/code&gt; 除了可以查看 &lt;code&gt;commit&lt;/code&gt; 历史，还可以查看所有 &lt;code&gt;git&lt;/code&gt; 命令的操作历史记录。而且每条记录当中都包含 6 位哈希值，可以非常方便地进行“时光穿梭”。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git reflog
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reflog
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -79,12 +67,10 @@
       <guid>https://bowenei.gitee.io/learn/git/commands/%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE/</guid>
       <description>&lt;h2 id=&#34;config-命令修改配置&#34;&gt;config 命令：修改配置&lt;/h2&gt;
 &lt;p&gt;设置用户名：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git config --global user.name &#39;Username&#39;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;设置邮箱：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git config --global user.email username@server.com
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;注&lt;/strong&gt;：如果去掉 &lt;code&gt;--global&lt;/code&gt; 参数则只对当前仓库有效。&lt;/p&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.name &lt;span class=&#34;s1&#34;&gt;&amp;#39;Username&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;设置邮箱：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.email username@server.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;注&lt;/strong&gt;：如果去掉 &lt;code&gt;--global&lt;/code&gt; 参数则只对当前仓库有效。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -94,38 +80,29 @@
       <guid>https://bowenei.gitee.io/learn/git/commands/%E4%BF%AE%E6%94%B9%E5%92%8C%E6%8F%90%E4%BA%A4/</guid>
       <description>&lt;h2 id=&#34;add-命令暂存跟踪文件&#34;&gt;add 命令：暂存（跟踪）文件&lt;/h2&gt;
 &lt;p&gt;暂存所有已更改的文件：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add .
-git add -A
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;暂存指定的文件（可以添加多个）：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git add test.py
-git add file1 file2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;mv-命令文件改名&#34;&gt;mv 命令：文件改名&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git mv test.py ./src/foo.py
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;如果新文件已经存在，但是还是要重命名旧文件，可以使用 &lt;code&gt;-f&lt;/code&gt; 参数强制覆盖：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git mv -f test.py ./src/foo.py
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;rm-命令删除文件&#34;&gt;rm 命令：删除文件&lt;/h2&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git rm foo.class
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;如果文件已经暂存，则必须使用 &lt;code&gt;-f&lt;/code&gt; 参数强制删除：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git rm -f foo.class
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;如果只是想把文件从暂存区移除，但仍然希望保留在当前工作目录中，可以使用 &lt;code&gt;--cached&lt;/code&gt; 参数：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git rm --cached foo.class
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;commit-命令提交暂存文件&#34;&gt;commit 命令：提交暂存文件&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add -A
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;暂存指定的文件（可以添加多个）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add test.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add file1 file2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;mv-命令文件改名&#34;&gt;mv 命令：文件改名&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git mv test.py ./src/foo.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果新文件已经存在，但是还是要重命名旧文件，可以使用 &lt;code&gt;-f&lt;/code&gt; 参数强制覆盖：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git mv -f test.py ./src/foo.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;rm-命令删除文件&#34;&gt;rm 命令：删除文件&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git rm foo.class
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果文件已经暂存，则必须使用 &lt;code&gt;-f&lt;/code&gt; 参数强制删除：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git rm -f foo.class
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果只是想把文件从暂存区移除，但仍然希望保留在当前工作目录中，可以使用 &lt;code&gt;--cached&lt;/code&gt; 参数：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git rm --cached foo.class
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;commit-命令提交暂存文件&#34;&gt;commit 命令：提交暂存文件&lt;/h2&gt;
 &lt;p&gt;提交暂存区的所有文件，并备注一些提交信息：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git commit -m &amp;quot;first commit&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;也可以只提交暂存区的部分文件：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git commit file1 file2 -m &amp;quot;add file1 &amp;amp; file2&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;可以暂存提交一步到位：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git commit -a
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;first commit&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;也可以只提交暂存区的部分文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit file1 file2 -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;add file1 &amp;amp; file2&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以暂存提交一步到位：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -135,32 +112,25 @@ git add file1 file2
       <guid>https://bowenei.gitee.io/learn/git/commands/%E6%92%A4%E9%94%80%E4%B8%8E%E5%9B%9E%E9%80%80/</guid>
       <description>&lt;h2 id=&#34;restore-命令撤销工作区&#34;&gt;restore 命令：撤销工作区&lt;/h2&gt;
 &lt;p&gt;将所有本地文件未暂存的更改撤销，恢复到完全没有更改的状态：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git restore
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;将指定未暂存的文件的更改撤销：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git restore test.py
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;code&gt;--staged&lt;/code&gt; 参数用于将暂存区的文件撤销，但是不改变工作区已有的更改：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git restore --staged
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;reset-命令撤销暂存区和版本库&#34;&gt;reset 命令：撤销暂存区和版本库&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git restore
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将指定未暂存的文件的更改撤销：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git restore test.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;--staged&lt;/code&gt; 参数用于将暂存区的文件撤销，但是不改变工作区已有的更改：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git restore --staged
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reset-命令撤销暂存区和版本库&#34;&gt;reset 命令：撤销暂存区和版本库&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;–mixed&lt;/code&gt; 参数为默认，用于重置暂存区的文件与上一次的提交保持一致，工作区文件内容保持不变。以下的命令是等价的：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git reset
-git reset --mixed
-git reset HEAD
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;code&gt;--soft&lt;/code&gt; 参数用于回退到指定版本，例如：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git reset --soft HEAD^			# 回退到上一个版本
-git reset foo.py --soft 0b3dac		# 回退指定文件到指定版本
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;code&gt;--hard&lt;/code&gt; 参数撤销工作区中所有未提交的修改内容，将暂存区与工作区都回到上一次版本，并删除之前的所有信息提交：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git reset --hard
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;revert-命令反做版本库&#34;&gt;revert 命令：反做版本库&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reset
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reset --mixed
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reset HEAD
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;--soft&lt;/code&gt; 参数用于回退到指定版本，例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reset --soft HEAD^			&lt;span class=&#34;c1&#34;&gt;# 回退到上一个版本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reset foo.py --soft 0b3dac		&lt;span class=&#34;c1&#34;&gt;# 回退指定文件到指定版本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;--hard&lt;/code&gt; 参数撤销工作区中所有未提交的修改内容，将暂存区与工作区都回到上一次版本，并删除之前的所有信息提交：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reset --hard
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;revert-命令反做版本库&#34;&gt;revert 命令：反做版本库&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;git revert&lt;/code&gt; 命令适用于想要撤销较早提交的某个版本，而不影响之后提交的其他版本。之所以该命令可以实现上述功能，是因为其实质是用一次新的 &lt;code&gt;commit&lt;/code&gt; 来回滚之前较早的某个版本，而不同于 &lt;code&gt;git reset&lt;/code&gt; 命令直接删除相应提交。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git revert -n 34dafc
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;code&gt;-n&lt;/code&gt; 参数表示版本号。&lt;/p&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git revert -n 34dafc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;-n&lt;/code&gt; 参数表示版本号。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -170,46 +140,35 @@ git reset foo.py --soft 0b3dac		# 回退指定文件到指定版本
       <guid>https://bowenei.gitee.io/learn/git/commands/%E5%88%86%E6%94%AF%E4%B8%8E%E6%A0%87%E7%AD%BE/</guid>
       <description>&lt;h2 id=&#34;branch-命令分支管理&#34;&gt;branch 命令：分支管理&lt;/h2&gt;
 &lt;p&gt;查看当前所有分支：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git branch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;创建分支：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git branch dev.branch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;删除分支：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git branch -d dev.branch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;checkout-命令切换分支&#34;&gt;checkout 命令：切换分支&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;创建分支：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch dev.branch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;删除分支：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch -d dev.branch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;checkout-命令切换分支&#34;&gt;checkout 命令：切换分支&lt;/h2&gt;
 &lt;p&gt;切换分支：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout dev.branch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;创建一个新的分支并切换到该分支：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git checkout -b dev.branch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;它与下面的命令等价：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git branch dev.branch
-git checkout dev.branch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;tag-命令标签管理&#34;&gt;tag 命令：标签管理&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout dev.branch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;创建一个新的分支并切换到该分支：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout -b dev.branch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;它与下面的命令等价：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch dev.branch
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout dev.branch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;tag-命令标签管理&#34;&gt;tag 命令：标签管理&lt;/h2&gt;
 &lt;p&gt;查看所有标签：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git tag
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;给当前提交打标签，其中&lt;code&gt;-a&lt;/code&gt; 参数表示创建一个带注解的标签。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git tag -a v1.0
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;给指定的提交追加标签：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git tag -a v1.1 90fa3b
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;merge-命令合并分支&#34;&gt;merge 命令：合并分支&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git tag
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;给当前提交打标签，其中&lt;code&gt;-a&lt;/code&gt; 参数表示创建一个带注解的标签。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git tag -a v1.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;给指定的提交追加标签：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git tag -a v1.1 90fa3b
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;merge-命令合并分支&#34;&gt;merge 命令：合并分支&lt;/h2&gt;
 &lt;p&gt;将指定分支合并到当前分支：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git merge dev.branch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;如果存在冲突，可以使用 &lt;code&gt;--abort&lt;/code&gt; 终止合并：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git merge --abort
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;rebase-命令衍合分支&#34;&gt;rebase 命令：衍合分支&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git merge dev.branch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果存在冲突，可以使用 &lt;code&gt;--abort&lt;/code&gt; 终止合并：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git merge --abort
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;rebase-命令衍合分支&#34;&gt;rebase 命令：衍合分支&lt;/h2&gt;
 &lt;p&gt;将在各个分支的分散提交衍合到指定分支上：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git rebase master
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git rebase master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -219,51 +178,38 @@ git checkout dev.branch
       <guid>https://bowenei.gitee.io/learn/git/commands/%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C/</guid>
       <description>&lt;h2 id=&#34;remote-命令远程仓库管理&#34;&gt;remote 命令：远程仓库管理&lt;/h2&gt;
 &lt;p&gt;查看远程仓库：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git remote
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;添加远程仓库：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git remote add origin git@github.com:Username/repo.git
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;重命名远程仓库名称：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git remote rename origin github-origin
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;查看远程仓库 &lt;code&gt;url&lt;/code&gt;：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git remote get-url github-origin
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;修改远程仓库 &lt;code&gt;url&lt;/code&gt;：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git remote set-url github-origin git@github.com:Username/repository.git
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;删除远程仓库关联：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git remote remove github-origin
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;fetch-命令获取远程仓库&#34;&gt;fetch 命令：获取远程仓库&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;添加远程仓库：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote add origin git@github.com:Username/repo.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;重命名远程仓库名称：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote rename origin github-origin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;查看远程仓库 &lt;code&gt;url&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote get-url github-origin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;修改远程仓库 &lt;code&gt;url&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote set-url github-origin git@github.com:Username/repository.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;删除远程仓库关联：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote remove github-origin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;fetch-命令获取远程仓库&#34;&gt;fetch 命令：获取远程仓库&lt;/h2&gt;
 &lt;p&gt;拉取远程仓库到本地，但不进行合并：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git fetch origin master
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;分支名称为 &lt;code&gt;FETCH_HEAD&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git fetch origin master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;分支名称为 &lt;code&gt;FETCH_HEAD&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;pull-命令获取远程仓库且进行快速合并&#34;&gt;pull 命令：获取远程仓库且进行快速合并&lt;/h2&gt;
 &lt;p&gt;拉取远程仓库到本地，并且进行合并：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git pull
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;默认情况下，合并的方式是按照分支名称对应合并的（前提是远程和本地都有该分支）：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git pull origin dev.branch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;也可以指定合并不同的分支，其中 &lt;code&gt;:&lt;/code&gt; 号前为远程分支，&lt;code&gt;:&lt;/code&gt; 号后为本地分支。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git pull origin master:dev.branch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;push-命令推送本地至远程仓库&#34;&gt;push 命令：推送本地至远程仓库&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git pull
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;默认情况下，合并的方式是按照分支名称对应合并的（前提是远程和本地都有该分支）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git pull origin dev.branch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;也可以指定合并不同的分支，其中 &lt;code&gt;:&lt;/code&gt; 号前为远程分支，&lt;code&gt;:&lt;/code&gt; 号后为本地分支。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git pull origin master:dev.branch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;push-命令推送本地至远程仓库&#34;&gt;push 命令：推送本地至远程仓库&lt;/h2&gt;
 &lt;p&gt;初次推送，需要添加 &lt;code&gt;-u&lt;/code&gt; 参数，因为本地分支还没有和远程对应分支关联：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git push -u origin master
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;可以指定不同的分支进行推送：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git push origin master:dev.branch
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;code&gt;--force&lt;/code&gt; 或 &lt;code&gt;-f&lt;/code&gt; 参数表示强制推送：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git push -f
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;code&gt;–delete&lt;/code&gt; 或 &lt;code&gt;-d&lt;/code&gt; 参数表示删除远程分支：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git push origin -d master
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push -u origin master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以指定不同的分支进行推送：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin master:dev.branch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;--force&lt;/code&gt; 或 &lt;code&gt;-f&lt;/code&gt; 参数表示强制推送：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push -f
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;–delete&lt;/code&gt; 或 &lt;code&gt;-d&lt;/code&gt; 参数表示删除远程分支：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin -d master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>
