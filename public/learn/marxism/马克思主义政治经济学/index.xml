@@ -58,37 +58,43 @@
 &lt;p&gt;简而言之，在相同的劳动时间里，复杂劳动创造的价值大于简单劳动创造的价值。&lt;/p&gt;
 &lt;h2 id=&#34;价值形式&#34;&gt;价值形式&lt;/h2&gt;
 &lt;h3 id=&#34;简单的个别的或偶然的价值形式&#34;&gt;简单的、个别的或偶然的价值形式&lt;/h3&gt;
-&lt;p&gt;$$
+
+$$
 x \textrm{量商品} A = y \textrm{量商品} B
-$$&lt;/p&gt;
+$$
+
 &lt;p&gt;上面的“$=$”号并不表示数学意义上的相等。如果翻译成自然语言，应当是“$x$ 量商品 $A$ 值 $y$ 量商品 $B$”。&lt;/p&gt;
 &lt;p&gt;两种不同的商品 $A$ 和 $B$，在这里显然起着两种不同的作用。&lt;/p&gt;
 &lt;p&gt;商品 $A$ 作为&lt;strong&gt;使用价值&lt;/strong&gt;出现，主动作用，通过商品 $B$ 表现自己的价值，其价值表现为相对价值，或者说，处于&lt;strong&gt;相对价值形式&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;商品 $B$ 作为&lt;strong&gt;价值&lt;/strong&gt;出现，被动作用，不表现自己的价值而表现商品 $A$ 的价值，起等价物的作用，或者说，处于&lt;strong&gt;等价形式&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;相对价值形式和等价形式是同一价值表现的互相依赖、互为条件、不可分离的两个要素，同时又是同一价值表现的互相排斥、互相对立的两端。这两种形式总是分配在通过价值表现互相发生关系的不同的商品上。&lt;/p&gt;
 &lt;h3 id=&#34;总和的或扩大的价值形式&#34;&gt;总和的或扩大的价值形式&lt;/h3&gt;
-&lt;p&gt;$$
+
+$$
 \begin{align}
-z \textrm{量商品} A &amp;amp;= u \textrm{量商品} B \\
-&amp;amp;= v \textrm{量商品} C \\
-&amp;amp;= w \textrm{量商品} D \\
-&amp;amp;= x \textrm{量商品} E \\
-&amp;amp;= \cdots
+  z \textrm{量商品} A &amp;= u \textrm{量商品} B \\\\
+  &amp;= v \textrm{量商品} C \\\\
+  &amp;= w \textrm{量商品} D \\\\
+  &amp;= x \textrm{量商品} E \\\\
+  &amp;= \cdots
 \end{align}
-$$&lt;/p&gt;
+$$
+
 &lt;p&gt;上面的式子表明，一种商品的价值经常的表现在一系列商品上。这样，这个价值本身才真正表现为无差别的人类劳动的凝结。在这个例子中，商品 $B,C,D,E,\cdots$，都在商品 $A$ 的价值表现中充当等价物，因而充当价值体。&lt;/p&gt;
 &lt;p&gt;不过，这种总和的或扩大的价值形式也有其缺陷：价值表现不完全，特殊等价形式的商品是没有穷尽的。扩大的相对价值形式只是由简单的相对价值表现的总和，同简单的、个别的或偶然的价值形式相比，仅仅只有量变，没有质变。&lt;/p&gt;
 &lt;h3 id=&#34;一般价值形式&#34;&gt;一般价值形式&lt;/h3&gt;
-&lt;p&gt;$$
+
+$$
 \left.\begin{matrix}
-u \textrm{量商品} B \quad \\
-v \textrm{量商品} C \quad \\
-w \textrm{量商品} D \quad \\
-x \textrm{量商品} E \quad \\
+u \textrm{量商品} B \quad \\\\
+v \textrm{量商品} C \quad \\\\
+w \textrm{量商品} D \quad \\\\
+x \textrm{量商品} E \quad \\\\
 \cdots \quad
 \end{matrix}\right\}
 = z \textrm{量商品} A
-$$&lt;/p&gt;
+$$
+
 &lt;p&gt;现在，商品价值的表现：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;是简单的，因为都是表现在唯一的商品上;&lt;/li&gt;
@@ -98,16 +104,18 @@ $$&lt;/p&gt;
 &lt;p&gt;前两种形式都只是使一种商品的价值表现为一种与它自身的使用价值或商品体不同的东西，而一般价值形式使商品世界的价值表现在从商品世界中分离出来的同一种商品上。前两种形式表现一种商品的价值，或者是通过唯一一个不同种的商品，或者是通过许多种与它不同的商品构成的系列。对它们来说，其他商品只是起着被动的等价物的作用。&lt;/p&gt;
 &lt;p&gt;相反地，一般价值形式的出现只是商品世界共同运动的结果。一个商品所以获得一般的价值表现，只是因为其他切商品同时也用同一个等价物来表现自己的价值，而每一种新出现的商品都要这样做。&lt;/p&gt;
 &lt;h3 id=&#34;货币形式&#34;&gt;货币形式&lt;/h3&gt;
-&lt;p&gt;$$
+
+$$
 \left.\begin{matrix}
-u \textrm{量商品} B \quad \\
-v \textrm{量商品} C \quad \\
-w \textrm{量商品} D \quad \\
-x \textrm{量商品} E \quad \\
+u \textrm{量商品} B \quad \\\\
+v \textrm{量商品} C \quad \\\\
+w \textrm{量商品} D \quad \\\\
+x \textrm{量商品} E \quad \\\\
 \cdots \quad
 \end{matrix}\right\}
 = z \textrm{盎司黄金}
-$$&lt;/p&gt;
+$$
+
 &lt;p&gt;货币形式与一般价值形式的唯一区别就在于，黄金代替商品 $A$ 取得了一般等价形式。因而，黄金的地位也是作为一般等价物。&lt;/p&gt;
 &lt;p&gt;这样，一切商品的价值都集中的、统一的表现在一种贵金属商品如黄金或白银上。黄金等贵金属能够作为一般等价物，根本原因是黄金本身是商品，质地均匀、体小值大、便于携带、不宜腐烂、便于保存。&lt;/p&gt;
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -135,12 +143,16 @@ $$&lt;/p&gt;
 &lt;p&gt;贵金属之所以成为货币，似乎不是因为其他商品都通过它来表现自己的价值。相反，似乎因为贵金属是货币，其他商品才都通过它来表现自己的价值。&lt;/p&gt;
 &lt;h3 id=&#34;商品流通公式&#34;&gt;商品流通公式&lt;/h3&gt;
 &lt;p&gt;总而言之，商品的交换过程是在下列形式变换中完成的：&lt;/p&gt;
-&lt;p&gt;$$
+
+$$
 \textrm{商品}-\textrm{货币}-\textrm{商品}
-$$&lt;/p&gt;
-&lt;p&gt;$$
+$$
+
+
+$$
 W-G-W
-$$&lt;/p&gt;
+$$
+
 &lt;p&gt;从物质内容来说，这个运动是 $W-W$，是商品换商品，是社会劳动的物质变换，这种物质变换的结果一经达到，过程本身也就结束。&lt;/p&gt;
 &lt;p&gt;在第一阶段的 $W-G$，商品的第一形态变化是卖。在第二阶段 $G-W$，商品的第二形态变化是买。当然这只是从商品占有者这一极看的。商品转化为货币，同时就是货币转化为商品。这一个过程是两方面的：从商品占有者这一极看，是卖；从货币占有者这另一极看，是买。或者说，卖就是买，$W-G$ 同时就是 $G-W$。&lt;/p&gt;
 &lt;h2 id=&#34;货币的职能&#34;&gt;货币的职能&lt;/h2&gt;
@@ -177,9 +189,11 @@ $$&lt;/p&gt;
 &lt;p&gt;世界货币作为一般支付手段、一般购买手段和一般财富的绝对社会化身执行职能。它的最主要的职能，是作为支付手段平衡国际贸易差额。&lt;/p&gt;
 &lt;p&gt;每个国家，为了国内流通，需要有准备金，为了世界市场的流通，也需要有准备金。因此，货币贮藏的职能，一部分来源于货币作为国内流通手段和国内支付手段的职能，一部分来源于货币作为世界货币的职能。&lt;/p&gt;
 &lt;h2 id=&#34;货币流通规律&#34;&gt;货币流通规律&lt;/h2&gt;
-&lt;p&gt;$$
+
+$$
 \frac{\textrm{商品价格总额}}{\textrm{同名货币的流通次数}} = \textrm{执行流通手段职能的货币量}
-$$&lt;/p&gt;
+$$
+
 &lt;p&gt;可见，在每一段时期内执行流通手段职能的货币的总量，一方面取决于流通的商品世界的价格总额，另一方面取决于这个商品世界的互相对立的流通过程流动的快慢，这种流动决定着同一些货币能够实现价格总额的多大部分。&lt;/p&gt;
 &lt;p&gt;但是，商品的价格总额又决定于每种商品的数量和价格。决定一定时期内流通所需要的货币数量 $M$ 的规律，涉及以下三个因素：&lt;/p&gt;
 &lt;ol&gt;
@@ -188,11 +202,13 @@ $$&lt;/p&gt;
 &lt;li&gt;货币流通速度 $V$&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;因此，货币流通公式为：&lt;/p&gt;
-&lt;p&gt;$$
+
+$$
 \begin{align}
 M = \frac {PQ} {V}
 \end{align}
-$$&lt;/p&gt;
+$$
+
 &lt;p&gt;由上面的公式，我们可以认为：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;在商品价格不变时，由于流通商品量增加，或者货币流通速度减低，或者这两种情况同时发生，流通手段量就会增加。反之，由于商品量减少，或者货币流通速度增加，流通手段量就会减少。&lt;/li&gt;
@@ -201,11 +217,13 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;纸币流通规律&#34;&gt;纸币流通规律&lt;/h3&gt;
 &lt;p&gt;纸币流通以金属货币流通为基础。纸币本身是没有价值的，但它是一个价值符号，代表金属货币执行流通手段职能。具体公式为：&lt;/p&gt;
-&lt;p&gt;$$
+
+$$
 \begin{align}
-\mbox{单位纸币所代表的金属货币量} &amp;amp; = \frac {\mbox{流通中所需要的金属货币量}} {\mbox{流通中的纸币总量}}
+\mbox{单位纸币所代表的金属货币量} &amp; = \frac {\mbox{流通中所需要的金属货币量}} {\mbox{流通中的纸币总量}}
 \end{align}
-$$&lt;/p&gt;
+$$
+
 &lt;p&gt;&lt;strong&gt;通货膨胀&lt;/strong&gt;：发行的供流通的纸币总量过大，使得单位纸币的实际价值（所代表的金属货币量）低于名义价值（纸币面值），从而造成货币贬值的现象。主要表现是物价普遍上涨。其实质是社会总供给小于社会总需求 （供远小于求）。&lt;/p&gt;
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
@@ -267,12 +285,20 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;可变资本 $v$：购买劳动力的资本&lt;/strong&gt;。改变了价值量。具体劳动转移生产资料的价值，抽象劳动创造新价值（包括补偿劳动力的价值和剩余价值）。&lt;/p&gt;
 &lt;h2 id=&#34;剩余价值生产的方法&#34;&gt;剩余价值生产的方法&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;剩余价值率 $m&amp;rsquo;$：剩余价值 $m$ 与可变资本 $v$ 的比率。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;\begin{align}
-m&amp;rsquo; = \frac {m} {v} \times 100 \%
-\end{align}&lt;/p&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
+m&#39; = \frac {m} {v} \times 100 \\%
+\end{align}
+$$
+
+
+$$
+\begin{align}
 \mbox{剩余价值率} = \frac {\mbox{剩余劳动}} {\mbox{必要劳动}} = \frac {\mbox{剩余劳动时间}} {\mbox{必要劳动时间}}
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;p&gt;特别地，若 $m&amp;rsquo; = 0$，则不产生任何剩余价值，此时应该称呼该资本家为慈善家；若 $m&amp;rsquo; \rightarrow + \infty$，则劳动者的劳动力被完全剥削没有任何价值，此时应该称呼该资本家为奴隶主。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;绝对剩余价值&lt;/strong&gt;：必要劳动时间不变，工作时间绝对延长（996）或劳动强度绝对增大。局限：生理界限和社会道德界限。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;相对剩余价值&lt;/strong&gt;：工作时间不变，缩短必要劳动时间从而延长剩余劳动时间。优点：促进生产力的发展。&lt;/p&gt;
@@ -286,9 +312,13 @@ m&amp;rsquo; = \frac {m} {v} \times 100 \%
 &lt;/ol&gt;
 &lt;p&gt;名义工资（货币工资）：资本家为购买劳动力支付给工人的货币工资。&lt;/p&gt;
 &lt;p&gt;实际工资（货币工资购买力）：工人用所得的货币工资实际能够买的生活资料数量和各种劳务。&lt;/p&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 \mbox{实际工资} = \frac {\mbox{名义工资}} {\mbox{生活资料物价指数}}
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;p&gt;相对工资：工人所得的工资同资本家占有的剩余价值相比较的数额。&lt;/p&gt;
 &lt;p&gt;实际工资上升的原因：&lt;/p&gt;
 &lt;ol&gt;
@@ -298,7 +328,7 @@ m&amp;rsquo; = \frac {m} {v} \times 100 \%
 &lt;li&gt;工人的斗争&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;思考题&#34;&gt;思考题&lt;/h2&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
   &lt;summary&gt;在现代生产自动化条件下，如何理解剩余价值的源泉？&lt;/summary&gt;
   &lt;p&gt;&lt;ol&gt;
 &lt;li&gt;先进设备仍是不变资本，不能创造价值，剩余价值是由剩余劳动创造。&lt;/li&gt;
@@ -308,11 +338,11 @@ m&amp;rsquo; = \frac {m} {v} \times 100 \%
 &lt;/ol&gt;
 &lt;/p&gt;
 &lt;/details&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-4&#34;&gt;
   &lt;summary&gt;如何理解资本和剩余价值的一般性和特殊性？&lt;/summary&gt;
   &lt;p&gt;马克思把资本当着一个特殊范畴；两者是商品经济的一般范畴，只要是商品经济，就存在资本和剩余价值；其特殊性是指：在不同的社会制度下体现为不同的生产关系。&lt;/p&gt;
 &lt;/details&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-5&#34;&gt;
   &lt;summary&gt;在现代社会中，追求剩余价值是企业唯一的动机吗？&lt;/summary&gt;
   &lt;p&gt;马克思时代确实是这样；现代经济学作了一些修正：行为人在经济生活中的选择不仅是经济利益的最大化，还追求一些非物质利益（结合西方经济学相关知识回答）。&lt;/p&gt;
 &lt;/details&gt;</description>
@@ -489,9 +519,13 @@ m&amp;rsquo; = \frac {m} {v} \times 100 \%
 &lt;li&gt;通过资本主义国家政权进行有利于垄断资本的再分配，从而将劳动人民创造的国民收入的一部分变成垄断资本收入&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;垄断价格&lt;/strong&gt;是垄断组织在销售或购买商品时，凭借其垄断地位规定的、旨在保证获取最大限度利润的市场价格。垄断例如主要是通过垄断组织指定的垄断价格来实现的。垄断价格包括&lt;strong&gt;垄断高价&lt;/strong&gt;和&lt;strong&gt;垄断低价&lt;/strong&gt;两种形式。&lt;/p&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 \mbox{垄断价格} = \mbox{成本价格} + \mbox{平均利润} + \mbox{垄断利润}
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;p&gt;垄断价格的产生并没有否定价值规律，它是价值规律在垄断资本主义阶段作用的具体体现。&lt;/p&gt;
 &lt;h2 id=&#34;金融资本的产生和发展&#34;&gt;金融资本的产生和发展&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;金融&lt;/strong&gt;是以货币本身为经营目的，通过货币融通使货币增值的经济活动，包括以银行为中心的间接投融资和以投资银行为中心的直接投融资两种形式。&lt;/p&gt;

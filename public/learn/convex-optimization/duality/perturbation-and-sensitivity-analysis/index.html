@@ -1190,19 +1190,23 @@
 
             <h2 id="扰动问题">扰动问题</h2>
 <p>考虑下面的问题</p>
-<p>$$
+
+$$
 \begin{aligned}
-\mathrm{minimize} \quad &amp; f_0(x) \\
-\mathrm{subject\ to} \quad &amp; f_i(x) \leqslant u_i, \quad i=1,\cdots,m \\
-\quad &amp; h_i(x) = v_i, \quad i=1,\cdots,p
+    \mathrm{minimize} \quad & f_0(x) \\\\
+    \mathrm{subject\ to} \quad & f_i(x) \leqslant u_i, \quad i=1,\cdots,m \\\\
+    \quad & h_i(x) = v_i, \quad i=1,\cdots,p
 \end{aligned}
-$$</p>
+$$
+
 <p>当 $u=0, v=0$ 时，该问题与原始的优化问题一致。而当 $u_i &gt; 0$ 时，意味着第 $i$ 个不等式约束放松了；当 $u_i &lt; 0$ 时，意味着第 $i$ 个不等式约束收紧了。这就是<strong>扰动问题</strong>，它通过 $u_i$ 放松或收紧每个不等式约束，并且通过 $v_i$ 改变等式约束的右端得到。</p>
 <h2 id="一个全局不等式">一个全局不等式</h2>
 <p>假设强对偶性成立且对偶问题最优值可以达到。（当原问题是凸问题且 Slater 条件满足时这种情形将会发生。）设 $(\lambda^{\star}, \nu^{\star})$ 是未被扰动的问题的对偶问题的最优解，则对所有的 $u$ 和 $v$，有</p>
-<p>$$
+
+$$
 p^{\star}(u, v) \geqslant p^{\star}(0,0)-\lambda^{\star T} u-\nu^{\star T} v
-$$</p>
+$$
+
 <h3 id="灵敏度解释">灵敏度解释</h3>
 <p>当强对偶性成立时，可以根据上述不等式直接得到很多有关最优 Lagrange 变量的灵敏度解释。有如下结论成立：</p>
 <ul>
@@ -1242,12 +1246,14 @@ $$</p>
 <p>上述不等式的几何意义如图所示，这是一个具有一个不等式约束的凸问题。图中蓝色曲线表示具有一个约束 $f_1(x) \leqslant u$ 的凸问题的最优值 $p^{\star}(u)$ 的图像，它是 $u$ 的函数。当 $u = 0$ 时，对应原始未被扰动的问题；当 $u &lt; 0$ 时，约束加强了；当 $u &gt; 0$ 时，约束放松了。仿射函数 $p^{\star}(0) - \lambda^{\star}u$（图中紫色直线）给出了最优值 $p^{\star}$ 的一个下界。从图中可以看到，紫色直线在蓝色曲线的下方，它们相切的切点对应的横坐标就是 $u = 0$，即原始未被扰动的问题。</p>
 <h2 id="局部灵敏度分析">局部灵敏度分析</h2>
 <p>假设 $p^{\star}(u, v)$ 在 $u = 0$ 和 $v = 0$ 处可微，并且强对偶性成立，那么最优变量 $\lambda^{\star}, \nu^{\star}$ 可以和 $p^{\star}$ 在 $u = 0$ 和 $v = 0$ 处的梯度联系起来：</p>
-<p>$$
+
+$$
 \begin{aligned}
-\lambda_i^{\star} &amp;= -\frac{\partial p^{\star}(0, 0)}{\partial u_i} \\
-\nu_i^{\star} &amp;= -\frac{\partial p^{\star}(0, 0)}{\partial v_i}
+    \lambda_i^{\star} &= -\frac{\partial p^{\star}(0, 0)}{\partial u_i} \\\\
+    \nu_i^{\star} &= -\frac{\partial p^{\star}(0, 0)}{\partial v_i}
 \end{aligned}
-$$</p>
+$$
+
 <p>可以从之前的图中看出此性质，因为 $-\lambda$ 是 $p^{\star}$ 在 $u = 0$ 处的斜率。</p>
 <p>因此，若 $p^{\star}(u, v)$ 在 $u = 0$ 和 $v = 0$ 处可微，且强对偶性成立，那么最优 Lagrange 乘子就是最优值关于约束扰动的局部灵敏度。和不可微的情况不同，这种解释的对称的：</p>
 <ul>

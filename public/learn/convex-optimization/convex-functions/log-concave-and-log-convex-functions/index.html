@@ -1197,18 +1197,22 @@
 <p>如果对所有的 $x \in \operatorname{dom} f$ 有 $f(x) &gt; 0$ 且 $\log f$ 是凹函数，则称函数 $f$ 是<strong>对数凹函数</strong>。如果 $\log f$ 是凸函数，则称函数 $f$ 是<strong>对数凸函数</strong>。</p>
 <p>因此，函数 $f$ 是对数凸的，等价于函数 $1/f$ 是对数凹的。</p>
 <p>对数凹凸性可以不借助对数直接表达。考虑函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，其定义域是凸集，且对于 $\forall x \in \operatorname{dom} f$ 有 $f(x) &gt; 0$，则函数是对数凹的，当且仅当对 $\forall x, y \in \operatorname{dom} f$，$0 \leqslant \theta \leqslant 1$，有</p>
-<p>$$
+
+$$
 f(\theta x+(1-\theta) y) \geqslant f(x)^{\theta} f(y)^{1-\theta}
-$$</p>
+$$
+
 <p>特别地，若令 $\theta = \frac{1}{2}$，则可以得到如下结论：对数凹函数在两点中间的函数值不小于这两点函数的几何平均值，即</p>
-<p>$$
+
+$$
 f(\frac{x + y}{2}) \geqslant \sqrt{f(x)f(y)}
-$$</p>
+$$
+
 <p>根据函数复合规则，我们知道如果函数 $h$ 是凸函数，则函数 $e^h$ 是凸函数，因此对数凸函数是凸函数。类似地，非负凹函数是对数凹函数。此外，由于对数函数是单调增函数，所以对数凸函数是拟凸函数，对数凹函数是拟凹函数。</p>
 <h3 id="举例">举例</h3>
 <ul>
 <li>
-<p>仿射函数 $f(x) = a^Tx + b$ 在 $\{ x \mid a^Tx + b &gt; 0 \}$ 上是对数凹函数。</p>
+<p>仿射函数 $f(x) = a^Tx + b$ 在 ${ x \mid a^Tx + b &gt; 0 }$ 上是对数凹函数。</p>
 </li>
 <li>
 <p>幂函数 $f(x) = x^a$ 在 $\mathbf{R}_{++}$ 上当 $a \leqslant 0$ 时是对数凸函数，当 $a \geqslant 0$ 时是对数凹函数。</p>
@@ -1220,15 +1224,19 @@ $$</p>
 <p>Gauss 概率密度函数的累积分布函数是对数凹函数。</p>
 </li>
 </ul>
-<p>$$
+
+$$
 \Phi(x)=\frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{x} e^{-u^{2} / 2} \mathrm{d} u
-$$</p>
+$$
+
 <ul>
 <li>$\Gamma$ 函数在 $[1, +\infty)$ 上是对数凸函数。</li>
 </ul>
-<p>$$
+
+$$
 \Gamma(x)=\int_{0}^{\infty} u^{x-1} e^{-u} \mathrm{d} u
-$$</p>
+$$
+
 <ul>
 <li>
 <p>行列式 $\det X$ 在 $\mathbf{S}^n _{++}$ 上是对数凹函数。</p>
@@ -1240,54 +1248,69 @@ $$</p>
 <h2 id="相关性质">相关性质</h2>
 <h3 id="二次可微的对数凸凹函数">二次可微的对数凸/凹函数</h3>
 <p>假设函数 $f$ 是二次可微的，并且 $\operatorname{dom} f$ 是凸的，那么</p>
-<p>$$
+
+$$
 \nabla^{2} \log f(x)=\frac{1}{f(x)} \nabla^{2} f(x)-\frac{1}{f(x)^{2}} \nabla f(x) \nabla f(x)^{T}
-$$</p>
+$$
+
 <p>因此，判断函数 $f$ 的对数凹凸性，只需要分别令二阶导数大于零（凸）和小于零（凹），即</p>
-<p>$$
+
+$$
 \begin{aligned}
-f(x) \nabla^{2} f(x) \succeq \nabla f(x) \nabla f(x)^{T} \\
+f(x) \nabla^{2} f(x) \succeq \nabla f(x) \nabla f(x)^{T} \\\\
 f(x) \nabla^{2} f(x) \preceq \nabla f(x) \nabla f(x)^{T}
 \end{aligned}
-$$</p>
+$$
+
 <h3 id="乘积求和与积分">乘积、求和与积分</h3>
 <p>乘积运算能够保持函数的对数凸性，这是因为对数运算和加法运算是能够保持函数的凸性。</p>
-<p>$$
+
+$$
 \begin{aligned}
-h(x) &amp;= f(x)g(x) \\
-\log h(x) &amp;= \log f(x) + \log g(x)
+    h(x) &= f(x)g(x) \\\\
+    \log h(x) &= \log f(x) + \log g(x)
 \end{aligned}
-$$</p>
+$$
+
 <p>然而，求和运算并不能够绝对保证函数的对数凸性。对数凹函数的和一般不是对数凹函数，而对数凸函数的和仍然是对数凸函数。</p>
 <p>因此，对数凸函数的积分也是对数凸函数。例如，非负函数 $p(x)$ 的 Laplace 变换：</p>
-<p>$$
+
+$$
 P(z)=\int p(x) e^{-z^{T} x} \mathrm{d} x
-$$</p>
+$$
+
 <h3 id="对数凹函数的积分">对数凹函数的积分</h3>
 <p>对数凹函数的积分仍然是对数凹函数需要满足如下条件：如果函数 $f: \mathbf{R}^n \times \mathbf{R}^m \rightarrow \mathbf{R}$ 是对数凹函数，那么</p>
-<p>$$
+
+$$
 g(x) = \int f(x, y) \mathrm{d} y
-$$</p>
+$$
+
 <p>是对数凹函数（此时是在 $\mathbf{R}^m$ 上求积分）。</p>
 <p>这个结论具有重要意义。它可以用来证明对数凹性对卷积运算也是封闭的，即如果函数 $f$ 和 $g$ 在 $\mathbf{R}^m$ 上是对数凹函数，则它们的卷积</p>
-<p>$$
+
+$$
 (f * g)(x)=\int f(x-y) g(y) \mathbf{d} y
-$$</p>
+$$
+
 <p>仍然是对数凹函数。这是因为：1. 乘积是保对数凹凸性的；2. 对数凹函数的积分仍然是对数凹函数。</p>
 <p>设 $C \subseteq \mathbf{R}^n$ 是凸集，$w$ 是 $\mathbf{R}^n$ 上的随机向量，设其具有对数凹性的概率密度函数 $p$，则函数</p>
-<p>$$
+
+$$
 \begin{aligned}
-f(x) &amp;= \operatorname{prob} (x + w \in C) \\
-&amp;= \int g(x + w)f(w) \mathrm{d} w
+    f(x) &= \operatorname{prob} (x + w \in C) \\\\
+    &= \int g(x + w)f(w) \mathrm{d} w
 \end{aligned}
-$$</p>
+$$
+
 <p>是 $x$ 的对数凹函数，其中 $g$ 定义为</p>
-<p>$$
+
+$$
 g(u)=\left\{\begin{array}{ll}
-1 &amp; u \in C \\
-0 &amp; u \notin C
+1 & u \in C \\\\
+0 & u \notin C
 \end{array}\right.
-$$</p>
+$$
 
           </div>
 

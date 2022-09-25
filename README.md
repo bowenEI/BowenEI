@@ -9,8 +9,8 @@
 - [Golang](https://golang.org/)
 - ~~[Hugo v0.81.0](https://github.com/gohugoio/hugo/releases/tag/v0.81.0)~~
 - ~~[Hugo v0.89.4](https://github.com/gohugoio/hugo/releases/tag/v0.89.4)~~
-- [Hugo v0.91.2](https://github.com/gohugoio/hugo/releases/tag/v0.91.2)
-- ~~[Hugo v0.97.3](https://github.com/gohugoio/hugo/releases/tag/v0.97.3)~~
+- ~~[Hugo v0.91.2](https://github.com/gohugoio/hugo/releases/tag/v0.91.2)~~
+- [Hugo v0.97.3](https://github.com/gohugoio/hugo/releases/tag/v0.97.3)
 
 ## 使用说明
 

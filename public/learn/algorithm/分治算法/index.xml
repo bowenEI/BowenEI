@@ -21,15 +21,23 @@
 &lt;p&gt;$n$ 位二进制整数 $X$ 和 $Y$ 相乘，通常算法时间复杂度为 $O(n^2)$。是否存在分治算法可以降低时间复杂度？&lt;/p&gt;
 &lt;h2 id=&#34;问题分析&#34;&gt;问题分析&lt;/h2&gt;
 &lt;p&gt;设 $X$ 和 $Y$ 是 $n$ 位整数，将 $X$ 分为 $n/2$ 位的两部分（高 $n/2$ 位的 $A$ 和低 $n/2$ 位的 $B$），将 $Y$ 分为 $n/2$ 位的两部分（高 $n/2$ 位的 $C$ 和低 $n/2$ 位的 $D$）。则 $X \times Y$ 可以表示为：&lt;/p&gt;
-&lt;p&gt;\begin{align}
-XY &amp;amp;= (A \cdot 2^{n/2} + B)(C \cdot 2^{n/2} + D) \\
-&amp;amp;= AC \cdot 2^n + (AD + BC) \cdot 2^{n/2} + BD \\
-&amp;amp;= AC \cdot 2^n + ((A+B)(C+D) - AC - BD) \cdot 2^{n/2} + BD
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+XY &amp;= (A \cdot 2^{n/2} + B)(C \cdot 2^{n/2} + D) \\\\
+&amp;= AC \cdot 2^n + (AD + BC) \cdot 2^{n/2} + BD \\\\
+&amp;= AC \cdot 2^n + ((A+B)(C+D) - AC - BD) \cdot 2^{n/2} + BD
+\end{align}
+$$
+
 &lt;p&gt;需要计算的子问题包括 $AC$、$BD$、$(A+B)(C+D)$。其中 $(A+B)(C+D)$ 中的加法运算的时间复杂度取决于问题规模，即数字位数 $n$。因此可以得到如下递推式：&lt;/p&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 T(n) = 3 T\left( \frac{n}{2} \right) + \Theta(n)
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;p&gt;可以解得时间复杂度为：&lt;/p&gt;
 &lt;p&gt;\begin{align}
 T(n) = \Theta\left(n^{\log _{2}{3}}\right)
@@ -45,39 +53,55 @@ T(n) = \Theta\left(n^{\log _{2}{3}}\right)
 &lt;p&gt;两个 $n \times n$ 的矩阵 $A$ 和 $B$ 相乘，通常算法时间复杂度为 $O(n^3)$。是否存在分治算法可以降低时间复杂度？&lt;/p&gt;
 &lt;h2 id=&#34;问题分析&#34;&gt;问题分析&lt;/h2&gt;
 &lt;p&gt;将 $A$ 和 $B$ 分成 $4$ 个大小为 $\frac{n}{2} \times \frac{n}{2}$ 的子矩阵相乘。&lt;/p&gt;
-&lt;p&gt;\begin{array}{l}
+
+$$
+\begin{array}{l}
 {\left[\begin{array}{ll}
-C_{11} &amp;amp; C_{12} \\
-C_{21} &amp;amp; C_{22}
+C_{11} &amp; C_{12} \\\\
+C_{21} &amp; C_{22}
 \end{array}\right]=\left[\begin{array}{ll}
-A_{11} &amp;amp; A_{12} \\
-A_{21} &amp;amp; A_{22}
+A_{11} &amp; A_{12} \\\\
+A_{21} &amp; A_{22}
 \end{array}\right]\left[\begin{array}{ll}
-B_{11} &amp;amp; B_{12} \\
-B_{21} &amp;amp; B_{22}
+B_{11} &amp; B_{12} \\\\
+B_{21} &amp; B_{22}
 \end{array}\right]}
-\end{array}&lt;/p&gt;
+\end{array}
+$$
+
 &lt;p&gt;需要计算的子问题包括 $8$ 个小矩阵乘法以及 $4$ 个矩阵加法，时间复杂度为：&lt;/p&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 T(n) = 8 T\left( \frac{n}{2} \right) + \Theta(n^2)
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;p&gt;即使如此，计算得到的时间复杂度没有得到改善，仍为 $T(n^3)$。我们可令&lt;/p&gt;
-&lt;p&gt;\begin{align}
-M_{1} &amp;amp;=  A_{11}  (B_{12} - B_{22}) \\
-M_{2} &amp;amp;= (A_{11} + A_{12})  B_{22} \\
-M_{3} &amp;amp;= (A_{21} + A_{22})  B_{11} \\
-M_{4} &amp;amp;=  A_{22}  (B_{21} - B_{11}) \\
-M_{5} &amp;amp;= (A_{11} + A_{22}) (B_{11} + B_{22}) \\
-M_{6} &amp;amp;= (A_{12} - A_{22}) (B_{21} + B_{22}) \\
-M_{7} &amp;amp;= (A_{11} – A_{21}) (B_{11} + B_{12}) \\
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+M_{1} &amp;=  A_{11}  (B_{12} - B_{22}) \\\\
+M_{2} &amp;= (A_{11} + A_{12})  B_{22} \\\\
+M_{3} &amp;= (A_{21} + A_{22})  B_{11} \\\\
+M_{4} &amp;=  A_{22}  (B_{21} - B_{11}) \\\\
+M_{5} &amp;= (A_{11} + A_{22}) (B_{11} + B_{22}) \\\\
+M_{6} &amp;= (A_{12} - A_{22}) (B_{21} + B_{22}) \\\\
+M_{7} &amp;= (A_{11} – A_{21}) (B_{11} + B_{12}) \\\\
+\end{align}
+$$
+
 &lt;p&gt;于是&lt;/p&gt;
-&lt;p&gt;\begin{align}
-C_{11} &amp;amp;= M_{5} + M_{4} - M_{2} + M_{6} \\
-C_{12} &amp;amp;= M_{1} + M_{2} \\
-C_{21} &amp;amp;= M_{3} + M_{4} \\
-C_{22} &amp;amp;= M_{5} + M_{1} – M_{3} – M_{7} \\
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+C_{11} &amp;= M_{5} + M_{4} - M_{2} + M_{6} \\\\
+C_{12} &amp;= M_{1} + M_{2} \\\\
+C_{21} &amp;= M_{3} + M_{4} \\\\
+C_{22} &amp;= M_{5} + M_{1} – M_{3} – M_{7} \\\\
+\end{align}
+$$
+
 &lt;p&gt;这样就把 $8$ 个矩阵相乘转变成 $7$ 个矩阵相乘，时间复杂度降低为&lt;/p&gt;
 &lt;p&gt;\begin{align}
 T(n) &amp;amp;= 7 T\left( \frac{n}{2} \right) + \Theta(n^2) \\
@@ -124,24 +148,40 @@ T(n) &amp;amp;= 7 T\left( \frac{n}{2} \right) + \Theta(n^2) \\
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;算法分析&#34;&gt;算法分析&lt;/h2&gt;
 &lt;p&gt;每一趟执行 Partition 时，需要遍历数组一遍，并且将原问题分成两个快速排序的子问题。因此时间复杂度为&lt;/p&gt;
-&lt;p&gt;\begin{align}
-T(n) &amp;amp;= 2 T \left( \frac{n}{2} \right) + O(n) \\
-&amp;amp;= O(n \log {n})
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+T(n) &amp;= 2 T \left( \frac{n}{2} \right) + O(n) \\\\
+&amp;= O(n \log {n})
+\end{align}
+$$
+
 &lt;h3 id=&#34;最好情况&#34;&gt;最好情况&lt;/h3&gt;
 &lt;p&gt;在最好情况下，每次划分对一个记录定位后，该记录的左侧子序列与右侧子序列的长度相同。因此&lt;/p&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 T(n) \leqslant 2 T \left( \frac{n}{2} \right) + n = O(n \log {n})
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;h3 id=&#34;最坏情况&#34;&gt;最坏情况&lt;/h3&gt;
 &lt;p&gt;在最坏情况下，待排序记录序列正序或逆序。每次划分只得到一个比上一次划分少一个记录的子序列，另一个子序列为空。此时，必须经过 $n-1$ 次递归调用才能把所有记录定位，而且第 $i$ 趟划分需要经过 $n-i$ 次关键码的比较才能找到第 $i$ 个记录的基准位置。因此，总的比较次数为：&lt;/p&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 \sum_{i=1}^{n-1} (n-i) = \frac{n(n-1)}{2} = O(n^2)
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;p&gt;时间复杂度为&lt;/p&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 T(n) = T \left( n-1 \right) + O(n)
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;h3 id=&#34;小结&#34;&gt;小结&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;快速排序算法的性能取决于划分的对称性。&lt;/li&gt;
@@ -216,18 +256,26 @@ T(n) = T \left( n-1 \right) + O(n)
 &lt;h2 id=&#34;问题分析&#34;&gt;问题分析&lt;/h2&gt;
 &lt;h3 id=&#34;简单情形一维数轴&#34;&gt;简单情形：一维数轴&lt;/h3&gt;
 &lt;p&gt;为了使问题易于理解和分析，先来考虑一维的情形。此时 $S$ 中的 $n$ 个点退化为 $x$ 轴上的 $n$ 个实数 $x_1, x_2, \cdots, x_n$。最接近点对即为这 $n$ 个实数中相差最小的 $2$ 个实数。&lt;/p&gt;
-&lt;p&gt;假设用 $x$ 轴上某个点 $m$ 将 $S$ 划分为小于 $m$ 的子集 $S_1$ 和大于 $m$ 的子集 $S_2$。基于平衡子问题的思想，用 $S$ 中各点坐标的中位数来作分割点。在 $S_1$ 中找出其最近点对 $\{p_1, p_2\} (p_1 &amp;gt; p_2)$，在 $S_2$ 中找出其最近点对 $\{q_1, q_2\} (q_1 &amp;lt; q_2)$。于是最短距离分别为&lt;/p&gt;
-&lt;p&gt;\begin{align}
-d_{S_1} &amp;amp;= \left | p_1 - p_2 \right | \\
-d_{S_2} &amp;amp;= \left | q_1 - q_2 \right |
-\end{align}&lt;/p&gt;
+&lt;p&gt;假设用 $x$ 轴上某个点 $m$ 将 $S$ 划分为小于 $m$ 的子集 $S_1$ 和大于 $m$ 的子集 $S_2$。基于平衡子问题的思想，用 $S$ 中各点坐标的中位数来作分割点。在 $S_1$ 中找出其最近点对 ${p_1, p_2} (p_1 &amp;gt; p_2)$，在 $S_2$ 中找出其最近点对 ${q_1, q_2} (q_1 &amp;lt; q_2)$。于是最短距离分别为&lt;/p&gt;
+
+$$
+\begin{align}
+d_{S_1} &amp;= \left | p_1 - p_2 \right | \\\\
+d_{S_2} &amp;= \left | q_1 - q_2 \right |
+\end{align}
+$$
+
 &lt;p&gt;递归地，$S$ 中的最近点对要么是 $\{p_1, p_2\}$，要么是 $\{q_1, q_2\}$，要么是某个点对 $\{p_3, q_3\}$，其中 $p_3 \in S_1$ 且 $q_3 \in S_2$。从而用线性时间就可以将 $S_1$ 的解和 $S_2$ 的解合并成为 $S$ 的解。&lt;/p&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 d = \min (d_{S_1}, d_{S_2}, q_3 - p_3)
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;h3 id=&#34;复杂情形二维平面&#34;&gt;复杂情形：二维平面&lt;/h3&gt;
 &lt;p&gt;选取一垂直线 $l:x=m$ 来作为分割直线。其中 $m$ 为 $S$ 中各点 $x$ 坐标的中位数。由此将 $S$ 分割为 $S_1$ 和 $S_2$ 两个半平面。&lt;/p&gt;
-&lt;p&gt;递归地在 $S_1$ 和 $S_2$ 上找出其最小距离 $d_1$ 和 $d_2$ 并设 $d=\min(d_1, d_2)$。$S$ 中的最接近点对要么是 $d$，要么是某个 $\{p, q\}$，其中 $p \in S_1$ 且 $q \in S_2$。如图所示：&lt;/p&gt;
+&lt;p&gt;递归地在 $S_1$ 和 $S_2$ 上找出其最小距离 $d_1$ 和 $d_2$ 并设 $d=\min(d_1, d_2)$。$S$ 中的最接近点对要么是 $d$，要么是某个 ${p, q}$，其中 $p \in S_1$ 且 $q \in S_2$。如图所示：&lt;/p&gt;
 
 
 
@@ -291,10 +339,13 @@ d = \min (d_{S_1}, d_{S_2}, q_3 - p_3)
 &lt;/ul&gt;
 &lt;h2 id=&#34;算法分析&#34;&gt;算法分析&lt;/h2&gt;
 &lt;p&gt;一维简单情形和二维情形的时间复杂度均为&lt;/p&gt;
-&lt;p&gt;\begin{align}
-T(n) &amp;amp;= 2 T\left( \frac{n}{2} \right) + O(n) \\
-&amp;amp;= O(n \log {n})
-\end{align}&lt;/p&gt;</description>
+
+$$
+\begin{align}
+T(n) &amp;= 2 T\left( \frac{n}{2} \right) + O(n) \\\\
+&amp;= O(n \log {n})
+\end{align}
+$$</description>
     </item>
     
     <item>
@@ -399,7 +450,7 @@ T(n) &amp;amp;= 2 T\left( \frac{n}{2} \right) + O(n) \\
   &lt;/div&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;算法分析&#34;&gt;算法分析&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;时间复杂度：$n \log {n}$&lt;/li&gt;
+&lt;li&gt;时间复杂度：$O(n \log {n})$&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     

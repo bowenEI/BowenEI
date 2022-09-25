@@ -992,9 +992,11 @@ Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将
   <div>
     <p><strong>BatchNorm 和 LayerNorm 的区别</strong></p>
 <p>沐神就 <code>BatchNorm</code> 和 <code>LayerNorm</code> 的区别作了详细讲解。我们知道，<code>Norm</code> 即 <code>Normalization</code>，对数据进行归一化处理。这和概率论中对随机变量进行标准化的操作类似，即把原向量化为均值为 $0$ 方差为 $1$ 的标准化向量。</p>
-<p>\begin{align}
+<p>$$
+\begin{align}
 Y = \frac{X - \mu}{\sigma}
-\end{align}</p>
+\end{align}
+$$</p>
 <p>如图所示，<code>BatchNorm</code> 和 <code>LayerNorm</code> 的区别一目了然。<code>BatchNorm</code> 是在每一个特征 <code>feature</code> 上对 <code>batch</code> 进行归一化，而 <code>LayerNorm</code> 是在每一个样本 <code>batch</code> 上对 <code>feature</code> 进行归一化。</p>
 <figure  id="figure-difference-between-batchnorm-and-layernorm">
   <div class="d-flex justify-content-center">
@@ -1064,13 +1066,21 @@ Y = \frac{X - \mu}{\sigma}
       Scaled Dot-Product Attention.
     </figcaption></figure>
 <p>注意力函数的计算公式如下：</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \textrm{Attention}\left(Q, K, V\right) = \textrm{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-\end{align}</p>
+\end{align}
+$$
+
 <p>$Q$ 即 <code>query</code>，$K$ 即 <code>key</code>，$QK^T$ 即 <code>query</code> 和 <code>key</code> 做内积。作者认为，两个向量的内积值越大，说明相似度越高。除以 $\sqrt{d_k}$ 则表示单位化，然后再用 softmax 得到权重。这里的道理其实就是机器学习中的余弦相似度（余弦距离）：</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \textrm{similarity} = \cos{\theta} = \frac{\alpha \cdot \beta}{||\alpha|| \cdot ||\beta||}
-\end{align}</p>
+\end{align}
+$$
+
 <p>注意这里 <code>Mask</code> 的作用是为了避免 $t$ 时刻看到后面的输入。在数学上的具体实现方式是以一个绝对值非常大的负数（$-\infty$）作为指数，计算出来的幂趋向于零，这样就实现了掩盖 $t$ 时刻后面的输入的效果。</p>
 <h4 id="322-multi-head-attention">3.2.2 Multi-Head Attention</h4>
 <p>作者认为，与其计算单个的注意力函数，不如把 <code>query</code>、<code>key</code>、<code>value</code> 投影到一个更低的维度上，投影 $h$ 次，然后再计算 $h$ 次注意力函数，最后每一个函数的输出合并再投影得到最终的输出。如图所示。</p>
@@ -1104,10 +1114,14 @@ Y = \frac{X - \mu}{\sigma}
       Multi-Head Attention.
     </figcaption></figure>
 <p>多头注意力函数的计算公式如下：</p>
-<p>\begin{align}
-\textrm{MultiHead}\left(Q, K, V\right) &amp;= \textrm{Concat}\left(\textrm{head}_1, &hellip;, \textrm{head}_h\right)W^O \\
-\textbf{where}\quad\textrm{head}_i &amp;= \textrm{Attention}\left(QW^Q_i, KW^K_i, VW^V_i\right)
-\end{align}</p>
+
+$$
+\begin{align}
+\textrm{MultiHead}\left(Q, K, V\right) &= \textrm{Concat}\left(\textrm{head}_1, ..., \textrm{head}_h\right)W^O \\\\
+\textbf{where}\quad\textrm{head}_i &= \textrm{Attention}\left(QW^Q_i, KW^K_i, VW^V_i\right)
+\end{align}
+$$
+
 <p>在本文中作者定义 $h=8$，于是 $d_k = d_v = d_{model}/h = 64$，也就是输出维度。</p>
 <h4 id="323-applications-of-attention-in-our-model">3.2.3 Applications of Attention in our Model</h4>
 <p>这一小节作者主要介绍 <strong>Transformer</strong> 是如何使用注意力的，归结起来一共有如下 3 种情况：</p>
@@ -1131,9 +1145,13 @@ Y = \frac{X - \mu}{\sigma}
 <blockquote>
 <p>In addition to attention sub-layers, each of the layers in our encoder and decoder contains a fully connected feed-forward network, which is applied to each position separately and identically. This consists of two linear transformations with a ReLU activation in between.</p>
 </blockquote>
-<p>\begin{align}
+
+$$
+\begin{align}
 \textrm{FFN}\left(x\right) = \max \left(0, xW_1 + b_1\right)W_2 + b_2
-\end{align}</p>
+\end{align}
+$$
+
 <p>在注意力层之后，<code>encoder</code> 和 <code>decoder</code> 都会有一个前馈网络层，首先是一个全连接层，然后是 ReLU 激活函数，最后再过一个全连接层。</p>
 <h3 id="34-embeddings-and-softmax">3.4 Embeddings and Softmax</h3>
 <blockquote>

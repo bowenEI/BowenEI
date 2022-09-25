@@ -1132,17 +1132,25 @@
             
 
             <h2 id="归并排序算法的递归方程">归并排序算法的递归方程</h2>
-<p>\begin{align}
+
+$$
+\begin{align}
 T(n) = \begin{cases}
-\Theta(1) &amp; n=1 \\
-2T(\frac{n}{2})+\Theta(n) &amp; n&gt;1
+\Theta(1) & n=1 \\\\
+2T(\frac{n}{2})+\Theta(n) & n>1
 \end{cases}
-\end{align}</p>
+\end{align}
+$$
+
 <p>这个方程的含义是如果只有 $1$ 个元素的数组需要做归并排序，那么在常数时间内就能得到有序数组。</p>
 <p>如果是 $n$ 个元素的数组需要做归并排序，那么需要将问题一分为二，每个子问题各需要 $T(\frac{n}{2})$ 的时间。解决子问题以后，当前问题转化为合并有序数组问题，两个指针会不重复扫描每个元素一遍，复杂度为 $\Theta(n)$。</p>
 <p>可以使用逐层展开法和变量替换法求解 $T(n)$，但是比较麻烦，仅作了解即可。</p>
 <h2 id="master-定理">Master 定理</h2>
-<p>$$T(n) = aT(\frac{n}{b})+f(n), a \ge 1, b &gt; 1, f(n) &gt; 0$$</p>
+
+$$
+T(n) = aT(\frac{n}{b})+f(n), a \ge 1, b > 1, f(n) > 0
+$$
+
 <p>比较 $n ^ {\log_{b}{a}}$ 的阶和 $f(n)$ 的大小：</p>
 <ul>
 <li>若 $n ^ {\log_{b}{a}}$ 大，则 $T(n) = \Theta(n ^ {\log_{b}{a}})$</li>

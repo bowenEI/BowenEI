@@ -1194,13 +1194,15 @@
 
             <h2 id="定义">定义</h2>
 <p>当凸优化问题的目标函数是凸二次型并且约束函数为仿射时，该问题被称为二次规划（Quadratic Program, QP）。二次规划问题可以表示为</p>
-<p>$$
+
+$$
 \begin{aligned}
-\mathrm{minimize} \quad &amp; \frac{1}{2} x^TPx + q^Tx + r \\
-\mathrm{subject\ to} \quad &amp; Gx \preceq h \\
-\quad &amp; Ax = b
+    \mathrm{minimize} \quad & \frac{1}{2} x^TPx + q^Tx + r \\\\
+    \mathrm{subject\ to} \quad & Gx \preceq h \\\\
+    \quad & Ax = b
 \end{aligned}
-$$</p>
+$$
+
 <p>其中 $P \in \mathbf{S}^n_+$，$G \in \mathbf{R}^{p \times n}$。可以用下图来表示二次规划问题。</p>
 
 
@@ -1231,33 +1233,41 @@ $$</p>
   </div></figure>
 <h3 id="二次约束二次规划">二次约束二次规划</h3>
 <p>如果不仅是目标函数，而且不等式约束也是凸二次型，即</p>
-<p>$$
+
+$$
 \begin{aligned}
-\mathrm{minimize} \quad &amp; \frac{1}{2} x^TPx + q^Tx + r \\
-\mathrm{subject\ to} \quad &amp; \frac{1}{2} x^TP_ix + q^T_ix + r_i \leqslant 0 \\
-\quad &amp; Ax = b
+    \mathrm{minimize} \quad & \frac{1}{2} x^TPx + q^Tx + r \\\\
+    \mathrm{subject\ to} \quad & \frac{1}{2} x^TP_ix + q^T_ix + r_i \leqslant 0 \\\\
+    \quad & Ax = b
 \end{aligned}
-$$</p>
+$$
+
 <p>则称这一问题为二次约束二次规划（Quadratically Constrained Quadratic Program, QCQP）</p>
 <p>线性规划是二次规划的特例，即取 $P = 0$。二次规划是二次约束二次规划的特例，令 $P_i = 0$ 即可。</p>
 <h2 id="举例">举例</h2>
 <h3 id="最小二乘及回归">最小二乘及回归</h3>
-<p>$$
+
+$$
 \| Ax - b \|^2_2 = x^TA^TAx - 2b^TAx + b^Tb
-$$</p>
+$$
+
 <p>上面的凸二次函数是一个（无约束的）二次规划。我们在很多领域都会看到类似的式子，有些地方会称其为回归分析或者最小二乘逼近。这个问题很简单，可以求出其解析解 $x = A^{\dagger} b$。</p>
 <h2 id="二阶锥规划">二阶锥规划</h2>
-<p>$$
+
+$$
 \begin{aligned}
-\mathrm{minimize} \quad &amp; f^Tx \\
-\mathrm{subject\ to} \quad &amp; \| A_ix + b_i \|_2 \leqslant c_i^Tx + d_i, \quad i = 1,\cdots,m \\
-\quad &amp; Fx = g
+    \mathrm{minimize} \quad & f^Tx \\\\
+    \mathrm{subject\ to} \quad & \| A_ix + b_i \|_2 \leqslant c_i^Tx + d_i, \quad i = 1,\cdots,m \\\\
+    \quad & Fx = g
 \end{aligned}
-$$</p>
+$$
+
 <p>称上述问题为二阶锥规划（Second-Order Cone Program, SOCP），其中 $x \in \mathbf{R}^n$ 是优化变量，$A_i \in \mathbf{R}^{n_i \times n}$，$F \in \mathbf{R}^{p \times n}$。并且我们称约束</p>
-<p>$$
+
+$$
 \| Ax + b \|_2 \leqslant c^Tx + d
-$$</p>
+$$
+
 <p>为二阶锥约束。</p>
 <p>当 $c_i = 0$ 时，SOCP 等同于 QCQP。当 $A_i = 0$ 时，SOCP 退化为（一般的）线性规划。</p>
 

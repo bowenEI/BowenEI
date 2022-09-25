@@ -1166,13 +1166,21 @@
 <li>一个商品子集 $S \subseteq O$。</li>
 </ul>
 <p>优化目标：</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \max \sum_{i \in S} {p_i}
-\end{align}</p>
+\end{align}
+$$
+
 <p>约束条件：</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \mathbf{s.t.} \sum_{i \in S} {v_i \leqslant C}
-\end{align}</p>
+\end{align}
+$$
+
 <h2 id="问题分析">问题分析</h2>
 <h3 id="直观策略">直观策略</h3>
 <ol>
@@ -1218,9 +1226,13 @@
 <li>不选购商品 $i$，则购买金额为前 $i-1$ 件商品的价格之和。</li>
 </ul>
 <p>最终，这两个子问题取最大值，即</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 P[i,c] = \max \left \{ P[i-1,c-v_i] + p_i, P[i-1,c] \right \}
-\end{align}</p>
+\end{align}
+$$
+
 <h2 id="算法代码">算法代码</h2>
 <h3 id="商品类定义">商品类定义</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">struct</span> <span class="nc">Goods</span>

@@ -1197,29 +1197,37 @@
 
             <h2 id="lagrange-函数">Lagrange 函数</h2>
 <p>考虑标准形式的优化问题</p>
-<p>$$
+
+$$
 \begin{aligned}
-\mathrm{minimize} \quad &amp; f_0(x) \\
-\mathrm{subject\ to} \quad &amp; f_i(x) \leqslant 0, \quad i=1,\cdots,m \\
-&amp; h_i(x) = 0, \quad i=1,\cdots,p
+    \mathrm{minimize} \quad & f_0(x) \\\\
+    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\\\
+    & h_i(x) = 0, \quad i=1,\cdots,p
 \end{aligned}
-$$</p>
+$$
+
 <p>定义该问题的 <strong>Lagrange 函数</strong> $L: \mathbf{R}^n \times \mathbf{R}^m \mathbf{R}^p \rightarrow \mathbf{R}$ 为</p>
-<p>$$
+
+$$
 L(x, \lambda, \nu) = f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{i=1}^p \nu_i h_i(x)
-$$</p>
+$$
+
 <p>其中定义域 $\operatorname{dom} L = \mathcal{D} \times \mathbf{R}^m \times \mathbf{R}^p$。$\lambda_i$ 称为第 $i$ 个不等式约束 $f_i(x) \leqslant 0$ 对应的 <strong>Lagrange 乘子</strong>；类似地，$\nu_i$ 称为第 $i$ 个等式约束 $h_i(x) = 0$ 对应的 Lagrange 乘子。向量 $\lambda$ 和 $\nu$ 称为<strong>对偶变量</strong>或者问题的 <strong>Lagrange 乘子向量</strong>。</p>
 <h2 id="lagrange-对偶函数">Lagrange 对偶函数</h2>
 <p>定义 <strong>Lagrange 对偶函数</strong> $g: \mathbf{R}^m \times \mathbf{R}^p \rightarrow \mathbf{R}$ 为 Lagrange 函数关于 $x$ 取得的最小值：即对 $\lambda \in \mathbf{R}^m$，$\nu \in \mathbf{R}^p$，有</p>
-<p>$$
+
+$$
 g(\lambda, \nu)=\inf_{x \in \mathcal{D}} L(x, \lambda, \nu)=\inf_{x \in \mathcal{D}}\left(f_0(x)+\sum_{i=1}^{m} \lambda_i f_i(x)+\sum_{i=1}^{p} \nu_i h_i(x)\right)
-$$</p>
+$$
+
 <p>如果 Lagrange 函数关于 $x$ 无下界，则对偶函数取值为 $-\infty$。因为对偶函数是一族关于 $(\lambda, \nu)$ 的仿射函数的逐点下确界，所以即使原问题不是凸的，对偶函数也是凹函数。</p>
 <h2 id="最优值的下界">最优值的下界</h2>
 <p>对偶函数构成了原问题最优值 $p^{\star}$ 的下界：即对 $\forall \lambda, \nu \succeq 0$ 有</p>
-<p>$$
+
+$$
 g(\lambda, \nu) \leqslant p^{\star}
-$$</p>
+$$
+
 <h3 id="几何意义">几何意义</h3>
 <p>为了便于理解，我们考虑只有一个变量 $x \in \mathbf{R}$ 并且只有一个不等式约束的简单情形。如下图所示：</p>
 
@@ -1251,71 +1259,82 @@ $$</p>
   </div></figure>
 <p>图中表示的是对偶可行点给出的下界。粗的实线表示目标函数 $f_0$，下方的虚线表示约束函数 $f_1$。可行集是图中两个红点之间的部分所在区间。细的点线表示一系列 Lagrange 函数 $L(x, \lambda)$，其中 $\lambda = \lambda_1, \lambda_2, \lambda_3, \cdots$。该问题的最优点是左边的红点所在位置，可以看到每个 Lagrange 函数的极小值均小于之。</p>
 <h2 id="通过线性逼近来理解">通过线性逼近来理解</h2>
-<p>可以通过对集合 $\{0\}$ 和 $-\mathbf{R}_+$ 的示性函数进行线性逼近来理解 Lagrange 函数和其给出下界的性质。首先将原问题重新描述成一个无约束问题</p>
-<p>$$
+<p>可以通过对集合 ${0}$ 和 $-\mathbf{R}_+$ 的示性函数进行线性逼近来理解 Lagrange 函数和其给出下界的性质。首先将原问题重新描述成一个无约束问题</p>
+
+$$
 \mathrm{minimize} \quad f_0(x) + \sum_{i=1}^m I_-(f_i(x)) + \sum_{i=1}^p I_0(h_i(x))
-$$</p>
+$$
+
 <p>其中，$I_-: \mathbf{R} \rightarrow \mathbf{R}$ 是非正实数集的示性函数</p>
-<p>$$
-I_-(u) = \left\
 
-{{< math >}}
 $$
-\begin{matrix}
-0 &amp; u \leqslant 0 \\
-\infty &amp; u &gt; 0
-\end{matrix}
+I_-(u) = \left\{
+    \begin{matrix}
+        0 & u \leqslant 0 \\\\
+        \infty & u > 0
+    \end{matrix}
+\right.
 $$
-{{< /math >}}
 
-right.
-$$</p>
-<p>类似地，$I_0$ 是集合 $\{0\}$ 的示性函数。打一个形象的比喻，可以将函数 $I_-(u)$ 理解为我们对约束函数值 $u = f_i(x)$ 的一种恼怒或不满。类似地，$I_0(u)$ 表达了我们对等式约束值 $u = h_i(x)$ 的不满。</p>
+<p>类似地，$I_0$ 是集合 ${0}$ 的示性函数。打一个形象的比喻，可以将函数 $I_-(u)$ 理解为我们对约束函数值 $u = f_i(x)$ 的一种恼怒或不满。类似地，$I_0(u)$ 表达了我们对等式约束值 $u = h_i(x)$ 的不满。</p>
 <p>如果我们用线性函数 $\lambda_i(u)$ 替代函数 $I_-(u)$，其中 $\lambda_i \geqslant 0$，用函数 $\nu_i u$ 替代 $I_0(u)$。那么，目标函数就变成了 Lagrange 函数 $L(x, \lambda, \nu)$，且对偶函数值是该问题的最优值。实际上，使用线性函数太“软”，没有示性函数“硬”。用线性函数去逼近示性函数是远远不够的，不过至少可以将线性函数看作是示性函数的一个下估计。</p>
 <p>用“软”约束代替“硬”约束的思想在后文考虑内点法时会再次提到。</p>
 <h2 id="举例">举例</h2>
 <h3 id="线性方程组的最小二乘解">线性方程组的最小二乘解</h3>
-<p>$$
+
+$$
 \begin{aligned}
-\mathrm{minimize} \quad &amp; x^Tx \\
-\mathrm{subject\ to} \quad &amp; Ax = b
+    \mathrm{minimize} \quad & x^Tx \\\\
+    \mathrm{subject\ to} \quad & Ax = b
 \end{aligned}
-$$</p>
+$$
+
 <p>其中 $A \in \mathbf{R}^{p \times n}$，说明这个问题共有 $p$ 个等式约束。其 Lagrange 函数和对偶函数分别为</p>
-<p>$$
+
+$$
 \begin{aligned}
-L(x, \nu) &amp;= x^Tx + \nu^T(Ax - b) \\
-g(\nu) &amp;= \inf_x L(x, \nu)
+    L(x, \nu) &= x^Tx + \nu^T(Ax - b) \\\\
+    g(\nu) &= \inf_x L(x, \nu)
 \end{aligned}
-$$</p>
+$$
+
 <p>由于 $L(x, \nu)$ 是关于 $x$ 的二次凸函数，可以通过求解如下最优性条件得到函数的最小值</p>
-<p>$$
+
+$$
 \begin{aligned}
-\nabla_x L(x, \nu) = 2x + A^T \nu &amp;= 0 \\
-x &amp;= -\frac{1}{2} A^T \nu
+    \nabla_x L(x, \nu) = 2x + A^T \nu &= 0 \\\\
+    x &= -\frac{1}{2} A^T \nu
 \end{aligned}
-$$</p>
+$$
+
 <p>因此，对偶函数为</p>
-<p>$$
+
+$$
 g(\nu) = -\frac{1}{4} \nu^T AA^T \nu - b^T \nu
-$$</p>
+$$
+
 <p>它是一个二次凹函数，定义域为 $\mathbf{R}^p$。</p>
 <h2 id="lagrange-对偶函数和共轭函数">Lagrange 对偶函数和共轭函数</h2>
 <p>共轭函数和 Lagrange 对偶函数紧密相关。下面的问题说明了一个简单的联系。</p>
-<p>$$
+
+$$
 \begin{aligned}
-\mathrm{minimize} \quad &amp; f(x) \\
-\mathrm{subject\ to} \quad &amp; x = 0
+    \mathrm{minimize} \quad & f(x) \\\\
+    \mathrm{subject\ to} \quad & x = 0
 \end{aligned}
-$$</p>
+$$
+
 <p>虽然这个问题没有什么挑战性，但是我们还是可以很容易地得到 Lagrange 函数为 $L(x, \nu) = f(x) + \nu^T x$，则其对偶函数为</p>
-<p>$$
+
+$$
 g(\nu) = \inf_x (f(x) + \nu^T x) = -\sup_x ((-\nu)^Tx - f(x)) = -f^{*}(-\nu)
-$$</p>
+$$
+
 <p>即，我们得到了结论</p>
-<p>$$
+
+$$
 g(\nu) = -f^{*}(-\nu)
-$$</p>
+$$
 
           </div>
 

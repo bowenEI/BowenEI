@@ -286,7 +286,7 @@
                height=&#34;250&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
-&lt;p&gt;如图所示的有向图中包含 3 个强连通分量，分别为 $\{1, 2, 4, 5\}$、$\{3\}$ 和 $\{6\}$。&lt;/p&gt;
+&lt;p&gt;如图所示的有向图中包含 3 个强连通分量，分别为 ${1, 2, 4, 5}$、${3}$ 和 ${6}$。&lt;/p&gt;
 
 
 
@@ -315,7 +315,7 @@
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;p&gt;首先访问节点 $1$，之后陆续访问节点 $2$、$3$、$6$，&lt;code&gt;DFN&lt;/code&gt; 的值和 &lt;code&gt;LOW&lt;/code&gt; 值都相同（等于被搜索的次序）。&lt;/p&gt;
-&lt;p&gt;现在发现节点 $6$ 没有后继，因此需要进行回溯。回溯第一步发现 &lt;code&gt;DFN[6] == LOW[6]&lt;/code&gt;，因此 $\{6\}$ 为强连通分量，出栈。同理，&lt;code&gt;DFN[3] == LOW[3]&lt;/code&gt;，因此 $\{3\}$ 也为强连通分量，出栈。&lt;/p&gt;
+&lt;p&gt;现在发现节点 $6$ 没有后继，因此需要进行回溯。回溯第一步发现 &lt;code&gt;DFN[6] == LOW[6]&lt;/code&gt;，因此 ${6}$ 为强连通分量，出栈。同理，&lt;code&gt;DFN[3] == LOW[3]&lt;/code&gt;，因此 ${3}$ 也为强连通分量，出栈。&lt;/p&gt;
 
 
 
@@ -400,7 +400,7 @@
                height=&#34;395&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
-&lt;p&gt;最后再次回溯到节点 $1$，此时所有的节点都已访问，并且 &lt;code&gt;DFN[1] == LOW[1]&lt;/code&gt;。因此节点 $1$ 及其后续所有节点全部出栈，$\{1, 2, 4, 5\}$ 为强连通分量。&lt;/p&gt;
+&lt;p&gt;最后再次回溯到节点 $1$，此时所有的节点都已访问，并且 &lt;code&gt;DFN[1] == LOW[1]&lt;/code&gt;。因此节点 $1$ 及其后续所有节点全部出栈，${1, 2, 4, 5}$ 为强连通分量。&lt;/p&gt;
 
 
 

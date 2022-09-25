@@ -1185,9 +1185,13 @@
 
             <h2 id="连续">连续</h2>
 <p>如果对 $\forall \epsilon &gt; 0$，$\exists \delta$ 满足</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 y \in \operatorname{dom} f, \quad\|y-x\| _{2} \leqslant \delta \Longrightarrow\|f(y)-f(x)\| _{2} \leqslant \epsilon
-\end{align}</p>
+\end{align}
+$$
+
 <p>则称函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}^m$ 在 $x \in \operatorname{dom} f$ 处<strong>连续</strong>。</p>
 <div class="alert alert-note">
   <div>
@@ -1196,33 +1200,49 @@ y \in \operatorname{dom} f, \quad\|y-x\| _{2} \leqslant \delta \Longrightarrow\|
 </div>
 
 <p>可以用极限来描述函数的连续性：</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \lim _{i \rightarrow \infty} f\left(x _{i}\right)=f\left(\lim _{i \rightarrow \infty} x _{i}\right)
-\end{align}</p>
+\end{align}
+$$
+
 <p>函数连续是指它在定义域上每个点都连续。</p>
 <h2 id="闭函数">闭函数</h2>
-<p>对于函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，如果对 $\forall \alpha \in \mathbf{R}$，集合 $\{x \in \operatorname{dom} f \mid f(x) \leqslant \alpha\}$ 是闭集，则称函数 $f$ 是<strong>闭函数</strong>。</p>
+<p>对于函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，如果对 $\forall \alpha \in \mathbf{R}$，集合 ${x \in \operatorname{dom} f \mid f(x) \leqslant \alpha}$ 是闭集，则称函数 $f$ 是<strong>闭函数</strong>。</p>
 <p>对于连续函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，如果 $\operatorname{dom} f$ 是闭集，那么 $f$ 是闭函数；如果 $\operatorname{dom} f$ 是开集，那么 $f$ 是闭函数的充要条件是 $f$ 将沿着任何收敛于 $\operatorname{dom} f$ 的边界点的序列趋于 $\infty$。</p>
 <p>来看 $\mathbf{R} \rightarrow \mathbf{R}$ 上的一些简单例子：</p>
 <ul>
 <li>$f = x \log{x}$，$\operatorname{dom}f = (0, +\infty)$</li>
 </ul>
 <p>而</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \lim _{x \rightarrow 0^{+}} x \log{x} = 0 \neq \infty
-\end{align}</p>
+\end{align}
+$$
+
 <p>因此不是闭函数。</p>
 <ul>
 <li>$f = \log{x}$，$\operatorname{dom}f = (0, +\infty)$</li>
 </ul>
 <p>而</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \lim _{x \rightarrow 0^{+}} \log{x} = -\infty
-\end{align}</p>
+\end{align}
+$$
+
 <p>且</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \lim _{x \rightarrow +\infty} \log{x} = +\infty
-\end{align}</p>
+\end{align}
+$$
+
 <p>因此是闭函数。</p>
 
           </div>

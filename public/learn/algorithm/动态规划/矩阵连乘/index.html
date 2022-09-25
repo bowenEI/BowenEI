@@ -1172,9 +1172,13 @@
   </div></figure>
 <p>令 $m[i,j]$ 表示 $M_i M_{i+1} \cdots M_j$ 的最小乘法次数，则 $m[1,n]$ 表示 $M_1 M_2 \cdots M_n$ 的最小乘法次数。</p>
 <p>我们把加括号的过程想象成切割，左边加一对括号，右边加一对括号，原问题就被分解成两个子问题。考虑在 $k$ 处断开，于是有如下状态转移方程：</p>
-<p>\begin{align}
-m[i,j] = \min_{i \leqslant k &lt; j}{m[i,k] + m[k+1,j] + r_i \times c_k \times c_j}
-\end{align}</p>
+
+$$
+\begin{align}
+m[i,j] = \min_{i \leqslant k < j}{m[i,k] + m[k+1,j] + r_i \times c_k \times c_j}
+\end{align}
+$$
+
 <p>其中 $r$ 和 $c$ 分别矩阵的行和列。</p>
 <p>接下来确定计算顺序，自底向上计算。$i=j$ 时，仅表示一个矩阵，乘法次数为 $0$。由于 $i&lt;j$ 恒成立，因此矩阵只用到上三角。</p>
 <h2 id="算法代码">算法代码</h2>

@@ -1158,12 +1158,16 @@
 <p>现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？</p>
 <h3 id="问题分析">问题分析</h3>
 <p>我们记 $dp[i, j]$ 为从 $(0, 0)$ 到 $(i, j)$ 的路径总数，$ob[i, j]$ 表示 $(i, j)$ 处有无障碍物（有障碍物则值为 $1$）。根据题目的规则，只能向下和向右走。因此从 $(0, 0)$ 到 $(i, j)$ 的路径总数等于从 $(0, 0)$ 到 $(i - 1, j)$ 和 $(i, j - 1)$ 两点坐标路径总数之和，即原问题可以由子问题递推得到。要注意这里要考虑到障碍物的问题，如果 $(i, j)$ 处是障碍物，则没有任何路径。于是可以得到下面的状态转移方程：</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 dp[i, j] = \left\{\begin{matrix}
-0 &amp; ob[i, j] = 1 \\
-dp[i - 1, j] + dp[i, j - 1] &amp; ob[i, j] = 0
+ 0 & ob[i, j] = 1 \\\\
+ dp[i - 1, j] + dp[i, j - 1] & ob[i, j] = 0
 \end{matrix}\right.
-\end{align}</p>
+\end{align}
+$$
+
 <h3 id="算法代码">算法代码</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">uniquePathsWithObstacles</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="o">&amp;</span><span class="n">obstacleGrid</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
@@ -1214,9 +1218,13 @@ dp[i - 1, j] + dp[i, j - 1] &amp; ob[i, j] = 0
 <li>如果偷了当前这家，那么不可以偷下一家，当前偷得的金额还是和上一次偷完一样。</li>
 </ul>
 <p>这两种情况取最大即可得到最优方案，如此递推算下去即可求解得到最终结果。因此，状态转移方程为：</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 dp[i] = \max \{dp[i - 2] + w[i], dp[i - 1]\}
-\end{align}</p>
+\end{align}
+$$
+
 <h3 id="算法代码-1">算法代码</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">rob</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">nums</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
@@ -1276,12 +1284,16 @@ dp[i] = \max \{dp[i - 2] + w[i], dp[i - 1]\}
 </li>
 </ul>
 <p>那么本题的状态转移方程为：</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 dp[i, j] = \left\{\begin{matrix}
-dp[i - 1, j] &amp; s[i - 1] \ne t[j - 1] \\
-dp(i - 1, j - 1) + dp[i - 1, j] &amp; s[i - 1] = t[j - 1]
+ dp[i - 1, j] & s[i - 1] \ne t[j - 1] \\\\ 
+ dp(i - 1, j - 1) + dp[i - 1, j] & s[i - 1] = t[j - 1]
 \end{matrix}\right.
-\end{align}</p>
+\end{align}
+$$
+
 <h3 id="算法代码-2">算法代码</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">numDistinct</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">,</span> <span class="n">string</span> <span class="n">t</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>

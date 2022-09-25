@@ -1198,38 +1198,66 @@
 
             <h2 id="导数">导数</h2>
 <p>设函数 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}^{m}$，$x \in \operatorname{int} \operatorname{dom} f$。如果存在矩阵 $Df(x) \in \mathbf{R}^{m \times n}$，满足</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \lim _{z \in \operatorname{dom} f, z \neq x, z \rightarrow x} \frac{\|f(z)-f(x)-D f(x)(z-x)\| _{2}}{\|z-x\| _{2}}=0
-\end{align}</p>
+\end{align}
+$$
+
 <p>则称函数 $f$ <strong>可微</strong>，并称 $Df(x)$ 为 $f$ 在 $x$ 处的<strong>导数</strong>（或 <strong>Jacobian</strong> 矩阵）。</p>
 <p>我们将 $z$ 的仿射函数</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 f(x) + Df(x)(z-x)
-\end{align}</p>
+\end{align}
+$$
+
 <p>称为 $f$ 在 $x$ 处（或附近）的<strong>一次逼近</strong>。当 $z$ 接近 $x$ 时，该仿射函数非常接近 $f$。</p>
 <p>$Df(x)$ 可以通过计算偏导数的方式求得：</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 D f(x) _{ij}=\frac{\partial f _{i}(x)}{\partial x _{j}}, \quad i=1, \cdots, m, \quad j=1, \cdots, n
-\end{align}</p>
+\end{align}
+$$
+
 <h2 id="梯度">梯度</h2>
-<p>\begin{align}
+
+$$
+\begin{align}
 \nabla f(x)=D f(x)^{T}
-\end{align}</p>
+\end{align}
+$$
+
 <p><strong>梯度</strong>是一个列向量，它的分量是 $f$ 的偏导数。</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \nabla f(x) _{i}=\frac{\partial f(x)}{\partial x _{i}}, \quad i=1, \cdots, n
-\end{align}</p>
+\end{align}
+$$
+
 <h2 id="链式规则">链式规则</h2>
 <p>设复合函数 $h(x) = g(f(x))$，则</p>
-<p>\begin{align}
-\nabla h(x) &amp;= g&rsquo;(f(x))f(x) \\
-&amp;= \nabla g(f(x))^T f(x)
-\end{align}</p>
+
+$$
+\begin{align}
+\nabla h(x) &= g'(f(x))f(x) \\\\
+&= \nabla g(f(x))^T f(x)
+\end{align}
+$$
+
 <h3 id="仿射函数">仿射函数</h3>
 <p>设仿射函数 $g(x) = f(Ax+b)$，其中 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}^{m}$，$A \in \mathbf{R}^{n \times p}$，$b \in \mathbf{R}^{n}$，则 $g: \mathbf{R}^{p} \rightarrow \mathbf{R}^{m}$。当 $f$ 是实函数时（即 $m=1$），仿射函数 $g$ 的梯度公式为：</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \nabla g(x) = A^T \nabla f(Ax+b)
-\end{align}</p>
+\end{align}
+$$
+
 <div class="alert alert-note">
   <div>
     <p><strong>仿射</strong></p>
@@ -1239,31 +1267,50 @@ D f(x) _{ij}=\frac{\partial f _{i}(x)}{\partial x _{j}}, \quad i=1, \cdots, m, \
 </div>
 
 <h3 id="方向导数">方向导数</h3>
-<p>设 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}^{m}$，$x, v \in \mathbf{R}^{n}$。定义函数 $\tilde{f} = f(x+tv)$。（粗略地说，$\tilde{f}$ 是将 $f$ 限制在直线 $\{x+tv \mid t \in \mathbf{R}\}$ 上的函数。）则</p>
-<p>\begin{align}
+<p>设 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}^{m}$，$x, v \in \mathbf{R}^{n}$。定义函数 $\tilde{f} = f(x+tv)$。（粗略地说，$\tilde{f}$ 是将 $f$ 限制在直线 ${x+tv \mid t \in \mathbf{R}}$ 上的函数。）则</p>
+
+$$
+\begin{align}
 D \tilde{f}(t)=\tilde{f}^{\prime}(t)=\nabla f(x+t v)^{T} v
-\end{align}</p>
+\end{align}
+$$
+
 <p>并称标量 $\tilde{f}^{\prime}(0)$ 为函数 $f$ 在 $x$ 处沿方向 $v$ 的<strong>方向导数</strong>。</p>
 <h2 id="二阶导数">二阶导数</h2>
 <p>设函数 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}$，$x \in \operatorname{int} \operatorname{dom} f$。那么 $f$ 在 $x$ 处的二阶导数（或 <strong>Hessian</strong> 矩阵）为</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \nabla^{2} f(x) _{ij}=\frac{\partial^{2} f(x)}{\partial x _{i} \partial x _{j}}, \quad i=1, \cdots, n, \quad j=1, \cdots, n
-\end{align}</p>
+\end{align}
+$$
+
 <p>函数 $f$ 在（或接近）$x$ 处以 $z$ 为变量的<strong>二次逼近</strong>为</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \widehat{f}(z)=f(x)+\nabla f(x)^{T}(z-x)+\frac{1}{2}(z-x)^{T} \nabla^{2} f(x)(z-x)
-\end{align}</p>
+\end{align}
+$$
+
 <h2 id="二阶导数的链式规则">二阶导数的链式规则</h2>
 <h3 id="标量复合函数">标量复合函数</h3>
 <p>设 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}$，$g: \mathbf{R} \rightarrow \mathbf{R}$，$h(x)=g(f(x))$。我们有</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \nabla^{2} h(x)=g^{\prime}(f(x)) \nabla^{2} f(x)+g^{\prime \prime}(f(x)) \nabla f(x) \nabla f(x)^{T}
-\end{align}</p>
+\end{align}
+$$
+
 <h3 id="复合仿射函数">复合仿射函数</h3>
 <p>设 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}$，$A \in \mathbf{R}^{n \times m}$，$b \in \mathbf{R}^{n}$，定义 $g: \mathbf{R}^{m} \rightarrow \mathbf{R}$ 为 $g(x) = f(Ax+b)$。我们有</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \nabla^{2} g(x)=A^T \nabla^{2} f(Ax+b) A
-\end{align}</p>
+\end{align}
+$$
 
           </div>
 

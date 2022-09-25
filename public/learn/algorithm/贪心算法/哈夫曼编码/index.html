@@ -1155,14 +1155,18 @@
 <h3 id="形式化定义">形式化定义</h3>
 <p>输入：</p>
 <ul>
-<li>字符数 $n$ 以及各个字符的频数 $F = &lt;f_1, f_2, \cdots, f_n&gt;$</li>
+<li>字符数 $n$ 以及各个字符的频数 $F = \langle f_1, f_2, \cdots, f_n \rangle$</li>
 </ul>
 <p>输出：</p>
 <ul>
-<li>解析结果唯一的二进制编码方案 $C = &lt;c_1, c_2, \cdots, c_n&gt;$</li>
+<li>解析结果唯一的二进制编码方案 $C = \langle c_1, c_2, \cdots, c_n \rangle$</li>
 </ul>
 <p>优化目标：</p>
-<p>$\min \sum_{i=1}^{n}{\left | c_i \right | f_i}$</p>
+
+$$
+\min \sum_{i=1}^{n}{\left | c_i \right | f_i}
+$$
+
 <p>其中 $c_i$ 为字符 $i$ 的编码二进制串长度。</p>
 <h2 id="问题分析">问题分析</h2>
 <p>我们可以很容易想到如下策略：</p>
@@ -1174,9 +1178,13 @@
 <p>实际上，优先处理低频字符是最优的方案。为什么呢？我们首先来看看带权路径长度的概念。</p>
 <h2 id="带权路径长度">带权路径长度</h2>
 <p>假设二叉树中每个叶子结点有一个权值 $w_i$，到根的路径长度为 $l_i$，其他结点权值为 $0$。则有 $n$ 个叶子结点的树的带权路径长度为</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 WPL = \sum_{i=0}^{n-1} w_i l_i
-\end{align}</p>
+\end{align}
+$$
+
 <h2 id="huffman-树">Huffman 树</h2>
 <p>带权路径长度达到最小的二叉树即为 Huffman 树。在 Huffman 树中，权值越大的结点离根越近。</p>
 <h3 id="构造-huffman-树">构造 Huffman 树</h3>

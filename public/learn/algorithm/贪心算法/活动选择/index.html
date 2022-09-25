@@ -1153,13 +1153,21 @@
 <li>活动集合 $S$ 的子集 $S'$</li>
 </ul>
 <p>优化目标：</p>
-<p>\begin{align}
-\max \left | S&rsquo; \right |
-\end{align}</p>
+
+$$
+\begin{align}
+\max \left | S' \right |
+\end{align}
+$$
+
 <p>约束条件：</p>
-<p>\begin{align}
-\mathbf{s.t.} \forall a_i, a_j \in S&rsquo;, s_i \geqslant f_j \vee s_j \geqslant f_i
-\end{align}</p>
+
+$$
+\begin{align}
+\mathbf{s.t.} \forall a_i, a_j \in S', s_i \geqslant f_j \vee s_j \geqslant f_i
+\end{align}
+$$
+
 <h2 id="问题分析">问题分析</h2>
 <p>我们可以很容易想到如下策略：</p>
 <ol>

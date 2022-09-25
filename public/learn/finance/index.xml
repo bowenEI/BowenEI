@@ -243,10 +243,14 @@
 &lt;/ol&gt;
 &lt;h3 id=&#34;2-利息与收益的一般形态&#34;&gt;2. 利息与收益的一般形态&lt;/h3&gt;
 &lt;p&gt;任何有收益的事物，不论它是否是一笔贷放出去的货币金额，甚至也不论它是否是一笔资本，都可以通过收益与利率的对比而倒过来算出它相当于多大的资本金额。这被习惯地称为“资本化”。&lt;/p&gt;
-&lt;p&gt;\begin{align}
-{收益} &amp;amp;= {本金} \times {利率} \\
-B &amp;amp;= Pr
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+{收益} &amp;= {本金} \times {利率} \\\\
+B &amp;= Pr
+\end{align}
+$$
+
 &lt;h3 id=&#34;3-利率的定义及其种类&#34;&gt;3. 利率的定义及其种类&lt;/h3&gt;
 &lt;h4 id=&#34;1-利率的定义&#34;&gt;(1) 利率的定义&lt;/h4&gt;
 &lt;p&gt;利率是利息与生息资本在数量上的比例关系，即一定时期内利息额同贷出资本额的比率。&lt;/p&gt;
@@ -275,91 +279,147 @@ B &amp;amp;= Pr
 &lt;p&gt;在一个经济运行机体中存在的各种利息率及其之间的相互关系的总和，主要包括利率结构和各种利率间的传导机制。&lt;/p&gt;
 &lt;h2 id=&#34;二利率的计算&#34;&gt;二、利率的计算&lt;/h2&gt;
 &lt;h3 id=&#34;1-单利本生利利不生利&#34;&gt;1. 单利：本生利，利不生利&lt;/h3&gt;
-&lt;p&gt;\begin{align}
-{利息} &amp;amp;= {本金} \times {利率} \times {时间}\\
-I &amp;amp;= Prn
-\end{align}&lt;/p&gt;
-&lt;p&gt;\begin{align}
-{本息和} &amp;amp;= {本金} \times (1 + {利率} \times {时间})\\
-S &amp;amp;= P(1 + rn)
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+{利息} &amp;= {本金} \times {利率} \times {时间}\\\\
+I &amp;= Prn
+\end{align}
+$$
+
+
+$$
+\begin{align}
+{本息和} &amp;= {本金} \times (1 + {利率} \times {时间})\\\\
+S &amp;= P(1 + rn)
+\end{align}
+$$
+
 &lt;h3 id=&#34;2-复利本生利利也生利&#34;&gt;2. 复利：本生利，利也生利&lt;/h3&gt;
-&lt;p&gt;\begin{align}
-{本息和} &amp;amp;= {本金} \times (1 + {利率}) \times {时间}\\
-S &amp;amp;= P(1 + r)n
-\end{align}&lt;/p&gt;
-&lt;p&gt;\begin{align}
-{利息} &amp;amp;= {本息和} - {本金} \\
-I &amp;amp;= S - P
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+{本息和} &amp;= {本金} \times (1 + {利率}) \times {时间}\\\\
+S &amp;= P(1 + r)n
+\end{align}
+$$
+
+
+$$
+\begin{align}
+{利息} &amp;= {本息和} - {本金} \\\\
+I &amp;= S - P
+\end{align}
+$$
+
 &lt;h3 id=&#34;3-现值与终值&#34;&gt;3. 现值与终值&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;现值&lt;/strong&gt;是将未来的一笔钱按照某种利率折合的价值，而&lt;strong&gt;终值&lt;/strong&gt;即本利和，是指现在一定量的资金在未来某一时点上的价值。现值和终值具有如下关系：&lt;/p&gt;
-&lt;p&gt;\begin{align}
-{终值} &amp;amp;= {现值} \times (1 + 利率 \times 时间) \\
-F &amp;amp;= P(1 + rn)
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+{终值} &amp;= {现值} \times (1 + 利率 \times 时间) \\\\
+F &amp;= P(1 + rn)
+\end{align}
+$$
+
 &lt;p&gt;例如将现在将10000元存入银行两年定期，年利率为2%，两年后的终值为10400元。&lt;/p&gt;
 &lt;h3 id=&#34;4-到期收益率&#34;&gt;4. 到期收益率&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;到期收益&lt;/strong&gt;是指将债券持有到偿还期所获得的收益，包括到期的全部利息。债券的&lt;strong&gt;到期收益率&lt;/strong&gt;的计算方法如下：&lt;/p&gt;
-&lt;p&gt;\begin{align}
-{到期收益率} &amp;amp;= \frac{{到期本息和} - {发行价格}}{{发行价格} \times {偿还期限}} \times 100 \% \\
-y &amp;amp;= \frac{FV - PV}{PV \cdot n} \times 100 \%
-\end{align}&lt;/p&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
+
+$$
+\begin{align}
+{到期收益率} &amp;= \frac{{到期本息和} - {发行价格}}{{发行价格} \times {偿还期限}} \times 100 \\% \\\\
+y &amp;= \frac{FV - PV}{PV \cdot n} \times 100 \\%
+\end{align}
+$$
+
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-7&#34;&gt;
   &lt;summary&gt;某种债券面值100元，10年还本，年息8元。某投资者在该债券市价为95元时买入，10年后持有到期，求该债券的到期收益率为多少？&lt;/summary&gt;
   &lt;p&gt;&lt;p&gt;&lt;strong&gt;解&lt;/strong&gt;：该投资者在持有债券的10年间除了每年都能够获得利息8元外，还能够获得本金盈利5元。因此到期收益率为：&lt;/p&gt;
-&lt;p&gt;\begin{align}
+&lt;p&gt;$$
+\begin{align}
 y &amp;amp;= \frac{8 \times 10 + 100 - 95}{95 \times 10} \times 100 \% \\
 &amp;amp;= 8.95 \%
-\end{align}&lt;/p&gt;
+\end{align}
+$$&lt;/p&gt;
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;p&gt;债券各时期的名义收益率和债券的发行价格以及到期本息和满足如下关系式：&lt;/p&gt;
-&lt;p&gt;\begin{align}
-PV &amp;amp;= \sum_{i=1}^{n} \frac{C_i}{(1 + r_i)^i} \\
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+PV &amp;= \sum_{i=1}^{n} \frac{C_i}{(1 + r_i)^i} \\\\
+\end{align}
+$$
+
 &lt;p&gt;其中，$C_i$ 表示第 $i$ 期的现金流，$r_i$ 表示第 $i$ 期的收益率。令上式所有的 $r_i$ 相等，即令：&lt;/p&gt;
-&lt;p&gt;\begin{align}
-y &amp;amp;= r_i (i = 1, 2, &amp;hellip;, n)
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+y &amp;= r_i (i = 1, 2, ..., n)
+\end{align}
+$$
+
 &lt;p&gt;也可以求出债券的到期收益率。&lt;/p&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-10&#34;&gt;
   &lt;summary&gt;如果票面金额为1000元的两年期债券，第一年支付60元利息，第二年支付50元利息，现在的市场价格为950元，求该债券的到期收益率为多少？&lt;/summary&gt;
   &lt;p&gt;&lt;p&gt;&lt;strong&gt;解&lt;/strong&gt;：本题除了可以按照到期收益率的定义来计算外，还可以按照上面的关系式列方程求解。要注意，因为要计算债券的到期收益率，除了每年的利息外，到期后交付的债券面值也是现金流。&lt;/p&gt;
-&lt;p&gt;\begin{align}
+&lt;p&gt;$$
+\begin{align}
 950 &amp;amp;= \frac{60}{1 + y} + \frac{50}{(1 + y)^2} + \frac{1000}{(1 + y)^2} \\
 y &amp;amp;= 5.5 \%
-\end{align}&lt;/p&gt;
+\end{align}
+$$&lt;/p&gt;
 &lt;/p&gt;
 &lt;/details&gt;
 &lt;h3 id=&#34;5-收益的资本化&#34;&gt;5. 收益的资本化&lt;/h3&gt;
 &lt;p&gt;任何有收益的事物，不论它是否是一笔贷放出去的货币金额，甚至也不论它是否是一笔资本，都可以通过收益与利率的对比而倒过来算出它相当于多大的资本金额。这习惯地称之为“资本化”。&lt;/p&gt;
-&lt;p&gt;\begin{align}
-B &amp;amp;= Pr
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+B &amp;= Pr 
+\end{align}
+$$
+
 &lt;p&gt;例如，假设一笔贷款1年的利息收益是50元，而市场年平均利率为5％时，那么就可以知道本金为1000元。&lt;/p&gt;
 &lt;h2 id=&#34;三利率的决定&#34;&gt;三、利率的决定&lt;/h2&gt;
 &lt;h3 id=&#34;1-马克思利率决定理论&#34;&gt;1. 马克思利率决定理论&lt;/h3&gt;
 &lt;p&gt;利率是利润的一部分&lt;/p&gt;
-&lt;p&gt;\begin{align}
-0 &amp;lt; {利息率} &amp;lt; {平均利润率}
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+0 &lt; {利息率} &lt; {平均利润率}
+\end{align}
+$$
+
 &lt;h3 id=&#34;2-西方利率决定理论&#34;&gt;2. 西方利率决定理论&lt;/h3&gt;
 &lt;h4 id=&#34;1-古典利率理论&#34;&gt;(1) 古典利率理论&lt;/h4&gt;
 &lt;p&gt;利率是对人们放弃现时消费，即储蓄的一种补偿，因此储蓄是利率的增函数，即：&lt;/p&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 S = S(r)
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;p&gt;投资水平取决与投资报酬率和利率的比较，因此投资是利率的减函数，即：&lt;/p&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 I = I(r)
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;h4 id=&#34;2-可贷资金理论&#34;&gt;(2) 可贷资金理论&lt;/h4&gt;
 &lt;p&gt;利率作为借贷资金的价格，取决于金融市场的资金供求关系，利率取决于可贷资金的供求平衡。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;可贷资金供给&lt;/strong&gt;：同一时期的社会储蓄流量与货币供给的变动，即：&lt;/p&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 SL =  S + \Delta M_S
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;p&gt;$SL$ 的具体来源有：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;储蓄量随利率上升&lt;/li&gt;
@@ -367,9 +427,13 @@ SL =  S + \Delta M_S
 &lt;li&gt;实际资本的流入&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;可贷资金需求&lt;/strong&gt;：某一时期内投资流量和人们希望保存的货币余额，即：&lt;/p&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 DL =  I + \Delta M_D
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;p&gt;$DL$ 具体包括：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;企业投资&lt;/li&gt;
@@ -411,24 +475,30 @@ DL =  I + \Delta M_D
 &lt;h3 id=&#34;2-利率市场化需要的外部条件&#34;&gt;2. 利率市场化需要的外部条件&lt;/h3&gt;
 &lt;h3 id=&#34;3-中国利率市场化进程&#34;&gt;3. 中国利率市场化进程&lt;/h3&gt;
 &lt;h2 id=&#34;习题答案&#34;&gt;习题答案&lt;/h2&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-17&#34;&gt;
   &lt;summary&gt;假定现有一个投资项目，投资期为十年，总投资额为1000万，市场利率为10%且长期不变。企划部提供了两个投资方案，方案甲是第一年集中投资550万，以后九年每年只需投资50万；方案乙是每年平均投资100万。试问哪种方案更好？&lt;/summary&gt;
   &lt;p&gt;&lt;p&gt;方案甲的投资现值为：&lt;/p&gt;
-&lt;p&gt;\begin{align}
+&lt;p&gt;$$
+\begin{align}
 550 + \frac{50}{1 + 10 \%} + \frac{50}{(1 + 10 \%)^2} + &amp;hellip; + \frac{50}{(1 + 10 \%)^9} = 837.951 {（万元）}
-\end{align}&lt;/p&gt;
+\end{align}
+$$&lt;/p&gt;
 &lt;p&gt;方案乙的投资现值为：&lt;/p&gt;
-&lt;p&gt;\begin{align}
+&lt;p&gt;$$
+\begin{align}
 100 + \frac{100}{1 + 10 \%} + \frac{100}{(1 + 10 \%)^2} + &amp;hellip; + \frac{100}{(1 + 10 \%)^9} = 675.902 {（万元）}
-\end{align}&lt;/p&gt;
+\end{align}
+$$&lt;/p&gt;
 &lt;p&gt;故方案乙更好。&lt;/p&gt;
 &lt;/p&gt;
 &lt;/details&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-18&#34;&gt;
   &lt;summary&gt;某公司为筹集资金，公开发行5年期附息债券。债券面额为100元，票面利率为4%，每年按票面利率支付一次利息。如果此时市场利率利率为3%，试以市场利率为贴现率计算该债券的理论价格。&lt;/summary&gt;
-  &lt;p&gt;\begin{align}
+  &lt;p&gt;$$
+\begin{align}
 P = \frac{4}{1 + 3 \%} + \frac{4}{(1 + 3 \%)^2} + &amp;hellip; + \frac{4}{(1 + 3 \%)^5} + \frac{100}{(1 + 3 \%)^5} = 104.6
-\end{align}&lt;/p&gt;
+\end{align}
+$$&lt;/p&gt;
 &lt;/details&gt;</description>
     </item>
     
@@ -754,16 +824,22 @@ P = \frac{4}{1 + 3 \%} + \frac{4}{(1 + 3 \%)^2} + &amp;hellip; + \frac{4}{(1 + 3
 &lt;h4 id=&#34;2-商业汇票&#34;&gt;(2) 商业汇票&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;票据承兑&lt;/strong&gt;：银行承兑汇票和商业承兑汇票&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;票据流通&lt;/strong&gt;：票据背书转让和贴现&lt;/p&gt;
-&lt;p&gt;\begin{align}
-{贴现利息} &amp;amp;= {票面金额} \times {贴现率} \times {贴现天数} \div 365 \\
-{贴现额} &amp;amp;= {票面金额} - {贴现利息}
-\end{align}&lt;/p&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
+
+$$
+\begin{align}
+{贴现利息} &amp;= {票面金额} \times {贴现率} \times {贴现天数} \div 365 \\\\
+{贴现额} &amp;= {票面金额} - {贴现利息}
+\end{align}
+$$
+
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
   &lt;summary&gt;某企业持有一张100万元的银行承兑汇票请求贴现，时间为某年5月20日，于该年8月20日到期，当时贴现率为10.2%，求贴现利息。&lt;/summary&gt;
-  &lt;p&gt;\begin{align}
+  &lt;p&gt;$$
+\begin{align}
 {贴现利息} &amp;amp;= 1000000 \times 10.2 \% \times 90 \div 365 \\
 &amp;amp;= 25500 {（元）}
-\end{align}&lt;/p&gt;
+\end{align}
+$$&lt;/p&gt;
 &lt;/details&gt;
 &lt;h4 id=&#34;3-大额可转让定期存单市场&#34;&gt;(3) 大额可转让定期存单市场&lt;/h4&gt;
 &lt;h4 id=&#34;4-国库券市场&#34;&gt;(4) 国库券市场&lt;/h4&gt;
@@ -781,9 +857,13 @@ P = \frac{4}{1 + 3 \%} + \frac{4}{(1 + 3 \%)^2} + &amp;hellip; + \frac{4}{(1 + 3
 &lt;p&gt;基本条件、信用评级、发行要素确定&lt;/p&gt;
 &lt;h4 id=&#34;2-债券二级市场&#34;&gt;(2) 债券二级市场&lt;/h4&gt;
 &lt;p&gt;条件和程序、价格及收益率&lt;/p&gt;
-&lt;p&gt;\begin{align}
-{收益率} = \frac {年平均收益额} {投资额} \times 100 \%
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+{收益率} = \frac {年平均收益额} {投资额} \times 100 \\%
+\end{align}
+$$
+
 &lt;h2 id=&#34;六金融衍生产品市场&#34;&gt;六、金融衍生产品市场&lt;/h2&gt;
 &lt;h3 id=&#34;1-金融衍生产品交易的特点&#34;&gt;1. 金融衍生产品交易的特点&lt;/h3&gt;
 &lt;h3 id=&#34;2-金融远期市场&#34;&gt;2. 金融远期市场&lt;/h3&gt;
@@ -828,25 +908,41 @@ P = \frac{4}{1 + 3 \%} + \frac{4}{(1 + 3 \%)^2} + &amp;hellip; + \frac{4}{(1 + 3
 &lt;li&gt;商品价格有多大，就需要有多少金币来实现它。&lt;/li&gt;
 &lt;li&gt;商品与货币交换后，商品退出流通，黄金却留在流通之中使另外的商品得以出售，从而一定数量的黄金流通几次，就可以使相应倍数价格的商品出售。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;\begin{align}
-{执行流通手段职能的货币量} &amp;amp;= \frac {商品价格总额} {同一单位的货币平均流通次数} \\
-&amp;amp;= \frac {{商品总量} \times {商品价格}} {同一单位的货币平均流通次数}
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+{执行流通手段职能的货币量} &amp;= \frac {商品价格总额} {同一单位的货币平均流通次数} \\\\
+&amp;= \frac {{商品总量} \times {商品价格}} {同一单位的货币平均流通次数}
+\end{align}
+$$
+
 &lt;p&gt;公式表明，货币量取决于价格水平、进入流通领域商品数量和货币流通速度这三个因素。这三个因素按不同的方向和不同的比例变化，执行流通手段的货币量则可能有多种多样的组合。&lt;/p&gt;
 &lt;p&gt;马克思的纸币流通规律：&lt;/p&gt;
-&lt;p&gt;\begin{align}
-{货币必要量单位纸币的价值} &amp;amp;= \frac {流通中所需要的金属货币量} {流通中的纸币总量}
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+{货币必要量单位纸币的价值} &amp;= \frac {流通中所需要的金属货币量} {流通中的纸币总量}
+\end{align}
+$$
+
 &lt;h4 id=&#34;2-古典货币需求理论&#34;&gt;(2) 古典货币需求理论&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;费雪方程式&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;\begin{align}
-{货币数量} \times {货币流通速度} &amp;amp;= {物价水平} \times {交易总量} \\
-MV &amp;amp;= PT
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+{货币数量} \times {货币流通速度} &amp;= {物价水平} \times {交易总量} \\\\
+MV &amp;= PT
+\end{align}
+$$
+
 &lt;p&gt;&lt;strong&gt;剑桥方程式&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 M_d = kPY
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;p&gt;其中 $M_d$ 表示货币需求量，$P$ 表示物价水平，$Y$ 表示总收入，$PY$ 则表示名义总收入，$k$ 是比例系数。&lt;/p&gt;
 &lt;h4 id=&#34;3-凯恩斯货币需求理论&#34;&gt;(3) 凯恩斯货币需求理论&lt;/h4&gt;
 &lt;p&gt;持有货币的三个动机：&lt;/p&gt;
@@ -859,9 +955,13 @@ M_d = kPY
 &lt;p&gt;当一定时期的利率水平降低到不能再降低时，人们就会产生利率上升从而债券价格下跌的预期，所有人都希望持有货币而不愿持有债券。在这种情况下，投机性的货币需求弹性变得无限大。此时，无论中央银行增加多少货币供给，都会被人们以货币形式储存起来，从而利率不再下跌。&lt;/p&gt;
 &lt;h3 id=&#34;3-费里德曼货币需求理论&#34;&gt;3. 费里德曼货币需求理论&lt;/h3&gt;
 &lt;p&gt;货币需求函数：&lt;/p&gt;
-&lt;p&gt;\begin{align}
-\frac {M_d} {p} &amp;amp;= f(Y, W, r_m , r_b, r_e, \frac {1} {p} \cdot \frac {dp} {dt}, u)
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+\frac {M_d} {p} &amp;= f(Y, W, r_m , r_b, r_e, \frac {1} {p} \cdot \frac {dp} {dt}, u)
+\end{align}
+$$
+
 &lt;ul&gt;
 &lt;li&gt;$\frac {M_d} {p}$：财富持有者对货币的实际需求量&lt;/li&gt;
 &lt;li&gt;$Y$：实际恒久性收入，即按不变价格计算的实际收入&lt;/li&gt;
@@ -907,10 +1007,14 @@ M_d = kPY
 &lt;li&gt;对金融机构的债权&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;基础货币&lt;/strong&gt;又称强力货币或高能货币，是中央银行直接控制的变量，也是银行体系存款扩张、货币供给的基础，&lt;strong&gt;等于商业银行存入中央银行的准备金与社会公众所持有的现金之和&lt;/strong&gt;。用公式表示如下：&lt;/p&gt;
-&lt;p&gt;\begin{align}
-{基础货币} &amp;amp;= {商业银行保有的存款准备金} + {流通于银行体系之外的现金} \\
-B &amp;amp;= R + C
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+{基础货币} &amp;= {商业银行保有的存款准备金} + {流通于银行体系之外的现金} \\\\
+B &amp;= R + C
+\end{align}
+$$
+
 &lt;p&gt;中央银行的资产负债业务与基础货币的收放渠道：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;国外资产业务与基础货币&lt;/li&gt;
@@ -927,10 +1031,14 @@ B &amp;amp;= R + C
 &lt;li&gt;非现金结算的广泛使用&lt;/li&gt;
 &lt;li&gt;市场中始终存着贷款需求&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;\begin{align}
-{存款总额} &amp;amp;= {存款准备金} \cdot \frac {1} {存款准备金率} \\
-D &amp;amp;= R \cdot \frac {1} {r}
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+{存款总额} &amp;= {存款准备金} \cdot \frac {1} {存款准备金率} \\\\
+D &amp;= R \cdot \frac {1} {r}
+\end{align}
+$$
+
 &lt;p&gt;上面的公式可以表示存款货币的多倍扩张，其中存款准备金来源于原始存款，存款准备金率是由中央银行规定的法定存款准备金率。存款货币的多倍收缩则正好相反，只不过这里的存款准备金用负数表示。&lt;/p&gt;
 &lt;h4 id=&#34;3-货币乘数的决定因素&#34;&gt;(3) 货币乘数的决定因素&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;货币乘数&lt;/strong&gt; $m$ 又称存款派生乘数，即货币供给与基础货币的比率。货币乘数由如下三种因素决定：&lt;/p&gt;
@@ -939,21 +1047,33 @@ D &amp;amp;= R \cdot \frac {1} {r}
 &lt;li&gt;超额存款准备金率 $e$&lt;/li&gt;
 &lt;li&gt;现金漏损率 $c$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 m = \frac {1} {r + e + c}
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;h3 id=&#34;4-货币供给模型&#34;&gt;4. 货币供给模型&lt;/h3&gt;
-&lt;p&gt;\begin{align}
-{货币供给量} &amp;amp;= {基础货币} \times {货币乘数} \\
-M_S &amp;amp;= Bm
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+{货币供给量} &amp;= {基础货币} \times {货币乘数} \\\\
+M_S &amp;= Bm
+\end{align}
+$$
+
 &lt;p&gt;该模型表明：基础货币与货币乘数共同作用于货币供给总量，货币供给量与基础货币和货币乘数均呈正相关关系。&lt;/p&gt;
 &lt;h2 id=&#34;三货币供给均衡&#34;&gt;三、货币供给均衡&lt;/h2&gt;
 &lt;h3 id=&#34;1-货币供给均衡的含义&#34;&gt;1. 货币供给均衡的含义&lt;/h3&gt;
 &lt;p&gt;货币供求均衡简称货币均衡，它是一国在一定时期内货币供给与货币需求基本相适应的货币流通状态。货币均衡是货币供求作用的一种状态，使社会上货币供给与货币需求的大体一致，而非货币供给与货币需求在价值上的完全相等。货币均衡是一个动态过程，在短期内货币供求可能不一致，但在长期内是大体一致的。货币均衡不是货币供给量和实际货币需求量一致，而是货币供给量与适度货币需要量基本一致。&lt;/p&gt;
-&lt;p&gt;\begin{align}
-M_s &amp;amp;= M_d
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+M_s &amp;= M_d
+\end{align}
+$$
+
 &lt;h4 id=&#34;2-货币供给均衡与社会供求均衡&#34;&gt;2. 货币供给均衡与社会供求均衡&lt;/h4&gt;
 &lt;p&gt;从形式上看，货币均衡是货币领域内因货币供给与货币需求相互平衡而导致的一种货币流通状态，但其实质是社会总供求均衡的一种反应。&lt;/p&gt;
 &lt;p&gt;货币均衡与社会总供给是一个问题的两个方面。货币均衡与总供求之间存在联动关系。货币供给的变动不仅会通过影响利率、信贷可得性和股票市场价格来影响投资，还对消费和净出口有着重要影响。货币供给的变化在保持国民经济持续、稳定发展和总供给和总需求的均衡中起重要作用。&lt;/p&gt;</description>

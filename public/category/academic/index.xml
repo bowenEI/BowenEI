@@ -914,9 +914,11 @@ and each part is trained directly on end device with local data. The trained mod
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;BatchNorm 和 LayerNorm 的区别&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;沐神就 &lt;code&gt;BatchNorm&lt;/code&gt; 和 &lt;code&gt;LayerNorm&lt;/code&gt; 的区别作了详细讲解。我们知道，&lt;code&gt;Norm&lt;/code&gt; 即 &lt;code&gt;Normalization&lt;/code&gt;，对数据进行归一化处理。这和概率论中对随机变量进行标准化的操作类似，即把原向量化为均值为 $0$ 方差为 $1$ 的标准化向量。&lt;/p&gt;
-&lt;p&gt;\begin{align}
+&lt;p&gt;$$
+\begin{align}
 Y = \frac{X - \mu}{\sigma}
-\end{align}&lt;/p&gt;
+\end{align}
+$$&lt;/p&gt;
 &lt;p&gt;如图所示，&lt;code&gt;BatchNorm&lt;/code&gt; 和 &lt;code&gt;LayerNorm&lt;/code&gt; 的区别一目了然。&lt;code&gt;BatchNorm&lt;/code&gt; 是在每一个特征 &lt;code&gt;feature&lt;/code&gt; 上对 &lt;code&gt;batch&lt;/code&gt; 进行归一化，而 &lt;code&gt;LayerNorm&lt;/code&gt; 是在每一个样本 &lt;code&gt;batch&lt;/code&gt; 上对 &lt;code&gt;feature&lt;/code&gt; 进行归一化。&lt;/p&gt;
 &lt;figure  id=&#34;figure-difference-between-batchnorm-and-layernorm&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
@@ -986,13 +988,21 @@ Y = \frac{X - \mu}{\sigma}
       Scaled Dot-Product Attention.
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;注意力函数的计算公式如下：&lt;/p&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 \textrm{Attention}\left(Q, K, V\right) = \textrm{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;p&gt;$Q$ 即 &lt;code&gt;query&lt;/code&gt;，$K$ 即 &lt;code&gt;key&lt;/code&gt;，$QK^T$ 即 &lt;code&gt;query&lt;/code&gt; 和 &lt;code&gt;key&lt;/code&gt; 做内积。作者认为，两个向量的内积值越大，说明相似度越高。除以 $\sqrt{d_k}$ 则表示单位化，然后再用 softmax 得到权重。这里的道理其实就是机器学习中的余弦相似度（余弦距离）：&lt;/p&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 \textrm{similarity} = \cos{\theta} = \frac{\alpha \cdot \beta}{||\alpha|| \cdot ||\beta||}
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;p&gt;注意这里 &lt;code&gt;Mask&lt;/code&gt; 的作用是为了避免 $t$ 时刻看到后面的输入。在数学上的具体实现方式是以一个绝对值非常大的负数（$-\infty$）作为指数，计算出来的幂趋向于零，这样就实现了掩盖 $t$ 时刻后面的输入的效果。&lt;/p&gt;
 &lt;h4 id=&#34;322-multi-head-attention&#34;&gt;3.2.2 Multi-Head Attention&lt;/h4&gt;
 &lt;p&gt;作者认为，与其计算单个的注意力函数，不如把 &lt;code&gt;query&lt;/code&gt;、&lt;code&gt;key&lt;/code&gt;、&lt;code&gt;value&lt;/code&gt; 投影到一个更低的维度上，投影 $h$ 次，然后再计算 $h$ 次注意力函数，最后每一个函数的输出合并再投影得到最终的输出。如图所示。&lt;/p&gt;
@@ -1026,10 +1036,14 @@ Y = \frac{X - \mu}{\sigma}
       Multi-Head Attention.
     &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;多头注意力函数的计算公式如下：&lt;/p&gt;
-&lt;p&gt;\begin{align}
-\textrm{MultiHead}\left(Q, K, V\right) &amp;amp;= \textrm{Concat}\left(\textrm{head}_1, &amp;hellip;, \textrm{head}_h\right)W^O \\
-\textbf{where}\quad\textrm{head}_i &amp;amp;= \textrm{Attention}\left(QW^Q_i, KW^K_i, VW^V_i\right)
-\end{align}&lt;/p&gt;
+
+$$
+\begin{align}
+\textrm{MultiHead}\left(Q, K, V\right) &amp;= \textrm{Concat}\left(\textrm{head}_1, ..., \textrm{head}_h\right)W^O \\\\
+\textbf{where}\quad\textrm{head}_i &amp;= \textrm{Attention}\left(QW^Q_i, KW^K_i, VW^V_i\right)
+\end{align}
+$$
+
 &lt;p&gt;在本文中作者定义 $h=8$，于是 $d_k = d_v = d_{model}/h = 64$，也就是输出维度。&lt;/p&gt;
 &lt;h4 id=&#34;323-applications-of-attention-in-our-model&#34;&gt;3.2.3 Applications of Attention in our Model&lt;/h4&gt;
 &lt;p&gt;这一小节作者主要介绍 &lt;strong&gt;Transformer&lt;/strong&gt; 是如何使用注意力的，归结起来一共有如下 3 种情况：&lt;/p&gt;
@@ -1053,9 +1067,13 @@ Y = \frac{X - \mu}{\sigma}
 &lt;blockquote&gt;
 &lt;p&gt;In addition to attention sub-layers, each of the layers in our encoder and decoder contains a fully connected feed-forward network, which is applied to each position separately and identically. This consists of two linear transformations with a ReLU activation in between.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;\begin{align}
+
+$$
+\begin{align}
 \textrm{FFN}\left(x\right) = \max \left(0, xW_1 + b_1\right)W_2 + b_2
-\end{align}&lt;/p&gt;
+\end{align}
+$$
+
 &lt;p&gt;在注意力层之后，&lt;code&gt;encoder&lt;/code&gt; 和 &lt;code&gt;decoder&lt;/code&gt; 都会有一个前馈网络层，首先是一个全连接层，然后是 ReLU 激活函数，最后再过一个全连接层。&lt;/p&gt;
 &lt;h3 id=&#34;34-embeddings-and-softmax&#34;&gt;3.4 Embeddings and Softmax&lt;/h3&gt;
 &lt;blockquote&gt;

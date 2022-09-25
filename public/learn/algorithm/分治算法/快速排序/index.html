@@ -1172,24 +1172,40 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h2 id="算法分析">算法分析</h2>
 <p>每一趟执行 Partition 时，需要遍历数组一遍，并且将原问题分成两个快速排序的子问题。因此时间复杂度为</p>
-<p>\begin{align}
-T(n) &amp;= 2 T \left( \frac{n}{2} \right) + O(n) \\
-&amp;= O(n \log {n})
-\end{align}</p>
+
+$$
+\begin{align}
+T(n) &= 2 T \left( \frac{n}{2} \right) + O(n) \\\\
+&= O(n \log {n})
+\end{align}
+$$
+
 <h3 id="最好情况">最好情况</h3>
 <p>在最好情况下，每次划分对一个记录定位后，该记录的左侧子序列与右侧子序列的长度相同。因此</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 T(n) \leqslant 2 T \left( \frac{n}{2} \right) + n = O(n \log {n})
-\end{align}</p>
+\end{align}
+$$
+
 <h3 id="最坏情况">最坏情况</h3>
 <p>在最坏情况下，待排序记录序列正序或逆序。每次划分只得到一个比上一次划分少一个记录的子序列，另一个子序列为空。此时，必须经过 $n-1$ 次递归调用才能把所有记录定位，而且第 $i$ 趟划分需要经过 $n-i$ 次关键码的比较才能找到第 $i$ 个记录的基准位置。因此，总的比较次数为：</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \sum_{i=1}^{n-1} (n-i) = \frac{n(n-1)}{2} = O(n^2)
-\end{align}</p>
+\end{align}
+$$
+
 <p>时间复杂度为</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 T(n) = T \left( n-1 \right) + O(n)
-\end{align}</p>
+\end{align}
+$$
+
 <h3 id="小结">小结</h3>
 <ul>
 <li>快速排序算法的性能取决于划分的对称性。</li>

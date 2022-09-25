@@ -1199,12 +1199,14 @@
 
             <h2 id="对偶锥">对偶锥</h2>
 <p>若 $K$ 为一个锥，则集合</p>
-<p>$$
+
+$$
 \begin{align}
 K^{*} = \{y \mid x^{T} y \geqslant 0, \forall x \in K\}
 \end{align}
-$$</p>
-<p>称为 $K$ 的对偶锥。从几何上看，对偶锥 $K^{*}$ 是与锥 $K$ 内的所有向量夹角不超过 $90$ 度的所有向量组成的集合。如图所示，以 $y$ 为法向量的半空间包含锥 $K$，因此 $y \in K^{*}$；而以 $z$ 为法向量的半空间不包含锥 $K$，因此 $z \notin K^{*}$。</p>
+$$
+
+<p>称为 $K$ 的对偶锥。从几何上看，对偶锥 $K^{<em>}$ 是与锥 $K$ 内的所有向量夹角不超过 $90$ 度的所有向量组成的集合。如图所示，以 $y$ 为法向量的半空间包含锥 $K$，因此 $y \in K^{</em>}$；而以 $z$ 为法向量的半空间不包含锥 $K$，因此 $z \notin K^{*}$。</p>
 
 
 
@@ -1238,18 +1240,22 @@ $$</p>
 <li>$K_1 \subseteq K_2 \Rightarrow K_2^{*} \subseteq K_1^{*}$。</li>
 <li>如果 $K$ 有非空内部，那么 $K^{*}$ 是尖的。</li>
 <li>如果 $K$ 的闭包是尖的，那么 $K^{*}$ 有非空内部。</li>
-<li>$K^{* *}$ 是 $K$ 的凸包的闭包。因此如果 $K$ 是凸和闭的，那么 $K^{**}=K$。</li>
+<li>$K^{**}$ 是 $K$ 的凸包的闭包。因此如果 $K$ 是凸和闭的，那么 $K^{**}=K$。</li>
 </ul>
 <h2 id="广义不等式的对偶">广义不等式的对偶</h2>
 <p>若凸锥 $K$ 是正常锥，则其对偶锥 $K^{*}$ 也是正常锥，它可以导出一个广义不等式 $\preceq_{K^{*}}$。</p>
 <h3 id="广义不等式及其对偶的性质">广义不等式及其对偶的性质</h3>
-<ul>
-<li>$x \preceq_K y \Leftrightarrow \forall \lambda \succeq _{K^{*}} 0, \lambda^T x \leqslant \lambda^T y$</li>
-<li>$x \prec_K y \Leftrightarrow \forall \lambda \succeq _{K^{*}} 0 \wedge \lambda \ne 0, \lambda^T x &lt; \lambda^T y$</li>
-</ul>
+
+$$
+\begin{align}
+x \preceq_K y \Leftrightarrow \forall \lambda \succeq _{K^{*}} 0, \lambda^T x \leqslant \lambda^T y \\
+x \prec_K y \Leftrightarrow \forall \lambda \succeq _{K^{*}} 0 \wedge \lambda \ne 0, \lambda^T x < \lambda^T y
+\end{align}
+$$
+
 <h2 id="对偶不等式定义的最极大小元">对偶不等式定义的最（极）大（小）元</h2>
 <h3 id="最小元的对偶性质">最小元的对偶性质</h3>
-<p>$x$ 是 $S$ 上关于广义不等式 $\preceq_K$ 的最小元的充要条件是，对于 $\forall \lambda \succ_{K^*} 0$，$x$ 是在 $z \in S$ 上极小化 $\lambda^T z$ 的唯一最优解。从几何上看，这意味着对于 $\forall \lambda \succ_{K^*} 0$，超平面 $\{z \mid \lambda^T (z-x) = 0\}$ 是在 $x$ 处对 $S$ 的一个严格支撑超平面。如图所示。</p>
+<p>$x$ 是 $S$ 上关于广义不等式 $\preceq_K$ 的最小元的充要条件是，对于 $\forall \lambda \succ_{K^{*}} 0$，$x$ 是在 $z \in S$ 上极小化 $\lambda^T z$ 的唯一最优解。从几何上看，这意味着对于 $\forall \lambda \succ_{K^{*}} 0$，超平面 ${z \mid \lambda^T (z-x) = 0}$ 是在 $x$ 处对 $S$ 的一个严格支撑超平面。如图所示。</p>
 
 
 

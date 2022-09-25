@@ -1338,9 +1338,13 @@
 <li>城市 $c_1, c_2, \cdots c_n$ 的排列 $c_{k_1}, c_{k_2}, c_{k_n}$</li>
 </ul>
 <p>约束条件：</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 \min \left \{ \sum_{i=1}^{n-1} {d(c_{k_i}, c_{k_{i+1}}) + d(c_{k_n}, c_{k_1})} \right \}
-\end{align}</p>
+\end{align}
+$$
+
 <h4 id="问题分析">问题分析</h4>
 <p>旅行商问题是典型的以排序树为解空间树结构的回溯法问题。</p>
 <h3 id="n-皇后问题">$n$ 皇后问题</h3>
@@ -1423,9 +1427,13 @@
 <h3 id="非对称旅行商问题">非对称旅行商问题</h3>
 <p>现实场景：在城市双向道路两侧车道拥堵状况不一的情况下，如何选择道路行驶能最快到达目的地？</p>
 <p>非对称旅行商问题和旅行商问题的区别：距离不对称，即</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 d(c_i, c_j) \ne d(c_j, c_i)$
-\end{align}</p>
+\end{align}
+$$
+
 <p>使用普通的回溯法当然没有问题，那么在使用回溯法的时候是否可以知道应该<strong>优先</strong>遍历哪些子树？</p>
 <p>为了尽快能够访问到最优解，我们可以尝试：</p>
 <ul>
@@ -1500,9 +1508,13 @@ d(c_i, c_j) \ne d(c_j, c_i)$
 </table>
 <h2 id="a-算法">$A^*$ 算法</h2>
 <p><strong>Best-first</strong> 策略：</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 f(n) = g(n) + h(n)
-\end{align}</p>
+\end{align}
+$$
+
 <p>其中，$g(n)$ 是从根到 $n$ 的路径代价，$h(n)$ 是从 $n$ 到某个目标节点的优化路径代价。</p>
 
           </div>

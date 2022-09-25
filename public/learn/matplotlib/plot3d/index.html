@@ -882,13 +882,15 @@
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
 </span></span></code></pre></div><h2 id="绘制空间曲线">绘制空间曲线</h2>
 <p>下面我们绘制圆柱螺旋线两个周期的图像，其参数方程如下：</p>
-<p>$$
+
+$$
 \begin{cases}
-x = \cos t \\
-y = \sin t \\
+x = \cos t \\\\
+y = \sin t \\\\
 z = \frac{1}{2 \pi} t
 \end{cases}
-$$</p>
+$$
+
 <p>首先，我们先准备好数据。</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>

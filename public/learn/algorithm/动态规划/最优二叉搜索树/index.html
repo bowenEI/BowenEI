@@ -1193,19 +1193,31 @@
 <h2 id="问题分析">问题分析</h2>
 <p>如果优化二叉搜索树 $T$ 具有包含关键字集合 $key[i:j]$ 子树 $T’$，则 $T’$ 必是关于关键字集合 $key[i:j]$ 子问题的最优解。这说明<strong>问题的最优解包括子问题最优解</strong>，可以运用动态规划的方法避免子问题的重复计算。</p>
 <p>$dp[i, j]$ 表示 $key[i + 1:j]$ 构造的最优二叉树的代价（平均搜索长度），则 $dp[0, n]$ 是最后结果。$w[i, j]$ 表示权值，为 $p[i + 1:j]$ 与 $q[i:j]$ 之和。</p>
-<p>\begin{align}
+
+$$
+\begin{align}
 w[i, j] = \sum_{k = i + 1}^{j} p[k] + \sum_{k=i}^{j} q[k]
-\end{align}</p>
+\end{align}
+$$
+
 <p>关键字 $key[i + 1:j]$ 以 $k$ 为根的最优二叉树代价为：</p>
-<p>\begin{align}
-dp[i, j]_k &amp;= p[k] + dp[i, k - 1] + w[i, k - 1] + dp[k, j] + w[k, j] \\
-&amp;= w[i, j] + dp[i, k - 1] + dp[k, j]
-\end{align}</p>
+
+$$
+\begin{align}
+dp[i, j]_k &= p[k] + dp[i, k - 1] + w[i, k - 1] + dp[k, j] + w[k, j] \\\\
+&= w[i, j] + dp[i, k - 1] + dp[k, j]
+\end{align}
+$$
+
 <p>其中，$p[k]$ 为根的代价，$dp[i, k - 1]$ 为左子树的代价，$w[i, k - 1]$ 为左子树加一层的代价，$dp[k, j]$ 为右子树的代价，$w[k, j]$ 为右子树加一层的代价。</p>
 <p>因而，关键字 $key[i + 1:j]$ 的最优二叉树代价为：</p>
-<p>\begin{align}
-dp[i, j] = w[i, j] + \min\{dp[i, k - 1], dp[k, j]\}, i &lt; k \le j
-\end{align}</p>
+
+$$
+\begin{align}
+dp[i, j] = w[i, j] + \min\{dp[i, k - 1], dp[k, j]\}, i < k \le j
+\end{align}
+$$
+
 <p>其中，$w[i, j]$ 为树上权值和。上述方程即为本题的状态转移方程。</p>
 <h2 id="问题求解">问题求解</h2>
 <p>首先各 $key$ 自成二叉搜索树，计算平均搜索长度，保留最小值。代价数组 $dp$ 的主对角线初始化。</p>
