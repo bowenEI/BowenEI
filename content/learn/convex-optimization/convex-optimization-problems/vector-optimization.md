@@ -42,9 +42,11 @@ $$
 
 点 $x^{\star}$ 是最优的，当且仅当它是可行的，并且
 
+{{< math >}}
 $$
 \mathcal{O} \subseteq f_0(x^{\star}) + K
 $$
+{{< /math >}}
 
 ### 几何意义
 
@@ -60,9 +62,11 @@ $$
 
 如果 $f_0(x)$ 是可达集合 $\mathcal{O}$ 的极小元，我们称可行解 $x$ 为 Pareto 最优的（或有效的）。在这种情况下下，我们称 $f_0(x)$ 为向量优化问题的一个 Pareto 最优值。因此，点 $x$ 是 Pareto 最优的，如果它是可行的并且
 
+{{< math >}}
 $$
 \forall y, \quad f_0(y) \preceq_K f_0(x) \Longrightarrow f_0(y) = f_0(x)
 $$
+{{< /math >}}
 
 换言之，任何比 $x$ 好或相等的可行解 $y$（即 $f_0(y) \preceq_K f_0(x)$）均与 $x$ 有完全相同的目标值。
 
@@ -70,9 +74,11 @@ $$
 
 点 $x$ 是 Pareto 最优的，当且仅当它是可行的，并且
 
+{{< math >}}
 $$
 (f_(0) - K) \cap \mathcal{O} = \\{ f_0(x) \\}
 $$
+{{< /math >}}
 
 集合 $f_(0) - K$ 可以解释为比 $f_0(x)$ 好或相等的值的集合。因此，上述条件说明了唯一比 $f_0(x)$ 好或相等的可达值就是 $f_0(x)$ 本身。如下图所示：
 
@@ -84,9 +90,11 @@ $$
 
 一个向量优化问题可以有很多 Pareto 最优值（和解）。Pareto 最优值的集合记为 $\mathcal{P}$，它满足
 
+{{< math >}}
 $$
 \mathcal{P} \subseteq \mathcal{O} \cap \operatorname{bd} \mathcal{O}
 $$
+{{< /math >}}
 
 ## 标量化
 
@@ -125,9 +133,11 @@ $$
 
 在多目标优化问题中，最优解 $x^{\star}$ 满足：对于可行的 $y$ 都有
 
+{{< math >}}
 $$
 F_{i}(x^{\star}) \leqslant F_{i}(y), \quad i=1, \cdots, q
 $$
+{{< /math >}}
 
 换言之，$x^{\star}$ 同时是下述所有 $j=1,\cdots,q$ 标量优化问题的最优解
 

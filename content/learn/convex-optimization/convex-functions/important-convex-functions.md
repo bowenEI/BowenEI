@@ -33,9 +33,11 @@ $$
 
 函数 $f$ 的导数和二阶导数为
 
+{{< math >}}
 $$
 f^{\prime}(x) = \log{x} + 1, \quad f^{\prime \prime}(x) = \frac{1}{x} > 0
 $$
+{{< /math >}}
 
 ### 范数
 
@@ -45,9 +47,11 @@ $\mathbf{R}^n$ 上的任意范数均为凸函数。
 
 二元函数 $f(x,y) = \frac{x^2}{y}$ 是凸函数，其定义域为
 
+{{< math >}}
 $$
 \operatorname{dom} f = \mathbf{R} \times \mathbf{R} _{++} = \\{ (x, y) \in \mathbf{R} ^2 \mid y > 0 \\}
 $$
+{{< /math >}}
 
 {{< figure src="learn/convex-optimization/convex-functions/3-2-1.png" >}}
 

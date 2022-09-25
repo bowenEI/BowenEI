@@ -47,9 +47,11 @@ $$
 
 ### 最小二乘及回归
 
+{{< math >}}
 $$
 \\| Ax - b \\|^2_2 = x^TA^TAx - 2b^TAx + b^Tb
 $$
+{{< /math >}}
 
 上面的凸二次函数是一个（无约束的）二次规划。我们在很多领域都会看到类似的式子，有些地方会称其为回归分析或者最小二乘逼近。这个问题很简单，可以求出其解析解 $x = A^{\dagger} b$。
 
@@ -65,9 +67,11 @@ $$
 
 称上述问题为二阶锥规划（Second-Order Cone Program, SOCP），其中 $x \in \mathbf{R}^n$ 是优化变量，$A_i \in \mathbf{R}^{n_i \times n}$，$F \in \mathbf{R}^{p \times n}$。并且我们称约束
 
+{{< math >}}
 $$
 \\| Ax + b \\|_2 \leqslant c^Tx + d
 $$
+{{< /math >}}
 
 为二阶锥约束。
 

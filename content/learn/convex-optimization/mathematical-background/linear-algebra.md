@@ -15,43 +15,67 @@ weight: 60
 
 设矩阵 $A \in \mathbf{R}^{m \times n}$，$A$ 的**值域**是指 $\mathbf{R}^{m}$ 中能够写成 $A$ 的列向量的线性组合的所有向量的集合，即
 
+{{< math >}}
+$$
 \begin{align}
 \mathcal{R} (A) = \\{Ax \mid x \in \mathbf{R}^{n} \\}
 \end{align}
+$$
+{{< /math >}}
 
 值域 $\mathcal{R} (A)$ 是 $\mathbf{R}^{m}$ 的子空间，它的维数是 $A$ 的**秩**，记作 $\operatorname{rank} A$。$A$ 的秩一定不会大于 $m$ 和 $n$ 的较小值。当 $\operatorname{rank} A = \min \\{m, n\\}$ 时，称 $A$ 为**满秩**矩阵。
 
 $A$ 的**零空间**（或**核**）是指被 $A$ 映射成零的所有向量 $x$ 的集合，即
 
+{{< math >}}
+$$
 \begin{align}
 \mathcal{N}(A) = \\{x \mid Ax=0\\}
 \end{align}
+$$
+{{< /math >}}
 
 ### 正交补
 
+{{< math >}}
+$$
 \begin{align}
 \mathcal{V}^{\bot} = \\{x \mid \forall z \in \mathcal{V}, z^Tx=0\\}
 \end{align}
+$$
+{{< /math >}}
 
 有如下结论恒成立：
 
+{{< math >}}
+$$
 \begin{align}
 \mathcal{V}^{\bot\bot} = \mathcal{V}
 \end{align}
+$$
+{{< /math >}}
 
 ### $A$ 导出的正交分解
 
+{{< math >}}
+$$
 \begin{align}
 \mathcal{N}(A) = \mathcal{R}(A^T)^{\bot}
 \end{align}
+$$
+{{< /math >}}
 
 ## 对称特征值分解
 
 设 $A$ 为 $n$ 阶实对称矩阵，则 $A$ 可以因式分解为
 
+{{< math >}}
+$$
 \begin{align}
 A = Q \Lambda Q^T
 \end{align}
+$$
+{{< /math >}}
 
 其中 $Q \in \mathbf{R}^{n \times n}$ 是正交矩阵，满足 $Q^TQ = I$，而 $\Lambda = \operatorname{diag}(\lambda_1, \cdots, \lambda_n)$。实数 $\lambda_i$ 是 $A$ 的**特征值**，是**特征多项式** $\det(sI-A)$ 的根，$Q$ 的列向量构成 $A$ 的一组正交**特征向量**。
 
@@ -59,22 +83,34 @@ A = Q \Lambda Q^T
 
 特征值具有如下性质：
 
+{{< math >}}
+$$
 \begin{align}
 \det A &= \prod_{i=1}^{n} \lambda_i \\\\
 \operatorname{tr} A &= \sum_{i=1}^{n} \lambda_i
 \end{align}
+$$
+{{< /math >}}
 
 ### 矩阵不等式
 
+{{< math >}}
+$$
 \begin{align}
 \lambda_{\max}(A)=\sup_{x \neq 0} \frac{x^{T} A x}{x^{T} x}, \quad \lambda_{\min}(A)=\inf _{x \neq 0} \frac{x^{T} A x}{x^{T} x}
 \end{align}
+$$
+{{< /math >}}
 
 特别地，对 $\forall x$，我们有
 
+{{< math >}}
+$$
 \begin{align}
 \lambda_{\min}(A)x^Tx \leqslant x^Tx \leqslant \lambda_{\max}(A)x^Tx
 \end{align}
+$$
+{{< /math >}}
 
 ### 正定矩阵
 
@@ -84,9 +120,13 @@ A = Q \Lambda Q^T
 
 ### 对称平方根
 
+{{< math >}}
+$$
 \begin{align}
 A^{1 / 2}=Q \operatorname{diag}\left(\lambda_{1}^{1 / 2}, \cdots, \lambda_{n}^{1 / 2}\right) Q^{T}
 \end{align}
+$$
+{{< /math >}}
 
 平方根 $A^{1/2}$ 是矩阵方程 $X^2 = A$ 的唯一的对称半正定的解。
 
@@ -98,29 +138,45 @@ A^{1 / 2}=Q \operatorname{diag}\left(\lambda_{1}^{1 / 2}, \cdots, \lambda_{n}^{1
 
 设 $A \in \mathbf{R}^{m \times n}$，$\operatorname{rank} A = r$，那么 $A$ 可以因式分解为
 
+{{< math >}}
+$$
 \begin{align}
 A = U \Sigma V^T
 \end{align}
+$$
+{{< /math >}}
 
 其中 $U \in \mathbf{R}^{m \times r}$ 满足 $U^TU = I$，$V \in \mathbf{R}^{n \times r}$ 满足 $V^TV = I$，而 $\Sigma = \operatorname{diag}(\sigma_1, \cdots, \sigma_r)$ 满足
 
+{{< math >}}
+$$
 \begin{align}
 \sigma_1 \geqslant \sigma_2 \geqslant \cdots \geqslant \sigma_r > 0
 \end{align}
+$$
+{{< /math >}}
 
 称为 $A$ 的**奇异值分解**（SVD）。$U$ 的列向量称为 $A$ 的**左奇异向量**，$V$ 的列向量称为 $A$ 的**右奇异向量**，而 $\sigma_i$ 称为**奇异值**。奇异值分解可以写成
 
+{{< math >}}
+$$
 \begin{align}
 A=\sum_{i=1}^{r} \sigma_{i} u_{i} v_{i}^{T}
 \end{align}
+$$
+{{< /math >}}
 
 ### 伪逆
 
 设 $A = U \Sigma V^T$ 为 $A \in \mathbf{m \times n}$ 的奇异值分解，$\operatorname{rank} A = r$，则 $A$ 的**伪逆**为
 
+{{< math >}}
+$$
 \begin{align}
 A^{\dagger}=V \Sigma^{-1} U^{T} \in \mathbf{R}^{n \times m}
 \end{align}
+$$
+{{< /math >}}
 
 伪逆可以用于求解最小二乘、最小范数、二次规划以及（Euclid）投影这些问题。
 
@@ -128,29 +184,43 @@ A^{\dagger}=V \Sigma^{-1} U^{T} \in \mathbf{R}^{n \times m}
 
 考虑进行以下划分的矩阵 $X \in \mathbf{S}^{n}$
 
+{{< math >}}
+$$
 \begin{align}
 X = \left [ \begin{matrix}
  A & B \\\\
  B^T & C
 \end{matrix} \right ] 
 \end{align}
+$$
+{{< /math >}}
 
 其中 $A \in \mathbf{S}^k$。如果 $\det A \ne 0$，矩阵
 
+{{< math >}}
+$$
 \begin{align}
 S = C - B^TA^{-1}B
 \end{align}
+$$
+{{< /math >}}
 
 被称为 $A$ 在 $X$ 中的 **Schur 补**。Schur 补出现于很多重要的公式和定理中，例如
 
+{{< math >}}
+$$
 \begin{align}
 \det X = \det A \det S
 \end{align}
+$$
+{{< /math >}}
 
 ### 分块矩阵求逆
 
 考虑如下分块矩阵方程：
 
+{{< math >}}
+$$
 \begin{align}
 \left[\begin{array}{cc}
 A & B \\\\
@@ -163,21 +233,33 @@ u \\\\
 v
 \end{array}\right]
 \end{align}
+$$
+{{< /math >}}
 
 假设 $\det A \ne 0$。将方程中的 $x$ 消去，解得
 
+{{< math >}}
+$$
 \begin{align}
 y = S^{-1}\left(v - B^TA^{-1}u\right)
 \end{align}
+$$
+{{< /math >}}
 
 将 $y$ 代入原方程，解得
 
+{{< math >}}
+$$
 \begin{align}
 x=\left(A^{-1}+A^{-1} B S^{-1} B^{T} A^{-1}\right) u-A^{-1} B S^{-1} v
 \end{align}
+$$
+{{< /math >}}
 
 于是我们可以得到分块矩阵的求逆公式：
 
+{{< math >}}
+$$
 \begin{align}
 \left[\begin{array}{cc}
 A & B \\\\
@@ -187,3 +269,5 @@ A^{-1}+A^{-1} B S^{-1} B^{T} A^{-1} & -A^{-1} B S^{-1} \\\\
 -S^{-1} B^{T} A^{-1} & S^{-1}
 \end{array}\right]
 \end{align}
+$$
+{{< /math >}}

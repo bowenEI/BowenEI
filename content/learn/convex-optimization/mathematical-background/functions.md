@@ -15,9 +15,13 @@ weight: 40
 
 如果对 $\forall \epsilon > 0$，$\exists \delta$ 满足
 
+{{< math >}}
+$$
 \begin{align}
 y \in \operatorname{dom} f, \quad\\|y-x\\| _{2} \leqslant \delta \Longrightarrow\\|f(y)-f(x)\\| _{2} \leqslant \epsilon
 \end{align}
+$$
+{{< /math >}}
 
 则称函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}^m$ 在 $x \in \operatorname{dom} f$ 处**连续**。
 
@@ -29,9 +33,13 @@ $\operatorname{dom} f$ 表示函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}^m$ �
 
 可以用极限来描述函数的连续性：
 
+{{< math >}}
+$$
 \begin{align}
 \lim _{i \rightarrow \infty} f\left(x _{i}\right)=f\left(\lim _{i \rightarrow \infty} x _{i}\right)
 \end{align}
+$$
+{{< /math >}}
 
 函数连续是指它在定义域上每个点都连续。
 
@@ -47,9 +55,13 @@ $\operatorname{dom} f$ 表示函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}^m$ �
 
 而
 
+{{< math >}}
+$$
 \begin{align}
 \lim _{x \rightarrow 0^{+}} x \log{x} = 0 \neq \infty
 \end{align}
+$$
+{{< /math >}}
 
 因此不是闭函数。
 
@@ -57,14 +69,22 @@ $\operatorname{dom} f$ 表示函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}^m$ �
 
 而
 
+{{< math >}}
+$$
 \begin{align}
 \lim _{x \rightarrow 0^{+}} \log{x} = -\infty
 \end{align}
+$$
+{{< /math >}}
 
 且
 
+{{< math >}}
+$$
 \begin{align}
 \lim _{x \rightarrow +\infty} \log{x} = +\infty
 \end{align}
+$$
+{{< /math >}}
 
 因此是闭函数。

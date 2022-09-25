@@ -19,31 +19,47 @@ weight: 130
 
 函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}^m$ 若满足 $f(x) = Ax + b$，其中 $A \in \mathbf{R}^{m \times n}$，$b \in \mathbf{R}^m$，则称 $f$ 是仿射函数。设 $S \subseteq \mathbf{R}^n$ 是凸的，那么 $S$ 在 $f$ 下的象
 
+{{< math >}}
+$$
 \begin{align}
 f(S) = \\{f(x) \mid x \in S\\}
 \end{align}
+$$
+{{< /math >}}
 
 也是凸的。从几何上看，凸集经过伸缩变换和平移变换后仍然是凸集。一个凸集向它的某几个坐标的投影也是凸的。
 
 **双曲锥**
 
+{{< math >}}
+$$
 \begin{align}
 \\{x \mid x^{T} P x \leqslant\left(c^{T} x\right)^{2}, c^{T} x \geqslant 0\\}
 \end{align}
+$$
+{{< /math >}}
 
 其中 $P \in \mathbf{S}_+^n$，$c \in \mathbf{R}^n$。这是因为它是二阶锥
 
+{{< math >}}
+$$
 \begin{align}
 \\{(z, t) \mid z^Tz \leqslant t^2, t \geqslant 0\\}
 \end{align}
+$$
+{{< /math >}}
 
 在仿射函数 $f(x) = (P^{1/2}x, c^Tx)$ 下的原象。
 
 **椭球**
 
+{{< math >}}
+$$
 \begin{align}
 \mathcal{E}=\\{x \mid\left(x-x_{c}\right)^{T} P^{-1}\left(x-x_{c}\right) \leqslant 1\\}
 \end{align}
+$$
+{{< /math >}}
 
 是单位 Euclid 球 $\\{u \mid \\|u\\| _2 \leqslant 1\\}$ 在仿射函数 $f(u) = P^{1/2}u + x_c$ 下的象，其中 $P \in \mathbf{S} _{++} ^{n}$。
 
@@ -69,6 +85,8 @@ f(S) = \\{f(x) \mid x \in S\\}
 
 线性分式函数有透视函数和仿射函数复合而成。设 $g: \mathbf{R}^{n} \rightarrow \mathbf{R}^{m+1}$ 是仿射的，即
 
+{{< math >}}
+$$
 \begin{align}
 g(x) & = \left[\begin{array}{c}
 A \\\\
@@ -78,11 +96,17 @@ b \\\\
 d
 \end{array}\right]
 \end{align}
+$$
+{{< /math >}}
 
 其中 $A \in \mathbf{R}^{m \times n}$，$b \in \mathbf{R}^{m}$，$c \in \mathbf{R}^{n}$ 并且 $d \in \mathbf{R}$。则由 $f = P \circ g$ 给出的函数 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}^{m}$
 
+{{< math >}}
+$$
 \begin{align}
 f(x) & = \left(A x+b\right) /\left(c^{T} x+d\right), \quad \operatorname{dom} f = \\{x \mid c^{T} x+d>0\\}
 \end{align}
+$$
+{{< /math >}}
 
 称为线性分式函数（或投射函数）。如果 $c=0$，$d > 0$，则 $f$ 是仿射函数。因此，仿射函数和线性函数被视为特殊的线性分式函数。线性分式函数也是保凸运算。

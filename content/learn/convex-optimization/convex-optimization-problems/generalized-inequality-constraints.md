@@ -138,8 +138,10 @@ $$
 
 其中
 
+{{< math >}}
 $$
 K_{i}=\left\\{(y, t) \in \mathbf{R}^{n_i+1} \mid \\|y\\|_2 \leqslant t\right\\}
 $$
+{{< /math >}}
 
 即 $\mathbf{R}^{n_i+1}$ 中的二阶锥。

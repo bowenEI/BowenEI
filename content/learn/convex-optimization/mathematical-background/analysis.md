@@ -15,9 +15,13 @@ weight: 30
 
 对于 $x \in C \subseteq \mathbf{R}^n$，如果存在 $\epsilon > 0$ 使得
 
+{{< math >}}
+$$
 \begin{align}
 \\{y \mid\\|y-x\\|_{2} \leqslant \epsilon\\} \subseteq C
 \end{align}
+$$
+{{< /math >}}
 
 即存在一个以 $x$ 为中心的完全包含于 $C$ 的球，则称 $x$ 为 $C$ 的**内点**。$C$ 的所有内点组成的集合称为 $C$ 的内部，记作 $\operatorname{int}C$。若 $\operatorname{int}C = C$，则称集合 $C$ 为**开集**。若集合 $C \subseteq \mathbf{R}^n$ 的补集 $\mathbf{R}^{n} \backslash C=\\{x \in \mathbf{R}^{n} \mid x \notin C\\}$ 是开集，则称集合 $C$ 为**闭集**。
 
@@ -27,17 +31,25 @@ weight: 30
 
 ### 闭包
 
+{{< math >}}
+$$
 \begin{align}
 \textbf{cl } C=\mathbf{R}^{n} \backslash \textbf{ int}(\mathbf{R}^{n} \backslash C)
 \end{align}
+$$
+{{< /math >}}
 
 集合 $C$ 的闭包即为补集内部的补集。在上面的图中，左图不含边界的圆的闭包正好是右边包含边界的圆，而右边包含边界的圆的闭包正好是它本身。点 $x$ 属于 $C$ 的闭包的条件是：对于 $\forall \epsilon > 0$，$\exists y \in C$ 使得 $\\|x-y\\| _2 \leqslant \epsilon$。
 
 ### 边界
 
+{{< math >}}
+$$
 \begin{align}
 \textbf{bd } C=\textbf{cl } C \backslash \textbf{int } C
 \end{align}
+$$
+{{< /math >}}
 
 显然，边界实际上就是集合的闭包去掉它所有的内点。我们可以用边界来刻画开集和闭集：
 

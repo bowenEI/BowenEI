@@ -15,9 +15,11 @@ weight: 230
 
 如果函数 $f_1, \cdots, f_m$ 都是凸函数，$\omega_1, \cdots, \omega_m \in \mathbf{R}_+$，那么
 
+{{< math >}}
 $$
 f = \omega_1 f_1 + \cdots + \omega_m f_m
 $$
+{{< /math >}}
 
 是凸函数。
 
@@ -25,9 +27,11 @@ $$
 
 这个性质可以扩展至无限项求和以及积分的情形。例如，如果固定任意 $y \in \mathcal{A}$，有 $\omega(y) \geqslant 0$，则函数
 
+{{< math >}}
 $$
 g(x) = \int _\mathcal{A} \omega(y) f(x,y) \mathrm{d} y
 $$
+{{< /math >}}
 
 是关于 $x$ 的凸函数。
 
@@ -35,9 +39,11 @@ $$
 
 假设函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，$A \in \mathbf{R}^{n \times m}$，以及 $b \in \mathbf{R}^n$，定义函数 $g: \mathbf{R}^m \rightarrow \mathbf{R}$ 为
 
+{{< math >}}
 $$
 g(x) = f(Ax + b)
 $$
+{{< /math >}}
 
 其中 $\operatorname{dom} g = \\{ x \mid Ax + b \in \operatorname{dom} f \\}$。若函数 $f$ 是凸函数，则函数 $g$ 也是凸函数。
 
@@ -45,15 +51,19 @@ $$
 
 如果函数 $f_1$ 和 $f_2$ 均为凸函数，则它们的逐点最大函数
 
+{{< math >}}
 $$
 f(x) = \max \\{ f_1(x), f_2(x) \\}
 $$
+{{< /math >}}
 
 和逐点上确界函数
 
+{{< math >}}
 $$
 g(x) = \sup \\{ f_1(x), f_2(x) \\}
 $$
+{{< /math >}}
 
 都是凸函数，并且可以推广至 $m$ 个凸函数的情形。同理，$m$ 个凹函数的逐点最小和逐点下确界函数也都是凹函数。
 
@@ -61,9 +71,11 @@ $$
 
 给定函数 $h: \mathbf{R}^k \rightarrow \mathbf{R}$ 以及 $g: \mathbf{R}^n \rightarrow \mathbf{R}^k$，定义复合函数 $f = h \circ g : \mathbf{R}^n \rightarrow \mathbf{R}$ 为
 
+{{< math >}}
 $$
 f(x) = h(g(x))
 $$
+{{< /math >}}
 
 判断其凸性还需要 $h$ 和 $g$ 满足一定的条件。
 
@@ -71,9 +83,11 @@ $$
 
 现在我们考虑 $k=1$ 这个简单的情形。如果我们仅考虑 $n=1$ 的情况，其实就是我们高中所学习的复合函数。为了判断 $f$ 的凸性，我们需要求其二阶导数：
 
+{{< math >}}
 $$
 f^{\prime \prime}(x)=h^{\prime \prime}(g(x)) g^{\prime}(x)^{2}+h^{\prime}(g(x)) g^{\prime \prime}(x)
 $$
+{{< /math >}}
 
 根据非负加权求和的保凸性质，我们可以得出如下结论：
 
@@ -114,9 +128,11 @@ $$
 ### 矢量复合
 
 下面考虑 $k \geqslant 1$ 的情况，虽然情况更复杂一些，但也可以得到类似标量的结论。同样地，我们求出 $f$ 的二阶导数：
+{{< math >}}
 $$
 f^{\prime \prime}(x)=g^{\prime}(x)^{T} \nabla^{2} h(g(x)) g^{\prime}(x)+\nabla h(g(x))^{T} g^{\prime \prime}(x)
 $$
+{{< /math >}}
 根据标量复合的结论，我们得到矢量复合的类似性质如下：
 
 | $h$ 的凸性 | $h$ 的每维分量的单调性 | $g$ 的凸性 | $f$ 的凸性 |
@@ -128,13 +144,17 @@ $$
 ## 最小化
 
 我们已经得到，任意个凸函数的逐点最大或者上确界仍然是凸函数。事实上，一些特殊形式的最小化同样可以得到凸函数。如果函数 $f(x, y)$ 是凸函数，集合 $C$ 是非空凸集，那么函数
+{{< math >}}
 $$
 g(x) = \inf _{y \in C} f(x, y)
 $$
+{{< /math >}}
 是凸函数只需要满足 $g(x)$ 可以取得有限值即可。函数 $g$ 的定义域是 $\operatorname{dom} f$ 在 $x$ 方向上的投影，即
+{{< math >}}
 $$
 \operatorname{dom} g = \\{ x \mid \exists y \in C, \operatorname{s.t.} (x, y) \in \operatorname{dom} f \\}
 $$
+{{< /math >}}
 
 ## 透视函数
 

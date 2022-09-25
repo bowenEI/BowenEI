@@ -46,9 +46,11 @@ weight: 250
 
 线性分式函数
 
+{{< math >}}
 $$
 f(x)=\frac{a^{T} x+b}{c^{T} x+d}
 $$
+{{< /math >}}
 
 是拟凸函数，也是拟凹函数，因此是拟线性函数。其 α-下水平集为
 
@@ -63,9 +65,11 @@ $$
 
 距离比函数
 
+{{< math >}}
 $$
 f(x)=\frac{\\|x-a\\| _{2}}{\\|x-b\\| _{2}}
 $$
+{{< /math >}}
 
 在半平面 $\\{ x \mid \\| x - a \\|_2 \leqslant \\| x - b \\|_2 \\}$ 上是拟凸函数。
 
@@ -75,9 +79,11 @@ $$
 
 函数 $f$ 是拟凸函数的充要条件是，$\operatorname{dom} f$ 是凸集，且对于任意的 $x, y \in \operatorname{dom} f$ 以及 $0 \leqslant \theta \leqslant 1$，有
 
+{{< math >}}
 $$
 f(\theta x + (1 - \theta) y) \leqslant \max \\{ f(x), f(y) \\}
 $$
+{{< /math >}}
 
 上式的几何意义在于，如果 $f$ 是拟凸函数，那么 $x$ 和 $y$ 之间的函数值不超过 $f(x)$ 和 $f(y)$ 之间的最大值。这很好的说明了为什么拟凸函数又被称为单峰函数。
 
@@ -97,9 +103,11 @@ $$
 
 设函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$ 可微，则函数 $f$ 是拟凸函数的充要条件是，$\operatorname{dom} f$ 是凸集，且对于 $\forall x, y \in \operatorname{dom} f$ 有
 
+{{< math >}}
 $$
 f(y) \leqslant f(x) \Longrightarrow \nabla f(x)^{T}(y-x) \leqslant 0
 $$
+{{< /math >}}
 
 一阶条件的几何意义实际上就是定义了水平集 $\\{ y \mid f(y) \leqslant f(x) \\}$ 的一个支撑超平面（$\nabla f(x)$ 为该超平面的法向量）。
 
@@ -111,15 +119,19 @@ $$
 
 假设函数 $f$ 二次可微，如果函数 $f$ 是拟凸函数，则对于任意 $x \in \operatorname{dom} f$ 以及任意 $y \in \mathbf{R}^n$ 有
 
+{{< math >}}
 $$
 y^{T} \nabla f(x)=0 \Longrightarrow y^{T} \nabla^{2} f(x) y \geqslant 0
 $$
+{{< /math >}}
 
 对于定义在 $\mathbf{R}$ 上的一元函数，上述条件可以简化为
 
+{{< math >}}
 $$
 f^{\prime} (x) = 0 \Longrightarrow f^{\prime \prime} (x) \geqslant 0
 $$
+{{< /math >}}
 
 这实际上是我们非常熟悉的一阶导数为零且二阶导数非负的判断方法。
 
@@ -127,15 +139,19 @@ $$
 
 ### 非负加权最大
 
+{{< math >}}
 $$
 f = \max \\{ w_1 f_1, \cdots, w_m f_m \\}
 $$
+{{< /math >}}
 
 其中 $w_i \geqslant 0$，$f_i$ 是拟凸函数。此性质可以扩展到一般的逐点上确界，即
 
+{{< math >}}
 $$
 f(x) = \sup _{y \in C} \\{ w(y) g(x, y) \\}
 $$
+{{< /math >}}
 
 其中 $w(y) \geqslant 0$，$y$ 视为参数，$g(x, y)$ 是关于 $x$ 的拟凸函数。
 
@@ -149,9 +165,11 @@ $$
 
 如果函数 $f(x, y)$ 是 $x$ 和 $y$ 的联合拟凸函数，且 $C$ 是凸集，则函数
 
+{{< math >}}
 $$
 g(x) = \inf _{y \in C} f(x, y)
 $$
+{{< /math >}}
 
 是拟凸函数。
 
@@ -159,8 +177,10 @@ $$
 
 我们可以很方便地将拟凸函数 $f$ 的下水平集（凸集）表示成凸函数的不等式。选择一族凸函数 $\phi_t: \mathbf{R}^n \rightarrow \mathbf{R}$，$t \in \mathbf{R}$ 表示凸函数的编号，这些函数满足
 
+{{< math >}}
 $$
 f(x) \leqslant t \Longleftrightarrow \phi_{t}(x) \leqslant 0
 $$
+{{< /math >}}
 
 即拟凸函数 $f$ 的 $t$- 下水平集是凸函数 $\phi_t$ 的 $0$-下水平集。

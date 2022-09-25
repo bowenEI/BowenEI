@@ -32,9 +32,11 @@ $$
 
 这里只有一个等式约束，因此只需要引入一个 Lagrange 乘子 $\lambda$ 即可
 
+{{< math >}}
 $$
 L(x, y, \lambda) = f(x, y) + \lambda g(x, y)
 $$
+{{< /math >}}
 
 计算 $L$ 对 $x$、$y$ 和 $\lambda$ 的偏导数，并令它们都等于零，就可以得到最优解的必要条件
 
@@ -79,9 +81,11 @@ $$
 
 更一般地，如果有多个不等式约束，对应到上图中就是有若干平面 $\sigma_1,\cdots,\sigma_p$，并且在最优点处 $\nabla f(x^{\star}, y^{\star})$ 可由有效约束对应的平面的支撑超平面的法向量的线性表示。即 $\exists \mu_1,\cdots,\mu_p \geqslant 0$，使得
 
+{{< math >}}
 $$
 \nabla f(x^{\star}, y^{\star}) = -(\mu_1 \nabla g_1(x^{\star}, y^{\star}) + \cdots + \mu_p \nabla g_p(x^{\star}, y^{\star}))
 $$
+{{< /math >}}
 
 而不论是内部解还是边界解，$\lambda g(x, y) = 0$ 恒成立，这就是互补松弛性。
 
@@ -128,9 +132,11 @@ $$
 
 写出 Lagrange 函数
 
+{{< math >}}
 $$
 L(x, y, \lambda, \nu) = x^2 + y^2 + \lambda(1 - x - y) + \nu(y - \alpha)
 $$
+{{< /math >}}
 
 KKT 条件方程组如下
 
@@ -154,9 +160,11 @@ $$
 
 代入等式约束 $x+y=1$，得到 $\lambda$ 和 $\nu$ 的函数关系
 
+{{< math >}}
 $$
 \lambda = \frac{1}{2} \nu + 1
 $$
+{{< /math >}}
 
 再代入式 (5) 和 (6) 中，消去 $\lambda$
 

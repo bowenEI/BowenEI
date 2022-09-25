@@ -15,9 +15,11 @@ weight: 240
 
 设函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，其共轭函数 $f^{\*}: \mathbf{R}^n \rightarrow \mathbf{R}$ 为
 
+{{< math >}}
 $$
 f^{\*}(y)=\sup _{x \in \operatorname{dom} f}\left(y^{T} x-f(x)\right)
 $$
+{{< /math >}}
 
 ### 几何意义
 
@@ -37,83 +39,109 @@ $$
 
 #### 仿射函数
 
+{{< math >}}
 $$
 f(x) = ax + b
 $$
+{{< /math >}}
 
 当且仅当 $y=a$ 时，$yx - ax - b = -b$ 有界。因此，仿射函数的共轭函数为
 
+{{< math >}}
 $$
 f^{\*}(y) = -b, \quad \operatorname{dom} f^{\*} = \\{a\\}
 $$
+{{< /math >}}
 
 #### 负对数函数
 
+{{< math >}}
 $$
 f(x) = -\log x, \quad \operatorname{dom} f = \mathbf{R}_{++}
 $$
+{{< /math >}}
 
 当 $y > 0$ 时，函数 $xy + \log x$ 无上界；当 $y < 0$ 时，在 $x = - \frac{1}{y}$ 处取最大值。因此，负对数函数的共轭函数为
 
+{{< math >}}
 $$
 f^{\*}(y) = -\log (-y) - 1, \quad \operatorname{dom} f^{\*} = -\mathbf{R}_{++}
 $$
+{{< /math >}}
 
 #### 指数函数
 
+{{< math >}}
 $$
 f(x) = e^x
 $$
+{{< /math >}}
 
 当 $y < 0$ 时，函数 $xy - e^x$ 无界；当 $y > 0$ 时，函数 $xy - e^x$ 在 $x = \ln y$ 处取最大值；当 $y = 0$ 时，$f^{\*}(y) = \sup \\{-e^x\\} = 0$。因此，指数函数的共轭函数为
 
+{{< math >}}
 $$
 f^{\*}(y) = y \log y - y, \quad \operatorname{dom} f^{\*} = \mathbf{R}_{+}
 $$
+{{< /math >}}
 
 #### 负熵函数
 
+{{< math >}}
 $$
 f(x) = x \log x, \quad \operatorname{dom} f = \mathbf{R}_{+}
 $$
+{{< /math >}}
 
 对所有 $y$，函数 $xy - x \log x$ 关于 $x$ 在 $\mathbf{R}_{+}$ 上有上界，且在 $x = e^{y-1}$ 处取最大值。因此，负熵函数的共轭函数为
 
+{{< math >}}
 $$
 f^{\*}(y) = e^{y-1}
 $$
+{{< /math >}}
 
 #### 反比例函数
 
+{{< math >}}
 $$
 f(x) = \frac{1}{x}, \quad \operatorname{dom} f = \mathbf{R}_{++}
 $$
+{{< /math >}}
 
 当 $y > 0$ 时，$yx - 1/x$ 无上界；当 $y = 0$ 时，函数有上确界 $0$；当 $y < 0$ 时，在 $x = (-y)^{1/2}$ 处达到上确界。因此，反比例函数的共轭函数为
 
+{{< math >}}
 $$
 f^{\*}(y) = -2 (-y)^{1/2}, \quad \operatorname{dom} f^{\*} = \mathbf{R}_{+}
 $$
+{{< /math >}}
 
 #### 严格凸的二次函数
 
+{{< math >}}
 $$
 f(x)=\frac{1}{2} x^{T} Q x, \quad Q \in \mathbf{S}_{++}^{n}
 $$
+{{< /math >}}
 
 对所有的 $y$，关于 $x$ 的函数 $y^{T} x-\frac{1}{2} x^{T} Q x$ 都有上界并在 $x = Q^{-1}y$ 处达到上确界。因此
 
+{{< math >}}
 $$
 f^{\*}(y)=\frac{1}{2} y^{T} Q^{-1} y
 $$
+{{< /math >}}
 
 这是一个很好的性质，严格凸的二次函数求共轭函数只需要求其二次型矩阵的逆矩阵即可。
 
 #### 对数-行列式
 
+{{< math >}}
 $$
 f(X) = \log \det X^{-1}, \quad X \in \mathbf{S}_{++}^{n}
 $$
+{{< /math >}}
 
 其共轭函数定义为
 
@@ -126,9 +154,11 @@ $$
 
 #### 指数和的对数函数
 
+{{< math >}}
 $$
 f(x) = \log (\sum_{i=1}^{n} e^{x_i})
 $$
+{{< /math >}}
 
 其共轭函数的推到稍微有些复杂，这里直接给出结果。
 
@@ -156,25 +186,31 @@ $$
 
 ### Fenchel 不等式
 
+{{< math >}}
 $$
 f(x)+f^{\*}(y) \geqslant x^{T} y
 $$
+{{< /math >}}
 
 如果 $f$ 可微，上式亦可称为 Young 不等式。
 
 令 $f(x) = \frac{1}{2} x^TQx$，其中 $Q \in \mathbf{S}_{++}$，利用 Fenchel 不等式，我们可以如下结论：
 
+{{< math >}}
 $$
 x^Ty \leqslant \frac{1}{2} x^TQx + \frac{1}{2} y^TQ^{-1}y
 $$
+{{< /math >}}
 
 ### 共轭的共轭
 
 我们学过的很多概念当中都包含“共轭”，例如共轭根式、共轭复数等。实际上“共轭”包含了“成对出现”这么一层意思。因此，共轭函数也有类似的性质。
 
+{{< math >}}
 $$
 f^{\*\*} = f
 $$
+{{< /math >}}
 
 上述等式要求函数 $f$ 是凸的而且闭的。
 
@@ -184,17 +220,21 @@ $$
 
 设函数 $f$ 是凸函数且可微，其定义域为 $\operatorname{dom} f = \mathbf{R}^n$，使 $y^Tx - f(x)$ 取最大的 $x^{\*}$ 满足 $y = \nabla f(x^{\*})$，并且若 $x^{\*}$ 满足 $y = \nabla f(x^{\*})$，$y^Tx - f(x)$ 在 $x^{\*}$ 处取最大值（二者等价）。因此，我们可以得到
 
+{{< math >}}
 $$
 f^{\*}(y)=x^{\* T} \nabla f\left(x^{\*}\right)-f\left(x^{\*}\right)
 $$
+{{< /math >}}
 
 有了这个结论，给定任意 $y$，我们可以求解梯度方程 $y = \nabla f(z)$，从而得到 $y$ 处的共轭函数 $f^{\*}(y)$。
 
 我们也可以换一个角度理解。$\forall z \in \mathbf{R}^n$，令 $y = \nabla f(z)$，则
 
+{{< math >}}
 $$
 f^{\*}(y)=z^T \nabla f\left(z\right)-f\left(z\right)
 $$
+{{< /math >}}
 
 ### 伸缩变换和复合仿射变换
 
@@ -222,14 +262,18 @@ $$
 
 设函数 $f_1$ 和 $f_2$ 都是凸函数，它们的独立函数
 
+{{< math >}}
 $$
 f(u, v) = f_1(u) + f_2(v)
 $$
+{{< /math >}}
 
 的共轭函数为
 
+{{< math >}}
 $$
 f^{\*}(w, z) = f_1^{\*}(w) + f_2^{\*}(z)
 $$
+{{< /math >}}
 
 也就是说，独立凸函数的和的共轭函数是各个凸函数的共轭函数的和。

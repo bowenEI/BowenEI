@@ -17,23 +17,29 @@ weight: 450
 
 对偶可行点可以让我们在不知道 $p^{\star}$ 的确切值的情况下界定给定可行点的次优程度。事实上，如果 $x$ 是原问题的可行解且 $(\lambda, \nu)$ 对偶可行，那么
 
+{{< math >}}
 $$
 f(x) - p^{\star} \leqslant f_0(x) - g(\lambda, \nu)
 $$
+{{< /math >}}
 
 特别地，上式说明了 $x$ 是 $\epsilon$- 次优，其中 $\epsilon = f_0(x) - g(\lambda, \nu)$。
 
 定义原问题和对偶问题目标函数的差值
 
+{{< math >}}
 $$
 f_0(x) - g(\lambda, \nu)
 $$
+{{< /math >}}
 
 为原问题可行解 $x$ 和对偶可行解 $(\lambda, \nu)$ 之间的对偶间隙。一对原对偶问题的可行点 $x, (\lambda, \nu)$ 将原问题（对偶问题）的最优值限制在一个区间上：
 
+{{< math >}}
 $$
 p^{\star} \in\left[g(\lambda, \nu), f_0(x)\right], \quad d^{\star} \in\left[g(\lambda, \nu), f_0(x)\right]
 $$
+{{< /math >}}
 
 区间的长度即为上面定义的对偶间隙。
 
@@ -70,27 +76,35 @@ $$
 
 由此可以得出一些有意义的结论。其中一个特别重要的结论是
 
+{{< math >}}
 $$
 \sum_{i=1}^m \lambda_i^{\star} f_i(x^{\star}) = 0
 $$
+{{< /math >}}
 
 事实上，求和项的每一项都非正，因此有
 
+{{< math >}}
 $$
 \lambda_i^{\star} f_i(x^{\star}) = 0, \quad i=1,\cdots,m
 $$
+{{< /math >}}
 
 上述条件称为**互补松弛性**。它对任意原问题的最优解 $x^{\star}$ 以及对偶问题的最优解 $(\lambda^{\star}, \nu^{\star})$ 都成立（当强对偶性成立时）。我们可以将互补松弛性条件写成
 
+{{< math >}}
 $$
 \lambda_i^{\star} > 0 \Longrightarrow f_i(x^{\star}) = 0
 $$
+{{< /math >}}
 
 或者等价地
 
+{{< math >}}
 $$
 f_i(x^{\star}) < 0 \Longrightarrow \lambda_i^{\star} = 0
 $$
+{{< /math >}}
 
 互补松弛性条件说明了在最优点处，除了第 $i$ 个约束起作用的情况，最优 Lagrange 乘子的第 $i$ 项都为零。
 
@@ -100,9 +114,11 @@ $$
 
 由于 $L(x, \lambda^{\star}, \nu^{\star})$ 关于 $x$ 求极小在 $x^{\star}$ 处取得最小值，因此函数在 $x^{\star}$ 处的导数必须为零，即
 
+{{< math >}}
 $$
 \nabla f_{0}\left(x^{\star}\right)+\sum_{i=1}^{m} \lambda_{i}^{\star} \nabla f_{i}\left(x^{\star}\right)+\sum_{i=1}^{p} \nu_{i}^{\star} \nabla h_{i}\left(x^{\star}\right)=0
 $$
+{{< /math >}}
 
 因此，我们可以得到
 

@@ -15,9 +15,11 @@ weight: 470
 
 ## 引入新的变量以及相应的等式约束
 
+{{< math >}}
 $$
 \mathrm{minimize} \quad f_0(Ax+b)
 $$
+{{< /math >}}
 
 该问题的 Lagrange 对偶函数是常数 $p^{\star}$。即使强对偶性成立，但其 Lagrange 对偶问题没有什么意义和用途。
 
@@ -32,15 +34,19 @@ $$
 
 我们引入了新的变量 $y$，并且增加了新的等式约束，将原来作为目标函数的复合函数拆开了。这样，变换之后的问题的 Lagrange 函数为
 
+{{< math >}}
 $$
 L(x, y, \nu) = f_0(y) + \nu^T(Ax+b-y)
 $$
+{{< /math >}}
 
 求解 Lagrange 对偶函数
 
+{{< math >}}
 $$
 g(\nu) = b^T \nu + \inf_y (f_0(y) - \nu^T y) = b^T - f_0^{\star}(\nu)
 $$
+{{< /math >}}
 
 于是对偶问题可以描述为
 
@@ -80,9 +86,11 @@ $$
 
 考虑最小范数问题
 
+{{< math >}}
 $$
 \mathrm{minimize} \quad \\| Ax-b \\|
 $$
+{{< /math >}}
 
 我们将问题重新描述为
 

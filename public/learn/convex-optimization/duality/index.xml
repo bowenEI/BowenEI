@@ -79,12 +79,18 @@ $$&lt;/p&gt;
 $$&lt;/p&gt;
 &lt;p&gt;其中，$I_-: \mathbf{R} \rightarrow \mathbf{R}$ 是非正实数集的示性函数&lt;/p&gt;
 &lt;p&gt;$$
-I_-(u) = \left\{
+I_-(u) = \left\
+
+{{< math >}}
+$$
 \begin{matrix}
 0 &amp;amp; u \leqslant 0 \\
 \infty &amp;amp; u &amp;gt; 0
 \end{matrix}
-\right.
+$$
+{{< /math >}}
+
+right.
 $$&lt;/p&gt;
 &lt;p&gt;类似地，$I_0$ 是集合 $\{0\}$ 的示性函数。打一个形象的比喻，可以将函数 $I_-(u)$ 理解为我们对约束函数值 $u = f_i(x)$ 的一种恼怒或不满。类似地，$I_0(u)$ 表达了我们对等式约束值 $u = h_i(x)$ 的不满。&lt;/p&gt;
 &lt;p&gt;如果我们用线性函数 $\lambda_i(u)$ 替代函数 $I_-(u)$，其中 $\lambda_i \geqslant 0$，用函数 $\nu_i u$ 替代 $I_0(u)$。那么，目标函数就变成了 Lagrange 函数 $L(x, \lambda, \nu)$，且对偶函数值是该问题的最优值。实际上，使用线性函数太“软”，没有示性函数“硬”。用线性函数去逼近示性函数是远远不够的，不过至少可以将线性函数看作是示性函数的一个下估计。&lt;/p&gt;
@@ -160,12 +166,18 @@ $$&lt;/p&gt;
 $$&lt;/p&gt;
 &lt;p&gt;其 Lagrange 对偶函数为&lt;/p&gt;
 &lt;p&gt;$$
-g(\lambda, \nu) = \left\{
+g(\lambda, \nu) = \left\
+
+{{< math >}}
+$$
 \begin{matrix}
 -b^T \nu &amp;amp; A^T \nu - \lambda + c = 0 \\
 -\infty &amp;amp; \text{其他情况}
 \end{matrix}
-\right.
+$$
+{{< /math >}}
+
+right.
 $$&lt;/p&gt;
 &lt;p&gt;严格来讲,标准形式线性规划的对偶问题是在满足约束 $\lambda \succeq 0$ 的条件下极大化对偶函数&lt;/p&gt;
 &lt;p&gt;$$
@@ -428,13 +440,19 @@ f_0\left(x^{\star}\right) &amp;amp;=g\left(\lambda^{\star}, \nu^{\star}\right) \
 $$&lt;/p&gt;
 &lt;p&gt;第一个等式说明最优对偶间隙为零，第二个等式是对偶函数的定义。第三个不等式是根据 Lagrange 函数关于 $x$ 求下确界小于等于其在 $x = x^{\star}$ 处得到。最后一个不等式成立是因为&lt;/p&gt;
 &lt;p&gt;$$
-\left\{
+\left\
+
+{{< math >}}
+$$
 \begin{matrix}
 \lambda_i^{\star} \geqslant 0, &amp;amp; i=1,\cdots,m \\
 f_i(x^{\star}) \leqslant 0, &amp;amp; i=1,\cdots,m \\
 h_i(x^{\star}) = 0, &amp;amp; i=1,\cdots,p
 \end{matrix}
-\right.
+$$
+{{< /math >}}
+
+right.
 $$&lt;/p&gt;
 &lt;p&gt;因此，在上面的式子链中，两个不等式取等号。&lt;/p&gt;
 &lt;p&gt;由此可以得出一些有意义的结论。其中一个特别重要的结论是&lt;/p&gt;
@@ -525,13 +543,19 @@ L(x, y, \lambda) = f(x, y) + \lambda g(x, y)
 $$&lt;/p&gt;
 &lt;p&gt;计算 $L$ 对 $x$、$y$ 和 $\lambda$ 的偏导数，并令它们都等于零，就可以得到最优解的必要条件&lt;/p&gt;
 &lt;p&gt;$$
-\left\{
+\left\
+
+{{< math >}}
+$$
 \begin{aligned}
 \frac{\partial L}{\partial x} &amp;amp;= f_x(x, y) + \lambda g_x(x, y) = 0 \\
 \frac{\partial L}{\partial y} &amp;amp;= f_y(x, y) + \lambda g_y(x, y) = 0 \\
 \frac{\partial L}{\partial \lambda} &amp;amp;= g(x, y) = 0
 \end{aligned}
-\right.
+$$
+{{< /math >}}
+
+right.
 $$&lt;/p&gt;
 &lt;p&gt;解上面的方程组就可以得到最优解 $(x^{\star}, y^{\star})$。&lt;/p&gt;
 &lt;h2 id=&#34;不等式约束优化问题&#34;&gt;不等式约束优化问题&lt;/h2&gt;

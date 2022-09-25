@@ -17,15 +17,19 @@ weight: 270
 
 设 $K \subseteq \mathbf{R}^n$ 是一个正常锥，其相应的广义不等式为 $\\preceq_{K}$。定义函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，若
 
+{{< math >}}
 $$
 x \preceq_{K} y \Longrightarrow f(x) \leqslant f(y)
 $$
+{{< /math >}}
 
 则称函数 $f$ $K$- 非减。若
 
+{{< math >}}
 $$
 x \preceq_{K} y \wedge x \ne y \Longrightarrow f(x) < f(y)
 $$
+{{< /math >}}
 
 则称函数 $f$ $K$- 增。类似地，可以定义 $K$- 非增和 $K$- 减函数。
 
@@ -33,9 +37,11 @@ $$
 
 向量单调函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$ 在 $\mathbf{R}^n_+$ 上非减，当且仅当
 
+{{< math >}}
 $$
 \forall x, y \in \operatorname{dom} f, \quad x_1 \leqslant y_1, \cdots, x_n \leqslant y_n \Longrightarrow f(x) \leqslant f(y)
 $$
+{{< /math >}}
 
 矩阵单调函数 $f: \mathbf{S}^n \rightarrow \mathbf{R}$ 如果在半正定锥内函数是单调的，那么函数 $f$ 矩阵单调。例如：
 
@@ -47,15 +53,19 @@ $$
 
 考虑可微函数 $f$，其定义域为凸集，它是 $K$- 非减的，当且仅当对 $\forall x \in \operatorname{dom} f$ 有
 
+{{< math >}}
 $$
 \nabla f(x) \succeq_{K^{\*}} 0
 $$
+{{< /math >}}
 
 同理，对于严格的 $K$- 增情况，我们有
 
+{{< math >}}
 $$
 \nabla f(x) \succ_{K^{\*}} 0
 $$
+{{< /math >}}
 
 但反过来不一定正确。
 
@@ -63,15 +73,19 @@ $$
 
 设 $K \subseteq \mathbf{R}^m$ 为正常锥，相应的广义不等式为 $\preceq_{K}$。如果对于任意的 $x, y$，以及 $0 \leqslant \theta \leqslant 1$，有
 
+{{< math >}}
 $$
 f(\theta x+(1-\theta) y) \preceq_{K} \theta f(x)+(1-\theta) f(y)
 $$
+{{< /math >}}
 
 则称函数 $f$ 是 $K$- 凸的。如果对于任意的 $x, y \wedge x \ne y$，以及 $0 < \theta < 1$，有
 
+{{< math >}}
 $$
 f(\theta x+(1-\theta) y) \prec_{K} \theta f(x)+(1-\theta) f(y)
 $$
+{{< /math >}}
 
 则称函数 $f$ 是严格 $K$- 凸的。
 
@@ -94,15 +108,19 @@ $$
 
 可微函数 $f$ 是 $K$- 凸的，当且仅当其定义域是凸集，且对 $\forall x, y \in \operatorname{dom} f$ 有
 
+{{< math >}}
 $$
 f(y) \succeq_{K} f(x)+D f(x)(y-x)
 $$
+{{< /math >}}
 
 类似地，可以得到严格 $K$- 凸的等价条件：对 $\forall x, y \in \operatorname{dom} f \wedge x \ne y$ 有
 
+{{< math >}}
 $$
 f(y) \succ_{K} f(x)+D f(x)(y-x)
 $$
+{{< /math >}}
 
 ### 复合定理
 

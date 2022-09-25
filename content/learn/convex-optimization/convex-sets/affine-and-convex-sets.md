@@ -15,47 +15,71 @@ weight: 110
 
 设 $x_1 \ne x_2$ 为 $\mathbf{R}^n$ 空间中的两个点，那么
 
+{{< math >}}
+$$
 \begin{align}
 y = \theta x_1 + (1-\theta) x_2, \quad \theta \in \mathbf{R}
 \end{align}
+$$
+{{< /math >}}
 
 组成一条穿越 $x_1$ 和 $x_2$ 的**直线**；
 
+{{< math >}}
+$$
 \begin{align}
 y = \theta x_1 + (1-\theta) x_2, \quad \theta \in [0, 1]
 \end{align}
+$$
+{{< /math >}}
 
 构成了 $x_1$ 和 $x_2$ 之间的（闭）**线段**。
 
 还有如下一种表示形式，它类似于直线的参数方程：
 
+{{< math >}}
+$$
 \begin{align}
 y = x_2 + \theta(x_1 - x_2)
 \end{align}
+$$
+{{< /math >}}
 
 ## 仿射集合
 
 如果通过集合 $C \subseteq \mathbf{R}^{n}$ 中任意两个不同点的直线仍然在集合 $C$ 中，那么称集合 $C$ 是**仿射**的，即
 
+{{< math >}}
+$$
 \begin{align}
 \forall x_1,x_2 \in C, \quad \theta x_1 + (1 - \theta) x_2 \in C \quad (\theta \in \mathbf{R})
 \end{align}
+$$
+{{< /math >}}
 
 这个概念可以推广至多个点的情况：如果 $\theta_1 + \cdots + \theta_k = 1$，那么称 $\theta_1 x_1 + \cdots + \theta_k x_k$ 为 $x_1, \cdots, x_k$ 的**仿射组合**。如果一个集合中的任意两点的仿射组合仍在该集合中，那么称该集合为**仿射集合**。
 
 设 $V$ 是一个子空间（即关于加法和数乘运算是封闭的），则仿射集合 $C$ 可以表示为
 
+{{< math >}}
+$$
 \begin{align}
 C = V + x_0 = \\{v + x_0 \mid v \in V\\}
 \end{align}
+$$
+{{< /math >}}
 
 与仿射集合 $C$ 相关联的子空间 $V$ 与 $x_0$ 的选取无关，所以 $x_0$ 可以是 $C$ 中的任意一点。
 
 我们称由集合 $C \subseteq \mathbf{R}^{n}$ 中的点的所有仿射组合组成的集合为 $C$ 的**仿射包**，即
 
+{{< math >}}
+$$
 \begin{align}
 \operatorname{aff} C = \\{\theta_1 x_1 + \cdots + \theta_1 x_1 \mid x_1, \cdots, x_k \in C, \theta_1 + \cdots + \theta_k = 1\\}
 \end{align}
+$$
+{{< /math >}}
 
 仿射包是包含 $C$ 的最小的仿射集合。
 
@@ -65,29 +89,45 @@ C = V + x_0 = \\{v + x_0 \mid v \in V\\}
 
 考虑 $\mathbf{R}^{3}$ 中处于 $(x_1,x_2)$ 平面的一个正方形，定义
 
+{{< math >}}
+$$
 \begin{align}
 C = \\{x \in \mathbf{R}^{3} \mid -1 \leqslant x_1 \leqslant 1, -1 \leqslant x_2 \leqslant 1, x_3=0\\}
 \end{align}
+$$
+{{< /math >}}
 
 其仿射包为 $x_1, x_2$ 平面，即 $\operatorname{aff}C = \\{x \in \mathbf{R}^{3} \mid x_3=0\\}$。$C$ 的仿射维数小于 $3$，其相对内部为
 
+{{< math >}}
+$$
 \begin{align}
 \operatorname{relint} C = \\{x \in \mathbf{R}^{3} \mid -1 < x_1 < 1, -1 < x_2 < 1, x_3=0\\}
 \end{align}
+$$
+{{< /math >}}
 
 $C$ 在 $\mathbf{R}^{3}$ 中的边界是其自身，而相对边界是其边框，即
 
+{{< math >}}
+$$
 \begin{align}
 \operatorname{cl} C \backslash \operatorname{relint} C = \\{x \in \mathbf{R}^{3} \mid \max \\{\left|x_1\right|, \left|x_2\right|\\}, x_3=0\\}
 \end{align}
+$$
+{{< /math >}}
 
 ## 凸集
 
 若对 $\forall x_1, x_2 \in C$ 和对 $\forall \theta \in [0, 1]$，都有
 
+{{< math >}}
+$$
 \begin{align}
 \theta x_1 + (1 - \theta) x_2 \in C
 \end{align}
+$$
+{{< /math >}}
 
 则称集合 $C$ 为**凸集**。
 
@@ -107,9 +147,13 @@ $C$ 在 $\mathbf{R}^{3}$ 中的边界是其自身，而相对边界是其边框�
 
 我们称集合 $C$ 中所有点的凸组合的集合为其**凸包**，即
 
+{{< math >}}
+$$
 \begin{align}
 \operatorname{conv} C=\\{\theta_1 x_1+\cdots+\theta_k x_k \mid x_i \in C, \theta_i \geqslant 0, \\\\ i=1, \cdots, k, \theta_1+\cdots+\theta_k=1\\}
 \end{align}
+$$
+{{< /math >}}
 
 {{< figure src="learn/convex-optimization/convex-sets/2-1-2.png" >}}
 
@@ -117,18 +161,26 @@ $C$ 在 $\mathbf{R}^{3}$ 中的边界是其自身，而相对边界是其边框�
 
 凸组合的概念可以扩展到无穷级数、积分以及大多数形式的概率分布。例如：
 
+{{< math >}}
+$$
 \begin{align}
 \sum_{i=1}^{\infty} \theta_{i}=1 &\Rightarrow \sum_{i=1}^{\infty} \theta_{i} x_{i} \in C \\\\
 \int_{C} p(x) d x =1 &\Rightarrow \int_{C} p(x) x d x \in C
 \end{align}
+$$
+{{< /math >}}
 
 ## 锥
 
 如果对 $\forall x \in C$ 和 $\forall \theta \geqslant 0$ 都有 $\theta x \in C$，那么我们称集合 $C$ 是**锥**或者**非负齐次**。若集合 $C$ 是锥并且是凸的，则称 $C$ 为**凸锥**，即对 $\forall x_1, x_2 \in C$ 和 $\forall \theta_1, \theta_2 \geqslant 0$，都有
 
+{{< math >}}
+$$
 \begin{align}
 \theta_1 x_1 + \theta_2 x_2 \in C
 \end{align}
+$$
+{{< /math >}}
 
 半径为 $\infty$ 的扇形和母线长为 $\infty$ 的圆锥面是典型的凸锥。
 

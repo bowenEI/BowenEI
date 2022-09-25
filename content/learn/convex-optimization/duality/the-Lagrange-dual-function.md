@@ -25,9 +25,11 @@ $$
 
 定义该问题的 **Lagrange 函数** $L: \mathbf{R}^n \times \mathbf{R}^m \mathbf{R}^p \rightarrow \mathbf{R}$ 为
 
+{{< math >}}
 $$
 L(x, \lambda, \nu) = f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{i=1}^p \nu_i h_i(x)
 $$
+{{< /math >}}
 
 其中定义域 $\operatorname{dom} L = \mathcal{D} \times \mathbf{R}^m \times \mathbf{R}^p$。$\lambda_i$ 称为第 $i$ 个不等式约束 $f_i(x) \leqslant 0$ 对应的 **Lagrange 乘子**；类似地，$\nu_i$ 称为第 $i$ 个等式约束 $h_i(x) = 0$ 对应的 Lagrange 乘子。向量 $\lambda$ 和 $\nu$ 称为**对偶变量**或者问题的 **Lagrange 乘子向量**。
 
@@ -35,9 +37,11 @@ $$
 
 定义 **Lagrange 对偶函数** $g: \mathbf{R}^m \times \mathbf{R}^p \rightarrow \mathbf{R}$ 为 Lagrange 函数关于 $x$ 取得的最小值：即对 $\lambda \in \mathbf{R}^m$，$\nu \in \mathbf{R}^p$，有
 
+{{< math >}}
 $$
 g(\lambda, \nu)=\inf_{x \in \mathcal{D}} L(x, \lambda, \nu)=\inf_{x \in \mathcal{D}}\left(f_0(x)+\sum_{i=1}^{m} \lambda_i f_i(x)+\sum_{i=1}^{p} \nu_i h_i(x)\right)
 $$
+{{< /math >}}
 
 如果 Lagrange 函数关于 $x$ 无下界，则对偶函数取值为 $-\infty$。因为对偶函数是一族关于 $(\lambda, \nu)$ 的仿射函数的逐点下确界，所以即使原问题不是凸的，对偶函数也是凹函数。
 
@@ -45,9 +49,11 @@ $$
 
 对偶函数构成了原问题最优值 $p^{\star}$ 的下界：即对 $\forall \lambda, \nu \succeq 0$ 有
 
+{{< math >}}
 $$
 g(\lambda, \nu) \leqslant p^{\star}
 $$
+{{< /math >}}
 
 ### 几何意义
 
@@ -61,9 +67,11 @@ $$
 
 可以通过对集合 $\\{0\\}$ 和 $-\mathbf{R}_+$ 的示性函数进行线性逼近来理解 Lagrange 函数和其给出下界的性质。首先将原问题重新描述成一个无约束问题
 
+{{< math >}}
 $$
 \mathrm{minimize} \quad f_0(x) + \sum_{i=1}^m I_-(f_i(x)) + \sum_{i=1}^p I_0(h_i(x))
 $$
+{{< /math >}}
 
 其中，$I_-: \mathbf{R} \rightarrow \mathbf{R}$ 是非正实数集的示性函数
 
@@ -113,9 +121,11 @@ $$
 
 因此，对偶函数为
 
+{{< math >}}
 $$
 g(\nu) = -\frac{1}{4} \nu^T AA^T \nu - b^T \nu
 $$
+{{< /math >}}
 
 它是一个二次凹函数，定义域为 $\mathbf{R}^p$。
 
@@ -132,12 +142,16 @@ $$
 
 虽然这个问题没有什么挑战性，但是我们还是可以很容易地得到 Lagrange 函数为 $L(x, \nu) = f(x) + \nu^T x$，则其对偶函数为
 
+{{< math >}}
 $$
 g(\nu) = \inf_x (f(x) + \nu^T x) = -\sup_x ((-\nu)^Tx - f(x)) = -f^{\*}(-\nu)
 $$
+{{< /math >}}
 
 即，我们得到了结论
 
+{{< math >}}
 $$
 g(\nu) = -f^{\*}(-\nu)
 $$
+{{< /math >}}

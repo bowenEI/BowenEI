@@ -145,9 +145,13 @@ RNN 的特点是序列从左向右移一步一步往前做。当前时刻 $t$ �
 
 沐神就 `BatchNorm` 和 `LayerNorm` 的区别作了详细讲解。我们知道，`Norm` 即 `Normalization`，对数据进行归一化处理。这和概率论中对随机变量进行标准化的操作类似，即把原向量化为均值为 $0$ 方差为 $1$ 的标准化向量。
 
+{{< math >}}
+$$
 \begin{align}
 Y = \frac{X - \mu}{\sigma}
 \end{align}
+$$
+{{< /math >}}
 
 如图所示，`BatchNorm` 和 `LayerNorm` 的区别一目了然。`BatchNorm` 是在每一个特征 `feature` 上对 `batch` 进行归一化，而 `LayerNorm` 是在每一个样本 `batch` 上对 `feature` 进行归一化。
 
@@ -182,15 +186,23 @@ Y = \frac{X - \mu}{\sigma}
 
 注意力函数的计算公式如下：
 
+{{< math >}}
+$$
 \begin{align}
 \textrm{Attention}\left(Q, K, V\right) = \textrm{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
 \end{align}
+$$
+{{< /math >}}
 
 $Q$ 即 `query`，$K$ 即 `key`，$QK^T$ 即 `query` 和 `key` 做内积。作者认为，两个向量的内积值越大，说明相似度越高。除以 $\sqrt{d_k}$ 则表示单位化，然后再用 softmax 得到权重。这里的道理其实就是机器学习中的余弦相似度（余弦距离）：
 
+{{< math >}}
+$$
 \begin{align}
 \textrm{similarity} = \cos{\theta} = \frac{\alpha \cdot \beta}{||\alpha|| \cdot ||\beta||}
 \end{align}
+$$
+{{< /math >}}
 
 注意这里 `Mask` 的作用是为了避免 $t$ 时刻看到后面的输入。在数学上的具体实现方式是以一个绝对值非常大的负数（$-\infty$）作为指数，计算出来的幂趋向于零，这样就实现了掩盖 $t$ 时刻后面的输入的效果。
 
@@ -202,10 +214,14 @@ $Q$ 即 `query`，$K$ 即 `key`，$QK^T$ 即 `query` 和 `key` 做内积。作�
 
 多头注意力函数的计算公式如下：
 
+{{< math >}}
+$$
 \begin{align}
 \textrm{MultiHead}\left(Q, K, V\right) &= \textrm{Concat}\left(\textrm{head}_1, ..., \textrm{head}_h\right)W^O \\\\
 \textbf{where}\quad\textrm{head}_i &= \textrm{Attention}\left(QW^Q_i, KW^K_i, VW^V_i\right)
 \end{align}
+$$
+{{< /math >}}
 
 在本文中作者定义 $h=8$，于是 $d_k = d_v = d_{model}/h = 64$，也就是输出维度。
 
@@ -235,9 +251,13 @@ $Q$ 即 `query`，$K$ 即 `key`，$QK^T$ 即 `query` 和 `key` 做内积。作�
 
 > In addition to attention sub-layers, each of the layers in our encoder and decoder contains a fully connected feed-forward network, which is applied to each position separately and identically. This consists of two linear transformations with a ReLU activation in between.
 
+{{< math >}}
+$$
 \begin{align}
 \textrm{FFN}\left(x\right) = \max \left(0, xW_1 + b_1\right)W_2 + b_2
 \end{align}
+$$
+{{< /math >}}
 
 在注意力层之后，`encoder` 和 `decoder` 都会有一个前馈网络层，首先是一个全连接层，然后是 ReLU 激活函数，最后再过一个全连接层。
 

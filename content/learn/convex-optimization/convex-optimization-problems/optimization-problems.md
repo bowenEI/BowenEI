@@ -32,21 +32,27 @@ $$
 
 #### 定义域
 
+{{< math >}}
 $$
 \mathcal{D}=\bigcap_{i=0}^{m} \operatorname{dom} f_{i} \cap \bigcap_{i=1}^{p} \operatorname{dom} h_{i}
 $$
+{{< /math >}}
 
 #### 可行集（约束集）
 
+{{< math >}}
 $$
 \\{ x \mid x \in \mathcal{D}, f_i(x) \leqslant 0, i=1, \cdots, m, \quad h_i(x) = 0, i=1, \cdots, p \\}
 $$
+{{< /math >}}
 
 #### 最优值
 
+{{< math >}}
 $$
 p^{\star}=\inf \\{f_{0}(x) \mid f_{i}(x) \leqslant 0, i=1, \cdots, m, \quad h_{i}(x)=0, i=1, \cdots, p\\}
 $$
+{{< /math >}}
 
 $p^{\star}$ 可以取 $\pm \infty$。如果问题不可行，那么 $p^{\star} = \infty$；如果问题无下界，那么 $p^{\star} = -\infty$。
 
@@ -54,9 +60,11 @@ $p^{\star}$ 可以取 $\pm \infty$。如果问题不可行，那么 $p^{\star} =
 
 如果 $x^{\star}$ 是可行的并且 $f_0(x^{\star}) = p^{\star}$，则称 $x^{\star}$ 为**最优点**，或 $x^{\star}$ 解决了该优化问题。所有最优解的集合称为**最优集**，记为
 
+{{< math >}}
 $$
 X_{\mathrm{opt}}=\\{x \mid f_{i}(x) \leqslant 0, i=1, \cdots, m, h_{i}(x)=0, i=1, \cdots, p, f_{0}(x)=p^{\star}\\}
 $$
+{{< /math >}}
 
 如果问题存在最优解，则称最优值是**可得**或**可达**的，称问题**可解**。如果 $X_{\mathrm{opt}}$ 是空集，则称最优值是不可得或不可达的（这种情况常在问题无下界是发生）。满足 $f_0(x) \leqslant p^{\star} + \epsilon (\epsilon > 0)$ 的可行解 $x$ 称为 $\epsilon$- 次优。所有 $\epsilon$- 次优解的集合称为 $\epsilon$- 次优集。
 
@@ -190,9 +198,11 @@ $$
 
 可以通过在同样的约束下极小化 $-f_0$ 得到求解。其最优值的定义为
 
+{{< math >}}
 $$
 p^{\star}=\sup \\{f_{0}(x) \mid f_{i}(x) \leqslant 0, i=1, \cdots, m, \quad h_{i}(x)=0, i=1, \cdots, p\\}
 $$
+{{< /math >}}
 
 ## 等价问题
 
@@ -250,15 +260,19 @@ $$
 
 考虑无约束的 Euclid 范数极小化问题
 
+{{< math >}}
 $$
 \operatorname{minimize} \\| Ax - b \\|_2, \quad x \in \mathbf{R}^n
 $$
+{{< /math >}}
 
 因为范数是非负的，所以为了求解方便，我们一般求解范数的平方
 
+{{< math >}}
 $$
 \operatorname{minimize} \\| Ax - b \\|_2^2 = (Ax-b)^T(Ax-b)
 $$
+{{< /math >}}
 
 这两个问题显然是等价的——因为最优解相同。但要注意，这两个问题是不同的问题。
 
@@ -337,9 +351,11 @@ $$
 
 ### 优化部分变量
 
+{{< math >}}
 $$
 \inf_{x,y} f(x,y) = \inf_{x} \\{ \inf_{y} f(x,y) \\}
 $$
+{{< /math >}}
 
 这是一个简单而普适的规则，说明我们可以先优化一部分变量再优化另一部分变量来优化一个函数。
 
@@ -374,9 +390,11 @@ $$
 
 我们可以通过改变定义域将任何约束隐式地表达在目标函数中。作为一个极端的例子，可以将标准形式问题表示为如下一个无约束问题
 
+{{< math >}}
 $$
 \mathrm{minimize} F(x)
 $$
+{{< /math >}}
 
 我们用 $f_0$ 来定义 $F$，但其定义域被限定在可行集中
 

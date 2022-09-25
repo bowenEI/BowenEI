@@ -24,21 +24,27 @@ $$
 
 给出对偶函数的简单几何解释。事实上，此集合是约束函数和目标函数所取得的函数值。利用集合 $\mathcal{G}$，可以很容易地表达优化问题的最优值 $p^{\star}$。
 
+{{< math >}}
 $$
 p^{\star} = \inf \\{ t \mid (u, v, t) \in \mathcal{G}, u \preceq 0, v = 0 \\}
 $$
+{{< /math >}}
 
 求解以 $(\lambda, \nu)$ 为自变量的对偶函数，得到
 
+{{< math >}}
 $$
 g(\lambda, \nu) = \inf \\{ (\lambda, \nu, 1)^T(u, v, t) \mid (u, v, t) \in \mathcal{G} \\}
 $$
+{{< /math >}}
 
 如果下确界有界，则不等式
 
+{{< math >}}
 $$
 (\lambda, \nu, 1)^T(u, v, t) \geqslant g(\lambda, \nu)
 $$
+{{< /math >}}
 
 定义了集合 $\mathcal{G}$ 的一个支撑超平面。
 
@@ -66,29 +72,37 @@ $$
 
 可以用 $\mathcal{A}$ 来描述最优值
 
+{{< math >}}
 $$
 p^{\star}=\inf \\{t \mid (0,0,t) \in \mathcal{A}\\}
 $$
+{{< /math >}}
 
 同样的，我们可以通过极小化仿射函数得到关于 $(\lambda, \nu)$ 的对偶函数
 
+{{< math >}}
 $$
 g(\lambda, \nu)=\inf \\{(\lambda, \nu, 1)^{T}(u, v, t) \mid(u, v, t) \in \mathcal{A}\\}
 $$
+{{< /math >}}
 
 如果确定下确界有界，则
 
+{{< math >}}
 $$
 (\lambda, \nu, 1)^{T}(u, v, t) \geqslant g(\lambda, \nu)
 $$
+{{< /math >}}
 
 定义了 $\mathcal{A}$ 的一个非竖直的支撑超平面。
 
 特别地，由于 $(0, 0, p^{\star}) \in \operatorname{bd} \mathcal{A}$，我们有
 
+{{< math >}}
 $$
 p^{\star} = (\lambda, \nu, 1)^T (0, 0, p^{\star}) \geqslant g(\lambda, \nu)
 $$
+{{< /math >}}
 
 即弱对偶性成立。强对偶性成立，当且仅当存在某些对偶可行变量 $(\lambda, \nu)$，使得上式中的不等号取等号。从几何上看，对于集合 $\mathcal{A}$，存在一个边界点 $(0, 0, p^{\star})$ 处的非竖直的支撑超平面。
 
@@ -104,14 +118,18 @@ $$
 
 多准则凸优化问题的每个 Pareto 最优解都是给定某个非负权向量 $\tilde{\lambda}$ 时函数
 
+{{< math >}}
 $$
 \tilde{\lambda}^{T} F(x)=f_{0}(x)+\sum_{i=1}^{m} \lambda_{i} f_{i}(x)
 $$
+{{< /math >}}
 
 的最小点，我们考虑集合
 
+{{< math >}}
 $$
 \mathcal{A}=\left\\{ t \in \mathbf{R}^{m+1} \mid \exists x \in \mathcal{D}, f_{i}(x) \leqslant t_{i}, i=0, \cdots, m \right\\}
 $$
+{{< /math >}}
 
 这和研究 Lagrange 对偶问题时的定义一样，此时所需权向量也是集合在任意一个 Pareto 最优点处的支撑超平面。在多准则优化问题中，权向量的含义是目标函数的相对权重。当我们固定权向量的最后一个分量（和函数 $f_0$ 对应）为 $1$ 时，其他权向量分量的含义是相对 $f_0$ 的成本，即相对于目标函数的成本。

@@ -59,9 +59,11 @@ $$
 
 根据凸优化的定义，它不是一个凸优化问题。因为等式约束 $h_1$ 不是仿射函数，并且不等式约束 $f_1$ 也不是凸函数。不过，该问题的可行域却是凸集
 
+{{< math >}}
 $$
 \\{ x \mid x_1 \leqslant 0, x_1 + x_2 = 0 \\}
 $$
+{{< /math >}}
 
 从客观上讲，我们最小化了凸集上的凸函数。那么为什么根据凸优化的定义，它不是一个凸优化问题呢？
 
@@ -85,9 +87,11 @@ $$
 
 设凸优化问题的目标函数 $f_0$ 是可微的，那么 $\forall x, y \in \operatorname{dom} f_0$
 
+{{< math >}}
 $$
 f_0(y) \geqslant f_0(x) + \nabla f_0(x)^T (y-x)
 $$
+{{< /math >}}
 
 设 $X$ 表示可行域，即
 
@@ -100,9 +104,11 @@ $$
 
 那么 $x$ 是最优的当且仅当
 
+{{< math >}}
 $$
 \forall y \in X, \quad \nabla f_0(x)^T (y-x) \geqslant 0
 $$
+{{< /math >}}
 
 这意味着 $-\nabla f_0(x)$ 定义了 $x$ 处可行域的支撑超平面。
 
@@ -114,23 +120,29 @@ $$
 
 对于无约束凸优化问题，$x$ 是最优解的充要条件是
 
+{{< math >}}
 $$
 \nabla f_0(x) = 0
 $$
+{{< /math >}}
 
 这就是我们非常熟悉的利用导数等于零来求极值的方法。
 
 无约束二次优化是一个很好的例子，考虑 $\mathbf{R}^n$ 上的目标函数
 
+{{< math >}}
 $$
 f_0(x) = \frac{1}{2} x^TPx + q^T + r
 $$
+{{< /math >}}
 
 其中 $P \in \mathbf{S}^n_+$。$x$ 是 $f_0$ 的极小值的充要条件是
 
+{{< math >}}
 $$
 \nabla f_0(x) = Px + q = 0
 $$
+{{< /math >}}
 
 上面的线性方程组的解决定了无约束二次优化的最优解。根据非齐次线性方程组 $Px = -q$ 的解的三种情况，可以得到如下结论：
 
@@ -149,33 +161,43 @@ $$
 
 这样，可行域也是仿射的。于是可行解 $x$ 的最优性条件为：对任意满足 $Ay = b$ 的 $y$，
 
+{{< math >}}
 $$
 \nabla f_0(x)^T(y-x) \geqslant 0
 $$
+{{< /math >}}
 
 都成立。由于 $x$ 是可行的，每个可行的 $y$ 都可以表示成直线参数方程的形式 $y=x+v$，其中 $v \in \mathcal{N}(A)$。因此，上式可以转化为
 
+{{< math >}}
 $$
 \forall v \in \mathcal{N}(A), \quad \nabla f_0(x)^Tv \geqslant 0
 $$
+{{< /math >}}
 
 如果一个线性函数在其子空间上非负，则它在子空间上必恒等于零。因此，$\forall v \in \mathcal{N}(A)$，有 $\nabla f_0(x)^Tv = 0$，即
 
+{{< math >}}
 $$
 \nabla f_0(x) \bot \mathcal{N}(A)
 $$
+{{< /math >}}
 
 利用导出正交分解的性质
 
+{{< math >}}
 $$
 \mathcal{N}(A) = \mathcal{R}(A^T)^{\bot}
 $$
+{{< /math >}}
 
 可以将只含等式约束的凸优化问题表示为 $\nabla f_0(x) \in \mathcal{R}(A^T)$，即存在 $v \in \mathbf{R}^p$，使得
 
+{{< math >}}
 $$
 \nabla f_0(x) + A^Tv = 0
 $$
+{{< /math >}}
 
 同时考虑 $Ax = b$ 要求（即要求 $x$ 可行），这是经典的 Lagrange 乘子最优性条件。
 
@@ -258,9 +280,11 @@ $$
 
 可以通过一族凸不等式来表示拟凸函数的下水平集，这是解决拟凸优化问题的一般方法。令 $\phi_t: \mathbf{R}^n \rightarrow \mathbf{R}$，$t \in \mathbf{R}$ 为满足
 
+{{< math >}}
 $$
 f_0(x) \leqslant t \Longleftrightarrow \phi_t(x) \leqslant 0
 $$
+{{< /math >}}
 
 的一族非增凸函数。用 $p^{\star}$ 表示拟凸优化问题的最优值。如果可行性问题
 

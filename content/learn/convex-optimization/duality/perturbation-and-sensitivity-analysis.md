@@ -29,9 +29,11 @@ $$
 
 假设强对偶性成立且对偶问题最优值可以达到。（当原问题是凸问题且 Slater 条件满足时这种情形将会发生。）设 $(\lambda^{\star}, \nu^{\star})$ 是未被扰动的问题的对偶问题的最优解，则对所有的 $u$ 和 $v$，有
 
+{{< math >}}
 $$
 p^{\star}(u, v) \geqslant p^{\star}(0,0)-\lambda^{\star T} u-\nu^{\star T} v
 $$
+{{< /math >}}
 
 ### 灵敏度解释
 
