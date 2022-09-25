@@ -121,7 +121,7 @@ for ax, h in zip(axs.flat, hatches):
 ```python
 fig, axs = plt.subplots(2, 5, constrained_layout=True, figsize=(6.4, 3.2))
 
-hatches = ['/o', '\\|', '|*', '-\\', '+o', 'x*', 'o-', 'O|', 'O.', '*-']
+hatches = ['/o', '\|', '|*', '-\\', '+o', 'x*', 'o-', 'O|', 'O.', '*-']
 
 for ax, h in zip(axs.flat, hatches):
     hatches_plot(ax, h)

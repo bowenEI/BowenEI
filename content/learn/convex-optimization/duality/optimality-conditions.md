@@ -51,6 +51,7 @@ $$
 
 设原问题和对偶问题的最优值都可以达到且相等（即强对偶性成立）。令 $x^{\star}$ 是原问题的最优解，$(\lambda^{\star}, \nu^{\star})$，这表明
 
+{{< math >}}
 $$
 \begin{aligned}
 f_0\left(x^{\star}\right) &=g\left(\lambda^{\star}, \nu^{\star}\right) \\\\
@@ -59,11 +60,13 @@ f_0\left(x^{\star}\right) &=g\left(\lambda^{\star}, \nu^{\star}\right) \\\\
 & \leqslant f_0\left(x^{\star}\right)
 \end{aligned}
 $$
+{{< /math >}}
 
 第一个等式说明最优对偶间隙为零，第二个等式是对偶函数的定义。第三个不等式是根据 Lagrange 函数关于 $x$ 求下确界小于等于其在 $x = x^{\star}$ 处得到。最后一个不等式成立是因为
 
+{{< math >}}
 $$
-\left\\{
+\left\{
     \begin{matrix}
         \lambda_i^{\star} \geqslant 0, & i=1,\cdots,m \\\\
         f_i(x^{\star}) \leqslant 0, & i=1,\cdots,m \\\\
@@ -71,6 +74,7 @@ $$
     \end{matrix}
 \right.
 $$
+{{< /math >}}
 
 因此，在上面的式子链中，两个不等式取等号。
 
@@ -122,6 +126,7 @@ $$
 
 因此，我们可以得到
 
+{{< math >}}
 $$
 \begin{aligned}
     f_{i}\left(x^{\star}\right) &\leqslant 0, & i &=1, \cdots, m \\\\
@@ -131,6 +136,7 @@ $$
     \nabla f_{0}\left(x^{\star}\right)+\sum_{i=1}^{m} \lambda_{i}^{\star} \nabla f_{i}\left(x^{\star}\right)+\sum_{i=1}^{p} \nu_{i}^{\star} \nabla h_{i}    \left(x^{\star}\right) &=0 & &
 \end{aligned}
 $$
+{{< /math >}}
 
 我们称上式为 **Karush-Kuhn-Tucker (KKT)** 条件。
 
@@ -138,6 +144,7 @@ $$
 
 ### 凸问题的 KKT 条件
 
+{{< math >}}
 $$
 \begin{aligned}
     f_i(\tilde{x}) & \leqslant 0, & i &=1, \cdots, m \\\\
@@ -147,9 +154,11 @@ $$
     \nabla f_0(\tilde{x})+\sum_{i=1}^{m} \tilde{\lambda}\_i \nabla f_i(\tilde{x})+\sum_{i=1}^{p} \tilde{\nu}\_i \nabla h_i(\tilde{x}) &=0, & &
 \end{aligned}
 $$
+{{< /math >}}
 
 从凸问题的 KKT 条件中，我们可以得出结论
 
+{{< math >}}
 $$
 \begin{aligned}
     g(\tilde{\lambda}, \tilde{\nu}) &=L(\tilde{x}, \tilde{\lambda}, \tilde{\nu}) \\\\
@@ -157,6 +166,7 @@ $$
     &=f_{0}(\tilde{x})
 \end{aligned}
 $$
+{{< /math >}}
 
 推导过程的最后一步成立是因为 $h_i(\tilde{x}) = 0$ 以及 $\tilde{\lambda}_i f_i(\tilde{x}) = 0$。这说明原问题的解 $\tilde{x}$ 和对偶问题的解 $(\tilde{\lambda}, \tilde{\nu})$ 之间的对偶间隙为零，因此分别是原、对偶问题的最优解。总之，对目标函数和约束函数可微的任意凸优化问题，任意满足 KKT 条件的点分别是原、对偶问题的最优解，对偶间隙为零。
 

@@ -45,7 +45,7 @@ g(x) = f(Ax + b)
 $$
 {{< /math >}}
 
-其中 $\operatorname{dom} g = \\{ x \mid Ax + b \in \operatorname{dom} f \\}$。若函数 $f$ 是凸函数，则函数 $g$ 也是凸函数。
+其中 $\operatorname{dom} g = \{ x \mid Ax + b \in \operatorname{dom} f \}$。若函数 $f$ 是凸函数，则函数 $g$ 也是凸函数。
 
 ## 逐点最大和逐点上确界
 
@@ -53,7 +53,7 @@ $$
 
 {{< math >}}
 $$
-f(x) = \max \\{ f_1(x), f_2(x) \\}
+f(x) = \max \{ f_1(x), f_2(x) \}
 $$
 {{< /math >}}
 
@@ -61,7 +61,7 @@ $$
 
 {{< math >}}
 $$
-g(x) = \sup \\{ f_1(x), f_2(x) \\}
+g(x) = \sup \{ f_1(x), f_2(x) \}
 $$
 {{< /math >}}
 
@@ -123,7 +123,7 @@ $$
 - 如果 $g$ 是凹函数且恒正，则 $\log g(x)$ 是凹函数。
 - 如果 $g$ 是凹函数且恒正，则 $1/g(x)$ 是凸函数。
 - 如果 $g$ 是凸函数且非负，$p \geqslant 1$，则 $(g(x))^p$ 是凸函数。
-- 如果 $g$ 是凸函数，则 $-\log (-g(x))$ 在 $\\{ x \mid g(x) < 0 \\}$ 上是凸函数。
+- 如果 $g$ 是凸函数，则 $-\log (-g(x))$ 在 $\{ x \mid g(x) < 0 \}$ 上是凸函数。
 
 ### 矢量复合
 
@@ -152,7 +152,7 @@ $$
 是凸函数只需要满足 $g(x)$ 可以取得有限值即可。函数 $g$ 的定义域是 $\operatorname{dom} f$ 在 $x$ 方向上的投影，即
 {{< math >}}
 $$
-\operatorname{dom} g = \\{ x \mid \exists y \in C, \operatorname{s.t.} (x, y) \in \operatorname{dom} f \\}
+\operatorname{dom} g = \{ x \mid \exists y \in C, \operatorname{s.t.} (x, y) \in \operatorname{dom} f \}
 $$
 {{< /math >}}
 

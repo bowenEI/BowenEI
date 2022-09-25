@@ -22,6 +22,7 @@ from matplotlib import cm
 
 下面我们绘制圆柱螺旋线两个周期的图像，其参数方程如下：
 
+{{< math >}}
 $$
 \begin{cases}
 x = \cos t \\\\
@@ -29,6 +30,7 @@ y = \sin t \\\\
 z = \frac{1}{2 \pi} t
 \end{cases}
 $$
+{{< /math >}}
 
 首先，我们先准备好数据。
 

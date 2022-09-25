@@ -15,18 +15,20 @@ weight: 430
 
 可以通过集合
 
+{{< math >}}
 $$
 \begin{aligned}
-    \mathcal{G}=\\{(f_1(x), &\cdots, f_m(x), \\\\
-    h_1(x), &\cdots, h_p(x), f_0(x)) \in \mathbf{R}^m \times \mathbf{R}^p \times \mathbf{R} \mid x \in \mathcal{D}\\}
+    \mathcal{G}=\{(f_1(x), &\cdots, f_m(x), \\\\
+    h_1(x), &\cdots, h_p(x), f_0(x)) \in \mathbf{R}^m \times \mathbf{R}^p \times \mathbf{R} \mid x \in \mathcal{D}\}
 \end{aligned}
 $$
+{{< /math >}}
 
 给出对偶函数的简单几何解释。事实上，此集合是约束函数和目标函数所取得的函数值。利用集合 $\mathcal{G}$，可以很容易地表达优化问题的最优值 $p^{\star}$。
 
 {{< math >}}
 $$
-p^{\star} = \inf \\{ t \mid (u, v, t) \in \mathcal{G}, u \preceq 0, v = 0 \\}
+p^{\star} = \inf \{ t \mid (u, v, t) \in \mathcal{G}, u \preceq 0, v = 0 \}
 $$
 {{< /math >}}
 
@@ -34,7 +36,7 @@ $$
 
 {{< math >}}
 $$
-g(\lambda, \nu) = \inf \\{ (\lambda, \nu, 1)^T(u, v, t) \mid (u, v, t) \in \mathcal{G} \\}
+g(\lambda, \nu) = \inf \{ (\lambda, \nu, 1)^T(u, v, t) \mid (u, v, t) \in \mathcal{G} \}
 $$
 {{< /math >}}
 
@@ -50,7 +52,7 @@ $$
 
 {{< figure src="learn/convex-optimization/duality/5-3-1.png" >}}
 
-针对只有一个（不等式）约束的简单问题，对偶函数和下界 $g(\lambda) \leqslant p^{\star}$ 的几何解释如图所示。给定 $\lambda$，在集合 $\mathcal{G} = \\{ (f_1(x), f_0(x)) \mid x \in \mathcal{D} \\}$ 上极小化 $(\lambda, 1)^T(u, t)$，得到斜率为 $-\lambda$ 的支撑超平面。支撑超平面与坐标轴 $u = 0$ 的交点即为 $g(\lambda)$。
+针对只有一个（不等式）约束的简单问题，对偶函数和下界 $g(\lambda) \leqslant p^{\star}$ 的几何解释如图所示。给定 $\lambda$，在集合 $\mathcal{G} = \{ (f_1(x), f_0(x)) \mid x \in \mathcal{D} \}$ 上极小化 $(\lambda, 1)^T(u, t)$，得到斜率为 $-\lambda$ 的支撑超平面。支撑超平面与坐标轴 $u = 0$ 的交点即为 $g(\lambda)$。
 
 {{< figure src="learn/convex-optimization/duality/5-3-2.png" >}}
 
@@ -60,13 +62,15 @@ $$
 
 通过下面的理解，我们就可以解释为什么对（大部分）凸问题，强对偶性总是成立。定义集合 $\mathcal{A} \subseteq \mathbf{R}^m \times \mathbf{R}^p \times \mathbf{R}$ 为
 
+{{< math >}}
 $$
 \begin{aligned}
-    \mathcal{A} &= G + \\{ \mathbf{R}^M_+ \times \\{ 0 \\} \times \mathbf{R}_+ \\} \\\\
-    &= \\{ (u, v, t) \mid \exists x \in \mathcal{D}, f_i(x) \leqslant u_i, i=1,\cdots,m, \\\\
-    & \qquad h_i(x) = v_i, i=1,\cdots,p, f_0(x) \leqslant t \\}
+    \mathcal{A} &= G + \{ \mathbf{R}^M_+ \times \{ 0 \} \times \mathbf{R}_+ \} \\\\
+    &= \{ (u, v, t) \mid \exists x \in \mathcal{D}, f_i(x) \leqslant u_i, i=1,\cdots,m, \\\\
+    & \qquad h_i(x) = v_i, i=1,\cdots,p, f_0(x) \leqslant t \}
 \end{aligned}
 $$
+{{< /math >}}
 
 我们可以认为 $\mathcal{A}$ 是 $\mathcal{G}$ 的一种上镜图形式，因为 $\mathcal{A}$ 包含了 $\mathcal{G}$ 中的所有点以及一些“较坏”的点，即目标函数值或者不等式约束函数值较大的点。
 
@@ -74,7 +78,7 @@ $$
 
 {{< math >}}
 $$
-p^{\star}=\inf \\{t \mid (0,0,t) \in \mathcal{A}\\}
+p^{\star}=\inf \{t \mid (0,0,t) \in \mathcal{A}\}
 $$
 {{< /math >}}
 
@@ -82,7 +86,7 @@ $$
 
 {{< math >}}
 $$
-g(\lambda, \nu)=\inf \\{(\lambda, \nu, 1)^{T}(u, v, t) \mid(u, v, t) \in \mathcal{A}\\}
+g(\lambda, \nu)=\inf \{(\lambda, \nu, 1)^{T}(u, v, t) \mid(u, v, t) \in \mathcal{A}\}
 $$
 {{< /math >}}
 
@@ -128,7 +132,7 @@ $$
 
 {{< math >}}
 $$
-\mathcal{A}=\left\\{ t \in \mathbf{R}^{m+1} \mid \exists x \in \mathcal{D}, f_{i}(x) \leqslant t_{i}, i=0, \cdots, m \right\\}
+\mathcal{A}=\left\{ t \in \mathbf{R}^{m+1} \mid \exists x \in \mathcal{D}, f_{i}(x) \leqslant t_{i}, i=0, \cdots, m \right\}
 $$
 {{< /math >}}
 

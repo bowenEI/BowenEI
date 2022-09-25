@@ -41,6 +41,7 @@ $$
 
 几何规划（Geometric Program, GP）是定义在单项式和正项式上的优化问题，如下
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & f_0(x) \\\\
@@ -48,6 +49,7 @@ $$
     \quad & h_i(x) = 1, \quad i = 1,\cdots,p
 \end{aligned}
 $$
+{{< /math >}}
 
 其中 $f_0, \cdots, f_m$ 都是正项式，$h_1, \cdots, h_p$ 都是单项式。几何规划问题的定义域是 $\mathcal{D} = \mathbf{R}^n_{++}$，约束 $x \succ 0$ 是隐式的。
 
@@ -76,6 +78,7 @@ $$
 
 下面是一个例子：
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{maximize} \quad & \frac{x}{y} \\\\
@@ -84,9 +87,11 @@ $$
     \quad & \frac{x}{y} = z^2
 \end{aligned}
 $$
+{{< /math >}}
 
 使用上述推广，原问题可以化为标准的几何规划形式
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & x^{-1} y \\\\
@@ -96,6 +101,7 @@ $$
     \quad & x y^{-1} z^{-2} = 1
 \end{aligned}
 $$
+{{< /math >}}
 
 ## 凸形式的几何规划
 
@@ -103,6 +109,7 @@ $$
 
 我们定义新的变量 $y_i = \log x_i$，则 $x_i = e^{y_i}$。于是，目标函数可化为
 
+{{< math >}}
 $$
 \begin{aligned}
     f(x) &= \sum_{k=1}^K c_k x_1^{a_{1k}} x_2^{a_{2k}} \cdots x_n^{a_{nk}} \\\\
@@ -110,9 +117,11 @@ $$
     &= \sum_{k=1}^K e^{a_k^T y + b_k}
 \end{aligned}
 $$
+{{< /math >}}
 
 其中，$a_k = (a_{1k}, \cdots, a_{nk})$，$b_k = \log c_k$。于是，原问题可化为
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & \sum_{k=1}^{K_0} e^{a_{0k}^T y+b_{0k}} \\\\
@@ -120,9 +129,11 @@ $$
     \quad & e^{g_i^T y+h_i}=1, \quad i=1, \cdots, p
 \end{aligned}
 $$
+{{< /math >}}
 
 现在我们通过取对数的方法来变换目标函数和约束函数，得到
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & \tilde{f} _0(y) = \log (\sum _{k=1}^{K_0} e^{a _{0k}^T y+b _{0k}}) \\\\
@@ -130,6 +141,7 @@ $$
     \quad & \tilde{h}_i(y) = g_i^T y+h_i=1, \quad i=1, \cdots, p
 \end{aligned}
 $$
+{{< /math >}}
 
 其中 $\tilde{f}_i$ 是凸的，$\tilde{h}_i$ 是仿射的，因此上面的问题是凸优化问题，并且称之为凸形式的几何规划。
 

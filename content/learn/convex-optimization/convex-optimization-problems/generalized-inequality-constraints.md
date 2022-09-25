@@ -13,6 +13,7 @@ weight: 360
 
 我们知道，引入广义不等式后，可以对标准形式的凸优化问题做如下推广：
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & f_0(x) \\\\
@@ -20,6 +21,7 @@ $$
     \quad & Ax = b
 \end{aligned}
 $$
+{{< /math >}}
 
 一般凸优化问题的许多结论适用于具有广义不等式的问题，例如：
 
@@ -31,6 +33,7 @@ $$
 
 具有广义不等式的最简单的凸优化问题是锥形式问题（或称为锥规划），它有线性目标函数和一个不等式约束函数，且该函数是仿射的（因此是 $K$- 凸的）：
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & c^Tx \\\\
@@ -38,11 +41,13 @@ $$
     \quad & Ax = b
 \end{aligned}
 $$
+{{< /math >}}
 
 当 $K$ 是非负象限时，锥形式问题退化为线性规划。我们可以将锥形式问题视为线性规划的推广，其中的分量不等式被替换为广义不等式。
 
 下面是锥形式问题的标准形式
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & c^Tx \\\\
@@ -50,20 +55,24 @@ $$
     \quad & Ax = b
 \end{aligned}
 $$
+{{< /math >}}
 
 而下面则是不等式形式的锥形式问题
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & c^Tx \\\\
     \mathrm{subject\ to} \quad & Fx + g \preceq_K 0
 \end{aligned}
 $$
+{{< /math >}}
 
 ## 半定规划
 
 当 $K$ 是 $k$ 阶半正定锥时，即 $K \in \mathbf{S}^k_+$，相应的的锥形式问题被称为半定规划（Semidefinite Program, SDP），并且具有如下形式
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & c^{T} x \\\\
@@ -71,6 +80,7 @@ $$
     \quad & A x=b
 \end{aligned}
 $$
+{{< /math >}}
 
 其中 $G, F_1, \cdots, F_n \in \mathbf{S}^k$，并且 $A \in \mathbf{R}^{p \times n}$。这里的不等式是一个矩阵线性不等式。
 
@@ -80,6 +90,7 @@ $$
 
 标准形式的 SDP 具有对变量 $X \in \mathbf{S}^n$ 的线性等式约束和（矩阵）非负约束：
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & \operatorname{tr}(C X) \\\\
@@ -87,22 +98,26 @@ $$
     \quad & X \succeq 0,
 \end{aligned}
 $$
+{{< /math >}}
 
 其中 $C, A_1, \cdots, A_P \in \mathbf{S}^n$。
 
 如图不等式形式的 LP，不等式形式的 SDP 不含有等式约束但具有一个 LMI：
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & c^Tx \\\\
     \mathrm{subject\ to} \quad & x_1 A_1 + \cdots + x_n A_n \preceq B
 \end{aligned}
 $$
+{{< /math >}}
 
 ### 多 LMI 与线性不等式
 
 对于具有线性目标，等式、不等式约束及多个 LMI 约束的问题
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & c^Tx \\\\
@@ -111,9 +126,11 @@ $$
     \quad & Ax = b
 \end{aligned}
 $$
+{{< /math >}}
 
 仍然经常称其为 SDP。从单个 LMI 和线性不等式可以构造具有达到对角块的 LMI，从而可以很容易地将该问题转化为一个 SDP
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & c^Tx \\\\
@@ -121,6 +138,7 @@ $$
     \quad & Ax = b
 \end{aligned}
 $$
+{{< /math >}}
 
 ## 举例
 
@@ -128,6 +146,7 @@ $$
 
 SOCP 可以表示为锥形式问题
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & c^Tx \\\\
@@ -135,12 +154,13 @@ $$
     \quad & Fx = g
 \end{aligned}
 $$
+{{< /math >}}
 
 其中
 
 {{< math >}}
 $$
-K_{i}=\left\\{(y, t) \in \mathbf{R}^{n_i+1} \mid \\|y\\|_2 \leqslant t\right\\}
+K_{i}=\left\{(y, t) \in \mathbf{R}^{n_i+1} \mid \|y\|_2 \leqslant t\right\}
 $$
 {{< /math >}}
 

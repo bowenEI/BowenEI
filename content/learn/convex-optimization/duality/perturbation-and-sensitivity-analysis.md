@@ -15,6 +15,7 @@ weight: 460
 
 考虑下面的问题
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & f_0(x) \\\\
@@ -22,6 +23,7 @@ $$
     \quad & h_i(x) = v_i, \quad i=1,\cdots,p
 \end{aligned}
 $$
+{{< /math >}}
 
 当 $u=0, v=0$ 时，该问题与原始的优化问题一致。而当 $u_i > 0$ 时，意味着第 $i$ 个不等式约束放松了；当 $u_i < 0$ 时，意味着第 $i$ 个不等式约束收紧了。这就是**扰动问题**，它通过 $u_i$ 放松或收紧每个不等式约束，并且通过 $v_i$ 改变等式约束的右端得到。
 
@@ -54,12 +56,14 @@ $$
 
 假设 $p^{\star}(u, v)$ 在 $u = 0$ 和 $v = 0$ 处可微，并且强对偶性成立，那么最优变量 $\lambda^{\star}, \nu^{\star}$ 可以和 $p^{\star}$ 在 $u = 0$ 和 $v = 0$ 处的梯度联系起来：
 
+{{< math >}}
 $$
 \begin{aligned}
     \lambda_i^{\star} &= -\frac{\partial p^{\star}(0, 0)}{\partial u_i} \\\\
     \nu_i^{\star} &= -\frac{\partial p^{\star}(0, 0)}{\partial v_i}
 \end{aligned}
 $$
+{{< /math >}}
 
 可以从之前的图中看出此性质，因为 $-\lambda$ 是 $p^{\star}$ 在 $u = 0$ 处的斜率。
 

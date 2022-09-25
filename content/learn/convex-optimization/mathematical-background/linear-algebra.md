@@ -18,19 +18,19 @@ weight: 60
 {{< math >}}
 $$
 \begin{align}
-\mathcal{R} (A) = \\{Ax \mid x \in \mathbf{R}^{n} \\}
+\mathcal{R} (A) = \{Ax \mid x \in \mathbf{R}^{n} \}
 \end{align}
 $$
 {{< /math >}}
 
-值域 $\mathcal{R} (A)$ 是 $\mathbf{R}^{m}$ 的子空间，它的维数是 $A$ 的**秩**，记作 $\operatorname{rank} A$。$A$ 的秩一定不会大于 $m$ 和 $n$ 的较小值。当 $\operatorname{rank} A = \min \\{m, n\\}$ 时，称 $A$ 为**满秩**矩阵。
+值域 $\mathcal{R} (A)$ 是 $\mathbf{R}^{m}$ 的子空间，它的维数是 $A$ 的**秩**，记作 $\operatorname{rank} A$。$A$ 的秩一定不会大于 $m$ 和 $n$ 的较小值。当 $\operatorname{rank} A = \min \{m, n\}$ 时，称 $A$ 为**满秩**矩阵。
 
 $A$ 的**零空间**（或**核**）是指被 $A$ 映射成零的所有向量 $x$ 的集合，即
 
 {{< math >}}
 $$
 \begin{align}
-\mathcal{N}(A) = \\{x \mid Ax=0\\}
+\mathcal{N}(A) = \{x \mid Ax=0\}
 \end{align}
 $$
 {{< /math >}}
@@ -40,7 +40,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\mathcal{V}^{\bot} = \\{x \mid \forall z \in \mathcal{V}, z^Tx=0\\}
+\mathcal{V}^{\bot} = \{x \mid \forall z \in \mathcal{V}, z^Tx=0\}
 \end{align}
 $$
 {{< /math >}}

@@ -15,15 +15,18 @@ weight: 480
 
 对约束系统的定义如下
 
+{{< math >}}
 $$
 \begin{aligned}
     f_i(x) & \leqslant 0, \quad i=1,\cdots,m \\\\
     h_i(x) & = 0, \quad i=1,\cdots,p
 \end{aligned}
 $$
+{{< /math >}}
 
 考虑不等式和等式约束的系统的可行性，即求解如下优化问题
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & 0 \\\\
@@ -31,6 +34,7 @@ $$
     \quad & h_i(x) = 0, \quad i=1,\cdots,p
 \end{aligned}
 $$
+{{< /math >}}
 
 此问题的最优值显然只有两种情况：
 
@@ -52,12 +56,14 @@ $$
 
 也就是说，原问题和对偶问题关于约束是否可行的情况正好相反。事实上，可以将不等式
 
+{{< math >}}
 $$
 \begin{aligned}
     \lambda & \succeq 0 \\\\
     g(\lambda, \nu) & > 0
 \end{aligned}
 $$
+{{< /math >}}
 
 看作是系统不可行的证明或认证。
 
@@ -67,6 +73,7 @@ $$
 
 同样可以分析具有严格不等式系统的可行性，我们得到择一不等式系统如下
 
+{{< math >}}
 $$
 \begin{aligned}
     \lambda & \succeq 0 \\\\
@@ -74,6 +81,7 @@ $$
     g(\lambda, \nu) & \geqslant 0
 \end{aligned}
 $$
+{{< /math >}}
 
 ## 强择一
 
@@ -81,12 +89,14 @@ $$
 
 不等式系统可以描述为
 
+{{< math >}}
 $$
 \begin{aligned}
     f_i(x) & \leqslant 0, \quad i=1,\cdots,m \\\\
     Ax &= b
 \end{aligned}
 $$
+{{< /math >}}
 
 ### 严格不等式
 
@@ -94,6 +104,7 @@ $$
 
 我们可以通过考虑相关的优化问题得到上述结论，即
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & s \\\\
@@ -101,26 +112,31 @@ $$
     \quad & Ax = b
 \end{aligned}
 $$
+{{< /math >}}
 
 优化变量为 $x, s$，定义域为 $\mathcal{D} \times \mathbf{R}$。当且仅当严格不等式系统有解时，上述优化问题的最优值 $p^{\star} < 0$。
 
 其对偶函数为
 
+{{< math >}}
 $$
-\inf_{x \in \mathcal{D}, s}\left(s+\sum_{i=1}^{m} \lambda_{i}\left(f_{i}(x)-s\right)+\nu^{T}(A x-b)\right)=\left\\{\begin{array}{ll}
+\inf_{x \in \mathcal{D}, s}\left(s+\sum_{i=1}^{m} \lambda_{i}\left(f_{i}(x)-s\right)+\nu^{T}(A x-b)\right)=\left\{\begin{array}{ll}
 g(\lambda, \nu) & \mathbf{1}^{T} \lambda=1 \\\\
 -\infty & \text {otherwise}
 \end{array}\right.
 $$
+{{< /math >}}
 
 因此其对偶问题可以描述为
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{maximize} \quad & g(\lambda, \nu) \\\\
     \mathrm{subject\ to} \quad & \lambda \succeq 0, \quad \mathbf{1}^T \lambda = 1
 \end{aligned}
 $$
+{{< /math >}}
 
 该问题满足 Slater 条件，即 $d^{\star} = p^{\star}$。
 
@@ -128,21 +144,25 @@ $$
 
 下面考虑非严格不等式系统
 
+{{< math >}}
 $$
 \begin{aligned}
     f_i(x) & \leqslant 0, \quad i=1,\cdots,m \\\\ 
     Ax &= b
 \end{aligned}
 $$
+{{< /math >}}
 
 以及其择一系统
 
+{{< math >}}
 $$
 \begin{aligned}
     \lambda & \succeq 0 \\\\
     g(\lambda, \nu) & > 0
 \end{aligned}
 $$
+{{< /math >}}
 
 强择一成立的条件和严格不等式系统类似。
 
@@ -152,15 +172,18 @@ $$
 
 考虑具有线性不等式 $Ax \preceq b$ 的系统。它的对偶函数为
 
+{{< math >}}
 $$
-g(\lambda)=\inf _{x} \lambda^{T}(A x-b)=\left\\{\begin{array}{ll}
+g(\lambda)=\inf _{x} \lambda^{T}(A x-b)=\left\{\begin{array}{ll}
 -b^{T} \lambda & A^{T} \lambda=0 \\\\
 -\infty & \text {otherwise}
 \end{array}\right.
 $$
+{{< /math >}}
 
 因此，其择一不等式系统为
 
+{{< math >}}
 $$
 \begin{aligned}
     \lambda & \succeq 0 \\\\
@@ -168,6 +191,7 @@ $$
     b^T \lambda & < 0
 \end{aligned}
 $$
+{{< /math >}}
 
 这两个系统是强择一的。
 
@@ -175,20 +199,24 @@ $$
 
 Farkas 引理描述了一对强择一系统，它们是由严格和非严格线性不等式组成的混合系统。不等式系统
 
+{{< math >}}
 $$
 \begin{aligned}
     Ax & \preceq 0 \\\\
     c^Tx & < 0
 \end{aligned}
 $$
+{{< /math >}}
 
 其中 $A \in \mathbf{R}^{m \times n}, c \in \mathbf{R}^n$，以及不等式系统
 
+{{< math >}}
 $$
 \begin{aligned}
     A^Ty + c &= 0 \\\\
     y & \succeq 0
 \end{aligned}
 $$
+{{< /math >}}
 
 是强择一的。

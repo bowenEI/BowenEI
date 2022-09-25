@@ -15,6 +15,7 @@ weight: 340
 
 当凸优化问题的目标函数是凸二次型并且约束函数为仿射时，该问题被称为二次规划（Quadratic Program, QP）。二次规划问题可以表示为
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & \frac{1}{2} x^TPx + q^Tx + r \\\\
@@ -22,6 +23,7 @@ $$
     \quad & Ax = b
 \end{aligned}
 $$
+{{< /math >}}
 
 其中 $P \in \mathbf{S}^n_+$，$G \in \mathbf{R}^{p \times n}$。可以用下图来表示二次规划问题。
 
@@ -31,6 +33,7 @@ $$
 
 如果不仅是目标函数，而且不等式约束也是凸二次型，即
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & \frac{1}{2} x^TPx + q^Tx + r \\\\
@@ -38,6 +41,7 @@ $$
     \quad & Ax = b
 \end{aligned}
 $$
+{{< /math >}}
 
 则称这一问题为二次约束二次规划（Quadratically Constrained Quadratic Program, QCQP）
 
@@ -49,7 +53,7 @@ $$
 
 {{< math >}}
 $$
-\\| Ax - b \\|^2_2 = x^TA^TAx - 2b^TAx + b^Tb
+\| Ax - b \|^2_2 = x^TA^TAx - 2b^TAx + b^Tb
 $$
 {{< /math >}}
 
@@ -57,19 +61,21 @@ $$
 
 ## 二阶锥规划
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & f^Tx \\\\
-    \mathrm{subject\ to} \quad & \\| A_ix + b_i \\|_2 \leqslant c_i^Tx + d_i, \quad i = 1,\cdots,m \\\\
+    \mathrm{subject\ to} \quad & \| A_ix + b_i \|_2 \leqslant c_i^Tx + d_i, \quad i = 1,\cdots,m \\\\
     \quad & Fx = g
 \end{aligned}
 $$
+{{< /math >}}
 
 称上述问题为二阶锥规划（Second-Order Cone Program, SOCP），其中 $x \in \mathbf{R}^n$ 是优化变量，$A_i \in \mathbf{R}^{n_i \times n}$，$F \in \mathbf{R}^{p \times n}$。并且我们称约束
 
 {{< math >}}
 $$
-\\| Ax + b \\|_2 \leqslant c^Tx + d
+\| Ax + b \|_2 \leqslant c^Tx + d
 $$
 {{< /math >}}
 

@@ -91,7 +91,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-(x - K) \cap S = \\{x\\}
+(x - K) \cap S = \{x\}
 \end{align}
 $$
 {{< /math >}}

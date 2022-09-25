@@ -13,6 +13,7 @@ weight: 320
 
 ## 凸优化问题的标准形式
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & f_0(x) \\\\
@@ -20,6 +21,7 @@ $$
     & a_i^Tx = b_i, \quad i = 1, \cdots, p
 \end{aligned}
 $$
+{{< /math >}}
 
 其中 $f_0, \cdots, f_m$ 是凸函数。相较于一般的优化问题而言，凸优化问题还需要满足如下条件：
 
@@ -35,6 +37,7 @@ $$
 
 若目标函数 $f_0$ 是凹函数，则称最大化问题
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{maximize} \quad & f_0(x) \\\\
@@ -42,6 +45,7 @@ $$
     & a_i^Tx = b_i, \quad i = 1, \cdots, p
 \end{aligned}
 $$
+{{< /math >}}
 
 凸优化问题。这是因为凹最大化问题可以转化为极小化 $-f_0$ 得以求解。
 
@@ -49,6 +53,7 @@ $$
 
 考虑 $\mathbf{R}^2$ 上的问题
 
+{{< math >}}
 $$
 \begin{aligned}
 \mathrm{maximize} \quad & f_{0}(x)=x_{1}^{2}+x_{2}^{2} \\\\
@@ -56,12 +61,13 @@ $$
 & h_{1}(x)=\left(x_{1}+x_{2}\right)^{2}=0
 \end{aligned}
 $$
+{{< /math >}}
 
 根据凸优化的定义，它不是一个凸优化问题。因为等式约束 $h_1$ 不是仿射函数，并且不等式约束 $f_1$ 也不是凸函数。不过，该问题的可行域却是凸集
 
 {{< math >}}
 $$
-\\{ x \mid x_1 \leqslant 0, x_1 + x_2 = 0 \\}
+\{ x \mid x_1 \leqslant 0, x_1 + x_2 = 0 \}
 $$
 {{< /math >}}
 
@@ -69,6 +75,7 @@ $$
 
 上述问题其实和下面的问题等价
 
+{{< math >}}
 $$
 \begin{aligned}
 \mathrm{maximize} \quad & f_0(x)=x_1^2+x_2^2 \\\\
@@ -76,6 +83,7 @@ $$
 & \tilde{h}_1(x)=x_1+x_2=0
 \end{aligned}
 $$
+{{< /math >}}
 
 显然该问题是一个凸优化问题。我们称原问题是一个抽象的凸优化问题，即凡是在凸集上最小化凸函数的问题都可以被称为抽象的凸优化问题。但是，我们不讨论这类问题，还是需要用凸不等式和线性等式来进行约束。
 
@@ -95,12 +103,14 @@ $$
 
 设 $X$ 表示可行域，即
 
+{{< math >}}
 $$
 \begin{aligned}
-    X = \\{ x \mid f_i(x) & \leqslant 0, i=1,\cdots,m, \\\\
-    h_i(x) &= 0, i=1,\cdots,p \\}
+    X = \{ x \mid f_i(x) & \leqslant 0, i=1,\cdots,m, \\\\
+    h_i(x) &= 0, i=1,\cdots,p \}
 \end{aligned}
 $$
+{{< /math >}}
 
 那么 $x$ 是最优的当且仅当
 
@@ -152,12 +162,14 @@ $$
 
 ### 只含等式约束的问题
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & f_0(x) \\\\
     \mathrm{subject\ to} \quad & Ax = b
 \end{aligned}
 $$
+{{< /math >}}
 
 这样，可行域也是仿射的。于是可行解 $x$ 的最优性条件为：对任意满足 $Ay = b$ 的 $y$，
 
@@ -203,15 +215,18 @@ $$
 
 ### 非负象限中的极小化
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & f_0(x) \\\\
     \mathrm{subject\ to} \quad & x \succeq 0
 \end{aligned}
 $$
+{{< /math >}}
 
 其最优性条件可以表示为
 
+{{< math >}}
 $$
 \begin{cases}
     \quad x \succeq 0 \\\\
@@ -219,6 +234,7 @@ $$
     \quad x_i(\nabla f_0(x))_i = 0, \quad i=1,\cdots,n
 \end{cases}
 $$
+{{< /math >}}
 
 ## 等价的凸问题
 
@@ -228,12 +244,14 @@ $$
 
 由于凸优化问题的等式约束都是线性等式 $Ax=b$，我们可以将之转化为非齐次线性方程组 $Ax=b$ 的一个特解 $x_0$ 和域为 $A$ 的零空间的矩阵 $F$ 来消除这些等式约束，从而得到关于 $z$ 的问题
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & f_0(Fz+x_0) \\\\
     \mathrm{subject\ to} \quad & f_i(Fz+x_0) \preceq 0
 \end{aligned}
 $$
+{{< /math >}}
 
 ### 引入等式约束
 
@@ -245,6 +263,7 @@ $$
 
 ### 上镜图问题形式
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & t \\\\
@@ -253,9 +272,11 @@ $$
     \quad & a_i^Tx=b_i, \quad i=1,\cdots,p
 \end{aligned}
 $$
+{{< /math >}}
 
 ## 拟凸优化
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & f_0(x) \\\\
@@ -263,6 +284,7 @@ $$
     & A^Tx = b 
 \end{aligned}
 $$
+{{< /math >}}
 
 其中不等式约束函数 $f_1,\cdots,f_m$ 是凸的，而目标函数 $f_0$ 是拟凸的。拟凸约束函数可以等价的替换为凸约束函数，即具有相同的 $0$- 下水平集的凸函数。
 
@@ -288,6 +310,7 @@ $$
 
 的一族非增凸函数。用 $p^{\star}$ 表示拟凸优化问题的最优值。如果可行性问题
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{find} \quad & x \\\\
@@ -296,6 +319,7 @@ $$
     \quad & Ax=b
 \end{aligned}
 $$
+{{< /math >}}
 
 是可行的，我们有 $p^{\star} \leqslant t$。反之，如果不可行，那么 $p^{\star} \geqslant t$。
 

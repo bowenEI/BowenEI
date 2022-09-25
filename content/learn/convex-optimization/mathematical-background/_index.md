@@ -24,7 +24,7 @@ weight: 10
 | $\mathbf{R}^{m \times n}$           | 实 $m \times n$ 矩阵集                             |
 | $\mathbf{R}_{+}$                    | 非负实数集                                         |
 | $\mathbf{R}_{++}$                   | 正实数集                                           |
-| $\\| \cdot \\|$                     | 范数                                               |
+| $\| \cdot \|$                     | 范数                                               |
 | $\sup C$                            | 集合 $C$ 的上确界                                  |
 | $\operatorname{int} C$              | 集合 $C$ 的内部                                    |
 | $\operatorname{cl} C$               | 集合 $C$ 的闭包                                    |

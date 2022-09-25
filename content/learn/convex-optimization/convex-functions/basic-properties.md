@@ -27,14 +27,16 @@ $$
 
 ## 扩展值延伸
 
-通常可以定义凸函数的定义域外的值为 $\infty$，从而将这个凸函数延伸至全空间 $\mathbf{R}^n$。我们定义凸函数 $f$ 的扩展值延伸：$\tilde{f}: \mathbf{R}^n \rightarrow \mathbf{R} \cup \\{\infty\\}$ 如下：
+通常可以定义凸函数的定义域外的值为 $\infty$，从而将这个凸函数延伸至全空间 $\mathbf{R}^n$。我们定义凸函数 $f$ 的扩展值延伸：$\tilde{f}: \mathbf{R}^n \rightarrow \mathbf{R} \cup \{\infty\}$ 如下：
 
+{{< math >}}
 $$
-\tilde{f}(x)=\left\\{\begin{array}{ll}
+\tilde{f}(x)=\left\{\begin{array}{ll}
 f(x) & x \in \operatorname{dom} f \\\\
 \infty & x \notin \operatorname{dom} f
 \end{array}\right.
 $$
+{{< /math >}}
 
 ## 一阶条件
 
@@ -66,7 +68,7 @@ $$
 
 {{< math >}}
 $$
-C_\alpha = \\{ x \in \operatorname{dom} f \mid f(x) \leqslant \alpha \\}
+C_\alpha = \{ x \in \operatorname{dom} f \mid f(x) \leqslant \alpha \}
 $$
 {{< /math >}}
 
@@ -76,7 +78,7 @@ $$
 
 {{< math >}}
 $$
-\\{ (x, f(x)) \mid x \in \operatorname{dom} f \\}
+\{ (x, f(x)) \mid x \in \operatorname{dom} f \}
 $$
 {{< /math >}}
 
@@ -86,7 +88,7 @@ $$
 
 {{< math >}}
 $$
-\operatorname{epi} f = \\{ (x, f(x)) \mid x \in \operatorname{dom} f, f(x) \leqslant t \\}
+\operatorname{epi} f = \{ (x, f(x)) \mid x \in \operatorname{dom} f, f(x) \leqslant t \}
 $$
 {{< /math >}}
 

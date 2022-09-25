@@ -15,6 +15,7 @@ weight: 370
 
 我们将广义的向量优化问题表示为
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & f_0(x) \text{（关于} K \text{）}\\\\
@@ -22,6 +23,7 @@ $$
     \quad & h_i(x) = 0, \quad i=1,\cdots,p
 \end{aligned}
 $$
+{{< /math >}}
 
 这里 $x \in \mathbf{R}^n$ 为优化变量，$K \subseteq \mathbf{R}^q$ 为正常锥，$f_0: \mathbf{R}^n \rightarrow \mathbf{R}^q$ 为目标函数，$f_i: \mathbf{R}^n \rightarrow \mathbf{R}$ 为不等式约束函数，$h_i: \mathbf{R}^n \rightarrow \mathbf{R}$ 为等式约束函数。与标准的优化问题相比，唯一区别在于目标函数在 $\mathbf{R}^q$ 中取值，并且问题说明中含有用来比较目标值的正常锥 $K$。
 
@@ -31,12 +33,14 @@ $$
 
 下面我们考虑可行点的目标值的集合
 
+{{< math >}}
 $$
 \begin{aligned}
-    \mathcal{O} = \\{f_{0}(x) \mid \exists x \in \mathcal{D}, f_i(x) & \leqslant 0, i=1, \cdots, m, \\\\
-    h_i(x) &= 0, i=1, \cdots, p \\} \subseteq \mathbf{R}^q
+    \mathcal{O} = \{f_{0}(x) \mid \exists x \in \mathcal{D}, f_i(x) & \leqslant 0, i=1, \cdots, m, \\\\
+    h_i(x) &= 0, i=1, \cdots, p \} \subseteq \mathbf{R}^q
 \end{aligned}
 $$
+{{< /math >}}
 
 它被称为可达目标值集合。如果这个集合有最小元，即有可行解 $x$ 使得对于所有可行的 $y$ 都有 $f_0(x) \preceq_K f_0(y)$，那么我们称 $x$ 是最优解，并且称 $f_0(x)$ 为该问题的最优值。（当向量优化问题有最优解时，该值唯一。）
 
@@ -76,7 +80,7 @@ $$
 
 {{< math >}}
 $$
-(f_(0) - K) \cap \mathcal{O} = \\{ f_0(x) \\}
+(f_(0) - K) \cap \mathcal{O} = \{ f_0(x) \}
 $$
 {{< /math >}}
 
@@ -98,8 +102,9 @@ $$
 
 ## 标量化
 
-标量化是寻找向量优化问题 Pareto 最优解的标准技术。选择任意 $\lambda \succ _{K^\*} 0$，即任意在对偶广义不等式中为正的向量，考虑标量优化问题
+标量化是寻找向量优化问题 Pareto 最优解的标准技术。选择任意 $\lambda \succ _{K^*} 0$，即任意在对偶广义不等式中为正的向量，考虑标量优化问题
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & \lambda^T f_0(x) \\\\
@@ -107,8 +112,9 @@ $$
     \quad & h_i(x) = 0, \quad i=1,\cdots,p      
 \end{aligned}
 $$
+{{< /math >}}
 
-并令 $x$ 为最优解。那么，$x$ 对于向量优化问题是 Pareto 最优的。利用表量化，我们可以通过求解普通的标量优化问题，寻找任意向量优化问题的 Pareto 最优解。权向量 $\lambda$ 是一个自由参数，但必须满足 $\lambda \succ _{K^\*} 0$。通过改变 $\lambda$，我们（有可能）得到向量优化问题的不同的 Pareto 最优解。如下图所示：
+并令 $x$ 为最优解。那么，$x$ 对于向量优化问题是 Pareto 最优的。利用表量化，我们可以通过求解普通的标量优化问题，寻找任意向量优化问题的 Pareto 最优解。权向量 $\lambda$ 是一个自由参数，但必须满足 $\lambda \succ _{K^*} 0$。通过改变 $\lambda$，我们（有可能）得到向量优化问题的不同的 Pareto 最优解。如下图所示：
 
 {{< figure src="learn/convex-optimization/convex-optimization-problems/4-7-3.png" >}}
 
@@ -118,7 +124,7 @@ $$
 
 与向量优化问题类似，凸向量优化问题也可以通过求解凸标量优化问题找到凸向量优化问题的 Pareto 最优解。
 
-此外，凸向量优化问题还有一个逆命题成立，对于每一个 Pareto 最优解 $x^{\mathrm{po}}$，有非零 $\lambda \succeq _{K^\*} 0$ 使得 $x^{\mathrm{po}}$ 是标量化问题的解。（即能够找到所有的 Pareto 最优解。）
+此外，凸向量优化问题还有一个逆命题成立，对于每一个 Pareto 最优解 $x^{\mathrm{po}}$，有非零 $\lambda \succeq _{K^*} 0$ 使得 $x^{\mathrm{po}}$ 是标量化问题的解。（即能够找到所有的 Pareto 最优解。）
 
 ## 多准则优化
 
@@ -141,6 +147,7 @@ $$
 
 换言之，$x^{\star}$ 同时是下述所有 $j=1,\cdots,q$ 标量优化问题的最优解
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & F_j(x) \\\\
@@ -148,5 +155,6 @@ $$
     \quad & h_i(x) = 0, \quad i=1,\cdots,p
 \end{aligned}
 $$
+{{< /math >}}
 
 当最优解存在时，我们称目标是非竞争的，因为不需要再目标间做出折中；每个目标函数都能达到忽略其他约束时的最小值。

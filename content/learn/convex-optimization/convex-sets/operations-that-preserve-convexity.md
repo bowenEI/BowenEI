@@ -22,7 +22,7 @@ weight: 130
 {{< math >}}
 $$
 \begin{align}
-f(S) = \\{f(x) \mid x \in S\\}
+f(S) = \{f(x) \mid x \in S\}
 \end{align}
 $$
 {{< /math >}}
@@ -34,7 +34,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\\{x \mid x^{T} P x \leqslant\left(c^{T} x\right)^{2}, c^{T} x \geqslant 0\\}
+\{x \mid x^{T} P x \leqslant\left(c^{T} x\right)^{2}, c^{T} x \geqslant 0\}
 \end{align}
 $$
 {{< /math >}}
@@ -44,7 +44,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\\{(z, t) \mid z^Tz \leqslant t^2, t \geqslant 0\\}
+\{(z, t) \mid z^Tz \leqslant t^2, t \geqslant 0\}
 \end{align}
 $$
 {{< /math >}}
@@ -56,12 +56,12 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\mathcal{E}=\\{x \mid\left(x-x_{c}\right)^{T} P^{-1}\left(x-x_{c}\right) \leqslant 1\\}
+\mathcal{E}=\{x \mid\left(x-x_{c}\right)^{T} P^{-1}\left(x-x_{c}\right) \leqslant 1\}
 \end{align}
 $$
 {{< /math >}}
 
-是单位 Euclid 球 $\\{u \mid \\|u\\| _2 \leqslant 1\\}$ 在仿射函数 $f(u) = P^{1/2}u + x_c$ 下的象，其中 $P \in \mathbf{S} _{++} ^{n}$。
+是单位 Euclid 球 $\{u \mid \|u\| _2 \leqslant 1\}$ 在仿射函数 $f(u) = P^{1/2}u + x_c$ 下的象，其中 $P \in \mathbf{S} _{++} ^{n}$。
 
 ## 透视函数
 
@@ -104,7 +104,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-f(x) & = \left(A x+b\right) /\left(c^{T} x+d\right), \quad \operatorname{dom} f = \\{x \mid c^{T} x+d>0\\}
+f(x) & = \left(A x+b\right) /\left(c^{T} x+d\right), \quad \operatorname{dom} f = \{x \mid c^{T} x+d>0\}
 \end{align}
 $$
 {{< /math >}}

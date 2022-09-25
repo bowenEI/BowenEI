@@ -18,7 +18,7 @@ weight: 40
 {{< math >}}
 $$
 \begin{align}
-y \in \operatorname{dom} f, \quad\\|y-x\\| _{2} \leqslant \delta \Longrightarrow\\|f(y)-f(x)\\| _{2} \leqslant \epsilon
+y \in \operatorname{dom} f, \quad\|y-x\| _{2} \leqslant \delta \Longrightarrow\|f(y)-f(x)\| _{2} \leqslant \epsilon
 \end{align}
 $$
 {{< /math >}}
@@ -45,7 +45,7 @@ $$
 
 ## 闭函数
 
-对于函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，如果对 $\forall \alpha \in \mathbf{R}$，集合 $\\{x \in \operatorname{dom} f \mid f(x) \leqslant \alpha\\}$ 是闭集，则称函数 $f$ 是**闭函数**。
+对于函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，如果对 $\forall \alpha \in \mathbf{R}$，集合 $\{x \in \operatorname{dom} f \mid f(x) \leqslant \alpha\}$ 是闭集，则称函数 $f$ 是**闭函数**。
 
 对于连续函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，如果 $\operatorname{dom} f$ 是闭集，那么 $f$ 是闭函数；如果 $\operatorname{dom} f$ 是开集，那么 $f$ 是闭函数的充要条件是 $f$ 将沿着任何收敛于 $\operatorname{dom} f$ 的边界点的序列趋于 $\infty$。
 

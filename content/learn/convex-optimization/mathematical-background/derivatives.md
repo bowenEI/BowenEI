@@ -18,7 +18,7 @@ weight: 50
 {{< math >}}
 $$
 \begin{align}
-\lim _{z \in \operatorname{dom} f, z \neq x, z \rightarrow x} \frac{\\|f(z)-f(x)-D f(x)(z-x)\\| _{2}}{\\|z-x\\| _{2}}=0
+\lim _{z \in \operatorname{dom} f, z \neq x, z \rightarrow x} \frac{\|f(z)-f(x)-D f(x)(z-x)\| _{2}}{\|z-x\| _{2}}=0
 \end{align}
 $$
 {{< /math >}}
@@ -102,7 +102,7 @@ $$
 
 ### 方向导数
 
-设 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}^{m}$，$x, v \in \mathbf{R}^{n}$。定义函数 $\tilde{f} = f(x+tv)$。（粗略地说，$\tilde{f}$ 是将 $f$ 限制在直线 $\\{x+tv \mid t \in \mathbf{R}\\}$ 上的函数。）则
+设 $f: \mathbf{R}^{n} \rightarrow \mathbf{R}^{m}$，$x, v \in \mathbf{R}^{n}$。定义函数 $\tilde{f} = f(x+tv)$。（粗略地说，$\tilde{f}$ 是将 $f$ 限制在直线 $\{x+tv \mid t \in \mathbf{R}\}$ 上的函数。）则
 
 {{< math >}}
 $$

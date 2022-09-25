@@ -13,6 +13,7 @@ weight: 490
 
 本章讲授的 Lagrange 对偶理论可以推广至具有广义不等式约束的问题中，即
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & f_0(x) \\\\
@@ -20,6 +21,7 @@ $$
     \quad & h_i(x) = 0, \quad i=1,\cdots,p
 \end{aligned}
 $$
+{{< /math >}}
 
 其中 $K_i \subseteq \mathbf{R}^{k_i}$ 是正常锥。
 

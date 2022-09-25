@@ -13,11 +13,11 @@ weight: 240
 
 ## 定义
 
-设函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，其共轭函数 $f^{\*}: \mathbf{R}^n \rightarrow \mathbf{R}$ 为
+设函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，其共轭函数 $f^{*}: \mathbf{R}^n \rightarrow \mathbf{R}$ 为
 
 {{< math >}}
 $$
-f^{\*}(y)=\sup _{x \in \operatorname{dom} f}\left(y^{T} x-f(x)\right)
+f^{*}(y)=\sup _{x \in \operatorname{dom} f}\left(y^{T} x-f(x)\right)
 $$
 {{< /math >}}
 
@@ -33,7 +33,7 @@ $$
 
 因此，共轭函数的定义可以用自然语言描述为：直线（超平面）$y^Tx$ 与 $f(x)$ 函数值的最大差值，并且该差值的取值与 $y^T$ 的取值一一对应——任意改变直线的斜率（超平面的方向向量），都有唯一确定的一个值与之对应。
 
-显然，$f^{\*}$ 是凸函数，这是因为它是在求一系列值的逐点上确界。而且，无论 $f$ 是否为凸函数，$f^{\*}$ 都是凸函数。如果 $f$ 是凸函数，那么就没必要限制 $x \in \operatorname{dom} f$ 了。这是因为根据之前关于扩展值延伸的定义，对于 $x \notin \operatorname{dom} f$，$y^Tx - f(x) = -\infty$。
+显然，{{< math >}}$f^{*}${{< /math >}} 是凸函数，这是因为它是在求一系列值的逐点上确界。而且，无论 $f$ 是否为凸函数，{{< math >}}$f^{*}${{< /math >}} 都是凸函数。如果 $f$ 是凸函数，那么就没必要限制 $x \in \operatorname{dom} f$ 了。这是因为根据之前关于扩展值延伸的定义，对于 $x \notin \operatorname{dom} f$，$y^Tx - f(x) = -\infty$。
 
 ### 举例
 
@@ -49,7 +49,7 @@ $$
 
 {{< math >}}
 $$
-f^{\*}(y) = -b, \quad \operatorname{dom} f^{\*} = \\{a\\}
+f^{*}(y) = -b, \quad \operatorname{dom} f^{*} = \{a\}
 $$
 {{< /math >}}
 
@@ -65,7 +65,7 @@ $$
 
 {{< math >}}
 $$
-f^{\*}(y) = -\log (-y) - 1, \quad \operatorname{dom} f^{\*} = -\mathbf{R}_{++}
+f^{*}(y) = -\log (-y) - 1, \quad \operatorname{dom} f^{*} = -\mathbf{R}_{++}
 $$
 {{< /math >}}
 
@@ -77,11 +77,11 @@ f(x) = e^x
 $$
 {{< /math >}}
 
-当 $y < 0$ 时，函数 $xy - e^x$ 无界；当 $y > 0$ 时，函数 $xy - e^x$ 在 $x = \ln y$ 处取最大值；当 $y = 0$ 时，$f^{\*}(y) = \sup \\{-e^x\\} = 0$。因此，指数函数的共轭函数为
+当 $y < 0$ 时，函数 $xy - e^x$ 无界；当 $y > 0$ 时，函数 $xy - e^x$ 在 $x = \ln y$ 处取最大值；当 $y = 0$ 时，$f^{*}(y) = \sup \{-e^x\} = 0$。因此，指数函数的共轭函数为
 
 {{< math >}}
 $$
-f^{\*}(y) = y \log y - y, \quad \operatorname{dom} f^{\*} = \mathbf{R}_{+}
+f^{*}(y) = y \log y - y, \quad \operatorname{dom} f^{*} = \mathbf{R}_{+}
 $$
 {{< /math >}}
 
@@ -97,7 +97,7 @@ $$
 
 {{< math >}}
 $$
-f^{\*}(y) = e^{y-1}
+f^{*}(y) = e^{y-1}
 $$
 {{< /math >}}
 
@@ -113,7 +113,7 @@ $$
 
 {{< math >}}
 $$
-f^{\*}(y) = -2 (-y)^{1/2}, \quad \operatorname{dom} f^{\*} = \mathbf{R}_{+}
+f^{*}(y) = -2 (-y)^{1/2}, \quad \operatorname{dom} f^{*} = \mathbf{R}_{+}
 $$
 {{< /math >}}
 
@@ -129,7 +129,7 @@ $$
 
 {{< math >}}
 $$
-f^{\*}(y)=\frac{1}{2} y^{T} Q^{-1} y
+f^{*}(y)=\frac{1}{2} y^{T} Q^{-1} y
 $$
 {{< /math >}}
 
@@ -145,12 +145,14 @@ $$
 
 其共轭函数定义为
 
+{{< math >}}
 $$
-\begin{aligned}
-f^{\*}(Y) &= \sup _{X \succ 0} \\{ \operatorname{tr}(Y X)+\log \det X \\} \\\\
-&= \log \det (-Y)^{-1} - n, \quad \operatorname{dom} f^{\*} = -\mathbf{S} ^{n} _{++}
-\end{aligned}
+\begin{align}
+f^{*}(Y) &= \sup _{X \succ 0} \{ \operatorname{tr}(Y X)+\log \det X \} \\\\
+&= \log \det (-Y)^{-1} - n, \quad \operatorname{dom} f^{*} = -\mathbf{S}^{n}_{++}
+\end{align}
 $$
+{{< /math >}}
 
 #### 指数和的对数函数
 
@@ -162,25 +164,29 @@ $$
 
 其共轭函数的推到稍微有些复杂，这里直接给出结果。
 
+{{< math >}}
 $$
-f^{*}(y)=\left\\{\begin{array}{ll}
+f^{*}(y)=\left\{\begin{array}{ll}
 \sum_{i=1}^{n} y_{i} \log y_{i} & y \succeq 0 \wedge \mathbf{1}^{T} y=1 \\\\
 \infty & \text { otherwise }
 \end{array}\right.
 $$
+{{< /math >}}
 
 也就是说，指数和的对数函数的共轭函数是概率单纯形内的负熵函数。
 
 #### 范数
 
-我们知道，$\mathbf{R}^n$ 上的范数 $\\|\cdot\\|$ 的对偶范数为 $\\|\cdot\\|_{\*}$。$f(x) = \\|x\\|$ 的共轭函数为
+我们知道，$\mathbf{R}^n$ 上的范数 {{< math >}}$\|\cdot\|${{< /math >}} 的对偶范数为 {{< math >}}$\|\cdot\|_{*}${{< /math >}}。{{< math >}}$f(x) = \|x\|${{< /math >}} 的共轭函数为
 
+{{< math >}}
 $$
-f^{\*}(y) = \left \\{\begin{array}{ll}
-0 & \\|y\\|_{\*} \leqslant 1 \\\\
+f^{*}(y) = \left \{\begin{array}{ll}
+0 & \|y\|_{*} \leqslant 1 \\\\
 \infty & \text { otherwise }
 \end{array}\right.
 $$
+{{< /math >}}
 
 ## 基本性质
 
@@ -188,7 +194,7 @@ $$
 
 {{< math >}}
 $$
-f(x)+f^{\*}(y) \geqslant x^{T} y
+f(x)+f^{*}(y) \geqslant x^{T} y
 $$
 {{< /math >}}
 
@@ -208,7 +214,7 @@ $$
 
 {{< math >}}
 $$
-f^{\*\*} = f
+f^{**} = f
 $$
 {{< /math >}}
 
@@ -218,21 +224,21 @@ $$
 
 可微函数 $f$ 的共轭函数亦称为函数 $f$ 的 Legendre 变换。
 
-设函数 $f$ 是凸函数且可微，其定义域为 $\operatorname{dom} f = \mathbf{R}^n$，使 $y^Tx - f(x)$ 取最大的 $x^{\*}$ 满足 $y = \nabla f(x^{\*})$，并且若 $x^{\*}$ 满足 $y = \nabla f(x^{\*})$，$y^Tx - f(x)$ 在 $x^{\*}$ 处取最大值（二者等价）。因此，我们可以得到
+设函数 $f$ 是凸函数且可微，其定义域为 $\operatorname{dom} f = \mathbf{R}^n$，使 $y^Tx - f(x)$ 取最大的 $x^{*}$ 满足 $y = \nabla f(x^{*})$，并且若 $x^{*}$ 满足 $y = \nabla f(x^{*})$，$y^Tx - f(x)$ 在 $x^{*}$ 处取最大值（二者等价）。因此，我们可以得到
 
 {{< math >}}
 $$
-f^{\*}(y)=x^{\* T} \nabla f\left(x^{\*}\right)-f\left(x^{\*}\right)
+f^{*}(y)=x^{* T} \nabla f\left(x^{*}\right)-f\left(x^{*}\right)
 $$
 {{< /math >}}
 
-有了这个结论，给定任意 $y$，我们可以求解梯度方程 $y = \nabla f(z)$，从而得到 $y$ 处的共轭函数 $f^{\*}(y)$。
+有了这个结论，给定任意 $y$，我们可以求解梯度方程 $y = \nabla f(z)$，从而得到 $y$ 处的共轭函数 $f^{*}(y)$。
 
 我们也可以换一个角度理解。$\forall z \in \mathbf{R}^n$，令 $y = \nabla f(z)$，则
 
 {{< math >}}
 $$
-f^{\*}(y)=z^T \nabla f\left(z\right)-f\left(z\right)
+f^{*}(y)=z^T \nabla f\left(z\right)-f\left(z\right)
 $$
 {{< /math >}}
 
@@ -240,23 +246,27 @@ $$
 
 设 $a > 0$，$b \in \mathbf{R}$，则伸缩变换及其共轭函数为
 
+{{< math >}}
 $$
 \begin{aligned}
     g(x) &= a f(x) + b \\\\
-    g^{\*}(y) &= a f^{\*}(y / a)-b
+    g^{*}(y) &= a f^{*}(y / a)-b
 \end{aligned}
 $$
+{{< /math >}}
 
 设 $A \in \mathbf{R}^{n \times n}$ 非奇异，$b \in \mathbf{R}^n$，则复合仿射变换及其共轭函数为
 
+{{< math >}}
 $$
 \begin{aligned}
     g(x) &= f(Ax + b) \\\\
-    g^{\*}(y) &= f^{\*}\left(A^{-T} y\right)-b^{T} A^{-T} y
+    g^{*}(y) &= f^{*}\left(A^{-T} y\right)-b^{T} A^{-T} y
 \end{aligned}
 $$
+{{< /math >}}
 
-其定义域为 $\operatorname{dom} g^{\*} = A^T \operatorname{dom} f^{\*}$。
+其定义域为 {{< math >}}$\operatorname{dom} g^{*} = A^T \operatorname{dom} f^{*}${{< /math >}}。
 
 ### 独立函数的和
 
@@ -272,7 +282,7 @@ $$
 
 {{< math >}}
 $$
-f^{\*}(w, z) = f_1^{\*}(w) + f_2^{\*}(z)
+f^{*}(w, z) = f_1^{*}(w) + f_2^{*}(z)
 $$
 {{< /math >}}
 

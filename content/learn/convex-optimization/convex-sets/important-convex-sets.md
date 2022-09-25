@@ -13,7 +13,7 @@ weight: 120
 
 ## 一些简单的凸集
 
-- 空集 $\emptyset$、任意一点（单点集）$\\{x_0\\}$、全空间 $\mathbf{R}^{n}$ 都是 $\mathbf{R}^{n}$ 的仿射（自然也是凸的）子集。
+- 空集 $\emptyset$、任意一点（单点集）$\{x_0\}$、全空间 $\mathbf{R}^{n}$ 都是 $\mathbf{R}^{n}$ 的仿射（自然也是凸的）子集。
 - 任意直线是仿射的。如果直线通过零点，则是子空间，因此，也是凸锥。
 - 一条线段是凸的，但不是仿射的（除非退化为一个点）。
 - 一条射线是凸的，但不是仿射的。如果射线的基点是零点，则它是凸锥。
@@ -26,17 +26,17 @@ weight: 120
 {{< math >}}
 $$
 \begin{align}
-\\{x \mid a^Tx=b\\}
+\{x \mid a^Tx=b\}
 \end{align}
 $$
 {{< /math >}}
 
-其中 $a \in \mathbf{R}^{n}$，$a \ne 0$ 且 $b \in \mathbf{R}$。超平面是关于 $x$ 的非平凡线性方程的解空间（因此是一个仿射集合）。几何上，$\\{x \mid a^Tx=b\\}$ 可以看作是法线方向为 $a$ 的超平面，而常数 $b$ 决定了这个平面从原点的偏移。下面给出的是超平面的点向式方程：
+其中 $a \in \mathbf{R}^{n}$，$a \ne 0$ 且 $b \in \mathbf{R}$。超平面是关于 $x$ 的非平凡线性方程的解空间（因此是一个仿射集合）。几何上，$\{x \mid a^Tx=b\}$ 可以看作是法线方向为 $a$ 的超平面，而常数 $b$ 决定了这个平面从原点的偏移。下面给出的是超平面的点向式方程：
 
 {{< math >}}
 $$
 \begin{align}
-\\{x \mid a^T(x - x_0) = 0\\}
+\{x \mid a^T(x - x_0) = 0\}
 \end{align}
 $$
 {{< /math >}}
@@ -46,7 +46,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\\{x \mid a^Tx \leqslant b\\}
+\{x \mid a^Tx \leqslant b\}
 \end{align}
 $$
 {{< /math >}}
@@ -60,7 +60,7 @@ $\mathbf{R}^{n}$ 中的空间 Euclid 球（或简称为球）具有如下形式�
 {{< math >}}
 $$
 \begin{align}
-B(x_c, r) = \\{x \mid \\|x - x_c\\| _2 \leqslant r\\}
+B(x_c, r) = \{x \mid \|x - x_c\| _2 \leqslant r\}
 \end{align}
 $$
 {{< /math >}}
@@ -70,7 +70,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-B(x_c, r) = \\{x_c + ru \mid \\|u\\| _2 \leqslant 1\\}
+B(x_c, r) = \{x_c + ru \mid \|u\| _2 \leqslant 1\}
 \end{align}
 $$
 {{< /math >}}
@@ -80,7 +80,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\mathcal{E} = \\{x | (x - x_c)^T P^{-1} (x - x_c) \leqslant 1\\}
+\mathcal{E} = \{x | (x - x_c)^T P^{-1} (x - x_c) \leqslant 1\}
 \end{align}
 $$
 {{< /math >}}
@@ -92,7 +92,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\mathcal{E} = \\{x_c + Au \mid \\|u\\| _2 \leqslant 1\\}
+\mathcal{E} = \{x_c + Au \mid \|u\| _2 \leqslant 1\}
 \end{align}
 $$
 {{< /math >}}
@@ -104,7 +104,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-C = \\{(x, t) \mid \\|x\\| \leqslant t\\} \in \mathbf{R}^{n+1}
+C = \{(x, t) \mid \|x\| \leqslant t\} \in \mathbf{R}^{n+1}
 \end{align}
 $$
 {{< /math >}}
@@ -118,7 +118,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\mathcal{P} = \\{x \mid a_i^Tx \leqslant b_i, i=1,\cdots,m, c_j^Tx = d_j, j=1,\cdots,p\\}
+\mathcal{P} = \{x \mid a_i^Tx \leqslant b_i, i=1,\cdots,m, c_j^Tx = d_j, j=1,\cdots,p\}
 \end{align}
 $$
 {{< /math >}}
@@ -130,7 +130,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\mathcal{P} = \\{x \mid Ax \preceq b, Cx = d\\}
+\mathcal{P} = \{x \mid Ax \preceq b, Cx = d\}
 \end{align}
 $$
 {{< /math >}}
@@ -142,7 +142,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-C = \operatorname{conv}\\{v_0, \cdots, v_k\\} = \\{\theta_0v_0 + \cdots + \theta_kv_k \mid \theta \succeq 0, \mathbf{1}^T\theta=1\\}
+C = \operatorname{conv}\{v_0, \cdots, v_k\} = \{\theta_0v_0 + \cdots + \theta_kv_k \mid \theta \succeq 0, \mathbf{1}^T\theta=1\}
 \end{align}
 $$
 {{< /math >}}
@@ -153,12 +153,12 @@ $$
 
 ### 多面体的凸包描述
 
-有限集合 $\\{v_1, \cdots, v_k\\}$ 的凸包是
+有限集合 $\{v_1, \cdots, v_k\}$ 的凸包是
 
 {{< math >}}
 $$
 \begin{align}
-\operatorname{conv}\\{v_1, \cdots, v_k\\} = \\{\theta_1v_1 + \cdots + \theta_kv_k \mid \theta \succeq 0, \mathbf{1}^T \theta = 1\\}
+\operatorname{conv}\{v_1, \cdots, v_k\} = \{\theta_1v_1 + \cdots + \theta_kv_k \mid \theta \succeq 0, \mathbf{1}^T \theta = 1\}
 \end{align}
 $$
 {{< /math >}}
@@ -172,7 +172,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\mathbf{S}^n = \\{X \in \mathbf{R}^{n \times n} \mid X = X^T\\}
+\mathbf{S}^n = \{X \in \mathbf{R}^{n \times n} \mid X = X^T\}
 \end{align}
 $$
 {{< /math >}}
@@ -182,7 +182,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\mathbf{S}_+^n = \\{X \in \mathbf{S}^{n} \mid X \succeq 0\\}
+\mathbf{S}_+^n = \{X \in \mathbf{S}^{n} \mid X \succeq 0\}
 \end{align}
 $$
 {{< /math >}}
@@ -192,7 +192,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\mathbf{S}_{++}^n = \\{X \in \mathbf{S}^{n} \mid X \succ 0\\}
+\mathbf{S}_{++}^n = \{X \in \mathbf{S}^{n} \mid X \succ 0\}
 \end{align}
 $$
 {{< /math >}}
@@ -206,7 +206,7 @@ X=\left[\begin{array}{ll}
 x & y \\\\
 y & z
 \end{array}\right] \in \mathbf{S}_{+}^{2} \Longleftrightarrow 
-\left\\{\begin{matrix}
+\left\{\begin{matrix}
 x \geqslant 0 \\\\
 z \geqslant 0 \\\\
 x z \geqslant y^{2}

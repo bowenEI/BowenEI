@@ -37,7 +37,7 @@ $$
 
 ### 举例
 
-- 仿射函数 $f(x) = a^Tx + b$ 在 $\\{ x \mid a^Tx + b > 0 \\}$ 上是对数凹函数。
+- 仿射函数 $f(x) = a^Tx + b$ 在 $\{ x \mid a^Tx + b > 0 \}$ 上是对数凹函数。
 
 - 幂函数 $f(x) = x^a$ 在 $\mathbf{R}_{++}$ 上当 $a \leqslant 0$ 时是对数凸函数，当 $a \geqslant 0$ 时是对数凹函数。
 
@@ -77,23 +77,27 @@ $$
 
 因此，判断函数 $f$ 的对数凹凸性，只需要分别令二阶导数大于零（凸）和小于零（凹），即
 
+{{< math >}}
 $$
 \begin{aligned}
 f(x) \nabla^{2} f(x) \succeq \nabla f(x) \nabla f(x)^{T} \\\\
 f(x) \nabla^{2} f(x) \preceq \nabla f(x) \nabla f(x)^{T}
 \end{aligned}
 $$
+{{< /math >}}
 
 ### 乘积、求和与积分
 
 乘积运算能够保持函数的对数凸性，这是因为对数运算和加法运算是能够保持函数的凸性。
 
+{{< math >}}
 $$
 \begin{aligned}
     h(x) &= f(x)g(x) \\\\
     \log h(x) &= \log f(x) + \log g(x)
 \end{aligned}
 $$
+{{< /math >}}
 
 然而，求和运算并不能够绝对保证函数的对数凸性。对数凹函数的和一般不是对数凹函数，而对数凸函数的和仍然是对数凸函数。
 
@@ -129,18 +133,22 @@ $$
 
 设 $C \subseteq \mathbf{R}^n$ 是凸集，$w$ 是 $\mathbf{R}^n$ 上的随机向量，设其具有对数凹性的概率密度函数 $p$，则函数
 
+{{< math >}}
 $$
 \begin{aligned}
     f(x) &= \operatorname{prob} (x + w \in C) \\\\
     &= \int g(x + w)f(w) \mathrm{d} w
 \end{aligned}
 $$
+{{< /math >}}
 
 是 $x$ 的对数凹函数，其中 $g$ 定义为
 
+{{< math >}}
 $$
-g(u)=\left\\{\begin{array}{ll}
+g(u)=\left\{\begin{array}{ll}
 1 & u \in C \\\\
 0 & u \notin C
 \end{array}\right.
 $$
+{{< /math >}}

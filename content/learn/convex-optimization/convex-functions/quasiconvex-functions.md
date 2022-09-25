@@ -13,11 +13,11 @@ weight: 250
 
 ## 定义
 
-如果函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$ 的定义域及所有下水平集 $\\{ x \mid f(x) \leqslant \alpha \\}$ 都是凸集，则称函数 $f$ 是**拟凸函数**（或者**单峰函数**）。
+如果函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$ 的定义域及所有下水平集 $\{ x \mid f(x) \leqslant \alpha \}$ 都是凸集，则称函数 $f$ 是**拟凸函数**（或者**单峰函数**）。
 
-同理，如果函数 $-f$ 是拟凸函数，并且所有上水平集 $\\{ x \mid f(x) \geqslant \alpha \\}$ 都是凸集，那么函数 $f$ 是拟凹函数。
+同理，如果函数 $-f$ 是拟凸函数，并且所有上水平集 $\{ x \mid f(x) \geqslant \alpha \}$ 都是凸集，那么函数 $f$ 是拟凹函数。
 
-如果函数 $f$ 既是拟凸函数又是拟凹函数，则称函数 $f$ 为拟线性函数，并且其定义域和其所有的水平集 $\\{ x \mid f(x) = \alpha \\}$ 都是凸集。
+如果函数 $f$ 既是拟凸函数又是拟凹函数，则称函数 $f$ 为拟线性函数，并且其定义域和其所有的水平集 $\{ x \mid f(x) = \alpha \}$ 都是凸集。
 
 {{< callout warning >}}
 
@@ -40,7 +40,7 @@ weight: 250
 
 定义在 $\mathbf{R}_{++}$ 上的对数函数 $f(x) = \log x$ 是拟凸函数，也是拟凹函数，因此是拟线性函数。
 
-上取整函数 $\mathrm{ceil}(x) = \inf \\{ z \in Z \mid z \geqslant x \\}$ 是拟凸函数，也是拟凹函数，因此是拟线性函数。
+上取整函数 $\mathrm{ceil}(x) = \inf \{ z \in Z \mid z \geqslant x \}$ 是拟凸函数，也是拟凹函数，因此是拟线性函数。
 
 #### 多元函数
 
@@ -54,12 +54,14 @@ $$
 
 是拟凸函数，也是拟凹函数，因此是拟线性函数。其 α-下水平集为
 
+{{< math >}}
 $$
 \begin{aligned}
-S_{\alpha} &=\left\\{x \mid c^{T} x+d>0,\left(a^{T} x+b\right) /\left(c^{T} x+d\right) \leqslant \alpha\right\\} \\\\
-&=\left\\{x \mid c^{T} x+d>0, a^{T} x+b \leqslant \alpha\left(c^{T} x+d\right)\right\\}
+S_{\alpha} &=\left\{x \mid c^{T} x+d>0,\left(a^{T} x+b\right) /\left(c^{T} x+d\right) \leqslant \alpha\right\} \\\\
+&=\left\{x \mid c^{T} x+d>0, a^{T} x+b \leqslant \alpha\left(c^{T} x+d\right)\right\}
 \end{aligned}
 $$
+{{< /math >}}
 
 它是凸集，因为它是一个开端半平面和闭的半平面的交集。
 
@@ -67,11 +69,11 @@ $$
 
 {{< math >}}
 $$
-f(x)=\frac{\\|x-a\\| _{2}}{\\|x-b\\| _{2}}
+f(x)=\frac{\|x-a\|_{2}}{\|x-b\|_{2}}
 $$
 {{< /math >}}
 
-在半平面 $\\{ x \mid \\| x - a \\|_2 \leqslant \\| x - b \\|_2 \\}$ 上是拟凸函数。
+在半平面 $\{ x \mid \| x - a \|_2 \leqslant \| x - b \|_2 \}$ 上是拟凸函数。
 
 ## 基本性质
 
@@ -81,7 +83,7 @@ $$
 
 {{< math >}}
 $$
-f(\theta x + (1 - \theta) y) \leqslant \max \\{ f(x), f(y) \\}
+f(\theta x + (1 - \theta) y) \leqslant \max \{ f(x), f(y) \}
 $$
 {{< /math >}}
 
@@ -109,11 +111,11 @@ f(y) \leqslant f(x) \Longrightarrow \nabla f(x)^{T}(y-x) \leqslant 0
 $$
 {{< /math >}}
 
-一阶条件的几何意义实际上就是定义了水平集 $\\{ y \mid f(y) \leqslant f(x) \\}$ 的一个支撑超平面（$\nabla f(x)$ 为该超平面的法向量）。
+一阶条件的几何意义实际上就是定义了水平集 $\{ y \mid f(y) \leqslant f(x) \}$ 的一个支撑超平面（$\nabla f(x)$ 为该超平面的法向量）。
 
 我们注意到用一阶条件判断凸性和判断拟凸性很相似，但实际上二者存在着重要的差别。例如，如果函数 $f$ 是凸函数且 $\nabla f(x) = 0$，那么 $x$ 是函数 $f$ 的全局极小点。
 
-然而，对于拟凸函数，这样的论断并不成立。有可能 $\nabla f(x) = 0$，但是点 $x$ 不是 $f$ 全局最小点。例如 $f(x) = x^3$ 的 $x^{\*} = 0$ 处，$\nabla f(x^{\*}) = 0$，但不是极小点而是鞍点。因此，$f(x) = x^3$ 是拟凸函数而不是凸函数。
+然而，对于拟凸函数，这样的论断并不成立。有可能 $\nabla f(x) = 0$，但是点 $x$ 不是 $f$ 全局最小点。例如 $f(x) = x^3$ 的 {{< math >}}$x^{*} = 0${{< /math >}} 处，{{< math >}}$\nabla f(x^{*}) = 0${{< /math >}}，但不是极小点而是鞍点。因此，$f(x) = x^3$ 是拟凸函数而不是凸函数。
 
 ### 二阶条件
 
@@ -141,7 +143,7 @@ $$
 
 {{< math >}}
 $$
-f = \max \\{ w_1 f_1, \cdots, w_m f_m \\}
+f = \max \{ w_1 f_1, \cdots, w_m f_m \}
 $$
 {{< /math >}}
 
@@ -149,7 +151,7 @@ $$
 
 {{< math >}}
 $$
-f(x) = \sup _{y \in C} \\{ w(y) g(x, y) \\}
+f(x) = \sup _{y \in C} \{ w(y) g(x, y) \}
 $$
 {{< /math >}}
 

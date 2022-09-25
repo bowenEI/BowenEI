@@ -23,6 +23,7 @@ weight: 220
 
 函数 $f(x) = x \log{x}$ 在其定义域上是凸函数。其定义域为 $\mathbf{R} _{++}$，但也可以定义在 $\mathbf{R} _+$ 上（$f(0) = 0$），这是因为
 
+{{< math >}}
 $$
 \begin{aligned}
     \lim _{x \rightarrow 0^{+}} x \log{x} &= \lim _{x \rightarrow 0^{+}} \frac{\log{x}}{1/x}  \\\\
@@ -30,6 +31,7 @@ $$
     &= 0
 \end{aligned}
 $$
+{{< /math >}}
 
 函数 $f$ 的导数和二阶导数为
 
@@ -49,7 +51,7 @@ $\mathbf{R}^n$ 上的任意范数均为凸函数。
 
 {{< math >}}
 $$
-\operatorname{dom} f = \mathbf{R} \times \mathbf{R} _{++} = \\{ (x, y) \in \mathbf{R} ^2 \mid y > 0 \\}
+\operatorname{dom} f = \mathbf{R} \times \mathbf{R} _{++} = \{ (x, y) \in \mathbf{R} ^2 \mid y > 0 \}
 $$
 {{< /math >}}
 

@@ -25,12 +25,14 @@ $$
 
 现在我们对原问题作等价变形
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & f_0(y) \\\\
     \mathrm{subject\ to} \quad & Ax+b = y
 \end{aligned}
 $$
+{{< /math >}}
 
 我们引入了新的变量 $y$，并且增加了新的等式约束，将原来作为目标函数的复合函数拆开了。这样，变换之后的问题的 Lagrange 函数为
 
@@ -50,26 +52,31 @@ $$
 
 于是对偶问题可以描述为
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & b^T \nu - f_0^{\star}(\nu) \\\\
     \mathrm{subject\ to} \quad & A^T \nu = 0
 \end{aligned}
 $$
+{{< /math >}}
 
 显然，变换后的问题的对偶问题要比原问题的对偶问题更有意义。
 
 引入新的等式约束的思想同样可以用在约束函数上面。例如，考虑问题
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & f_0(A_0x + b_0) \\\\
     \mathrm{subject\ to} \quad & f_i(A_ix+ b_i) \leqslant 0, \quad i=1,\cdots,m
 \end{aligned}
 $$
+{{< /math >}}
 
 其中 $A_i \in \mathbf{R}^{k_i \times n}$，函数 $f_i: \mathbf{R}^{k_i} \rightarrow \mathbf{R}$ 是凸函数。对 $i=0,\cdots,m$，引入新的变量 $y_i \in \mathbf{R}^{k_i}$，将原问题重新描述为
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & f_0(y_0) \\\\
@@ -77,6 +84,7 @@ $$
     \quad & A_ix + b_i = y_i, i=0,\cdots,m
 \end{aligned}
 $$
+{{< /math >}}
 
 后面的步骤与之前类似，同样也是求解 Lagrange 对偶函数，并描述对偶问题。
 
@@ -88,18 +96,20 @@ $$
 
 {{< math >}}
 $$
-\mathrm{minimize} \quad \\| Ax-b \\|
+\mathrm{minimize} \quad \| Ax-b \|
 $$
 {{< /math >}}
 
 我们将问题重新描述为
 
+{{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \frac{1}{2} \\| y \\|^2 \\\\
+    \mathrm{minimize} \quad & \frac{1}{2} \| y \|^2 \\\\
     \mathrm{subject\ to} \quad & Ax-b = y
 \end{aligned}
 $$
+{{< /math >}}
 
 ## 隐式约束
 
@@ -107,6 +117,7 @@ $$
 
 考虑下列具有框约束的线性规划问题
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & c^Tx \\\\
@@ -114,23 +125,28 @@ $$
     \quad & l \preceq x \preceq u
 \end{aligned}
 $$
+{{< /math >}}
 
 原问题的对偶问题很容易就能够得到，但是特别复杂。我们换一种做法，将原问题重新描述为
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & f_0(x) \\\\
     \mathrm{subject\ to} \quad & Ax = b
 \end{aligned}
 $$
+{{< /math >}}
 
 其中 $f_0(x)$ 定义为
 
+{{< math >}}
 $$
-f_0(x) = \left\\{\begin{matrix}
+f_0(x) = \left\{\begin{matrix}
     c^Tx & l \preceq x \preceq u \\\\
     \infty & \text{otherwise}
 \end{matrix}\right.
 $$
+{{< /math >}}
 
 这样一来新问题的对偶问题则是一个更为简单的无约束问题。

@@ -15,12 +15,14 @@ weight: 420
 
 Lagrange 对偶函数实际上给出了优化问题最优值的下界。也就是说，对于一对给定的 $\lambda$ 和 $\nu$，就有一个确定的下界值相对应。那么，一个自然的问题是：Lagrange 对偶函数的最优下界是什么？即如下的一个优化问题
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{maximize} \quad & g(\lambda, \nu) \\\\
     \mathrm{subject\ to} \quad & \lambda \succeq 0
 \end{aligned}
 $$
+{{< /math >}}
 
 该问题被称为 Lagrange 对偶问题。称解 $(\lambda^{\star}, \nu^{\star})$ 为对偶最优解或者最优 Lagrange 乘子。
 
@@ -30,6 +32,7 @@ Lagrange 对偶问题是一个凸优化问题，这是因为极大化的目标�
 
 下面我们以标准形式线性规划的 Lagrange 对偶为例，说明如何显式表达对偶约束。
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & c^Tx \\\\
@@ -37,29 +40,35 @@ $$
     \quad & x \succeq 0
 \end{aligned}
 $$
+{{< /math >}}
 
 其 Lagrange 对偶函数为
 
+{{< math >}}
 $$
-g(\lambda, \nu) = \left\\{
+g(\lambda, \nu) = \left\{
     \begin{matrix}
         -b^T \nu & A^T \nu - \lambda + c = 0 \\\\
         -\infty & \text{其他情况}
     \end{matrix}
 \right.
 $$
+{{< /math >}}
 
 严格来讲,标准形式线性规划的对偶问题是在满足约束 $\lambda \succeq 0$ 的条件下极大化对偶函数
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{maximize} \quad & g(\lambda, \nu) \\\\
     \mathrm{subject\ to} \quad & \lambda \succeq 0
 \end{aligned}
 $$
+{{< /math >}}
 
 当且仅当 $A^T \nu - \lambda + c = 0$ 时对偶函数 $g$ 有界。我们看看可以通过将此“隐含”的等式约束“显式”化来得到一个等价的问题
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{maximize} \quad & -b^T \nu \\\\
@@ -67,15 +76,18 @@ $$
     \quad & \lambda \succeq 0
 \end{aligned}
 $$
+{{< /math >}}
 
 进一步地，这个问题可以描述为
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{maximize} \quad & -b^T \nu \\\\
     \mathrm{subject\ to} \quad & A^T \nu + c \succeq 0 \\\\
 \end{aligned}
 $$
+{{< /math >}}
 
 这是一个不等式形式的线性规划。
 
@@ -123,12 +135,14 @@ $$
 
 再次考虑问题
 
+{{< math >}}
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & x^Tx \\\\
     \mathrm{subject\ to} \quad & Ax = b
 \end{aligned}
 $$
+{{< /math >}}
 
 其相应的对偶问题为
 

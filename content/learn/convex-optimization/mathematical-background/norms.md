@@ -38,7 +38,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\cos \left ( x,y \right ) = \frac{x^Ty}{\\|x\\|_2\\|y\\|_2} 
+\cos \left ( x,y \right ) = \frac{x^Ty}{\|x\|_2\|y\|_2} 
 \end{align}
 $$
 {{< /math >}}
@@ -74,7 +74,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\\|X\\| _F = \left( \operatorname{tr} \left( X^T X \right) \right) ^{1/2} = \left( \sum _{i=1} ^{m} \sum _{j=1} ^{n} X _{i j} ^{2} \right) ^{1/2}
+\|X\| _F = \left( \operatorname{tr} \left( X^T X \right) \right) ^{1/2} = \left( \sum _{i=1} ^{m} \sum _{j=1} ^{n} X _{i j} ^{2} \right) ^{1/2}
 \end{align}
 $$
 {{< /math >}}
@@ -103,7 +103,7 @@ Frobenius 范数实际上就是将矩阵的系数按一定顺序排列后所生�
 {{< math >}}
 $$
 \begin{align}
-\operatorname{dist}(x, y)=\\|x-y\\|
+\operatorname{dist}(x, y)=\|x-y\|
 \end{align}
 $$
 {{< /math >}}
@@ -115,7 +115,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\mathcal{B}=\left\\{x \in \mathbf{R}^{n} \mid\\|x\\| \leqslant 1\right\\}
+\mathcal{B}=\left\{x \in \mathbf{R}^{n} \mid\|x\| \leqslant 1\right\}
 \end{align}
 $$
 {{< /math >}}
@@ -127,7 +127,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\\|x\\| _1 = \left| x_1 \right| + \cdots + \left| x_n \right|
+\|x\| _1 = \left| x_1 \right| + \cdots + \left| x_n \right|
 \end{align}
 $$
 {{< /math >}}
@@ -137,7 +137,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\\|x\\| _{\infty} = \max \\{ \left| x_1 \right|, \cdots, \left| x_n \right| \\}
+\|x\| _{\infty} = \max \{ \left| x_1 \right|, \cdots, \left| x_n \right| \}
 \end{align}
 $$
 {{< /math >}}
@@ -147,7 +147,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\\|x\\| _p = \left( \left| x_1 \right| ^p + \cdots + \left| x_n \right| ^p \right) ^{1/p}
+\|x\| _p = \left( \left| x_1 \right| ^p + \cdots + \left| x_n \right| ^p \right) ^{1/p}
 \end{align}
 $$
 {{< /math >}}
@@ -159,7 +159,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\\|x\\| _{P}=\left(x^{T} P x\right)^{1 / 2}=\left\\|P^{1 / 2} x\right\\| _{2}
+\|x\| _{P}=\left(x^{T} P x\right)^{1 / 2}=\left\|P^{1 / 2} x\right\| _{2}
 \end{align}
 $$
 {{< /math >}}
@@ -173,7 +173,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\alpha\\|x\\| _{\mathrm{a}} \leqslant \\|x\\| _{\mathrm{b}} \leqslant \beta \\|x\\| _{\mathrm{a}}
+\alpha\|x\| _{\mathrm{a}} \leqslant \|x\| _{\mathrm{b}} \leqslant \beta \|x\| _{\mathrm{a}}
 \end{align}
 $$
 {{< /math >}}
@@ -183,31 +183,31 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\\|x\\| _{P} \leqslant\\|x\\| \leqslant \sqrt{n}\\|x\\| _{P}
+\|x\| _{P} \leqslant\|x\| \leqslant \sqrt{n}\|x\| _{P}
 \end{align}
 $$
 {{< /math >}}
 
 ## 算子范数
 
-假设 $\\| \cdot \\| _{\mathrm{a}}$ 和 $\\|\cdot\\| _{\mathrm{b}}$ 分别是 $\mathbf{R}^{m}$ 和 $\mathbf{R}^{n}$ 上的范数。对于 $X \in \mathbf{R}^{m \times n}$，我们定义由范数 $\\|\cdot\\| _{\mathrm{a}}$ 和 $\\|\cdot\\| _{\mathrm{b}}$ 导出的**算子范数**。
+假设 $\| \cdot \| _{\mathrm{a}}$ 和 $\|\cdot\| _{\mathrm{b}}$ 分别是 $\mathbf{R}^{m}$ 和 $\mathbf{R}^{n}$ 上的范数。对于 $X \in \mathbf{R}^{m \times n}$，我们定义由范数 $\|\cdot\| _{\mathrm{a}}$ 和 $\|\cdot\| _{\mathrm{b}}$ 导出的**算子范数**。
 
 {{< math >}}
 $$
 \begin{align}
-\\|X\\| _{\mathrm{a}, \mathrm{b}}=\sup \\{\\|X u\\| _{\mathrm{a}} \mid \\|u\\| _{\mathrm{b}} \leqslant 1\\}
+\|X\| _{\mathrm{a}, \mathrm{b}}=\sup \{\|X u\| _{\mathrm{a}} \mid \|u\| _{\mathrm{b}} \leqslant 1\}
 \end{align}
 $$
 {{< /math >}}
 
 ### 矩阵的 $\ell_2$-范数
 
-当 $\\|\cdot\\| _{\mathrm{a}}$ 和 $\\|\cdot\\| _{\mathrm{b}}$ 都是 Euclid 范数时，$X$ 的算子范数是它的**最大奇异值**。
+当 $\|\cdot\| _{\mathrm{a}}$ 和 $\|\cdot\| _{\mathrm{b}}$ 都是 Euclid 范数时，$X$ 的算子范数是它的**最大奇异值**。
 
 {{< math >}}
 $$
 \begin{align}
-\\|X\\|_{2}=\sigma _{\max }(X)=\left(\lambda _{\max }\left(X^{T} X\right)\right)^{1 / 2}
+\|X\|_{2}=\sigma _{\max }(X)=\left(\lambda _{\max }\left(X^{T} X\right)\right)^{1 / 2}
 \end{align}
 $$
 {{< /math >}}
@@ -219,7 +219,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\\|X\\| _{\infty}=\sup \\{\\|X u\\| _{\infty} \mid\\|u\\| _{\infty} \leqslant 1\\}=\max _{i=1, \cdots, m} \sum _{j=1}^{n}\left|X _{i j}\right|
+\|X\| _{\infty}=\sup \{\|X u\| _{\infty} \mid\|u\| _{\infty} \leqslant 1\}=\max _{i=1, \cdots, m} \sum _{j=1}^{n}\left|X _{i j}\right|
 \end{align}
 $$
 {{< /math >}}
@@ -229,7 +229,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\\|X\\| _{\infty}=\max _{j=1, \cdots, n} \sum _{i=1}^{m}\left|X _{i j}\right|
+\|X\| _{\infty}=\max _{j=1, \cdots, n} \sum _{i=1}^{m}\left|X _{i j}\right|
 \end{align}
 $$
 {{< /math >}}
@@ -239,7 +239,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\\|z\\|_{*}=\sup \\{z^{T} x \mid \\|x\\| \leqslant 1\\}
+\|z\|_{*}=\sup \{z^{T} x \mid \|x\| \leqslant 1\}
 \end{align}
 $$
 {{< /math >}}
@@ -249,7 +249,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-z^Tx \leqslant \\|x\\| \\|z\\|
+z^Tx \leqslant \|x\| \|z\|
 \end{align}
 $$
 {{< /math >}}

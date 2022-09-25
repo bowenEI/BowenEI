@@ -55,7 +55,7 @@ $$
 
 {{< math >}}
 $$
-\nabla f(x) \succeq_{K^{\*}} 0
+\nabla f(x) \succeq_{K^{*}} 0
 $$
 {{< /math >}}
 
@@ -63,7 +63,7 @@ $$
 
 {{< math >}}
 $$
-\nabla f(x) \succ_{K^{\*}} 0
+\nabla f(x) \succ_{K^{*}} 0
 $$
 {{< /math >}}
 
@@ -100,9 +100,9 @@ $$
 
 ### $K$- 凸的对偶刻画
 
-函数 $f$ 是 $K$- 凸的，当且仅当对任意的 $\omega \succeq_{K^{\*}} 0$，（实值）函数 $\omega^Tf$ 是凸的。
+函数 $f$ 是 $K$- 凸的，当且仅当对任意的 {{< math >}}$\omega \succeq_{K^{*}} 0${{< /math >}}，（实值）函数 $\omega^Tf$ 是凸的。
 
-函数 $f$ 是严格 $K$- 凸的，当且仅当对任意非零向量 $\omega \succeq_{K^{\*}} 0$，函数 $\omega^Tf$ 是严格凸的。
+函数 $f$ 是严格 $K$- 凸的，当且仅当对任意非零向量 {{< math >}}$\omega \succeq_{K^{*}} 0${{< /math >}}，函数 $\omega^Tf$ 是严格凸的。
 
 ### 可微的 $K$- 凸函数
 
