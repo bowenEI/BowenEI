@@ -310,11 +310,3 @@ renders as
 {{< icon name="r-project" pack="fab" >}} R
 
 ### Did you find this page helpful? Consider sharing it 🙌
-
-```markmap {height="200px"}
-- Hugo Modules
-  - wowchemy
-  - wowchemy-plugins-netlify
-  - wowchemy-plugins-netlify-cms
-  - wowchemy-plugins-reveal
-```
