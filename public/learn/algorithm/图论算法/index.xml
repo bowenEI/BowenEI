@@ -275,6 +275,8 @@
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -286,7 +288,10 @@
                height=&#34;250&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;如图所示的有向图中包含 3 个强连通分量，分别为 ${1, 2, 4, 5}$、${3}$ 和 ${6}$。&lt;/p&gt;
+
+
 
 
 
@@ -314,8 +319,11 @@
                height=&#34;395&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;首先访问节点 $1$，之后陆续访问节点 $2$、$3$、$6$，&lt;code&gt;DFN&lt;/code&gt; 的值和 &lt;code&gt;LOW&lt;/code&gt; 值都相同（等于被搜索的次序）。&lt;/p&gt;
 &lt;p&gt;现在发现节点 $6$ 没有后继，因此需要进行回溯。回溯第一步发现 &lt;code&gt;DFN[6] == LOW[6]&lt;/code&gt;，因此 ${6}$ 为强连通分量，出栈。同理，&lt;code&gt;DFN[3] == LOW[3]&lt;/code&gt;，因此 ${3}$ 也为强连通分量，出栈。&lt;/p&gt;
+
+
 
 
 
@@ -343,8 +351,11 @@
                height=&#34;395&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;现在回溯到节点 $2$，发现它有后继节点 $5$，继续搜索。然而节点 $5$ 的后继都已经被访问过了，因此节点 $5$ 的 &lt;code&gt;LOW&lt;/code&gt; 值需要更新，&lt;code&gt;LOW[5] = 5&lt;/code&gt;，&lt;code&gt;DFN[1] = 1&lt;/code&gt; 而 &lt;code&gt;DFN[4] = 4&lt;/code&gt;，因此 &lt;code&gt;LOW[5] = 1&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;下面仍然回溯到节点 $2$。由于节点 $5$ 已经被访问过了，节点 $2$ 的 &lt;code&gt;LOW&lt;/code&gt; 值同样也需要更新。于是 &lt;code&gt;LOW[2] = 1&lt;/code&gt;。&lt;/p&gt;
+
+
 
 
 
@@ -372,7 +383,10 @@
                height=&#34;395&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;接下来回溯到节点 $1$，发现它有后继节点 $4$，继续搜索。然而节点 $4$ 的后继都已经被访问过了，因此节点 $4$ 的 &lt;code&gt;LOW&lt;/code&gt; 值需要更新，&lt;code&gt;LOW[4] = 5&lt;/code&gt;。&lt;/p&gt;
+
+
 
 
 
@@ -400,7 +414,10 @@
                height=&#34;395&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;最后再次回溯到节点 $1$，此时所有的节点都已访问，并且 &lt;code&gt;DFN[1] == LOW[1]&lt;/code&gt;。因此节点 $1$ 及其后续所有节点全部出栈，${1, 2, 4, 5}$ 为强连通分量。&lt;/p&gt;
+
+
 
 
 
@@ -428,6 +445,7 @@
                height=&#34;533&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;整个算法的 DFS 搜索树如图所示。&lt;/p&gt;</description>
     </item>
     
@@ -460,6 +478,8 @@
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -471,7 +491,10 @@
                height=&#34;739&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;如图所示，以 $A$ 为起点，&lt;code&gt;dist[0] = 0&lt;/code&gt;，&lt;code&gt;visit[0] = 1&lt;/code&gt;，然后节点 $A$ 进入队列中。&lt;/p&gt;
+
+
 
 
 
@@ -499,7 +522,10 @@
                height=&#34;739&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;接下来队首节点 $A$ 出队，它有 3 个直接后继 $C$、$E$、$F$，节点 $A$ 到这些节点的最短路径即为 3 条边上的权重。&lt;/p&gt;
+
+
 
 
 
@@ -527,7 +553,10 @@
                height=&#34;739&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;接下来队首节点 $C$ 出队，它有 1 个直接后继 $D$。节点 $A$ 到节点 $D$ 的最短路径本来为 $\infty$，经过节点 $C$ 周转之后路径更短，更新为 $60$。&lt;/p&gt;
+
+
 
 
 
@@ -555,7 +584,10 @@
                height=&#34;739&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;接下来队首节点 $E$ 出队，它有 2 个直接后继 $D$ 和 $F$。节点 $A$ 到节点 $D$ 的最短路径本来为 $60$，经过节点 $E$ 周转之后路径更短，更新为 $50$。同理，节点 $A$ 到节点 $F$ 的最短路径本来为 $100$，经过节点 $E$ 周转之后路径更短，为 $90$。&lt;/p&gt;
+
+
 
 
 
@@ -583,7 +615,10 @@
                height=&#34;739&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;接下来队首节点 $F$ 出队，它有没有直接后继。&lt;/p&gt;
+
+
 
 
 
@@ -611,6 +646,7 @@
                height=&#34;734&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;接下来队首节点 $D$ 出队，它有 1 个直接后继 $F$。节点 $A$ 到节点 $F$ 的最短路径本来为 $90$，经过节点 $D$ 周转之后路径更短，更新为 $60$。&lt;/p&gt;
 &lt;h3 id=&#34;多源最短路径&#34;&gt;多源最短路径&lt;/h3&gt;
 &lt;p&gt;给定一个有向图和一组源顶点，找到从集合中的任意顶点到其他顶点的最短路径。&lt;/p&gt;
@@ -643,6 +679,8 @@
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -654,6 +692,7 @@
                height=&#34;251&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;要解决并行作业调度问题，需要创建边加权 DAG。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;源和汇顶点&lt;/li&gt;
@@ -683,6 +722,8 @@
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -694,6 +735,7 @@
                height=&#34;220&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h3 id=&#34;负权重边&#34;&gt;负权重边&lt;/h3&gt;
 &lt;p&gt;Dijkstra 算法无法处理负权重边。&lt;/p&gt;
 &lt;p&gt;通过转化的方法将边权重置为非负，Dijkstra 算法仍不适用。&lt;/p&gt;
@@ -772,6 +814,8 @@
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -783,6 +827,7 @@
                height=&#34;324&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;在流网络中，边的含义不再是有向图中的权重，而是容量 $c(u, v)$。实际流过节点的网络流的流量 $f(u, v)$ 需要满足如下条件：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;容量限制：$0 \geqslant f(u, v) \geqslant c(u, v)$&lt;/li&gt;
@@ -790,6 +835,8 @@
 &lt;/ul&gt;
 &lt;h3 id=&#34;简单应用&#34;&gt;简单应用&lt;/h3&gt;
 &lt;p&gt;流网络常见的一种应用场景是运输问题，需要将货物从 $s$ 运输到 $t$，途经几个中转站，每次运输到每个中转站的货物的数量是有限制的。在实际应用中我们可能会在某条边上双向运输，这样便违反了我们之前对流网络的定义，但是我们可以将包含反平行边的图来改造成流网络，具体的方法是引入一个是虚构的中转结点，方法如下图。&lt;/p&gt;
+
+
 
 
 
@@ -817,7 +864,10 @@
                height=&#34;300&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;考虑另外一种特殊情形，从多个工厂发出货物最终运输到别的多个工厂，这时候我们具有了多个源点和多个汇点，这也很好解决，解决的方法就是人为添加超级源点 &lt;code&gt;supersource&lt;/code&gt; 和超级汇点 &lt;code&gt;supersink&lt;/code&gt;，具体方法见下图。&lt;/p&gt;
+
+
 
 
 
@@ -845,8 +895,11 @@
                height=&#34;310&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h2 id=&#34;最大流&#34;&gt;最大流&lt;/h2&gt;
 &lt;p&gt;如图所示，绿色的值表示流网络中的实际流量大小，它不能够超过每条边上的容量值。&lt;/p&gt;
+
+
 
 
 
@@ -874,6 +927,7 @@
                height=&#34;324&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;现在的问题是，整个网络存在比上图中更大的流量吗？如果有，如何求解？&lt;/p&gt;
 &lt;h3 id=&#34;ford-fulkerson-算法&#34;&gt;Ford-Fulkerson 算法&lt;/h3&gt;
 &lt;p&gt;Ford-Fulkerson 算法是求解流网络中的最大流的算法，其核心是通过引入残存网络 &lt;code&gt;residual network&lt;/code&gt; 和增广路径 &lt;code&gt;augmenting path&lt;/code&gt; 的概念对原先的运输方案进行纠错、改进。&lt;/p&gt;
@@ -914,6 +968,8 @@
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -925,6 +981,7 @@
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h2 id=&#34;问题分析&#34;&gt;问题分析&lt;/h2&gt;
 &lt;p&gt;借助 DFS，可以让拓扑排序在线性时间复杂度内完成。&lt;/p&gt;
 &lt;p&gt;我们需要开辟一个额外的栈空间。在 DFS 的过程中，每当访问一个未访问的顶点时，将之压入栈。在 DFS 结束以后，顶点依次出栈，所得结果即为拓扑排序结果。&lt;/p&gt;

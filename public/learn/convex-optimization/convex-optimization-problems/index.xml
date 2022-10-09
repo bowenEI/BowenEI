@@ -19,6 +19,8 @@
       <guid>https://bowenei.gitee.io/learn/convex-optimization/convex-optimization-problems/optimization-problems/</guid>
       <description>&lt;h2 id=&#34;基本术语&#34;&gt;基本术语&lt;/h2&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; f_0(x) \\\\
@@ -37,17 +39,23 @@ $$
 &lt;p&gt;如果没有约束，即 $m = p = 0$，则称该优化问题为无约束问题。&lt;/p&gt;
 &lt;h4 id=&#34;定义域&#34;&gt;定义域&lt;/h4&gt;
 
+
+
 $$
 \mathcal{D}=\bigcap_{i=0}^{m} \operatorname{dom} f_{i} \cap \bigcap_{i=1}^{p} \operatorname{dom} h_{i}
 $$
 
 &lt;h4 id=&#34;可行集约束集&#34;&gt;可行集（约束集）&lt;/h4&gt;
 
+
+
 $$
 \{ x \mid x \in \mathcal{D}, f_i(x) \leqslant 0, i=1, \cdots, m, \quad h_i(x) = 0, i=1, \cdots, p \}
 $$
 
 &lt;h4 id=&#34;最优值&#34;&gt;最优值&lt;/h4&gt;
+
+
 
 $$
 p^{\star}=\inf \{f_{0}(x) \mid f_{i}(x) \leqslant 0, i=1, \cdots, m, \quad h_{i}(x)=0, i=1, \cdots, p\}
@@ -57,12 +65,16 @@ $$
 &lt;h3 id=&#34;最优点和局部最优点&#34;&gt;最优点和局部最优点&lt;/h3&gt;
 &lt;p&gt;如果 $x^{\star}$ 是可行的并且 $f_0(x^{\star}) = p^{\star}$，则称 $x^{\star}$ 为&lt;strong&gt;最优点&lt;/strong&gt;，或 $x^{\star}$ 解决了该优化问题。所有最优解的集合称为&lt;strong&gt;最优集&lt;/strong&gt;，记为&lt;/p&gt;
 
+
+
 $$
 X_{\mathrm{opt}}=\{x \mid f_{i}(x) \leqslant 0, i=1, \cdots, m, h_{i}(x)=0, i=1, \cdots, p, f_{0}(x)=p^{\star}\}
 $$
 
 &lt;p&gt;如果问题存在最优解，则称最优值是&lt;strong&gt;可得&lt;/strong&gt;或&lt;strong&gt;可达&lt;/strong&gt;的，称问题&lt;strong&gt;可解&lt;/strong&gt;。如果 $X_{\mathrm{opt}}$ 是空集，则称最优值是不可得或不可达的（这种情况常在问题无下界是发生）。满足 $f_0(x) \leqslant p^{\star} + \epsilon (\epsilon &amp;gt; 0)$ 的可行解 $x$ 称为 $\epsilon$- 次优。所有 $\epsilon$- 次优解的集合称为 $\epsilon$- 次优集。&lt;/p&gt;
 &lt;p&gt;如果 $\exists R &amp;gt; 0$，使得&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -72,6 +84,8 @@ $$
 $$
 
 &lt;p&gt;则称可行解 $x$ 为局部最优。或换言之，$x$ 是关于 $z$ 的优化问题&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -87,6 +101,8 @@ $$
 &lt;h3 id=&#34;举例&#34;&gt;举例&lt;/h3&gt;
 &lt;p&gt;下面的例子都是定义在 $\mathbf{R}_{++}$ 上的初等函数。&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     f_0(x) &amp;= \frac{1}{x} \\\\
@@ -96,6 +112,8 @@ $$
 
 &lt;p&gt;但最优值不可达。&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     f_0(x) &amp;= -\log x \\\\
@@ -104,6 +122,8 @@ $$
 $$
 
 &lt;p&gt;所以该问题无下界。&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -116,6 +136,8 @@ $$
 &lt;h3 id=&#34;可行性问题&#34;&gt;可行性问题&lt;/h3&gt;
 &lt;p&gt;如果目标函数恒等于零，那么其最优解要么是零（如果可行集非空），要么是 $\infty$（如果可行集是空集）。我们称其为&lt;strong&gt;可行性问题&lt;/strong&gt;，写作&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{find} \quad &amp; x \\\\
@@ -127,6 +149,8 @@ $$
 &lt;p&gt;因此，可行性问题可以用来判断约束是否一致。如是，则找到一个满足它们的点。&lt;/p&gt;
 &lt;h2 id=&#34;优化问题的标准表述&#34;&gt;优化问题的标准表述&lt;/h2&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; f_0(x) \\\\
@@ -137,6 +161,8 @@ $$
 
 &lt;p&gt;我们可以通过转化的方式将优化问题的一般形式化为标准形式。例如一般的等式约束：&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     &amp; g_i(x) = \tilde{g}_i(x) \\\\
@@ -145,6 +171,8 @@ $$
 $$
 
 &lt;p&gt;可以添加负号更变不等号的方向：&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -155,6 +183,8 @@ $$
 
 &lt;p&gt;框约束直接约束变量的范围，其可行集看起来是一个方框。&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; f_0(x) \\\\
@@ -163,6 +193,8 @@ $$
 $$
 
 &lt;p&gt;可以将该问题表示成标准形式为&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -175,6 +207,8 @@ $$
 &lt;h3 id=&#34;极大化问题&#34;&gt;极大化问题&lt;/h3&gt;
 &lt;p&gt;按习惯，我们主要考虑极小化问题。而极大化问题&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{maximize} \quad &amp; f_0(x) \\\\
@@ -185,6 +219,8 @@ $$
 
 &lt;p&gt;可以通过在同样的约束下极小化 $-f_0$ 得到求解。其最优值的定义为&lt;/p&gt;
 
+
+
 $$
 p^{\star}=\sup \{f_{0}(x) \mid f_{i}(x) \leqslant 0, i=1, \cdots, m, \quad h_{i}(x)=0, i=1, \cdots, p\}
 $$
@@ -194,6 +230,8 @@ $$
 &lt;h3 id=&#34;变量变换&#34;&gt;变量变换&lt;/h3&gt;
 &lt;p&gt;设 $\phi: \mathbf{R}^n \rightarrow \mathbf{R}^n$ 是一映射，其象包含了问题的定义域，即 $\phi(\operatorname{dom}) \supseteq \mathcal{D}$。我们定义函数&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \tilde{f}_i(z)=f_i(\phi(z)), &amp;\quad i=0, \cdots, m \\\\
@@ -202,6 +240,8 @@ $$
 $$
 
 &lt;p&gt;关于 $z$ 的问题&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -216,6 +256,8 @@ $$
 &lt;h3 id=&#34;目标函数和约束函数的变换&#34;&gt;目标函数和约束函数的变换&lt;/h3&gt;
 &lt;p&gt;设 $\psi_0: \mathbf{R} \rightarrow \mathbf{R}$ 单增；$\psi_1, \cdots, \psi_m: \mathbf{R} \rightarrow \mathbf{R}$ 满足：当且仅当 $u \leqslant 0$ 时 $\psi_i(u) \leqslant 0$；$\psi_{m+1}, \cdots, \psi_{m+p}: \mathbf{R} \rightarrow \mathbf{R}$ 满足：当且仅当 $u = 0$ 时 $\psi_i(u) = 0$。我们定义复合函数&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \tilde{f}_i(x)&amp;=\psi_i(f_i(x)), \quad i=0, \cdots, m \\\\
@@ -224,6 +266,8 @@ $$
 $$
 
 &lt;p&gt;那么，问题&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -237,11 +281,15 @@ $$
 &lt;h4 id=&#34;举例-1&#34;&gt;举例&lt;/h4&gt;
 &lt;p&gt;考虑无约束的 Euclid 范数极小化问题&lt;/p&gt;
 
+
+
 $$
 \operatorname{minimize} \| Ax - b \|_2, \quad x \in \mathbf{R}^n
 $$
 
 &lt;p&gt;因为范数是非负的，所以为了求解方便，我们一般求解范数的平方&lt;/p&gt;
+
+
 
 $$
 \operatorname{minimize} \| Ax - b \|_2^2 = (Ax-b)^T(Ax-b)
@@ -250,6 +298,8 @@ $$
 &lt;p&gt;这两个问题显然是等价的——因为最优解相同。但要注意，这两个问题是不同的问题。&lt;/p&gt;
 &lt;h3 id=&#34;松弛变量&#34;&gt;松弛变量&lt;/h3&gt;
 &lt;p&gt;通过观察我们可以得到一个简单的变换，即 $f_i(x) \leqslant 0$ 等价于存在一个 $s_i \geqslant 0$ 满足 $f_i(x) + s_i = 0$。利用这个变换，我们可以得到问题&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -265,6 +315,8 @@ $$
 &lt;h3 id=&#34;消除等式约束&#34;&gt;消除等式约束&lt;/h3&gt;
 &lt;p&gt;设函数 $\phi: \mathbf{R}^k \rightarrow \mathbf{R}^n$，满足&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     &amp; h_i(x) = 0, \quad i=1,\cdots,p \\\\
@@ -273,6 +325,8 @@ $$
 $$
 
 &lt;p&gt;那么，优化问题&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -285,6 +339,8 @@ $$
 &lt;h3 id=&#34;消除线性等式约束&#34;&gt;消除线性等式约束&lt;/h3&gt;
 &lt;p&gt;如果等式约束是线性的，即 $Ax = b$，那么我们可以令 $F \in \mathbf{R}^{n \times k}$ 为满足 $\mathcal{R}(F) = \mathcal{N}(A)$ 的矩阵。再令 $x_0$ 表示等式约束的任意可行解，那么线性方程 $Ax = b$ 的通解可以表示为 $x=Fz+x_0$。将之代入原问题可以得到关于 $z$ 的问题&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{maximize} \quad &amp; f_0(Fz+x_0) \\\\
@@ -295,6 +351,8 @@ $$
 &lt;h3 id=&#34;引入等式约束&#34;&gt;引入等式约束&lt;/h3&gt;
 &lt;p&gt;考虑问题&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{maximize} \quad &amp; f_0(A_0x+b_0) \\\\
@@ -304,6 +362,8 @@ $$
 $$
 
 &lt;p&gt;这个问题的目标函数和约束函数由函数 $f_i$ 和仿射变换 $A_ix+b_i$ 的复合给出。我们引入新的变量 $y_i$ 和新的等式约束 $y_i = A_ix + b_i$，$i=0,\cdots,m$，从而构造等价问题&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -316,12 +376,16 @@ $$
 
 &lt;h3 id=&#34;优化部分变量&#34;&gt;优化部分变量&lt;/h3&gt;
 
+
+
 $$
 \inf_{x,y} f(x,y) = \inf_{x} \{ \inf_{y} f(x,y) \}
 $$
 
 &lt;p&gt;这是一个简单而普适的规则，说明我们可以先优化一部分变量再优化另一部分变量来优化一个函数。&lt;/p&gt;
 &lt;p&gt;设变量 $x \in \mathbf{R}^n$ 被分为 $x=(x_1,x_2)$，其中 $x_1 \in \mathbf{R}^{n_1}$，$x_2 \in \mathbf{R}^{n_2}$，并且 $n_1+n_2=n$。考虑问题&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -333,6 +397,8 @@ $$
 
 &lt;p&gt;这种约束相互独立的问题适合采用每次只优化一部分变量的方法来进行优化。&lt;/p&gt;
 &lt;h3 id=&#34;上镜图问题形式&#34;&gt;上镜图问题形式&lt;/h3&gt;
+
+
 
 $$
 \begin{aligned}
@@ -360,6 +426,8 @@ $$
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -371,14 +439,19 @@ $$
                height=&#34;522&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h3 id=&#34;隐式与显式约束&#34;&gt;隐式与显式约束&lt;/h3&gt;
 &lt;p&gt;我们可以通过改变定义域将任何约束隐式地表达在目标函数中。作为一个极端的例子，可以将标准形式问题表示为如下一个无约束问题&lt;/p&gt;
+
+
 
 $$
 \mathrm{minimize} F(x)
 $$
 
 &lt;p&gt;我们用 $f_0$ 来定义 $F$，但其定义域被限定在可行集中&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -396,6 +469,8 @@ $$
       <pubDate>Fri, 18 Mar 2022 15:38:25 +0800</pubDate>
       <guid>https://bowenei.gitee.io/learn/convex-optimization/convex-optimization-problems/convex-optimization/</guid>
       <description>&lt;h2 id=&#34;凸优化问题的标准形式&#34;&gt;凸优化问题的标准形式&lt;/h2&gt;
+
+
 
 $$
 \begin{aligned}
@@ -416,6 +491,8 @@ $$
 &lt;h3 id=&#34;凹最大化问题&#34;&gt;凹最大化问题&lt;/h3&gt;
 &lt;p&gt;若目标函数 $f_0$ 是凹函数，则称最大化问题&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{maximize} \quad &amp; f_0(x) \\\\
@@ -428,6 +505,8 @@ $$
 &lt;h3 id=&#34;凸优化问题的抽象形式&#34;&gt;凸优化问题的抽象形式&lt;/h3&gt;
 &lt;p&gt;考虑 $\mathbf{R}^2$ 上的问题&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
 \mathrm{maximize} \quad &amp; f_{0}(x)=x_{1}^{2}+x_{2}^{2} \\\\
@@ -438,12 +517,16 @@ $$
 
 &lt;p&gt;根据凸优化的定义，它不是一个凸优化问题。因为等式约束 $h_1$ 不是仿射函数，并且不等式约束 $f_1$ 也不是凸函数。不过，该问题的可行域却是凸集&lt;/p&gt;
 
+
+
 $$
 \{ x \mid x_1 \leqslant 0, x_1 + x_2 = 0 \}
 $$
 
 &lt;p&gt;从客观上讲，我们最小化了凸集上的凸函数。那么为什么根据凸优化的定义，它不是一个凸优化问题呢？&lt;/p&gt;
 &lt;p&gt;上述问题其实和下面的问题等价&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -459,11 +542,15 @@ $$
 &lt;h2 id=&#34;可微目标函数的最优性准则&#34;&gt;可微目标函数的最优性准则&lt;/h2&gt;
 &lt;p&gt;设凸优化问题的目标函数 $f_0$ 是可微的，那么 $\forall x, y \in \operatorname{dom} f_0$&lt;/p&gt;
 
+
+
 $$
 f_0(y) \geqslant f_0(x) + \nabla f_0(x)^T (y-x)
 $$
 
 &lt;p&gt;设 $X$ 表示可行域，即&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -473,6 +560,8 @@ $$
 $$
 
 &lt;p&gt;那么 $x$ 是最优的当且仅当&lt;/p&gt;
+
+
 
 $$
 \forall y \in X, \quad \nabla f_0(x)^T (y-x) \geqslant 0
@@ -486,6 +575,8 @@ $$
 &lt;h3 id=&#34;无约束凸优化问题&#34;&gt;无约束凸优化问题&lt;/h3&gt;
 &lt;p&gt;对于无约束凸优化问题，$x$ 是最优解的充要条件是&lt;/p&gt;
 
+
+
 $$
 \nabla f_0(x) = 0
 $$
@@ -493,11 +584,15 @@ $$
 &lt;p&gt;这就是我们非常熟悉的利用导数等于零来求极值的方法。&lt;/p&gt;
 &lt;p&gt;无约束二次优化是一个很好的例子，考虑 $\mathbf{R}^n$ 上的目标函数&lt;/p&gt;
 
+
+
 $$
 f_0(x) = \frac{1}{2} x^TPx + q^T + r
 $$
 
 &lt;p&gt;其中 $P \in \mathbf{S}^n_+$。$x$ 是 $f_0$ 的极小值的充要条件是&lt;/p&gt;
+
+
 
 $$
 \nabla f_0(x) = Px + q = 0
@@ -511,6 +606,8 @@ $$
 &lt;/ul&gt;
 &lt;h3 id=&#34;只含等式约束的问题&#34;&gt;只含等式约束的问题&lt;/h3&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; f_0(x) \\\\
@@ -520,11 +617,15 @@ $$
 
 &lt;p&gt;这样，可行域也是仿射的。于是可行解 $x$ 的最优性条件为：对任意满足 $Ay = b$ 的 $y$，&lt;/p&gt;
 
+
+
 $$
 \nabla f_0(x)^T(y-x) \geqslant 0
 $$
 
 &lt;p&gt;都成立。由于 $x$ 是可行的，每个可行的 $y$ 都可以表示成直线参数方程的形式 $y=x+v$，其中 $v \in \mathcal{N}(A)$。因此，上式可以转化为&lt;/p&gt;
+
+
 
 $$
 \forall v \in \mathcal{N}(A), \quad \nabla f_0(x)^Tv \geqslant 0
@@ -532,11 +633,15 @@ $$
 
 &lt;p&gt;如果一个线性函数在其子空间上非负，则它在子空间上必恒等于零。因此，$\forall v \in \mathcal{N}(A)$，有 $\nabla f_0(x)^Tv = 0$，即&lt;/p&gt;
 
+
+
 $$
 \nabla f_0(x) \bot \mathcal{N}(A)
 $$
 
 &lt;p&gt;利用导出正交分解的性质&lt;/p&gt;
+
+
 
 $$
 \mathcal{N}(A) = \mathcal{R}(A^T)^{\bot}
@@ -544,12 +649,16 @@ $$
 
 &lt;p&gt;可以将只含等式约束的凸优化问题表示为 $\nabla f_0(x) \in \mathcal{R}(A^T)$，即存在 $v \in \mathbf{R}^p$，使得&lt;/p&gt;
 
+
+
 $$
 \nabla f_0(x) + A^Tv = 0
 $$
 
 &lt;p&gt;同时考虑 $Ax = b$ 要求（即要求 $x$ 可行），这是经典的 Lagrange 乘子最优性条件。&lt;/p&gt;
 &lt;h3 id=&#34;非负象限中的极小化&#34;&gt;非负象限中的极小化&lt;/h3&gt;
+
+
 
 $$
 \begin{aligned}
@@ -559,6 +668,8 @@ $$
 $$
 
 &lt;p&gt;其最优性条件可以表示为&lt;/p&gt;
+
+
 
 $$
 \begin{cases}
@@ -573,6 +684,8 @@ $$
 &lt;h3 id=&#34;消除等式约束&#34;&gt;消除等式约束&lt;/h3&gt;
 &lt;p&gt;由于凸优化问题的等式约束都是线性等式 $Ax=b$，我们可以将之转化为非齐次线性方程组 $Ax=b$ 的一个特解 $x_0$ 和域为 $A$ 的零空间的矩阵 $F$ 来消除这些等式约束，从而得到关于 $z$ 的问题&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; f_0(Fz+x_0) \\\\
@@ -586,6 +699,8 @@ $$
 &lt;p&gt;由于凸优化问题中的等式约束必须是仿射的，所以 $f_i$ 需为仿射的。换而言之，为线性不等式引入松弛变量保持问题的凸性不变。&lt;/p&gt;
 &lt;h3 id=&#34;上镜图问题形式&#34;&gt;上镜图问题形式&lt;/h3&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; t \\\\
@@ -596,6 +711,8 @@ $$
 $$
 
 &lt;h2 id=&#34;拟凸优化&#34;&gt;拟凸优化&lt;/h2&gt;
+
+
 
 $$
 \begin{aligned}
@@ -625,6 +742,8 @@ $$
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -636,15 +755,20 @@ $$
                height=&#34;473&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;如图所示的拟凸函数在 $x$ 是局部最优解，但却不是全局最优解。这个例子说明了在凸函数中的最优性条件 $f^{\prime}(x)=0$ 对拟凸函数并不成立，它仅仅是一个充分条件。&lt;/p&gt;
 &lt;h3 id=&#34;通过凸可行性问题求解拟凸优化问题&#34;&gt;通过凸可行性问题求解拟凸优化问题&lt;/h3&gt;
 &lt;p&gt;可以通过一族凸不等式来表示拟凸函数的下水平集，这是解决拟凸优化问题的一般方法。令 $\phi_t: \mathbf{R}^n \rightarrow \mathbf{R}$，$t \in \mathbf{R}$ 为满足&lt;/p&gt;
+
+
 
 $$
 f_0(x) \leqslant t \Longleftrightarrow \phi_t(x) \leqslant 0
 $$
 
 &lt;p&gt;的一族非增凸函数。用 $p^{\star}$ 表示拟凸优化问题的最优值。如果可行性问题&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -666,6 +790,8 @@ $$
       <guid>https://bowenei.gitee.io/learn/convex-optimization/convex-optimization-problems/linear-optimization-problems/</guid>
       <description>&lt;h2 id=&#34;定义&#34;&gt;定义&lt;/h2&gt;
 &lt;p&gt;当目标函数和约束函数都是仿射函数时，问题称为&lt;strong&gt;线性规划&lt;/strong&gt;（Linear Program, LP）。线性规划问题的定义如下：&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -693,6 +819,8 @@ $$
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -704,9 +832,12 @@ $$
                height=&#34;681&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;可行域 $\mathcal{P}$ 是一个多面体（图中蓝色六边形），目标函数 $c^Tx$ 是线性的，所以其等位曲线是与 $c$ 正交的超平面（如虚线所示）。点 $x^{\star}$ 是最优的，它是 $\mathcal{P}$ 中在方向 $-c$ 上最远的点。&lt;/p&gt;
 &lt;h3 id=&#34;线性规划的标准形式和不等式形式&#34;&gt;线性规划的标准形式和不等式形式&lt;/h3&gt;
 &lt;p&gt;在标准形式线性规划中仅有的不等式都是分量的非负约束 $x \succeq 0$&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -718,6 +849,8 @@ $$
 
 &lt;p&gt;如果线性规划问题没有等式约束，则成为不等式形式线性规划&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; c^Tx \\\\
@@ -727,6 +860,8 @@ $$
 
 &lt;h3 id=&#34;将线性规划转化为标准形式&#34;&gt;将线性规划转化为标准形式&lt;/h3&gt;
 &lt;p&gt;有时我们需要将一般的线性规划转化为标准形式。第一步是为不等式引入松弛变量 $s_i$，得到&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -738,6 +873,8 @@ $$
 $$
 
 &lt;p&gt;第二步是将变量 $x$ 表示为两个非负变量 $x^+$ 和 $x^-$ 的差，即 $x=x^+-x^-$，$x^+,x^- \succeq 0$，从而得到问题&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -752,6 +889,8 @@ $$
 &lt;h2 id=&#34;线性分式规划&#34;&gt;线性分式规划&lt;/h2&gt;
 &lt;p&gt;在多面体上极小化仿射函数纸币的问题称为线性分式规划&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; \frac{c^Tx+d}{e^Tx+f} \\\\
@@ -764,11 +903,15 @@ $$
 &lt;h3 id=&#34;转化为线性规划&#34;&gt;转化为线性规划&lt;/h3&gt;
 &lt;p&gt;如果可行集&lt;/p&gt;
 
+
+
 $$
 \{ x \mid Gx \preceq h, Ax=b, e^Tx+f &gt; 0 \}
 $$
 
 &lt;p&gt;非空，则线性分式规划可以转换为等价的线性规划&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -791,6 +934,8 @@ $$
       <description>&lt;h2 id=&#34;定义&#34;&gt;定义&lt;/h2&gt;
 &lt;p&gt;当凸优化问题的目标函数是凸二次型并且约束函数为仿射时，该问题被称为二次规划（Quadratic Program, QP）。二次规划问题可以表示为&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; \frac{1}{2} x^TPx + q^Tx + r \\\\
@@ -800,6 +945,8 @@ $$
 $$
 
 &lt;p&gt;其中 $P \in \mathbf{S}^n_+$，$G \in \mathbf{R}^{p \times n}$。可以用下图来表示二次规划问题。&lt;/p&gt;
+
+
 
 
 
@@ -827,8 +974,11 @@ $$
                height=&#34;760&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h3 id=&#34;二次约束二次规划&#34;&gt;二次约束二次规划&lt;/h3&gt;
 &lt;p&gt;如果不仅是目标函数，而且不等式约束也是凸二次型，即&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -843,12 +993,16 @@ $$
 &lt;h2 id=&#34;举例&#34;&gt;举例&lt;/h2&gt;
 &lt;h3 id=&#34;最小二乘及回归&#34;&gt;最小二乘及回归&lt;/h3&gt;
 
+
+
 $$
 \| Ax - b \|^2_2 = x^TA^TAx - 2b^TAx + b^Tb
 $$
 
 &lt;p&gt;上面的凸二次函数是一个（无约束的）二次规划。我们在很多领域都会看到类似的式子，有些地方会称其为回归分析或者最小二乘逼近。这个问题很简单，可以求出其解析解 $x = A^{\dagger} b$。&lt;/p&gt;
 &lt;h2 id=&#34;二阶锥规划&#34;&gt;二阶锥规划&lt;/h2&gt;
+
+
 
 $$
 \begin{aligned}
@@ -859,6 +1013,8 @@ $$
 $$
 
 &lt;p&gt;称上述问题为二阶锥规划（Second-Order Cone Program, SOCP），其中 $x \in \mathbf{R}^n$ 是优化变量，$A_i \in \mathbf{R}^{n_i \times n}$，$F \in \mathbf{R}^{p \times n}$。并且我们称约束&lt;/p&gt;
+
+
 
 $$
 \| Ax + b \|_2 \leqslant c^Tx + d
@@ -877,12 +1033,16 @@ $$
 &lt;h2 id=&#34;单项式和正项式&#34;&gt;单项式和正项式&lt;/h2&gt;
 &lt;p&gt;定义函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，$\operatorname{dom} f = \mathbf{R}^n_{++}$，则单项式定义为&lt;/p&gt;
 
+
+
 $$
 f(x) = c x_1^{a_1} x_2^{a_2} \cdots x_n^{a_n}
 $$
 
 &lt;p&gt;其中 $c &amp;gt; 0$，$a_i \in \mathbf{R}$。这里的单项式和过去在中学里学习的单项式的概念其实是类似的，只是定义更加严格，要确保其函数值为正。&lt;/p&gt;
 &lt;p&gt;有了单项式的定义，我们就可以定义多项式了。由于我们的单项式都是正的，多项式在这里被称为正项式&lt;/p&gt;
+
+
 
 $$
 f(x) = \sum_{k=1}^K c_k x_1^{a_{1k}} x_2^{a_{2k}} \cdots x_n^{a_{nk}}
@@ -892,6 +1052,8 @@ $$
 &lt;p&gt;单项式对数乘和除都是封闭的，正项式对加法、数乘和非负的伸缩变换都是封闭的。正项式和单项式相乘，结果仍然是一个正项式；类似地，正项式除以单项式，结果仍然是一个正项式。这些和我们在中学里学到的完全一样。&lt;/p&gt;
 &lt;h2 id=&#34;几何规划&#34;&gt;几何规划&lt;/h2&gt;
 &lt;p&gt;几何规划（Geometric Program, GP）是定义在单项式和正项式上的优化问题，如下&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -905,6 +1067,8 @@ $$
 &lt;h3 id=&#34;几何规划的推广&#34;&gt;几何规划的推广&lt;/h3&gt;
 &lt;p&gt;如果几何规划问题的不等式约束是 $f(x) \leqslant h(x)$，我们可以在不等式两边同除以 $h(x)$，得到&lt;/p&gt;
 
+
+
 $$
 \frac{f(x)}{h(x)} \leqslant 1
 $$
@@ -912,12 +1076,16 @@ $$
 &lt;p&gt;根据上述性质，不等号左边的函数仍然是一个正项式，仍然满足几何规划问题的定义。&lt;/p&gt;
 &lt;p&gt;类似地，如果几何规划问题的等式约束是 $h_1(x) = h_2(x)$，我们同样也可以在等式两边同除以 $h_2(x)$，得到&lt;/p&gt;
 
+
+
 $$
 \frac{h_1(x)}{h_2(x)} = 1
 $$
 
 &lt;p&gt;根据上述性质，不等号左边的函数仍然是一个单项式，仍然满足几何规划问题的定义。&lt;/p&gt;
 &lt;p&gt;下面是一个例子：&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -929,6 +1097,8 @@ $$
 $$
 
 &lt;p&gt;使用上述推广，原问题可以化为标准的几何规划形式&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -944,6 +1114,8 @@ $$
 &lt;p&gt;一般来说，几何规划问题不是凸优化问题，但是可以通过变量变换以及目标函数和约束函数的变换将之转化为凸优化问题。&lt;/p&gt;
 &lt;p&gt;我们定义新的变量 $y_i = \log x_i$，则 $x_i = e^{y_i}$。于是，目标函数可化为&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     f(x) &amp;= \sum_{k=1}^K c_k x_1^{a_{1k}} x_2^{a_{2k}} \cdots x_n^{a_{nk}} \\\\
@@ -954,6 +1126,8 @@ $$
 
 &lt;p&gt;其中，$a_k = (a_{1k}, \cdots, a_{nk})$，$b_k = \log c_k$。于是，原问题可化为&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; \sum_{k=1}^{K_0} e^{a_{0k}^T y+b_{0k}} \\\\
@@ -963,6 +1137,8 @@ $$
 $$
 
 &lt;p&gt;现在我们通过取对数的方法来变换目标函数和约束函数，得到&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -983,6 +1159,8 @@ $$
       <guid>https://bowenei.gitee.io/learn/convex-optimization/convex-optimization-problems/generalized-inequality-constraints/</guid>
       <description>&lt;p&gt;我们知道，引入广义不等式后，可以对标准形式的凸优化问题做如下推广：&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; f_0(x) \\\\
@@ -1000,6 +1178,8 @@ $$
 &lt;h2 id=&#34;锥形式问题&#34;&gt;锥形式问题&lt;/h2&gt;
 &lt;p&gt;具有广义不等式的最简单的凸优化问题是锥形式问题（或称为锥规划），它有线性目标函数和一个不等式约束函数，且该函数是仿射的（因此是 $K$- 凸的）：&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; c^Tx \\\\
@@ -1011,6 +1191,8 @@ $$
 &lt;p&gt;当 $K$ 是非负象限时，锥形式问题退化为线性规划。我们可以将锥形式问题视为线性规划的推广，其中的分量不等式被替换为广义不等式。&lt;/p&gt;
 &lt;p&gt;下面是锥形式问题的标准形式&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; c^Tx \\\\
@@ -1021,6 +1203,8 @@ $$
 
 &lt;p&gt;而下面则是不等式形式的锥形式问题&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; c^Tx \\\\
@@ -1030,6 +1214,8 @@ $$
 
 &lt;h2 id=&#34;半定规划&#34;&gt;半定规划&lt;/h2&gt;
 &lt;p&gt;当 $K$ 是 $k$ 阶半正定锥时，即 $K \in \mathbf{S}^k_+$，相应的的锥形式问题被称为半定规划（Semidefinite Program, SDP），并且具有如下形式&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -1044,6 +1230,8 @@ $$
 &lt;h3 id=&#34;标准和不等式形式的半定规划&#34;&gt;标准和不等式形式的半定规划&lt;/h3&gt;
 &lt;p&gt;标准形式的 SDP 具有对变量 $X \in \mathbf{S}^n$ 的线性等式约束和（矩阵）非负约束：&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; \operatorname{tr}(C X) \\\\
@@ -1055,6 +1243,8 @@ $$
 &lt;p&gt;其中 $C, A_1, \cdots, A_P \in \mathbf{S}^n$。&lt;/p&gt;
 &lt;p&gt;如图不等式形式的 LP，不等式形式的 SDP 不含有等式约束但具有一个 LMI：&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; c^Tx \\\\
@@ -1064,6 +1254,8 @@ $$
 
 &lt;h3 id=&#34;多-lmi-与线性不等式&#34;&gt;多 LMI 与线性不等式&lt;/h3&gt;
 &lt;p&gt;对于具有线性目标，等式、不等式约束及多个 LMI 约束的问题&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -1075,6 +1267,8 @@ $$
 $$
 
 &lt;p&gt;仍然经常称其为 SDP。从单个 LMI 和线性不等式可以构造具有达到对角块的 LMI，从而可以很容易地将该问题转化为一个 SDP&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -1088,6 +1282,8 @@ $$
 &lt;h3 id=&#34;二阶锥规划&#34;&gt;二阶锥规划&lt;/h3&gt;
 &lt;p&gt;SOCP 可以表示为锥形式问题&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; c^Tx \\\\
@@ -1097,6 +1293,8 @@ $$
 $$
 
 &lt;p&gt;其中&lt;/p&gt;
+
+
 
 $$
 K_{i}=\left\{(y, t) \in \mathbf{R}^{n_i+1} \mid \|y\|_2 \leqslant t\right\}
@@ -1113,6 +1311,8 @@ $$
       <description>&lt;h2 id=&#34;广义和凸的向量优化问题&#34;&gt;广义和凸的向量优化问题&lt;/h2&gt;
 &lt;p&gt;我们将广义的向量优化问题表示为&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad &amp; f_0(x) \text{（关于} K \text{）}\\\\
@@ -1126,6 +1326,8 @@ $$
 &lt;h2 id=&#34;最优解与值&#34;&gt;最优解与值&lt;/h2&gt;
 &lt;p&gt;下面我们考虑可行点的目标值的集合&lt;/p&gt;
 
+
+
 $$
 \begin{aligned}
     \mathcal{O} = \{f_{0}(x) \mid \exists x \in \mathcal{D}, f_i(x) &amp; \leqslant 0, i=1, \cdots, m, \\\\
@@ -1136,11 +1338,15 @@ $$
 &lt;p&gt;它被称为可达目标值集合。如果这个集合有最小元，即有可行解 $x$ 使得对于所有可行的 $y$ 都有 $f_0(x) \preceq_K f_0(y)$，那么我们称 $x$ 是最优解，并且称 $f_0(x)$ 为该问题的最优值。（当向量优化问题有最优解时，该值唯一。）&lt;/p&gt;
 &lt;p&gt;点 $x^{\star}$ 是最优的，当且仅当它是可行的，并且&lt;/p&gt;
 
+
+
 $$
 \mathcal{O} \subseteq f_0(x^{\star}) + K
 $$
 
 &lt;h3 id=&#34;几何意义&#34;&gt;几何意义&lt;/h3&gt;
+
+
 
 
 
@@ -1168,11 +1374,14 @@ $$
                height=&#34;685&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;深色的部分表示目标值在 $\mathbf{R}^2$ 上的向量优化问题的可达目标值集合 $\mathcal{O}$，其中锥为 $K = \mathbf{R}^2_+$。在这个例子中，标有 $f_0(x^{\star})$ 的点为问题的最优值，$x^{\star}$ 为一个最优解。目标值 $f_0(x^{\star})$ 与其他任意可达值 $f_0(y)$ 均可比，并且比 $f_0(y)$ 更好或相等。（这里的“好”和“相等”表示在其下、其左。）&lt;/p&gt;
 &lt;p&gt;浅色的区域为 $f_0(x^{\star}) + K$，它是所有 $z \in \mathbf{R}^2$ 的集合，对应目标值比 $f_0(x^{\star})$ 差（或相等）。&lt;/p&gt;
 &lt;h2 id=&#34;pareto-最优解与值&#34;&gt;Pareto 最优解与值&lt;/h2&gt;
 &lt;p&gt;现在，我们考虑可达目标值集合不含最小元的情况，因此问题不含有最优解和最优值。&lt;/p&gt;
 &lt;p&gt;如果 $f_0(x)$ 是可达集合 $\mathcal{O}$ 的极小元，我们称可行解 $x$ 为 Pareto 最优的（或有效的）。在这种情况下下，我们称 $f_0(x)$ 为向量优化问题的一个 Pareto 最优值。因此，点 $x$ 是 Pareto 最优的，如果它是可行的并且&lt;/p&gt;
+
+
 
 $$
 \forall y, \quad f_0(y) \preceq_K f_0(x) \Longrightarrow f_0(y) = f_0(x)
@@ -1182,11 +1391,15 @@ $$
 &lt;h3 id=&#34;几何意义-1&#34;&gt;几何意义&lt;/h3&gt;
 &lt;p&gt;点 $x$ 是 Pareto 最优的，当且仅当它是可行的，并且&lt;/p&gt;
 
+
+
 $$
 (f_(0) - K) \cap \mathcal{O} = \{ f_0(x) \}
 $$
 
 &lt;p&gt;集合 $f_(0) - K$ 可以解释为比 $f_0(x)$ 好或相等的值的集合。因此，上述条件说明了唯一比 $f_0(x)$ 好或相等的可达值就是 $f_0(x)$ 本身。如下图所示：&lt;/p&gt;
+
+
 
 
 
@@ -1214,9 +1427,12 @@ $$
                height=&#34;758&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;右上角的部分是目标值在 $\mathbf{R}^2$ 上的向量优化问题的可达目标值集合 $\mathcal{O}$，其中锥为 $K = \mathbf{R}^2_+$。这个问题不含有最优解或最优值，但确实有 Pareto 最优解集。在 $O$ 的左下边界上，黄色的点左边和绿色的点右边两部分为 Pareto 最优解集的对应值。$x^{\mathrm{po}}$ 是一个 Pareto 最优解，$f_0(x^{\mathrm{po}})$ 是一个 Pareto 最优值。&lt;/p&gt;
 &lt;p&gt;浅色阴影区域是 $f_0(x^{\mathrm{po}}) - K$，即所有对应值比 $f_0(x^{\mathrm{po}})$ 好（或相等）的 $z \in \mathbf{R}^2$。&lt;/p&gt;
 &lt;p&gt;一个向量优化问题可以有很多 Pareto 最优值（和解）。Pareto 最优值的集合记为 $\mathcal{P}$，它满足&lt;/p&gt;
+
+
 
 $$
 \mathcal{P} \subseteq \mathcal{O} \cap \operatorname{bd} \mathcal{O}
@@ -1224,6 +1440,8 @@ $$
 
 &lt;h2 id=&#34;标量化&#34;&gt;标量化&lt;/h2&gt;
 &lt;p&gt;标量化是寻找向量优化问题 Pareto 最优解的标准技术。选择任意 $\lambda \succ _{K^*} 0$，即任意在对偶广义不等式中为正的向量，考虑标量优化问题&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}
@@ -1234,6 +1452,8 @@ $$
 $$
 
 &lt;p&gt;并令 $x$ 为最优解。那么，$x$ 对于向量优化问题是 Pareto 最优的。利用表量化，我们可以通过求解普通的标量优化问题，寻找任意向量优化问题的 Pareto 最优解。权向量 $\lambda$ 是一个自由参数，但必须满足 $\lambda \succ _{K^*} 0$。通过改变 $\lambda$，我们（有可能）得到向量优化问题的不同的 Pareto 最优解。如下图所示：&lt;/p&gt;
+
+
 
 
 
@@ -1261,6 +1481,7 @@ $$
                height=&#34;753&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;图中的 $\mathcal{O}$ 为与锥 $K = \mathbf{R}^2_+$ 相应的向量优化函数的可达值集合。图中显示了三个 Pareto 最优值 $f_0(x_1), f_0(x_2), f_0(x_3)$。前两个值可以通过标量化得到（图中红点），而值 $f_0(x_3)$ 是最优的，但不能通过标量化找到（图中绿点）。&lt;/p&gt;
 &lt;h3 id=&#34;凸向量优化问题的标量化&#34;&gt;凸向量优化问题的标量化&lt;/h3&gt;
 &lt;p&gt;与向量优化问题类似，凸向量优化问题也可以通过求解凸标量优化问题找到凸向量优化问题的 Pareto 最优解。&lt;/p&gt;
@@ -1279,11 +1500,15 @@ $$
 &lt;/ul&gt;
 &lt;p&gt;在多目标优化问题中，最优解 $x^{\star}$ 满足：对于可行的 $y$ 都有&lt;/p&gt;
 
+
+
 $$
 F_{i}(x^{\star}) \leqslant F_{i}(y), \quad i=1, \cdots, q
 $$
 
 &lt;p&gt;换言之，$x^{\star}$ 同时是下述所有 $j=1,\cdots,q$ 标量优化问题的最优解&lt;/p&gt;
+
+
 
 $$
 \begin{aligned}

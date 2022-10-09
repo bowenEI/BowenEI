@@ -84,6 +84,8 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：下方安装引导程序的位置应当选择 &lt;code&gt;/boot&lt;/code&gt; 分区所在分区。&lt;/p&gt;
+
+
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;小知识：主分区、扩展分区与逻辑分区&lt;/strong&gt;&lt;/p&gt;
@@ -106,7 +108,9 @@
 &lt;h2 id=&#34;备份官方源&#34;&gt;备份官方源&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak   &lt;span class=&#34;c1&#34;&gt;# 备份官方源&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo gedit /etc/apt/sources.list                          &lt;span class=&#34;c1&#34;&gt;# 没有可视化文本编辑器的终端可以使用 vim&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;Tip: Codename&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Ubuntu 中，每个版本都有一个更为特色的名字，这个名字由一个形容词和一个动物名称组成，并且，形容词和名词的首字母都是一致的。从 D 版本开始又增加了一个规则，首字母要顺延上个版本，如果当前版本是 D，下个版本就要以 E 来起头。&lt;/p&gt;
@@ -394,7 +398,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;确认当前正在使用的内核版本，并安装当前运行的内核的内核头文件和开发包：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uname -r
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install linux-headers-&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;uname -r&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;alert alert-warning&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;特别注意！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;确定内核版本后，不要随意更换内核或更新内核，否则可能会导致无法进入桌面系统。&lt;/p&gt;

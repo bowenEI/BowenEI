@@ -55,6 +55,8 @@
 &lt;li&gt;NP 问题包含 P 问题和 NP 完全问题。&lt;/li&gt;
 &lt;li&gt;P 问题和 NP 问题是否存在交集尚未定论，但目前学界普遍认为二者不存在交集。&lt;/li&gt;
 &lt;/ol&gt;
+
+
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;一些基本的 NP 完全问题&lt;/strong&gt;&lt;/p&gt;
@@ -95,6 +97,8 @@
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -106,6 +110,7 @@
                height=&#34;396&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h3 id=&#34;np-完全性的证明&#34;&gt;NP 完全性的证明&lt;/h3&gt;
 &lt;p&gt;证明问题 $A$ 是 NP 完全问题分两步：&lt;/p&gt;
 &lt;ol&gt;
@@ -163,6 +168,8 @@
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -174,6 +181,7 @@
                height=&#34;313&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;树中第 $i$ 层与第 $i+1$ 层结点之间的边上给出了对物品 $i$ 的选择结果，$8$ 个叶子代表 $8$ 个可能解。&lt;/p&gt;
 &lt;p&gt;解空间树可以通过 DFS 和 BFS 的方法生成。&lt;/p&gt;
 &lt;h3 id=&#34;回溯法的基本思想&#34;&gt;回溯法的基本思想&lt;/h3&gt;
@@ -280,7 +288,9 @@
 &lt;h4 id=&#34;问题建模&#34;&gt;问题建模&lt;/h4&gt;
 &lt;p&gt;输入：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;城市集 $C = \{ c_1, c_2, \cdots, c_n \}$&lt;/li&gt;
+&lt;li&gt;城市集 
+
+$C = \{ c_1, c_2, \cdots, c_n \}$&lt;/li&gt;
 &lt;li&gt;距离 $d(c_i, c_j) = d(c_j, c_i)$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;输出：&lt;/p&gt;
@@ -288,6 +298,8 @@
 &lt;li&gt;城市 $c_1, c_2, \cdots c_n$ 的排列 $c_{k_1}, c_{k_2}, c_{k_n}$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;约束条件：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -378,6 +390,8 @@ $$
 &lt;p&gt;现实场景：在城市双向道路两侧车道拥堵状况不一的情况下，如何选择道路行驶能最快到达目的地？&lt;/p&gt;
 &lt;p&gt;非对称旅行商问题和旅行商问题的区别：距离不对称，即&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 d(c_i, c_j) \ne d(c_j, c_i)$
@@ -458,6 +472,8 @@ $$
 &lt;/table&gt;
 &lt;h2 id=&#34;a-算法&#34;&gt;$A^*$ 算法&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Best-first&lt;/strong&gt; 策略：&lt;/p&gt;
+
+
 
 $$
 \begin{align}

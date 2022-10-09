@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en-us" >
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: October 9, 2022 --><html lang="en-us" >
 
 
 <head>
@@ -8,7 +10,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.6.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
   
 
   
@@ -62,32 +64,6 @@
 
   
   
-  
-  
-  
-    
-    
-    
-  
-  
-
-  <meta name="author" content="Bowen Zhou" />
-
-  
-  
-  
-    
-  
-  <meta name="description" content="" />
-
-  
-  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/convex-optimization/mathematical-background/norms/" />
-
-  
-  
-  
-    <meta name="theme-color" content="#1565c0" />
-  
 
   
   
@@ -97,14 +73,14 @@
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
 
   
   
   
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -239,7 +215,11 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.22eea90aebc205ef8ccb946df9feaa49.css" />
+  <link rel="stylesheet" href="/css/wowchemy.e6ed71ec47b33db0e65acae2b0d589c4.css" />
+
+  
+  
+  
 
   
   
@@ -259,82 +239,123 @@
 
 
 
-  
-
-
-  
-
-
-  
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   
 
+
+
+
+
+
+  <meta name="author" content="Bowen Zhou" />
+
+
+
+
+
   
-  
+
+<meta name="description" content="" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/convex-optimization/mathematical-background/norms/" />
+<link rel="canonical" href="https://bowenei.gitee.io/learn/convex-optimization/mathematical-background/norms/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
 
   
   
-    <link rel="manifest" href="/manifest.webmanifest" />
-  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@wowchemy" />
+  <meta property="twitter:creator" content="@wowchemy" />
+<meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+<meta property="og:url" content="https://bowenei.gitee.io/learn/convex-optimization/mathematical-background/norms/" />
+<meta property="og:title" content="范数 | Bowen&#39;s Academic Home" />
+<meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
-  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
-
-  <link rel="canonical" href="https://bowenei.gitee.io/learn/convex-optimization/mathematical-background/norms/" />
-
+    <meta
+      property="article:published_time"
+      content="2021-11-26T19:57:40&#43;08:00"
+    />
   
   
-  
-  
-  
-  
-  
-  
-    
-    
-  
-  
-
-  
-  
-    
-    
-  
-  <meta property="twitter:card" content="summary" />
-  
-    <meta property="twitter:site" content="@wowchemy" />
-    <meta property="twitter:creator" content="@wowchemy" />
-  
-  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
-  <meta property="og:url" content="https://bowenei.gitee.io/learn/convex-optimization/mathematical-background/norms/" />
-  <meta property="og:title" content="范数 | Bowen&#39;s Academic Home" />
-  <meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
-    <meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
-  
-    
-      <meta
-        property="article:published_time"
-        content="2021-11-26T19:57:40&#43;08:00"
-      />
-    
     <meta property="article:modified_time" content="2021-11-26T19:57:40&#43;08:00">
   
 
-  
+
+
+
 
 
 
   
 
+
+
+
+  
+  
+  
+
+  
+  
+
   
 
 
+  
   <title>范数 | Bowen&#39;s Academic Home</title>
 
   
@@ -366,7 +387,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.613040fe4f2c0f007b4dcb64404201cb.js"></script>
+  <script src="/js/wowchemy-init.min.ec9d49ca50e4b80bdb08f0417a28ed84.js"></script>
 
   
 
@@ -410,7 +431,7 @@
 
 
 
-  <div class="page-header">
+  <div class="page-header header--fixed">
     
 
 
@@ -424,7 +445,7 @@
 
 
 
-<header class="header--fixed">
+<header>
   <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
     <div class="container-xl">
 
@@ -653,6 +674,7 @@
           
         
 
+        
         
         
         <li class="nav-item">
@@ -1198,26 +1220,27 @@
 
     <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
 
-      <article class="article">
-
-        <div class="docs-article-container">
-          
-        </div>
-
+      <div class="docs-article-container">
         
+      </div>
+
+      
+      
+      
+
+      <div class="docs-article-container">
         
+        <h1>范数</h1>
 
-        <div class="docs-article-container">
+        <article class="article-style">
+
           
-          <h1>范数</h1>
+          
 
-          <div class="article-style">
-
-            
-            
-
-            <h2 id="euclid-范数">Euclid 范数</h2>
+          <h2 id="euclid-范数">Euclid 范数</h2>
 <h3 id="内积">内积</h3>
+
+
 
 $$
 \begin{align}
@@ -1227,6 +1250,8 @@ $$
 
 <h3 id="ell_2-范数">$\ell_2$-范数</h3>
 
+
+
 $$
 \begin{align}
 \|x\|_2 = \left ( x^Tx \right ) ^{1/2} = \left ( x_1^2 + \dots + x_n^2 \right ) ^{1/2}
@@ -1234,6 +1259,8 @@ $$
 $$
 
 <h3 id="夹角">夹角</h3>
+
+
 
 $$
 \begin{align}
@@ -1246,6 +1273,8 @@ $$
 <h3 id="矩阵的标准内积">矩阵的标准内积</h3>
 <p>对于 $m \times n$ 的实矩阵 $X,Y \in \mathbf{R}^{m \times n}$，其标准内积为：</p>
 
+
+
 $$
 \begin{align}
 \langle X, Y\rangle = \operatorname{tr}\left(X^{T} Y\right) = \sum_{i = 1}^{m} \sum_{j = 1}^{n} X_{i j} Y_{i j}
@@ -1253,6 +1282,8 @@ $$
 $$
 
 <p>特别地，若 $X,Y \in \mathbf{R}^{n \times n}$，则标准内积为：</p>
+
+
 
 $$
 \begin{align}
@@ -1262,6 +1293,8 @@ $$
 
 <h3 id="矩阵的-frobenius-范数">矩阵的 Frobenius 范数</h3>
 
+
+
 $$
 \begin{align}
 \|X\| _F = \left( \operatorname{tr} \left( X^T X \right) \right) ^{1/2} = \left( \sum _{i=1} ^{m} \sum _{j=1} ^{n} X _{i j} ^{2} \right) ^{1/2}
@@ -1269,6 +1302,8 @@ $$
 $$
 
 <p>Frobenius 范数实际上就是将矩阵的系数按一定顺序排列后所生成的相应向量的 $\ell_2$-范数。</p>
+
+
 <div class="alert alert-note">
   <div>
     向量的 Euclid 范数和 $\ell_2$-范数是一回事，但是矩阵的 Frobenius 范数和 $\ell_2$-范数不是一回事。后文详述。
@@ -1287,6 +1322,8 @@ $$
 <h3 id="距离">距离</h3>
 <p>范数是对向量长度的度量，可以用两个向量 $x$ 和 $y$ 差的长度来度量它们之间的距离。</p>
 
+
+
 $$
 \begin{align}
 \operatorname{dist}(x, y)=\|x-y\|
@@ -1295,6 +1332,8 @@ $$
 
 <h3 id="单位球">单位球</h3>
 <p>范数小于或等于 $1$ 的所有向量的集合称为单位球。</p>
+
+
 
 $$
 \begin{align}
@@ -1305,6 +1344,8 @@ $$
 <h2 id="其他范数">其他范数</h2>
 <h3 id="ell_1-范数绝对值之和">$\ell_1$-范数（绝对值之和）</h3>
 
+
+
 $$
 \begin{align}
 \|x\| _1 = \left| x_1 \right| + \cdots + \left| x_n \right|
@@ -1312,6 +1353,8 @@ $$
 $$
 
 <h3 id="ell_infty-范数chebyshev-范数">$\ell_{\infty}$-范数（Chebyshev 范数）</h3>
+
+
 
 $$
 \begin{align}
@@ -1321,6 +1364,8 @@ $$
 
 <h3 id="ell_p-范数">$\ell_p$-范数</h3>
 
+
+
 $$
 \begin{align}
 \|x\| _p = \left( \left| x_1 \right| ^p + \cdots + \left| x_n \right| ^p \right) ^{1/p}
@@ -1329,6 +1374,8 @@ $$
 
 <p>取 $p=1$ 就得到 $\ell_1$-范数，取 $p=2$ 就得到 $\ell_2$-范数。$p \rightarrow \infty$ 时的极限就是 $\ell_{\infty}$-范数。</p>
 <h3 id="p--二次范数">$P$- 二次范数</h3>
+
+
 
 $$
 \begin{align}
@@ -1340,6 +1387,8 @@ $$
 <h2 id="范数的等价性">范数的等价性</h2>
 <p>对所有的 $x \in \mathbf{R}^{n}$，存在正常数 $\alpha$ 和 $\beta$，使得：</p>
 
+
+
 $$
 \begin{align}
 \alpha\|x\| _{\mathrm{a}} \leqslant \|x\| _{\mathrm{b}} \leqslant \beta \|x\| _{\mathrm{a}}
@@ -1347,6 +1396,8 @@ $$
 $$
 
 <p>据此可以证明，$\mathbf{R}^{n}$ 上任何范数可以在 $\sqrt{n}$ 倍的范围内被二次范数一致逼近。</p>
+
+
 
 $$
 \begin{align}
@@ -1357,6 +1408,8 @@ $$
 <h2 id="算子范数">算子范数</h2>
 <p>假设 $| \cdot | _{\mathrm{a}}$ 和 $|\cdot| _{\mathrm{b}}$ 分别是 $\mathbf{R}^{m}$ 和 $\mathbf{R}^{n}$ 上的范数。对于 $X \in \mathbf{R}^{m \times n}$，我们定义由范数 $|\cdot| _{\mathrm{a}}$ 和 $|\cdot| _{\mathrm{b}}$ 导出的<strong>算子范数</strong>。</p>
 
+
+
 $$
 \begin{align}
 \|X\| _{\mathrm{a}, \mathrm{b}}=\sup \{\|X u\| _{\mathrm{a}} \mid \|u\| _{\mathrm{b}} \leqslant 1\}
@@ -1365,6 +1418,8 @@ $$
 
 <h3 id="矩阵的-ell_2-范数">矩阵的 $\ell_2$-范数</h3>
 <p>当 $|\cdot| _{\mathrm{a}}$ 和 $|\cdot| _{\mathrm{b}}$ 都是 Euclid 范数时，$X$ 的算子范数是它的<strong>最大奇异值</strong>。</p>
+
+
 
 $$
 \begin{align}
@@ -1375,6 +1430,8 @@ $$
 <h3 id="最大行和范数和最大列和范数">最大行和范数和最大列和范数</h3>
 <p>由 $\mathbf{R}^{m}$ 和 $\mathbf{R}^{n}$ 上的 $\ell_{\infty}$-范数导出的范数，被称为最大行和范数：</p>
 
+
+
 $$
 \begin{align}
 \|X\| _{\infty}=\sup \{\|X u\| _{\infty} \mid\|u\| _{\infty} \leqslant 1\}=\max _{i=1, \cdots, m} \sum _{j=1}^{n}\left|X _{i j}\right|
@@ -1382,6 +1439,8 @@ $$
 $$
 
 <p>而由 $\mathbf{R}^{m}$ 和 $\mathbf{R}^{n}$ 上的 $\ell_{1}$-范数导出的范数，被称为最大列和范数：</p>
+
+
 
 $$
 \begin{align}
@@ -1391,6 +1450,8 @@ $$
 
 <h2 id="对偶范数">对偶范数</h2>
 
+
+
 $$
 \begin{align}
 \|z\|_{*}=\sup \{z^{T} x \mid \|x\| \leqslant 1\}
@@ -1398,6 +1459,8 @@ $$
 $$
 
 <p>关于对偶范数，有如下结论恒成立：</p>
+
+
 
 $$
 \begin{align}
@@ -1407,16 +1470,22 @@ $$
 
 <p>Euclid 范数的对偶还是 Euclid 范数，$\ell_1$-范数和 $\ell_{\infty}$-范数互为对偶。</p>
 
-          </div>
+        </article>
 
+        
+
+
+
+
+
+        
+
+
+
+        
+        
+        <div class="article-widget">
           
-
-
-
-          
-          
-          <div class="article-widget">
-            
 <div class="post-nav">
   
   
@@ -1428,29 +1497,27 @@ $$
   
 </div>
 
-          </div>
-          
         </div>
+        
+      </div>
 
-        <div class="body-footer">
-          <p>Last updated on Nov 26, 2021</p>
+      <div class="body-footer">
+        <p>Last updated on Nov 26, 2021</p>
 
-          
-
-
-
-
-          
+        
 
 
 
 
-          
+        
 
 
-        </div>
 
-      </article>
+
+        
+
+
+      </div>
 
       <footer class="site-footer">
 
@@ -1468,13 +1535,17 @@ $$
 
 
   
+  
+  
+  
+  
 
-  
 
-  
 
-  
-  
+
+
+
+
 
 
 
@@ -1517,6 +1588,7 @@ $$
 
 
 
+
   <p class="powered-by">
     
     
@@ -1547,7 +1619,7 @@ $$
   
 
 
-<script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
+<script src="/js/vendor-bundle.min.d26509351aa0ff874abbee824e982e9b.js"></script>
 
 
 
@@ -1630,11 +1702,12 @@ $$
 
 
 
+
   
   
 
 
-<script src="/en/js/wowchemy.min.2a14e6cafbd89dd0247015b525702e10.js"></script>
+<script src="/en/js/wowchemy.min.e8ee06ba8371980ffde659871dd593b0.js"></script>
 
 
 
@@ -1671,6 +1744,8 @@ $$
 
 
   <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
 
 
 

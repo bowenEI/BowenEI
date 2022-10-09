@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en-us" >
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: October 9, 2022 --><html lang="en-us" >
 
 
 <head>
@@ -8,7 +10,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.6.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
   
 
   
@@ -62,34 +64,6 @@
 
   
   
-  
-  
-  
-    
-    
-    
-  
-  
-
-  <meta name="author" content="Bowen Zhou" />
-
-  
-  
-  
-    
-  
-  <meta name="description" content="Transformer 是目前人工智能和深度学习领域最著名的模型之一，由 Google 团队于 2017 年 6 月提出，发表在 NeuralPS（Conference on Neural Information Processing Systems）上。起初是为了解决自然语言处理（Natural Language Processing, NLP）领域中的机器翻译问题，没想到它的效果竟然超越了循环神经网络（Recurrent Neural Networks, RNN），只需要用 encoder 和 decoder 以及注意力 attention 机制就可以达到很好的效果。
-Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将图像等数据编码和序列化之后同样可以放进 Transformer 中进行训练，并且也能让模型达到和卷积神经网络（Convolutional Neural Networks, CNN）和深度神经网络（Deep Neural Networks, DNN）相比更加出其不意的效果。这才让 Transformer 在计算机视觉领域大火了起来。
-原文链接" />
-
-  
-  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/post/attention-is-all-you-need/" />
-
-  
-  
-  
-    <meta name="theme-color" content="#1565c0" />
-  
 
   
   
@@ -99,14 +73,14 @@ Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
 
   
   
   
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -241,7 +215,11 @@ Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.22eea90aebc205ef8ccb946df9feaa49.css" />
+  <link rel="stylesheet" href="/css/wowchemy.e6ed71ec47b33db0e65acae2b0d589c4.css" />
+
+  
+  
+  
 
   
   
@@ -261,75 +239,107 @@ Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将
 
 
 
-  
-
-
-  
-
-
-  
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   
 
-  
-  
+
+
+
+
+
+  <meta name="author" content="Bowen Zhou" />
+
+
+
+
 
   
-  
-    <link rel="manifest" href="/manifest.webmanifest" />
-  
 
-  
-  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
-
-  <link rel="canonical" href="https://bowenei.gitee.io/post/attention-is-all-you-need/" />
-
-  
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  
-
-  
-  
-    
-    
-  
-  <meta property="twitter:card" content="summary_large_image" />
-  
-    <meta property="twitter:site" content="@wowchemy" />
-    <meta property="twitter:creator" content="@wowchemy" />
-  
-  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
-  <meta property="og:url" content="https://bowenei.gitee.io/post/attention-is-all-you-need/" />
-  <meta property="og:title" content="Attention Is All You Need | Bowen&#39;s Academic Home" />
-  <meta property="og:description" content="Transformer 是目前人工智能和深度学习领域最著名的模型之一，由 Google 团队于 2017 年 6 月提出，发表在 NeuralPS（Conference on Neural Information Processing Systems）上。起初是为了解决自然语言处理（Natural Language Processing, NLP）领域中的机器翻译问题，没想到它的效果竟然超越了循环神经网络（Recurrent Neural Networks, RNN），只需要用 encoder 和 decoder 以及注意力 attention 机制就可以达到很好的效果。
+<meta name="description" content="Transformer 是目前人工智能和深度学习领域最著名的模型之一，由 Google 团队于 2017 年 6 月提出，发表在 NeuralPS（Conference on Neural Information Processing Systems）上。起初是为了解决自然语言处理（Natural Language Processing, NLP）领域中的机器翻译问题，没想到它的效果竟然超越了循环神经网络（Recurrent Neural Networks, RNN），只需要用 encoder 和 decoder 以及注意力 attention 机制就可以达到很好的效果。
 Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将图像等数据编码和序列化之后同样可以放进 Transformer 中进行训练，并且也能让模型达到和卷积神经网络（Convolutional Neural Networks, CNN）和深度神经网络（Deep Neural Networks, DNN）相比更加出其不意的效果。这才让 Transformer 在计算机视觉领域大火了起来。
-原文链接" /><meta property="og:image" content="https://bowenei.gitee.io/post/attention-is-all-you-need/featured.png" />
-    <meta property="twitter:image" content="https://bowenei.gitee.io/post/attention-is-all-you-need/featured.png" /><meta property="og:locale" content="en-us" />
+原文链接" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/post/attention-is-all-you-need/" />
+<link rel="canonical" href="https://bowenei.gitee.io/post/attention-is-all-you-need/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
   
-    
-      <meta
-        property="article:published_time"
-        content="2021-11-09T22:59:13&#43;08:00"
-      />
-    
+
+
+
+
+
+
+<meta property="twitter:card" content="summary_large_image" />
+
+  <meta property="twitter:site" content="@wowchemy" />
+  <meta property="twitter:creator" content="@wowchemy" />
+<meta property="twitter:image" content="https://bowenei.gitee.io/post/attention-is-all-you-need/featured.png" />
+<meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+<meta property="og:url" content="https://bowenei.gitee.io/post/attention-is-all-you-need/" />
+<meta property="og:title" content="Attention Is All You Need | Bowen&#39;s Academic Home" />
+<meta property="og:description" content="Transformer 是目前人工智能和深度学习领域最著名的模型之一，由 Google 团队于 2017 年 6 月提出，发表在 NeuralPS（Conference on Neural Information Processing Systems）上。起初是为了解决自然语言处理（Natural Language Processing, NLP）领域中的机器翻译问题，没想到它的效果竟然超越了循环神经网络（Recurrent Neural Networks, RNN），只需要用 encoder 和 decoder 以及注意力 attention 机制就可以达到很好的效果。
+Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将图像等数据编码和序列化之后同样可以放进 Transformer 中进行训练，并且也能让模型达到和卷积神经网络（Convolutional Neural Networks, CNN）和深度神经网络（Deep Neural Networks, DNN）相比更加出其不意的效果。这才让 Transformer 在计算机视觉领域大火了起来。
+原文链接" /><meta property="og:image" content="https://bowenei.gitee.io/post/attention-is-all-you-need/featured.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2021-11-09T22:59:13&#43;08:00"
+    />
+  
+  
     <meta property="article:modified_time" content="2021-11-09T22:59:13&#43;08:00">
   
 
-  
+
+
+
 
 
     
@@ -382,9 +392,20 @@ Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将
 
   
 
+
+
+
+  
+  
+  
+
+  
+  
+
   
 
 
+  
   <title>Attention Is All You Need | Bowen&#39;s Academic Home</title>
 
   
@@ -416,7 +437,7 @@ Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将
   
   
   
-  <script src="/js/wowchemy-init.min.613040fe4f2c0f007b4dcb64404201cb.js"></script>
+  <script src="/js/wowchemy-init.min.ec9d49ca50e4b80bdb08f0417a28ed84.js"></script>
 
   
 
@@ -460,7 +481,7 @@ Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将
 
 
 
-  <div class="page-header">
+  <div class="page-header header--fixed">
     
 
 
@@ -474,7 +495,7 @@ Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将
 
 
 
-<header class="header--fixed">
+<header>
   <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
     <div class="container-xl">
 
@@ -705,6 +726,7 @@ Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将
 
         
         
+        
         <li class="nav-item">
           <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
         </li>
@@ -751,6 +773,7 @@ Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将
     <article class="article">
 
   
+
 
 
 
@@ -844,6 +867,8 @@ Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将
 
 <p>这篇文章最具特色的就是标题 Attention Is All You Need，翻译成中文就是“你需要注意”。后来这个标题成为了一个梗，即 xxx Is All You Need。</p>
 <p>值得注意的是，这篇文章的每一位作者后面都打了 <code>*</code> 号，这说明这几位作者的贡献是均等的，论文首先下的注释已经充分说明了这一点。通常我们会认为论文的第一作者是主要贡献者，但是这篇文章是个例外。</p>
+
+
 <details class="toc-inpage d-print-none  " open>
   <summary class="font-weight-bold">Table of Contents</summary>
   <nav id="TableOfContents">
@@ -962,6 +987,8 @@ Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将
 
 
 
+
+
 <figure  id="figure-the-transformer---model-architecture">
   <div class="d-flex justify-content-center">
     <div class="w-100" ><img alt="The Transformer - model architecture." srcset="
@@ -975,6 +1002,7 @@ Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将
   </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
       The Transformer - model architecture.
     </figcaption></figure>
+
 <h3 id="31-encoder-and-decoder-stacks">3.1 Encoder and Decoder Stacks</h3>
 <p><strong>Encoder</strong></p>
 <ul>
@@ -988,6 +1016,8 @@ Transformer 本身是专门为 NLP 领域量身定制的，但是后来人们将
 <li>output: $\textrm{LayerNorm}(x + \textrm{Sublayer}(x))$</li>
 <li>dimension: $d_{model} = 512$</li>
 </ul>
+
+
 <div class="alert alert-note">
   <div>
     <p><strong>BatchNorm 和 LayerNorm 的区别</strong></p>
@@ -1052,6 +1082,8 @@ $$</p>
 
 
 
+
+
 <figure  id="figure-scaled-dot-product-attention">
   <div class="d-flex justify-content-center">
     <div class="w-100" ><img alt="Scaled Dot-Product Attention." srcset="
@@ -1065,7 +1097,10 @@ $$</p>
   </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
       Scaled Dot-Product Attention.
     </figcaption></figure>
+
 <p>注意力函数的计算公式如下：</p>
+
+
 
 $$
 \begin{align}
@@ -1074,6 +1109,8 @@ $$
 $$
 
 <p>$Q$ 即 <code>query</code>，$K$ 即 <code>key</code>，$QK^T$ 即 <code>query</code> 和 <code>key</code> 做内积。作者认为，两个向量的内积值越大，说明相似度越高。除以 $\sqrt{d_k}$ 则表示单位化，然后再用 softmax 得到权重。这里的道理其实就是机器学习中的余弦相似度（余弦距离）：</p>
+
+
 
 $$
 \begin{align}
@@ -1084,6 +1121,8 @@ $$
 <p>注意这里 <code>Mask</code> 的作用是为了避免 $t$ 时刻看到后面的输入。在数学上的具体实现方式是以一个绝对值非常大的负数（$-\infty$）作为指数，计算出来的幂趋向于零，这样就实现了掩盖 $t$ 时刻后面的输入的效果。</p>
 <h4 id="322-multi-head-attention">3.2.2 Multi-Head Attention</h4>
 <p>作者认为，与其计算单个的注意力函数，不如把 <code>query</code>、<code>key</code>、<code>value</code> 投影到一个更低的维度上，投影 $h$ 次，然后再计算 $h$ 次注意力函数，最后每一个函数的输出合并再投影得到最终的输出。如图所示。</p>
+
+
 
 
 
@@ -1113,7 +1152,10 @@ $$
   </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
       Multi-Head Attention.
     </figcaption></figure>
+
 <p>多头注意力函数的计算公式如下：</p>
+
+
 
 $$
 \begin{align}
@@ -1145,6 +1187,8 @@ $$
 <blockquote>
 <p>In addition to attention sub-layers, each of the layers in our encoder and decoder contains a fully connected feed-forward network, which is applied to each position separately and identically. This consists of two linear transformations with a ReLU activation in between.</p>
 </blockquote>
+
+
 
 $$
 \begin{align}
@@ -1207,6 +1251,8 @@ $$
 </table>
 <p>作者对比了自注意力机制、RNN、CNN 和受限制的 <code>restricted</code> 自注意力机制的三个方面：计算复杂度、顺序计算、最大路径长度。显然计算复杂度越低越好；顺序计算是指下一步计算必须等前面几步计算完成才能计算，当然越低越好，并行度越高；最大路径长度是指一个序列信息从一个数据点走到另一个数据点需要走多远，当然越短越好。</p>
 <p>这里需要额外解释的是受限制的自注意力机制。为什么相比与自注意力机制，其计算复杂度会有所降低？是因为 <code>query</code> 只跟最近的 $r$ 个邻居做运算。但带来的问题是最大路径长度的增加。</p>
+
+
 <div class="alert alert-note">
   <div>
     至此，已经可以基本了解 <strong>Transformer</strong> 的基本架构了。后面的章节是训练和模型效果，如有需要再进行补充。
@@ -1221,17 +1267,17 @@ $$
 <h2 id="6-results">6 Results</h2>
 <h3 id="61-machine-translation">6.1 Machine Translation</h3>
 <h3 id="62-model-variations">6.2 Model Variations</h3>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>Hochreiter S, Schmidhuber J. Long short-term memory[J]. Neural computation, 1997, 9(8): 1735-1780.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>Chung J, Gulcehre C, Cho K H, et al. Empirical evaluation of gated recurrent neural networks on sequence modeling[J]. arXiv preprint arXiv:1412.3555, 2014.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
     </div>
 
     
@@ -1258,8 +1304,12 @@ $$
       
       
       
+      
+      
+      
+      
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://bowenei.gitee.io/post/attention-is-all-you-need/&amp;text=Attention%20Is%20All%20You%20Need" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fbowenei.gitee.io%2Fpost%2Fattention-is-all-you-need%2F&amp;text=Attention&#43;Is&#43;All&#43;You&#43;Need" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1271,8 +1321,12 @@ $$
       
       
       
+      
+      
+      
+      
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://bowenei.gitee.io/post/attention-is-all-you-need/&amp;t=Attention%20Is%20All%20You%20Need" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fbowenei.gitee.io%2Fpost%2Fattention-is-all-you-need%2F&amp;t=Attention&#43;Is&#43;All&#43;You&#43;Need" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1284,8 +1338,14 @@ $$
       
       
       
+      
+      
+      
+      
+        
+      
       <li>
-        <a href="mailto:?subject=Attention%20Is%20All%20You%20Need&amp;body=https://bowenei.gitee.io/post/attention-is-all-you-need/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=Attention%20Is%20All%20You%20Need&amp;body=https%3A%2F%2Fbowenei.gitee.io%2Fpost%2Fattention-is-all-you-need%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1297,8 +1357,12 @@ $$
       
       
       
+      
+      
+      
+      
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://bowenei.gitee.io/post/attention-is-all-you-need/&amp;title=Attention%20Is%20All%20You%20Need" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fbowenei.gitee.io%2Fpost%2Fattention-is-all-you-need%2F&amp;title=Attention&#43;Is&#43;All&#43;You&#43;Need" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1310,8 +1374,12 @@ $$
       
       
       
+      
+      
+      
+      
       <li>
-        <a href="whatsapp://send?text=Attention%20Is%20All%20You%20Need%20https://bowenei.gitee.io/post/attention-is-all-you-need/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+        <a href="whatsapp://send?text=Attention&#43;Is&#43;All&#43;You&#43;Need%20https%3A%2F%2Fbowenei.gitee.io%2Fpost%2Fattention-is-all-you-need%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1323,8 +1391,12 @@ $$
       
       
       
+      
+      
+      
+      
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://bowenei.gitee.io/post/attention-is-all-you-need/&amp;title=Attention%20Is%20All%20You%20Need" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fbowenei.gitee.io%2Fpost%2Fattention-is-all-you-need%2F&amp;title=Attention&#43;Is&#43;All&#43;You&#43;Need" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1480,13 +1552,17 @@ $$
 
 
   
+  
+  
+  
+  
 
-  
 
-  
 
-  
-  
+
+
+
+
 
 
 
@@ -1529,6 +1605,7 @@ $$
 
 
 
+
   <p class="powered-by">
     
     
@@ -1551,7 +1628,7 @@ $$
   
 
 
-<script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
+<script src="/js/vendor-bundle.min.d26509351aa0ff874abbee824e982e9b.js"></script>
 
 
 
@@ -1621,7 +1698,8 @@ $$
 
 
 
-  <script src="/js/wowchemy-headroom.c251366b4128fd5e6b046d4c97a62a51.js" type="module"></script>
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
 
 
 
@@ -1634,7 +1712,7 @@ $$
   
 
 
-<script src="/en/js/wowchemy.min.2a14e6cafbd89dd0247015b525702e10.js"></script>
+<script src="/en/js/wowchemy.min.e8ee06ba8371980ffde659871dd593b0.js"></script>
 
 
 
@@ -1671,6 +1749,8 @@ $$
 
 
   <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
 
 
 

@@ -45,6 +45,8 @@
 &lt;p&gt;在运行的容器内部，我们手动安装如下包：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; sharelatex tlmgr install scheme-full
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装的过程很漫长，需要耐心等待。&lt;/p&gt;
+
+
 &lt;div class=&#34;alert alert-warning&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;我在安装过程中出现了报错如下：&lt;/p&gt;
@@ -60,6 +62,8 @@
 
   &lt;/div&gt;
 &lt;/div&gt;
+
+
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;

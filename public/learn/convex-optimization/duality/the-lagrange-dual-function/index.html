@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en-us" >
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: October 9, 2022 --><html lang="en-us" >
 
 
 <head>
@@ -8,7 +10,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.6.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
   
 
   
@@ -62,32 +64,6 @@
 
   
   
-  
-  
-  
-    
-    
-    
-  
-  
-
-  <meta name="author" content="Bowen Zhou" />
-
-  
-  
-  
-    
-  
-  <meta name="description" content="" />
-
-  
-  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/convex-optimization/duality/the-lagrange-dual-function/" />
-
-  
-  
-  
-    <meta name="theme-color" content="#1565c0" />
-  
 
   
   
@@ -97,14 +73,14 @@
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
 
   
   
   
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -239,7 +215,11 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.22eea90aebc205ef8ccb946df9feaa49.css" />
+  <link rel="stylesheet" href="/css/wowchemy.e6ed71ec47b33db0e65acae2b0d589c4.css" />
+
+  
+  
+  
 
   
   
@@ -259,82 +239,123 @@
 
 
 
-  
-
-
-  
-
-
-  
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   
 
+
+
+
+
+
+  <meta name="author" content="Bowen Zhou" />
+
+
+
+
+
   
-  
+
+<meta name="description" content="" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/convex-optimization/duality/the-lagrange-dual-function/" />
+<link rel="canonical" href="https://bowenei.gitee.io/learn/convex-optimization/duality/the-lagrange-dual-function/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
 
   
   
-    <link rel="manifest" href="/manifest.webmanifest" />
-  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@wowchemy" />
+  <meta property="twitter:creator" content="@wowchemy" />
+<meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+<meta property="og:url" content="https://bowenei.gitee.io/learn/convex-optimization/duality/the-lagrange-dual-function/" />
+<meta property="og:title" content="Lagrange 对偶函数 | Bowen&#39;s Academic Home" />
+<meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
-  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
-
-  <link rel="canonical" href="https://bowenei.gitee.io/learn/convex-optimization/duality/the-lagrange-dual-function/" />
-
+    <meta
+      property="article:published_time"
+      content="2022-04-01T12:56:37&#43;08:00"
+    />
   
   
-  
-  
-  
-  
-  
-  
-    
-    
-  
-  
-
-  
-  
-    
-    
-  
-  <meta property="twitter:card" content="summary" />
-  
-    <meta property="twitter:site" content="@wowchemy" />
-    <meta property="twitter:creator" content="@wowchemy" />
-  
-  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
-  <meta property="og:url" content="https://bowenei.gitee.io/learn/convex-optimization/duality/the-lagrange-dual-function/" />
-  <meta property="og:title" content="Lagrange 对偶函数 | Bowen&#39;s Academic Home" />
-  <meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
-    <meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
-  
-    
-      <meta
-        property="article:published_time"
-        content="2022-04-01T12:56:37&#43;08:00"
-      />
-    
     <meta property="article:modified_time" content="2022-04-01T12:56:37&#43;08:00">
   
 
-  
+
+
+
 
 
 
   
 
+
+
+
+  
+  
+  
+
+  
+  
+
   
 
 
+  
   <title>Lagrange 对偶函数 | Bowen&#39;s Academic Home</title>
 
   
@@ -366,7 +387,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.613040fe4f2c0f007b4dcb64404201cb.js"></script>
+  <script src="/js/wowchemy-init.min.ec9d49ca50e4b80bdb08f0417a28ed84.js"></script>
 
   
 
@@ -410,7 +431,7 @@
 
 
 
-  <div class="page-header">
+  <div class="page-header header--fixed">
     
 
 
@@ -424,7 +445,7 @@
 
 
 
-<header class="header--fixed">
+<header>
   <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
     <div class="container-xl">
 
@@ -653,6 +674,7 @@
           
         
 
+        
         
         
         <li class="nav-item">
@@ -1177,26 +1199,27 @@
 
     <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
 
-      <article class="article">
-
-        <div class="docs-article-container">
-          
-        </div>
-
+      <div class="docs-article-container">
         
+      </div>
+
+      
+      
+      
+
+      <div class="docs-article-container">
         
+        <h1>Lagrange 对偶函数</h1>
 
-        <div class="docs-article-container">
+        <article class="article-style">
+
           
-          <h1>Lagrange 对偶函数</h1>
+          
 
-          <div class="article-style">
-
-            
-            
-
-            <h2 id="lagrange-函数">Lagrange 函数</h2>
+          <h2 id="lagrange-函数">Lagrange 函数</h2>
 <p>考虑标准形式的优化问题</p>
+
+
 
 $$
 \begin{aligned}
@@ -1208,6 +1231,8 @@ $$
 
 <p>定义该问题的 <strong>Lagrange 函数</strong> $L: \mathbf{R}^n \times \mathbf{R}^m \mathbf{R}^p \rightarrow \mathbf{R}$ 为</p>
 
+
+
 $$
 L(x, \lambda, \nu) = f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{i=1}^p \nu_i h_i(x)
 $$
@@ -1215,6 +1240,8 @@ $$
 <p>其中定义域 $\operatorname{dom} L = \mathcal{D} \times \mathbf{R}^m \times \mathbf{R}^p$。$\lambda_i$ 称为第 $i$ 个不等式约束 $f_i(x) \leqslant 0$ 对应的 <strong>Lagrange 乘子</strong>；类似地，$\nu_i$ 称为第 $i$ 个等式约束 $h_i(x) = 0$ 对应的 Lagrange 乘子。向量 $\lambda$ 和 $\nu$ 称为<strong>对偶变量</strong>或者问题的 <strong>Lagrange 乘子向量</strong>。</p>
 <h2 id="lagrange-对偶函数">Lagrange 对偶函数</h2>
 <p>定义 <strong>Lagrange 对偶函数</strong> $g: \mathbf{R}^m \times \mathbf{R}^p \rightarrow \mathbf{R}$ 为 Lagrange 函数关于 $x$ 取得的最小值：即对 $\lambda \in \mathbf{R}^m$，$\nu \in \mathbf{R}^p$，有</p>
+
+
 
 $$
 g(\lambda, \nu)=\inf_{x \in \mathcal{D}} L(x, \lambda, \nu)=\inf_{x \in \mathcal{D}}\left(f_0(x)+\sum_{i=1}^{m} \lambda_i f_i(x)+\sum_{i=1}^{p} \nu_i h_i(x)\right)
@@ -1224,12 +1251,16 @@ $$
 <h2 id="最优值的下界">最优值的下界</h2>
 <p>对偶函数构成了原问题最优值 $p^{\star}$ 的下界：即对 $\forall \lambda, \nu \succeq 0$ 有</p>
 
+
+
 $$
 g(\lambda, \nu) \leqslant p^{\star}
 $$
 
 <h3 id="几何意义">几何意义</h3>
 <p>为了便于理解，我们考虑只有一个变量 $x \in \mathbf{R}$ 并且只有一个不等式约束的简单情形。如下图所示：</p>
+
+
 
 
 
@@ -1257,15 +1288,20 @@ $$
                height="460"
                loading="lazy" data-zoomable /></div>
   </div></figure>
+
 <p>图中表示的是对偶可行点给出的下界。粗的实线表示目标函数 $f_0$，下方的虚线表示约束函数 $f_1$。可行集是图中两个红点之间的部分所在区间。细的点线表示一系列 Lagrange 函数 $L(x, \lambda)$，其中 $\lambda = \lambda_1, \lambda_2, \lambda_3, \cdots$。该问题的最优点是左边的红点所在位置，可以看到每个 Lagrange 函数的极小值均小于之。</p>
 <h2 id="通过线性逼近来理解">通过线性逼近来理解</h2>
 <p>可以通过对集合 ${0}$ 和 $-\mathbf{R}_+$ 的示性函数进行线性逼近来理解 Lagrange 函数和其给出下界的性质。首先将原问题重新描述成一个无约束问题</p>
+
+
 
 $$
 \mathrm{minimize} \quad f_0(x) + \sum_{i=1}^m I_-(f_i(x)) + \sum_{i=1}^p I_0(h_i(x))
 $$
 
 <p>其中，$I_-: \mathbf{R} \rightarrow \mathbf{R}$ 是非正实数集的示性函数</p>
+
+
 
 $$
 I_-(u) = \left\{
@@ -1282,6 +1318,8 @@ $$
 <h2 id="举例">举例</h2>
 <h3 id="线性方程组的最小二乘解">线性方程组的最小二乘解</h3>
 
+
+
 $$
 \begin{aligned}
     \mathrm{minimize} \quad & x^Tx \\\\
@@ -1290,6 +1328,8 @@ $$
 $$
 
 <p>其中 $A \in \mathbf{R}^{p \times n}$，说明这个问题共有 $p$ 个等式约束。其 Lagrange 函数和对偶函数分别为</p>
+
+
 
 $$
 \begin{aligned}
@@ -1300,6 +1340,8 @@ $$
 
 <p>由于 $L(x, \nu)$ 是关于 $x$ 的二次凸函数，可以通过求解如下最优性条件得到函数的最小值</p>
 
+
+
 $$
 \begin{aligned}
     \nabla_x L(x, \nu) = 2x + A^T \nu &= 0 \\\\
@@ -1309,6 +1351,8 @@ $$
 
 <p>因此，对偶函数为</p>
 
+
+
 $$
 g(\nu) = -\frac{1}{4} \nu^T AA^T \nu - b^T \nu
 $$
@@ -1316,6 +1360,8 @@ $$
 <p>它是一个二次凹函数，定义域为 $\mathbf{R}^p$。</p>
 <h2 id="lagrange-对偶函数和共轭函数">Lagrange 对偶函数和共轭函数</h2>
 <p>共轭函数和 Lagrange 对偶函数紧密相关。下面的问题说明了一个简单的联系。</p>
+
+
 
 $$
 \begin{aligned}
@@ -1326,26 +1372,36 @@ $$
 
 <p>虽然这个问题没有什么挑战性，但是我们还是可以很容易地得到 Lagrange 函数为 $L(x, \nu) = f(x) + \nu^T x$，则其对偶函数为</p>
 
+
+
 $$
 g(\nu) = \inf_x (f(x) + \nu^T x) = -\sup_x ((-\nu)^Tx - f(x)) = -f^{*}(-\nu)
 $$
 
 <p>即，我们得到了结论</p>
 
+
+
 $$
 g(\nu) = -f^{*}(-\nu)
 $$
 
-          </div>
+        </article>
 
+        
+
+
+
+
+
+        
+
+
+
+        
+        
+        <div class="article-widget">
           
-
-
-
-          
-          
-          <div class="article-widget">
-            
 <div class="post-nav">
   
   
@@ -1357,29 +1413,27 @@ $$
   
 </div>
 
-          </div>
-          
         </div>
+        
+      </div>
 
-        <div class="body-footer">
-          <p>Last updated on Apr 1, 2022</p>
+      <div class="body-footer">
+        <p>Last updated on Apr 1, 2022</p>
 
-          
-
-
-
-
-          
+        
 
 
 
 
-          
+        
 
 
-        </div>
 
-      </article>
+
+        
+
+
+      </div>
 
       <footer class="site-footer">
 
@@ -1397,13 +1451,17 @@ $$
 
 
   
+  
+  
+  
+  
 
-  
 
-  
 
-  
-  
+
+
+
+
 
 
 
@@ -1446,6 +1504,7 @@ $$
 
 
 
+
   <p class="powered-by">
     
     
@@ -1476,7 +1535,7 @@ $$
   
 
 
-<script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
+<script src="/js/vendor-bundle.min.d26509351aa0ff874abbee824e982e9b.js"></script>
 
 
 
@@ -1559,11 +1618,12 @@ $$
 
 
 
+
   
   
 
 
-<script src="/en/js/wowchemy.min.2a14e6cafbd89dd0247015b525702e10.js"></script>
+<script src="/en/js/wowchemy.min.e8ee06ba8371980ffde659871dd593b0.js"></script>
 
 
 
@@ -1600,6 +1660,8 @@ $$
 
 
   <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
 
 
 

@@ -141,11 +141,15 @@
 &lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;设椭圆 $E$ 的方程为&lt;/p&gt;
 
+
+
 $$
 \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \quad (a,b&gt;0)
 $$
 
 &lt;p&gt;将 $A(0,-2),B(\frac{3}{2},-1)$ 两点坐标代入得&lt;/p&gt;
+
+
 
 $$
 \begin{cases}
@@ -156,6 +160,8 @@ $$
 
 &lt;p&gt;解得&lt;/p&gt;
 
+
+
 $$
 \begin{cases}
 a^2 = 3 \\\\
@@ -165,11 +171,15 @@ $$
 
 &lt;p&gt;因此椭圆 $E$ 的方程为&lt;/p&gt;
 
+
+
 $$
 \frac{x^2}{3} + \frac{y^2}{4} = 1
 $$
 
 &lt;p&gt;第 $(2)$ 小题给出的条件特别多，我们慢慢梳理这些条件。首先条件中提到了线段 $AB$，并且有一条直线与线段 $AB$ 有交点。因此需要给出直线 $AB$ 的方程，用两点式表示，得到&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -179,11 +189,15 @@ $$
 
 &lt;p&gt;化为一般式&lt;/p&gt;
 
+
+
 $$
 l_{AB}: 2x - 3y - 6 = 0
 $$
 
 &lt;p&gt;由于本题是证明题，我们可以通过特例得出答案，然后再证明其一般性。因此，我们考察过 $P$ 点的竖直直线这一情况。此时 $M$ 点的横坐标为 $1$，代入椭圆方程得到&lt;/p&gt;
+
+
 
 $$
 \frac{1}{3} + \frac{y^2}{4} = 1
@@ -191,11 +205,15 @@ $$
 
 &lt;p&gt;解得&lt;/p&gt;
 
+
+
 $$
 y = \pm \frac{2\sqrt{6}}{3}
 $$
 
 &lt;p&gt;即 $M,N$ 两点的坐标分别为 $(1,-\frac{2\sqrt{6}}{3}),(1,\frac{2\sqrt{6}}{3})$。于是将 $y=-\frac{2\sqrt{6}}{3}$ 代入直线 $AB$ 的方程&lt;/p&gt;
+
+
 
 $$
 2x + 2\sqrt{6} - 6 = 0
@@ -203,11 +221,15 @@ $$
 
 &lt;p&gt;解得&lt;/p&gt;
 
+
+
 $$
 x = 3 - \sqrt{6}
 $$
 
 &lt;p&gt;即 $T$ 点的坐标为 $(3-\sqrt{6},-\frac{2\sqrt{6}}{3})$。依题意，$\vec{MT} = \vec{TH}$，我们可以求出 $\vec{MT}$ 的坐标：&lt;/p&gt;
+
+
 
 $$
 \vec{MT} = (2-\sqrt{6},0)
@@ -215,11 +237,15 @@ $$
 
 &lt;p&gt;于是 $H$ 点的坐标为 $(5-2\sqrt{6}, -\frac{2\sqrt{6}}{3})$。下面就可以利用两点式写出直线 $HN$ 的方程：&lt;/p&gt;
 
+
+
 $$
 \frac{y - \frac{2\sqrt{6}}{3}}{x - 1} = \frac{-\frac{2\sqrt{6}}{3} - \frac{2\sqrt{6}}{3}}{4-2\sqrt{6}}
 $$
 
 &lt;p&gt;整理之后得到&lt;/p&gt;
+
+
 
 $$
 y = (2 - \frac{2\sqrt{6}}{3})x - 2
@@ -228,11 +254,15 @@ $$
 &lt;p&gt;可以看出，直线 $HN$ 过点 $(0,-2)$。那么是不是一定过定点 $(0,-2)$ 呢？目前得出的结论是无法判断的，但我们可以猜想直线 $HN$ 过定点 $(0,-2)$。为了证明这个猜想，我们还需要进行不失一般性的计算。&lt;/p&gt;
 &lt;p&gt;过点 $P(1,-2)$ 的直线与椭圆 $E$ 相交与 $M,N$ 两点，我们设其点斜式方程为：&lt;/p&gt;
 
+
+
 $$
 l_{MN}: y + 2 = k(x - 1)
 $$
 
 &lt;p&gt;将其与椭圆 $E$ 的方程联立，并代入得&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -243,6 +273,8 @@ $$
 
 &lt;p&gt;设 $M,N$ 两点坐标分别为 $(x_1,y_1),(x_2,y_2)$，由韦达定理得&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 x_1+x_2 &amp;= \frac{6k(k+2)}{3k^2+4} \tag{1} \\\\
@@ -251,6 +283,8 @@ x_1x_2 &amp;= \frac{3k(k+4)}{3k^2+4} \tag{2}
 $$
 
 &lt;p&gt;进一步可以得到&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -272,6 +306,8 @@ $$
 &lt;p&gt;式 $(1)$-$(5)$ 是下面计算化简的依据，我们在这里提前准备好。&lt;/p&gt;
 &lt;p&gt;依题意，过 $M$ 且平行于 $x$ 的直线交线段 $AB$ 于点 $T$。我们将 $y=y_1$ 代入直线 $AB$ 的方程，得到&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 2x - 3y_1 - 6 &amp;= 0 \\\\
@@ -281,11 +317,15 @@ $$
 
 &lt;p&gt;于是可以得到 $T$ 点的坐标为&lt;/p&gt;
 
+
+
 $$
 (\frac{3}{2}y_1+3, y_1)
 $$
 
 &lt;p&gt;依题意，$\vec{MT} = \vec{TH}$，说明 $T$ 是线段 $HM$ 的中点。并且线段 $HM$ 显然与 $x$ 轴平行，$H$ 点的纵坐标与 $T$ 点相同，横坐标可以用如下的中点坐标公式求得&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -296,11 +336,15 @@ $$
 
 &lt;p&gt;于是可以得到 $H$ 点的坐标为&lt;/p&gt;
 
+
+
 $$
 (3y_1 - x_1 + 6, y_1)
 $$
 
 &lt;p&gt;现在，可以用两点式写出直线 $HN$ 的方程&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -310,6 +354,8 @@ $$
 
 &lt;p&gt;化简以后得到&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 (y_1-y_2)x - (3y_1-x_1-x_2+6)y + 3y_1y_2 + 6y_2 - x_1y_2 - x_2y_1 &amp;= 0
@@ -318,6 +364,8 @@ $$
 
 &lt;p&gt;我们仔细观察上式，发现有很多项已经在我们之前利用韦达定理以及由其导出的结果中出现，例如 $y_1y_2$、$x_1y_2 + x_2y_1$。但是还有个别的 $y_1$、$y_2$ 之前的系数待定，甚至还出现了 $y_1-y_2$。很巧妙的一点是，我们将点 $(0, -2)$ 代入得&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 6(y_1+y_2) - 2(x_1+x_2) + 12 + 3y_1y_2 - x_1y_2 - x_2y_1 &amp;= 0 \\\\
@@ -325,6 +373,8 @@ $$
 $$
 
 &lt;p&gt;发现所有那些无法配对的项都可以成功配对了！我们尝试将所有的 $x_1,x_2,y_1,y_2$ 都用 $k$ 来表示，得到&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -353,6 +403,8 @@ $$
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -364,6 +416,7 @@ $$
                height=&#34;265&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;&lt;strong&gt;点评&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;本题题型较为常规，是一个证明直线过定点的问题。证明直线过定点的问题一般有如下两种思路：&lt;/p&gt;
 &lt;ol&gt;
@@ -375,6 +428,8 @@ $$
 &lt;p&gt;但本题是证明题，我们就可以先通过特例尝试猜想直线 $HN$ 过哪个定点。特例的选取应当具有一定的特殊性，并且计算简便。平行于坐标轴的直线由于其方程仅含 $x$ 或 $y$ 而计算简便，根据本题的具体情况，我们选择和 $y$ 轴平行的竖直直线，并且很容易地得到了它的方程。&lt;/p&gt;
 &lt;p&gt;我们之所以可以猜想直线 $HN$ 过定点 $(0,-2)$，是因为&lt;/p&gt;
 
+
+
 $$
 \begin{cases}
 x = 0 \\\\
@@ -383,6 +438,8 @@ y = -2
 $$
 
 &lt;p&gt;是二元一次方程&lt;/p&gt;
+
+
 
 $$
 y = (2 - \frac{2\sqrt{6}}{3})x - 2
@@ -398,11 +455,15 @@ $$
 &lt;p&gt;&lt;strong&gt;解：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;依题意，当 $a=1$ 时，&lt;/p&gt;
 
+
+
 $$
 f(x) = \ln (1+x) + xe^{-x}
 $$
 
 &lt;p&gt;第 $(1)$ 小题要求切线方程，因此需要利用导数。我们对 $f(x)$ 求导得&lt;/p&gt;
+
+
 
 $$
 f^{\prime}(x) = \frac{1}{1 + x} + (1-x) e^{-x}
@@ -410,17 +471,23 @@ $$
 
 &lt;p&gt;于是点 $(0,f(0))$ 处的切线斜率为&lt;/p&gt;
 
+
+
 $$
 f^{\prime}(0) = 2
 $$
 
 &lt;p&gt;故点 $(0,f(0))$ 处的切线方程为&lt;/p&gt;
 
+
+
 $$
 y = 2x
 $$
 
 &lt;p&gt;要回答第 $(2)$ 小题，我们需要直接对 $f(x)$ 求导，得到&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -431,11 +498,15 @@ $$
 
 &lt;p&gt;这个式子很难判断零点和单调性。但考虑到函数 $f(x)$ 的定义域为 $(-1,+\infty)$，因此分母恒正。下面我们单独来处理导函数的分子，令&lt;/p&gt;
 
+
+
 $$
 g(x) = 1 + a(1-x^2)e^{-x}
 $$
 
 &lt;p&gt;对 $g(x)$ 求导，得到&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -445,6 +516,8 @@ g^{\prime}(x) &amp;= a[-2xe^{-x} + (x^2-1)e^{-x}] \\\\
 $$
 
 &lt;p&gt;于是，我们令 $g^{\prime}(x)=0$，可以解得两根&lt;/p&gt;
+
+
 
 $$
 \begin{cases}
@@ -486,6 +559,8 @@ $$
 &lt;/table&gt;
 &lt;p&gt;下面，我们分别计算驻点和一些关键点的函数值，并判断它们的正负。&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 g(-1) &amp;= 1 &gt; 0 \\\\
@@ -498,11 +573,15 @@ $$
 
 &lt;p&gt;由于 $-1$ 不在 $f^{\prime}(x)$ 的定义域内，不过我们可以根据 $g(x)$ 的正负以及单调性判断 $f^{\prime}(x)&amp;gt;0$ 在 $(-1,0)$ 上恒成立，当然也可以利用下列极限来判断：&lt;/p&gt;
 
+
+
 $$
 \lim_{x\rightarrow-1^+} f^{\prime}(x) = \lim_{x\rightarrow-1^+}[\frac{1}{1 + x} + a(1-x) e^{-x}] = +\infty
 $$
 
 &lt;p&gt;因此 $f(x)$ 在 $(-1,0)$ 上单调递增。不过，根据对数函数的性质，我们可以判断下列极限&lt;/p&gt;
+
+
 
 $$
 \lim_{x\rightarrow-1^+} f(x) = \lim_{x\rightarrow-1^+} [\ln (1+x) + axe^{-x}] = -\infty
@@ -510,6 +589,8 @@ $$
 
 &lt;p&gt;而 $f(0)=0$。因此可以判断，$f(x)&amp;lt;0$ 在 $(-1,0)$ 上恒成立，这并不符合题意中的 $(-1,0)$ 内恰有一个零点。&lt;/p&gt;
 &lt;p&gt;下图是 $a=1$ 时函数 $f(x)$ 的图像，可以帮助我们理解。&lt;/p&gt;
+
+
 
 
 
@@ -537,6 +618,7 @@ $$
                height=&#34;265&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h4 id=&#34;3-a0&#34;&gt;3. $a&amp;lt;0$&lt;/h4&gt;
 &lt;p&gt;若 $a&amp;lt;0$，则 $g^{\prime}(x)$ 的正负性以及 $g(x)$ 的单调性如下表：&lt;/p&gt;
 &lt;table&gt;
@@ -567,6 +649,8 @@ $$
 &lt;/table&gt;
 &lt;p&gt;同样地，我们还是分别计算驻点和一些关键点的函数值，并判断它们的正负。&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 g(-1) &amp;= 1 &gt; 0 \\\\
@@ -581,12 +665,16 @@ $$
 &lt;h4 id=&#34;-a---1&#34;&gt;① $a = -1$&lt;/h4&gt;
 &lt;p&gt;此时 $g(0)=0$，$f^{\prime}(0)=0$，而 $g(x)$ 在 $(1-\sqrt{2},1+\sqrt{2})$ 上单调递增，$f^{\prime}(x)$ 也有着和 $g(x)$ 同样的增减性。虽然 $g(x)$ 在 $(1+\sqrt{2},+\infty)$ 上单调递减，但下列极限&lt;/p&gt;
 
+
+
 $$
 \lim_{x\rightarrow+\infty} g(x) = \lim_{x\rightarrow+\infty} (1 + \frac{x^2-1}{e^x}) = 1 &gt; 0
 $$
 
 &lt;p&gt;因此，可以判断 $g(x)&amp;gt;0$ 在 $(0,+\infty)$ 上恒成立，即 $f^{\prime}(x)&amp;gt;0$ 在 $(0,+\infty)$ 上恒成立。因此，$f(x)$ 在 $(0,+\infty)$ 上单调递增，$f(x)&amp;gt;f(0)=0$。这样也并不符合题意。&lt;/p&gt;
 &lt;p&gt;下图是 $a=-1$ 时函数 $f(x)$ 的图像。可以看到，函数 $f(x)$ 的图像正好与 $x$ 轴相切于原点。&lt;/p&gt;
+
+
 
 
 
@@ -614,9 +702,12 @@ $$
                height=&#34;265&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h4 id=&#34;--1a0&#34;&gt;② $-1&amp;lt;a&amp;lt;0$&lt;/h4&gt;
 &lt;p&gt;和情况 ① 类似，此时 $g(0)&amp;gt;0$，$f^{\prime}(0) = a+1 &amp;gt; 0$。通过判断极限 $\lim_{x\rightarrow+\infty} g(x) &amp;gt; 0$，可以证明 $g(x)&amp;gt;0$ 在 $(0,+\infty)$ 上恒成立，即 $f^{\prime}(x)&amp;gt;0$ 在 $(0,+\infty)$ 上恒成立。因此，$f(x)$ 在 $(0,+\infty)$ 上单调递增，$f(x)&amp;gt;f(0)=0$。这同样也并不符合题意。&lt;/p&gt;
 &lt;p&gt;下图是 $a=-\frac{1}{2}$ 时函数 $f(x)$ 的图像，和 $a&amp;gt;0$ 的情况类似。&lt;/p&gt;
+
+
 
 
 
@@ -644,8 +735,11 @@ $$
                height=&#34;265&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h4 id=&#34;-a-1&#34;&gt;③ $a&amp;lt;-1$&lt;/h4&gt;
 &lt;p&gt;和情况 ①、② 都不同，此时 $g(0)&amp;lt;0$，$f^{\prime}(0) = a+1 &amp;lt; 0$。又因为 $g(-1)&amp;gt;0$，且 $g(x)$ 在 $(-1,1-\sqrt{2})$ 上单调递减，在 $(1-\sqrt{2},0)$ 上单调递增。这样，虽然我们一开始不好判断 $g(1-\sqrt{2})$ 的正负性，但是我们凭借 $g(x)$ 的单调性以及 $g(0)&amp;lt;0$，我们就可以判断 $g(1-\sqrt{2})&amp;lt;0$。因此 $\exists! m \in (-1,1-\sqrt{2})$，使得 $g(m)=f^{\prime}(m)=0$，即&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -655,6 +749,8 @@ ae^{-m} &amp;= \frac{1}{m^2-1}
 $$
 
 &lt;p&gt;同理，$g(1)&amp;gt;0$，且 $g(x)$ 在 $(1-\sqrt{2},1+\sqrt{2})$ 上单调递增。因此 $\exists! n \in (0,1)$，使得 $g(n) = f^{\prime}(n) = 0$，即&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -692,6 +788,8 @@ $$
 &lt;/table&gt;
 &lt;p&gt;有了 $f(x)$ 的增减性，我们就容易判断 $f(x)$ 的零点分布了。首先计算并且判断 $f(m)$、$f(n)$ 的大小：&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 f(m) &amp;= \ln (1+m) + ame^{-m} \\\\
@@ -703,11 +801,15 @@ $$
 
 &lt;p&gt;不过，$f(m)$、$f(n)$ 的大小难以判断，需要借助导数来帮助判断。令&lt;/p&gt;
 
+
+
 $$
 h(x) = \ln (1+x) + \frac{x}{x^2-1}
 $$
 
 &lt;p&gt;对 $h(x)$ 求导，有&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -771,6 +873,8 @@ $$
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -782,8 +886,11 @@ $$
                height=&#34;265&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;我们可以很容易得到 $h(0)=0$。并且我们观察到，$h(1)&amp;lt;0$，且 $h(x)$ 在 $(0,1)$ 上单调递减。因此我们可以判断 $f(n)&amp;lt;0$。又 $m \in (-1,1-\sqrt{2})$，$f(0)=0$，且 $f(x)$ 在 $(m,n)$ 上单调递减。这样我们又可以判断 $f(m)&amp;gt;0$。&lt;/p&gt;
 &lt;p&gt;现在所有的结论都已经推导出来了，下面先说明零点的存在性。&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -794,6 +901,8 @@ $$
 
 &lt;p&gt;并且函数 $f(x)$ 连续。因此，$\exists x_1 \in (-1,m)$，使得 $f(x_1)=0$。同理可得&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 f(n) &amp;&lt; 0 \\\\
@@ -803,6 +912,8 @@ $$
 
 &lt;p&gt;并且函数 $f(x)$ 连续。因此，$\exists x_2 \in (n,+\infty)$，使得 $f(x_2)=0$。存在性得证。&lt;/p&gt;
 &lt;p&gt;下面说明零点的唯一性。首先，$f(0)=0$，$f(x)$ 在 $(m,n)$ 上单调递减。又因为 $f(m)&amp;gt;0$ 且 $f(n)&amp;lt;0$，所以 $f(x)&amp;gt;0$ 在 $(m,0)$ 上恒成立，$f(x)&amp;lt;0$ 在 $(0,n)$ 上恒成立。而 $f(x)$ 分别在 $(-1,m)$ 和 $(n,+\infty)$ 上都是单调的，因此刚才所证明存在的零点分别是 $(-1,0)$ 和 $(0,+\infty)$ 上的唯一零点。具体可以参考下图理解：&lt;/p&gt;
+
+
 
 
 
@@ -830,6 +941,7 @@ $$
                height=&#34;265&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h4 id=&#34;点评&#34;&gt;点评&lt;/h4&gt;
 &lt;p&gt;本题题型较为常规，是一个判断函数零点的问题。不过，本题的难度较大。一方面，本题的参数 $a$ 需要分类讨论；另一方面，题目中并没有给出不等式的条件，也没有某个其他函数，使得我们可以通过放缩法与之建立不等关系，这样我们想要通过参变分离的方法转化为求值域问题的思路就不再可行。&lt;/p&gt;
 &lt;p&gt;本题对参数 $a$ 的讨论是分为两个层次的。首先，我们对 $a$ 与 $0$ 的大小关系进行讨论。这是因为一阶导数的分子 $g(x)$ 的正负与 $a$ 的正负相关，它会影响到 $f(x)$ 的单调性。&lt;/p&gt;
@@ -850,18 +962,30 @@ $$
 &lt;p&gt;作者在摘要当中首先分析了背景 AIoT，并且认为在云中处理海量的数据不可行。而引入边缘计算 Edge Computing，可以充分解决这些关键挑战。作者在本文中对端边云协同架构进行了广泛的调查。具体而言，本文首先阐述了物联网 IoT、人工智能 AI 和边缘计算 Edge Computing 等基本概念。在这些概念的基础上，本文讨论了一般的 AIoT 体系结构，给出了一个实际的 AIoT 示例，以说明如何将人工智能应用于实际应用，并总结了有前途的 AIoT 应用。然后，本文回顾了人工智能模型在网络边缘的推理和训练方面的新兴技术。最后，本文概述了这一前景广阔领域的开放挑战和未来方向。&lt;/p&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;首先是论文的 Introduction 部分。在这里我将作者的 Introduction 全文翻译，并且梳理其行文逻辑，供参考学习。另外，可以积累一些常用的英语表达。&lt;/p&gt;
-&lt;p&gt;&lt;mark&gt;Benefiting from&lt;/mark&gt; the &lt;mark&gt;extensive use&lt;/mark&gt; of the Internet and the rapid development of many wired and wireless connected devices, the Internet of Things (IoT) matures promptly and &lt;mark&gt;plays an increasingly significant role in&lt;/mark&gt; every aspect of life by providing many crucial services, such as information exchange and monitoring.&lt;/p&gt;
+&lt;p&gt;
+
+&lt;mark&gt;Benefiting from&lt;/mark&gt; the 
+
+&lt;mark&gt;extensive use&lt;/mark&gt; of the Internet and the rapid development of many wired and wireless connected devices, the Internet of Things (IoT) matures promptly and 
+
+&lt;mark&gt;plays an increasingly significant role in&lt;/mark&gt; every aspect of life by providing many crucial services, such as information exchange and monitoring.&lt;/p&gt;
 &lt;p&gt;得益于互联网的广泛使用和许多有线和无线连接设备的快速发展，物联网 IoT 迅速成熟，并通过提供许多关键服务（如信息交换和监控）在生活的各个方面发挥着越来越重要的作用。&lt;/p&gt;
 &lt;p&gt;With the extensive applications of IoTs, the total installed IoT-based devices is projected to amount to approximately 41.6 billion, and nearly 79.4 Zettabytes (ZBs) of data may be generated and consumed in 2025.&lt;/p&gt;
 &lt;p&gt;随着物联网的广泛应用，预计基于物联网的设备总安装量将达到约 416 亿，2025 年可能会产生和消耗近 794 ZB 的数据。&lt;/p&gt;
-&lt;p&gt;Thus, some nonnegligible challenges that the IoT faces are explosive data generation and reliable data collection between heterogeneous devices &lt;mark&gt;in a wide range of applications&lt;/mark&gt; covering various backgrounds and requests.&lt;/p&gt;
+&lt;p&gt;Thus, some nonnegligible challenges that the IoT faces are explosive data generation and reliable data collection between heterogeneous devices 
+
+&lt;mark&gt;in a wide range of applications&lt;/mark&gt; covering various backgrounds and requests.&lt;/p&gt;
 &lt;p&gt;因此，物联网面临的一些不容忽视的挑战是，在覆盖各种背景和请求的广泛应用中，异构设备之间的爆炸性数据生成和可靠数据收集。&lt;/p&gt;
-&lt;p&gt;Cloud computing &lt;mark&gt;plays a crucial role in&lt;/mark&gt; IoT systems, where the vast resources available in the cloud can provide ubiquitous on-demand computing and storage capabilities to support these devices. Additionally, these data may consist of multimedia information, from images, sounds, and videos to structured data (e.g., temperature and humidity). Advanced tools are needed to glean insights from a large volume of raw data.&lt;/p&gt;
+&lt;p&gt;Cloud computing 
+
+&lt;mark&gt;plays a crucial role in&lt;/mark&gt; IoT systems, where the vast resources available in the cloud can provide ubiquitous on-demand computing and storage capabilities to support these devices. Additionally, these data may consist of multimedia information, from images, sounds, and videos to structured data (e.g., temperature and humidity). Advanced tools are needed to glean insights from a large volume of raw data.&lt;/p&gt;
 &lt;p&gt;云计算在物联网系统中扮演着至关重要的角色，在物联网系统中，云中可用的巨大资源可以提供无处不在的按需计算和存储能力来支持这些设备。此外，这些数据可能包括多媒体信息，从图像、声音和视频到结构化数据（例如温度和湿度）。需要高级工具来从大量原始数据中收集见解。&lt;/p&gt;
 &lt;p&gt;Facilitated by the recent achievements of algorithms, computing capabilities and big data processing necessities, artificial intelligence (AI), especially its essential sector of deep learning (DL), has achieved unprecedented success in data analysis, future prediction and decision making.&lt;/p&gt;
 &lt;p&gt;在算法、计算能力和大数据处理需求的最新成就的推动下，人工智能 AI，尤其是其重要的深度学习 DL 部门，在数据分析、未来预测和决策方面取得了前所未有的成功。&lt;/p&gt;
 &lt;p&gt;Clearly, the AI of Things (AIoT), an integrative technology combining both AI and the IoT, is starting to garner its share of the spotlight with the support of cloud centers. In the AIoT era, large amounts of data generated by IoT devices provide perfect opportunities for training AI models to reliably mine valuable data from a noisy and complex environment for intelligent analysis and decision making.&lt;/p&gt;
 &lt;p&gt;显然，人工智能物联网 AIoT，一种结合了人工智能和物联网的综合技术，正开始在云中心的支持下获得其聚光灯的份额。在 AIoT 时代，物联网设备生成的大量数据为训练人工智能模型提供了完美的机会，以可靠地从嘈杂复杂的环境中挖掘有价值的数据，进行智能分析和决策。&lt;/p&gt;
+
+
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     作者在这一段当中由物联网 IoT 中的海量数据引出云计算 Cloud Computing 和人工智能 AI 两大概念，并且引出人工智能物联网 AIoT 的概念。
@@ -876,12 +1000,16 @@ $$
 &lt;p&gt;边缘计算似乎是解决这些问题的一种很有前途的技术，它以相对较轻的访问负担和较低的传输延迟使计算资源更接近数据源。&lt;/p&gt;
 &lt;p&gt;It is extremely suitable for the AIoT because AI models, especially DL models, that depend greatly on computation and storage resources can still work fluently and cooperatively by partitioning the layers into several parts and offloading the computation-intensive tasks to edge servers.&lt;/p&gt;
 &lt;p&gt;它非常适合 AIoT，因为人工智能模型，尤其是深度学习模型，在很大程度上依赖于计算和存储资源，通过将层划分为几个部分并将计算密集型任务卸载到边缘服务器，仍然可以流畅地协同工作。&lt;/p&gt;
-&lt;p&gt;Such a computing paradigm &lt;mark&gt;coupled with&lt;/mark&gt; AI can assist users better and more intelligently, where AI models function as a powerful tool to mine valuable information from raw data, make real-time decisions and to dynamically manage various resources of the edge platforms.&lt;/p&gt;
+&lt;p&gt;Such a computing paradigm 
+
+&lt;mark&gt;coupled with&lt;/mark&gt; AI can assist users better and more intelligently, where AI models function as a powerful tool to mine valuable information from raw data, make real-time decisions and to dynamically manage various resources of the edge platforms.&lt;/p&gt;
 &lt;p&gt;这种与人工智能相结合的计算范式可以更好、更智能地帮助用户，其中人工智能模型可以作为一种强大的工具，从原始数据中挖掘有价值的信息，做出实时决策，并动态管理边缘平台的各种资源。&lt;/p&gt;
 &lt;p&gt;Rather than transmit all the raw data to the cloud for overall analysis, edge computing-assisted AIoT solutions essentially enable AI models to work in the field.&lt;/p&gt;
 &lt;p&gt;边缘计算辅助的 AIoT 解决方案本质上使人工智能模型能够在本地工作，而不是将所有原始数据传输到云进行全面分析。&lt;/p&gt;
 &lt;p&gt;These solutions can lighten the burden of data transmission through the network backhaul, further reduce the cost of network processing and maintenance and make timely decisions by positioning computational capabilities near end devices. Additionally, these methods protect sensitive data from being abused by illegal operators or hijacked by attackers.&lt;/p&gt;
 &lt;p&gt;这些解决方案可以减轻通过网络回程传输数据的负担，进一步降低网络处理和维护的成本，并通过在终端设备附近定位计算能力及时做出决策。此外，这些方法可以保护敏感数据不被非法操作员滥用或被攻击者劫持。&lt;/p&gt;
+
+
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     作者在这一段由基于云中心的 AIoT 存在的带宽限制和隐私安全问题，引出了边缘计算辅助的 AIoT 解决方案，并且分析边缘计算范式更好的原因。
@@ -890,7 +1018,9 @@ $$
 
 &lt;p&gt;This article investigates convergence of AI and the IoT from the perspective of end-edge-cloud collaboration, where immediate and real-time responses are enabled by using AI capacities for processing raw data at end or edge devices and higher accuracy results are gained by using cloud analytics in collaboration.&lt;/p&gt;
 &lt;p&gt;本文从端边云协同的角度研究了人工智能与物联网的融合，其中通过使用人工智能处理终端或边缘设备原始数据的能力实现即时和实时响应，并通过协作使用云分析获得更高精度的结果。&lt;/p&gt;
-&lt;p&gt;The AIoT can bring &lt;mark&gt;numerous&lt;/mark&gt; benefits to human beings in a spectrum of domains and form a ubiquitous intelligent collaborative environment; however, significant challenges must be overcome before fully realizing the potential of AIoT. Thus, this article aims to present a comprehensive survey of recent advances, open challenges and future directions for the AIoT.&lt;/p&gt;
+&lt;p&gt;The AIoT can bring 
+
+&lt;mark&gt;numerous&lt;/mark&gt; benefits to human beings in a spectrum of domains and form a ubiquitous intelligent collaborative environment; however, significant challenges must be overcome before fully realizing the potential of AIoT. Thus, this article aims to present a comprehensive survey of recent advances, open challenges and future directions for the AIoT.&lt;/p&gt;
 &lt;p&gt;AIoT 可以在多个领域为人类带来诸多利益，形成无处不在的智能协作环境；然而，在充分发挥 AIoT 的潜力之前，必须克服重大挑战。因此，本文旨在全面综述 AIoT 的最新进展、开放挑战和未来方向。&lt;/p&gt;
 &lt;p&gt;至此，作者已经给出了本文的简要逻辑。在 Introduction 的剩余部分中，作者分三节总结了相关工作、本文的贡献以及本文的行文结构。&lt;/p&gt;
 &lt;h3 id=&#34;related-work&#34;&gt;Related Work&lt;/h3&gt;
@@ -966,7 +1096,9 @@ $$
 &lt;/ol&gt;
 &lt;p&gt;人工智能与物联网的融合是本文的核心。在这方面，首先说明了将人工智能纳入物联网系统的好处。在此基础上，提出了一种 AIoT 的端边云协同体系结构。此外，还提供了一个 AIoT 应用的实际示例，以进一步说明人工智能如何应用于实际应用中。&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;Some promising applications of AIoT are surveyed in &lt;mark&gt;a variety of&lt;/mark&gt; domains, such as the IoV, smart healthcare, smart industry, smart homes, smart agriculture, smart grids and smart environment.&lt;/li&gt;
+&lt;li&gt;Some promising applications of AIoT are surveyed in 
+
+&lt;mark&gt;a variety of&lt;/mark&gt; domains, such as the IoV, smart healthcare, smart industry, smart homes, smart agriculture, smart grids and smart environment.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;AIoT 在许多领域都有着很好的应用前景，如 IoV、智能医疗、智能工业、智能家居、智能农业、智能电网和智能环境。&lt;/p&gt;
 &lt;ol start=&#34;4&#34;&gt;
@@ -998,12 +1130,15 @@ $$
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
            src=&#34;https://bowenei.gitee.io/post/a-survey-of-recent-advances-in-edge-computing-powered-artificial-intelligence-of-things/architecture.svg&#34;
            loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h2 id=&#34;fundamentals-of-artificial-intelligence-of-things&#34;&gt;Fundamentals of Artificial Intelligence of Things&lt;/h2&gt;
 &lt;p&gt;This section reviews the general architecture of the IoT in brief, then presents basic AI models with an emphasis on ML and DL models and additionally gives an overview of edge computing in terms of related paradigms, relationship with the fifth generation (5G), hardware, and systems.&lt;/p&gt;
 &lt;p&gt;作者在本节简要回顾了物联网的总体架构，然后介绍了基本的人工智能模型，重点介绍了ML和深度学习模型，并从相关范式、与 5G 的关系、硬件和系统等方面概述了边缘计算。&lt;/p&gt;
@@ -1026,10 +1161,13 @@ $$
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/6488907/9530274/9453402/liu1-3088875-large.gif&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Perception Layer&lt;/strong&gt;: The perception layer provides the core capability enabling the comprehensive awareness of the environment; this layer includes such diverse devices and technologies as sensors, actuators, radio-frequency identification (RFID), 2-D codes, and multimedia information collection devices. These devices are used mainly to sense and collect physical data, and data is generally produced in trillions of bytes with a variety of attributes, including various physical quantities, identity signs, location information, and audio and video data. Additionally, these devices can respond to the environment.&lt;/li&gt;
 &lt;/ol&gt;
@@ -1145,13 +1283,18 @@ $$
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/6488907/9530274/9453402/liu4-3088875-large.gif&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h3 id=&#34;example-of-artificial-intelligence-of-things-applications&#34;&gt;Example of Artificial Intelligence of Things Applications&lt;/h3&gt;
 &lt;p&gt;The following describes the corresponding system design, illustrates model training and deployment as well as inference and provides a case study using an end-to-end AI model.&lt;/p&gt;
 &lt;p&gt;作者在本章介绍一个 AIoT 的应用 HydraMini，一个自动驾驶汽车系统，并以此为例，说明了模型训练和部署以及推理的过程，并提供了使用端到端人工智能模型的案例研究。&lt;/p&gt;
+
+
 
 
 
@@ -1172,6 +1315,7 @@ $$
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://ieeexplore.ieee.org/mediastore_new/IEEE/content/media/6488907/9530274/9453402/liu5-3088875-small.gif&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;由于篇幅有限，本文在这里不对该系统进行详细的描述，仅以上图供参考。&lt;/p&gt;
 &lt;h2 id=&#34;applications-of-artificial-intelligence-of-things&#34;&gt;Applications of Artificial Intelligence of Things&lt;/h2&gt;
 &lt;p&gt;In this section, several application scenarios, including smart homes, smart healthcare, smart agriculture, smart industry, smart agriculture, smart grids and smart environment, are presented to demonstrate how edge computing aided AIoT systems will make real-world more efficient, smarter and safer.&lt;/p&gt;
@@ -1347,6 +1491,8 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;li&gt;Security and Privacy: 安全和隐私&lt;/li&gt;
 &lt;li&gt;Artificial Intelligence Ethics in Artificial Intelligence of Things: AIoT 中的人工智能伦理&lt;/li&gt;
 &lt;/ul&gt;
+
+
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;本文是写得相对来说很不错的一篇综述，逻辑清晰。作者给出了人工智能、物联网、边缘计算等概念，引出边缘计算辅助 AIoT 的概念。随后作者以一个实际的 AIoT 示例介绍人工智能如何应用于实际的 IoT 场景，并且还介绍了人工智能模型在网络边缘推理和训练两方面的技术。&lt;/p&gt;
@@ -1824,6 +1970,8 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;p&gt;在运行的容器内部，我们手动安装如下包：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; sharelatex tlmgr install scheme-full
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装的过程很漫长，需要耐心等待。&lt;/p&gt;
+
+
 &lt;div class=&#34;alert alert-warning&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;我在安装过程中出现了报错如下：&lt;/p&gt;
@@ -1839,6 +1987,8 @@ and each part is trained directly on end device with local data. The trained mod
 
   &lt;/div&gt;
 &lt;/div&gt;
+
+
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
@@ -1930,6 +2080,8 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;li&gt;土地资源资本化，地方政府公司化。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;历史经验&lt;/strong&gt;：这次危机是建国以来历次危机中的内发型经济危机和输入型危机的过渡期，也是分水岭——既是一个因中国产业资本逐步走向过剩而导致金融资本大规模扩张、越来越异化于产业资本的时期，也是中国开始走向外向型经济、从而受国际经济周期的影响越来越大的时期。&lt;/p&gt;
+
+
 &lt;div class=&#34;alert alert-warning&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;信息不对称&lt;/strong&gt;&lt;/p&gt;
@@ -1997,12 +2149,15 @@ and each part is trained directly on end device with local data. The trained mod
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
            src=&#34;https://bowenei.gitee.io/post/cloud-computing-architecture/architecture.svg&#34;
            loading=&#34;lazy&#34; data-zoomable class=&#34; img-dark&#34; /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;云计算体系结构由 IaaS、PaaS 和 SaaS 三大核心服务以及服务管理构成，并且提供用户访问接口。&lt;/p&gt;
 &lt;p&gt;IaaS（Infrastructure as a Service）提供硬件基础设施部署服务，为用户按需提供实体或虚拟的计算、存储和网络等资源。&lt;/p&gt;
 &lt;p&gt;PaaS（Platform as a Service）是一种分布式平台服务，为用户提供一个包括应用设计、应用开发、应用测试及应用托管的完整的计算机平台。&lt;/p&gt;
@@ -2028,17 +2183,22 @@ and each part is trained directly on end device with local data. The trained mod
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
            src=&#34;https://bowenei.gitee.io/post/cloud-computing-architecture/cooking.svg&#34;
            loading=&#34;lazy&#34; data-zoomable class=&#34; img-dark&#34; /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;假设我们现在想要做饭，可是却一无所有，该怎么办呢？我们可以摆路边摊，就当小推车是厨房，并且装着煤气罐。这样我们就有了做饭的基本条件了。但是所有的这些基本条件和资源都需要我们自己来管理，特别麻烦，而且还不稳定。&lt;/p&gt;
 &lt;p&gt;有了 IaaS 以后，我们就很像是在经营一家餐馆，需要考虑安装几个灶台、用几口锅才能满足经营需要，而并不需要太关心厨房和煤气还能不能使用的问题——只需要租用或购买一家门店，并且缴纳煤气费就可以使用了。&lt;/p&gt;
 &lt;p&gt;而有了 PaaS 以后，炒锅、灶台也是现成的——家庭烹饪并不需要饭店那样对烹饪工具特别大的需求，只需要考虑今天吃什么、怎么做就可以了。&lt;/p&gt;
 &lt;p&gt;那么有了 SaaS 以后，我们就彻底解放了——我们只需要考虑我们今天想吃什么，完全不需要考虑菜是怎么做出来的。&lt;/p&gt;
 &lt;h2 id=&#34;云计算服务模式的层次划分&#34;&gt;云计算服务模式的层次划分&lt;/h2&gt;
+
+
 
 
 
@@ -2066,6 +2226,7 @@ and each part is trained directly on end device with local data. The trained mod
                height=&#34;357&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;云计算服务模式主要分为网络、存储、服务器、虚拟化、操作系统、中间件、运行环境、数据和应用九层。&lt;/p&gt;
 &lt;p&gt;如果我们在纯裸机上部署云计算服务，就需要考虑到上述九层。我们需要购买部署服务所需的服务器设备，并且从零开始搭建，这特别像我们一无所有摆路边摊的感觉。&lt;/p&gt;
 &lt;p&gt;有了 IaaS 以后，诸如 Vmware 的虚拟化服务帮助我们管理底层的网络、存储、服务器等资源，使得我们不再关注底层逻辑，而专注于操作系统之上的环境部署问题。于是，我们只需要找提供商租用我们需要的服务器即可，利用 IaaS 来管理这些服务器资源。&lt;/p&gt;
@@ -2089,13 +2250,18 @@ and each part is trained directly on end device with local data. The trained mod
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.openstack.org/themes/openstack/home_images/Diagram/overview-diagram-new.svg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;OpenStack 就是目前公认的云计算 IaaS 平台，其管理的核心目标对象是机器（虚拟机或物理机），当然也可以管理存储和网络，但那些也大都是围绕着机器所提供的配套资源。近年来容器技术火了之后，OpenStack 也开始通过各种方式增加对容器的支持，但目前 OpenStack 还不被视为管理容器的主流平台。&lt;/p&gt;
 &lt;h2 id=&#34;paas&#34;&gt;PaaS&lt;/h2&gt;
 &lt;p&gt;PaaS 提供软件部署平台（runtime），抽象掉了硬件和操作系统细节，可以无缝地扩展（scaling）。开发者只需要关注自己的业务逻辑，不需要关注底层。&lt;/p&gt;
+
+
 
 
 
@@ -2116,7 +2282,10 @@ and each part is trained directly on end device with local data. The trained mod
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://docs.docker.com/engine/images/architecture.svg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iOS 的 app）。Docker 几乎没有性能开销，可以很容易地在机器和数据中心中运行。最重要的是，它不依赖于任何语言、框架包括系统。&lt;/p&gt;
+
+
 
 
 
@@ -2137,6 +2306,7 @@ and each part is trained directly on end device with local data. The trained mod
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://www.upgrad.com/blog/wp-content/uploads/2020/10/Kubernetes-architecture-1536x1046.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;Kubernetes（简称 k8s）是 Google 开源的容器集群管理系统。它构建于 Docker 技术之上，为容器化的应用提供资源调度、部署运行、服务发现、扩容缩容等整一套功能。k8s 本质上可看作是基于容器技术的 Micro-PaaS 平台，即第三代 PaaS 的代表性项目。&lt;/p&gt;
 &lt;p&gt;再比如，本文依赖的博客框架 hugo 也属于 PaaS。我并不需要关注代码托管平台安装的操作系统和运行环境，我只需要将我的博客框架 hugo 推送上去，然后在远程运行环境下编译即可部署。&lt;/p&gt;
 &lt;h2 id=&#34;saas&#34;&gt;SaaS&lt;/h2&gt;
@@ -2283,28 +2453,21 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;/details&gt;
 
 &lt;h2 id=&#34;导读&#34;&gt;导读&lt;/h2&gt;
+&lt;div class=&#34;markmap&#34; style=&#34;height: 300px;&#34;&gt;
 
+&lt;pre&gt;- 非暴力沟通
+  - 引言
+  - 异化的沟通方式
+  - 非暴力沟通四要素
+    - 观察
+    - 感受
+    - 需要
+    - 请求
+  - 运用非暴力沟通
+    - 倾听他人
+    - 表达自己&lt;/pre&gt;
+&lt;/div&gt;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
-           src=&#34;https://bowenei.gitee.io/post/nonviolent-communication/%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A.svg&#34;
-           loading=&#34;lazy&#34; data-zoomable class=&#34; img-light&#34; /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
 &lt;p&gt;用四个词就可以概括非暴力沟通：&lt;strong&gt;观察&lt;/strong&gt;、&lt;strong&gt;感受&lt;/strong&gt;、&lt;strong&gt;需要&lt;/strong&gt;、&lt;strong&gt;请求&lt;/strong&gt;。具体来说，就是如下四个步骤：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;什么是我的&lt;strong&gt;观察&lt;/strong&gt;&lt;/li&gt;
@@ -2316,54 +2479,34 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;p&gt;而本书的第一章则为引言，告诉读者运用非暴力沟通是为了&lt;strong&gt;让爱融入生活&lt;/strong&gt;，同时也是马歇尔博士毕生的追求。本身的第二章则介绍了四种异化的沟通方式，这些都不是非暴力沟通。&lt;/p&gt;
 &lt;p&gt;在使用非暴力沟通时，&lt;strong&gt;表达自己&lt;/strong&gt;或&lt;strong&gt;倾听他人&lt;/strong&gt;，都是好的开端。本书的第七章和第八章则介绍了应该如何倾听他人，而剩余的第九章至第十三章则介绍了应该如何表达自己。不论是表达自己还是倾听他人，都应该注重自己（他人）的感受和需要，而不应该批评和指责。&lt;/p&gt;
 &lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
+&lt;div class=&#34;markmap&#34; style=&#34;height: 200px;&#34;&gt;
 
+&lt;pre&gt;- 引言
+  - 让爱融入生活
+    - 当我们真诚助人时，我们丰富他人生命的愿望得到了满足
+    - 我们的行为，是出于由衷的喜悦&lt;/pre&gt;
+&lt;/div&gt;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
-           src=&#34;https://bowenei.gitee.io/post/nonviolent-communication/%E5%BC%95%E8%A8%80.svg&#34;
-           loading=&#34;lazy&#34; data-zoomable class=&#34; img-light&#34; /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;让爱融入生活&#34;&gt;让爱融入生活&lt;/h3&gt;
 &lt;p&gt;马歇尔博士认为，一旦专注于彼此的观察、感受及需要，而不反驳他人，我们便能发现内心的柔情，对自己和他人产生全新的体会。这将最大限度地避免暴力。&lt;/p&gt;
 &lt;p&gt;让爱融入生活是作者毕生的追求。当我们真诚助人时，我们丰富他人生命的愿望得到了满足。我们的行为，是出于由衷的喜悦。这样的给予让施者和受者同时受益。由于施者的给予既不是出于恐惧、内疚或羞愧，也不是为了得到什么；受着获得馈赠，却不会有心理负担。与此同时，施者会因自己行为的价值更加欣赏自己。&lt;/p&gt;
 &lt;h2 id=&#34;异化的沟通方式&#34;&gt;异化的沟通方式&lt;/h2&gt;
+&lt;div class=&#34;markmap&#34; style=&#34;height: 200px;&#34;&gt;
 
+&lt;pre&gt;- 异化的沟通方式
+  - 道德评判
+	  - 用道德标准来评判人
+	  - 不要将价值判断与道德评判混为一谈
+	  - 对他人的评价实际上反映了我们的需要和价值观
+  - 进行比较
+	  - 比较也是一种评判
+  - 回避责任
+	  - 我们对自己的思想、情感和行动负有责任
+	  - 用负责任的语言代替回避责任的语言
+  - 强人所难
+	  - 我们无法强迫他人按我们的期待生活&lt;/pre&gt;
+&lt;/div&gt;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
-           src=&#34;https://bowenei.gitee.io/post/nonviolent-communication/%E5%BC%82%E5%8C%96%E7%9A%84%E6%B2%9F%E9%80%9A%E6%96%B9%E5%BC%8F.svg&#34;
-           loading=&#34;lazy&#34; data-zoomable class=&#34; img-light&#34; /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;道德评判&#34;&gt;道德评判&lt;/h3&gt;
 &lt;p&gt;道德评判，实际上就是我们所熟知的用自己的价值观给别人贴标签。每个人的价值观都不完全相同，将自己的价值观强加给别人实际上是将问题归咎于对方，而忽略了自己的感受和需要。&lt;/p&gt;
 &lt;p&gt;例如，妻子回到家中发现家里的卫生特别脏乱，于是责备一直在家的丈夫懒。实际上，妻子只是因为家里卫生的脏乱而没有得到满足，但她却把责任推给了自己的丈夫。被责备的丈夫自然心情并不会太好。妻子正确的做法应当是充分表达自己因为家里脏而尚未满足的需要，希望自己的丈夫可以多承担一些家务劳动。&lt;/p&gt;
@@ -2380,28 +2523,16 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;p&gt;异化的沟通方式来源于等级社会或专制社会。人们越是习惯于评定是非，他们也就越倾向于追随权威，来获得正确和错误的标准。这样一来，就忽略了自身的感受和需要。&lt;/p&gt;
 &lt;h2 id=&#34;非暴力沟通的要素&#34;&gt;非暴力沟通的要素&lt;/h2&gt;
 &lt;h3 id=&#34;观察&#34;&gt;观察&lt;/h3&gt;
+&lt;div class=&#34;markmap&#34; style=&#34;height: 200px;&#34;&gt;
 
+&lt;pre&gt;- 观察
+	- 区分观察与评论
+		- 将观察与评论混为一谈，人们将更容易听到批评
+	- 不鼓励绝对化的评论
+		- 评论要基于特定时间和环境中的观察
+	- 不带评论的观察是人类智慧的最高形式&lt;/pre&gt;
+&lt;/div&gt;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
-           src=&#34;https://bowenei.gitee.io/post/nonviolent-communication/%E8%A7%82%E5%AF%9F.svg&#34;
-           loading=&#34;lazy&#34; data-zoomable class=&#34; img-light&#34; /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
 &lt;p&gt;非暴力沟通并不要求我们保持完全的客观而不作任何评论，它只是强调区分观察和评论的重要性。将观察和评论混为一谈，人们将更容易听到批评。例如：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我儿子睡觉前经常不刷牙。&lt;/p&gt;
@@ -2468,28 +2599,14 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;li&gt;他&lt;strong&gt;经常&lt;/strong&gt;过来。（评论）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;感受&#34;&gt;感受&lt;/h3&gt;
+&lt;div class=&#34;markmap&#34; style=&#34;height: 200px;&#34;&gt;
 
+&lt;pre&gt;- 感受
+	- 区分感受与想法
+	- 建立表达感受的词汇表
+	- 表达感受时，示弱有助于解决冲突&lt;/pre&gt;
+&lt;/div&gt;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
-           src=&#34;https://bowenei.gitee.io/post/nonviolent-communication/%E6%84%9F%E5%8F%97.svg&#34;
-           loading=&#34;lazy&#34; data-zoomable class=&#34; img-light&#34; /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
 &lt;p&gt;过去人们认为感受是无关紧要的，重要的是各种权威主张的“正确思想”。于是，我们被鼓励服从权威而非倾听自己。渐渐地，我们的心灵就被压抑了。&lt;/p&gt;
 &lt;h4 id=&#34;区分感受和想法&#34;&gt;区分感受和想法&lt;/h4&gt;
 &lt;ul&gt;
@@ -2513,28 +2630,32 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;p&gt;“被忽略”是我的判断。此时并不能准确判断我的想法。如果想独处，那么我就会感到很高兴；如果想参加活动，那么我就会感到很难过。&lt;/p&gt;
 &lt;p&gt;为了清楚地表达自己的感受，要学会建立表达感受的词汇表。&lt;/p&gt;
 &lt;h3 id=&#34;需要&#34;&gt;需要&lt;/h3&gt;
+&lt;div class=&#34;markmap&#34; style=&#34;height: 300px;&#34;&gt;
 
+&lt;pre&gt;- 需要
+	- 感受的根源——我们自己
+		- 我们的需要和期待
+		- 对他人言行的看法
+	- 听到不中听的话
+		- 责备自己
+		- 指责他人
+		- 体会自己的感受和需要
+		- 体会他人的感受和需要
+	- 感受与自身（需要）的关系
+	- 非暴力沟通需要：生命健康成长的要素
+		- 批评往往暗含期待
+			- 批评实际上间接表达了我们尚未满足的需要
+			- 通过批评来提出主张，人们的反应常常是申辩或反击
+		- 谈论需要而不指责对方
+	- 个人成长的三个阶段
+		- 第一阶段：“情感的奴隶”
+			- 为他人负责，让他人快乐是我们的义务
+		- 第二阶段：“面目可憎”
+			- 不愿再牺牲自己，迎合他人，但仍心存疑虑
+		- 第三阶段：“生活的主人”
+			- 帮助他人是出于爱，而不是处于恐惧、内疚或惭愧&lt;/pre&gt;
+&lt;/div&gt;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
-           src=&#34;https://bowenei.gitee.io/post/nonviolent-communication/%E9%9C%80%E8%A6%81.svg&#34;
-           loading=&#34;lazy&#34; data-zoomable class=&#34; img-light&#34; /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
 &lt;p&gt;非暴力沟通强调，感受的根源在于我们自身。我们的需要和期待，以及对他人言行的看法，导致了我们的感受。&lt;/p&gt;
 &lt;h4 id=&#34;感受与自身需要的关系&#34;&gt;感受与自身（需要）的关系&lt;/h4&gt;
 &lt;p&gt;我们可以通过“我（感到）……因为我……”这种表达方式来认识感受与自身的关系。例如：&lt;/p&gt;
@@ -2552,28 +2673,33 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;li&gt;&lt;strong&gt;生活的主人&lt;/strong&gt;：虽然我们对自己的意愿、感受和行动负有完全的责任，但无法为他人负责。我们也无法牺牲他人来满足自己的需要。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;请求&#34;&gt;请求&lt;/h3&gt;
+&lt;div class=&#34;markmap&#34; style=&#34;height: 300px;&#34;&gt;
 
+&lt;pre&gt;- 请求
+	- 提出具体的请求
+		- 请求他人不做什么容易引起他人的反感
+		- 请求越具体越好，如果我们的意思含糊不清，别人就难以了解我们到底想要什么
+		- 使用抽象的语言无助于深入了解自己
+	- 明确谈话的目的
+		- 说出自己的感受和需要，再提出明确的请求
+	- 请求反馈
+		- 我们的意思和别人的理解有时可能是两回事
+		- 解释我们的目的——是否把意思说清楚了
+			- 当对方给予反馈，表达我们的感激
+			- 如果对方不愿反馈，倾听他的感受和需要
+	- 了解他人的反应
+		- 对方此时此刻的感受
+		- 对方正在想什么
+		- 对方是否接受我们的请求
+	- 请求与命令
+		- 命令
+			- 请求没有得到满足时，提出请求的人的批评和指责
+			- 想利用对方的内疚来达到目的
+		- 请求
+			- 愿意去体会是什么使他们无法说“是”
+			- 看重彼此的感情，兼顾双方的需要&lt;/pre&gt;
+&lt;/div&gt;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
-           src=&#34;https://bowenei.gitee.io/post/nonviolent-communication/%E8%AF%B7%E6%B1%82.svg&#34;
-           loading=&#34;lazy&#34; data-zoomable class=&#34; img-light&#34; /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
 &lt;h4 id=&#34;提出具体的请求&#34;&gt;提出具体的请求&lt;/h4&gt;
 &lt;p&gt;我们要学会提出具体的请求。首先，清楚地告诉对方，我们希望他们做什么。如果我们请求他人不做什么，对方也许会感到困惑，不知道我们到底想要什么。而且，这样的请求还容易引起别人的反感。&lt;/p&gt;
 &lt;p&gt;下面的句子都没有提出明确的请求：&lt;/p&gt;
@@ -2599,28 +2725,35 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;p&gt;一旦人们相信我们看重彼此的感情，并能兼顾双方的需要，那么，他们也就会相信我们所表达的愿望是请求而非命令。然而在另一些时候，即使我们以适当的方式提出请求，有些人仍然误以为是命令。特别是当我们处于强势的一方，那些曾受过威胁的人尤其容易做出那样的判断。&lt;/p&gt;
 &lt;p&gt;实际上，非暴力沟通的目的不是为了改变他人来迎合我们。相反，非暴力沟通重视每个人的需要，它的目的是帮助我们在诚实和倾听的基础上与人联系。&lt;/p&gt;
 &lt;h2 id=&#34;倾听他人&#34;&gt;倾听他人&lt;/h2&gt;
+&lt;div class=&#34;markmap&#34; style=&#34;height: 300px;&#34;&gt;
 
+&lt;pre&gt;- 倾听他人
+	- 先放下已有的想法和判断，全神贯注地体会对方
+		- 不要急于提建议，安慰或表达我们的态度和感受
+		- 不要试图分析问题，这样是在诊断人
+	- 体会他人的感受和需要
+		- 通过询问来了解我们的猜测是否准确
+	- 主动表达我们的理解来给予他人反馈
+		- 如果理解准确，我们的反馈将帮助到他们
+		- 如果理解不到位，他们也有机会纠正我们
+		- 使用疑问句来给予他人反馈，并且先提及我们的感受和需要，再鼓励人们主动表达自己
+		- 如果一个人说话有明显的情绪，他一般会期待得到他人的反馈
+	- 为对方的充分表达创造条件
+		- 当对方得到充分的倾听时
+			- 我们将体会到气氛变得轻松
+			- 他会停止谈话
+	- 当我们痛苦得无法倾听他人时
+		- 体会自己的感受和需要
+		- 大声地提出请求
+		- 换一个环境
+	- 倾听的力量
+		- 倾听使身心痊愈
+		- 倾听促进人们坦诚地沟通
+		- 倾听预防潜在的暴力
+		- 倾听使谈话生动有趣
+		- 倾听帮助人们治愈心灵的创伤&lt;/pre&gt;
+&lt;/div&gt;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
-           src=&#34;https://bowenei.gitee.io/post/nonviolent-communication/%E5%80%BE%E5%90%AC%E4%BB%96%E4%BA%BA.svg&#34;
-           loading=&#34;lazy&#34; data-zoomable class=&#34; img-light&#34; /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;体会他人的感受和需要&#34;&gt;体会他人的感受和需要&lt;/h3&gt;
 &lt;p&gt;为了倾听他人，我们需要先放下已有的想法和判断，全神贯注地体会对方。然而，遭遇他人的痛苦时，我们常常急于提建议，安慰或表达我们的态度和感受。如果一个人想要别人了解他的处境，听到的却是安慰和建议，那么他就很有可能觉得不太舒服。具体来讲，如下行为会妨碍我们体会他人的处境：&lt;/p&gt;
 &lt;ul&gt;
@@ -2656,28 +2789,68 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;p&gt;有时，我们的意图可能会被误解。只要我们专注于他人的感受和需要，所有的批评、攻击、辱骂或者嘲讽就会消失。如果人们常常怀疑我们的诚意，那么我们需要好好审视自己的动机。也许，我们只是在机械地运用非暴力沟通，而忘记其目的。我们绝对不能想着改变他人来迎合我们的需要。&lt;/p&gt;
 &lt;p&gt;另外，在解决问题或询问他人的请求前，要为他人的充分表达创造条件。如果过早地提及他人的请求，我们也许就无法传达出我们的关心，甚至还会被看作是应付。&lt;/p&gt;
 &lt;h2 id=&#34;表达自己&#34;&gt;表达自己&lt;/h2&gt;
+&lt;div class=&#34;markmap&#34; style=&#34;height: 500px;&#34;&gt;
 
+&lt;pre&gt;- 表达自己
+	- 爱自己
+		- 转变自我评价的方式
+			- 自我评价不应当使我们羞愧或内疚
+			- 转变是出于对生命的爱
+		- 自责的原因
+			- 我的行为不符合我的需要
+				- 专注于自我的需要是否得到满足
+		- 直面人生的苦难，无需责备自己
+		- 自我宽恕
+			- 我做那件事情是为了满足什么需要
+		- 用“选择做”代替“不得不”
+			- 哪些事情没有意思却不得不做
+			- 我选择做，而不是不得不做
+			- 我选择做……，是因为我想要……
+		- 倾听内心的声音
+			- 通过鼓励文明区分观察和评论，认识情感的根源在于个人的需要和想法，并以建设性的语言提出明确的请求
+	- 充分表达愤怒
+		- 生气的原因在于我们的想法
+			- 对他人的评判和指责
+		- 合理表达愤怒
+			- 我生气是因为我需要…… 👍
+			- 我生气是因为他们…… 👎
+		- 表达愤怒的四个步骤
+			- 停下来，呼吸
+			- 留意我们的指责
+			- 体会我们的需要
+			- 表达感受和尚未满足的需要
+		- 先倾听他人
+			- 在得到倾听和理解之后，他人一般也将会开始留意我们的感受和需要
+		- 给自己时间
+	- 运用强制力避免伤害
+		- 使用强制力的目的
+			- 避免伤害 👍
+			- 惩罚对方 👎
+				- 惩罚往往加强了对方的敌意和抵触心理
+				- 使双方的关系更加疏远
+		- 惩罚的类型
+			- 体罚
+				- 对体罚的恐惧会让孩子难以体会到父母的爱
+			- 指责和否定
+			- 不给某种好处
+		- 惩罚的代价
+			- 当我们为了回避惩罚去做事情时，我们可能会忽视事情本身的价值，而陷于对失败的忧虑，把注意力放在不服从的后果上
+		- 惩罚的局限性
+			- 我希望他基于怎样的原因去做我想要他做的事情
+	- 表达感激
+		- 赞扬的动机
+			- 只是为了庆祝他人的行为提升了我们的生活品质，而不是想得到任何回报
+		- 表达感激的方式
+			- 对方做了什么事情使我们的生活得到了改善
+			- 我们的哪些需要得到了满足
+			- 我们的心情怎么样
+		- 接受别人的感激
+			- 自我膨胀
+			- 假谦虚
+		- 绝大多数人渴望得到他人的肯定和感激
+		- 充分表达感激&lt;/pre&gt;
+&lt;/div&gt;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
-           src=&#34;https://bowenei.gitee.io/post/nonviolent-communication/%E8%A1%A8%E8%BE%BE%E8%87%AA%E5%B7%B1.svg&#34;
-           loading=&#34;lazy&#34; data-zoomable class=&#34; img-light&#34; /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;爱自己&#34;&gt;爱自己&lt;/h3&gt;
 &lt;p&gt;爱自己的第一步首先是要转变自我评价的方式。我们要认识到自责的原因，即我的行为不符合我的需要。因此，我们需要专注于自我的需要是否满足。这样，我们就不再依赖羞愧、内疚、恼怒或沮丧的心理来寻求改变，而是让爱主导我们的学习和成长。&lt;/p&gt;
 &lt;p&gt;要学会自我宽恕，思考清楚我做那件事情是为了满足什么需要。如果那件事情“不得不”做，却并不能满足我的需要，要学会用“选择做”代替“不得不”。&lt;/p&gt;
@@ -2724,17 +2897,17 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;p&gt;与此同时，我们中国人经过几十年的艰苦奋斗，后发先至，在主要的方面，我们现在基本上都赶上西方了。这个时候，美国人就发现自己这“第四口气”明显喘不动了。地理上没有地方扩张了，然后新领域新空间，遇到了中国的竞争，然后它想通过“民主化”来对我们进行分化、进行剥削，这个计划也破产了。美国的统治集团，它会认为自己遇到了一个两难选择，哪两难呢？第一是我干脆改掉依赖“吸血”来生存的恶习，放弃霸权，回归平凡，但是这条路是他们非常不愿意走的。第二条就是孤注一掷，对中国搞各种无下限的攻击手段。这是我们当前面临的一个最大风险。&lt;/p&gt;
 &lt;p&gt;其实，我认为美国还有一条路，但这条路可能属于美国人民，而不属于这个腐朽的统治集团，那就是探索真正的民主道路，真正保障人民的权利和利益，改革陈腐的选举代议制度，废除私权绑架的这种黑暗司法和美联储制度，建立有权威、有能力、负责任的政府，集中精力去防治新冠疫情，去救援龙卷风的受灾地区，去重建那些破败的基础设施体系，消除城市里的贫民窟，消除暴力和犯罪，清除种族歧视和身份政治，促进人民共享的科技创新和工业生产。另外就是在国际上和中国合作，与世界和解，我们共同来探索人类的新边疆。习主席讲过一句话，说太平洋足够大，容得下中美。其实在今天这个新科技、数字世界和外太空，我觉得它更是足够大，足以容得下全人类的共同利益。所以我希望美国人也能够认识到这一点，能够想清楚，选择一条真正符合自己利益和人类共同利益的道路。&lt;/p&gt;
 &lt;p&gt;好，谢谢大家！&lt;/p&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
 &lt;p&gt;&lt;a href=&#34;http://www.gov.cn/zhengce/2021-12/04/content_5655823.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;国务院新闻办公室4日发表《中国的民主》白皮书&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.fmprc.gov.cn/web/zyxw/202112/t20211205_10462534.shtml&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;外交部5日发表《美国民主情况》报告&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/section&gt;</description>
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -2840,6 +3013,8 @@ and each part is trained directly on end device with local data. The trained mod
 
 &lt;p&gt;相关完整视频如下：&lt;/p&gt;
 &lt;iframe src=&#34;//player.bilibili.com/player.html?aid=251073544&amp;bvid=BV1gv41137wa&amp;cid=424911016&amp;page=1&#34; scrolling=&#34;no&#34; border=&#34;0&#34; frameborder=&#34;no&#34; framespacing=&#34;0&#34; allowfullscreen=&#34;true&#34; width=&#34;100%&#34; height=&#34;480&#34;&gt; &lt;/iframe&gt;
+
+
 &lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
   &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
   &lt;nav id=&#34;TableOfContents&#34;&gt;
@@ -2897,6 +3072,8 @@ and each part is trained directly on end device with local data. The trained mod
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -2908,7 +3085,10 @@ and each part is trained directly on end device with local data. The trained mod
                height=&#34;412&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;任何一个理论体系都是始于一些基本概念的，理论本质上是对这些现实的概念化解释。因此，在形式上理论必然表现为一系列相互关联的概念的联系。例如西方的民主化理论由如下相互关联的概念组成：&lt;/p&gt;
+
+
 
 
 
@@ -2936,6 +3116,7 @@ and each part is trained directly on end device with local data. The trained mod
                height=&#34;412&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;在我们的日常生活中，我们很难理解甚至去使用这些概念和理论。那么，只有那些教条化的、庸俗化的表达可以渗透进我们的日常生活中，比如说我们熟知的“自由”、“民主”。这些教条化的、庸俗化的表达的最大特点就是简洁。&lt;/p&gt;
 &lt;p&gt;要解构西方话语的概念体系，首先我们要区分不同的概念类别。范勇鹏教授将西方概念分为如下四类：&lt;/p&gt;
 &lt;ol&gt;
@@ -2963,6 +3144,8 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;p&gt;13世纪的欧洲出现了资本主义萌芽，这些新兴的商人追求发财致富，却受到了天主教的约束。于是他们首先要做的事情就是阶级斗争——打倒教会，从教权的统治下解放个人。但仅仅有了自由还不够，还需要法律、和平、国家等等一系列阶级统治的工具来保障。然而，今天的自由主义者反对国家的干预、主张小政府、分权、放权，这其实和当时资产阶级崛起的历史事实是相违背的。&lt;/p&gt;
 &lt;p&gt;资产阶级对内利用国家的权力掠夺农民的财富，强迫他们进入工厂接受剥削，然后再建立起劳资自由的契约原则；对外利用国家的力量轰开别的民族的大门，把这些地方变成殖民地掠夺财富，然后再编造自由贸易、航行自由、国际法等等神话。国家主权这一概念其实也是这一时期产生的，本质上是服务于资本的，为帝国主义发动战争提供了合理性、合法性。而一旦国家权力集中到不受资本控制，产生不符合资本利益的独立意志时，资本就会不断地对国家的权力进行限制，其结果就是产生了我们今天所熟悉法治和代议制。这样以来，资产阶级的这种自由相较于国家的优先性变成了现代的“政治正确”，自由主义哲学就是为了论证其正确性的。&lt;/p&gt;
 &lt;p&gt;综上所述，我们要把资产阶级自由的本质认识清楚：&lt;strong&gt;自由就是财产权，自由就是市场原则至上，自由就是资本的统治&lt;/strong&gt;。至于我们所以为的言论自由不过是包裹在自由概念之上糖衣，目的是为了让毒药更容易下咽。&lt;/p&gt;
+
+
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;马克思主义与自由&lt;/strong&gt;&lt;/p&gt;
@@ -2976,6 +3159,8 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;h3 id=&#34;法治&#34;&gt;法治&lt;/h3&gt;
 &lt;p&gt;澄清了自由的概念，我们就能够很容易认清法治的概念。自由概念直接导向了法治，因为一旦自由概念获得霸权地位，国家就沦为了财产权的代言人。资产阶级最乐意看到的就是市场的规则决定一切，因为这是他们最擅长的事情，于是市场的规则就被他们称为“法”，与所谓的公权力对立起来。这样一来，法治就成为了一个资产阶级创造的独立的生命，法治强调的这种程序正义就成了至高无上的正义原则。&lt;/p&gt;
 &lt;p&gt;今天美国独立的司法本质上就是一种程序正义，但它的结果是不是公正就另当别论了。现代政治多元主义被描述成一种可以依据法治和程序原则允许多元利益在里边自由博弈的游戏，这个游戏看起来表面上是透明的，但实际上只有那些所谓成功的“个人”——资产阶级——才能赢。&lt;/p&gt;
+
+
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;社会主义法治&lt;/strong&gt;&lt;/p&gt;
@@ -2998,6 +3183,8 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;p&gt;所谓威权，汉语中习惯把它称作权威。实际上权威和威权在英语里其实是一个词 &lt;code&gt;authority&lt;/code&gt;，为什么会翻译成两个词呢？是因为国内一些学者为了和极权主义形成文字上的对仗刻意生译出来的。&lt;/p&gt;
 &lt;p&gt;威权主义最初是用于西班牙、葡萄牙等右翼国家，这些国家属于准法西斯国家，就是说没有达到德国、意大利那个程度，但也是右翼独裁。（蒋介石的国民政府也可以认为是威权主义。）后来美国学者亨廷顿把威权主义泛化成一切不民主的政体，结果近年来威权主义的帽子越来越多地扣在中国的头顶上，而且国内很多学者都心悦诚服地接受了这个定义。&lt;/p&gt;
 &lt;p&gt;基于此，国内政治学界形成了一大套“黑话”、“行话”，然后堆叠出了大量毫无意义的文献，不断地自我复制、自我增生、自我强化。范勇鹏教授在这里猛烈地抨击了这种“文献霸权”现象，他认为这浪费了许多学者无数的生命和精力，最终无异于为西方话语打工，丝毫不贴近中国的实践、中国的现实。&lt;/p&gt;
+
+
 &lt;div class=&#34;alert alert-warning&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;基于威权主义的概念特别多，例如“负责任的威权主义”，让人有种概念的排列组合的感觉。范勇鹏教授不禁反问：如果一个政府负责任，那还是威权主义吗？&lt;/p&gt;
@@ -3021,6 +3208,8 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;p&gt;因此，资产阶级肯定是不喜欢民主的，他们想方设法来制约民主。直到上世纪七八十年代，西方都很少称自己是“民主”，而是自称“自由阵营”。而当时苏联、东欧才说自己是“民主阵营”。西方是在苏联解体之后才把自己给装扮成民主，中国的70后、80后大都是在这一时期成长起来的，所以也就习惯接受了自由民主这一概念。&lt;/p&gt;
 &lt;p&gt;19世纪末20世纪初的世界社会主义运动迫使资产阶级一步步地向无产阶级妥协，接受民主的诉求。西方资产阶级并不甘心，为了解构掉民主这一概念，他们用了将近100年的时间，不断阉割民主的含义，最后把它改造成一个程序性的工具。这里面的始作俑者就是奥地利经济学家熊彼特，他解构了民主的价值内涵，使民主不再成为社会主义特有的概念。他将民主视作手段，而不是目的。这一点与社会主义民主集中制、苏维埃完全相悖，也与我国的人民民主完全相悖。&lt;/p&gt;
 &lt;p&gt;今天一提到民主，我们仿佛脑海里只有自由民主的概念。今天的民主是二战后社会科学的一块重要基石，几乎所有重要的理论都是以它为支点。如果我们推翻了西方的民主，几乎可以摧毁西方的政治学；如果我们盲目地去跟从它，那么我们中国自主的政治知识就无从谈起。&lt;/p&gt;
+
+
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;社会主义民主&lt;/strong&gt;&lt;/p&gt;
@@ -3067,6 +3256,8 @@ and each part is trained directly on end device with local data. The trained mod
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -3078,6 +3269,7 @@ and each part is trained directly on end device with local data. The trained mod
                height=&#34;412&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;我们国内学界相当多的一批学者对阶级问题的认识受到了西方概念的影响。范勇鹏教授的一个硕士生开题时正值2016年美国大选，范勇鹏教授给他的硕士生的选题是《特朗普当选美国总统背后的阶级问题》。结果在开题的时候很多老师不同意，因为他们觉得美国不存在阶级问题——美国是典型的中产阶级社会。最后范勇鹏教授据理力争才得以成功开题。&lt;/p&gt;
 &lt;h3 id=&#34;共同体&#34;&gt;共同体&lt;/h3&gt;
 &lt;p&gt;共同体本是人类历史上普遍存在的一种现象，在经济上表现为财产的共同拥有和使用。随马克思主义传入中国后的一些词语诸如“共产主义”、“同志”等都和共同体一词有词源联系。&lt;/p&gt;
@@ -3115,6 +3307,8 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;p&gt;Self-attention-based architectures, in particular Transformers (Vaswani et al., 2017), have become the model of choice in natural language processing (NLP). The dominant approach is to pre-train on a large text corpus and then fine-tune on a smaller task-specific dataset (Devlin et al., 2019). Thanks to Transformers’ computational efficiency and scalability, it has become possible to train models of unprecedented size, with over 100B parameters (Brown et al., 2020; Lepikhin et al., 2020). With the models and datasets growing, there is still no sign of saturating performance.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;在 NLP 领域，目前主流的方式是先在一个大规模数据集上做预训练 &lt;code&gt;pre-train&lt;/code&gt;，然后在特定领域的小数据集上做微调 &lt;code&gt;fine-tune&lt;/code&gt;。（这实际上是 BERT 这篇论文里提出来的。）Transformer 的计算具有高效性 &lt;code&gt;efficiency&lt;/code&gt; 和可扩展性 &lt;code&gt;scalability&lt;/code&gt;，并且随着模型和数据集的增长，还没有看到出现性能饱和 &lt;code&gt;saturating&lt;/code&gt; 的现象。&lt;/p&gt;
+
+
 &lt;div class=&#34;alert alert-warning&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;Transformer 直接用于 CV 领域的困难&lt;/strong&gt;&lt;/p&gt;
@@ -3208,6 +3402,8 @@ and each part is trained directly on end device with local data. The trained mod
 
 
 
+
+
 &lt;figure  id=&#34;figure-figure-1-model-overview-we-split-an-image-into-fixed-size-patches-linearly-embed-each-of-them-add-position-embeddings-and-feed-the-resulting-sequence-of-vectors-to-a-standard-transformer-encoder-in-order-to-perform-classification-we-use-the-standard-approach-of-adding-an-extra-learnable-classification-token-to-the-sequence&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Figure 1: Model overview. We split an image into fixed-size patches, linearly embed each of them, add position embeddings, and feed the resulting sequence of vectors to a standard Transformer encoder. In order to perform classification, we use the standard approach of adding an extra learnable “classification token” to the sequence.&#34; srcset=&#34;
@@ -3221,11 +3417,14 @@ and each part is trained directly on end device with local data. The trained mod
   &lt;/div&gt;&lt;figcaption&gt;
       Figure 1: Model overview. We split an image into fixed-size patches, linearly embed each of them, add position embeddings, and feed the resulting sequence of vectors to a standard Transformer encoder. In order to perform classification, we use the standard approach of adding an extra learnable “classification token” to the sequence.
     &lt;/figcaption&gt;&lt;/figure&gt;
+
 &lt;p&gt;朱老师认为，论文的总览图非常重要。总览图画得好，别人在不读整篇文章的情况下光看图就能够大致了解这篇文章在讲什么。&lt;strong&gt;ViT&lt;/strong&gt; 这篇文章的总览图画得非常好，以至于其他人在引用或者讲解 &lt;strong&gt;ViT&lt;/strong&gt; 的时候都是直接把图贴上去而不做任何修改。&lt;/p&gt;
 &lt;p&gt;给定一张图片，首先将这张图打成了很多 &lt;code&gt;patch&lt;/code&gt;。然后他把这些 &lt;code&gt;patch&lt;/code&gt; 转化成一个序列，每个 &lt;code&gt;patch&lt;/code&gt; 会通过一个被称为线性投射层的操作得到一个特征，即图中的 &lt;code&gt;Patch + Position Embedding&lt;/code&gt;。我们知道，自注意力机制是所有的元素之间两两去做交互，所以说 attention 本身不存在顺序问题。但是对于图片来说它是一个整体，这个九宫格是有自己的顺序的。如果顺序颠倒了，就不是原来那张图片了，所以就需要 &lt;code&gt;Position Embedding&lt;/code&gt;。加上了位置编码的信息以后，每个 &lt;code&gt;token&lt;/code&gt; 既包括了原本的图像 &lt;code&gt;patch&lt;/code&gt; 信息，又包括了图像 &lt;code&gt;patch&lt;/code&gt; 所在的位置信息。&lt;/p&gt;
-&lt;p&gt;接下来实际上就和 NLP 那边是完全一样了。经过 Transformer Encoder 之后，它会给我们很多输出。那么问题来了，应该用哪个输出去做最后的分类呢？这里还需要再次借鉴 BERT&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt; 当中的 extra learnable [class] embedding，即特殊字符 &lt;code&gt;cls&lt;/code&gt;。在 &lt;strong&gt;ViT&lt;/strong&gt; 中也加入了一个特殊字符，用 &lt;code&gt;*&lt;/code&gt; 代替，它的位置信息永远是 &lt;code&gt;0&lt;/code&gt;。因为自注意力机制使得每个 &lt;code&gt;token&lt;/code&gt; 之间都在互相学习，用一个空的 &lt;code&gt;token&lt;/code&gt; 就可以和图片的每个 &lt;code&gt;patch&lt;/code&gt; 交互学到完整的图片信息，所以只需要根据 &lt;code&gt;cls&lt;/code&gt; 对应的输出来判断即可。MLP Head 就是一个通用的分类头了，最后再用交叉熵函数去进行模型的训练。&lt;/p&gt;
+&lt;p&gt;接下来实际上就和 NLP 那边是完全一样了。经过 Transformer Encoder 之后，它会给我们很多输出。那么问题来了，应该用哪个输出去做最后的分类呢？这里还需要再次借鉴 BERT&lt;sup id=&#34;fnref1:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt; 当中的 extra learnable [class] embedding，即特殊字符 &lt;code&gt;cls&lt;/code&gt;。在 &lt;strong&gt;ViT&lt;/strong&gt; 中也加入了一个特殊字符，用 &lt;code&gt;*&lt;/code&gt; 代替，它的位置信息永远是 &lt;code&gt;0&lt;/code&gt;。因为自注意力机制使得每个 &lt;code&gt;token&lt;/code&gt; 之间都在互相学习，用一个空的 &lt;code&gt;token&lt;/code&gt; 就可以和图片的每个 &lt;code&gt;patch&lt;/code&gt; 交互学到完整的图片信息，所以只需要根据 &lt;code&gt;cls&lt;/code&gt; 对应的输出来判断即可。MLP Head 就是一个通用的分类头了，最后再用交叉熵函数去进行模型的训练。&lt;/p&gt;
 &lt;p&gt;至于这里的 Transformer Encoder 也是完全标准的，即图中右边的部分。所以说从整体结构上来看，&lt;strong&gt;ViT&lt;/strong&gt; 的结构非常简洁，它的特殊之处就在于如何将一个图片转化成一系列的 &lt;code&gt;token&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;那么下面结合下图 &lt;strong&gt;ViT&lt;/strong&gt; 的 Transformer 部分对 Transformer 模型再做一个回顾。&lt;/p&gt;
+
+
 
 
 
@@ -3248,6 +3447,7 @@ and each part is trained directly on end device with local data. The trained mod
            src=&#34;https://bowenei.gitee.io/post/an-image-is-worth-16x16-words-transformers-for-image-recognition-at-scale/ViT.svg&#34;
            loading=&#34;lazy&#34; data-zoomable class=&#34; img-light&#34; /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;首先将输入的图片打成若干 &lt;code&gt;patch&lt;/code&gt;，这里的图片输入大小为 224x224x3，表示宽和高为 224 像素，RGB 3 通道。&lt;code&gt;patch&lt;/code&gt; 的大小为 16x16x3，因此原图被划分为 $14 \times 14 = 196$ 个 &lt;code&gt;patch&lt;/code&gt;。再加上 &lt;code&gt;cls&lt;/code&gt;，序列的总长度为 197。&lt;/p&gt;
 &lt;p&gt;经过 Embedding 和位置编码之后，得到维度为 197x768 的 &lt;code&gt;tokens&lt;/code&gt;，因为每个 16x16x3 的 &lt;code&gt;patch&lt;/code&gt; 拉直之后是 $16 \times 16 \times 3 = 768$ 维。&lt;/p&gt;
 &lt;p&gt;接下来进行 Self-Attention，需要映射出 3 个矩阵 Query、Key 和 Value。由于 Transformer 的多头自注意力机制，并且 &lt;strong&gt;ViT&lt;/strong&gt; 设置了 $h = 12$ 个头，那么 3 个矩阵的维度均为 197x64，因为 $768 \div 12 = 64$。最后经过拼接 &lt;code&gt;Concat&lt;/code&gt; 得到 197x768 维的 Attention 矩阵。&lt;/p&gt;
@@ -3268,6 +3468,8 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;p&gt;When feeding images of higher resolution, we keep the patch size the same, which results in a larger effective sequence length. The Vision Transformer can handle arbitrary sequence lengths (up to memory constraints), however, the pre-trained position embeddings may no longer be meaningful. We therefore perform 2D interpolation of the pre-trained position embeddings, according to their location in the original image. Note that this resolution adjustment and patch extraction are the only points at which an inductive bias about the 2D structure of the images is manually injected into the Vision Transformer.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;微调 &lt;code&gt;fine-tuning&lt;/code&gt; 是指预训练好的 &lt;strong&gt;ViT&lt;/strong&gt; 模型（输入图片为 224x224x3）在更大尺寸的图片（例如 320x320x3）上进行“刷脸”。但是，这对于预训练好的 &lt;strong&gt;ViT&lt;/strong&gt; 有些麻烦，因为如果 &lt;code&gt;patch&lt;/code&gt; 的大小不变，而图片变大了，于是序列变长了。从理论上说，Transformer 可以处理任意长度的序列。但是，提前训练好的位置编码可能就完全没用了，因为预训练好的位置编码具有明确的物理意义。那么预训练的位置编码还是否有用呢？作者发现，再做一个 2D 的差值就可以了。但这里的差值也仅仅只是一个临时的解决方案，应该说这算是 &lt;strong&gt;ViT&lt;/strong&gt; 在微调的时候的一个局限性。&lt;/p&gt;
+
+
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     至此，已经可以基本了解 &lt;strong&gt;ViT&lt;/strong&gt; 的基本架构了。后面实验部分以及附录的有关说明，如有需要再进行补充。
@@ -3275,32 +3477,32 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;/div&gt;
 
 &lt;h2 id=&#34;experiments&#34;&gt;Experiments&lt;/h2&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
 &lt;p&gt;Beal J, Kim E, Tzeng E, et al. Toward transformer-based object detection[J]. arXiv preprint arXiv:2012.09958, 2020.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
 &lt;p&gt;Zheng S, Lu J, Zhao H, et al. Rethinking semantic segmentation from a sequence-to-sequence perspective with transformers[C]//Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021: 6881-6890.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
 &lt;p&gt;Liu Z, Lin Y, Cao Y, et al. Swin transformer: Hierarchical vision transformer using shifted windows[J]. arXiv preprint arXiv:2103.14030, 2021.&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:4&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
 &lt;p&gt;Zhai X, Kolesnikov A, Houlsby N, et al. Scaling vision transformers[J]. arXiv preprint arXiv:2106.04560, 2021.&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:5&#34; role=&#34;doc-endnote&#34;&gt;
-&lt;p&gt;Devlin J, Chang M W, Lee K, et al. Bert: Pre-training of deep bidirectional transformers for language understanding[J]. arXiv preprint arXiv:1810.04805, 2018.&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;li id=&#34;fn:5&#34;&gt;
+&lt;p&gt;Devlin J, Chang M W, Lee K, et al. Bert: Pre-training of deep bidirectional transformers for language understanding[J]. arXiv preprint arXiv:1810.04805, 2018.&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:6&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:6&#34;&gt;
 &lt;p&gt;Radford A, Narasimhan K, Salimans T, et al. Improving language understanding by generative pre-training[J]. 2018.&amp;#160;&lt;a href=&#34;#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:7&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:7&#34;&gt;
 &lt;p&gt;He K, Chen X, Xie S, et al. Masked autoencoders are scalable vision learners[J]. arXiv preprint arXiv:2111.06377, 2021.&amp;#160;&lt;a href=&#34;#fnref:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/section&gt;</description>
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -3311,6 +3513,8 @@ and each part is trained directly on end device with local data. The trained mod
       <description>&lt;p&gt;复旦大学中国研究院院长&lt;a href=&#34;http://www.cifu.fudan.edu.cn/14/1d/c521a136221/page.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;张维为&lt;/a&gt;教授认为，中国已经崛起到今天这个地步，我们完全可以以中国人的眼光和话语来观察、评述自己的国家与外部世界。我们要建构全面的、透彻的、强势的话语体系。&lt;/p&gt;
 &lt;p&gt;复旦大学中国研究院副院长&lt;a href=&#34;http://www.cifu.fudan.edu.cn/95/39/c521a103737/page.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;范勇鹏&lt;/a&gt;教授的这本《从公司到国家：美国制度困局的历史解释》全景再现美利坚创制历程，深度解读一个公司型国家的制度逻辑。&lt;/p&gt;
 &lt;p&gt;本文按照原书的目录编排，对书中的一些具体史实和范勇鹏教授的观点进行罗列、整理和归纳，形成了下面的读书笔记。&lt;/p&gt;
+
+
 &lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
   &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
   &lt;nav id=&#34;TableOfContents&#34;&gt;
@@ -3362,28 +3566,77 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;/details&gt;
 
 &lt;h2 id=&#34;导读&#34;&gt;导读&lt;/h2&gt;
+&lt;div class=&#34;markmap&#34; style=&#34;height: 500px;&#34;&gt;
 
+&lt;pre&gt;- 从公司到国家：美国制度困局的历史解释
+	- 底色
+		- 人（逐利性）
+			- 早期移民
+			- 清教神话
+			- 功利主义
+		- 地（无与伦比）
+			- 土地广阔、资源丰富
+			- 地缘安全
+		- 国家理由
+			- 恐惧
+			- 利益
+			- 地理
+			- 资本
+	- 代议制起源
+		- 少数中的多数
+			- 少数统治者
+			- 多数并不是一直说了算
+		- 欧洲代议制的起源
+			- 封建制
+			- 英国代议制
+		- 美国代议制的起源
+			- 殖民地制度形式
+				- 公司殖民地
+				- 业主殖民地
+				- 契约殖民地
+			- 议会的雏形
+				- 参事会
+				- 代表议会
+	- 公司国家
+		- 威尼斯
+			- 共有主权
+		- 尼德兰
+			- 共和国主权
+		- 英国
+			- 君主立宪制
+	- 独立和立宪
+		- 独立运动
+			- 重商主义
+		- 《邦联条例》
+			- 主权
+		- 制宪
+			- 主要的利益关系达成妥协
+	- 宪法制度
+		- 法人观念
+		- 公司制度
+			- 股东大会
+			- 董事会
+			- 经理人员
+		- 作为契约的宪法
+			- 立法权
+			- 行政权
+			- 司法权
+	- 宪政弊端
+		- 总统制
+			- 权威不足
+		- 官僚制度
+			- 官僚制度产生的历史
+				- 现代理性主义国家对官僚制度的促进
+				- 西进拓荒对官僚制度的促进
+			- 官僚制度的困境
+				- 国会与总统对行政权的双重控制
+					- 官僚机构却获得了更大的独立性
+				- 对程序的畸形关注
+					- 一切政治问题都转化为法律问题
+					- 善用法律者自然长袖善舞
+					- 往往只有利于富人和强者&lt;/pre&gt;
+&lt;/div&gt;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34;
-           src=&#34;https://bowenei.gitee.io/post/from-corporation-to-country-a-historical-explanation-of-americas-institutional-dilemma/%E4%BB%8E%E5%85%AC%E5%8F%B8%E5%88%B0%E5%9B%BD%E5%AE%B6%EF%BC%9A%E7%BE%8E%E5%9B%BD%E5%88%B6%E5%BA%A6%E5%9B%B0%E5%B1%80%E7%9A%84%E5%8E%86%E5%8F%B2%E8%A7%A3%E9%87%8A.svg&#34;
-           loading=&#34;lazy&#34; data-zoomable class=&#34; img-light&#34; /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;序言&#34;&gt;序言&lt;/h2&gt;
 &lt;p&gt;2020 年 1 月中旬范勇鹏教授动笔时，一场突如其来的新冠肺炎疫情在武汉蔓延。2020 年 3 月底结稿之时，中国这波疫情已基本平息，而国外的疫情又开始蔓延。特别是 2020 年的特朗普政府应对疫情不利，一场关于中美制度看法的舆论斗争在微博、微信朋友圈等准公共领域展开。一旦有涉及到美国的话题，人们往往会迅速地分出两大阵营——恨美者，逢美必反，坚信美帝国主义亡我之心不死；爱美者，将美国视为正义代表、民主灯塔，以美国的价值观为普世大道，以美国的制度为理想样板。&lt;/p&gt;
 &lt;p&gt;其实，这种现象并不稀奇，如何看美国，在中国从来是个大问题，是个政治问题。中美签订第一个不平等条约《望厦条约》后，当时的中国人并没有意识到自由贸易对中国社会结构的破坏性。八国联军侵华后，美国反对列强瓜分中国，要求利益均沾、门户开放，这在当时引起了中国人对美国不切实际的好感。巴黎和会后，美国的自由主义思潮和随新文化运动传入的马克思主义产生了正面碰撞，这&lt;strong&gt;埋下了中国思想界左右两翼长期角力的种子&lt;/strong&gt;。从某种意义上讲，今天中国的思潮之争依然未能摆脱 20 世纪初的影子。&lt;/p&gt;
@@ -3442,6 +3695,8 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;p&gt;关于欧洲现代代议制，很多人认为它始于 1215 年的《大宪章》。然而，《大宪章》被神化，成为了权力斗争的产物。范勇鹏教授认为，《大宪章》确实与代议制有关，但不应该像英美学者和政客那样给它披上各种华而不实的外衣。&lt;/p&gt;
 &lt;p&gt;那么以《大宪章》为代表的代议制及其精神来自哪里？有一类说法极其流行：代议制或者宪章精神是在反抗君主专制的过程中产生的。然而，范勇鹏教授质疑这种说法，他认为代议制在产生的过程中根本不存在君主专制。实际上，君主专制在西方历史上是一个纯粹的现代现象，而自由的起源则要古老得多。&lt;/p&gt;
 &lt;p&gt;范勇鹏教授认为，欧洲的代议制主要起源于封建制，并且日耳曼部落制度、罗马帝国及其城市制度、商业城市和城市共和国乃至教会的教士制和教区制度，都与封建制度交织在一起，经过复杂的化合反应才产生了现代代议制的萌芽。这一过程始于罗马帝国的衰落和日耳曼蛮族的入侵。后来随着国王集权的失败和贵族自由的提升，欧洲进入分裂的封建时期。&lt;/p&gt;
+
+
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;中央集权和地方自治&lt;/strong&gt;&lt;/p&gt;
@@ -3503,6 +3758,8 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;p&gt;虽然英国也是一个移民国家，但“光荣革命”后这些移民已经在英伦三岛生活了1000余年，并且和威尼斯以及尼德兰相比拥有更多的农业人口。从现代化进程来看，这是英国的一个劣势，因为农业人口和封建依附关系会阻碍资本主义制度的演进。但从为资本主义提供自由劳动力方面看，这又是个巨大优势，使英国比威尼斯和尼德兰更具有后劲。&lt;/p&gt;
 &lt;p&gt;我们知道，“光荣革命”因其未发生大规模流血冲突而受人称赞。但细究起来，却发现革命之所以能够温和进行，是因为它本来就没有那么“革命”——“光荣革命”实际上就是英荷两国商人和新兴资产阶级联合进行的一项冒险事业，其目的就是将尼德兰的制度要素引入英国，以近乎公司合并的方式把英国改造成一个更适合商业和资本主义繁荣发展的天堂。&lt;/p&gt;
 &lt;p&gt;当时的尼德兰共和国虽然掌握着大量金融资源，但是没有用来提高生产力发展资本主义，而是用来发展军事获得超经济的贸易优势。而当时英国的新型资产阶级饱经王室政治动荡以及宗教等因素的恼人干扰，亟需一次制度变革。对于当时的英国人而言，尼德兰既是竞争对手又是合作伙伴，时而是资金来源，尼德兰在英国内部也有很大的影响力。英国为了获得更高的利润，鼓励引进佛兰德尔的工匠和技术，以期把整个“产业链”都放在英国内部，获取重商主义利益。尼德兰移民和工匠不仅给英国带来了先进的技术和设备，而且打破了封建行会对生产力发展的阻碍，改进了产业组织。&lt;/p&gt;
+
+
 &lt;div class=&#34;alert alert-warning&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;“偷窃”？&lt;/strong&gt;&lt;/p&gt;
@@ -3541,6 +3798,8 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;h3 id=&#34;第一节-公司与契约&#34;&gt;第一节 公司与契约&lt;/h3&gt;
 &lt;p&gt;范勇鹏教授在本小节中主要阐述公司和契约的概念及其历史根源。&lt;/p&gt;
 &lt;p&gt;然而，不同文化中的人们对社会现象的认识很难通约。例如，在中国人的观念中，政治实体和经济实体通常是截然不同的两类事物。但是，在地中海文明中，特别是在欧洲，政治实体、宗教实体和经济实体往往是同源的。所以，西方文化中的财产和权利、财产与自由、特权与权利、宗教与权利等等，往往都是同源共生的。这种关系中国人相对而言是难以理解的。同样，中国人的“公”和“私”的概念放在西方社会中也很难找到对应概念。&lt;/p&gt;
+
+
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;“公”与 public &amp;amp; fair&lt;/strong&gt;&lt;/p&gt;
@@ -3667,6 +3926,8 @@ and each part is trained directly on end device with local data. The trained mod
 
 &lt;p&gt;这篇文章最具特色的就是标题 Attention Is All You Need，翻译成中文就是“你需要注意”。后来这个标题成为了一个梗，即 xxx Is All You Need。&lt;/p&gt;
 &lt;p&gt;值得注意的是，这篇文章的每一位作者后面都打了 &lt;code&gt;*&lt;/code&gt; 号，这说明这几位作者的贡献是均等的，论文首先下的注释已经充分说明了这一点。通常我们会认为论文的第一作者是主要贡献者，但是这篇文章是个例外。&lt;/p&gt;
+
+
 &lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
   &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
   &lt;nav id=&#34;TableOfContents&#34;&gt;
@@ -3785,6 +4046,8 @@ and each part is trained directly on end device with local data. The trained mod
 
 
 
+
+
 &lt;figure  id=&#34;figure-the-transformer---model-architecture&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;The Transformer - model architecture.&#34; srcset=&#34;
@@ -3798,6 +4061,7 @@ and each part is trained directly on end device with local data. The trained mod
   &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
       The Transformer - model architecture.
     &lt;/figcaption&gt;&lt;/figure&gt;
+
 &lt;h3 id=&#34;31-encoder-and-decoder-stacks&#34;&gt;3.1 Encoder and Decoder Stacks&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Encoder&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -3811,6 +4075,8 @@ and each part is trained directly on end device with local data. The trained mod
 &lt;li&gt;output: $\textrm{LayerNorm}(x + \textrm{Sublayer}(x))$&lt;/li&gt;
 &lt;li&gt;dimension: $d_{model} = 512$&lt;/li&gt;
 &lt;/ul&gt;
+
+
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;BatchNorm 和 LayerNorm 的区别&lt;/strong&gt;&lt;/p&gt;
@@ -3875,6 +4141,8 @@ $$&lt;/p&gt;
 
 
 
+
+
 &lt;figure  id=&#34;figure-scaled-dot-product-attention&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Scaled Dot-Product Attention.&#34; srcset=&#34;
@@ -3888,7 +4156,10 @@ $$&lt;/p&gt;
   &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
       Scaled Dot-Product Attention.
     &lt;/figcaption&gt;&lt;/figure&gt;
+
 &lt;p&gt;注意力函数的计算公式如下：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -3897,6 +4168,8 @@ $$
 $$
 
 &lt;p&gt;$Q$ 即 &lt;code&gt;query&lt;/code&gt;，$K$ 即 &lt;code&gt;key&lt;/code&gt;，$QK^T$ 即 &lt;code&gt;query&lt;/code&gt; 和 &lt;code&gt;key&lt;/code&gt; 做内积。作者认为，两个向量的内积值越大，说明相似度越高。除以 $\sqrt{d_k}$ 则表示单位化，然后再用 softmax 得到权重。这里的道理其实就是机器学习中的余弦相似度（余弦距离）：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -3907,6 +4180,8 @@ $$
 &lt;p&gt;注意这里 &lt;code&gt;Mask&lt;/code&gt; 的作用是为了避免 $t$ 时刻看到后面的输入。在数学上的具体实现方式是以一个绝对值非常大的负数（$-\infty$）作为指数，计算出来的幂趋向于零，这样就实现了掩盖 $t$ 时刻后面的输入的效果。&lt;/p&gt;
 &lt;h4 id=&#34;322-multi-head-attention&#34;&gt;3.2.2 Multi-Head Attention&lt;/h4&gt;
 &lt;p&gt;作者认为，与其计算单个的注意力函数，不如把 &lt;code&gt;query&lt;/code&gt;、&lt;code&gt;key&lt;/code&gt;、&lt;code&gt;value&lt;/code&gt; 投影到一个更低的维度上，投影 $h$ 次，然后再计算 $h$ 次注意力函数，最后每一个函数的输出合并再投影得到最终的输出。如图所示。&lt;/p&gt;
+
+
 
 
 
@@ -3936,7 +4211,10 @@ $$
   &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
       Multi-Head Attention.
     &lt;/figcaption&gt;&lt;/figure&gt;
+
 &lt;p&gt;多头注意力函数的计算公式如下：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -3968,6 +4246,8 @@ $$
 &lt;blockquote&gt;
 &lt;p&gt;In addition to attention sub-layers, each of the layers in our encoder and decoder contains a fully connected feed-forward network, which is applied to each position separately and identically. This consists of two linear transformations with a ReLU activation in between.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+
 
 $$
 \begin{align}
@@ -4030,6 +4310,8 @@ $$
 &lt;/table&gt;
 &lt;p&gt;作者对比了自注意力机制、RNN、CNN 和受限制的 &lt;code&gt;restricted&lt;/code&gt; 自注意力机制的三个方面：计算复杂度、顺序计算、最大路径长度。显然计算复杂度越低越好；顺序计算是指下一步计算必须等前面几步计算完成才能计算，当然越低越好，并行度越高；最大路径长度是指一个序列信息从一个数据点走到另一个数据点需要走多远，当然越短越好。&lt;/p&gt;
 &lt;p&gt;这里需要额外解释的是受限制的自注意力机制。为什么相比与自注意力机制，其计算复杂度会有所降低？是因为 &lt;code&gt;query&lt;/code&gt; 只跟最近的 $r$ 个邻居做运算。但带来的问题是最大路径长度的增加。&lt;/p&gt;
+
+
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     至此，已经可以基本了解 &lt;strong&gt;Transformer&lt;/strong&gt; 的基本架构了。后面的章节是训练和模型效果，如有需要再进行补充。
@@ -4044,17 +4326,17 @@ $$
 &lt;h2 id=&#34;6-results&#34;&gt;6 Results&lt;/h2&gt;
 &lt;h3 id=&#34;61-machine-translation&#34;&gt;6.1 Machine Translation&lt;/h3&gt;
 &lt;h3 id=&#34;62-model-variations&#34;&gt;6.2 Model Variations&lt;/h3&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
 &lt;p&gt;Hochreiter S, Schmidhuber J. Long short-term memory[J]. Neural computation, 1997, 9(8): 1735-1780.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
 &lt;p&gt;Chung J, Gulcehre C, Cho K H, et al. Empirical evaluation of gated recurrent neural networks on sequence modeling[J]. arXiv preprint arXiv:1412.3555, 2014.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/section&gt;</description>
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -4142,6 +4424,8 @@ $$
 &lt;h2 id=&#34;爱情实践论&#34;&gt;爱情实践论&lt;/h2&gt;
 &lt;p&gt;马克思主义认为，实践决定认识，认识对实践具有反作用。人的意识可以通过主观能动地实践转化为物质，而物质可以被人们认识从而转化为人的意识。&lt;/p&gt;
 
+
+
 $$
 \begin{array}{c}
 \mbox{实践} \\\\
@@ -4153,6 +4437,8 @@ $$
 &lt;p&gt;上面的公式已经非常清晰地表达了物质、意识、实践、认识四者之间的关系。实际上，爱情也是如此。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;爱情是处于恋爱关系的男女双方实践的产物&lt;/strong&gt;，具体分为如下三个阶段：&lt;/p&gt;
 &lt;h3 id=&#34;第一阶段爱之初&#34;&gt;第一阶段：爱之初&lt;/h3&gt;
+
+
 
 $$
 \begin{array}{c}
@@ -4166,6 +4452,8 @@ $$
 &lt;p&gt;当人们认识到这些性魅力以后，就会在脑海中产生对对方的好感。正因为有好感，人们才会主观能动地去实践，具体表现为追求对方，想要和对方建立连接。然而，单方面的被吸引和主动追求并不能建立起一定程度上的恋爱关系，男女双方必须同时被彼此吸引并且主动追求对方才可以建立起恋爱关系。&lt;/p&gt;
 &lt;h3 id=&#34;第二阶段恋爱关系&#34;&gt;第二阶段：恋爱关系&lt;/h3&gt;
 
+
+
 $$
 \begin{array}{c}
 \mbox{感受好感（认识）} \\\\
@@ -4176,6 +4464,8 @@ $$
 
 &lt;p&gt;男女双方建立起一定的恋爱关系以后，这种关系会使得男女双方认识到对方对自己是有好感的，那么就会在自己的脑海里产生喜欢对方的感觉。正因为喜欢对方，男女双方就会主观能动地去实践，表达自己对对方的好感。例如，跟对方分享自己的日常生活，向对方倾诉自己的情感，和对方一起去做情侣应该做的事情，等等。在不断地认识、实践过程当中，男女双方对彼此之间会更加了解，推动着恋爱关系的不断发展。同时，男女双方在三观、性格、理想等方面进行着深入交流，为恋爱关系发展为爱情提供了必要准备。&lt;/p&gt;
 &lt;h3 id=&#34;第三阶段爱情&#34;&gt;第三阶段：爱情&lt;/h3&gt;
+
+
 
 $$
 \begin{array}{c}
@@ -4342,6 +4632,8 @@ $$
 
 
 
+
+
 &lt;figure  id=&#34;figure-fig-1-the-comparison-of-traditional-intelligence-and-edge-intelligence-from-the-perspective-of-implementation-in-traditional-intelligence-all-data-must-be-uploaded-to-a-central-cloud-server-whilst-in-edge-intelligence-intelligent-application-tasks-are-done-at-the-edge-with-locally-generated-data-in-a-distributed-manner&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Fig. 1. The comparison of traditional intelligence and edge intelligence from the perspective of implementation. In traditional intelligence, all data must be uploaded to a central cloud server, whilst in edge intelligence, intelligent application tasks are done at the edge with locally-generated data in a distributed manner.&#34; srcset=&#34;
@@ -4355,10 +4647,13 @@ $$
   &lt;/div&gt;&lt;figcaption&gt;
       Fig. 1. The comparison of traditional intelligence and edge intelligence from the perspective of implementation. In traditional intelligence, all data must be uploaded to a central cloud server, whilst in edge intelligence, intelligent application tasks are done at the edge with locally-generated data in a distributed manner.
     &lt;/figcaption&gt;&lt;/figure&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;The comparison of traditional intelligence and edge intelligence from the perspective of implementation. In traditional intelligence, all data must be uploaded to a central cloud server, whilst in edge intelligence, intelligent application tasks are done at the edge with locally-generated data in a distributed manner.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;作者从实现的角度比较了传统智能和边缘智能。在传统智能中，所有数据都必须上传到中央云服务器，而在边缘智能中，智能应用任务是在边缘以分布式方式使用本地生成的数据完成的。&lt;/p&gt;
+
+
 
 
 
@@ -4388,8 +4683,11 @@ $$
   &lt;/div&gt;&lt;figcaption&gt;
       Fig. 2. The classification of edge intelligence literature.
     &lt;/figcaption&gt;&lt;/figure&gt;
+
 &lt;p&gt;作者将边缘智能的文献分类绘制成上面的图，下面作者将给出这些模块的概述：&lt;/p&gt;
 &lt;h3 id=&#34;a-edge-caching&#34;&gt;A. Edge Caching&lt;/h3&gt;
+
+
 
 
 
@@ -4419,6 +4717,7 @@ $$
   &lt;/div&gt;&lt;figcaption&gt;
       Fig. 3. The illustration of edge caching. Data generated by mobile users and collected from surrounding environments is collected and stored on edge devices, micro BSs, and macro BSs. Such data is processed and analysed by intelligent algorithms to provide services for end users.
     &lt;/figcaption&gt;&lt;/figure&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;In edge intelligence, edge caching refers to a distributed data system proximity to end users, which collects and stores the data generated by edge devices and surrounding environments, and the data received from the Internet to support intelligent applications for users at the edge.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -4466,6 +4765,8 @@ $$
 
 
 
+
+
 &lt;figure  id=&#34;figure-fig-4-the-illustration-of-edge-training-the-modelalgorithm-is-trained-either-on-a-single-device-solo-training-or-by-the-collaboration-of-edge-devices-collaborative-training-with-training-sets-cached-at-the-edge-acceleration-module-speeds-up-the-training-whilst-the-optimisation-module-solves-problems-in-training-eg-update-frequency-update-cost-and-privacy-and-security-issues-uncertainty-estimates-module-controls-the-uncertainty-in-training&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Fig. 4. The illustration of edge training. The model/algorithm is trained either on a single device (solo training), or by the collaboration of edge devices (collaborative training) with training sets cached at the edge. Acceleration module speeds up the training, whilst the optimisation module solves problems in training, e.g., update frequency, update cost, and privacy and security issues. Uncertainty estimates module controls the uncertainty in training.&#34; srcset=&#34;
@@ -4479,6 +4780,7 @@ $$
   &lt;/div&gt;&lt;figcaption&gt;
       Fig. 4. The illustration of edge training. The model/algorithm is trained either on a single device (solo training), or by the collaboration of edge devices (collaborative training) with training sets cached at the edge. Acceleration module speeds up the training, whilst the optimisation module solves problems in training, e.g., update frequency, update cost, and privacy and security issues. Uncertainty estimates module controls the uncertainty in training.
     &lt;/figcaption&gt;&lt;/figure&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;Edge training refers to a distributed learning procedure that learns the optimal values for all the weights and bias, or the hidden patterns based on the training set cached at the edge.&lt;/p&gt;
 &lt;p&gt;Different from traditional centralised training procedures on powerful servers or computing clusters, edge training usually occurs on edge servers or edge devices, which are usually not as powerful as centralised servers or computing clusters.&lt;/p&gt;
@@ -4527,6 +4829,8 @@ $$
 
 
 
+
+
 &lt;figure  id=&#34;figure-fig-5-the-illustration-of-edge-inference-ai-modelsalgorithms-are-designed-either-by-machines-or-humans-models-could-be-further-compressed-through-compression-technologies-low-rank-approximation-network-pruning-compact-layer-design-parameter-quantisation-and-knowledge-distillation-hardware-and-software-solutions-are-used-to-accelerate-the-inference-with-input-data&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Fig. 5. The illustration of edge inference. AI models/algorithms are designed either by machines or humans. Models could be further compressed through compression technologies: low-rank approximation, network pruning, compact layer design, parameter quantisation, and knowledge distillation. Hardware and software solutions are used to accelerate the inference with input data.&#34; srcset=&#34;
@@ -4540,6 +4844,7 @@ $$
   &lt;/div&gt;&lt;figcaption&gt;
       Fig. 5. The illustration of edge inference. AI models/algorithms are designed either by machines or humans. Models could be further compressed through compression technologies: low-rank approximation, network pruning, compact layer design, parameter quantisation, and knowledge distillation. Hardware and software solutions are used to accelerate the inference with input data.
     &lt;/figcaption&gt;&lt;/figure&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;Edge inference is the stage where a trained model/algorithm is used to infer the testing instance by a forward pass to compute the output on edge devices and servers.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -4581,6 +4886,8 @@ $$
 
 
 
+
+
 &lt;figure  id=&#34;figure-fig-6-the-illustration-of-edge-offloading-edge-offloading-is-located-at-the-bottom-layer-in-edge-intelligence-which-provides-computing-services-for-edge-caching-edge-training-and-edge-inference-the-computing-architecture-includes-d2c-d2e-d2d-and-hybrid-computing&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Fig. 6. The illustration of edge offloading. Edge offloading is located at the bottom layer in edge intelligence, which provides computing services for edge caching, edge training, and edge inference. The computing architecture includes D2C, D2E, D2D, and hybrid computing.&#34; srcset=&#34;
@@ -4594,6 +4901,7 @@ $$
   &lt;/div&gt;&lt;figcaption&gt;
       Fig. 6. The illustration of edge offloading. Edge offloading is located at the bottom layer in edge intelligence, which provides computing services for edge caching, edge training, and edge inference. The computing architecture includes D2C, D2E, D2D, and hybrid computing.
     &lt;/figcaption&gt;&lt;/figure&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;As a necessary component of edge intelligence, edge offloading refers to a distributed computing paradigm, which provides computing service for edge caching, edge training, and edge inference. If a single edge device does not have enough resource for a specific edge intelligence application, it could offload application tasks to edge servers or other edge devices.&lt;/p&gt;
 &lt;p&gt;Edge offloading layer transparently provides computing services for the other three components of edge intelligence. In edge offloading, Offloading strategy is of utmost importance, which should give full play to the available resources in edge environment.&lt;/p&gt;
@@ -4627,6 +4935,8 @@ $$
 
 
 
+
+
 &lt;figure  id=&#34;figure-fig-7-publication-volume-over-time-these-curves-show-the-trend-of-publication-volume-in-edge-caching-edge-training-edge-computing-edge-inference-and-edge-intelligence-respectively&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Fig. 7. Publication volume over time. These curves show the trend of publication volume in edge caching, edge training, edge computing, edge inference, and edge intelligence, respectively.&#34; srcset=&#34;
@@ -4640,6 +4950,7 @@ $$
   &lt;/div&gt;&lt;figcaption&gt;
       Fig. 7. Publication volume over time. These curves show the trend of publication volume in edge caching, edge training, edge computing, edge inference, and edge intelligence, respectively.
     &lt;/figcaption&gt;&lt;/figure&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;In our survey, we identify four key components of edge intelligence, i.e. edge caching, edge training, edge inference, and edge offloading. Edge intelligence shows an explosive developing trend with a huge amount of researcher have been carried out to investigate and realise edge intelligence over the past five years. We count the publication volume of edge intelligence.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -4656,6 +4967,8 @@ $$
 &lt;li&gt;分布在边缘的大数据越来越多，这推动了边缘智能的性能。&lt;/li&gt;
 &lt;li&gt;边缘计算系统的成熟，以及人们对智能生活需求的增加，促进了边缘智能的实现。&lt;/li&gt;
 &lt;/ol&gt;
+
+
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     至此，本文的概述结束。后面的各大章节 &lt;code&gt;Session&lt;/code&gt; 则是对 &lt;code&gt;Overview&lt;/code&gt; 的扩充，因此我在这里只写每个 &lt;code&gt;Session&lt;/code&gt; 的标题。未来如有详细了解的需要，会继续进行补充。
@@ -4957,6 +5270,8 @@ $$
 &lt;p&gt;&lt;strong&gt;解&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;第(1)小题，我们可以根据题干当中的已知条件，通过极值点的性质列关于 $a$ 的方程，即可反解出 $a$。首先，我们对 $y$ 求导：&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 y&#39; &amp;= f(x) + xf&#39;(x) \\\\
@@ -4965,6 +5280,8 @@ y&#39; &amp;= f(x) + xf&#39;(x) \\\\
 $$
 
 &lt;p&gt;然后，我们令 $x = 0$，$y&amp;rsquo; = 0$，即可反解出 $a$：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -4978,11 +5295,15 @@ $$
 &lt;p&gt;另一方面，第(2)小题让我们证明一个不等式，而不是等式。因此，我们要想直接去掉分母比较困难。如果分母是恒正或恒负，能够大大降低我们的计算量，方便我们解题。所以，我们期望函数 $y$ 的值域应当恒正或恒负。即使不是，我们也可以在不同的区间上讨论。&lt;/p&gt;
 &lt;p&gt;由(1)可知：$f(x) = \ln (1-x)$，那么 $y = x\ln (1-x)$。显然，它们的定义域都是 $(-\infty, 1)$。根据(1)的求导结果，我们可以很容易写出 $y&amp;rsquo;$ 的解析式：&lt;/p&gt;
 
+
+
 $$
 y&#39; = \ln (1-x)+\frac{x}{x-1}
 $$
 
 &lt;p&gt;解析式还存在对数函数，很难一眼看出单调性。但是对数函数求导一次就能变成分式，因此我们对函数 $y$ 求二阶导数：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -4993,17 +5314,23 @@ $$
 
 &lt;p&gt;由于函数 $y$ 的定义域是 $(-\infty, 1)$，显然 $y&amp;rsquo;&amp;rsquo; &amp;lt; 0$，$y&amp;rsquo;$ 在定义域内单调递减。而 $x = 0$ 是 $y$ 的极值点，也就是 $y&amp;rsquo;$ 的零点。故 $y$ 在 $(-\infty, 0)$ 上单调递增，在$(0, 1)$ 上单调递减。因此我们可以判断：&lt;/p&gt;
 
+
+
 $$
 y &lt; y(0) = 0
 $$
 
 &lt;p&gt;这是一个非常漂亮的结论：$g(x)$ 的分母是恒负的。因此，要证 $g(x) &amp;lt; 1$，只需证 $x + f(x) &amp;gt; xf(x)$。于是我们令 $h(x) = x + f(x) - xf(x)$，并对其求导：&lt;/p&gt;
 
+
+
 $$
 h&#39;(x) = 1 - \frac{1}{1-x} - \ln (1-x) + \frac{x}{1-x}
 $$
 
 &lt;p&gt;解析式当中还含有对数函数，我们需要求二阶导数，才能把对数消掉：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -5013,6 +5340,8 @@ h&#39;&#39;(x) &amp;= - \frac{1}{(x-1)^2} + \frac{1}{1-x} + \frac{1}{(x-1)^2} \\
 $$
 
 &lt;p&gt;因此，$h&amp;rsquo;(x)$ 在定义域内单调递增。而 $h&amp;rsquo;(0) = 0$，故 $h(x)$ 在 $(-\infty, 0)$ 上单调递减，在 $(0, 1)$ 上单调递增。因此，我们可以判断：&lt;/p&gt;
+
+
 
 $$
 h(x) &gt; h(0) = 0
@@ -5027,6 +5356,8 @@ $$
 &lt;p&gt;(2) 若点 $P$ 在圆 $M$ 上，$PA$、$PB$ 是抛物线 $C$ 的两条切线，$A$、$B$ 为切点，求 $\triangle PAB$ 面积的最大值。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;解&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;第(1)小问需要求解焦准距 $p$，依题意，抛物线开口向上，小圆圆心在 $y$ 负半轴上。显然，抛物线焦点到圆顶部 $(0, -3)$ 的距离最小。我们可以列出下面这个简单方程求解：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -5046,6 +5377,8 @@ $$
 &lt;p&gt;&lt;em&gt;设线&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;目前来看，直线 $AB$ 不过任何定点。因此，我们只能设直线 $AB$ 的斜截式方程，并与抛物线方程联立：&lt;/p&gt;
 
+
+
 $$
 \begin{cases}
 y = kx + b \\\\
@@ -5055,11 +5388,15 @@ $$
 
 &lt;p&gt;消去 $y$，得到：&lt;/p&gt;
 
+
+
 $$
 x^2 - 4kx -4b = 0
 $$
 
 &lt;p&gt;弦长很容易就能计算。为了方便，我们计算弦长的平方：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -5071,6 +5408,8 @@ $$
 
 &lt;p&gt;相切的条件该怎么用呢？我们可以把抛物线改写成二次函数求导：&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 y &amp;= \frac{1}{4}x^2  \\\\
@@ -5080,6 +5419,8 @@ $$
 
 &lt;p&gt;然后利用导数和切线斜率的关系列方程：&lt;/p&gt;
 
+
+
 $$
 \begin{cases}
 \frac{1}{2}x_1 = \frac{y_1 - y_0}{x_1 - x_0}  \\\\
@@ -5088,6 +5429,8 @@ $$
 $$
 
 &lt;p&gt;计算量正在变大，但是还是可以算下去。我们去分母然后两式相加：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -5100,6 +5443,8 @@ $$
 
 &lt;p&gt;下面我们来计算点 $P$ 到 $AB$ 的距离。同样为了方便，我们来算距离的平方：&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 d_{P \rightarrow AB}^2 &amp;= \frac{(kx_0 + b - y_0)^2}{1 + k^2} 
@@ -5107,6 +5452,8 @@ d_{P \rightarrow AB}^2 &amp;= \frac{(kx_0 + b - y_0)^2}{1 + k^2}
 $$
 
 &lt;p&gt;这样，我们就可以来算三角形的面积了。同样是算面积的平方，要注意这里可以将 $kx_0$ 代入，将 $x_0$ 和 $y_0$ 一并消去：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -5119,6 +5466,8 @@ $$
 
 &lt;p&gt;显然，这里我们可以将 $k^2 + b$ 看成是一个整体。但是，$k^2 + b$ 一定是有取值范围的，我们需要确定这个取值范围。不过不要忘记，点 $P$ 在圆 $M$ 上的条件还没有使用：&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 x_0^2 + (y_0 + 4)^2 = 1
@@ -5127,6 +5476,8 @@ $$
 
 &lt;p&gt;然而，我已经感觉很不妙了，怎样才能通过 $x_0$ 和 $y_0$ 的关系确定 $k$ 和 $b$ 的关系呢？我发现了之前计算得到的一个式子：&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 2k^2 + y_0 + b &amp;= kx_0
@@ -5134,6 +5485,8 @@ $$
 $$
 
 &lt;p&gt;我们将这个式子两边平方，然后将 $x_0^2$ 整体代入得：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -5146,6 +5499,8 @@ $$
 &lt;p&gt;我们设 $A$ 点坐标为 $(x_1, y_1)$，$B$ 点坐标为 $(x_2, y_2)$。关键来了，下一步应该干什么？是直接写出直线 $AB$ 的两点式方程吗？&lt;/p&gt;
 &lt;p&gt;显然不是的，因为我们有一个非常好的条件还没用——相切。因为我们有 $A$、$B$ 两点坐标，得到切线斜率非常容易，可以直接写出切线的点斜式方程：&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 l_{PA}: y - y_1 = \frac{1}{2}x_1(x-x_1) \\\\
@@ -5154,6 +5509,8 @@ l_{PB}: y - y_2 = \frac{1}{2}x_2(x-x_2)
 $$
 
 &lt;p&gt;由于 $A$、$B$ 两点都在抛物线上，满足抛物线方程，我们可以把上面的直线方程简化一下：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -5164,6 +5521,8 @@ $$
 
 &lt;p&gt;这两条切线都经过 $P$ 点，我们将 $P$ 点坐标代入：&lt;/p&gt;
 
+
+
 $$
 \begin{cases}
 y_0 = \frac{1}{2}x_1x_0-y_1 \\\\
@@ -5172,6 +5531,8 @@ y_0 = \frac{1}{2}x_2x_0-y_2
 $$
 
 &lt;p&gt;本题的破题点来了。你是否能看出直线 $AB$ 的方程？&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -5182,6 +5543,8 @@ $$
 &lt;p&gt;$A$、$B$ 两点都满足上面的方程，而两点确定一条直线，那么上面的方程就表示直线 $AB$。&lt;/p&gt;
 &lt;p&gt;有了直线 $AB$ 的方程，一切都好办了。先把直线方程与抛物线方程联立：&lt;/p&gt;
 
+
+
 $$
 \begin{cases}
 y_0 = \frac{1}{2}x_0x-y \\\\
@@ -5191,6 +5554,8 @@ $$
 
 &lt;p&gt;得到：&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 x^2 - 2x_0x + 4y_0 = 0
@@ -5198,6 +5563,8 @@ x^2 - 2x_0x + 4y_0 = 0
 $$
 
 &lt;p&gt;先算弦长：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -5209,6 +5576,8 @@ $$
 
 &lt;p&gt;再算距离：&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 d_{P \rightarrow AB}^2 &amp;= \frac{(\frac{1}{2}x_0^2 - 2y_0)^2}{1 + \frac{1}{4}x_0^2}
@@ -5216,6 +5585,8 @@ d_{P \rightarrow AB}^2 &amp;= \frac{(\frac{1}{2}x_0^2 - 2y_0)^2}{1 + \frac{1}{4}
 $$
 
 &lt;p&gt;最后算三角形的面积。要注意，这里我们再用点 $P$ 在圆 $M$ 上的条件来消参就可以成功：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -5230,6 +5601,8 @@ S_{\triangle PAB}^2 &amp;= \frac{1}{4} |AB|^2 d_{P \rightarrow AB}^2 \\\\
 $$
 
 &lt;p&gt;配方后，转化为二次函数在闭区间上的最值问题。而 $y_0 \in [-5, -3]$，故 $y_0 = -5$ 时，$S_{\triangle PAB}$ 取最大值，最大值为：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -5291,7 +5664,9 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-469527138&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+
+
+&lt;div id=&#34;chart-975142836&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -5301,11 +5676,12 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-469527138&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-975142836&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
 &lt;/script&gt;
+
 &lt;p&gt;You might also find the &lt;a href=&#34;http://plotly-json-editor.getforge.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Plotly JSON Editor&lt;/a&gt; useful.&lt;/p&gt;
 &lt;h3 id=&#34;math&#34;&gt;Math&lt;/h3&gt;
 &lt;p&gt;Academic supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the &lt;code&gt;math&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;

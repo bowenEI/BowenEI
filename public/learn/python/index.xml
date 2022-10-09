@@ -2331,6 +2331,8 @@ rtt min/avg/max/mdev = 43.341/78.204/124.714/29.360 ms
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -2342,6 +2344,7 @@ rtt min/avg/max/mdev = 43.341/78.204/124.714/29.360 ms
                height=&#34;248&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;&lt;code&gt;%pylab&lt;/code&gt; 魔法命令可以使 numpy 和 matplotlib 中的科学计算功能生效，这些功能被称为基于向量和矩阵的高效操作，交互可视化特性。它能够让我们在控制台进行交互式计算和动态绘图。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pylab&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Using matplotlib backend: Qt5Agg
@@ -2351,6 +2354,8 @@ Populating the interactive namespace from numpy and matplotlib
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tan&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[&amp;lt;matplotlib.lines.Line2D at 0x7f86f56c8358&amp;gt;]
 &lt;/code&gt;&lt;/pre&gt;
+
+
 
 
 
@@ -2378,6 +2383,7 @@ Populating the interactive namespace from numpy and matplotlib
                height=&#34;248&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h3 id=&#34;quickref-参考帮助&#34;&gt;quickref 参考帮助&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;quickref&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;python-脚本操作&#34;&gt;Python 脚本操作&lt;/h3&gt;
@@ -2843,7 +2849,9 @@ sent to admin@myproject.com
 &lt;p&gt;软件包也可以在 &lt;a href=&#34;https://pypi.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyPI&lt;/a&gt; 中找到。&lt;/p&gt;
 &lt;p&gt;目前最新的 &lt;strong&gt;Python&lt;/strong&gt; 版本已经预装了 &lt;code&gt;pip&lt;/code&gt;。可以通过如下命令查看 &lt;code&gt;pip&lt;/code&gt; 是否已经安装：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip --version
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;alert alert-note&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     &lt;p&gt;&lt;strong&gt;当 Python2 与 Python3 共存&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;对于 &lt;strong&gt;Windows&lt;/strong&gt; 系统，Python2 和 Python3 可以共存。一般来说，在终端中输入 &lt;code&gt;python&lt;/code&gt; 进入的是 Python2 环境，而输入 &lt;code&gt;python3&lt;/code&gt; 才会进入 Python3 环境。&lt;/p&gt;

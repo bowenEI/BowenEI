@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en-us" >
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: October 9, 2022 --><html lang="en-us" >
 
 
 <head>
@@ -8,7 +10,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.6.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
   
 
   
@@ -62,32 +64,6 @@
 
   
   
-  
-  
-  
-    
-    
-    
-  
-  
-
-  <meta name="author" content="Bowen Zhou" />
-
-  
-  
-  
-    
-  
-  <meta name="description" content="" />
-
-  
-  <link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/convex-optimization/duality/going-deeper-into-kkt/" />
-
-  
-  
-  
-    <meta name="theme-color" content="#1565c0" />
-  
 
   
   
@@ -97,14 +73,14 @@
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
 
   
   
   
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -239,7 +215,11 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.22eea90aebc205ef8ccb946df9feaa49.css" />
+  <link rel="stylesheet" href="/css/wowchemy.e6ed71ec47b33db0e65acae2b0d589c4.css" />
+
+  
+  
+  
 
   
   
@@ -259,82 +239,123 @@
 
 
 
-  
-
-
-  
-
-
-  
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   
 
+
+
+
+
+
+  <meta name="author" content="Bowen Zhou" />
+
+
+
+
+
   
-  
+
+<meta name="description" content="" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://bowenei.gitee.io/learn/convex-optimization/duality/going-deeper-into-kkt/" />
+<link rel="canonical" href="https://bowenei.gitee.io/learn/convex-optimization/duality/going-deeper-into-kkt/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
 
   
   
-    <link rel="manifest" href="/manifest.webmanifest" />
-  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@wowchemy" />
+  <meta property="twitter:creator" content="@wowchemy" />
+<meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="Bowen&#39;s Academic Home" />
+<meta property="og:url" content="https://bowenei.gitee.io/learn/convex-optimization/duality/going-deeper-into-kkt/" />
+<meta property="og:title" content="深入理解 KKT 条件 | Bowen&#39;s Academic Home" />
+<meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
-  <link rel="icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_32x32_fill_lanczos_center_3.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_180x180_fill_lanczos_center_3.png" />
-
-  <link rel="canonical" href="https://bowenei.gitee.io/learn/convex-optimization/duality/going-deeper-into-kkt/" />
-
+    <meta
+      property="article:published_time"
+      content="2022-04-05T15:54:49&#43;08:00"
+    />
   
   
-  
-  
-  
-  
-  
-  
-    
-    
-  
-  
-
-  
-  
-    
-    
-  
-  <meta property="twitter:card" content="summary" />
-  
-    <meta property="twitter:site" content="@wowchemy" />
-    <meta property="twitter:creator" content="@wowchemy" />
-  
-  <meta property="og:site_name" content="Bowen&#39;s Academic Home" />
-  <meta property="og:url" content="https://bowenei.gitee.io/learn/convex-optimization/duality/going-deeper-into-kkt/" />
-  <meta property="og:title" content="深入理解 KKT 条件 | Bowen&#39;s Academic Home" />
-  <meta property="og:description" content="" /><meta property="og:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" />
-    <meta property="twitter:image" content="https://bowenei.gitee.io/media/icon_huc813daf5dbf7d2b27f0daba22fe1e0fb_68056_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
-  
-    
-      <meta
-        property="article:published_time"
-        content="2022-04-05T15:54:49&#43;08:00"
-      />
-    
     <meta property="article:modified_time" content="2022-04-05T15:54:49&#43;08:00">
   
 
-  
+
+
+
 
 
 
   
 
+
+
+
+  
+  
+  
+
+  
+  
+
   
 
 
+  
   <title>深入理解 KKT 条件 | Bowen&#39;s Academic Home</title>
 
   
@@ -366,7 +387,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.613040fe4f2c0f007b4dcb64404201cb.js"></script>
+  <script src="/js/wowchemy-init.min.ec9d49ca50e4b80bdb08f0417a28ed84.js"></script>
 
   
 
@@ -410,7 +431,7 @@
 
 
 
-  <div class="page-header">
+  <div class="page-header header--fixed">
     
 
 
@@ -424,7 +445,7 @@
 
 
 
-<header class="header--fixed">
+<header>
   <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
     <div class="container-xl">
 
@@ -653,6 +674,7 @@
           
         
 
+        
         
         
         <li class="nav-item">
@@ -1168,25 +1190,24 @@
 
     <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
 
-      <article class="article">
-
-        <div class="docs-article-container">
-          
-        </div>
-
+      <div class="docs-article-container">
         
+      </div>
+
+      
+      
+      
+
+      <div class="docs-article-container">
         
+        <h1>深入理解 KKT 条件</h1>
 
-        <div class="docs-article-container">
+        <article class="article-style">
+
           
-          <h1>深入理解 KKT 条件</h1>
+          
 
-          <div class="article-style">
-
-            
-            
-
-            <div class="alert alert-note">
+          <div class="alert alert-note">
   <div>
     本节将对上一小节<a href="../optimality-conditions">最优性条件</a>中提出的 KKT 条件进行深入的理解和分析。
   </div>
@@ -1195,6 +1216,8 @@
 <p>KKT 条件究其本质，是优化问题取得最优解的必要条件。下面我们首先从我们最熟悉的知识开始。</p>
 <h2 id="等式约束优化问题">等式约束优化问题</h2>
 <p>我们在《高等数学》课程中学习过多元函数的极值问题，其中提到了 Lagrange 乘子法。其本质就是运用《凸优化》课程当中讲的 Lagrange 函数，求解等式优化问题。只不过《高等数学》课程中不涉及不等式约束，仅仅只有等式约束。为了更贴近也更容易回忆起《高等数学》所学内容，我们在这里仅考虑二元函数，并且只有一个等式约束。此时，这个约束优化问题记为</p>
+
+
 
 $$
 \begin{aligned}
@@ -1205,11 +1228,15 @@ $$
 
 <p>这里只有一个等式约束，因此只需要引入一个 Lagrange 乘子 $\lambda$ 即可</p>
 
+
+
 $$
 L(x, y, \lambda) = f(x, y) + \lambda g(x, y)
 $$
 
 <p>计算 $L$ 对 $x$、$y$ 和 $\lambda$ 的偏导数，并令它们都等于零，就可以得到最优解的必要条件</p>
+
+
 
 $$
 \left\{
@@ -1225,6 +1252,8 @@ $$
 <h2 id="不等式约束优化问题">不等式约束优化问题</h2>
 <p>我们注意到，在刚才在求解的过程中，我们其实一点也不关心 $\lambda$ 的取值，因为那是我们引入的新变量，我们只关心原问题当中 $(x, y)$ 的取值。实际上，按照《高等数学》当中的方法求解出的 $\lambda$ 是无法判断其符号的。对于只含有等式约束的问题，这个问题并不重要。但是，对于含有不等式约束的问题来说，不等号的方向和引入的 Lagrange 乘子之间则是具有一定联系的。</p>
 <p>我们先考虑仅含有一个不等式的约束的二元函数优化问题</p>
+
+
 
 $$
 \begin{aligned}
@@ -1259,6 +1288,8 @@ $$
 
 
 
+
+
 <figure  >
   <div class="d-flex justify-content-center">
     <div class="w-100" ><img alt="" srcset="
@@ -1270,8 +1301,11 @@ $$
                height="760"
                loading="lazy" data-zoomable /></div>
   </div></figure>
+
 <p>边界解的情况可以通过上图加深理解。图中表示的是二元函数 $f(x, y)$ 在不等式约束 $g(x, y) \leqslant 0$ 下的优化问题，并且最优解在边界的情况。如图所示，最优点即为平面 $\pi$（方程 $z = f(x, y)$）和平面 $\sigma$（方程 $g(x, y) = 0$）的交点。约束 $g(x, y) \leqslant 0$ 说明了可行域在平面 $\sigma$ 的下侧。梯度 $\nabla f$ 指向上方，负梯度 $-\nabla f$ 指向下方可行域内部。在最优解 $(x^{\star}, y^{\star})$ 处，$\nabla f$ 和 $\nabla g$ 共线。</p>
 <p>更一般地，如果有多个不等式约束，对应到上图中就是有若干平面 $\sigma_1,\cdots,\sigma_p$，并且在最优点处 $\nabla f(x^{\star}, y^{\star})$ 可由有效约束对应的平面的支撑超平面的法向量的线性表示。即 $\exists \mu_1,\cdots,\mu_p \geqslant 0$，使得</p>
+
+
 
 $$
 \nabla f(x^{\star}, y^{\star}) = -(\mu_1 \nabla g_1(x^{\star}, y^{\star}) + \cdots + \mu_p \nabla g_p(x^{\star}, y^{\star}))
@@ -1287,6 +1321,8 @@ $$
 </ol>
 <h2 id="kkt-条件的本质">KKT 条件的本质</h2>
 <p>综合上面的讨论与分析，我们再来看看 KKT 条件：</p>
+
+
 
 $$
 \begin{aligned}
@@ -1308,6 +1344,8 @@ $$
 <h2 id="简单的例子">简单的例子</h2>
 <p>考虑下面的问题</p>
 
+
+
 $$
 \begin{aligned}
     \mathrm{min} \quad & x^2 + y^2 \\\\
@@ -1318,11 +1356,15 @@ $$
 
 <p>写出 Lagrange 函数</p>
 
+
+
 $$
 L(x, y, \lambda, \nu) = x^2 + y^2 + \lambda(1 - x - y) + \nu(y - \alpha)
 $$
 
 <p>KKT 条件方程组如下</p>
+
+
 
 $$
 \left\{\begin{aligned}
@@ -1335,6 +1377,8 @@ $$
 
 <p>分别由 (1) 式和 (2) 式求出</p>
 
+
+
 $$
 \left\{\begin{aligned}
     x &= \frac{1}{2} \lambda & (5) \\\\
@@ -1344,11 +1388,15 @@ $$
 
 <p>代入等式约束 $x+y=1$，得到 $\lambda$ 和 $\nu$ 的函数关系</p>
 
+
+
 $$
 \lambda = \frac{1}{2} \nu + 1
 $$
 
 <p>再代入式 (5) 和 (6) 中，消去 $\lambda$</p>
+
+
 
 $$
 \left\{\begin{aligned}
@@ -1358,6 +1406,8 @@ $$
 $$
 
 <p>最后再加入不等式约束，得到</p>
+
+
 
 $$
 \left\{\begin{aligned}
@@ -1388,6 +1438,8 @@ $$
 
 
 
+
+
 <figure  >
   <div class="d-flex justify-content-center">
     <div class="w-100" ><img alt="" srcset="
@@ -1399,6 +1451,7 @@ $$
                height="720"
                loading="lazy" data-zoomable /></div>
   </div></figure>
+
 <p>本题的几何意义如图所示。目标函数对应的曲面 $\Gamma$ 是（椭）圆抛物面，等式约束对应平面 $\pi$，不等式约束对应以平面 $\sigma$ 为边界的左半空间。曲面 $\Gamma$ 和平面 $\pi$ 的交线为图中的红色曲线（该曲线实际上是一个抛物线）。不考虑不等式约束，该优化问题的最优解为 $(x^{\star}, y^{\star}) = (\frac{1}{2}, \frac{1}{2})$，最优值为 $f(x^{\star}, y^{\star}) = \frac{1}{2}$，对应图中红点的坐标 $(\frac{1}{2}, \frac{1}{2}, \frac{1}{2})$。不等式约束实际上是让平面 $\alpha$ 沿 $y$ 轴方向平移，以 $\alpha = \frac{1}{2}$ 为界，可以分三种情况讨论。</p>
 <p><strong>参考</strong></p>
 <ul>
@@ -1406,16 +1459,22 @@ $$
 <li><a href="https://zhuanlan.zhihu.com/p/26514613" target="_blank" rel="noopener">浅谈最优化问题的KKT条件</a></li>
 </ul>
 
-          </div>
+        </article>
 
+        
+
+
+
+
+
+        
+
+
+
+        
+        
+        <div class="article-widget">
           
-
-
-
-          
-          
-          <div class="article-widget">
-            
 <div class="post-nav">
   
   
@@ -1434,29 +1493,27 @@ $$
   
 </div>
 
-          </div>
-          
         </div>
+        
+      </div>
 
-        <div class="body-footer">
-          <p>Last updated on Apr 5, 2022</p>
+      <div class="body-footer">
+        <p>Last updated on Apr 5, 2022</p>
 
-          
-
-
-
-
-          
+        
 
 
 
 
-          
+        
 
 
-        </div>
 
-      </article>
+
+        
+
+
+      </div>
 
       <footer class="site-footer">
 
@@ -1474,13 +1531,17 @@ $$
 
 
   
+  
+  
+  
+  
 
-  
 
-  
 
-  
-  
+
+
+
+
 
 
 
@@ -1523,6 +1584,7 @@ $$
 
 
 
+
   <p class="powered-by">
     
     
@@ -1553,7 +1615,7 @@ $$
   
 
 
-<script src="/js/vendor-bundle.min.fab8b449b814cc9f95b22fcf2e45f05b.js"></script>
+<script src="/js/vendor-bundle.min.d26509351aa0ff874abbee824e982e9b.js"></script>
 
 
 
@@ -1636,11 +1698,12 @@ $$
 
 
 
+
   
   
 
 
-<script src="/en/js/wowchemy.min.2a14e6cafbd89dd0247015b525702e10.js"></script>
+<script src="/en/js/wowchemy.min.e8ee06ba8371980ffde659871dd593b0.js"></script>
 
 
 
@@ -1677,6 +1740,8 @@ $$
 
 
   <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
 
 
 

@@ -21,7 +21,9 @@
 &lt;h3 id=&#34;形式化描述&#34;&gt;形式化描述&lt;/h3&gt;
 &lt;p&gt;输入：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;$n$ 个活动组成的集合 $S = \{ a_1, a_2, \cdots, a_n \}$&lt;/li&gt;
+&lt;li&gt;$n$ 个活动组成的集合 
+
+$S = \{ a_1, a_2, \cdots, a_n \}$&lt;/li&gt;
 &lt;li&gt;每个活动 $a_i$ 的开始时间 $s_i$ 和结束时间 $f_i$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;输出：&lt;/p&gt;
@@ -30,6 +32,8 @@
 &lt;/ul&gt;
 &lt;p&gt;优化目标：&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 \max \left | S&#39; \right |
@@ -37,6 +41,8 @@ $$
 $$
 
 &lt;p&gt;约束条件：&lt;/p&gt;
+
+
 
 $$
 \begin{align}
@@ -69,6 +75,8 @@ $$
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -80,7 +88,10 @@ $$
                height=&#34;113&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h3 id=&#34;最早开始活动优先&#34;&gt;最早开始活动优先&lt;/h3&gt;
+
+
 
 
 
@@ -108,6 +119,7 @@ $$
                height=&#34;112&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h3 id=&#34;最早结束活动优先&#34;&gt;最早结束活动优先&lt;/h3&gt;
 &lt;p&gt;因为选择最早结束的活动，可以给后面的活动留更大的选择空间。然而这只是我们的直观感受，这是否可以保证最优解？需要证明。&lt;/p&gt;
 &lt;h4 id=&#34;证明&#34;&gt;证明&lt;/h4&gt;
@@ -160,6 +172,8 @@ $$
 &lt;/ul&gt;
 &lt;p&gt;优化目标：&lt;/p&gt;
 
+
+
 $$
 \min \sum_{i=1}^{n}{\left | c_i \right | f_i}
 $$
@@ -176,6 +190,8 @@ $$
 &lt;h2 id=&#34;带权路径长度&#34;&gt;带权路径长度&lt;/h2&gt;
 &lt;p&gt;假设二叉树中每个叶子结点有一个权值 $w_i$，到根的路径长度为 $l_i$，其他结点权值为 $0$。则有 $n$ 个叶子结点的树的带权路径长度为&lt;/p&gt;
 
+
+
 $$
 \begin{align}
 WPL = \sum_{i=0}^{n-1} w_i l_i
@@ -185,7 +201,9 @@ $$
 &lt;h2 id=&#34;huffman-树&#34;&gt;Huffman 树&lt;/h2&gt;
 &lt;p&gt;带权路径长度达到最小的二叉树即为 Huffman 树。在 Huffman 树中，权值越大的结点离根越近。&lt;/p&gt;
 &lt;h3 id=&#34;构造-huffman-树&#34;&gt;构造 Huffman 树&lt;/h3&gt;
-&lt;p&gt;首先构造 $n$ 棵二叉树的森林 $F = \{ T_1, T_2, \cdots, T_n \}$，每棵二叉树 $T_i$ 只有一个带权值为 $w_i$ 的根结点。然后重复以下步骤，直到只剩一棵树为止：&lt;/p&gt;
+&lt;p&gt;首先构造 $n$ 棵二叉树的森林 
+
+$F = \{ T_1, T_2, \cdots, T_n \}$，每棵二叉树 $T_i$ 只有一个带权值为 $w_i$ 的根结点。然后重复以下步骤，直到只剩一棵树为止：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;在 $F$ 中选两棵根结点权值最小的二叉树，作为左右子树构造一棵新的二叉树，新树的根结点权值等于其左右子树根结点权值之和。&lt;/li&gt;
 &lt;li&gt;在 $F$ 中删除这两棵二叉树。&lt;/li&gt;
@@ -318,6 +336,8 @@ $$
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -329,6 +349,7 @@ $$
                height=&#34;376&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h3 id=&#34;并查集&#34;&gt;并查集&lt;/h3&gt;
 &lt;p&gt;并查集是一种数据结构，类似于《离散数学》中等价类的划分。这种数据结构非常适合处理如下两大问题：&lt;/p&gt;
 &lt;ul&gt;
@@ -359,6 +380,8 @@ $$
 
 
 
+
+
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;&#34; srcset=&#34;
@@ -370,9 +393,12 @@ $$
                height=&#34;369&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;p&gt;通常用双亲表示法表示的树作为并查集的基础数据结构（在内存中是连续的存储空间）。数组下标对应每个元素，数组的值表示指向父结点的指针。负数表示没有父结点，其绝对值表示集合中一共有多少个元素。&lt;/p&gt;
 &lt;p&gt;记录集合中总的元素个数的意义在于，将结点数更少的集合作为结点数更多的集合的根的子树能够提高并查集的查询效率。&lt;/p&gt;
 &lt;h4 id=&#34;路径压缩&#34;&gt;路径压缩&lt;/h4&gt;
+
+
 
 
 
@@ -400,6 +426,7 @@ $$
                height=&#34;306&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
+
 &lt;h4 id=&#34;并查集的代码实现&#34;&gt;并查集的代码实现&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;TODO&lt;/p&gt;
