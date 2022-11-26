@@ -68,7 +68,7 @@
 &lt;div class=&#34;mermaid&#34;&gt;graph TD
     A(努力) --&gt; D(成功)
     B(机遇) --&gt; D
-    C(……)
+    C(......) --&gt; D
 &lt;/div&gt;
 &lt;p&gt;如图所示，有多个因素同时满足时才能成功。有的时候我们只能看到其中的一个或个别因素，而看不到全部的因素。&lt;/p&gt;
 &lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
@@ -5729,7 +5729,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-741625983&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-839765412&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -5739,7 +5739,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-741625983&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-839765412&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
