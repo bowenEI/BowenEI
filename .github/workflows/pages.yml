@@ -68,7 +68,6 @@ jobs:
   # Sync to Gitee
   sync:
     needs: deploy
-    # if: ${{ github.ref == 'refs/heads/master' }}
     runs-on: ubuntu-latest
     steps:
       - name: Sync to Gitee
@@ -76,17 +75,11 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
         with:
-          source-repo: https://github.com/bowenEI/bowenEI.github.io.git
-          destination-repo: https://gitee.com/bowenEI/BowenEI.git
-  
-  # Gitee Pages
-  gitee:
-    needs: sync
-    runs-on: ubuntu-latest
-    steps:
+          source-repo: git@github.com:bowenEI/bowenEI.github.io.git
+          destination-repo: git@gitee.com:bowenEI/BowenEI.git
       - name: Build Gitee Pages
-        uses: yanglbme/gitee-pages-action@master
+        uses: yanglbme/gitee-pages-action@main
         with:
           gitee-username: bowenEI
           gitee-password: ${{ secrets.GITEE_PASSWORD }}
-          gitee-repo: BowenEI/BowenEI
+          gitee-repo: bowenEI/bowenEI
