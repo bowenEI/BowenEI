@@ -82,4 +82,4 @@ jobs:
         with:
           gitee-username: bowenEI
           gitee-password: ${{ secrets.GITEE_PASSWORD }}
-          gitee-repo: bowenEI/bowenEI
+          gitee-repo: bowenEI
