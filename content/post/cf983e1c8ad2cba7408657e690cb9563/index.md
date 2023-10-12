@@ -30,7 +30,7 @@ projects: []
 
 [华为全联接大会](https://www.huawei.com/cn/events/huaweiconnect) 于 2023 年 9 月 20 日在上海拉开帷幕。大会以“加速行业智能化”为主题，与全球行业精英、技术专家、合作伙伴、开发者等共同探讨如何把握战略机遇，通过行动共赢智能化未来。华为在大会上发布了全面智能化（All Intelligence）战略，将在持续深耕 AI 根技术的基础上，打造坚实算力底座，为世界构建第二选择，使能百模千态，赋能千行万业。会上，华为还发布了智能化参考架构以及相关的产品和解决方案，并推出 [《加速行业智能化》白皮书](https://e.huawei.com/cn/material/enterprise/e7de4fdafdb246fcb086cb3471a5699a) ，希望对千行万业智能化转型的实施和落地提供更具体的帮助和参考。
 
-华为公司副董事长、轮值董事长、CFO [孟晚舟](https://www.huawei.com/cn/executives/board-of-directors/meng-wanzhou)女士做了以“加速行业智能化，共赢智能化未来”为的主旨演讲。演讲内容深入浅出，紧随前沿，可谓是华为“轻舟已过万重山”后立下的雄心壮志。本文为孟晚舟的主旨演讲原文。
+华为公司副董事长、轮值董事长、CFO [孟晚舟](https://www.huawei.com/cn/executives/board-of-directors/meng-wanzhou)女士做了以“加速行业智能化，共赢智能化未来”为主旨的演讲。演讲内容深入浅出，紧随前沿，可谓是华为“轻舟已过万重山”后立下的雄心壮志。本文为孟晚舟的主旨演讲原文。
 
 <!--more-->
 
