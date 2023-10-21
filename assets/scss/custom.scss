@@ -7,3 +7,8 @@ blockquote {
   color: inherit;
   border-left: 0.25rem solid #20c997;
 }
+
+// spoiler
+.dark details p {
+  border-left: unset;
+}
