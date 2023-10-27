@@ -5,8 +5,8 @@ title: "加速行业智能化，共赢智能化未来"
 subtitle: "打造中国坚实的算力底座，为世界构建第二选择"
 summary: ""
 authors: []
-tags: [Presentation]
-categories: []
+tags: []
+categories: [Presentation]
 date: 2023-10-13T00:45:29+08:00
 lastmod: 2023-10-13T00:45:29+08:00
 featured: false
