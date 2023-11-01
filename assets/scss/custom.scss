@@ -7,3 +7,15 @@ blockquote {
   color: inherit;
   border-left: 0.25rem solid #20c997;
 }
+
+@media (min-width: 30em) {
+  blockquote {
+    // padding-left: unset;
+    padding-right: unset;
+  }
+}
+
+// spoiler
+.dark details p {
+  border-left: unset;
+}

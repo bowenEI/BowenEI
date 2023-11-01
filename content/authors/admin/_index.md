@@ -20,6 +20,7 @@ bio: My research interests include Edge Computing and Edge Intelligence.
 interests:
 - Edge Computing
 - Edge Intelligence
+- Efficient LLM Inference
 
 # Education to show in About widget
 education:
@@ -33,22 +34,22 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 social:
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/
-  label: Follow me on Twitter
-- icon: graduation-cap  # Alternatively, use `google-scholar` icon from `ai` icon pack
-  icon_pack: fas
-  link: https://scholar.google.com/
+# - icon: twitter
+#   icon_pack: fab
+#   link: https://twitter.com/
+#   label: Follow me on Twitter
+# - icon: graduation-cap  # Alternatively, use `google-scholar` icon from `ai` icon pack
+#   icon_pack: fas
+#   link: https://scholar.google.com/
 - icon: github
   icon_pack: fab
   link: https://github.com/bowenEI/
   label: Follow me on Github
   display:
     header: true
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/
+# - icon: linkedin
+#   icon_pack: fab
+#   link: https://www.linkedin.com/
 
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/media/resume.pdf`, enable `ai` icons in `params.toml`, 
@@ -58,10 +59,55 @@ social:
 #   link: media/resume.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ""
+email: "bwzhou@seu.edu.cn"
+
+# Skills
+# For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
+skills:
+  - name: Coding
+    items:
+    - name: Python
+      description: ''
+      percent: 100
+    - name: C/C++
+      description: ''
+      percent: 80
+    - name: Java
+      description: ''
+      percent: 60
+    - name: JavaScript
+      description: ''
+      percent: 70
+    - name: SQL
+      description: ''
+      percent: 90
+  - name: Frameworks
+    color: '#eeac02'
+    color_border: '#f0bf23'
+    items:
+      - name: PyTorch
+        description: ''
+        percent: 80
+      - name: Tensorflow
+        description: ''
+        percent: 60
+      - name: Scrapy
+        description: ''
+        percent: 100
+      - name: Feapder
+        description: ''
+        percent: 90
+      - name: Qt
+        description: ''
+        percent: 90
+  - name: Misc
+    items:
+      - name: Git
+        description: ''
+        percent: 100
 
 # Highlight the author in author lists? (true/false)
-highlight_name: false
+highlight_name: true
 ---
 
 I received the B.E. degree in Computer Science and Technology from Anhui University in 2021. I am currently a student pursuing a Ph.D degree of Computer Science and Technology in Southeast University.

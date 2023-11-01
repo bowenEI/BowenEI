@@ -10,8 +10,8 @@ main:
   - name: Publications
     url: '#publications'
     weight: 20
-  - name: Blogs
-    url: '#blogs'
+  - name: Posts
+    url: '#posts'
     weight: 30
   - name: Gallery
     url: '#gallery'
