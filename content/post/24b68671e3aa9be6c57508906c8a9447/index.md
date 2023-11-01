@@ -26,6 +26,8 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+toc: true
 ---
 
 我们为什么会按照我们想的那样去做呢？我们为什么会按照我们做的那样去做呢？社会学旨在对这两个问题提供答案。尽管其他学科也试图做出回答，但社会学提供的分析视角，既有更大的包容性，又有更大的密切性，它比我们在许多其他领域可能找到的观点要更为基本、更为明确。社会学可使我们洞悉“全景”。
