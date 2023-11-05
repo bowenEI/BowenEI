@@ -184,7 +184,7 @@ $$
 $$
 {{< /math >}}
 
-这里我们继续简化，令 $d_{ff} = 4d_{\textrm{model}} = d$，得到
+这里我们继续简化，令 $d_{ff} = 4d_{\textrm{model}} = 4d$，得到
 
 {{< math >}}
 $$
@@ -269,8 +269,8 @@ LLaMA[^4] 是基于 Transformer 的 Decoder only 模型。考虑到 LLaMA 是参
 
 首先需要给出如下两个定义：
 
-- FLOPS (Floating Point Operations Per Second): 每秒浮点运算次数，用于衡量模型计算开销
-- MOPS (Memory Operations Per Second): 每秒内存访问次数，用于衡量模型访存（I/O）开销
+- FLOPS (Floating Point Operations Per Second): 每秒浮点运算次数，用于衡量模型计算开销。
+- MOPS (Memory Operations Per Second): 每秒内存访问次数，用于衡量模型访存（I/O）开销。
 
 一般地，如果一个系统在单位时间内访存次数越小而计算次数越多，那么该系统的吞吐量就越大。定义算术强度（Arithmetic Intensity[^5]）为
 
