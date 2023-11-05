@@ -10,7 +10,7 @@ categories: [Academic, Knowledge]
 date: 2023-11-05T14:48:37+08:00
 lastmod: 2023-11-05T14:48:37+08:00
 featured: false
-draft: true
+draft: false
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
