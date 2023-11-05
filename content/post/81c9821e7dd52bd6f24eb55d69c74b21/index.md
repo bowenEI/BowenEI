@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: []
 tags: []
-categories: []
+categories: [Academic]
 date: 2023-11-01T13:09:34+08:00
 lastmod: 2023-11-01T13:09:34+08:00
 featured: false
