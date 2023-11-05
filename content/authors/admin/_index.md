@@ -100,11 +100,11 @@ skills:
       - name: Qt
         description: ''
         percent: 90
-  - name: Misc
-    items:
-      - name: Git
-        description: ''
-        percent: 100
+  # - name: Misc
+  #   items:
+  #     - name: Git
+  #       description: ''
+  #       percent: 100
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
