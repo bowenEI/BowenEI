@@ -127,7 +127,7 @@ $$
 
 ### Scatter
 
-Scatter 算子可以被视为是 Gather 算子的逆运算：把一个存在于编号为 `i` 的设备上，长度为 $n$（信息长度为 $nl$）的链式数据结构 `L` 中的值分散到每个设备上。使得 `device[i]` 的设备会得到 `L[i]` 的结果。
+Scatter 算子可以被视为是 Gather 算子的逆运算：把一个存在于编号为 `i` 的设备上，长度为 $n$（信息长度为 $nl$）的链式数据结构 `L` 中的值分散到每个设备上，使得 `device[i]` 上会得到 `L[i]` 的结果。
 
 {{< figure src="8a096c5bbeb0d3f6e2d51e62b2f628db.png" title="Scatter" numbered="true" >}}
 
