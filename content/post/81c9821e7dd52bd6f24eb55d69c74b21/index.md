@@ -295,11 +295,7 @@ $$
 |       $Y \times W_{in}$       |  `(B, S, F)`   | $O(8BSM^2)$ |  $O(BSM+4M^2)$  |  $O(1/(1/M+1/BS))$   |
 | $\text{ReLU} \times W_{out}$  |  `(B, S, M)`   | $O(8BSM^2)$ |  $O(BSM+4M^2)$  |  $O(1/(1/M+1/BS))$   |
 
-> 注 1：本表根据[剖析 GPT 推断中的批处理效应](https://abcdabcd987.com/2023/05/13/transformer-batching/)一文进行整理。
-> 
-> 注 2：其中 $M = HD$，$F = 4M$。为了方便表示，统一根据上式将 `H`、`D`、`F` 尽可能都用 `M` 来表示。
->
-> 注 3：对于增量推理的单个 token 生成阶段，$S \equiv 1$。所以，增量推理阶段和全量推理阶段的 FLOPS、MOPS 以及算术强度有很大不同，编码器模型和解码器模型的瓶颈也有所不同。
+> 注：本表根据[剖析 GPT 推断中的批处理效应](https://abcdabcd987.com/2023/05/13/transformer-batching/)一文进行整理。
 
 上表给出了 LLM 主要的 8 个线性算子的 FLOPS、MOPS 和算术强度，这些开销在 LLM 推理过程中占主导地位。通过上表，我们可以得出如下几点结论：
 
@@ -309,6 +305,7 @@ $$
    - `act-to-act`：即 MHA block 的 2 次自注意力计算 $Q \times K$ 和 $\text{Score} \times V$。
 3. $d_{\textrm{model}}$ 对 `projection` 算子的 FLOPS 和 MOPS 都具有二次的影响，序列长度对 `act-to-act` 算子的 FLOPS 和 MOPS 都具有二次的影响。在序列长度较小时，`act-to-act` 算子的计算量较小；但在序列长度较大时，`act-to-act` 算子的计算量较大。
 4. 增大序列长度、批量大小、$d_{\textrm{model}}$，以及减少 head 的数量，都有助于提高算术强度。不过，序列长度和批量大小受显存限制不可能无限增加，$d_{\textrm{model}}$ 和 head 是超参数，可以看作是定值。所以，吞吐量提升的瓶颈在于显存。
+5. 对于增量推理的单个 token 生成阶段，$S \equiv 1$。所以，增量推理阶段和全量推理阶段的 FLOPS、MOPS 以及算术强度有很大不同，编码器模型和解码器模型的瓶颈也有所不同。譬如，增量推理阶段的算术强度要明显低于全量推理，这和我们的直观感受是一致的。
 
 [^1]: [Vaswani, Ashish, et al. “Attention Is All You Need.” Proceedings of the 31st International Conference on Neural Information Processing Systems, Curran Associates Inc., 2017, pp. 6000–10.](https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)
 [^2]: [Devlin, Jacob, et al. “BERT: Pre-Training of Deep Bidirectional Transformers for Language Understanding.” arXiv:1810.04805 [Cs], May 2019.](http://arxiv.org/abs/1810.04805)
