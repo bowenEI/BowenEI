@@ -10,7 +10,7 @@ categories: [Academic, Knowledge]
 date: 2023-11-05T14:48:37+08:00
 lastmod: 2023-11-05T14:48:37+08:00
 featured: false
-draft: true
+draft: false
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -233,7 +233,84 @@ $$
 
 虽然算法带宽的计算方法既简单又高效，但很难将其拓展到对于集合通信算子的带宽计算。这是因为，具体集合通信算子和算法实现不同，也就是前文所分析的。
 
-一个集合通信算子在执行过程中测得的算法带宽往往会远远小于硬件本身的最高带宽。在实际运行的相应测试中，经常能够观测到随着设备增加，算法带宽呈下降趋势。为了解决这一问题，NCCL 提出了总线带宽（Bus Bandwidth）这一数值化指标，将根据每个集合通信算子的分析所测得的算法带宽，再乘以一个校正系数（Corrention Factor）。
+一个集合通信算子在执行过程中测得的算法带宽往往会远远小于硬件本身的最高带宽。在实际运行的相应测试中，经常能够观测到随着设备增加，算法带宽呈下降趋势。为了解决这一问题，NCCL 提出了总线带宽（Bus Bandwidth）这一数值化指标，将根据每个集合通信算子的分析所测得的算法带宽，再乘以一个校正系数（Corrention Factor），从而更贴近实际硬件表现的带宽值。
+
+下面给出常见算子的校正系数：
+
+### All Reduce
+
+All Reduce 算子可以定义为：对于 `device[1:n]` 上的值 `value[1:n]`，计算 `func(value)`，然后将计算结果回存到每个设备上。
+
+在不考虑实际实现算法和网络拓扑的情况下，这个操作理论上只需要 $2(n-1)$ 次数据传输。其中包含在每个设备上分开进行的 $n-1$ 次 `func` 计算，以及最后 $n$ 次最终数据值的广播，再减去 `device[1]` 的运算和 `device[n]` 的广播对执行时间的影响。假设每个设备对于外界所有信息处理的带宽为 $B$，可以得出对于 $S$ 个在不同设备上的数据运行 All Reduce 算子的最优时延为
+
+{{< math >}}
+$$
+t = \frac{2S(n-1)}{nB}
+$$
+{{< /math >}}
+
+将带宽 $B$ 表示为其他参数的函数，得
+
+{{< math >}}
+$$
+\begin{align}
+    B &= \frac{S}{t} \cdot \frac{2(n-1)}{n} \\
+    &= \frac{2(n-1)}{n} \cdot b
+\end{align}
+$$
+{{< /math >}}
+
+这里 $b$ 前的系数 $2(n-1)/n$ 就是校正系数。
+
+### Reduce Scatter
+
+Reduce Scatter 可以看作是只执行 All Reduce 的聚合部分。仿照上面的计算方式，只需要考虑 $n-1$ 次聚合运算，可得实际带宽为
+
+{{< math >}}
+$$
+\begin{align}
+    B &= \frac{S}{t} \cdot \frac{n-1}{n} \\
+    &= \frac{n-1}{n} \cdot b
+\end{align}
+$$
+{{< /math >}}
+
+即校正系数为 $(n-1)/n$。
+
+### All Gather
+
+同理，All Gather 可以看作是只执行 All Reduce 的广播部分。那么同理可得
+
+{{< math >}}
+$$
+\begin{align}
+    B &= \frac{S}{t} \cdot \frac{2(n-1)}{n} \\
+    &= \frac{n-1}{n} \cdot b
+\end{align}
+$$
+{{< /math >}}
+
+即校正系数为 $(n-1)/n$。
+
+### Broadcast
+
+Broadcast 与 All Reduce 不同，Broadcast 中所有数据都需要从算子本身的发送者发出。即使是在上面分治的情况下，也需要等待所有子问题运行结束才能保证 Broadcast 算子本身的正确性。因此，在计算带宽时，瓶颈仍为发送者对于外界所有信息处理的带宽，所以
+
+{{< math >}}
+$$
+B = b
+$$
+{{< /math >}}
+
+即校正系数为 $1$。
+
+### Reduce
+
+类似于 Broadcast 算子，Reduce 需要将所有数据发送给算子的接收者。所以校正系数也是 $1$。
+
+> 由于 Gather 和 Scatter 的带宽计算与实际聚合/分散时的数据结构相关性更高，故不给出特定的校正系数。
+
+小结一下，通过校正系数也能看出，随着设备增加，算法带宽呈下降趋势这一现象。
 
 [^1]: 本文参考了 [Open MLSys](https://openmlsys.github.io/) 的相关文章 [11.5 集合通信](https://openmlsys.github.io/chapter_distributed_training/collective.html)
 [^2]: [Rajbhandari, Samyam, et al. “DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale.” Proceedings of the 39th International Conference on Machine Learning, PMLR, 2022, pp. 18332–46.](https://proceedings.mlr.press/v162/rajbhandari22a.html)
