@@ -61,7 +61,7 @@ toc: true
 {{< math >}}
 $$
 \begin{align}
-    T_{\textrm{broadcast}} = (n-1)(a+bl)
+    T_{b} = (n-1)(a+bl)
 \end{align}
 $$
 {{< /math >}}
@@ -150,7 +150,7 @@ Reduce Scatter 算子就是 Reduce 和 Scatter 的结合，可以把 Reduce Scat
 {{< math >}}
 $$
 \begin{align}
-    T_{\textrm{rs}} = (a+bl) \log_2{n} + O(f(l))
+    T_{rs} = (a+bl) \log_2{n} + O(f(l))
 \end{align}
 $$
 {{< /math >}}
@@ -162,6 +162,16 @@ $$
 All to All 是一种较为复杂的集合通信算子，将 `device[i]` 上的链式数据结构 `L[i][1:n]` 分散到每个设备上，使得每个 `device[i]` 上得到 `L[1:n][i]` 的结果。它相当于将整个集群的数据视为一个 $n \times n$ 的矩阵，然后将这个矩阵转置。
 
 {{< figure src="f4c27c45d1731d1e43c4893bb2a3ddea.png" title="All to All" numbered="true" >}}
+
+如上图所示，每个设备都要与其他设备进行通信。按照上述分治算法的思想，通信开销为
+
+{{< math >}}
+$$
+\begin{align}
+    T_{a2a} = (a+bl) \log_2{n}
+\end{align}
+$$
+{{< /math >}}
 
 All to All 的通信算法一般会根据网络拓扑结构进行设计。例如，对于混合专家模型（Mixture of Expert, MoE）并行，这其中涉及到节点内和节点间的通信。一般来说，节点内通信带宽要大于节点间通信带宽。DeepSpeed-MoE[^2] 提出了一种 Hierarchical All to All 算法，如下图所示：
 
