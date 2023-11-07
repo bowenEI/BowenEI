@@ -163,7 +163,7 @@ All to All 是一种较为复杂的集合通信算子，将 `device[i]` 上的�
 
 {{< figure src="f4c27c45d1731d1e43c4893bb2a3ddea.png" title="All to All" numbered="true" >}}
 
-如上图所示，每个设备都要与其他设备进行通信。按照上述分治算法的思想，通信开销为
+如上图所示，All to All 和 Reduce Scatter 算子相比，仅仅只是少了最后一步的聚合操作。因此，其通信开销为
 
 {{< math >}}
 $$
