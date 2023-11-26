@@ -5,9 +5,8 @@ title: "挑战 2022 年高考全国乙卷数学压轴大题"
 subtitle: ""
 summary: ""
 authors: []
-tags: []
-categories:
-- Essay
+tags: [数学, 高考压轴题, 解析几何, 函数与导数]
+categories: [Essay]
 date: 2022-06-15T19:51:34+08:00
 lastmod: 2022-06-15T19:51:34+08:00
 featured: false

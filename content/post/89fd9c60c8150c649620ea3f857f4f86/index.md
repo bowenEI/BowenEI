@@ -5,10 +5,8 @@ title: "八次危机：中国的真实经验"
 subtitle: "【读书笔记】新中国成立以来经历的八次经济危机及其成功应对并实现软着陆的方法"
 summary: ""
 authors: []
-tags:
-- 温铁军
-categories:
-- Read
+tags: [温铁军, 经济]
+categories: [Read]
 date: 2022-03-12T15:22:41+08:00
 lastmod: 2022-03-12T15:22:41+08:00
 featured: false

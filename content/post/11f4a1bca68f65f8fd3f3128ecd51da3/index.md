@@ -5,10 +5,8 @@ title: "【跨年演讲】温铁军：为什么我对中国2022年的经济前�
 subtitle: ""
 summary: ""
 authors: []
-tags:
-- 温铁军
-categories:
-- Presentation
+tags: [经济, 温铁军]
+categories: [Presentation]
 date: 2022-01-01T11:33:32+08:00
 lastmod: 2022-01-01T11:33:32+08:00
 featured: false

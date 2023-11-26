@@ -5,7 +5,7 @@ title: "并行计算集合通信初步"
 subtitle: ""
 summary: ""
 authors: []
-tags: []
+tags: [并行计算]
 categories: [Academic, Knowledge]
 date: 2023-11-05T14:48:37+08:00
 lastmod: 2023-11-05T14:48:37+08:00

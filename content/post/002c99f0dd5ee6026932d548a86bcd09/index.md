@@ -5,10 +5,8 @@ title: "An Image is Worth 16x16 Words: Transformers for Image Recognition at Sca
 subtitle: "【文献精读】Vision Transformer (ViT)"
 summary: ""
 authors: []
-tags:
-- Transformer
-categories:
-- Academic
+tags: [文献精读, Transformer]
+categories: [Academic]
 date: 2021-11-30T13:37:38+08:00
 lastmod: 2021-11-30T13:37:38+08:00
 featured: false

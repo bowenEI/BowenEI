@@ -5,9 +5,8 @@ title: "在服务器上部署 Overleaf"
 subtitle: ""
 summary: ""
 authors: []
-tags: []
-categories:
-- Technique
+tags: [Docker]
+categories: [Technique]
 date: 2022-04-15T22:55:54+08:00
 lastmod: 2022-04-15T22:55:54+08:00
 featured: false

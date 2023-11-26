@@ -5,9 +5,8 @@ title: "沉痛悼念杂交水稻之父袁隆平院士"
 subtitle: ""
 summary: ""
 authors: []
-tags: []
-categories:
-- Essay
+tags: [袁隆平]
+categories: [Essay]
 date: 2021-05-22T19:21:28+08:00
 lastmod: 2021-05-22T19:21:28+08:00
 featured: false

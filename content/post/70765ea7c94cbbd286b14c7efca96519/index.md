@@ -5,10 +5,8 @@ title: "Attention Is All You Need"
 subtitle: "【文献精读】Transformer"
 summary: ""
 authors: []
-tags:
-- Transformer
-categories:
-- Academic
+tags: [Transformer]
+categories: [Academic]
 date: 2021-11-09T22:59:13+08:00
 lastmod: 2021-11-09T22:59:13+08:00
 featured: false

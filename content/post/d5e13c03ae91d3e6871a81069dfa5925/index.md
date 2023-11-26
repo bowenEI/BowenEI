@@ -5,11 +5,8 @@ title: "从精神上站立起来"
 subtitle: ""
 summary: ""
 authors: []
-tags:
-- 这就是中国
-- 范勇鹏
-categories:
-- Presentation
+tags: [这就是中国, 范勇鹏]
+categories: [Presentation]
 date: 2022-06-26T13:18:55+08:00
 lastmod: 2022-06-26T13:18:55+08:00
 featured: false

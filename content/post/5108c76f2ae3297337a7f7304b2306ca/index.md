@@ -5,10 +5,8 @@ title: "美式反恐 越反越恐"
 subtitle: ""
 summary: ""
 authors: []
-tags:
-- 这就是中国
-categories:
-- Presentation
+tags: [这就是中国]
+categories: [Presentation]
 date: 2021-12-07T14:06:44+08:00
 lastmod: 2021-12-07T14:06:44+08:00
 featured: false

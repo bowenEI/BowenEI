@@ -5,10 +5,8 @@ title: "郑强与杨澜对话中国教育"
 subtitle: ""
 summary: ""
 authors: []
-tags:
-- 郑强
-categories:
-- Presentation
+tags: [教育, 郑强]
+categories: [Presentation]
 date: 2022-02-19T14:35:49+08:00
 lastmod: 2022-02-19T14:35:49+08:00
 featured: true

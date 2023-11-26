@@ -5,9 +5,8 @@ title: "Cloud Computing Architecture"
 subtitle: "云计算体系结构"
 summary: ""
 authors: []
-tags: []
-categories:
-- Knowledge
+tags: [云计算]
+categories: [Knowledge]
 date: 2022-03-07T16:31:12+08:00
 lastmod: 2022-03-07T16:31:12+08:00
 featured: false

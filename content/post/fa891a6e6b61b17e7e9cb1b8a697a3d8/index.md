@@ -5,10 +5,8 @@ title: "美西方民主的政治责任缺位"
 subtitle: "【范神论】"
 summary: ""
 authors: []
-tags:
-- 范勇鹏
-categories:
-- Presentation
+tags: [范勇鹏, 美国民主]
+categories: [Presentation]
 date: 2022-11-29T21:01:04+08:00
 lastmod: 2022-11-29T21:01:04+08:00
 featured: false

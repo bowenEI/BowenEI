@@ -6,8 +6,7 @@ subtitle: "【读书笔记】非暴力沟通"
 summary: ""
 authors: []
 tags: []
-categories:
-- Read
+categories: [Read]
 date: 2022-02-15T15:08:33+08:00
 lastmod: 2022-02-16T15:08:33+08:00
 featured: false

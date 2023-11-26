@@ -5,8 +5,8 @@ title: "论男女两性的解放"
 subtitle: ""
 summary: ""
 authors: []
-tags: []
-categories: []
+tags: [马克思主义, 两性关系, 社会学]
+categories: [Essay]
 date: 2023-09-29T16:01:33+08:00
 lastmod: 2023-09-29T16:01:33+08:00
 featured: false

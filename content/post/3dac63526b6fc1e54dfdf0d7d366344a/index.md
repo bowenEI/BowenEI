@@ -6,8 +6,7 @@ subtitle: "在安徽大学计算机科学与技术学院本科生党支部上的
 summary: ""
 authors: []
 tags: []
-categories: 
-- Essay
+categories: [Essay]
 date: 2021-06-24T20:05:06+08:00
 lastmod: 2021-06-24T20:05:06+08:00
 featured: false

@@ -5,7 +5,7 @@ title: "挑战 2023 年高考全国乙卷数学压轴大题"
 subtitle: ""
 summary: ""
 authors: []
-tags: []
+tags: [数学, 高考压轴题, 解析几何, 函数与导数]
 categories: [Essay]
 date: 2023-06-14T20:32:12+08:00
 lastmod: 2023-06-14T20:32:12+08:00
