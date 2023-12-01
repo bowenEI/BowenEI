@@ -284,31 +284,77 @@ $$
 
 显然，算术强度越大，系统的吞吐量越高。
 
-计算和访存与 sequence length 和 batch size 直接相关，下面分别用 `S` 和 `B` 来表示其大小。在全量推理和增量推理阶段，FLOPS、MOPS 和算术强度的复杂度如下表所示：
+### 全量推理
 
-|             Stage             |  Output Shape  |    FLOPS    |      MOPS       | Arithmetic Intensity |
-| :---------------------------: | :------------: | :---------: | :-------------: | :------------------: |
-|      $QW_Q, KW_K, VW_V$       | `(B, S, H, D)` | $O(BSM^2)$  |  $O(2BSM+M^2)$  |  $O(1/(1/M+1/BS))$   |
-|         $Q \times K$          | `(B, S, H, D)` | $O(BS^2M)$  | $O(2BSM+BS^2H)$ |   $O(1/(1/D+1/S))$   |
-|   $\text{Score} \times V $    | `(B, S, H, D)` | $O(BS^2M)$  | $O(2BSM+BS^2H)$ |   $O(1/(1/D+1/S))$   |
-| $\text{Attention} \times W_O$ |  `(B, S, M)`   | $O(BSM^2)$  |  $O(2BSM+M^2)$  |  $O(1/(1/M+1/BS))$   |
-|       $Y \times W_{in}$       |  `(B, S, F)`   | $O(8BSM^2)$ |  $O(BSM+4M^2)$  |  $O(1/(1/M+1/BS))$   |
-| $\text{ReLU} \times W_{out}$  |  `(B, S, M)`   | $O(8BSM^2)$ |  $O(BSM+4M^2)$  |  $O(1/(1/M+1/BS))$   |
+全量推理阶段，即输入一个完整的 sequence，到输出第一个 token 的过程。其计算和访存开销与 sequence length 和 batch size 直接相关，分别用 $S_{in}$（下面简写为 $S$）和 $B$ 来分别表示其大小。对于 Encoder 的 8 个线性算子，其 FLOPS、MOPS 和算术强度如下表[^6]所示：
 
-> 注：本表根据[剖析 GPT 推断中的批处理效应](https://abcdabcd987.com/2023/05/13/transformer-batching/)一文进行整理。
+|       Stage        |    FLOPS    |      MOPS       |                 Arithmetic Intensity                  |
+| :----------------: | :---------: | :-------------: | :---------------------------------------------------: |
+|   $Q \times W_Q$   | $O(BSM^2)$  |  $O(2BSM+M^2)$  | $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{BS} }\right)$$ |
+|   $K \times W_K$   | $O(BSM^2)$  |  $O(2BSM+M^2)$  | $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{BS} }\right)$$ |
+|   $V \times W_V$   | $O(BSM^2)$  |  $O(2BSM+M^2)$  | $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{BS} }\right)$$ |
+|    $Q \times K$    | $O(BS^2M)$  | $O(2BSM+BS^2H)$ | $$O\left(\frac{1}{\frac{1}{D}+\frac{1}{S} }\right)$$  |
+|   $P \times V $    | $O(BS^2M)$  | $O(2BSM+BS^2H)$ | $$O\left(\frac{1}{\frac{1}{D}+\frac{1}{S} }\right)$$  |
+|   $A \times W_O$   | $O(BSM^2)$  |  $O(2BSM+M^2)$  | $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{BS} }\right)$$ |
+| $F \times W_{in}$  | $O(8BSM^2)$ |  $O(BSM+4M^2)$  | $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{BS} }\right)$$ |
+| $F \times W_{out}$ | $O(8BSM^2)$ |  $O(BSM+4M^2)$  | $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{BS} }\right)$$ |
 
 上表给出了 LLM 主要的 8 个线性算子的 FLOPS、MOPS 和算术强度，这些开销在 LLM 推理过程中占主导地位。通过上表，我们可以得出如下几点结论：
 
 1. 序列长度和批量大小对计算和访存开销的影响是直接的。
 2. 8 个线性算子可以分为如下两类：
-   - `projection`：即 `activation * weight`，包括 MHA block 的 $QW_Q, KW_K, VW_V$ 和 $\text{Attention} \times W_O$ 以及 FFN block 的两个 MLP 层。
-   - `act-to-act`：即 MHA block 的 2 次自注意力计算 $Q \times K$ 和 $\text{Score} \times V$。
+   - `projection`：即 `activation * weight`，包括 MHA block 的 $Q \times W_Q, K \times W_K, V \times W_V$ 和 $A \times W_O$ 以及 FFN block 的两个 MLP 层。
+   - `act-to-act`：即 MHA block 的 2 次自注意力计算 $Q \times K$ 和 $P \times V$。
 3. $d_{\textrm{model}}$ 对 `projection` 算子的 FLOPS 和 MOPS 都具有二次的影响，序列长度对 `act-to-act` 算子的 FLOPS 和 MOPS 都具有二次的影响。在序列长度较小时，`act-to-act` 算子的计算量较小；但在序列长度较大时，`act-to-act` 算子的计算量较大。
 4. 增大序列长度、批量大小、$d_{\textrm{model}}$，以及减少 head 的数量，都有助于提高算术强度。不过，序列长度和批量大小受显存限制不可能无限增加，$d_{\textrm{model}}$ 和 head 是超参数，可以看作是定值。所以，吞吐量提升的瓶颈在于显存。
-5. 对于增量推理的单个 token 生成阶段，$S \equiv 1$。所以，增量推理阶段和全量推理阶段的 FLOPS、MOPS 以及算术强度有很大不同，编码器模型和解码器模型的瓶颈也有所不同。譬如，增量推理阶段的算术强度要明显低于全量推理，这和我们的直观感受是一致的。
+
+### 增量推理
+
+增量推理阶段，即从输出第一个 token 的过程，自回归地推理出后续的 token，直至最后一个 token 的过程。其计算和访存开销与输出的序列长度直接相关，用 $S_{out}$ 来表示其大小。对于增量推理阶段，情况比全量推理阶段要更加复杂，我们首先给出结论——对于 Decoder 的 8 个线性算子，其 FLOPS、MOPS 和算术强度如下表所示：
+
+<div style="overflow: auto;">
+
+|       Stage        |                  FLOPS                   |                       MOPS                        |                                      Arithmetic Intensity                                      |
+| :----------------: | :--------------------------------------: | :-----------------------------------------------: | :--------------------------------------------------------------------------------------------: |
+|   $Q \times W_Q$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |  $$\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)$$  |  $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \frac{S_{in}+i-1}{M} + \frac{1}{B} \right)}$$  |
+|   $K \times W_K$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |  $$\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)$$  |  $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \frac{S_{in}+i-1}{M} + \frac{1}{B} \right)}$$  |
+|   $V \times W_V$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(2BM+M^2)$$        |                      $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{B} }\right)$$                      |
+|    $Q \times K$    | $$\sum_{i=1}^{S_{out} }O(B(S_{in}+i)M)$$ | $$\sum_{i=1}^{S_{out} }O(BH[(S_{in}+i)(D+1)+D])$$ | $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \frac{1}{D} + \frac{1}{S_{in}+i} +1 \right)}$$ |
+|    $P \times V$    | $$\sum_{i=1}^{S_{out} }O(B(S_{in}+i)M)$$ | $$\sum_{i=1}^{S_{out} }O(BH[(S_{in}+i)(D+1)+D])$$ | $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \frac{1}{D} + \frac{1}{S_{in}+i} +1 \right)}$$ |
+|   $A \times W_O$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(2BM+M^2)$$        |                      $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{B} }\right)$$                      |
+| $F \times W_{in}$  |    $$\sum_{i=1}^{S_{out} }O(8BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(BM+4M^2)$$        |                      $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{B} }\right)$$                      |
+| $F \times W_{out}$ |    $$\sum_{i=1}^{S_{out} }O(8BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(BM+4M^2)$$        |                      $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{B} }\right)$$                      |
+
+</div>
+<br>
+
+首先注意，增量推理阶段是一个自回归的过程，因此总的 FLOPS、MOPS 和算术强度为每次推理出一个 token 的叠加，这也是表格中求和符号的由来。
+
+其次，这里默认增量推理阶段采用 K/V Cache，因此需要 K/V Cache 的影响。K/V Cache 是一种用空间换时间的策略，因此它减少了 FLOPS，却又增加了 MOPS。具体来说，在第 $i$ 轮迭代时，已经在显存中缓存了长度为 $i-1+S_{in}$ 的 K/V 向量。此时，只需要计算当前 token 在 $W_K, W_V$ 上的投影，故此时 FLOPS 的计算复杂度与序列长度无关，即
+
+{{< math >}}
+$$
+\begin{align*}
+    O(BM^2)
+\end{align*}
+$$
+{{< /math >}}
+
+相应地，在第 $i$ 轮迭代时，需要从显存中读取长度为 $i-1+S_{in}$ 的 K/V 向量和计算当前 token 在 $W_K, W_V$ 上的投影所需的权重矩阵，即
+
+{{< math >}}
+$$
+\begin{align*}
+    O(2B[S_{in}+i-1]M+M^2)
+\end{align*}
+$$
+{{< /math >}}
+
+在后续的 MHA 计算中，第 $i$ 轮迭代的序列长度就变为 $S_{in}+i$。所以，最终总的 FLOPS、MOPS 和算术强度如上表所示。
 
 [^1]: [Vaswani, Ashish, et al. “Attention Is All You Need.” Proceedings of the 31st International Conference on Neural Information Processing Systems, Curran Associates Inc., 2017, pp. 6000–10.](https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)
 [^2]: [Devlin, Jacob, et al. “BERT: Pre-Training of Deep Bidirectional Transformers for Language Understanding.” arXiv:1810.04805 [Cs], May 2019.](http://arxiv.org/abs/1810.04805)
 [^3]: [Radford, Alec, and Karthik Narasimhan. Improving Language Understanding by Generative Pre-Training. 2018.](https://www.semanticscholar.org/paper/Improving-Language-Understanding-by-Generative-Radford-Narasimhan/cd18800a0fe0b668a1cc19f2ec95b5003d0a5035)
 [^4]: [Touvron, Hugo, et al. LLaMA: Open and Efficient Foundation Language Models. arXiv:2302.13971, arXiv, 27 Feb. 2023.](https://doi.org/10.48550/arXiv.2302.13971)
 [^5]: [Kim, Sehoon, et al. Full Stack Optimization of Transformer Inference: A Survey. arXiv:2302.14017, arXiv, 27 Feb. 2023.](https://doi.org/10.48550/arXiv.2302.14017)
+[^6]: 本表根据[剖析 GPT 推断中的批处理效应](https://abcdabcd987.com/2023/05/13/transformer-batching/)一文进行整理。下同。
