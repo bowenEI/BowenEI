@@ -286,26 +286,29 @@ $$
 
 ### 全量推理
 
-全量推理阶段，即输入一个完整的 sequence，到输出第一个 token 的过程。其计算和访存开销与 sequence length 和 batch size 直接相关，分别用 $S_{in}$（下面简写为 $S$）和 $B$ 来分别表示其大小。对于 Encoder 的 8 个线性算子，其 FLOPS、MOPS 和算术强度如下表[^6]所示：
+全量推理阶段，即输入一个完整的 sequence，到输出第一个 token 的过程。其计算和访存开销与 sequence length 和 batch size 直接相关，分别用 $S_{in}$（下面简写为 $S$）和 $B$ 来分别表示其大小。对于 Encoder 的 8 个线性算子，其 FLOPS、MOPS 和算术强度如下表 [^6] 所示：
 
 |       Stage        |    FLOPS    |      MOPS       |                 Arithmetic Intensity                  |
 | :----------------: | :---------: | :-------------: | :---------------------------------------------------: |
-|   $Q \times W_Q$   | $O(BSM^2)$  |  $O(2BSM+M^2)$  | $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{BS} }\right)$$ |
-|   $K \times W_K$   | $O(BSM^2)$  |  $O(2BSM+M^2)$  | $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{BS} }\right)$$ |
-|   $V \times W_V$   | $O(BSM^2)$  |  $O(2BSM+M^2)$  | $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{BS} }\right)$$ |
+|   $Q \times W_Q$   | $O(BSM^2)$  |  $O(2BSM+M^2)$  | $$O\left(\frac{1}{\frac{2}{M}+\frac{1}{BS} }\right)$$ |
+|   $K \times W_K$   | $O(BSM^2)$  |  $O(2BSM+M^2)$  | $$O\left(\frac{1}{\frac{2}{M}+\frac{1}{BS} }\right)$$ |
+|   $V \times W_V$   | $O(BSM^2)$  |  $O(2BSM+M^2)$  | $$O\left(\frac{1}{\frac{2}{M}+\frac{1}{BS} }\right)$$ |
 |    $Q \times K$    | $O(BS^2M)$  | $O(2BSM+BS^2H)$ | $$O\left(\frac{1}{\frac{1}{D}+\frac{1}{S} }\right)$$  |
 |   $P \times V $    | $O(BS^2M)$  | $O(2BSM+BS^2H)$ | $$O\left(\frac{1}{\frac{1}{D}+\frac{1}{S} }\right)$$  |
-|   $A \times W_O$   | $O(BSM^2)$  |  $O(2BSM+M^2)$  | $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{BS} }\right)$$ |
-| $F \times W_{in}$  | $O(8BSM^2)$ |  $O(BSM+4M^2)$  | $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{BS} }\right)$$ |
-| $F \times W_{out}$ | $O(8BSM^2)$ |  $O(BSM+4M^2)$  | $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{BS} }\right)$$ |
+|   $A \times W_O$   | $O(BSM^2)$  |  $O(2BSM+M^2)$  | $$O\left(\frac{1}{\frac{2}{M}+\frac{1}{BS} }\right)$$ |
+| $F \times W_{in}$  | $O(8BSM^2)$ |  $O(BSM+4M^2)$  | $$O\left(\frac{8}{\frac{1}{M}+\frac{4}{BS} }\right)$$ |
+| $F \times W_{out}$ | $O(8BSM^2)$ |  $O(BSM+4M^2)$  | $$O\left(\frac{8}{\frac{1}{M}+\frac{4}{BS} }\right)$$ |
 
-上表给出了 LLM 主要的 8 个线性算子的 FLOPS、MOPS 和算术强度，这些开销在 LLM 推理过程中占主导地位。通过上表，我们可以得出如下几点结论：
+上表给出了 LLM 主要的 8 个线性算子的 FLOPS、MOPS 和算术强度，这些开销在 LLM 推理过程中占主导地位。具体来说，这 8 个线性算子可以分为如下两类：
 
-1. 序列长度和批量大小对计算和访存开销的影响是直接的。
-2. 8 个线性算子可以分为如下两类：
-   - `projection`：即 `activation * weight`，包括 MHA block 的 $Q \times W_Q, K \times W_K, V \times W_V$ 和 $A \times W_O$ 以及 FFN block 的两个 MLP 层。
-   - `act-to-act`：即 MHA block 的 2 次自注意力计算 $Q \times K$ 和 $P \times V$。
-3. $d_{\textrm{model}}$ 对 `projection` 算子的 FLOPS 和 MOPS 都具有二次的影响，序列长度对 `act-to-act` 算子的 FLOPS 和 MOPS 都具有二次的影响。在序列长度较小时，`act-to-act` 算子的计算量较小；但在序列长度较大时，`act-to-act` 算子的计算量较大。
+- `proj`：即 Projection 投影，是激活矩阵和权重矩阵相乘的过程。包括 MHA block 的 $Q \times W_Q, K \times W_K, V \times W_V$ 和 $A \times W_O$ 以及 FFN block 的两个 MLP 层。
+- `act-to-act`：即 MHA block 的两次自注意力计算 $Q \times K$ 和 $P \times V$。
+
+通过上表，我们可以得出如下几点结论：
+
+1. 序列长度和批量大小对计算和访存开销的影响成正比。
+2. $d_{\textrm{model}}$ 对 `proj` 算子的 FLOPS 和 MOPS 都具有二次的影响，
+3. 序列长度对 `act-to-act` 算子的 FLOPS 和 MOPS 都具有二次的影响。在序列长度较小时，`act-to-act` 算子的计算量较小；但在序列长度较大时，`act-to-act` 算子的计算量较大。
 4. 增大序列长度、批量大小、$d_{\textrm{model}}$，以及减少 head 的数量，都有助于提高算术强度。不过，序列长度和批量大小受显存限制不可能无限增加，$d_{\textrm{model}}$ 和 head 是超参数，可以看作是定值。所以，吞吐量提升的瓶颈在于显存。
 
 ### 增量推理
@@ -316,17 +319,16 @@ $$
 
 |       Stage        |                  FLOPS                   |                       MOPS                        |                                      Arithmetic Intensity                                      |
 | :----------------: | :--------------------------------------: | :-----------------------------------------------: | :--------------------------------------------------------------------------------------------: |
-|   $Q \times W_Q$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |  $$\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)$$  |  $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \frac{S_{in}+i-1}{M} + \frac{1}{B} \right)}$$  |
-|   $K \times W_K$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |  $$\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)$$  |  $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \frac{S_{in}+i-1}{M} + \frac{1}{B} \right)}$$  |
-|   $V \times W_V$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(2BM+M^2)$$        |                      $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{B} }\right)$$                      |
+|   $Q \times W_Q$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |  $$\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)$$  |  $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \frac{2(S_{in}+i-1)}{M} + \frac{1}{B} \right)}$$  |
+|   $K \times W_K$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |  $$\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)$$  |  $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \frac{2(S_{in}+i-1)}{M} + \frac{1}{B} \right)}$$  |
+|   $V \times W_V$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(2BM+M^2)$$        |                      $$O\left(\frac{1}{\frac{2}{M}+\frac{1}{B} }\right)$$                      |
 |    $Q \times K$    | $$\sum_{i=1}^{S_{out} }O(B(S_{in}+i)M)$$ | $$\sum_{i=1}^{S_{out} }O(BH[(S_{in}+i)(D+1)+D])$$ | $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \frac{1}{D} + \frac{1}{S_{in}+i} +1 \right)}$$ |
 |    $P \times V$    | $$\sum_{i=1}^{S_{out} }O(B(S_{in}+i)M)$$ | $$\sum_{i=1}^{S_{out} }O(BH[(S_{in}+i)(D+1)+D])$$ | $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \frac{1}{D} + \frac{1}{S_{in}+i} +1 \right)}$$ |
-|   $A \times W_O$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(2BM+M^2)$$        |                      $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{B} }\right)$$                      |
-| $F \times W_{in}$  |    $$\sum_{i=1}^{S_{out} }O(8BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(BM+4M^2)$$        |                      $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{B} }\right)$$                      |
-| $F \times W_{out}$ |    $$\sum_{i=1}^{S_{out} }O(8BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(BM+4M^2)$$        |                      $$O\left(\frac{1}{\frac{1}{M}+\frac{1}{B} }\right)$$                      |
+|   $A \times W_O$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(2BM+M^2)$$        |                      $$O\left(\frac{1}{\frac{2}{M}+\frac{1}{B} }\right)$$                      |
+| $F \times W_{in}$  |    $$\sum_{i=1}^{S_{out} }O(8BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(BM+4M^2)$$        |                      $$O\left(\frac{8}{\frac{1}{M}+\frac{4}{B} }\right)$$                      |
+| $F \times W_{out}$ |    $$\sum_{i=1}^{S_{out} }O(8BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(BM+4M^2)$$        |                      $$O\left(\frac{8}{\frac{1}{M}+\frac{4}{B} }\right)$$                      |
 
 </div>
-<br>
 
 首先注意，增量推理阶段是一个自回归的过程，因此总的 FLOPS、MOPS 和算术强度为每次推理出一个 token 的叠加，这也是表格中求和符号的由来。
 
@@ -350,11 +352,75 @@ $$
 $$
 {{< /math >}}
 
-在后续的 MHA 计算中，第 $i$ 轮迭代的序列长度就变为 $S_{in}+i$。所以，最终总的 FLOPS、MOPS 和算术强度如上表所示。
+在后续的 MHA 计算中，第 $i$ 轮迭代的序列长度就变为 $S_{in}+i$。计算完 MHA 后，序列长度就恒为 $1$ 了，故增量推理阶段 FFN block 的相关指标与全量推理阶段相同。
+
+通过上表，我们可以得出如下几点新的结论：
+
+1. 输入序列长度的增加直接导致 K/V Cache 线性增加，于是访存开销随之增加。这样会降低 `proj` 的算术强度，但是却能够提升 `act-to-act` 的算术强度。
+
+2. 输出序列长度的增加直接导致自回归解码迭代次数的增加，对计算和访存的影响一定会增加。除了对 K/V 向量的 `proj` 和 `act-to-act` 算子的 FLOPS 和 MOPS 具有二次的影响外，对其他算子的 FLOPS 和 MOPS 只是成倍增加。
+
+3. 和全量推理的情况一样，增加批量大小和 $d_{\textrm{model}}$ 和减少 head 的数量，都有助于提高算术强度。
+
+4. 输出序列长度对算术强度会有怎样的影响？下面分别就 K/V 向量的 `proj` 和 `act-to-act` 算子的算术强度进行推导。
+
+{{< math >}}
+$$
+\begin{align*}
+    & \frac{S_{out} }{\sum_{i=1}^{S_{out}} O \left(
+        \frac{S_{in}+i-1}{M} + \frac{1}{B}
+    \right)} \\
+    =\ & \frac{S_{out} }{\sum_{i=1}^{S_{out}} O \left(
+        \frac{S_{in}+i-1}{M} + \frac{1}{B}{}
+    \right)} \\
+    =\ & \frac{S_{out}}{O\left(\frac{(S_{in}-1)S_{out}}{M} + \frac{S_{out}(S_{out}+1)}{2M} + \frac{S_{out}}{B}\right)} \\
+    =\ & O \left( \frac{2S_{in}+S_{out}-1}{2M} + \frac{1}{B} \right)
+\end{align*}
+$$
+{{< /math >}}
+
+所以，输出序列长度的增加其实可以提高 K/V 向量 `proj` 的算术强度。
+
+不过，如果要对 `act-to-act` 算子进行算术强度分析，涉及到如下的数列求和问题：
+
+{{< math >}}
+$$
+\begin{align*}
+    \sum_{i=1}^{S_{out}} \frac{1}{i+S_{in}}
+\end{align*}
+$$
+{{< /math >}}
+
+这相当于求调和级数的前 $S_{out}$ 项与前 $S_{in}$ 项的差。结合调和级数的前 $n$ 项和公式，得到
+
+{{< math >}}
+$$
+\begin{align*}
+    S(n) &= \sum_{i=1}^{n} \frac{1}{i} \\
+    \sum_{i=1}^{S_{out}} \frac{1}{i+S_{in}} &= S(S_{out}) - S(S_{in}) \\
+    & \approx \ln(S_{out}+1) - \ln(S_{in}+1) \\
+    &= \ln{\frac{S_{out}+1}{S_{in}+1}}
+\end{align*}
+$$
+{{< /math >}}
+
+所以，`act-to-act` 算子进行算术强度为
+
+{{< math >}}
+$$
+\begin{align*}
+    & \frac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \frac{1}{D} + \frac{1}{S_{in}+i} +1 \right)} \\
+    =\ & \frac{S_{out} }{O \left( \frac{S_{out}}{D} + \ln{\frac{S_{out}+1}{S_{in}+1}} + S_{out} \right)} \\
+    =\ & O \left( \frac{1}{\frac{1}{D}+1 + \frac{1}{S_{out}} \ln{\frac{S_{out}+1}{S_{in}+1}}} \right) \\
+\end{align*}
+$$
+{{< /math >}}
+
+容易判断其单调性，输出序列长度的增加同样也会增加 `act-to-act` 算子的算术强度。
 
 [^1]: [Vaswani, Ashish, et al. “Attention Is All You Need.” Proceedings of the 31st International Conference on Neural Information Processing Systems, Curran Associates Inc., 2017, pp. 6000–10.](https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)
 [^2]: [Devlin, Jacob, et al. “BERT: Pre-Training of Deep Bidirectional Transformers for Language Understanding.” arXiv:1810.04805 [Cs], May 2019.](http://arxiv.org/abs/1810.04805)
 [^3]: [Radford, Alec, and Karthik Narasimhan. Improving Language Understanding by Generative Pre-Training. 2018.](https://www.semanticscholar.org/paper/Improving-Language-Understanding-by-Generative-Radford-Narasimhan/cd18800a0fe0b668a1cc19f2ec95b5003d0a5035)
 [^4]: [Touvron, Hugo, et al. LLaMA: Open and Efficient Foundation Language Models. arXiv:2302.13971, arXiv, 27 Feb. 2023.](https://doi.org/10.48550/arXiv.2302.13971)
 [^5]: [Kim, Sehoon, et al. Full Stack Optimization of Transformer Inference: A Survey. arXiv:2302.14017, arXiv, 27 Feb. 2023.](https://doi.org/10.48550/arXiv.2302.14017)
-[^6]: 本表根据[剖析 GPT 推断中的批处理效应](https://abcdabcd987.com/2023/05/13/transformer-batching/)一文进行整理。下同。
+[^6]: 本表根据 [剖析 GPT 推断中的批处理效应](https://abcdabcd987.com/2023/05/13/transformer-batching/) 一文进行整理。下同。
