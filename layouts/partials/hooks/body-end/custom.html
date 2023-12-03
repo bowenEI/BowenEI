@@ -1,10 +1,10 @@
 <script>
-    $(function () {
+    window.onload = function () {
         // 将所有 mjx-container 标签的 style 属性为 overflow-x: auto; overflow-y: hidden;
-        // var mjx_container_style = $(".article-style > mjx-container").attr("style") + " overflow-x: auto; overflow-y: hidden;";
-        // $(".article-style > mjx-container").attr("style", mjx_container_style);
+        var mjx_container_style = $(".article-style > mjx-container").attr("style") + " overflow-x: auto; overflow-y: hidden;";
+        $(".article-style > mjx-container").attr("style", mjx_container_style);
 
         // 在所有 table 标签外用一个 div 标签包裹起来，并设置其 style 属性为 overflow: auto;
         $("table").wrap('<div class="table-with-scroll" style="overflow: auto;">');
-    })
+    }
 </script>
