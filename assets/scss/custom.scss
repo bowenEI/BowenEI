@@ -28,9 +28,3 @@ blockquote {
 .table thead th {
   vertical-align: middle;
 }
-
-// 数学公式 (not work)
-.article-style>mjx-container {
-  overflow-x: auto;
-  overflow-y: hidden;
-}
