@@ -20,11 +20,6 @@ blockquote {
   border-left: unset;
 }
 
-// overflow
-.dark .table {
-  overflow: scroll;
-}
-
 .table th,
 .table td {
   vertical-align: middle;
@@ -32,4 +27,10 @@ blockquote {
 
 .table thead th {
   vertical-align: middle;
+}
+
+// 数学公式 (not work)
+.article-style>mjx-container {
+  overflow-x: auto;
+  overflow-y: hidden;
 }
