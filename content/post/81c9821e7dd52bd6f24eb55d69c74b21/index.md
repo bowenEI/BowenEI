@@ -68,9 +68,11 @@ LLM 超参数定义如下：
 
 多头自注意力模块的每个 head 都需要 2 次 Self-Attention 的计算，即
 
+{{< math >}}
 $$
 \text{Attention}(Q, K, V) = \text{Softmax}(\frac{QK^T}{\sqrt{d_k}})V
 $$
+{{< /math >}}
 
 在那之前，需要将每个 token 从 $d_{\textrm{model}}$ 维映射到 $d_k$ 或 $d_v$ 维。（在 Transformer 模型中，$d_{\textrm{model}} = 512$，而 $d_k = d_v = \frac{d_{\textrm{model}}}{h} = 64$，这里 $h = 8$。）所以，输入的 $Q, K, V$ 向量都需要进行投影操作，共需 3 个线性变换矩阵 $W_K, W_Q, W_V$，维度均为 `(M, D)`。
 
