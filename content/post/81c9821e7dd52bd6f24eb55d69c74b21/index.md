@@ -315,20 +315,16 @@ $$
 
 增量推理阶段，即从输出第一个 token 的过程，自回归地推理出后续的 token，直至最后一个 token 的过程。其计算和访存开销与输出的序列长度直接相关，用 $S_{out}$ 来表示其大小。对于增量推理阶段，情况比全量推理阶段要更加复杂，我们首先给出结论——对于 Decoder 的 8 个线性算子，其 FLOPS、MOPS 和算术强度如下表所示：
 
-<div style="overflow: auto;">
-
-|       Stage        |                  FLOPS                   |                       MOPS                        |                                      Arithmetic Intensity                                      |
-| :----------------: | :--------------------------------------: | :-----------------------------------------------: | :--------------------------------------------------------------------------------------------: |
-|   $Q \times W_Q$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |  $$\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)$$  |  $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \frac{2(S_{in}+i-1)}{M} + \frac{1}{B} \right)}$$  |
-|   $K \times W_K$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |  $$\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)$$  |  $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \frac{2(S_{in}+i-1)}{M} + \frac{1}{B} \right)}$$  |
-|   $V \times W_V$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(2BM+M^2)$$        |                      $$O\left(\frac{1}{\frac{2}{M}+\frac{1}{B} }\right)$$                      |
-|    $Q \times K$    | $$\sum_{i=1}^{S_{out} }O(B(S_{in}+i)M)$$ | $$\sum_{i=1}^{S_{out} }O(BH[(S_{in}+i)(D+1)+D])$$ | $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \frac{1}{D} + \frac{1}{S_{in}+i} +1 \right)}$$ |
-|    $P \times V$    | $$\sum_{i=1}^{S_{out} }O(B(S_{in}+i)M)$$ | $$\sum_{i=1}^{S_{out} }O(BH[(S_{in}+i)(D+1)+D])$$ | $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \frac{1}{D} + \frac{1}{S_{in}+i} +1 \right)}$$ |
-|   $A \times W_O$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(2BM+M^2)$$        |                      $$O\left(\frac{1}{\frac{2}{M}+\frac{1}{B} }\right)$$                      |
-| $F \times W_{in}$  |    $$\sum_{i=1}^{S_{out} }O(8BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(BM+4M^2)$$        |                      $$O\left(\frac{8}{\frac{1}{M}+\frac{4}{B} }\right)$$                      |
-| $F \times W_{out}$ |    $$\sum_{i=1}^{S_{out} }O(8BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(BM+4M^2)$$        |                      $$O\left(\frac{8}{\frac{1}{M}+\frac{4}{B} }\right)$$                      |
-
-</div>
+|        Stage         |                  FLOPS                   |                       MOPS                        |                                      Arithmetic Intensity                                       |
+| :------------------: | :--------------------------------------: | :-----------------------------------------------: | :---------------------------------------------------------------------------------------------: |
+|   $$Q \times W_Q$$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |  $$\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)$$  | $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \frac{2(S_{in}+i-1)}{M} + \frac{1}{B} \right)}$$ |
+|   $$K \times W_K$$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |  $$\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)$$  | $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \frac{2(S_{in}+i-1)}{M} + \frac{1}{B} \right)}$$ |
+|   $$V \times W_V$$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(2BM+M^2)$$        |                      $$O\left(\frac{1}{\frac{2}{M}+\frac{1}{B} }\right)$$                       |
+|    $$Q \times K$$    | $$\sum_{i=1}^{S_{out} }O(B(S_{in}+i)M)$$ | $$\sum_{i=1}^{S_{out} }O(BH[(S_{in}+i)(D+1)+D])$$ | $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \frac{1}{D} + \frac{1}{S_{in}+i} +1 \right)}$$  |
+|    $$P \times V$$    | $$\sum_{i=1}^{S_{out} }O(B(S_{in}+i)M)$$ | $$\sum_{i=1}^{S_{out} }O(BH[(S_{in}+i)(D+1)+D])$$ | $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \frac{1}{D} + \frac{1}{S_{in}+i} +1 \right)}$$  |
+|   $$A \times W_O$$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(2BM+M^2)$$        |                      $$O\left(\frac{1}{\frac{2}{M}+\frac{1}{B} }\right)$$                       |
+| $$F \times W_{in}$$  |    $$\sum_{i=1}^{S_{out} }O(8BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(BM+4M^2)$$        |                      $$O\left(\frac{8}{\frac{1}{M}+\frac{4}{B} }\right)$$                       |
+| $$F \times W_{out}$$ |    $$\sum_{i=1}^{S_{out} }O(8BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(BM+4M^2)$$        |                      $$O\left(\frac{8}{\frac{1}{M}+\frac{4}{B} }\right)$$                       |
 
 首先注意，增量推理阶段是一个自回归的过程，因此总的 FLOPS、MOPS 和算术强度为每次推理出一个 token 的叠加，这也是表格中求和符号的由来。
 
