@@ -54,10 +54,10 @@ $$
 
 {{< math >}}
 $$
-\begin{cases}
-\frac{4}{b^2} = 1 \\\\
-\frac{9}{4a^2} + \frac{1}{b^2} = 1
-\end{cases}
+\left\{\begin{align}
+& \frac{4}{b^2} = 1 \\
+& \frac{9}{4a^2} + \frac{1}{b^2} = 1
+\end{align}\right.
 $$
 {{< /math >}}
 
@@ -65,10 +65,10 @@ $$
 
 {{< math >}}
 $$
-\begin{cases}
-a^2 = 3 \\\\
-b^2 = 4
-\end{cases}
+\left\{\begin{align}
+\ & a^2 = 3 \\
+\ & b^2 = 4
+\end{align}\right.
 $$
 {{< /math >}}
 
@@ -169,7 +169,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-4x^2 + 3[k^2(x-1)^2 - 4k(x-1) + 4] - 12 &= 0 \\\\
+4x^2 + 3[k^2(x-1)^2 - 4k(x-1) + 4] - 12 &= 0 \\
 (3k^2+4)x^2 - 6k(k + 2)x + 3k(k+4) &= 0
 \end{align}
 $$
@@ -180,7 +180,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-x_1+x_2 &= \frac{6k(k+2)}{3k^2+4} \tag{1} \\\\
+x_1+x_2 &= \frac{6k(k+2)}{3k^2+4} \tag{1} \\
 x_1x_2 &= \frac{3k(k+4)}{3k^2+4} \tag{2}
 \end{align}
 $$
@@ -191,17 +191,31 @@ $$
 {{< math >}}
 $$
 \begin{align}
-y_1+y_2 &= k(x_1+x_2) - 2k - 4 \\\\
-&= \frac{6k^2(k+2)}{3k^2+4} - \frac{(2k+4)(3k^2+4)}{3k^2+4} \\\\
-&= -\frac{8(k+2)}{3k^2+4} \tag{3} \\\\
-y_1y_2 &= [k(x_1-1) - 2][k(x_2-1) - 2] \\\\
-&= k^2(x_1x_2 - x_1 - x_2 + 1) - 2k(x_1 - 1) - 2k(x_2 - 1) + 4 \\\\
-&= k^2x_1x_2 - k(k+2)(x_1+x_2) + (k+2)^2 \\\\
-&= \frac{3k^3(k+4)}{3k^2+4} - \frac{6k^2(k+2)^2}{3k^2+4} + \frac{(k+2)^2(3k^2+4)}{3k^2+4} \\\\
-&= -\frac{8(k^2 - 2k - 2)}{3k^2+4} \tag{4} \\\\
-x_1y_2 + x_2y_1 &= x_1(kx_2 - k - 2) + x_2(kx_1 - k - 2) \\\\
-&= 2kx_1x_2 - (k+2)(x_1+x_2) \\\\
-&= \frac{6k^2(k+4)}{3k^2+4} - \frac{6k(k+2)^2}{3k^2+4} \\\\
+y_1+y_2 &= k(x_1+x_2) - 2k - 4 \\
+&= \frac{6k^2(k+2)}{3k^2+4} - \frac{(2k+4)(3k^2+4)}{3k^2+4} \\
+&= -\frac{8(k+2)}{3k^2+4} \tag{3}
+\end{align}
+$$
+{{< /math >}}
+
+{{< math >}}
+$$
+\begin{align}
+y_1y_2 &= [k(x_1-1) - 2][k(x_2-1) - 2] \\
+&= k^2(x_1x_2 - x_1 - x_2 + 1) - 2k(x_1 - 1) - 2k(x_2 - 1) + 4 \\
+&= k^2x_1x_2 - k(k+2)(x_1+x_2) + (k+2)^2 \\
+&= \frac{3k^3(k+4)}{3k^2+4} - \frac{6k^2(k+2)^2}{3k^2+4} + \frac{(k+2)^2(3k^2+4)}{3k^2+4} \\
+&= -\frac{8(k^2 - 2k - 2)}{3k^2+4} \tag{4} \\
+\end{align}
+$$
+{{< /math >}}
+
+{{< math >}}
+$$
+\begin{align}
+x_1y_2 + x_2y_1 &= x_1(kx_2 - k - 2) + x_2(kx_1 - k - 2) \\
+&= 2kx_1x_2 - (k+2)(x_1+x_2) \\
+&= \frac{6k^2(k+4)}{3k^2+4} - \frac{6k(k+2)^2}{3k^2+4} \\
 &= -\frac{24k}{3k^2+4} \tag{5}
 \end{align}
 $$
@@ -214,7 +228,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-2x - 3y_1 - 6 &= 0 \\\\
+2x - 3y_1 - 6 &= 0 \\
 x &= \frac{3}{2}y_1+3
 \end{align}
 $$
@@ -233,7 +247,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-x_H &= 2 \times (\frac{3}{2}y_1+3) - x_1 \\\\
+x_H &= 2 \times (\frac{3}{2}y_1+3) - x_1 \\
 &= 3y_1 - x_1 + 6
 \end{align}
 $$
@@ -272,7 +286,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-6(y_1+y_2) - 2(x_1+x_2) + 12 + 3y_1y_2 - x_1y_2 - x_2y_1 &= 0 \\\\
+6(y_1+y_2) - 2(x_1+x_2) + 12 + 3y_1y_2 - x_1y_2 - x_2y_1 &= 0 \\
 \end{align}
 $$
 {{< /math >}}
@@ -282,9 +296,9 @@ $$
 {{< math >}}
 $$
 \begin{align}
-6(y_1+y_2) - 2(x_1+x_2) + 12 + 3y_1y_2 - x_1y_2 - x_2y_1 &= 0 \\\\
--\frac{48(k+2)}{3k^2+4} - \frac{12k(k+2)}{3k^2+4} + 12 - \frac{24(k^2 - 2k - 2)}{3k^2+4} &+ \frac{24k}{3k^2+4} = 0 \\\\
-48(k+2) + 12k(k+2) + 24(k^2-2k-2) - 24k &= 12(3k^2 + 4) \\\\
+6(y_1+y_2) - 2(x_1+x_2) + 12 + 3y_1y_2 - x_1y_2 - x_2y_1 &= 0 \\
+-\frac{48(k+2)}{3k^2+4} - \frac{12k(k+2)}{3k^2+4} + 12 - \frac{24(k^2 - 2k - 2)}{3k^2+4} + \frac{24k}{3k^2+4} &= 0 \\
+48(k+2) + 12k(k+2) + 24(k^2-2k-2) - 24k &= 12(3k^2 + 4) \\
 36k^2 + 48 &= 12(3k^2 + 4)
 \end{align}
 $$
@@ -313,10 +327,10 @@ $$
 
 {{< math >}}
 $$
-\begin{cases}
-x = 0 \\\\
-y = -2
-\end{cases}
+\left\{\begin{align}
+\ & x = 0 \\
+\ & y = -2
+\end{align}\right.
 $$
 {{< /math >}}
 
@@ -381,7 +395,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-f^{\prime}(x) &= \frac{1}{1 + x} + a(1-x) e^{-x} \\\\
+f^{\prime}(x) &= \frac{1}{1 + x} + a(1-x) e^{-x} \\
 &= \frac{1 + a(1-x^2)e^{-x}}{1+x}
 \end{align}
 $$
@@ -400,7 +414,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-g^{\prime}(x) &= a[-2xe^{-x} + (x^2-1)e^{-x}] \\\\
+g^{\prime}(x) &= a[-2xe^{-x} + (x^2-1)e^{-x}] \\
 &= a(x^2 - 2x - 1)e^{-x}
 \end{align}
 $$
@@ -410,10 +424,10 @@ $$
 
 {{< math >}}
 $$
-\begin{cases}
-x_1 = 1 - \sqrt{2} \\\\
-x_2 = 1 + \sqrt{2}
-\end{cases}
+\left\{\begin{align}
+\ & x_1 = 1 - \sqrt{2} \\
+\ & x_2 = 1 + \sqrt{2}
+\end{align}\right.
 $$
 {{< /math >}}
 
@@ -438,11 +452,11 @@ $$
 {{< math >}}
 $$
 \begin{align}
-g(-1) &= 1 > 0 \\\\
-g(1-\sqrt{2}) &= 1 + \sqrt{2}a(2-\sqrt{2})e^{\sqrt{2}-1} > 0 \\\\
-g(0) &= a + 1 > 0 \\\\
-g(1) &= 1 > 0 \\\\
-g(1+\sqrt{2}) &= 1 - \sqrt{2}a(2+\sqrt{2})e^{-(\sqrt{2}+1)} \\\\
+g(-1) &= 1 > 0 \\
+g(1-\sqrt{2}) &= 1 + \sqrt{2}a(2-\sqrt{2})e^{\sqrt{2}-1} > 0 \\
+g(0) &= a + 1 > 0 \\
+g(1) &= 1 > 0 \\
+g(1+\sqrt{2}) &= 1 - \sqrt{2}a(2+\sqrt{2})e^{-(\sqrt{2}+1)} \\
 \end{align}
 $$
 {{< /math >}}
@@ -484,11 +498,11 @@ $$
 {{< math >}}
 $$
 \begin{align}
-g(-1) &= 1 > 0 \\\\
-g(1-\sqrt{2}) &= 1 + \sqrt{2}a(2-\sqrt{2})e^{\sqrt{2}-1} \\\\
-g(0) &= a + 1 \\\\
-g(1) &= 1 > 0 \\\\
-g(1+\sqrt{2}) &= 1 - \sqrt{2}a(2+\sqrt{2})e^{-(\sqrt{2}+1)} > 0 \\\\
+g(-1) &= 1 > 0 \\
+g(1-\sqrt{2}) &= 1 + \sqrt{2}a(2-\sqrt{2})e^{\sqrt{2}-1} \\
+g(0) &= a + 1 \\
+g(1) &= 1 > 0 \\
+g(1+\sqrt{2}) &= 1 - \sqrt{2}a(2+\sqrt{2})e^{-(\sqrt{2}+1)} > 0 \\
 \end{align}
 $$
 {{< /math >}}
@@ -526,7 +540,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-1 + a(1-m^2)e^{-m} &= 0 \\\\
+1 + a(1-m^2)e^{-m} &= 0 \\
 ae^{-m} &= \frac{1}{m^2-1}
 \end{align}
 $$
@@ -537,7 +551,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-1 + a(1-n^2)e^{-n} &= 0 \\\\
+1 + a(1-n^2)e^{-n} &= 0 \\
 ae^{-n} &= \frac{1}{n^2-1}
 \end{align}
 $$
@@ -556,9 +570,9 @@ $$
 {{< math >}}
 $$
 \begin{align}
-f(m) &= \ln (1+m) + ame^{-m} \\\\
-&= \ln (1+m) + \frac{m}{m^2-1} \\\\
-f(n) &= \ln (1+n) + ane^{-n} \\\\
+f(m) &= \ln (1+m) + ame^{-m} \\
+&= \ln (1+m) + \frac{m}{m^2-1} \\
+f(n) &= \ln (1+n) + ane^{-n} \\
 &= \ln (1+n) + \frac{n}{n^2-1} 
 \end{align}
 $$
@@ -577,8 +591,8 @@ $$
 {{< math >}}
 $$
 \begin{align}
-h^{\prime}(x) &= \frac{1}{1+x} + \frac{x^2-1 - 2x^2}{(x^2-1)^2} \\\\
-&= \frac{(x+1)(x-1)^2 - x^2 - 1}{(x+1)^2(x-1)^2} \\\\
+h^{\prime}(x) &= \frac{1}{1+x} + \frac{x^2-1 - 2x^2}{(x^2-1)^2} \\
+&= \frac{(x+1)(x-1)^2 - x^2 - 1}{(x+1)^2(x-1)^2} \\
 &= \frac{x[(x-1)^2-2]}{(x+1)^2(x-1)^2}
 \end{align}
 $$
@@ -605,7 +619,7 @@ $h(x)$ 的图像如下图所示：
 {{< math >}}
 $$
 \begin{align}
-\lim_{x \rightarrow -1^+} f(x) &= \lim_{x \rightarrow -1^+} [\ln (1+x) + axe^{-x}] = -\infty < 0 \\\\
+\lim_{x \rightarrow -1^+} f(x) &= \lim_{x \rightarrow -1^+} [\ln (1+x) + axe^{-x}] = -\infty < 0 \\
 f(m) &> 0
 \end{align}
 $$
@@ -616,8 +630,8 @@ $$
 {{< math >}}
 $$
 \begin{align}
-f(n) &< 0 \\\\
-\lim_{x \rightarrow +\infty} f(x) &= \lim_{x \rightarrow +\infty} [\ln (1+x) + axe^{-x}] = +\infty > 0 \\\\
+f(n) &< 0 \\
+\lim_{x \rightarrow +\infty} f(x) &= \lim_{x \rightarrow +\infty} [\ln (1+x) + axe^{-x}] = +\infty > 0 \\
 \end{align}
 $$
 {{< /math >}}
