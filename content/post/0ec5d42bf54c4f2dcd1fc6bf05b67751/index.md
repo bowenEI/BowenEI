@@ -1,0 +1,415 @@
+---
+# Documentation: https://wowchemy.com/docs/managing-content/
+
+title: "深度学习中的矩阵求导基础"
+subtitle: ""
+summary: ""
+authors: []
+tags: [深度学习, 线性代数, 函数与导数, 凸优化]
+categories: []
+date: 2023-12-06T10:44:14+08:00
+lastmod: 2023-12-06T10:44:14+08:00
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+
+toc: true
+---
+
+<!--more-->
+
+------
+
+> 本文根据[合集·深度学习中的数学by齐宪标](https://space.bilibili.com/1706874133/channel/collectiondetail?sid=1933483)系列视频整理。
+> 
+> 在本文中，用小写字母表示标量，用粗体小写字母表示向量，用粗体大写字母表示矩阵。
+
+## 导数的定义
+
+在高等数学和数学分析的课程中，我们知道一元函数 $y = f(x)$ 的导数定义为
+
+{{< math >}}
+$$
+\frac{\mathrm{d}y}{\mathrm{d}x} = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+$$
+{{< /math >}}
+
+而对于多元函数，则会引入方向导数和梯度的概念。
+
+### 梯度与方向导数
+
+给定一个多元函数
+
+{{< math >}}
+$$
+y = f(\mathbf{x}) = f(x_1, x_2, \dots, x_n) \quad (\mathbf{x} \in \mathbb{R}^n)
+$$
+{{< /math >}}
+
+其梯度为 $\nabla f(\mathbf{x})$ 定义为
+
+{{< math >}}
+$$
+\nabla f(\mathbf{x}) = \begin{bmatrix}
+    \frac{y}{\partial x_1} \\
+    \frac{y}{\partial x_2} \\
+    \vdots \\
+    \frac{y}{\partial x_n}
+\end{bmatrix}
+$$
+{{< /math >}}
+
+简单来说，梯度即为以单位正交向量为基底，$y$ 对 $\mathbf{x}$ 各分量的导数的线性组合。对于多元函数而言，其梯度是一个和 $\mathbf{x}$ 同样维度的向量。
+
+而方向导数是指函数在某一点处，在某一给定方向上的变化率，是一个标量。它定义为
+
+{{< math >}}
+$$
+D_{\mathbf{v}}f(\mathbf{x}) = \nabla f(\mathbf{x})^{\top} \cdot \mathbf{v}
+$$
+{{< /math >}}
+
+### Jacobian 矩阵
+
+对于一簇多元函数
+
+{{< math >}}
+$$
+\mathbf{y} = f(\mathbf{x}) = \begin{bmatrix}
+    f_1(\mathbf{x}) \\
+    f_2(\mathbf{x}) \\
+    \vdots \\
+    f_m(\mathbf{x})
+\end{bmatrix}
+\quad (\mathbf{x} \in \mathbb{R}^n, \mathbf{y} \in \mathbb{R}^m)
+$$
+{{< /math >}}
+
+其各个函数的梯度组合成一个矩阵，称为 Jacobian 矩阵，记为 $\mathbf{J}(\mathbf{x})$。它定义为
+
+{{< math >}}
+$$
+\mathbf{J}(\mathbf{x}) = \begin{bmatrix}
+    \frac{\partial y_1}{\partial x_1} & \frac{\partial y_1}{\partial x_2} & \cdots & \frac{\partial y_1}{\partial x_n} \\
+    \frac{\partial y_2}{\partial x_1} & \frac{\partial y_2}{\partial x_2} & \cdots & \frac{\partial y_2}{\partial x_n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    \frac{\partial y_m}{\partial x_1} & \frac{\partial y_m}{\partial x_2} & \cdots & \frac{\partial y_m}{\partial x_n}
+\end{bmatrix}
+$$
+{{< /math >}}
+
+是一个 $m \times n$ 的矩阵，其中 $m$ 是输出的维度，$n$ 是输入的维度。
+
+### Hessian 矩阵
+
+给定一个多元函数
+
+{{< math >}}
+$$
+y = f(\mathbf{x}) = f(x_1, x_2, \dots, x_n) \quad (\mathbf{x} \in \mathbb{R}^n)
+$$
+{{< /math >}}
+
+其 Hessian 矩阵定义为
+
+{{< math >}}
+$$
+\begin{align*}
+    \mathbf{H}(\mathbf{x}) &= \nabla^{2} f(\mathbf{x}) \\
+    &= \frac{\partial}{\partial \mathbf{x}} \left( \frac{\partial y}{\partial \mathbf{x}} \right) \\
+    &= \begin{bmatrix}
+    \frac{\partial^2 y}{\partial x_1^2} & \frac{\partial^2 y}{\partial x_1 \partial x_2} & \cdots & \frac{\partial^2 y}{\partial x_1 \partial x_n} \\
+    \frac{\partial^2 y}{\partial x_2 \partial x_1} & \frac{\partial^2 y}{\partial x_2^2} & \cdots & \frac{\partial^2 y}{\partial x_2 \partial x_n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    \frac{\partial^2 y}{\partial x_n \partial x_1} & \frac{\partial^2 y}{\partial x_n \partial x_2} & \cdots & \frac{\partial^2 y}{\partial x_n^2}
+\end{bmatrix}
+\end{align*}
+$$
+{{< /math >}}
+
+## 导数的链式求导法则
+
+对于复合函数
+
+{{< math >}}
+$$
+\begin{align*}
+    f(x) &= f_n \circ f_{n-1} \circ \cdots \circ f_2 \circ f_1(x) \\
+    &= f_n(f_{n-1}(\cdots f_2(f_1(x))))
+\end{align*}
+$$
+{{< /math >}}
+
+其链式求导法则为
+
+{{< math >}}
+$$
+\frac{\mathrm{d}f(x)}{\mathrm{d}x} = \frac{\mathrm{d}f(x)}{\mathrm{d}f_n(x)} \cdot \frac{\mathrm{d}f_n(x)}{\mathrm{d}f_{n-1}(x)} \cdots \frac{\mathrm{d}f_2(x)}{\mathrm{d}f_1(x)} \cdot \frac{\mathrm{d}f_1(x)}{\mathrm{d}x}
+$$
+{{< /math >}}
+
+不过，如果自变量是一个向量或者矩阵，那么由于矩阵乘法不满足交换律，于是就存在分母表达式和分子表达式两种形式。
+
+### 分母表达式和分子表达式
+
+这里的分子和分母指的是原微商式中的分子和分母，即 $\mathrm{d}f(x)$ 和 $\mathrm{d}x$。顾名思义，分母/分子表达式的含义就是先求含分母/分子的那一项，即
+
+{{< math >}}
+$$
+\begin{align}
+    \frac{\mathrm{d}f(x)}{\mathrm{d}x} &= \frac{\mathrm{d}f(x)}{\mathrm{d}f_n(x)} \cdot \frac{\mathrm{d}f_n(x)}{\mathrm{d}f_{n-1}(x)} \cdots \frac{\mathrm{d}f_2(x)}{\mathrm{d}f_1(x)} \\
+    &= \frac{\mathrm{d}f_1(x)}{\mathrm{d}x} \cdot \frac{\mathrm{d}f_2(x)}{\mathrm{d}f_1(x)} \cdots \frac{\mathrm{d}f_n(x)}{\mathrm{d}f_{n-1}(x)} \\
+\end{align}
+$$
+{{< /math >}}
+
+其中，$(1)$ 式是分子表达式，$(2)$ 是分母表达式。由此可见，分子表达式是先求外层函数，然后逐层深入求导；分母表达式是先求内层函数，然后逐层向外求导。
+
+在深度学习中，为了方便，一般采用**分母表达式**来表示导数。稍后我们就会看到这种表达方式的方便之处。
+
+## 常见神经网络层的导数计算
+
+### 全连接层
+
+一层全连接层的函数表达式为
+
+{{< math >}}
+$$
+\mathbf{y} = \mathbf{W} \mathbf{x} + \mathbf{b}
+\quad (\mathbf{x} \in \mathbb{R}^n, \mathbf{y} \in \mathbb{R}^m)
+$$
+{{< /math >}}
+
+实际上，当所有的量均为标量时，它就是一个一次线性函数。所以，其求导结果就是 $\mathbf{x}$ 前面的系数矩阵 $\mathbf{W}$。
+
+{{< math >}}
+$$
+\frac{\mathrm{d}\mathbf{y}}{\mathrm{d}\mathbf{x}} = \mathbf{W}
+$$
+{{< /math >}}
+
+一般地，全连接层的参数矩阵 $\mathbf{W}$ 是可学习的参数，需要通过梯度下降法来更新，就不可避免地需要对其求导数。显然
+
+{{< math >}}
+$$
+\begin{align*}
+    \frac{\mathrm{d}\mathbf{y}}{\mathrm{d}\mathbf{W}} = \mathbf{x}
+\end{align*}
+$$
+{{< /math >}}
+
+### 激活函数
+
+以 ReLU 为例，其函数表达式为
+
+{{< math >}}
+$$
+\mathrm{ReLU}(x) = \max(0, x)
+$$
+{{< /math >}}
+
+其导函数为
+
+{{< math >}}
+$$
+\begin{align*}
+    \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{ReLU}(x)
+    &= \begin{cases}
+        1 & x > 0 \\
+        0 & x \leqslant 0
+    \end{cases}
+\end{align*}
+$$
+{{< /math >}}
+
+对于一簇多元函数 $\mathbf{y} = \mathrm{ReLU} (\mathbf{x})$，其 Jacobian 矩阵为
+
+{{< math >}}
+$$
+\begin{align*}
+    \mathbf{J}(\mathbf{x})
+    &= \mathrm{diag}(\mathbf{x} > \mathbf{0})
+\end{align*}
+$$
+{{< /math >}}
+
+它是一个对角线上的元素可能为 $0$ 或 $1$，而其他元素均为 $0$ 的矩阵。
+
+### 卷积层
+
+> 待补充。
+
+### 自注意力层
+
+> 待补充。
+
+### 归一化层
+
+不论是 BatchNorm 还是 LayerNorm，其函数形式都相同，都是将任何特征分布转化为均值为 $0$，方差为 $1$ 的特征分布。
+
+{{< math >}}
+$$
+\mathbf{y} = \frac{\mathbf{x} - \mathbf{\mu}}{\sqrt{\sigma^2 + \varepsilon}} \cdot \gamma + \mathbf{\beta}
+\quad (\mathbf{x} \in \mathbb{R}^n, \mathbf{y} \in \mathbb{R}^n)
+$$
+{{< /math >}}
+
+其中，$\gamma, \beta \in \mathbb{R}^n$ 是可学习的参数，都是
+
+分子是用线性代数表示为
+
+{{< math >}}
+$$
+\begin{align*}
+    \mathbf{x} - \mathbf{\mu}
+    &= \begin{bmatrix}
+        1 & 0 & \cdots & 0 \\
+        0 & 1 & \cdots & 0 \\
+        \vdots & \vdots & \ddots & \vdots \\
+        0 & 0 & \cdots & 1
+    \end{bmatrix} \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        \vdots \\
+        x_n
+    \end{bmatrix} - \begin{bmatrix}
+        \frac{1}{n} \sum_{i=1}^{n} x_i \\
+        \frac{1}{n} \sum_{i=1}^{n} x_i \\
+        \vdots \\
+        \frac{1}{n} \sum_{i=1}^{n} x_i
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        1 & 0 & \cdots & 0 \\
+        0 & 1 & \cdots & 0 \\
+        \vdots & \vdots & \ddots & \vdots \\
+        0 & 0 & \cdots & 1
+    \end{bmatrix} \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        \vdots \\
+        x_n
+    \end{bmatrix} - \frac{1}{n} \begin{bmatrix}
+        1 & 1 & \cdots & 1 \\
+        1 & 1 & \cdots & 1 \\
+        \vdots & \vdots & \ddots & \vdots \\
+        1 & 1 & \cdots & 1
+    \end{bmatrix} \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        \vdots \\
+        x_n
+    \end{bmatrix} \\
+    &= \mathbf{I} \mathbf{x} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top} \mathbf{x} \\
+    &= \left(\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} \tag{1}
+\end{align*}
+$$
+{{< /math >}}
+
+其中，$\mathbf{I}$ 是单位矩阵，$\mathbf{1}$ 是元素全为 $1$ 的列向量。
+
+分母的被开方数用线性代数表示为
+
+{{< math >}}
+$$
+\begin{align*}
+    \sigma^2 + \varepsilon
+    &= \left\| \mathbf{x} - \mathbf{\mu} \right\|_{2}^{2} + \varepsilon \\
+    &= (\mathbf{x} - \mathbf{\mu})^{\top} (\mathbf{x} - \mathbf{\mu}) + \varepsilon \\
+    &= \mathbf{x}^{\top} \left(\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right)^{\top} \left(\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} + \varepsilon \\
+    &= \mathbf{x}^{\top} \left(\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \left(\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} + \varepsilon \\
+    &= \mathbf{x}^{\top} \left(\mathbf{I} - \frac{2}{n} \mathbf{1} \mathbf{1}^{\top} + \frac{1}{n^2} \mathbf{1} \mathbf{1}^{\top} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} + \varepsilon \\
+    &= \mathbf{x}^{\top} \left(\mathbf{I} - \frac{2}{n} \mathbf{1} \mathbf{1}^{\top} + \frac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} + \varepsilon \\
+    &= \mathbf{x}^{\top} \left(\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top} \right) \mathbf{x} + \varepsilon \tag{2}
+\end{align*}
+$$
+{{< /math >}}
+
+其结果其实是一个标量。
+
+由 $(1), (2)$ 两式的结果可知，原函数解析式可化为
+
+{{< math >}}
+$$
+\begin{align*}
+    \mathbf{y}
+    &= \sqrt{\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top}} \times \frac{\mathbf{x}}{\sqrt{\mathbf{x}^{\top} \mathbf{x} + \varepsilon}} \cdot \gamma + \beta
+\end{align*}
+$$
+{{< /math >}}
+
+因此，其 Jacobian 矩阵为
+
+{{< math >}}
+$$
+\begin{align*}
+    \mathbf{J}(\mathbf{x})
+    &= \sqrt{\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top}} \times \left[ \frac{\mathbf{I}}{\mathbf{x}^{\top} \mathbf{x} + \varepsilon} \left(
+        \sqrt{\mathbf{x}^{\top} \mathbf{x} + \varepsilon} - \frac{\mathbf{x}}{\sqrt{\mathbf{x}^{\top} \mathbf{x} + \varepsilon}}
+    \right) \right] \times \mathrm{diag}(\gamma) \\
+    &= \sqrt{\mathbf{I} - \frac{1}{n} \mathbf{1} \mathbf{1}^{\top}} \times \frac{(\mathbf{x}^{\top} \mathbf{x} + \varepsilon) \mathbf{1} - \mathbf{x}}{(\mathbf{x}^{\top} \mathbf{x} + \varepsilon)^{\frac{3}{2}}} \times \mathrm{diag}(\gamma)
+\end{align*}
+$$
+{{< /math >}}
+
+## 深度神经网络的导数计算
+
+我们以 Feed Forward 网络为例，其网络结构为
+
+{{< figure src="3d69b3aa0efda65f8ace0f021389bd1b.png" caption="Feed Forward Network" numbered="true" >}}
+
+用解析式表示就是
+
+{{< math >}}
+$$
+\left\{ \begin{align*}
+    & \ \mathbf{g} = \mathbf{W_{in}} \mathbf{x} + \mathbf{b_{in}} \\
+    & \ \mathbf{h} = \mathrm{ReLU} (\mathbf{g}) \\
+    & \ \mathbf{y} = \mathbf{W_{out}} \mathbf{h} + \mathbf{b_{out}}
+\end{align*} \right.
+$$
+{{< /math >}}
+
+反向传播算法是从后向前计算导数的。我们可以很容易算出 $\mathbf{y}$ 对参数矩阵 $\mathbf{W_{out}}$ 的导数为
+
+{{< math >}}
+$$
+\begin{align*}
+    \frac{\mathrm{d} \mathbf{y}}{\mathrm{d} \mathbf{W_{out}}}
+    &= \mathbf{h}
+\end{align*}
+$$
+{{< /math >}}
+
+在 DNN 训练过程中，中间状态是需要存储在显存中的。可以认为，这里的 $\mathbf{x}, \mathbf{h}, \mathbf{g}, \mathbf{y}$ 都是已知的。参数矩阵从后向前通过梯度下降算法进行更新，即先更新 $\mathbf{W_{out}}, \mathbf{b_{out}}$，再更新 $\mathbf{W_{in}}, \mathbf{b_{in}}$。
+
+现在计算 $\mathbf{y}$ 对参数矩阵 $\mathbf{W_{in}}$ 的导数。由求导链式法则的分母表达式，有
+
+{{< math >}}
+$$
+\begin{align*}
+    \frac{\mathrm{d} \mathbf{y}}{\mathrm{d} \mathbf{W_{in}}}
+    &= \frac{\mathrm{d} \mathbf{g}}{\mathrm{d} \mathbf{W_{in}}} \times \frac{\mathrm{d} \mathbf{h}}{\mathrm{d} \mathbf{g}} \times \frac{\mathrm{d} \mathbf{y}}{\mathrm{d} \mathbf{h}} \\
+    &= \mathbf{x} \times \mathrm{diag}(\mathbf{g} > 0) \times \mathbf{W_{out}}
+\end{align*}
+$$
+{{< /math >}}
+
+对偏置 $\mathbf{b_{in}}, \mathbf{b_{out}}$ 的求导是类似的，本文不再赘述。
+
+### 小结
+
+深度学习中的矩阵求导，主要是利用导数的链式法则，让输出对深度神经网络中的参数矩阵进行求导。在求导过程中，主要涉及两种情况：一是直接对参数矩阵求导，二是对输入中间状态进行求导。采用分母表达式进行求导，可以按照神经网络的顺序进行，较为方便和直观。
