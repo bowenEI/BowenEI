@@ -20,6 +20,7 @@ blockquote {
   border-left: unset;
 }
 
+// 表格元素横向纵向居中
 .table th,
 .table td {
   vertical-align: middle;
@@ -27,4 +28,13 @@ blockquote {
 
 .table thead th {
   vertical-align: middle;
+}
+
+// 右侧目录
+#TableOfContents a {
+  margin-bottom: 8px;
+}
+
+#back_to_top {
+  margin-bottom: 8px;
 }
