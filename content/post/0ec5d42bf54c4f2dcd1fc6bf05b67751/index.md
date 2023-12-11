@@ -249,6 +249,30 @@ $$
 
 它是一个对角线上的元素可能为 $0$ 或 $1$，而其他元素均为 $0$ 的矩阵。
 
+{{< callout note >}}
+
+**对角矩阵**
+
+{{< math >}}
+$$
+\begin{align*}
+    \mathrm{diag}(\begin{bmatrix}
+        x_1 \\\\
+        x_2 \\\\
+        \vdots \\\\
+        x_n
+    \end{bmatrix}) = \begin{bmatrix}
+        x_1 & 0  & \cdots & 0 \\\\
+        0 & x_2  & \cdots & 0 \\\\
+        \vdots & \vdots  & \ddots & \vdots \\\\
+        0 & 0 & \cdots & x_n
+    \end{bmatrix}
+\end{align*}
+$$
+{{< /math >}}
+
+{{< /callout >}}
+
 ### 卷积层
 
 > 待补充。
