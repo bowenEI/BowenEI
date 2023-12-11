@@ -25,8 +25,8 @@ from matplotlib import cm
 {{< math >}}
 $$
 \begin{cases}
-x = \cos t \\\\
-y = \sin t \\\\
+x = \cos t \\
+y = \sin t \\
 z = \frac{1}{2 \pi} t
 \end{cases}
 $$

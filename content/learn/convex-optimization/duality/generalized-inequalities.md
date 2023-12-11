@@ -16,8 +16,8 @@ weight: 490
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(x) \\\\
-    \mathrm{subject\ to} \quad & f_i(x) \preceq_{K_i} 0, \quad i=1,\cdots,m \\\\
+    \mathrm{minimize} \quad & f_0(x) \\
+    \mathrm{subject\ to} \quad & f_i(x) \preceq_{K_i} 0, \quad i=1,\cdots,m \\
     \quad & h_i(x) = 0, \quad i=1,\cdots,p
 \end{aligned}
 $$

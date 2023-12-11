@@ -26,7 +26,7 @@ KKT 条件究其本质，是优化问题取得最优解的必要条件。下面�
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{min} \quad & f(x, y) \\\\
+    \mathrm{min} \quad & f(x, y) \\
     \mathrm{s.t.} \quad & g(x, y) = 0
 \end{aligned}
 $$
@@ -46,8 +46,8 @@ $$
 $$
 \left\{
     \begin{aligned}
-        \frac{\partial L}{\partial x} &= f_x(x, y) + \lambda g_x(x, y) = 0 \\\\
-        \frac{\partial L}{\partial y} &= f_y(x, y) + \lambda g_y(x, y) = 0 \\\\
+        \frac{\partial L}{\partial x} &= f_x(x, y) + \lambda g_x(x, y) = 0 \\
+        \frac{\partial L}{\partial y} &= f_y(x, y) + \lambda g_y(x, y) = 0 \\
         \frac{\partial L}{\partial \lambda} &= g(x, y) = 0
     \end{aligned}
 \right.
@@ -65,7 +65,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{min} \quad & f(x, y) \\\\
+    \mathrm{min} \quad & f(x, y) \\
     \mathrm{s.t.} \quad & g(x, y) \leqslant 0
 \end{aligned}
 $$
@@ -110,10 +110,10 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    f_{i}\left(x^{\star}\right) &\leqslant 0, & i &=1, \cdots, m \\\\
-    h_{i}\left(x^{\star}\right) &=0, & i &=1, \cdots, p \\\\
-    \lambda_{i}^{\star} & \geqslant 0, & i &=1, \cdots, m \\\\
-    \lambda_{i}^{\star} f_{i}\left(x^{\star}\right) &=0, & i &=1, \cdots, m \\\\
+    f_{i}\left(x^{\star}\right) &\leqslant 0, & i &=1, \cdots, m \\
+    h_{i}\left(x^{\star}\right) &=0, & i &=1, \cdots, p \\
+    \lambda_{i}^{\star} & \geqslant 0, & i &=1, \cdots, m \\
+    \lambda_{i}^{\star} f_{i}\left(x^{\star}\right) &=0, & i &=1, \cdots, m \\
     \nabla f_{0}\left(x^{\star}\right)+\sum_{i=1}^{m} \lambda_{i}^{\star} \nabla f_{i}\left(x^{\star}\right)+\sum_{i=1}^{p} \nu_{i}^{\star} \nabla h_{i}    \left(x^{\star}\right) &=0 & &
 \end{aligned}
 $$
@@ -133,8 +133,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{min} \quad & x^2 + y^2 \\\\
-    \mathrm{s.t.} \quad & x + y = 1 \\\\
+    \mathrm{min} \quad & x^2 + y^2 \\
+    \mathrm{s.t.} \quad & x + y = 1 \\
     \quad & y \leqslant \alpha
 \end{aligned}
 $$
@@ -153,9 +153,9 @@ KKT 条件方程组如下
 {{< math >}}
 $$
 \left\{\begin{aligned}
-    2x - \lambda &= 0 & (1) \\\\
-    2y - \lambda + \nu &= 0 & (2) \\\\
-    \nu &\geqslant 0 & (3) \\\\
+    2x - \lambda &= 0 & (1) \\
+    2y - \lambda + \nu &= 0 & (2) \\
+    \nu &\geqslant 0 & (3) \\
     \nu(y - \alpha) &= 0 & (4)
 \end{aligned}\right.
 $$
@@ -166,7 +166,7 @@ $$
 {{< math >}}
 $$
 \left\{\begin{aligned}
-    x &= \frac{1}{2} \lambda & (5) \\\\
+    x &= \frac{1}{2} \lambda & (5) \\
     y &= \frac{1}{2} \lambda - \frac{1}{2} \nu & (6)
 \end{aligned}\right.
 $$
@@ -185,7 +185,7 @@ $$
 {{< math >}}
 $$
 \left\{\begin{aligned}
-    x &= \frac{1}{4} \nu + \frac{1}{2} & (7) \\\\
+    x &= \frac{1}{4} \nu + \frac{1}{2} & (7) \\
     y &= -\frac{1}{4} \nu + \frac{1}{2} & (8)
 \end{aligned}\right.
 $$
@@ -196,7 +196,7 @@ $$
 {{< math >}}
 $$
 \left\{\begin{aligned}
-    \nu & \geqslant 2 - 4 \alpha \\\\
+    \nu & \geqslant 2 - 4 \alpha \\
     \nu & \geqslant 0
 \end{aligned}\right.
 $$

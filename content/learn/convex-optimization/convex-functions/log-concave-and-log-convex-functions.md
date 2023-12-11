@@ -80,7 +80,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-f(x) \nabla^{2} f(x) \succeq \nabla f(x) \nabla f(x)^{T} \\\\
+f(x) \nabla^{2} f(x) \succeq \nabla f(x) \nabla f(x)^{T} \\
 f(x) \nabla^{2} f(x) \preceq \nabla f(x) \nabla f(x)^{T}
 \end{aligned}
 $$
@@ -93,7 +93,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    h(x) &= f(x)g(x) \\\\
+    h(x) &= f(x)g(x) \\
     \log h(x) &= \log f(x) + \log g(x)
 \end{aligned}
 $$
@@ -136,7 +136,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    f(x) &= \operatorname{prob} (x + w \in C) \\\\
+    f(x) &= \operatorname{prob} (x + w \in C) \\
     &= \int g(x + w)f(w) \mathrm{d} w
 \end{aligned}
 $$
@@ -147,7 +147,7 @@ $$
 {{< math >}}
 $$
 g(u)=\left\{\begin{array}{ll}
-1 & u \in C \\\\
+1 & u \in C \\
 0 & u \notin C
 \end{array}\right.
 $$

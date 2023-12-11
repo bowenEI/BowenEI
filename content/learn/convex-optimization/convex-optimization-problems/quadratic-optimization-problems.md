@@ -18,8 +18,8 @@ weight: 340
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \frac{1}{2} x^TPx + q^Tx + r \\\\
-    \mathrm{subject\ to} \quad & Gx \preceq h \\\\
+    \mathrm{minimize} \quad & \frac{1}{2} x^TPx + q^Tx + r \\
+    \mathrm{subject\ to} \quad & Gx \preceq h \\
     \quad & Ax = b
 \end{aligned}
 $$
@@ -36,8 +36,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \frac{1}{2} x^TPx + q^Tx + r \\\\
-    \mathrm{subject\ to} \quad & \frac{1}{2} x^TP_ix + q^T_ix + r_i \leqslant 0 \\\\
+    \mathrm{minimize} \quad & \frac{1}{2} x^TPx + q^Tx + r \\
+    \mathrm{subject\ to} \quad & \frac{1}{2} x^TP_ix + q^T_ix + r_i \leqslant 0 \\
     \quad & Ax = b
 \end{aligned}
 $$
@@ -64,8 +64,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f^Tx \\\\
-    \mathrm{subject\ to} \quad & \| A_ix + b_i \|_2 \leqslant c_i^Tx + d_i, \quad i = 1,\cdots,m \\\\
+    \mathrm{minimize} \quad & f^Tx \\
+    \mathrm{subject\ to} \quad & \| A_ix + b_i \|_2 \leqslant c_i^Tx + d_i, \quad i = 1,\cdots,m \\
     \quad & Fx = g
 \end{aligned}
 $$

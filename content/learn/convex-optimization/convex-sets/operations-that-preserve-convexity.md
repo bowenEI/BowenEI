@@ -89,10 +89,10 @@ $$
 $$
 \begin{align}
 g(x) & = \left[\begin{array}{c}
-A \\\\
+A \\
 c^{T}
 \end{array}\right] x+\left[\begin{array}{l}
-b \\\\
+b \\
 d
 \end{array}\right]
 \end{align}

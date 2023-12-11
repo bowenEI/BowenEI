@@ -148,7 +148,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-f^{*}(Y) &= \sup _{X \succ 0} \{ \operatorname{tr}(Y X)+\log \det X \} \\\\
+f^{*}(Y) &= \sup _{X \succ 0} \{ \operatorname{tr}(Y X)+\log \det X \} \\
 &= \log \det (-Y)^{-1} - n, \quad \operatorname{dom} f^{*} = -\mathbf{S}^{n}_{++}
 \end{align}
 $$
@@ -167,7 +167,7 @@ $$
 {{< math >}}
 $$
 f^{*}(y)=\left\{\begin{array}{ll}
-\sum_{i=1}^{n} y_{i} \log y_{i} & y \succeq 0 \wedge \mathbf{1}^{T} y=1 \\\\
+\sum_{i=1}^{n} y_{i} \log y_{i} & y \succeq 0 \wedge \mathbf{1}^{T} y=1 \\
 \infty & \text { otherwise }
 \end{array}\right.
 $$
@@ -182,7 +182,7 @@ $$
 {{< math >}}
 $$
 f^{*}(y) = \left \{\begin{array}{ll}
-0 & \|y\|_{*} \leqslant 1 \\\\
+0 & \|y\|_{*} \leqslant 1 \\
 \infty & \text { otherwise }
 \end{array}\right.
 $$
@@ -249,7 +249,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    g(x) &= a f(x) + b \\\\
+    g(x) &= a f(x) + b \\
     g^{*}(y) &= a f^{*}(y / a)-b
 \end{aligned}
 $$
@@ -260,7 +260,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    g(x) &= f(Ax + b) \\\\
+    g(x) &= f(Ax + b) \\
     g^{*}(y) &= f^{*}\left(A^{-T} y\right)-b^{T} A^{-T} y
 \end{aligned}
 $$

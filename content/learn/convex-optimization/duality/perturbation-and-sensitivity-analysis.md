@@ -18,8 +18,8 @@ weight: 460
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(x) \\\\
-    \mathrm{subject\ to} \quad & f_i(x) \leqslant u_i, \quad i=1,\cdots,m \\\\
+    \mathrm{minimize} \quad & f_0(x) \\
+    \mathrm{subject\ to} \quad & f_i(x) \leqslant u_i, \quad i=1,\cdots,m \\
     \quad & h_i(x) = v_i, \quad i=1,\cdots,p
 \end{aligned}
 $$
@@ -59,7 +59,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \lambda_i^{\star} &= -\frac{\partial p^{\star}(0, 0)}{\partial u_i} \\\\
+    \lambda_i^{\star} &= -\frac{\partial p^{\star}(0, 0)}{\partial u_i} \\
     \nu_i^{\star} &= -\frac{\partial p^{\star}(0, 0)}{\partial v_i}
 \end{aligned}
 $$

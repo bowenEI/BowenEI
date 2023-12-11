@@ -86,7 +86,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\det A &= \prod_{i=1}^{n} \lambda_i \\\\
+\det A &= \prod_{i=1}^{n} \lambda_i \\
 \operatorname{tr} A &= \sum_{i=1}^{n} \lambda_i
 \end{align}
 $$
@@ -188,7 +188,7 @@ $$
 $$
 \begin{align}
 X = \left [ \begin{matrix}
- A & B \\\\
+ A & B \\
  B^T & C
 \end{matrix} \right ] 
 \end{align}
@@ -223,13 +223,13 @@ $$
 $$
 \begin{align}
 \left[\begin{array}{cc}
-A & B \\\\
+A & B \\
 B^{T} & C
 \end{array}\right]\left[\begin{array}{l}
-x \\\\
+x \\
 y
 \end{array}\right]=\left[\begin{array}{l}
-u \\\\
+u \\
 v
 \end{array}\right]
 \end{align}
@@ -262,10 +262,10 @@ $$
 $$
 \begin{align}
 \left[\begin{array}{cc}
-A & B \\\\
+A & B \\
 B^{T} & C
 \end{array}\right]^{-1}=\left[\begin{array}{cc}
-A^{-1}+A^{-1} B S^{-1} B^{T} A^{-1} & -A^{-1} B S^{-1} \\\\
+A^{-1}+A^{-1} B S^{-1} B^{T} A^{-1} & -A^{-1} B S^{-1} \\
 -S^{-1} B^{T} A^{-1} & S^{-1}
 \end{array}\right]
 \end{align}

@@ -18,8 +18,8 @@ weight: 370
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(x) \text{（关于} K \text{）}\\\\
-    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\\\
+    \mathrm{minimize} \quad & f_0(x) \text{（关于} K \text{）}\\
+    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\
     \quad & h_i(x) = 0, \quad i=1,\cdots,p
 \end{aligned}
 $$
@@ -36,7 +36,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathcal{O} = \{f_{0}(x) \mid \exists x \in \mathcal{D}, f_i(x) & \leqslant 0, i=1, \cdots, m, \\\\
+    \mathcal{O} = \{f_{0}(x) \mid \exists x \in \mathcal{D}, f_i(x) & \leqslant 0, i=1, \cdots, m, \\
     h_i(x) &= 0, i=1, \cdots, p \} \subseteq \mathbf{R}^q
 \end{aligned}
 $$
@@ -107,8 +107,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \lambda^T f_0(x) \\\\
-    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\\\
+    \mathrm{minimize} \quad & \lambda^T f_0(x) \\
+    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\
     \quad & h_i(x) = 0, \quad i=1,\cdots,p      
 \end{aligned}
 $$
@@ -150,8 +150,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & F_j(x) \\\\
-    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\\\
+    \mathrm{minimize} \quad & F_j(x) \\
+    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\
     \quad & h_i(x) = 0, \quad i=1,\cdots,p
 \end{aligned}
 $$

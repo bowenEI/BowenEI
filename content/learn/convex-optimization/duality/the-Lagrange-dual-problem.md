@@ -18,7 +18,7 @@ Lagrange 对偶函数实际上给出了优化问题最优值的下界。也就�
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & g(\lambda, \nu) \\\\
+    \mathrm{maximize} \quad & g(\lambda, \nu) \\
     \mathrm{subject\ to} \quad & \lambda \succeq 0
 \end{aligned}
 $$
@@ -35,8 +35,8 @@ Lagrange 对偶问题是一个凸优化问题，这是因为极大化的目标�
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx \\\\
-    \mathrm{subject\ to} \quad & Ax = b \\\\
+    \mathrm{minimize} \quad & c^Tx \\
+    \mathrm{subject\ to} \quad & Ax = b \\
     \quad & x \succeq 0
 \end{aligned}
 $$
@@ -48,7 +48,7 @@ $$
 $$
 g(\lambda, \nu) = \left\{
     \begin{matrix}
-        -b^T \nu & A^T \nu - \lambda + c = 0 \\\\
+        -b^T \nu & A^T \nu - \lambda + c = 0 \\
         -\infty & \text{其他情况}
     \end{matrix}
 \right.
@@ -60,7 +60,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & g(\lambda, \nu) \\\\
+    \mathrm{maximize} \quad & g(\lambda, \nu) \\
     \mathrm{subject\ to} \quad & \lambda \succeq 0
 \end{aligned}
 $$
@@ -71,8 +71,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & -b^T \nu \\\\
-    \mathrm{subject\ to} \quad & A^T \nu - \lambda + c = 0 \\\\
+    \mathrm{maximize} \quad & -b^T \nu \\
+    \mathrm{subject\ to} \quad & A^T \nu - \lambda + c = 0 \\
     \quad & \lambda \succeq 0
 \end{aligned}
 $$
@@ -83,8 +83,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & -b^T \nu \\\\
-    \mathrm{subject\ to} \quad & A^T \nu + c \succeq 0 \\\\
+    \mathrm{maximize} \quad & -b^T \nu \\
+    \mathrm{subject\ to} \quad & A^T \nu + c \succeq 0 \\
 \end{aligned}
 $$
 {{< /math >}}
@@ -138,7 +138,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & x^Tx \\\\
+    \mathrm{minimize} \quad & x^Tx \\
     \mathrm{subject\ to} \quad & Ax = b
 \end{aligned}
 $$

@@ -32,7 +32,7 @@ $$
 {{< math >}}
 $$
 \tilde{f}(x)=\left\{\begin{array}{ll}
-f(x) & x \in \operatorname{dom} f \\\\
+f(x) & x \in \operatorname{dom} f \\
 \infty & x \notin \operatorname{dom} f
 \end{array}\right.
 $$

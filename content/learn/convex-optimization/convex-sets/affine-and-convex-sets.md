@@ -150,7 +150,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\operatorname{conv} C=\{\theta_1 x_1+\cdots+\theta_k x_k \mid x_i \in C, \theta_i \geqslant 0, \\\\ i=1, \cdots, k, \theta_1+\cdots+\theta_k=1\}
+\operatorname{conv} C=\{\theta_1 x_1+\cdots+\theta_k x_k \mid x_i \in C, \theta_i \geqslant 0, \\ i=1, \cdots, k, \theta_1+\cdots+\theta_k=1\}
 \end{align}
 $$
 {{< /math >}}
@@ -164,7 +164,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\sum_{i=1}^{\infty} \theta_{i}=1 &\Rightarrow \sum_{i=1}^{\infty} \theta_{i} x_{i} \in C \\\\
+\sum_{i=1}^{\infty} \theta_{i}=1 &\Rightarrow \sum_{i=1}^{\infty} \theta_{i} x_{i} \in C \\
 \int_{C} p(x) d x =1 &\Rightarrow \int_{C} p(x) x d x \in C
 \end{align}
 $$

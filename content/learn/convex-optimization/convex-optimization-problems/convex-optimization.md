@@ -16,8 +16,8 @@ weight: 320
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(x) \\\\
-    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\\\
+    \mathrm{minimize} \quad & f_0(x) \\
+    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\
     & a_i^Tx = b_i, \quad i = 1, \cdots, p
 \end{aligned}
 $$
@@ -40,8 +40,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & f_0(x) \\\\
-    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\\\
+    \mathrm{maximize} \quad & f_0(x) \\
+    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\
     & a_i^Tx = b_i, \quad i = 1, \cdots, p
 \end{aligned}
 $$
@@ -56,8 +56,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-\mathrm{maximize} \quad & f_{0}(x)=x_{1}^{2}+x_{2}^{2} \\\\
-\mathrm{subject\ to} \quad & f_{1}(x) = \frac{x_{1}}{1+x_{2}^{2}} \leqslant 0 \\\\
+\mathrm{maximize} \quad & f_{0}(x)=x_{1}^{2}+x_{2}^{2} \\
+\mathrm{subject\ to} \quad & f_{1}(x) = \frac{x_{1}}{1+x_{2}^{2}} \leqslant 0 \\
 & h_{1}(x)=\left(x_{1}+x_{2}\right)^{2}=0
 \end{aligned}
 $$
@@ -78,8 +78,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-\mathrm{maximize} \quad & f_0(x)=x_1^2+x_2^2 \\\\
-\mathrm{subject\ to} \quad & \tilde{f}_1(x) = x_1 \leqslant 0 \\\\
+\mathrm{maximize} \quad & f_0(x)=x_1^2+x_2^2 \\
+\mathrm{subject\ to} \quad & \tilde{f}_1(x) = x_1 \leqslant 0 \\
 & \tilde{h}_1(x)=x_1+x_2=0
 \end{aligned}
 $$
@@ -106,7 +106,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    X = \{ x \mid f_i(x) & \leqslant 0, i=1,\cdots,m, \\\\
+    X = \{ x \mid f_i(x) & \leqslant 0, i=1,\cdots,m, \\
     h_i(x) &= 0, i=1,\cdots,p \}
 \end{aligned}
 $$
@@ -165,7 +165,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(x) \\\\
+    \mathrm{minimize} \quad & f_0(x) \\
     \mathrm{subject\ to} \quad & Ax = b
 \end{aligned}
 $$
@@ -218,7 +218,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(x) \\\\
+    \mathrm{minimize} \quad & f_0(x) \\
     \mathrm{subject\ to} \quad & x \succeq 0
 \end{aligned}
 $$
@@ -229,8 +229,8 @@ $$
 {{< math >}}
 $$
 \begin{cases}
-    \quad x \succeq 0 \\\\
-    \quad \nabla f_0(x)\succeq 0 \\\\
+    \quad x \succeq 0 \\
+    \quad \nabla f_0(x)\succeq 0 \\
     \quad x_i(\nabla f_0(x))_i = 0, \quad i=1,\cdots,n
 \end{cases}
 $$
@@ -247,7 +247,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(Fz+x_0) \\\\
+    \mathrm{minimize} \quad & f_0(Fz+x_0) \\
     \mathrm{subject\ to} \quad & f_i(Fz+x_0) \preceq 0
 \end{aligned}
 $$
@@ -266,9 +266,9 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & t \\\\
-    \mathrm{subject\ to} \quad & f_0(x) - t \leqslant 0 \\\\
-    \quad & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\\\
+    \mathrm{minimize} \quad & t \\
+    \mathrm{subject\ to} \quad & f_0(x) - t \leqslant 0 \\
+    \quad & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\
     \quad & a_i^Tx=b_i, \quad i=1,\cdots,p
 \end{aligned}
 $$
@@ -279,8 +279,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(x) \\\\
-    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\\\
+    \mathrm{minimize} \quad & f_0(x) \\
+    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\
     & A^Tx = b 
 \end{aligned}
 $$
@@ -313,9 +313,9 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{find} \quad & x \\\\
-    \mathrm{subject\ to} \quad & \phi_t(x) \leqslant 0 \\\\
-    \quad & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\\\
+    \mathrm{find} \quad & x \\
+    \mathrm{subject\ to} \quad & \phi_t(x) \leqslant 0 \\
+    \quad & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\
     \quad & Ax=b
 \end{aligned}
 $$

@@ -16,8 +16,8 @@ weight: 360
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(x) \\\\
-    \mathrm{subject\ to} \quad & f_i(x) \preceq _{K_i} 0, \quad i=1,\cdots,m \\\\
+    \mathrm{minimize} \quad & f_0(x) \\
+    \mathrm{subject\ to} \quad & f_i(x) \preceq _{K_i} 0, \quad i=1,\cdots,m \\
     \quad & Ax = b
 \end{aligned}
 $$
@@ -36,8 +36,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx \\\\
-    \mathrm{subject\ to} \quad & Fx + g \preceq_K 0 \\\\
+    \mathrm{minimize} \quad & c^Tx \\
+    \mathrm{subject\ to} \quad & Fx + g \preceq_K 0 \\
     \quad & Ax = b
 \end{aligned}
 $$
@@ -50,8 +50,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx \\\\
-    \mathrm{subject\ to} \quad & x \succeq_K 0 \\\\
+    \mathrm{minimize} \quad & c^Tx \\
+    \mathrm{subject\ to} \quad & x \succeq_K 0 \\
     \quad & Ax = b
 \end{aligned}
 $$
@@ -62,7 +62,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx \\\\
+    \mathrm{minimize} \quad & c^Tx \\
     \mathrm{subject\ to} \quad & Fx + g \preceq_K 0
 \end{aligned}
 $$
@@ -75,8 +75,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^{T} x \\\\
-    \mathrm{subject\ to} \quad & x_{1} F_{1}+\cdots+x_{n} F_{n}+G \preceq 0 \\\\
+    \mathrm{minimize} \quad & c^{T} x \\
+    \mathrm{subject\ to} \quad & x_{1} F_{1}+\cdots+x_{n} F_{n}+G \preceq 0 \\
     \quad & A x=b
 \end{aligned}
 $$
@@ -93,8 +93,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \operatorname{tr}(C X) \\\\
-    \mathrm{subject\ to} \quad & \operatorname{tr}(A_{i} X)=b_{i}, \quad i=1, \cdots, p \\\\
+    \mathrm{minimize} \quad & \operatorname{tr}(C X) \\
+    \mathrm{subject\ to} \quad & \operatorname{tr}(A_{i} X)=b_{i}, \quad i=1, \cdots, p \\
     \quad & X \succeq 0,
 \end{aligned}
 $$
@@ -107,7 +107,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx \\\\
+    \mathrm{minimize} \quad & c^Tx \\
     \mathrm{subject\ to} \quad & x_1 A_1 + \cdots + x_n A_n \preceq B
 \end{aligned}
 $$
@@ -120,8 +120,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx \\\\
-    \mathrm{subject\ to} \quad & F^{(i)}(x) = x_1 F_1^{(i)} + \cdots + x_n F_n^{(i)} + G^{(i)} \preceq 0, \quad i=1,\cdots,K \\\\
+    \mathrm{minimize} \quad & c^Tx \\
+    \mathrm{subject\ to} \quad & F^{(i)}(x) = x_1 F_1^{(i)} + \cdots + x_n F_n^{(i)} + G^{(i)} \preceq 0, \quad i=1,\cdots,K \\
     \quad & Gx \preceq h,
     \quad & Ax = b
 \end{aligned}
@@ -133,8 +133,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx \\\\
-    \mathrm{subject\ to} \quad & \operatorname{diag}(G x-h, F^{(1)}(x), \cdots, F^{(K)}(x)) \preceq 0 \\\\
+    \mathrm{minimize} \quad & c^Tx \\
+    \mathrm{subject\ to} \quad & \operatorname{diag}(G x-h, F^{(1)}(x), \cdots, F^{(K)}(x)) \preceq 0 \\
     \quad & Ax = b
 \end{aligned}
 $$
@@ -149,8 +149,8 @@ SOCP 可以表示为锥形式问题
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx \\\\
-    \mathrm{subject\ to} \quad & -(A_i x+b_i, c_i^T x+d_i) \preceq_{K_i} 0, \quad i=1, \cdots, m \\\\
+    \mathrm{minimize} \quad & c^Tx \\
+    \mathrm{subject\ to} \quad & -(A_i x+b_i, c_i^T x+d_i) \preceq_{K_i} 0, \quad i=1, \cdots, m \\
     \quad & Fx = g
 \end{aligned}
 $$

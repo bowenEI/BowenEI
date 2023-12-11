@@ -57,7 +57,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-S_{\alpha} &=\left\{x \mid c^{T} x+d>0,\left(a^{T} x+b\right) /\left(c^{T} x+d\right) \leqslant \alpha\right\} \\\\
+S_{\alpha} &=\left\{x \mid c^{T} x+d>0,\left(a^{T} x+b\right) /\left(c^{T} x+d\right) \leqslant \alpha\right\} \\
 &=\left\{x \mid c^{T} x+d>0, a^{T} x+b \leqslant \alpha\left(c^{T} x+d\right)\right\}
 \end{aligned}
 $$

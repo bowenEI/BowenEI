@@ -74,7 +74,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\nabla h(x) &= g'(f(x))f(x) \\\\
+\nabla h(x) &= g'(f(x))f(x) \\
 &= \nabla g(f(x))^T f(x)
 \end{align}
 $$

@@ -18,7 +18,7 @@ weight: 430
 {{< math >}}
 $$
 \begin{aligned}
-    \mathcal{G}=\{(f_1(x), &\cdots, f_m(x), \\\\
+    \mathcal{G}=\{(f_1(x), &\cdots, f_m(x), \\
     h_1(x), &\cdots, h_p(x), f_0(x)) \in \mathbf{R}^m \times \mathbf{R}^p \times \mathbf{R} \mid x \in \mathcal{D}\}
 \end{aligned}
 $$
@@ -65,8 +65,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathcal{A} &= G + \{ \mathbf{R}^M_+ \times \{ 0 \} \times \mathbf{R}_+ \} \\\\
-    &= \{ (u, v, t) \mid \exists x \in \mathcal{D}, f_i(x) \leqslant u_i, i=1,\cdots,m, \\\\
+    \mathcal{A} &= G + \{ \mathbf{R}^M_+ \times \{ 0 \} \times \mathbf{R}_+ \} \\
+    &= \{ (u, v, t) \mid \exists x \in \mathcal{D}, f_i(x) \leqslant u_i, i=1,\cdots,m, \\
     & \qquad h_i(x) = v_i, i=1,\cdots,p, f_0(x) \leqslant t \}
 \end{aligned}
 $$

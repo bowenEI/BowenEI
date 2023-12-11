@@ -203,12 +203,12 @@ $$
 $$
 \begin{align}
 X=\left[\begin{array}{ll}
-x & y \\\\
+x & y \\
 y & z
 \end{array}\right] \in \mathbf{S}_{+}^{2} \Longleftrightarrow 
 \left\{\begin{matrix}
-x \geqslant 0 \\\\
-z \geqslant 0 \\\\
+x \geqslant 0 \\
+z \geqslant 0 \\
 x z \geqslant y^{2}
 \end{matrix}\right.
 \end{align}

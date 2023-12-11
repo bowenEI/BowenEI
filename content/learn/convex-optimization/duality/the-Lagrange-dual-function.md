@@ -18,8 +18,8 @@ weight: 410
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(x) \\\\
-    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\\\
+    \mathrm{minimize} \quad & f_0(x) \\
+    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\
     & h_i(x) = 0, \quad i=1,\cdots,p
 \end{aligned}
 $$
@@ -81,7 +81,7 @@ $$
 $$
 I_-(u) = \left\{
     \begin{matrix}
-        0 & u \leqslant 0 \\\\
+        0 & u \leqslant 0 \\
         \infty & u > 0
     \end{matrix}
 \right.
@@ -101,7 +101,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & x^Tx \\\\
+    \mathrm{minimize} \quad & x^Tx \\
     \mathrm{subject\ to} \quad & Ax = b
 \end{aligned}
 $$
@@ -112,7 +112,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    L(x, \nu) &= x^Tx + \nu^T(Ax - b) \\\\
+    L(x, \nu) &= x^Tx + \nu^T(Ax - b) \\
     g(\nu) &= \inf_x L(x, \nu)
 \end{aligned}
 $$
@@ -123,7 +123,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \nabla_x L(x, \nu) = 2x + A^T \nu &= 0 \\\\
+    \nabla_x L(x, \nu) = 2x + A^T \nu &= 0 \\
     x &= -\frac{1}{2} A^T \nu
 \end{aligned}
 $$
@@ -146,7 +146,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f(x) \\\\
+    \mathrm{minimize} \quad & f(x) \\
     \mathrm{subject\ to} \quad & x = 0
 \end{aligned}
 $$

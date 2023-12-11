@@ -28,7 +28,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(y) \\\\
+    \mathrm{minimize} \quad & f_0(y) \\
     \mathrm{subject\ to} \quad & Ax+b = y
 \end{aligned}
 $$
@@ -55,7 +55,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & b^T \nu - f_0^{\star}(\nu) \\\\
+    \mathrm{minimize} \quad & b^T \nu - f_0^{\star}(\nu) \\
     \mathrm{subject\ to} \quad & A^T \nu = 0
 \end{aligned}
 $$
@@ -68,7 +68,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(A_0x + b_0) \\\\
+    \mathrm{minimize} \quad & f_0(A_0x + b_0) \\
     \mathrm{subject\ to} \quad & f_i(A_ix+ b_i) \leqslant 0, \quad i=1,\cdots,m
 \end{aligned}
 $$
@@ -79,8 +79,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(y_0) \\\\
-    \mathrm{subject\ to} \quad & f_i(y_i) \leqslant 0, \quad i=1,\cdots,m \\\\
+    \mathrm{minimize} \quad & f_0(y_0) \\
+    \mathrm{subject\ to} \quad & f_i(y_i) \leqslant 0, \quad i=1,\cdots,m \\
     \quad & A_ix + b_i = y_i, i=0,\cdots,m
 \end{aligned}
 $$
@@ -105,7 +105,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \frac{1}{2} \| y \|^2 \\\\
+    \mathrm{minimize} \quad & \frac{1}{2} \| y \|^2 \\
     \mathrm{subject\ to} \quad & Ax-b = y
 \end{aligned}
 $$
@@ -120,8 +120,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx \\\\
-    \mathrm{subject\ to} \quad & Ax=b \\\\
+    \mathrm{minimize} \quad & c^Tx \\
+    \mathrm{subject\ to} \quad & Ax=b \\
     \quad & l \preceq x \preceq u
 \end{aligned}
 $$
@@ -132,7 +132,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(x) \\\\
+    \mathrm{minimize} \quad & f_0(x) \\
     \mathrm{subject\ to} \quad & Ax = b
 \end{aligned}
 $$
@@ -143,7 +143,7 @@ $$
 {{< math >}}
 $$
 f_0(x) = \left\{\begin{matrix}
-    c^Tx & l \preceq x \preceq u \\\\
+    c^Tx & l \preceq x \preceq u \\
     \infty & \text{otherwise}
 \end{matrix}\right.
 $$

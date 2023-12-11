@@ -54,9 +54,9 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-f_0\left(x^{\star}\right) &=g\left(\lambda^{\star}, \nu^{\star}\right) \\\\
-&=\inf_x \left(f_0(x)+\sum_{i=1}^{m} \lambda_i^{\star} f_i(x)+\sum_{i=1}^{p} \nu_i^{\star} h_i(x)\right) \\\\
-& \leqslant f_0\left(x^{\star}\right)+\sum_{i=1}^{m} \lambda_i^{\star} f_i\left(x^{\star}\right)+\sum_{i=1}^{p} \nu_i^{\star} h_i\left(x^{\star}\right) \\\\
+f_0\left(x^{\star}\right) &=g\left(\lambda^{\star}, \nu^{\star}\right) \\
+&=\inf_x \left(f_0(x)+\sum_{i=1}^{m} \lambda_i^{\star} f_i(x)+\sum_{i=1}^{p} \nu_i^{\star} h_i(x)\right) \\
+& \leqslant f_0\left(x^{\star}\right)+\sum_{i=1}^{m} \lambda_i^{\star} f_i\left(x^{\star}\right)+\sum_{i=1}^{p} \nu_i^{\star} h_i\left(x^{\star}\right) \\
 & \leqslant f_0\left(x^{\star}\right)
 \end{aligned}
 $$
@@ -68,8 +68,8 @@ $$
 $$
 \left\{
     \begin{matrix}
-        \lambda_i^{\star} \geqslant 0, & i=1,\cdots,m \\\\
-        f_i(x^{\star}) \leqslant 0, & i=1,\cdots,m \\\\
+        \lambda_i^{\star} \geqslant 0, & i=1,\cdots,m \\
+        f_i(x^{\star}) \leqslant 0, & i=1,\cdots,m \\
         h_i(x^{\star}) = 0, & i=1,\cdots,p
     \end{matrix}
 \right.
@@ -129,10 +129,10 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    f_{i}\left(x^{\star}\right) &\leqslant 0, & i &=1, \cdots, m \\\\
-    h_{i}\left(x^{\star}\right) &=0, & i &=1, \cdots, p \\\\
-    \lambda_{i}^{\star} & \geqslant 0, & i &=1, \cdots, m \\\\
-    \lambda_{i}^{\star} f_{i}\left(x^{\star}\right) &=0, & i &=1, \cdots, m \\\\
+    f_{i}\left(x^{\star}\right) &\leqslant 0, & i &=1, \cdots, m \\
+    h_{i}\left(x^{\star}\right) &=0, & i &=1, \cdots, p \\
+    \lambda_{i}^{\star} & \geqslant 0, & i &=1, \cdots, m \\
+    \lambda_{i}^{\star} f_{i}\left(x^{\star}\right) &=0, & i &=1, \cdots, m \\
     \nabla f_{0}\left(x^{\star}\right)+\sum_{i=1}^{m} \lambda_{i}^{\star} \nabla f_{i}\left(x^{\star}\right)+\sum_{i=1}^{p} \nu_{i}^{\star} \nabla h_{i}    \left(x^{\star}\right) &=0 & &
 \end{aligned}
 $$
@@ -147,10 +147,10 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    f_i(\tilde{x}) & \leqslant 0, & i &=1, \cdots, m \\\\
-    h_i(\tilde{x}) &=0, & i &=1, \cdots, p \\\\
-    \tilde{\lambda}\_i & \geqslant 0, & i &=1, \cdots, m \\\\
-    \tilde{\lambda}\_i f_i(\tilde{x}) &=0, & i &=1, \cdots, m \\\\
+    f_i(\tilde{x}) & \leqslant 0, & i &=1, \cdots, m \\
+    h_i(\tilde{x}) &=0, & i &=1, \cdots, p \\
+    \tilde{\lambda}\_i & \geqslant 0, & i &=1, \cdots, m \\
+    \tilde{\lambda}\_i f_i(\tilde{x}) &=0, & i &=1, \cdots, m \\
     \nabla f_0(\tilde{x})+\sum_{i=1}^{m} \tilde{\lambda}\_i \nabla f_i(\tilde{x})+\sum_{i=1}^{p} \tilde{\nu}\_i \nabla h_i(\tilde{x}) &=0, & &
 \end{aligned}
 $$
@@ -161,8 +161,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    g(\tilde{\lambda}, \tilde{\nu}) &=L(\tilde{x}, \tilde{\lambda}, \tilde{\nu}) \\\\
-    &=f_{0}(\tilde{x})+\sum_{i=1}^{m} \tilde{\lambda}\_{i} f\_{i}(\tilde{x})+\sum_{i=1}^{p} \tilde{\nu}\_{i} h_{i}(\tilde{x}) \\\\
+    g(\tilde{\lambda}, \tilde{\nu}) &=L(\tilde{x}, \tilde{\lambda}, \tilde{\nu}) \\
+    &=f_{0}(\tilde{x})+\sum_{i=1}^{m} \tilde{\lambda}\_{i} f\_{i}(\tilde{x})+\sum_{i=1}^{p} \tilde{\nu}\_{i} h_{i}(\tilde{x}) \\
     &=f_{0}(\tilde{x})
 \end{aligned}
 $$

@@ -26,8 +26,8 @@ weight: 220
 {{< math >}}
 $$
 \begin{aligned}
-    \lim _{x \rightarrow 0^{+}} x \log{x} &= \lim _{x \rightarrow 0^{+}} \frac{\log{x}}{1/x}  \\\\
-    &= \lim _{x \rightarrow 0^{+}} \frac{1/x}{-1/x^2} \\\\
+    \lim _{x \rightarrow 0^{+}} x \log{x} &= \lim _{x \rightarrow 0^{+}} \frac{\log{x}}{1/x}  \\
+    &= \lim _{x \rightarrow 0^{+}} \frac{1/x}{-1/x^2} \\
     &= 0
 \end{aligned}
 $$

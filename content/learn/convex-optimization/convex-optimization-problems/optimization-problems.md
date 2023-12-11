@@ -16,8 +16,8 @@ weight: 310
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(x) \\\\
-    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\\\
+    \mathrm{minimize} \quad & f_0(x) \\
+    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\
     & h_i(x) = 0, \quad i = 1, \cdots, p
 \end{aligned}
 $$
@@ -75,7 +75,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    f_{0}(x)=\inf \{f_{0}(z) \mid f_{i}(z) & \leqslant 0, \quad i=1, \cdots, m, \\\\
+    f_{0}(x)=\inf \{f_{0}(z) \mid f_{i}(z) & \leqslant 0, \quad i=1, \cdots, m, \\
     h_{i}(z)&=0, \quad i=1, \cdots, p, \quad \|z-x\|_{2} \leqslant R\}
 \end{aligned}
 $$
@@ -86,9 +86,9 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(z) \\\\
-    \mathrm{subject\ to} \quad & f_i(z) \leqslant 0, \quad i = 1, \cdots, m \\\\
-    & h_i(z) = 0, \quad i = 1, \cdots, p \\\\
+    \mathrm{minimize} \quad & f_0(z) \\
+    \mathrm{subject\ to} \quad & f_i(z) \leqslant 0, \quad i = 1, \cdots, m \\
+    & h_i(z) = 0, \quad i = 1, \cdots, p \\
     & \| z - x \|_{2} \leqslant R
 \end{aligned}
 $$
@@ -105,7 +105,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    f_0(x) &= \frac{1}{x} \\\\
+    f_0(x) &= \frac{1}{x} \\
     p^{\star} &= 0
 \end{aligned}
 $$
@@ -116,7 +116,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    f_0(x) &= -\log x \\\\
+    f_0(x) &= -\log x \\
     p^{\star} &= -\infty
 \end{aligned}
 $$
@@ -127,7 +127,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    f_0(x) &= x \log x \\\\
+    f_0(x) &= x \log x \\
     p^{\star} &= \frac{1}{e}
 \end{aligned}
 $$
@@ -142,8 +142,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{find} \quad & x \\\\
-    \mathrm{subject\ to} \quad & f_i(z) \leqslant 0, \quad i = 1, \cdots, m \\\\
+    \mathrm{find} \quad & x \\
+    \mathrm{subject\ to} \quad & f_i(z) \leqslant 0, \quad i = 1, \cdots, m \\
     & h_i(z) = 0, \quad i = 1, \cdots, p
 \end{aligned}
 $$
@@ -156,8 +156,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(x) \\\\
-    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\\\
+    \mathrm{minimize} \quad & f_0(x) \\
+    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\
     & h_i(x) = 0, \quad i = 1, \cdots, p
 \end{aligned}
 $$
@@ -168,7 +168,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    & g_i(x) = \tilde{g}_i(x) \\\\
+    & g_i(x) = \tilde{g}_i(x) \\
     \Longleftrightarrow & g_i(x) - \tilde{g}_i(x) = 0
 \end{aligned}
 $$
@@ -179,7 +179,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    & f_i(x) \geqslant 0 \\\\
+    & f_i(x) \geqslant 0 \\
     \Longleftrightarrow & -f_i(x) \leqslant 0
 \end{aligned}
 $$
@@ -190,7 +190,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(x) \\\\
+    \mathrm{minimize} \quad & f_0(x) \\
     \mathrm{subject\ to} \quad & l_i \leqslant x_i \leqslant u_i, \quad i = 1, \cdots, n
 \end{aligned}
 $$
@@ -201,8 +201,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f_0(x) \\\\
-    \mathrm{subject\ to} \quad & l_i - x_i \leqslant 0, \quad i = 1, \cdots, n \\\\
+    \mathrm{minimize} \quad & f_0(x) \\
+    \mathrm{subject\ to} \quad & l_i - x_i \leqslant 0, \quad i = 1, \cdots, n \\
     & x_i - u_i \leqslant 0, \quad i = 1, \cdots, n
 \end{aligned}
 $$
@@ -215,8 +215,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & f_0(x) \\\\
-    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\\\
+    \mathrm{maximize} \quad & f_0(x) \\
+    \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\
     & h_i(x) = 0, \quad i = 1, \cdots, p
 \end{aligned}
 $$
@@ -241,7 +241,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \tilde{f}_i(z)=f_i(\phi(z)), &\quad i=0, \cdots, m \\\\
+    \tilde{f}_i(z)=f_i(\phi(z)), &\quad i=0, \cdots, m \\
     \tilde{h}_i(z)=h_i(\phi(z)), &\quad i=1, \cdots, p
 \end{aligned}
 $$
@@ -252,8 +252,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & \tilde{f}_0(z) \\\\
-    \mathrm{subject\ to} \quad & \tilde{f}_i(z) \leqslant 0, \quad i = 1, \cdots, m \\\\
+    \mathrm{maximize} \quad & \tilde{f}_0(z) \\
+    \mathrm{subject\ to} \quad & \tilde{f}_i(z) \leqslant 0, \quad i = 1, \cdots, m \\
     & \tilde{h}_i(z) = 0, \quad i = 1, \cdots, p
 \end{aligned}
 $$
@@ -270,7 +270,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \tilde{f}_i(x)&=\psi_i(f_i(x)), \quad i=0, \cdots, m \\\\
+    \tilde{f}_i(x)&=\psi_i(f_i(x)), \quad i=0, \cdots, m \\
     \tilde{h}_i(x)&=\psi _{m+i}(h_i(x)), \quad i=1, \cdots, p
 \end{aligned}
 $$
@@ -281,8 +281,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & \tilde{f}_0(x) \\\\
-    \mathrm{subject\ to} \quad & \tilde{f}_i(x) \leqslant 0, \quad i = 1, \cdots, m \\\\
+    \mathrm{maximize} \quad & \tilde{f}_0(x) \\
+    \mathrm{subject\ to} \quad & \tilde{f}_i(x) \leqslant 0, \quad i = 1, \cdots, m \\
     & \tilde{h}_i(x) = 0, \quad i = 1, \cdots, p
 \end{aligned}
 $$
@@ -317,9 +317,9 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & f_0(x) \\\\
-    \mathrm{subject\ to} \quad & s_i \geqslant 0, \quad i=1,\cdots,m \\\\
-    & f_i(x) + s_i = 0, \quad i = 1, \cdots, m \\\\
+    \mathrm{maximize} \quad & f_0(x) \\
+    \mathrm{subject\ to} \quad & s_i \geqslant 0, \quad i=1,\cdots,m \\
+    & f_i(x) + s_i = 0, \quad i = 1, \cdots, m \\
     & \tilde{h}_i(x) = 0, \quad i = 1, \cdots, p
 \end{aligned}
 $$
@@ -336,7 +336,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    & h_i(x) = 0, \quad i=1,\cdots,p \\\\
+    & h_i(x) = 0, \quad i=1,\cdots,p \\
     \Longleftrightarrow & \exists z \in \mathbf{R}^k, \quad \mathrm{s.t.\ } x=\phi(z)
 \end{aligned}
 $$
@@ -347,7 +347,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & \tilde{f}_0(z) = f_0(\phi(z)) \\\\
+    \mathrm{maximize} \quad & \tilde{f}_0(z) = f_0(\phi(z)) \\
     \mathrm{subject\ to} \quad & \tilde{f}_i(z) = f_i(\phi(z)) \leqslant 0, \quad i=1,\cdots,m
 \end{aligned}
 $$
@@ -362,7 +362,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & f_0(Fz+x_0) \\\\
+    \mathrm{maximize} \quad & f_0(Fz+x_0) \\
     \mathrm{subject\ to} \quad & f_i(Fz+x_0) \leqslant 0, \quad i=1,\cdots,m
 \end{aligned}
 $$
@@ -375,8 +375,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & f_0(A_0x+b_0) \\\\
-    \mathrm{subject\ to} \quad & f_i(A_ix+b_i) \leqslant 0, \quad i=1,\cdots,m \\\\
+    \mathrm{maximize} \quad & f_0(A_0x+b_0) \\
+    \mathrm{subject\ to} \quad & f_i(A_ix+b_i) \leqslant 0, \quad i=1,\cdots,m \\
     & h_i(x) = 0, \quad i=1,\cdots,p
 \end{aligned}
 $$
@@ -387,9 +387,9 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & f_0(A_0x+b_0) \\\\
-    \mathrm{subject\ to} \quad & f_i(y_i) \leqslant 0, \quad i=1,\cdots,m \\\\
-    & y_i = A_ix+b_i, \quad i=1,\cdots,m \\\\
+    \mathrm{maximize} \quad & f_0(A_0x+b_0) \\
+    \mathrm{subject\ to} \quad & f_i(y_i) \leqslant 0, \quad i=1,\cdots,m \\
+    & y_i = A_ix+b_i, \quad i=1,\cdots,m \\
     & h_i(x) = 0, \quad i=1,\cdots,p
 \end{aligned}
 $$
@@ -410,8 +410,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & f_0(x_1, x_2) \\\\
-    \mathrm{subject\ to} \quad & f_i(x_1) \leqslant 0, \quad i=1,\cdots,m_1 \\\\
+    \mathrm{maximize} \quad & f_0(x_1, x_2) \\
+    \mathrm{subject\ to} \quad & f_i(x_1) \leqslant 0, \quad i=1,\cdots,m_1 \\
     & \tilde{f}_i(x_2) \leqslant 0, \quad i=1,\cdots,m_2
 \end{aligned}
 $$
@@ -424,9 +424,9 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & t \\\\
-    \mathrm{subject\ to} \quad & f_0(x) - t \leqslant 0 \\\\
-    & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\\\
+    \mathrm{maximize} \quad & t \\
+    \mathrm{subject\ to} \quad & f_0(x) - t \leqslant 0 \\
+    & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\
     & h_i(x) = 0, \quad i=1,\cdots,p
 \end{aligned}
 $$
@@ -451,7 +451,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \operatorname{dom} F = \{ x \in \operatorname{dom} f_0 \mid f_i(x) & \leqslant 0, i=1,\cdots,m \\\\
+    \operatorname{dom} F = \{ x \in \operatorname{dom} f_0 \mid f_i(x) & \leqslant 0, i=1,\cdots,m \\
     h_i(x) &= 0, i=1,\cdots,p \}
 \end{aligned}
 $$

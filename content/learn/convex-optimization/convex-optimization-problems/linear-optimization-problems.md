@@ -18,8 +18,8 @@ weight: 330
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx+d \\\\
-    \mathrm{subject\ to} \quad & Gx \preceq h \\\\
+    \mathrm{minimize} \quad & c^Tx+d \\
+    \mathrm{subject\ to} \quad & Gx \preceq h \\
     \quad & Ax=b 
 \end{aligned}
 $$
@@ -40,8 +40,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx \\\\
-    \mathrm{subject\ to} \quad & Ax=b \\\\
+    \mathrm{minimize} \quad & c^Tx \\
+    \mathrm{subject\ to} \quad & Ax=b \\
     \quad & x \succeq 0
 \end{aligned}
 $$
@@ -52,7 +52,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx \\\\
+    \mathrm{minimize} \quad & c^Tx \\
     \mathrm{subject\ to} \quad & Ax \leqslant b
 \end{aligned}
 $$
@@ -65,9 +65,9 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx+d \\\\
-    \mathrm{subject\ to} \quad & Gx+s=h \\\\
-    \quad & Ax=b \\\\
+    \mathrm{minimize} \quad & c^Tx+d \\
+    \mathrm{subject\ to} \quad & Gx+s=h \\
+    \quad & Ax=b \\
     \quad & s \succeq 0
 \end{aligned}
 $$
@@ -78,9 +78,9 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx^+-c^Tx^-+d \\\\
-    \mathrm{subject\ to} \quad & Gx^+-Gx^-+s=h \\\\
-    \quad & Ax^+-Ax^-=b \\\\
+    \mathrm{minimize} \quad & c^Tx^+-c^Tx^-+d \\
+    \mathrm{subject\ to} \quad & Gx^+-Gx^-+s=h \\
+    \quad & Ax^+-Ax^-=b \\
     \quad & x^+ \succeq 0, x^- \succeq 0, s \succeq 0
 \end{aligned}
 $$
@@ -95,8 +95,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \frac{c^Tx+d}{e^Tx+f} \\\\
-    \mathrm{subject\ to} \quad & Gx \preceq h \\\\
+    \mathrm{minimize} \quad & \frac{c^Tx+d}{e^Tx+f} \\
+    \mathrm{subject\ to} \quad & Gx \preceq h \\
     \quad & Ax = b
 \end{aligned}
 $$
@@ -119,10 +119,10 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Ty+dz \\\\
-    \mathrm{subject\ to} \quad & Gy-hz \preceq 0 \\\\
-    \quad & Ay-bz=0 \\\\
-    \quad & e^Ty + fz = 1 \\\\
+    \mathrm{minimize} \quad & c^Ty+dz \\
+    \mathrm{subject\ to} \quad & Gy-hz \preceq 0 \\
+    \quad & Ay-bz=0 \\
+    \quad & e^Ty + fz = 1 \\
     \quad & z \geqslant 0
 \end{aligned}
 $$
