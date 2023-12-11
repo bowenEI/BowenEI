@@ -21,9 +21,9 @@ weight: 130
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 f(S) = \{f(x) \mid x \in S\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -33,9 +33,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \{x \mid x^{\top} P x \leqslant\left(c^{\top} x\right)^{2}, c^{\top} x \geqslant 0\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -43,9 +43,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \{(z, t) \mid z^{\top}z \leqslant t^2, t \geqslant 0\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -55,9 +55,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \mathcal{E}=\{x \mid\left(x-x_{c}\right)^{\top} P^{-1}\left(x-x_{c}\right) \leqslant 1\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -87,7 +87,7 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 g(x) & = \left[\begin{array}{c}
 A \\
 c^{\top}
@@ -95,7 +95,7 @@ c^{\top}
 b \\
 d
 \end{array}\right]
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -103,9 +103,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 f(x) & = \left(A x+b\right) /\left(c^{\top} x+d\right), \quad \operatorname{dom} f = \{x \mid c^{\top} x+d>0\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 

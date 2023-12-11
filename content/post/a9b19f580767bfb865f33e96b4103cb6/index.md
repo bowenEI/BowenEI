@@ -48,10 +48,10 @@ projects: []
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 y' &= f(x) + xf'(x) \\
 &= \ln (a-x)-\frac{x}{a-x}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -59,10 +59,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \ln a = 0 \\
 \Rightarrow a = 1
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -84,10 +84,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 y'' &= \frac{1}{x-1} - \frac{1}{(x-1)^2} \\
 &= \frac{x-2}{(x-1)^2}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -111,10 +111,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 h''(x) &= - \frac{1}{(x-1)^2} + \frac{1}{1-x} + \frac{1}{(x-1)^2} \\
 &= \frac{1}{1-x} > 0
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -146,10 +146,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \frac{p}{2} - (-4+1) &= 4 \\
 \Rightarrow p &= 2
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -189,11 +189,11 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     |AB|^2 &= (x_1 - x_2)^2 + (y_1 - y_2)^2 \\
     &= (1 + k^2)[(x_1 + x_2)^2 - 4 x_1 x_2] \\
     &= 16(1 + k^2)(k^2 + b)
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -201,10 +201,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     y &= \frac{1}{4}x^2  \\
     \Rightarrow y' &= \frac{1}{2}x
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -223,12 +223,12 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     \frac{1}{2}(x_1^2 + x_2^2) - \frac{1}{2}x_0(x_1 + x_2) &= y_1 + y_2 - 2 y_0 \\
     \frac{1}{2}[(x_1 + x_2)^2 - 2 x_1 x_2] - 2kx_0 &= k(x_1 + x_2) + 2b - 2y_0 \\
     \frac{1}{2}(16k^2 + 8b) - 2kx_0 &= 4k^2 + 2b - 2y_0 \\
     2k^2 + y_0 + b &= kx_0
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -236,9 +236,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 d_{P \rightarrow AB}^2 &= \frac{(kx_0 + b - y_0)^2}{1 + k^2} 
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -246,12 +246,12 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 S_{\triangle PAB}^2 &= \frac{1}{4} |AB|^2 d_{P \rightarrow AB}^2 \\
 &= 4 (1 + k^2) (k^2 + b) \frac{(kx_0 + b - y_0)^2}{1 + k^2} \\
 &= 4 (k^2 + b) (2k^2 + 2b)^2 \\
 &= 16 (k^2 + b)^3
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -259,9 +259,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     x_0^2 + (y_0 + 4)^2 = 1
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -269,9 +269,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     2k^2 + y_0 + b &= kx_0
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -279,9 +279,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     (2k^2 + y_0 + b)^2 &= k^2 [1 - (y_0 + 4)^2]
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -295,10 +295,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     l_{PA}: y - y_1 &= \frac{1}{2}x_1(x-x_1) \\
     l_{PB}: y - y_2 &= \frac{1}{2}x_2(x-x_2)
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -306,10 +306,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     l_{PA}: y &= \frac{1}{2}x_1x-y_1 \\
     l_{PB}: y &= \frac{1}{2}x_2x-y_2
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -328,9 +328,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     l_{AB}: y_0 = \frac{1}{2}x_0x-y
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -351,9 +351,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 x^2 - 2x_0x + 4y_0 = 0
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -361,11 +361,11 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 |AB|^2 &= (x_1 - x_2)^2 + (y_1 - y_2)^2 \\
 &= (1 + \frac{1}{4} x_0^2)[(x_1 + x_2)^2 - 4 x_1 x_2] \\
 &= (1 + \frac{1}{4} x_0^2)(4x_0^2 - 16y_0)
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -373,9 +373,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 d_{P \rightarrow AB}^2 &= \frac{(\frac{1}{2}x_0^2 - 2y_0)^2}{1 + \frac{1}{4}x_0^2}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -383,7 +383,7 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 S_{\triangle PAB}^2 &= \frac{1}{4} |AB|^2 d_{P \rightarrow AB}^2 \\
 &= (x_0^2 - 4y_0) (\frac{1}{2}x_0^2 - 2y_0)^2 \\
 &= 2(\frac{1}{2}x_0^2 - 2y_0)^3 \\
@@ -391,7 +391,7 @@ S_{\triangle PAB}^2 &= \frac{1}{4} |AB|^2 d_{P \rightarrow AB}^2 \\
 &= 2[\frac{1}{2} - \frac{1}{2}(y_0^2 + 8y_0 + 16) - 2y_0]^3 \\
 &= 2[-\frac{1}{2}y_0^2 - 6y_0 - \frac{15}{2}]^3 \\
 &= 2[-\frac{1}{2}(y_0 + 6)^2 + \frac{21}{2}]^3 \\
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -399,10 +399,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 S_{\triangle PAB} &= \sqrt[]{2[-\frac{1}{2}(-5 + 6)^2 + \frac{21}{2}]^3} \\
 &= 20 \sqrt[]{5} 
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 

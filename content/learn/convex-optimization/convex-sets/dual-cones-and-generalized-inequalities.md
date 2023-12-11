@@ -17,9 +17,9 @@ weight: 160
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 K^{*} = \{y \mid x^{\top} y \geqslant 0, \forall x \in K\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -43,10 +43,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 x \preceq_K y \Leftrightarrow \forall \lambda \succeq _{K^{*}} 0, \lambda^{\top} x \leqslant \lambda^{\top} y \\
 x \prec_K y \Leftrightarrow \forall \lambda \succeq _{K^{*}} 0 \wedge \lambda \ne 0, \lambda^{\top} x < \lambda^{\top} y
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 

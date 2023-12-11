@@ -17,9 +17,9 @@ weight: 50
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \lim _{z \in \operatorname{dom} f, z \neq x, z \rightarrow x} \frac{\|f(z)-f(x)-D f(x)(z-x)\| _{2}}{\|z-x\| _{2}}=0
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -29,9 +29,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 f(x) + Df(x)(z-x)
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -41,9 +41,9 @@ $Df(x)$ 可以通过计算偏导数的方式求得：
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 D f(x) _{ij}=\frac{\partial f _{i}(x)}{\partial x _{j}}, \quad i=1, \cdots, m, \quad j=1, \cdots, n
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -51,9 +51,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \nabla f(x)=D f(x)^{\top}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -61,9 +61,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \nabla f(x) _{i}=\frac{\partial f(x)}{\partial x _{i}}, \quad i=1, \cdots, n
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -73,10 +73,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \nabla h(x) &= g'(f(x))f(x) \\
 &= \nabla g(f(x))^{\top} f(x)
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -86,9 +86,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \nabla g(x) = A^{\top} \nabla f(Ax+b)
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -106,9 +106,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 D \tilde{f}(t)=\tilde{f}^{\prime}(t)=\nabla f(x+t v)^{\top} v
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -120,9 +120,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \nabla^{2} f(x) _{ij}=\frac{\partial^{2} f(x)}{\partial x _{i} \partial x _{j}}, \quad i=1, \cdots, n, \quad j=1, \cdots, n
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -130,9 +130,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \widehat{f}(z)=f(x)+\nabla f(x)^{\top}(z-x)+\frac{1}{2}(z-x)^{\top} \nabla^{2} f(x)(z-x)
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -144,9 +144,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \nabla^{2} h(x)=g^{\prime}(f(x)) \nabla^{2} f(x)+g^{\prime \prime}(f(x)) \nabla f(x) \nabla f(x)^{\top}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -156,8 +156,8 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \nabla^{2} g(x)=A^{\top} \nabla^{2} f(Ax+b) A
-\end{align}
+\end{align*}
 $$
 {{< /math >}}

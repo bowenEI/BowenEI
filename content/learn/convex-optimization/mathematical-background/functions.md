@@ -17,9 +17,9 @@ weight: 40
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 y \in \operatorname{dom} f, \quad\|y-x\| _{2} \leqslant \delta \Longrightarrow\|f(y)-f(x)\| _{2} \leqslant \epsilon
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -35,9 +35,9 @@ $\operatorname{dom} f$ 表示函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}^m$ �
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \lim _{i \rightarrow \infty} f\left(x _{i}\right)=f\left(\lim _{i \rightarrow \infty} x _{i}\right)
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -51,29 +51,39 @@ $$
 
 来看 $\mathbf{R} \rightarrow \mathbf{R}$ 上的一些简单例子：
 
-- $f = x \log{x}$，$\operatorname{dom}f = (0, +\infty)$
+{{< math >}}
+$$
+f = x \log{x} \quad \operatorname{dom}f = (0, +\infty)
+$$
+{{< /math >}}
 
 而
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \lim _{x \rightarrow 0^{+}} x \log{x} = 0 \neq \infty
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
 因此不是闭函数。
 
-- $f = \log{x}$，$\operatorname{dom}f = (0, +\infty)$
+再比如
+
+{{< math >}}
+$$
+f = \log{x} \quad \operatorname{dom}f = (0, +\infty)
+$$
+{{< /math >}}
 
 而
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \lim _{x \rightarrow 0^{+}} \log{x} = -\infty
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -81,9 +91,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \lim _{x \rightarrow +\infty} \log{x} = +\infty
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 

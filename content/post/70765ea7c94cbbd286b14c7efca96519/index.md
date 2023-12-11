@@ -145,9 +145,9 @@ RNN 的特点是序列从左向右移一步一步往前做。当前时刻 $t$ �
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 Y = \frac{X - \mu}{\sigma}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -186,9 +186,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \textrm{Attention}\left(Q, K, V\right) = \textrm{softmax}\left(\frac{QK^{\top}}{\sqrt{d_k}}\right)V
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -196,9 +196,9 @@ $Q$ 即 `query`，$K$ 即 `key`，$QK^{\top}$ 即 `query` 和 `key` 做内积。
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \textrm{similarity} = \cos{\theta} = \frac{\alpha \cdot \beta}{||\alpha|| \cdot ||\beta||}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -214,10 +214,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \textrm{MultiHead}\left(Q, K, V\right) &= \textrm{Concat}\left(\textrm{head}_1, ..., \textrm{head}_h\right)W^O \\\\
 \textbf{where}\quad\textrm{head}_i &= \textrm{Attention}\left(QW^Q_i, KW^K_i, VW^V_i\right)
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -251,9 +251,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \textrm{FFN}\left(x\right) = \max \left(0, xW_1 + b_1\right)W_2 + b_2
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 

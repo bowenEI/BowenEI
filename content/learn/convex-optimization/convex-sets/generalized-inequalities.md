@@ -78,9 +78,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 S \subseteq x + K
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -90,8 +90,8 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 (x - K) \cap S = \{x\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}

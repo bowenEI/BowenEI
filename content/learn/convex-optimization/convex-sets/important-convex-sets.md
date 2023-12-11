@@ -25,9 +25,9 @@ weight: 120
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \{x \mid a^{\top}x=b\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -35,9 +35,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \{x \mid a^{\top}(x - x_0) = 0\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -45,9 +45,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \{x \mid a^{\top}x \leqslant b\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -59,9 +59,9 @@ $\mathbf{R}^{n}$ 中的空间 Euclid 球（或简称为球）具有如下形式�
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 B(x_c, r) = \{x \mid \|x - x_c\| _2 \leqslant r\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -69,9 +69,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 B(x_c, r) = \{x_c + ru \mid \|u\| _2 \leqslant 1\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -79,9 +79,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \mathcal{E} = \{x | (x - x_c)^{\top} P^{-1} (x - x_c) \leqslant 1\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -91,9 +91,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \mathcal{E} = \{x_c + Au \mid \|u\| _2 \leqslant 1\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -103,9 +103,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 C = \{(x, t) \mid \|x\| \leqslant t\} \in \mathbf{R}^{n+1}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -117,9 +117,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \mathcal{P} = \{x \mid a_i^{\top}x \leqslant b_i, i=1,\cdots,m, c_j^{\top}x = d_j, j=1,\cdots,p\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -129,9 +129,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \mathcal{P} = \{x \mid Ax \preceq b, Cx = d\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -141,9 +141,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 C = \operatorname{conv}\{v_0, \cdots, v_k\} = \{\theta_0v_0 + \cdots + \theta_kv_k \mid \theta \succeq 0, \mathbf{1}^{\top}\theta=1\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -157,9 +157,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \operatorname{conv}\{v_1, \cdots, v_k\} = \{\theta_1v_1 + \cdots + \theta_kv_k \mid \theta \succeq 0, \mathbf{1}^{\top} \theta = 1\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -171,9 +171,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \mathbf{S}^n = \{X \in \mathbf{R}^{n \times n} \mid X = X^{\top}\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -181,9 +181,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \mathbf{S}_+^n = \{X \in \mathbf{S}^{n} \mid X \succeq 0\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -191,9 +191,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \mathbf{S}_{++}^n = \{X \in \mathbf{S}^{n} \mid X \succ 0\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -201,7 +201,7 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 X=\left[\begin{array}{ll}
 x & y \\
 y & z
@@ -211,6 +211,6 @@ x \geqslant 0 \\
 z \geqslant 0 \\
 x z \geqslant y^{2}
 \end{matrix}\right.
-\end{align}
+\end{align*}
 $$
 {{< /math >}}

@@ -60,9 +60,9 @@ toc: true
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     T_{b} = (n-1)(a+bl)
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -77,9 +77,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     T_{b} = (a+bl) \log_2{n}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -99,9 +99,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     T_{r} = (a+bl) \log_2{n} + O(f(l))
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -113,9 +113,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     T_{g} = a \log_2{n} + (n-1)bl
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -135,9 +135,9 @@ Scatter 算子可以被视为是 Gather 算子的逆运算：把 `device[i]` 上
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     T_{s} = a \log_2{n} + (n-1)bl
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -149,9 +149,9 @@ Reduce Scatter 算子就是 Reduce 和 Scatter 的结合，可以把 Reduce Scat
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     T_{rs} = (a+bl) \log_2{n} + O(f(l))
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -167,9 +167,9 @@ All to All 是一种较为复杂的集合通信算子，将 `device[i]` 上的�
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     T_{a2a} = (a+bl) \log_2{n}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -196,10 +196,10 @@ $$
 
 {{< math >}}
 $$
-\left\{\begin{align}
+\left\{\begin{align*}
     f'_p &= m - \frac{n}{G} \\
     f'_G &= -n(1 - \frac{p}{G^2})
-\end{align}\right.
+\end{align*}\right.
 $$
 {{< /math >}}
 
@@ -263,10 +263,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     B &= \frac{S}{t} \cdot \frac{2(n-1)}{n} \\
     &= \frac{2(n-1)}{n} \cdot b
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -278,10 +278,10 @@ Reduce Scatter 可以看作是只执行 All Reduce 的聚合部分。仿照上�
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     B &= \frac{S}{t} \cdot \frac{n-1}{n} \\
     &= \frac{n-1}{n} \cdot b
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -293,10 +293,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     B &= \frac{S}{t} \cdot \frac{2(n-1)}{n} \\
     &= \frac{n-1}{n} \cdot b
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 

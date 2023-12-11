@@ -17,9 +17,9 @@ weight: 20
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \langle x, y\rangle=x^{\top} y=\sum_{i=1}^{n} x_{i} y_{i}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -27,9 +27,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \|x\|_2 = \left ( x^{\top}x \right ) ^{1/2} = \left ( x_1^2 + \dots + x_n^2 \right ) ^{1/2}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -37,9 +37,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \cos \left ( x,y \right ) = \frac{x^{\top}y}{\|x\|_2\|y\|_2} 
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -53,9 +53,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \langle X, Y\rangle = \operatorname{tr}\left(X^{\top} Y\right) = \sum_{i = 1}^{m} \sum_{j = 1}^{n} X_{i j} Y_{i j}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -75,9 +75,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \|X\| _F = \left( \operatorname{tr} \left( X^{\top} X \right) \right) ^{1/2} = \left( \sum _{i=1} ^{m} \sum _{j=1} ^{n} X _{i j} ^{2} \right) ^{1/2}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -104,9 +104,9 @@ Frobenius 范数实际上就是将矩阵的系数按一定顺序排列后所生�
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \operatorname{dist}(x, y)=\|x-y\|
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -116,9 +116,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \mathcal{B}=\left\{x \in \mathbf{R}^{n} \mid\|x\| \leqslant 1\right\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -128,9 +128,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \|x\| _1 = \left| x_1 \right| + \cdots + \left| x_n \right|
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -138,9 +138,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \|x\| _{\infty} = \max \{ \left| x_1 \right|, \cdots, \left| x_n \right| \}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -148,9 +148,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \|x\| _p = \left( \left| x_1 \right| ^p + \cdots + \left| x_n \right| ^p \right) ^{1/p}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -160,9 +160,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \|x\| _{P}=\left(x^{\top} P x\right)^{1 / 2}=\left\|P^{1 / 2} x\right\| _{2}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -174,9 +174,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \alpha\|x\| _{\mathrm{a}} \leqslant \|x\| _{\mathrm{b}} \leqslant \beta \|x\| _{\mathrm{a}}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -184,9 +184,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \|x\| _{P} \leqslant\|x\| \leqslant \sqrt{n}\|x\| _{P}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -196,9 +196,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \|X\| _{\mathrm{a}, \mathrm{b}}=\sup \{\|X u\| _{\mathrm{a}} \mid \|u\| _{\mathrm{b}} \leqslant 1\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -208,9 +208,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \|X\|_{2}=\sigma _{\max }(X)=\left(\lambda _{\max }\left(X^{\top} X\right)\right)^{1 / 2}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -220,9 +220,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \|X\| _{\infty}=\sup \{\|X u\| _{\infty} \mid\|u\| _{\infty} \leqslant 1\}=\max _{i=1, \cdots, m} \sum _{j=1}^{n}\left|X _{i j}\right|
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -230,9 +230,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \|X\| _{\infty}=\max _{j=1, \cdots, n} \sum _{i=1}^{m}\left|X _{i j}\right|
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -240,9 +240,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \|z\|_{*}=\sup \{z^{\top} x \mid \|x\| \leqslant 1\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -250,9 +250,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 z^{\top}x \leqslant \|x\| \|z\|
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 

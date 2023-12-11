@@ -170,10 +170,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
-    \frac{\mathrm{d}f(x)}{\mathrm{d}x} &= \frac{\mathrm{d}f(x)}{\mathrm{d}f_n(x)} \cdot \frac{\mathrm{d}f_n(x)}{\mathrm{d}f_{n-1}(x)} \cdots \frac{\mathrm{d}f_2(x)}{\mathrm{d}f_1(x)} \\
-    &= \frac{\mathrm{d}f_1(x)}{\mathrm{d}x} \cdot \frac{\mathrm{d}f_2(x)}{\mathrm{d}f_1(x)} \cdots \frac{\mathrm{d}f_n(x)}{\mathrm{d}f_{n-1}(x)} \\
-\end{align}
+\begin{align*}
+    \frac{\mathrm{d}f(x)}{\mathrm{d}x} &= \frac{\mathrm{d}f(x)}{\mathrm{d}f_n(x)} \cdot \frac{\mathrm{d}f_n(x)}{\mathrm{d}f_{n-1}(x)} \cdots \frac{\mathrm{d}f_2(x)}{\mathrm{d}f_1(x)} \tag{1} \\
+    &= \frac{\mathrm{d}f_1(x)}{\mathrm{d}x} \cdot \frac{\mathrm{d}f_2(x)}{\mathrm{d}f_1(x)} \cdots \frac{\mathrm{d}f_n(x)}{\mathrm{d}f_{n-1}(x)} \tag{2} \\
+\end{align*}
 $$
 {{< /math >}}
 

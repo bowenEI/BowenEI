@@ -17,9 +17,9 @@ weight: 60
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \mathcal{R} (A) = \{Ax \mid x \in \mathbf{R}^{n} \}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -29,9 +29,9 @@ $A$ 的**零空间**（或**核**）是指被 $A$ 映射成零的所有向量 $x
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \mathcal{N}(A) = \{x \mid Ax=0\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -39,9 +39,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \mathcal{V}^{\bot} = \{x \mid \forall z \in \mathcal{V}, z^{\top}x=0\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -49,9 +49,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \mathcal{V}^{\bot\bot} = \mathcal{V}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -59,9 +59,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \mathcal{N}(A) = \mathcal{R}(A^{\top})^{\bot}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -71,9 +71,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 A = Q \Lambda Q^{\top}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -85,10 +85,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \det A &= \prod_{i=1}^{n} \lambda_i \\
 \operatorname{tr} A &= \sum_{i=1}^{n} \lambda_i
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -96,9 +96,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \lambda_{\max}(A)=\sup_{x \neq 0} \frac{x^{\top} A x}{x^{\top} x}, \quad \lambda_{\min}(A)=\inf _{x \neq 0} \frac{x^{\top} A x}{x^{\top} x}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -106,9 +106,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \lambda_{\min}(A)x^{\top}x \leqslant x^{\top}x \leqslant \lambda_{\max}(A)x^{\top}x
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -122,9 +122,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 A^{1 / 2}=Q \operatorname{diag}\left(\lambda_{1}^{1 / 2}, \cdots, \lambda_{n}^{1 / 2}\right) Q^{\top}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -140,9 +140,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 A = U \Sigma V^{\top}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -150,9 +150,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \sigma_1 \geqslant \sigma_2 \geqslant \cdots \geqslant \sigma_r > 0
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -160,9 +160,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 A=\sum_{i=1}^{r} \sigma_{i} u_{i} v_{i}^{\top}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -172,9 +172,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 A^{\dagger}=V \Sigma^{-1} U^{\top} \in \mathbf{R}^{n \times m}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -186,12 +186,12 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 X = \left [ \begin{matrix}
  A & B \\
  B^{\top} & C
 \end{matrix} \right ] 
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -199,9 +199,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 S = C - B^{\top}A^{-1}B
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -209,9 +209,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \det X = \det A \det S
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -221,7 +221,7 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \left[\begin{array}{cc}
 A & B \\
 B^{\top} & C
@@ -232,7 +232,7 @@ y
 u \\
 v
 \end{array}\right]
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -240,9 +240,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 y = S^{-1}\left(v - B^{\top}A^{-1}u\right)
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -250,9 +250,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 x=\left(A^{-1}+A^{-1} B S^{-1} B^{\top} A^{-1}\right) u-A^{-1} B S^{-1} v
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -260,7 +260,7 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \left[\begin{array}{cc}
 A & B \\
 B^{\top} & C
@@ -268,6 +268,6 @@ B^{\top} & C
 A^{-1}+A^{-1} B S^{-1} B^{\top} A^{-1} & -A^{-1} B S^{-1} \\
 -S^{-1} B^{\top} A^{-1} & S^{-1}
 \end{array}\right]
-\end{align}
+\end{align*}
 $$
 {{< /math >}}

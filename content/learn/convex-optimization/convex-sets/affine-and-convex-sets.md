@@ -17,9 +17,9 @@ weight: 110
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 y = \theta x_1 + (1-\theta) x_2, \quad \theta \in \mathbf{R}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -27,9 +27,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 y = \theta x_1 + (1-\theta) x_2, \quad \theta \in [0, 1]
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -39,9 +39,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 y = x_2 + \theta(x_1 - x_2)
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -51,9 +51,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \forall x_1,x_2 \in C, \quad \theta x_1 + (1 - \theta) x_2 \in C \quad (\theta \in \mathbf{R})
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -63,9 +63,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 C = V + x_0 = \{v + x_0 \mid v \in V\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -75,9 +75,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \operatorname{aff} C = \{\theta_1 x_1 + \cdots + \theta_1 x_1 \mid x_1, \cdots, x_k \in C, \theta_1 + \cdots + \theta_k = 1\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -91,9 +91,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 C = \{x \in \mathbf{R}^{3} \mid -1 \leqslant x_1 \leqslant 1, -1 \leqslant x_2 \leqslant 1, x_3=0\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -101,9 +101,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \operatorname{relint} C = \{x \in \mathbf{R}^{3} \mid -1 < x_1 < 1, -1 < x_2 < 1, x_3=0\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -111,9 +111,9 @@ $C$ 在 $\mathbf{R}^{3}$ 中的边界是其自身，而相对边界是其边框�
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \operatorname{cl} C \backslash \operatorname{relint} C = \{x \in \mathbf{R}^{3} \mid \max \{\left|x_1\right|, \left|x_2\right|\}, x_3=0\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -123,9 +123,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \theta x_1 + (1 - \theta) x_2 \in C
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -149,9 +149,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \operatorname{conv} C=\{\theta_1 x_1+\cdots+\theta_k x_k \mid x_i \in C, \theta_i \geqslant 0, \\ i=1, \cdots, k, \theta_1+\cdots+\theta_k=1\}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -163,10 +163,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \sum_{i=1}^{\infty} \theta_{i}=1 &\Rightarrow \sum_{i=1}^{\infty} \theta_{i} x_{i} \in C \\
 \int_{C} p(x) d x =1 &\Rightarrow \int_{C} p(x) x d x \in C
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -176,9 +176,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \theta_1 x_1 + \theta_2 x_2 \in C
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 

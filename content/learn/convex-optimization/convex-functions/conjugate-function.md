@@ -147,10 +147,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 f^{*}(Y) &= \sup _{X \succ 0} \{ \operatorname{tr}(Y X)+\log \det X \} \\
 &= \log \det (-Y)^{-1} - n, \quad \operatorname{dom} f^{*} = -\mathbf{S}^{n}_{++}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 

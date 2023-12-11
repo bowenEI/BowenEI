@@ -82,10 +82,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     \text{MultiHead}(Q, K, V) &= \text{Concat}(\text{head}_1, ..., \text{head}_h)W^O \\
     \text{where } \text{head}_i &= \text{Attention}(QW^Q_i, KW^K_i, VW^V_i)
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -93,10 +93,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     & (d_{\textrm{model}} \times d_{qkv} + d_{qkv}) \times 3 \times h + (d_{\textrm{model}} \times d_{\textrm{model}} + d_{\textrm{model}}) \\
     =\ & 4 (d_{\textrm{model}}^2 + d_{\textrm{model}})
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -108,9 +108,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     \text{FFN}(x) = \text{ReLU}(xW_1 + b_1)W_2 + b_2
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -118,10 +118,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     & (d_{\textrm{model}} \times d_{ff} + d_{ff}) + (d_{ff} \times d_{\textrm{model}} + d_{\textrm{model}}) \\
     =\ & 2 d_{\textrm{model}} d_{ff} + d_{\textrm{model}} + d_{ff}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -131,9 +131,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     y = \frac{x - \mu}{\sigma + \epsilon} \times \gamma + \beta
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -153,10 +153,10 @@ Token Embedding 过程包含参数，参数量取决于训练数据 token 的数
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     PE_{(pos, 2i)} &= \sin (pos / 10000^{2i / d_{\textrm{model}}}) \\
     PE_{(pos, 2i+1)} &= \cos (pos / 10000^{2i / d_{\textrm{model}}})
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -178,11 +178,11 @@ LLM 总参数量为上述各部分参数量之和。不考虑输入和输出，�
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     & 4 (d_{\textrm{model}}^2 + d_{\textrm{model}}) + \\ 
     & 2 d_{\textrm{model}} d_{ff} + d_{\textrm{model}} + d_{ff} + \\
     & 2 \times d_{\textrm{model}} \times 2 \\
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -190,10 +190,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     & 4 (d^2 + d) + 2d \times 4d + d + 4d +2d \times 2 \\
     =\ & 12d^2 + 13d
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -209,7 +209,7 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     & 4 (d_{\textrm{model}}^2 + d_{\textrm{model}}) + \\ 
     & 2 d_{\textrm{model}} d_{ff} + d_{\textrm{model}} + d_{ff} + \\
     & 2 \times d_{\textrm{model}} \times 2 \\
@@ -217,7 +217,7 @@ $$
     & 2 \times 512 \times 2048 + 512 + 2048 + \\
     & 2 \times 512 \times 2 \\
     =\ & 3,152,384
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -225,7 +225,7 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     & 4 (d_{\textrm{model}}^2 + d_{\textrm{model}}) \times 2 + \\ 
     & 2 d_{\textrm{model}} d_{ff} + d_{\textrm{model}} + d_{ff} + \\
     & 2 \times d_{\textrm{model}} \times 3 \\
@@ -233,7 +233,7 @@ $$
     & 2 \times 512 \times 2048 + 512 + 2048 + \\
     & 2 \times 512 \times 3 \\
     =\ & 4,204,032
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -245,10 +245,10 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     & (3,152,384 + 4,204,032) \times 6 + 37,000 \times 512 \\
     =\ & 63,082,496
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -278,9 +278,9 @@ LLaMA[^4] 是基于 Transformer 的 Decoder only 模型。考虑到 LLaMA 是参
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
     \text{Arithmetic Intensity} = \frac{\text{FLOPS}}{\text{MOPS}}
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 

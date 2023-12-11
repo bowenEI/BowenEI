@@ -17,9 +17,9 @@ weight: 30
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \{y \mid\|y-x\|_{2} \leqslant \epsilon\} \subseteq C
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -33,9 +33,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \textbf{cl } C=\mathbf{R}^{n} \backslash \textbf{ int}(\mathbf{R}^{n} \backslash C)
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -45,9 +45,9 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
+\begin{align*}
 \textbf{bd } C=\textbf{cl } C \backslash \textbf{int } C
-\end{align}
+\end{align*}
 $$
 {{< /math >}}
 
