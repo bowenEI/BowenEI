@@ -18,7 +18,7 @@ weight: 340
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \frac{1}{2} x^TPx + q^Tx + r \\
+    \mathrm{minimize} \quad & \frac{1}{2} x^{\top}Px + q^{\top}x + r \\
     \mathrm{subject\ to} \quad & Gx \preceq h \\
     \quad & Ax = b
 \end{aligned}
@@ -36,8 +36,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \frac{1}{2} x^TPx + q^Tx + r \\
-    \mathrm{subject\ to} \quad & \frac{1}{2} x^TP_ix + q^T_ix + r_i \leqslant 0 \\
+    \mathrm{minimize} \quad & \frac{1}{2} x^{\top}Px + q^{\top}x + r \\
+    \mathrm{subject\ to} \quad & \frac{1}{2} x^{\top}P_ix + q^{\top}_ix + r_i \leqslant 0 \\
     \quad & Ax = b
 \end{aligned}
 $$
@@ -53,7 +53,7 @@ $$
 
 {{< math >}}
 $$
-\| Ax - b \|^2_2 = x^TA^TAx - 2b^TAx + b^Tb
+\| Ax - b \|^2_2 = x^{\top}A^{\top}Ax - 2b^{\top}Ax + b^{\top}b
 $$
 {{< /math >}}
 
@@ -64,8 +64,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & f^Tx \\
-    \mathrm{subject\ to} \quad & \| A_ix + b_i \|_2 \leqslant c_i^Tx + d_i, \quad i = 1,\cdots,m \\
+    \mathrm{minimize} \quad & f^{\top}x \\
+    \mathrm{subject\ to} \quad & \| A_ix + b_i \|_2 \leqslant c_i^{\top}x + d_i, \quad i = 1,\cdots,m \\
     \quad & Fx = g
 \end{aligned}
 $$
@@ -75,7 +75,7 @@ $$
 
 {{< math >}}
 $$
-\| Ax + b \|_2 \leqslant c^Tx + d
+\| Ax + b \|_2 \leqslant c^{\top}x + d
 $$
 {{< /math >}}
 

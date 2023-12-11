@@ -18,7 +18,7 @@ $$
 \begin{aligned}
     \mathrm{minimize} \quad & f_0(x) \\
     \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\
-    & a_i^Tx = b_i, \quad i = 1, \cdots, p
+    & a_i^{\top}x = b_i, \quad i = 1, \cdots, p
 \end{aligned}
 $$
 {{< /math >}}
@@ -27,7 +27,7 @@ $$
 
 - 目标函数是凸函数
 - 不等式约束是凸的
-- 等式约束 $h_i(x) = a_i^Tx - b_i$ 是仿射函数
+- 等式约束 $h_i(x) = a_i^{\top}x - b_i$ 是仿射函数
 
 凸优化问题的可行域也是凸的。因此，在凸优化问题中，我们最小化凸集上的凸目标函数。
 
@@ -42,7 +42,7 @@ $$
 \begin{aligned}
     \mathrm{maximize} \quad & f_0(x) \\
     \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\
-    & a_i^Tx = b_i, \quad i = 1, \cdots, p
+    & a_i^{\top}x = b_i, \quad i = 1, \cdots, p
 \end{aligned}
 $$
 {{< /math >}}
@@ -97,7 +97,7 @@ $$
 
 {{< math >}}
 $$
-f_0(y) \geqslant f_0(x) + \nabla f_0(x)^T (y-x)
+f_0(y) \geqslant f_0(x) + \nabla f_0(x)^{\top} (y-x)
 $$
 {{< /math >}}
 
@@ -116,7 +116,7 @@ $$
 
 {{< math >}}
 $$
-\forall y \in X, \quad \nabla f_0(x)^T (y-x) \geqslant 0
+\forall y \in X, \quad \nabla f_0(x)^{\top} (y-x) \geqslant 0
 $$
 {{< /math >}}
 
@@ -142,7 +142,7 @@ $$
 
 {{< math >}}
 $$
-f_0(x) = \frac{1}{2} x^TPx + q^T + r
+f_0(x) = \frac{1}{2} x^{\top}Px + q^{\top} + r
 $$
 {{< /math >}}
 
@@ -175,7 +175,7 @@ $$
 
 {{< math >}}
 $$
-\nabla f_0(x)^T(y-x) \geqslant 0
+\nabla f_0(x)^{\top}(y-x) \geqslant 0
 $$
 {{< /math >}}
 
@@ -183,11 +183,11 @@ $$
 
 {{< math >}}
 $$
-\forall v \in \mathcal{N}(A), \quad \nabla f_0(x)^Tv \geqslant 0
+\forall v \in \mathcal{N}(A), \quad \nabla f_0(x)^{\top}v \geqslant 0
 $$
 {{< /math >}}
 
-如果一个线性函数在其子空间上非负，则它在子空间上必恒等于零。因此，$\forall v \in \mathcal{N}(A)$，有 $\nabla f_0(x)^Tv = 0$，即
+如果一个线性函数在其子空间上非负，则它在子空间上必恒等于零。因此，$\forall v \in \mathcal{N}(A)$，有 $\nabla f_0(x)^{\top}v = 0$，即
 
 {{< math >}}
 $$
@@ -199,15 +199,15 @@ $$
 
 {{< math >}}
 $$
-\mathcal{N}(A) = \mathcal{R}(A^T)^{\bot}
+\mathcal{N}(A) = \mathcal{R}(A^{\top})^{\bot}
 $$
 {{< /math >}}
 
-可以将只含等式约束的凸优化问题表示为 $\nabla f_0(x) \in \mathcal{R}(A^T)$，即存在 $v \in \mathbf{R}^p$，使得
+可以将只含等式约束的凸优化问题表示为 $\nabla f_0(x) \in \mathcal{R}(A^{\top})$，即存在 $v \in \mathbf{R}^p$，使得
 
 {{< math >}}
 $$
-\nabla f_0(x) + A^Tv = 0
+\nabla f_0(x) + A^{\top}v = 0
 $$
 {{< /math >}}
 
@@ -269,7 +269,7 @@ $$
     \mathrm{minimize} \quad & t \\
     \mathrm{subject\ to} \quad & f_0(x) - t \leqslant 0 \\
     \quad & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\
-    \quad & a_i^Tx=b_i, \quad i=1,\cdots,p
+    \quad & a_i^{\top}x=b_i, \quad i=1,\cdots,p
 \end{aligned}
 $$
 {{< /math >}}
@@ -281,7 +281,7 @@ $$
 \begin{aligned}
     \mathrm{minimize} \quad & f_0(x) \\
     \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i = 1, \cdots, m \\
-    & A^Tx = b 
+    & A^{\top}x = b 
 \end{aligned}
 $$
 {{< /math >}}

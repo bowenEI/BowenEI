@@ -18,7 +18,7 @@ weight: 160
 {{< math >}}
 $$
 \begin{align}
-K^{*} = \{y \mid x^{T} y \geqslant 0, \forall x \in K\}
+K^{*} = \{y \mid x^{\top} y \geqslant 0, \forall x \in K\}
 \end{align}
 $$
 {{< /math >}}
@@ -44,8 +44,8 @@ $$
 {{< math >}}
 $$
 \begin{align}
-x \preceq_K y \Leftrightarrow \forall \lambda \succeq _{K^{*}} 0, \lambda^T x \leqslant \lambda^T y \\
-x \prec_K y \Leftrightarrow \forall \lambda \succeq _{K^{*}} 0 \wedge \lambda \ne 0, \lambda^T x < \lambda^T y
+x \preceq_K y \Leftrightarrow \forall \lambda \succeq _{K^{*}} 0, \lambda^{\top} x \leqslant \lambda^{\top} y \\
+x \prec_K y \Leftrightarrow \forall \lambda \succeq _{K^{*}} 0 \wedge \lambda \ne 0, \lambda^{\top} x < \lambda^{\top} y
 \end{align}
 $$
 {{< /math >}}
@@ -54,13 +54,13 @@ $$
 
 ### 最小元的对偶性质
 
-$x$ 是 $S$ 上关于广义不等式 $\preceq_K$ 的最小元的充要条件是，对于 {{< math >}}$\forall \lambda \succ_{K^{*}} 0${{< /math >}}，$x$ 是在 $z \in S$ 上极小化 $\lambda^T z$ 的唯一最优解。从几何上看，这意味着对于 {{< math >}}$\forall \lambda \succ_{K^{*}} 0${{< /math >}}，超平面 $\{z \mid \lambda^T (z-x) = 0\}$ 是在 $x$ 处对 $S$ 的一个严格支撑超平面。如图所示。
+$x$ 是 $S$ 上关于广义不等式 $\preceq_K$ 的最小元的充要条件是，对于 {{< math >}}$\forall \lambda \succ_{K^{*}} 0${{< /math >}}，$x$ 是在 $z \in S$ 上极小化 $\lambda^{\top} z$ 的唯一最优解。从几何上看，这意味着对于 {{< math >}}$\forall \lambda \succ_{K^{*}} 0${{< /math >}}，超平面 $\{z \mid \lambda^{\top} (z-x) = 0\}$ 是在 $x$ 处对 $S$ 的一个严格支撑超平面。如图所示。
 
 {{< figure src="learn/convex-optimization/convex-sets/2-6-2.png" >}}
 
 ### 极小元的对偶性质
 
-如果 {{< math >}}$\lambda \succ _{K^{*}} 0${{< /math >}} 并且 $x$ 在 $z \in S$ 上极小化 $\lambda^T z$，那么 $x$ 是极小的，如图所示。
+如果 {{< math >}}$\lambda \succ _{K^{*}} 0${{< /math >}} 并且 $x$ 在 $z \in S$ 上极小化 $\lambda^{\top} z$，那么 $x$ 是极小的，如图所示。
 
 {{< figure src="learn/convex-optimization/convex-sets/2-6-3.png" >}}
 

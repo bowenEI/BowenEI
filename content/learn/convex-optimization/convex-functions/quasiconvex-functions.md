@@ -48,7 +48,7 @@ weight: 250
 
 {{< math >}}
 $$
-f(x)=\frac{a^{T} x+b}{c^{T} x+d}
+f(x)=\frac{a^{\top} x+b}{c^{\top} x+d}
 $$
 {{< /math >}}
 
@@ -57,8 +57,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-S_{\alpha} &=\left\{x \mid c^{T} x+d>0,\left(a^{T} x+b\right) /\left(c^{T} x+d\right) \leqslant \alpha\right\} \\
-&=\left\{x \mid c^{T} x+d>0, a^{T} x+b \leqslant \alpha\left(c^{T} x+d\right)\right\}
+S_{\alpha} &=\left\{x \mid c^{\top} x+d>0,\left(a^{\top} x+b\right) /\left(c^{\top} x+d\right) \leqslant \alpha\right\} \\
+&=\left\{x \mid c^{\top} x+d>0, a^{\top} x+b \leqslant \alpha\left(c^{\top} x+d\right)\right\}
 \end{aligned}
 $$
 {{< /math >}}
@@ -107,7 +107,7 @@ $$
 
 {{< math >}}
 $$
-f(y) \leqslant f(x) \Longrightarrow \nabla f(x)^{T}(y-x) \leqslant 0
+f(y) \leqslant f(x) \Longrightarrow \nabla f(x)^{\top}(y-x) \leqslant 0
 $$
 {{< /math >}}
 
@@ -123,7 +123,7 @@ $$
 
 {{< math >}}
 $$
-y^{T} \nabla f(x)=0 \Longrightarrow y^{T} \nabla^{2} f(x) y \geqslant 0
+y^{\top} \nabla f(x)=0 \Longrightarrow y^{\top} \nabla^{2} f(x) y \geqslant 0
 $$
 {{< /math >}}
 

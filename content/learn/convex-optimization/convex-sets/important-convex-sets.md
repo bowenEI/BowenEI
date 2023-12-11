@@ -26,17 +26,17 @@ weight: 120
 {{< math >}}
 $$
 \begin{align}
-\{x \mid a^Tx=b\}
+\{x \mid a^{\top}x=b\}
 \end{align}
 $$
 {{< /math >}}
 
-其中 $a \in \mathbf{R}^{n}$，$a \ne 0$ 且 $b \in \mathbf{R}$。超平面是关于 $x$ 的非平凡线性方程的解空间（因此是一个仿射集合）。几何上，$\{x \mid a^Tx=b\}$ 可以看作是法线方向为 $a$ 的超平面，而常数 $b$ 决定了这个平面从原点的偏移。下面给出的是超平面的点向式方程：
+其中 $a \in \mathbf{R}^{n}$，$a \ne 0$ 且 $b \in \mathbf{R}$。超平面是关于 $x$ 的非平凡线性方程的解空间（因此是一个仿射集合）。几何上，$\{x \mid a^{\top}x=b\}$ 可以看作是法线方向为 $a$ 的超平面，而常数 $b$ 决定了这个平面从原点的偏移。下面给出的是超平面的点向式方程：
 
 {{< math >}}
 $$
 \begin{align}
-\{x \mid a^T(x - x_0) = 0\}
+\{x \mid a^{\top}(x - x_0) = 0\}
 \end{align}
 $$
 {{< /math >}}
@@ -46,7 +46,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\{x \mid a^Tx \leqslant b\}
+\{x \mid a^{\top}x \leqslant b\}
 \end{align}
 $$
 {{< /math >}}
@@ -80,12 +80,12 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\mathcal{E} = \{x | (x - x_c)^T P^{-1} (x - x_c) \leqslant 1\}
+\mathcal{E} = \{x | (x - x_c)^{\top} P^{-1} (x - x_c) \leqslant 1\}
 \end{align}
 $$
 {{< /math >}}
 
-其中 $P = P^T \succ 0$，即 $P$ 是对称正定矩阵。向量 $x_c$ 为椭球的中心，矩阵 $P$ 决定了椭球从 $x_c$ 向各个方向扩展的幅度。$\mathcal{E}$ 的半轴长度为 $\sqrt{\lambda_i}$，这里的 $\lambda_i$ 为 $P$ 的特征值。
+其中 $P = P^{\top} \succ 0$，即 $P$ 是对称正定矩阵。向量 $x_c$ 为椭球的中心，矩阵 $P$ 决定了椭球从 $x_c$ 向各个方向扩展的幅度。$\mathcal{E}$ 的半轴长度为 $\sqrt{\lambda_i}$，这里的 $\lambda_i$ 为 $P$ 的特征值。
 
 椭球另一个常用的表示形式是
 
@@ -118,7 +118,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\mathcal{P} = \{x \mid a_i^Tx \leqslant b_i, i=1,\cdots,m, c_j^Tx = d_j, j=1,\cdots,p\}
+\mathcal{P} = \{x \mid a_i^{\top}x \leqslant b_i, i=1,\cdots,m, c_j^{\top}x = d_j, j=1,\cdots,p\}
 \end{align}
 $$
 {{< /math >}}
@@ -142,7 +142,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-C = \operatorname{conv}\{v_0, \cdots, v_k\} = \{\theta_0v_0 + \cdots + \theta_kv_k \mid \theta \succeq 0, \mathbf{1}^T\theta=1\}
+C = \operatorname{conv}\{v_0, \cdots, v_k\} = \{\theta_0v_0 + \cdots + \theta_kv_k \mid \theta \succeq 0, \mathbf{1}^{\top}\theta=1\}
 \end{align}
 $$
 {{< /math >}}
@@ -158,7 +158,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\operatorname{conv}\{v_1, \cdots, v_k\} = \{\theta_1v_1 + \cdots + \theta_kv_k \mid \theta \succeq 0, \mathbf{1}^T \theta = 1\}
+\operatorname{conv}\{v_1, \cdots, v_k\} = \{\theta_1v_1 + \cdots + \theta_kv_k \mid \theta \succeq 0, \mathbf{1}^{\top} \theta = 1\}
 \end{align}
 $$
 {{< /math >}}
@@ -172,7 +172,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\mathbf{S}^n = \{X \in \mathbf{R}^{n \times n} \mid X = X^T\}
+\mathbf{S}^n = \{X \in \mathbf{R}^{n \times n} \mid X = X^{\top}\}
 \end{align}
 $$
 {{< /math >}}

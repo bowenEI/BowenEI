@@ -34,7 +34,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\{x \mid x^{T} P x \leqslant\left(c^{T} x\right)^{2}, c^{T} x \geqslant 0\}
+\{x \mid x^{\top} P x \leqslant\left(c^{\top} x\right)^{2}, c^{\top} x \geqslant 0\}
 \end{align}
 $$
 {{< /math >}}
@@ -44,19 +44,19 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\{(z, t) \mid z^Tz \leqslant t^2, t \geqslant 0\}
+\{(z, t) \mid z^{\top}z \leqslant t^2, t \geqslant 0\}
 \end{align}
 $$
 {{< /math >}}
 
-在仿射函数 $f(x) = (P^{1/2}x, c^Tx)$ 下的原象。
+在仿射函数 $f(x) = (P^{1/2}x, c^{\top}x)$ 下的原象。
 
 **椭球**
 
 {{< math >}}
 $$
 \begin{align}
-\mathcal{E}=\{x \mid\left(x-x_{c}\right)^{T} P^{-1}\left(x-x_{c}\right) \leqslant 1\}
+\mathcal{E}=\{x \mid\left(x-x_{c}\right)^{\top} P^{-1}\left(x-x_{c}\right) \leqslant 1\}
 \end{align}
 $$
 {{< /math >}}
@@ -90,7 +90,7 @@ $$
 \begin{align}
 g(x) & = \left[\begin{array}{c}
 A \\
-c^{T}
+c^{\top}
 \end{array}\right] x+\left[\begin{array}{l}
 b \\
 d
@@ -104,7 +104,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-f(x) & = \left(A x+b\right) /\left(c^{T} x+d\right), \quad \operatorname{dom} f = \{x \mid c^{T} x+d>0\}
+f(x) & = \left(A x+b\right) /\left(c^{\top} x+d\right), \quad \operatorname{dom} f = \{x \mid c^{\top} x+d>0\}
 \end{align}
 $$
 {{< /math >}}

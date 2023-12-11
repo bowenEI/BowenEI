@@ -304,7 +304,7 @@ $$
 
 {{< math >}}
 $$
-\operatorname{minimize} \| Ax - b \|_2^2 = (Ax-b)^T(Ax-b)
+\operatorname{minimize} \| Ax - b \|_2^2 = (Ax-b)^{\top}(Ax-b)
 $$
 {{< /math >}}
 

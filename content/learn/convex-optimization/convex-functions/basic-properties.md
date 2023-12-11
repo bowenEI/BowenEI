@@ -44,7 +44,7 @@ $$
 
 {{< math >}}
 $$
-f(y) \geqslant f(x)+\nabla f(x)^{T}(y-x)
+f(y) \geqslant f(x)+\nabla f(x)^{\top}(y-x)
 $$
 {{< /math >}}
 

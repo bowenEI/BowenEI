@@ -70,7 +70,7 @@ LLM 超参数定义如下：
 
 {{< math >}}
 $$
-\text{Attention}(Q, K, V) = \text{Softmax}(\frac{QK^T}{\sqrt{d_k}})V
+\text{Attention}(Q, K, V) = \text{Softmax}(\frac{QK^{\top}}{\sqrt{d_k}})V
 $$
 {{< /math >}}
 

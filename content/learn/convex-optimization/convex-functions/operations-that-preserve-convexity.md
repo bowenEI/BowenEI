@@ -130,7 +130,7 @@ $$
 下面考虑 $k \geqslant 1$ 的情况，虽然情况更复杂一些，但也可以得到类似标量的结论。同样地，我们求出 $f$ 的二阶导数：
 {{< math >}}
 $$
-f^{\prime \prime}(x)=g^{\prime}(x)^{T} \nabla^{2} h(g(x)) g^{\prime}(x)+\nabla h(g(x))^{T} g^{\prime \prime}(x)
+f^{\prime \prime}(x)=g^{\prime}(x)^{\top} \nabla^{2} h(g(x)) g^{\prime}(x)+\nabla h(g(x))^{\top} g^{\prime \prime}(x)
 $$
 {{< /math >}}
 根据标量复合的结论，我们得到矢量复合的类似性质如下：

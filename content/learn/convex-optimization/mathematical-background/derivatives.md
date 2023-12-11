@@ -52,7 +52,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\nabla f(x)=D f(x)^{T}
+\nabla f(x)=D f(x)^{\top}
 \end{align}
 $$
 {{< /math >}}
@@ -75,7 +75,7 @@ $$
 $$
 \begin{align}
 \nabla h(x) &= g'(f(x))f(x) \\
-&= \nabla g(f(x))^T f(x)
+&= \nabla g(f(x))^{\top} f(x)
 \end{align}
 $$
 {{< /math >}}
@@ -87,7 +87,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\nabla g(x) = A^T \nabla f(Ax+b)
+\nabla g(x) = A^{\top} \nabla f(Ax+b)
 \end{align}
 $$
 {{< /math >}}
@@ -107,7 +107,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-D \tilde{f}(t)=\tilde{f}^{\prime}(t)=\nabla f(x+t v)^{T} v
+D \tilde{f}(t)=\tilde{f}^{\prime}(t)=\nabla f(x+t v)^{\top} v
 \end{align}
 $$
 {{< /math >}}
@@ -131,7 +131,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\widehat{f}(z)=f(x)+\nabla f(x)^{T}(z-x)+\frac{1}{2}(z-x)^{T} \nabla^{2} f(x)(z-x)
+\widehat{f}(z)=f(x)+\nabla f(x)^{\top}(z-x)+\frac{1}{2}(z-x)^{\top} \nabla^{2} f(x)(z-x)
 \end{align}
 $$
 {{< /math >}}
@@ -145,7 +145,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\nabla^{2} h(x)=g^{\prime}(f(x)) \nabla^{2} f(x)+g^{\prime \prime}(f(x)) \nabla f(x) \nabla f(x)^{T}
+\nabla^{2} h(x)=g^{\prime}(f(x)) \nabla^{2} f(x)+g^{\prime \prime}(f(x)) \nabla f(x) \nabla f(x)^{\top}
 \end{align}
 $$
 {{< /math >}}
@@ -157,7 +157,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\nabla^{2} g(x)=A^T \nabla^{2} f(Ax+b) A
+\nabla^{2} g(x)=A^{\top} \nabla^{2} f(Ax+b) A
 \end{align}
 $$
 {{< /math >}}

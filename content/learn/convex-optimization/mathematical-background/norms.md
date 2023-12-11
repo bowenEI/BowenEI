@@ -18,7 +18,7 @@ weight: 20
 {{< math >}}
 $$
 \begin{align}
-\langle x, y\rangle=x^{T} y=\sum_{i=1}^{n} x_{i} y_{i}
+\langle x, y\rangle=x^{\top} y=\sum_{i=1}^{n} x_{i} y_{i}
 \end{align}
 $$
 {{< /math >}}
@@ -28,7 +28,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\|x\|_2 = \left ( x^Tx \right ) ^{1/2} = \left ( x_1^2 + \dots + x_n^2 \right ) ^{1/2}
+\|x\|_2 = \left ( x^{\top}x \right ) ^{1/2} = \left ( x_1^2 + \dots + x_n^2 \right ) ^{1/2}
 \end{align}
 $$
 {{< /math >}}
@@ -38,12 +38,12 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\cos \left ( x,y \right ) = \frac{x^Ty}{\|x\|_2\|y\|_2} 
+\cos \left ( x,y \right ) = \frac{x^{\top}y}{\|x\|_2\|y\|_2} 
 \end{align}
 $$
 {{< /math >}}
 
-若 $x^Ty=0$，称 $x$ 和 $y$ **正交**。
+若 $x^{\top}y=0$，称 $x$ 和 $y$ **正交**。
 
 ## Frobenius 范数
 
@@ -54,7 +54,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\langle X, Y\rangle = \operatorname{tr}\left(X^{T} Y\right) = \sum_{i = 1}^{m} \sum_{j = 1}^{n} X_{i j} Y_{i j}
+\langle X, Y\rangle = \operatorname{tr}\left(X^{\top} Y\right) = \sum_{i = 1}^{m} \sum_{j = 1}^{n} X_{i j} Y_{i j}
 \end{align}
 $$
 {{< /math >}}
@@ -63,9 +63,11 @@ $$
 
 {{< math >}}
 $$
-\begin{align}
-\langle X, Y\rangle=\operatorname{tr}(X Y)=\sum_{i=1}^{n} \sum_{j=1}^{n} X_{i j} Y_{i j}=\sum_{i=1}^{n} X_{i i} Y_{i i}+2 \sum_{i<j} X_{i j} Y_{i j}
-\end{align}
+\begin{align*}
+    \langle X, Y \rangle &= \operatorname{tr}(XY) \\
+    &= \sum_{i=1}^{n} \sum_{j=1}^{n} X_{ij} Y_{ij} \\
+    &= \sum_{i=1}^{n} X_{ii} Y_{ii} + 2 \sum_{i < j} X_{ij} Y_{ij}
+\end{align*}
 $$
 {{< /math >}}
 
@@ -74,7 +76,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\|X\| _F = \left( \operatorname{tr} \left( X^T X \right) \right) ^{1/2} = \left( \sum _{i=1} ^{m} \sum _{j=1} ^{n} X _{i j} ^{2} \right) ^{1/2}
+\|X\| _F = \left( \operatorname{tr} \left( X^{\top} X \right) \right) ^{1/2} = \left( \sum _{i=1} ^{m} \sum _{j=1} ^{n} X _{i j} ^{2} \right) ^{1/2}
 \end{align}
 $$
 {{< /math >}}
@@ -159,7 +161,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\|x\| _{P}=\left(x^{T} P x\right)^{1 / 2}=\left\|P^{1 / 2} x\right\| _{2}
+\|x\| _{P}=\left(x^{\top} P x\right)^{1 / 2}=\left\|P^{1 / 2} x\right\| _{2}
 \end{align}
 $$
 {{< /math >}}
@@ -207,7 +209,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\|X\|_{2}=\sigma _{\max }(X)=\left(\lambda _{\max }\left(X^{T} X\right)\right)^{1 / 2}
+\|X\|_{2}=\sigma _{\max }(X)=\left(\lambda _{\max }\left(X^{\top} X\right)\right)^{1 / 2}
 \end{align}
 $$
 {{< /math >}}
@@ -239,7 +241,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\|z\|_{*}=\sup \{z^{T} x \mid \|x\| \leqslant 1\}
+\|z\|_{*}=\sup \{z^{\top} x \mid \|x\| \leqslant 1\}
 \end{align}
 $$
 {{< /math >}}
@@ -249,7 +251,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-z^Tx \leqslant \|x\| \|z\|
+z^{\top}x \leqslant \|x\| \|z\|
 \end{align}
 $$
 {{< /math >}}

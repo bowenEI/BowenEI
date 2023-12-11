@@ -37,7 +37,7 @@ $$
 
 ### 举例
 
-- 仿射函数 $f(x) = a^Tx + b$ 在 $\{ x \mid a^Tx + b > 0 \}$ 上是对数凹函数。
+- 仿射函数 $f(x) = a^{\top}x + b$ 在 $\{ x \mid a^{\top}x + b > 0 \}$ 上是对数凹函数。
 
 - 幂函数 $f(x) = x^a$ 在 $\mathbf{R}_{++}$ 上当 $a \leqslant 0$ 时是对数凸函数，当 $a \geqslant 0$ 时是对数凹函数。
 
@@ -71,7 +71,7 @@ $$
 
 {{< math >}}
 $$
-\nabla^{2} \log f(x)=\frac{1}{f(x)} \nabla^{2} f(x)-\frac{1}{f(x)^{2}} \nabla f(x) \nabla f(x)^{T}
+\nabla^{2} \log f(x)=\frac{1}{f(x)} \nabla^{2} f(x)-\frac{1}{f(x)^{2}} \nabla f(x) \nabla f(x)^{\top}
 $$
 {{< /math >}}
 
@@ -80,8 +80,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-f(x) \nabla^{2} f(x) \succeq \nabla f(x) \nabla f(x)^{T} \\
-f(x) \nabla^{2} f(x) \preceq \nabla f(x) \nabla f(x)^{T}
+f(x) \nabla^{2} f(x) \succeq \nabla f(x) \nabla f(x)^{\top} \\
+f(x) \nabla^{2} f(x) \preceq \nabla f(x) \nabla f(x)^{\top}
 \end{aligned}
 $$
 {{< /math >}}
@@ -105,7 +105,7 @@ $$
 
 {{< math >}}
 $$
-P(z)=\int p(x) e^{-z^{T} x} \mathrm{d} x
+P(z)=\int p(x) e^{-z^{\top} x} \mathrm{d} x
 $$
 {{< /math >}}
 

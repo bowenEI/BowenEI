@@ -40,7 +40,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\mathcal{V}^{\bot} = \{x \mid \forall z \in \mathcal{V}, z^Tx=0\}
+\mathcal{V}^{\bot} = \{x \mid \forall z \in \mathcal{V}, z^{\top}x=0\}
 \end{align}
 $$
 {{< /math >}}
@@ -60,7 +60,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\mathcal{N}(A) = \mathcal{R}(A^T)^{\bot}
+\mathcal{N}(A) = \mathcal{R}(A^{\top})^{\bot}
 \end{align}
 $$
 {{< /math >}}
@@ -72,12 +72,12 @@ $$
 {{< math >}}
 $$
 \begin{align}
-A = Q \Lambda Q^T
+A = Q \Lambda Q^{\top}
 \end{align}
 $$
 {{< /math >}}
 
-其中 $Q \in \mathbf{R}^{n \times n}$ 是正交矩阵，满足 $Q^TQ = I$，而 $\Lambda = \operatorname{diag}(\lambda_1, \cdots, \lambda_n)$。实数 $\lambda_i$ 是 $A$ 的**特征值**，是**特征多项式** $\det(sI-A)$ 的根，$Q$ 的列向量构成 $A$ 的一组正交**特征向量**。
+其中 $Q \in \mathbf{R}^{n \times n}$ 是正交矩阵，满足 $Q^{\top}Q = I$，而 $\Lambda = \operatorname{diag}(\lambda_1, \cdots, \lambda_n)$。实数 $\lambda_i$ 是 $A$ 的**特征值**，是**特征多项式** $\det(sI-A)$ 的根，$Q$ 的列向量构成 $A$ 的一组正交**特征向量**。
 
 通常我们将特征值按从大到小排序，用 $\lambda_{i}(A)$ 表示第 $i$ 大特征值。最大特征值记作 $\lambda_{1}(A) = \lambda_{max}(A)$，最小特征值记作 $\lambda_{n}(A) = \lambda_{min}(A)$。
 
@@ -97,7 +97,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\lambda_{\max}(A)=\sup_{x \neq 0} \frac{x^{T} A x}{x^{T} x}, \quad \lambda_{\min}(A)=\inf _{x \neq 0} \frac{x^{T} A x}{x^{T} x}
+\lambda_{\max}(A)=\sup_{x \neq 0} \frac{x^{\top} A x}{x^{\top} x}, \quad \lambda_{\min}(A)=\inf _{x \neq 0} \frac{x^{\top} A x}{x^{\top} x}
 \end{align}
 $$
 {{< /math >}}
@@ -107,14 +107,14 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\lambda_{\min}(A)x^Tx \leqslant x^Tx \leqslant \lambda_{\max}(A)x^Tx
+\lambda_{\min}(A)x^{\top}x \leqslant x^{\top}x \leqslant \lambda_{\max}(A)x^{\top}x
 \end{align}
 $$
 {{< /math >}}
 
 ### 正定矩阵
 
-若矩阵 $A$ 对 $\forall x \ne 0$，有 $x^TAx > 0$ 成立，则称矩阵 $A$ **正定**，记作 $A \succ 0$。显然，$A \succ 0$ 的充要条件是 $\lambda_{\min}(A) > 0$。
+若矩阵 $A$ 对 $\forall x \ne 0$，有 $x^{\top}Ax > 0$ 成立，则称矩阵 $A$ **正定**，记作 $A \succ 0$。显然，$A \succ 0$ 的充要条件是 $\lambda_{\min}(A) > 0$。
 
 同理，半正定（非负定）、负定、半负定（非正定）矩阵的定义类似。本文从略。
 
@@ -123,7 +123,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-A^{1 / 2}=Q \operatorname{diag}\left(\lambda_{1}^{1 / 2}, \cdots, \lambda_{n}^{1 / 2}\right) Q^{T}
+A^{1 / 2}=Q \operatorname{diag}\left(\lambda_{1}^{1 / 2}, \cdots, \lambda_{n}^{1 / 2}\right) Q^{\top}
 \end{align}
 $$
 {{< /math >}}
@@ -141,12 +141,12 @@ $$
 {{< math >}}
 $$
 \begin{align}
-A = U \Sigma V^T
+A = U \Sigma V^{\top}
 \end{align}
 $$
 {{< /math >}}
 
-其中 $U \in \mathbf{R}^{m \times r}$ 满足 $U^TU = I$，$V \in \mathbf{R}^{n \times r}$ 满足 $V^TV = I$，而 $\Sigma = \operatorname{diag}(\sigma_1, \cdots, \sigma_r)$ 满足
+其中 $U \in \mathbf{R}^{m \times r}$ 满足 $U^{\top}U = I$，$V \in \mathbf{R}^{n \times r}$ 满足 $V^{\top}V = I$，而 $\Sigma = \operatorname{diag}(\sigma_1, \cdots, \sigma_r)$ 满足
 
 {{< math >}}
 $$
@@ -161,19 +161,19 @@ $$
 {{< math >}}
 $$
 \begin{align}
-A=\sum_{i=1}^{r} \sigma_{i} u_{i} v_{i}^{T}
+A=\sum_{i=1}^{r} \sigma_{i} u_{i} v_{i}^{\top}
 \end{align}
 $$
 {{< /math >}}
 
 ### 伪逆
 
-设 $A = U \Sigma V^T$ 为 $A \in \mathbf{m \times n}$ 的奇异值分解，$\operatorname{rank} A = r$，则 $A$ 的**伪逆**为
+设 $A = U \Sigma V^{\top}$ 为 $A \in \mathbf{m \times n}$ 的奇异值分解，$\operatorname{rank} A = r$，则 $A$ 的**伪逆**为
 
 {{< math >}}
 $$
 \begin{align}
-A^{\dagger}=V \Sigma^{-1} U^{T} \in \mathbf{R}^{n \times m}
+A^{\dagger}=V \Sigma^{-1} U^{\top} \in \mathbf{R}^{n \times m}
 \end{align}
 $$
 {{< /math >}}
@@ -189,7 +189,7 @@ $$
 \begin{align}
 X = \left [ \begin{matrix}
  A & B \\
- B^T & C
+ B^{\top} & C
 \end{matrix} \right ] 
 \end{align}
 $$
@@ -200,7 +200,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-S = C - B^TA^{-1}B
+S = C - B^{\top}A^{-1}B
 \end{align}
 $$
 {{< /math >}}
@@ -224,7 +224,7 @@ $$
 \begin{align}
 \left[\begin{array}{cc}
 A & B \\
-B^{T} & C
+B^{\top} & C
 \end{array}\right]\left[\begin{array}{l}
 x \\
 y
@@ -241,7 +241,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-y = S^{-1}\left(v - B^TA^{-1}u\right)
+y = S^{-1}\left(v - B^{\top}A^{-1}u\right)
 \end{align}
 $$
 {{< /math >}}
@@ -251,7 +251,7 @@ $$
 {{< math >}}
 $$
 \begin{align}
-x=\left(A^{-1}+A^{-1} B S^{-1} B^{T} A^{-1}\right) u-A^{-1} B S^{-1} v
+x=\left(A^{-1}+A^{-1} B S^{-1} B^{\top} A^{-1}\right) u-A^{-1} B S^{-1} v
 \end{align}
 $$
 {{< /math >}}
@@ -263,10 +263,10 @@ $$
 \begin{align}
 \left[\begin{array}{cc}
 A & B \\
-B^{T} & C
+B^{\top} & C
 \end{array}\right]^{-1}=\left[\begin{array}{cc}
-A^{-1}+A^{-1} B S^{-1} B^{T} A^{-1} & -A^{-1} B S^{-1} \\
--S^{-1} B^{T} A^{-1} & S^{-1}
+A^{-1}+A^{-1} B S^{-1} B^{\top} A^{-1} & -A^{-1} B S^{-1} \\
+-S^{-1} B^{\top} A^{-1} & S^{-1}
 \end{array}\right]
 \end{align}
 $$

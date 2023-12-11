@@ -101,7 +101,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & x^Tx \\
+    \mathrm{minimize} \quad & x^{\top}x \\
     \mathrm{subject\ to} \quad & Ax = b
 \end{aligned}
 $$
@@ -112,7 +112,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    L(x, \nu) &= x^Tx + \nu^T(Ax - b) \\
+    L(x, \nu) &= x^{\top}x + \nu^{\top}(Ax - b) \\
     g(\nu) &= \inf_x L(x, \nu)
 \end{aligned}
 $$
@@ -123,8 +123,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \nabla_x L(x, \nu) = 2x + A^T \nu &= 0 \\
-    x &= -\frac{1}{2} A^T \nu
+    \nabla_x L(x, \nu) = 2x + A^{\top} \nu &= 0 \\
+    x &= -\frac{1}{2} A^{\top} \nu
 \end{aligned}
 $$
 {{< /math >}}
@@ -133,7 +133,7 @@ $$
 
 {{< math >}}
 $$
-g(\nu) = -\frac{1}{4} \nu^T AA^T \nu - b^T \nu
+g(\nu) = -\frac{1}{4} \nu^{\top} AA^{\top} \nu - b^{\top} \nu
 $$
 {{< /math >}}
 
@@ -152,11 +152,11 @@ $$
 $$
 {{< /math >}}
 
-虽然这个问题没有什么挑战性，但是我们还是可以很容易地得到 Lagrange 函数为 $L(x, \nu) = f(x) + \nu^T x$，则其对偶函数为
+虽然这个问题没有什么挑战性，但是我们还是可以很容易地得到 Lagrange 函数为 $L(x, \nu) = f(x) + \nu^{\top} x$，则其对偶函数为
 
 {{< math >}}
 $$
-g(\nu) = \inf_x (f(x) + \nu^T x) = -\sup_x ((-\nu)^Tx - f(x)) = -f^{*}(-\nu)
+g(\nu) = \inf_x (f(x) + \nu^{\top} x) = -\sup_x ((-\nu)^{\top}x - f(x)) = -f^{*}(-\nu)
 $$
 {{< /math >}}
 

@@ -38,7 +38,7 @@ $$
 
 {{< math >}}
 $$
-L(x, y, \nu) = f_0(y) + \nu^T(Ax+b-y)
+L(x, y, \nu) = f_0(y) + \nu^{\top}(Ax+b-y)
 $$
 {{< /math >}}
 
@@ -46,7 +46,7 @@ $$
 
 {{< math >}}
 $$
-g(\nu) = b^T \nu + \inf_y (f_0(y) - \nu^T y) = b^T - f_0^{\star}(\nu)
+g(\nu) = b^{\top} \nu + \inf_y (f_0(y) - \nu^{\top} y) = b^{\top} - f_0^{\star}(\nu)
 $$
 {{< /math >}}
 
@@ -55,8 +55,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & b^T \nu - f_0^{\star}(\nu) \\
-    \mathrm{subject\ to} \quad & A^T \nu = 0
+    \mathrm{minimize} \quad & b^{\top} \nu - f_0^{\star}(\nu) \\
+    \mathrm{subject\ to} \quad & A^{\top} \nu = 0
 \end{aligned}
 $$
 {{< /math >}}
@@ -120,7 +120,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx \\
+    \mathrm{minimize} \quad & c^{\top}x \\
     \mathrm{subject\ to} \quad & Ax=b \\
     \quad & l \preceq x \preceq u
 \end{aligned}
@@ -143,7 +143,7 @@ $$
 {{< math >}}
 $$
 f_0(x) = \left\{\begin{matrix}
-    c^Tx & l \preceq x \preceq u \\
+    c^{\top}x & l \preceq x \preceq u \\
     \infty & \text{otherwise}
 \end{matrix}\right.
 $$

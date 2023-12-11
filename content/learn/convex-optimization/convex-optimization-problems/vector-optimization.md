@@ -107,7 +107,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \lambda^T f_0(x) \\
+    \mathrm{minimize} \quad & \lambda^{\top} f_0(x) \\
     \mathrm{subject\ to} \quad & f_i(x) \leqslant 0, \quad i=1,\cdots,m \\
     \quad & h_i(x) = 0, \quad i=1,\cdots,p      
 \end{aligned}

@@ -18,7 +18,7 @@ weight: 330
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx+d \\
+    \mathrm{minimize} \quad & c^{\top}x+d \\
     \mathrm{subject\ to} \quad & Gx \preceq h \\
     \quad & Ax=b 
 \end{aligned}
@@ -31,7 +31,7 @@ $$
 
 {{< figure src="learn/convex-optimization/convex-optimization-problems/4-3-1.png">}}
 
-可行域 $\mathcal{P}$ 是一个多面体（图中蓝色六边形），目标函数 $c^Tx$ 是线性的，所以其等位曲线是与 $c$ 正交的超平面（如虚线所示）。点 $x^{\star}$ 是最优的，它是 $\mathcal{P}$ 中在方向 $-c$ 上最远的点。
+可行域 $\mathcal{P}$ 是一个多面体（图中蓝色六边形），目标函数 $c^{\top}x$ 是线性的，所以其等位曲线是与 $c$ 正交的超平面（如虚线所示）。点 $x^{\star}$ 是最优的，它是 $\mathcal{P}$ 中在方向 $-c$ 上最远的点。
 
 ### 线性规划的标准形式和不等式形式
 
@@ -40,7 +40,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx \\
+    \mathrm{minimize} \quad & c^{\top}x \\
     \mathrm{subject\ to} \quad & Ax=b \\
     \quad & x \succeq 0
 \end{aligned}
@@ -52,7 +52,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx \\
+    \mathrm{minimize} \quad & c^{\top}x \\
     \mathrm{subject\ to} \quad & Ax \leqslant b
 \end{aligned}
 $$
@@ -65,7 +65,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx+d \\
+    \mathrm{minimize} \quad & c^{\top}x+d \\
     \mathrm{subject\ to} \quad & Gx+s=h \\
     \quad & Ax=b \\
     \quad & s \succeq 0
@@ -78,7 +78,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx^+-c^Tx^-+d \\
+    \mathrm{minimize} \quad & c^{\top}x^+-c^{\top}x^-+d \\
     \mathrm{subject\ to} \quad & Gx^+-Gx^-+s=h \\
     \quad & Ax^+-Ax^-=b \\
     \quad & x^+ \succeq 0, x^- \succeq 0, s \succeq 0
@@ -95,7 +95,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \frac{c^Tx+d}{e^Tx+f} \\
+    \mathrm{minimize} \quad & \frac{c^{\top}x+d}{e^{\top}x+f} \\
     \mathrm{subject\ to} \quad & Gx \preceq h \\
     \quad & Ax = b
 \end{aligned}
@@ -110,7 +110,7 @@ $$
 
 {{< math >}}
 $$
-\{ x \mid Gx \preceq h, Ax=b, e^Tx+f > 0 \}
+\{ x \mid Gx \preceq h, Ax=b, e^{\top}x+f > 0 \}
 $$
 {{< /math >}}
 
@@ -119,10 +119,10 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Ty+dz \\
+    \mathrm{minimize} \quad & c^{\top}y+dz \\
     \mathrm{subject\ to} \quad & Gy-hz \preceq 0 \\
     \quad & Ay-bz=0 \\
-    \quad & e^Ty + fz = 1 \\
+    \quad & e^{\top}y + fz = 1 \\
     \quad & z \geqslant 0
 \end{aligned}
 $$

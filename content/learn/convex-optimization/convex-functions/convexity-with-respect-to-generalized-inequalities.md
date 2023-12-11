@@ -93,16 +93,16 @@ $$
 
 关于分量不等式的凸性和矩阵凸性，其结论与上述的类似。这里给出一些具有矩阵凸性函数的例子：
 
-- 函数 $f(X) = XX^T$，其中 $X \in \mathbf{R}^{n \times m}$，是矩阵凸的。
+- 函数 $f(X) = XX^{\top}$，其中 $X \in \mathbf{R}^{n \times m}$，是矩阵凸的。
 - 当 $1 \leqslant p \leqslant 2$ 或 $-1 \leqslant p \leqslant 0$ 时，函数 $X^p$ 在 $\mathbf{S}^n_{++}$ 上是矩阵凸的；当 $0 \leqslant p \leqslant 1$ 时，函数是矩阵凹的。
 
 凸函数的很多结论都可以扩展到 $K$- 凸函数。
 
 ### $K$- 凸的对偶刻画
 
-函数 $f$ 是 $K$- 凸的，当且仅当对任意的 {{< math >}}$\omega \succeq_{K^{*}} 0${{< /math >}}，（实值）函数 $\omega^Tf$ 是凸的。
+函数 $f$ 是 $K$- 凸的，当且仅当对任意的 {{< math >}}$\omega \succeq_{K^{*}} 0${{< /math >}}，（实值）函数 $\omega^{\top}f$ 是凸的。
 
-函数 $f$ 是严格 $K$- 凸的，当且仅当对任意非零向量 {{< math >}}$\omega \succeq_{K^{*}} 0${{< /math >}}，函数 $\omega^Tf$ 是严格凸的。
+函数 $f$ 是严格 $K$- 凸的，当且仅当对任意非零向量 {{< math >}}$\omega \succeq_{K^{*}} 0${{< /math >}}，函数 $\omega^{\top}f$ 是严格凸的。
 
 ### 可微的 $K$- 凸函数
 

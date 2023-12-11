@@ -127,12 +127,12 @@ $$
 
 {{< math >}}
 $$
-\lambda^T W = 
+\lambda^{\top} W = 
 \begin{bmatrix}
-    \sum_{i=1}^{X} \lambda_{i}^T W_{i1} &
-    \sum_{i=1}^{X} \lambda_{i}^T W_{i2} &
+    \sum_{i=1}^{X} \lambda_{i}^{\top} W_{i1} &
+    \sum_{i=1}^{X} \lambda_{i}^{\top} W_{i2} &
     \cdots &
-    \sum_{i=1}^{X} \lambda_{i}^T W_{iy}
+    \sum_{i=1}^{X} \lambda_{i}^{\top} W_{iy}
 \end{bmatrix}
 $$
 {{< /math >}}

@@ -120,8 +120,8 @@ $$
 
 {{< math >}}
 $$
-\inf_{x \in \mathcal{D}, s}\left(s+\sum_{i=1}^{m} \lambda_{i}\left(f_{i}(x)-s\right)+\nu^{T}(A x-b)\right)=\left\{\begin{array}{ll}
-g(\lambda, \nu) & \mathbf{1}^{T} \lambda=1 \\
+\inf_{x \in \mathcal{D}, s}\left(s+\sum_{i=1}^{m} \lambda_{i}\left(f_{i}(x)-s\right)+\nu^{\top}(A x-b)\right)=\left\{\begin{array}{ll}
+g(\lambda, \nu) & \mathbf{1}^{\top} \lambda=1 \\
 -\infty & \text {otherwise}
 \end{array}\right.
 $$
@@ -133,7 +133,7 @@ $$
 $$
 \begin{aligned}
     \mathrm{maximize} \quad & g(\lambda, \nu) \\
-    \mathrm{subject\ to} \quad & \lambda \succeq 0, \quad \mathbf{1}^T \lambda = 1
+    \mathrm{subject\ to} \quad & \lambda \succeq 0, \quad \mathbf{1}^{\top} \lambda = 1
 \end{aligned}
 $$
 {{< /math >}}
@@ -174,8 +174,8 @@ $$
 
 {{< math >}}
 $$
-g(\lambda)=\inf _{x} \lambda^{T}(A x-b)=\left\{\begin{array}{ll}
--b^{T} \lambda & A^{T} \lambda=0 \\
+g(\lambda)=\inf _{x} \lambda^{\top}(A x-b)=\left\{\begin{array}{ll}
+-b^{\top} \lambda & A^{\top} \lambda=0 \\
 -\infty & \text {otherwise}
 \end{array}\right.
 $$
@@ -187,8 +187,8 @@ $$
 $$
 \begin{aligned}
     \lambda & \succeq 0 \\
-    A^T \lambda & = 0 \\
-    b^T \lambda & < 0
+    A^{\top} \lambda & = 0 \\
+    b^{\top} \lambda & < 0
 \end{aligned}
 $$
 {{< /math >}}
@@ -203,7 +203,7 @@ Farkas 引理描述了一对强择一系统，它们是由严格和非严格线�
 $$
 \begin{aligned}
     Ax & \preceq 0 \\
-    c^Tx & < 0
+    c^{\top}x & < 0
 \end{aligned}
 $$
 {{< /math >}}
@@ -213,7 +213,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    A^Ty + c &= 0 \\
+    A^{\top}y + c &= 0 \\
     y & \succeq 0
 \end{aligned}
 $$

@@ -36,7 +36,7 @@ $$
 
 {{< math >}}
 $$
-g(\lambda, \nu) = \inf \{ (\lambda, \nu, 1)^T(u, v, t) \mid (u, v, t) \in \mathcal{G} \}
+g(\lambda, \nu) = \inf \{ (\lambda, \nu, 1)^{\top}(u, v, t) \mid (u, v, t) \in \mathcal{G} \}
 $$
 {{< /math >}}
 
@@ -44,7 +44,7 @@ $$
 
 {{< math >}}
 $$
-(\lambda, \nu, 1)^T(u, v, t) \geqslant g(\lambda, \nu)
+(\lambda, \nu, 1)^{\top}(u, v, t) \geqslant g(\lambda, \nu)
 $$
 {{< /math >}}
 
@@ -52,7 +52,7 @@ $$
 
 {{< figure src="learn/convex-optimization/duality/5-3-1.png" >}}
 
-针对只有一个（不等式）约束的简单问题，对偶函数和下界 $g(\lambda) \leqslant p^{\star}$ 的几何解释如图所示。给定 $\lambda$，在集合 $\mathcal{G} = \{ (f_1(x), f_0(x)) \mid x \in \mathcal{D} \}$ 上极小化 $(\lambda, 1)^T(u, t)$，得到斜率为 $-\lambda$ 的支撑超平面。支撑超平面与坐标轴 $u = 0$ 的交点即为 $g(\lambda)$。
+针对只有一个（不等式）约束的简单问题，对偶函数和下界 $g(\lambda) \leqslant p^{\star}$ 的几何解释如图所示。给定 $\lambda$，在集合 $\mathcal{G} = \{ (f_1(x), f_0(x)) \mid x \in \mathcal{D} \}$ 上极小化 $(\lambda, 1)^{\top}(u, t)$，得到斜率为 $-\lambda$ 的支撑超平面。支撑超平面与坐标轴 $u = 0$ 的交点即为 $g(\lambda)$。
 
 {{< figure src="learn/convex-optimization/duality/5-3-2.png" >}}
 
@@ -86,7 +86,7 @@ $$
 
 {{< math >}}
 $$
-g(\lambda, \nu)=\inf \{(\lambda, \nu, 1)^{T}(u, v, t) \mid(u, v, t) \in \mathcal{A}\}
+g(\lambda, \nu)=\inf \{(\lambda, \nu, 1)^{\top}(u, v, t) \mid(u, v, t) \in \mathcal{A}\}
 $$
 {{< /math >}}
 
@@ -94,7 +94,7 @@ $$
 
 {{< math >}}
 $$
-(\lambda, \nu, 1)^{T}(u, v, t) \geqslant g(\lambda, \nu)
+(\lambda, \nu, 1)^{\top}(u, v, t) \geqslant g(\lambda, \nu)
 $$
 {{< /math >}}
 
@@ -104,7 +104,7 @@ $$
 
 {{< math >}}
 $$
-p^{\star} = (\lambda, \nu, 1)^T (0, 0, p^{\star}) \geqslant g(\lambda, \nu)
+p^{\star} = (\lambda, \nu, 1)^{\top} (0, 0, p^{\star}) \geqslant g(\lambda, \nu)
 $$
 {{< /math >}}
 
@@ -112,7 +112,7 @@ $$
 
 {{< figure src="learn/convex-optimization/duality/5-3-3.png" >}}
 
-针对具有一个（不等式）约束的问题，对偶函数和下界 $g(\lambda) \leqslant p^{\star}$ 的几何解释。给定 $\lambda$，在 $\mathcal{A}$ 上极小化 $(\lambda, 1)^T(u, t)$。这样可以得到斜率为 $-\lambda$ 的支撑超平面。此支撑超平面与坐标轴 $u = 0$ 的交点即为 $(0, g(\lambda))$。
+针对具有一个（不等式）约束的问题，对偶函数和下界 $g(\lambda) \leqslant p^{\star}$ 的几何解释。给定 $\lambda$，在 $\mathcal{A}$ 上极小化 $(\lambda, 1)^{\top}(u, t)$。这样可以得到斜率为 $-\lambda$ 的支撑超平面。此支撑超平面与坐标轴 $u = 0$ 的交点即为 $(0, g(\lambda))$。
 
 ## 在约束规则下强对偶性成立的证明
 
@@ -124,7 +124,7 @@ $$
 
 {{< math >}}
 $$
-\tilde{\lambda}^{T} F(x)=f_{0}(x)+\sum_{i=1}^{m} \lambda_{i} f_{i}(x)
+\tilde{\lambda}^{\top} F(x)=f_{0}(x)+\sum_{i=1}^{m} \lambda_{i} f_{i}(x)
 $$
 {{< /math >}}
 

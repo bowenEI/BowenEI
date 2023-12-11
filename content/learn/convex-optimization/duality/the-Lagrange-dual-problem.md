@@ -35,7 +35,7 @@ Lagrange 对偶问题是一个凸优化问题，这是因为极大化的目标�
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & c^Tx \\
+    \mathrm{minimize} \quad & c^{\top}x \\
     \mathrm{subject\ to} \quad & Ax = b \\
     \quad & x \succeq 0
 \end{aligned}
@@ -48,7 +48,7 @@ $$
 $$
 g(\lambda, \nu) = \left\{
     \begin{matrix}
-        -b^T \nu & A^T \nu - \lambda + c = 0 \\
+        -b^{\top} \nu & A^{\top} \nu - \lambda + c = 0 \\
         -\infty & \text{其他情况}
     \end{matrix}
 \right.
@@ -66,13 +66,13 @@ $$
 $$
 {{< /math >}}
 
-当且仅当 $A^T \nu - \lambda + c = 0$ 时对偶函数 $g$ 有界。我们看看可以通过将此“隐含”的等式约束“显式”化来得到一个等价的问题
+当且仅当 $A^{\top} \nu - \lambda + c = 0$ 时对偶函数 $g$ 有界。我们看看可以通过将此“隐含”的等式约束“显式”化来得到一个等价的问题
 
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & -b^T \nu \\
-    \mathrm{subject\ to} \quad & A^T \nu - \lambda + c = 0 \\
+    \mathrm{maximize} \quad & -b^{\top} \nu \\
+    \mathrm{subject\ to} \quad & A^{\top} \nu - \lambda + c = 0 \\
     \quad & \lambda \succeq 0
 \end{aligned}
 $$
@@ -83,8 +83,8 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{maximize} \quad & -b^T \nu \\
-    \mathrm{subject\ to} \quad & A^T \nu + c \succeq 0 \\
+    \mathrm{maximize} \quad & -b^{\top} \nu \\
+    \mathrm{subject\ to} \quad & A^{\top} \nu + c \succeq 0 \\
 \end{aligned}
 $$
 {{< /math >}}
@@ -138,7 +138,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & x^Tx \\
+    \mathrm{minimize} \quad & x^{\top}x \\
     \mathrm{subject\ to} \quad & Ax = b
 \end{aligned}
 $$
@@ -148,7 +148,7 @@ $$
 
 {{< math >}}
 $$
-\mathrm{maximize} \quad -\frac{1}{4} \nu^T AA^T \nu - b^T \nu
+\mathrm{maximize} \quad -\frac{1}{4} \nu^{\top} AA^{\top} \nu - b^{\top} \nu
 $$
 {{< /math >}}
 

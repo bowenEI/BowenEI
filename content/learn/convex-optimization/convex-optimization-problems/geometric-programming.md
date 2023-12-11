@@ -114,7 +114,7 @@ $$
 \begin{aligned}
     f(x) &= \sum_{k=1}^K c_k x_1^{a_{1k}} x_2^{a_{2k}} \cdots x_n^{a_{nk}} \\
     &= \sum_{k=1}^K c_k e^{a_{1k} y_1} e^{a_{2k} y_2} \cdots e^{a_{nk} y_n} \\
-    &= \sum_{k=1}^K e^{a_k^T y + b_k}
+    &= \sum_{k=1}^K e^{a_k^{\top} y + b_k}
 \end{aligned}
 $$
 {{< /math >}}
@@ -124,9 +124,9 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \sum_{k=1}^{K_0} e^{a_{0k}^T y+b_{0k}} \\
-    \mathrm{subject\ to} \quad & \sum_{k=1}^K e^{a_{ik}^T y+b_{ik}} \leqslant 1, \quad i=1, \cdots, m \\
-    \quad & e^{g_i^T y+h_i}=1, \quad i=1, \cdots, p
+    \mathrm{minimize} \quad & \sum_{k=1}^{K_0} e^{a_{0k}^{\top} y+b_{0k}} \\
+    \mathrm{subject\ to} \quad & \sum_{k=1}^K e^{a_{ik}^{\top} y+b_{ik}} \leqslant 1, \quad i=1, \cdots, m \\
+    \quad & e^{g_i^{\top} y+h_i}=1, \quad i=1, \cdots, p
 \end{aligned}
 $$
 {{< /math >}}
@@ -136,9 +136,9 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-    \mathrm{minimize} \quad & \tilde{f} _0(y) = \log (\sum _{k=1}^{K_0} e^{a _{0k}^T y+b _{0k}}) \\
-    \mathrm{subject\ to} \quad & \tilde{f} _i(y) = \log (\sum _{k=1}^K e^{a _{ik}^T y+b _{ik}}) \leqslant 1, \quad i=1, \cdots, m \\
-    \quad & \tilde{h}_i(y) = g_i^T y+h_i=1, \quad i=1, \cdots, p
+    \mathrm{minimize} \quad & \tilde{f} _0(y) = \log (\sum _{k=1}^{K_0} e^{a _{0k}^{\top} y+b _{0k}}) \\
+    \mathrm{subject\ to} \quad & \tilde{f} _i(y) = \log (\sum _{k=1}^K e^{a _{ik}^{\top} y+b _{ik}}) \leqslant 1, \quad i=1, \cdots, m \\
+    \quad & \tilde{h}_i(y) = g_i^{\top} y+h_i=1, \quad i=1, \cdots, p
 \end{aligned}
 $$
 {{< /math >}}

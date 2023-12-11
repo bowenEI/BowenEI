@@ -17,7 +17,7 @@ weight: 240
 
 {{< math >}}
 $$
-f^{*}(y)=\sup _{x \in \operatorname{dom} f}\left(y^{T} x-f(x)\right)
+f^{*}(y)=\sup _{x \in \operatorname{dom} f}\left(y^{\top} x-f(x)\right)
 $$
 {{< /math >}}
 
@@ -31,9 +31,9 @@ $$
 
 因此，一元函数 $f(x)$ 的图像就可以画在平面直角坐标系中（图中蓝色曲线）。这里为了方便并且直观地说明，假设 $f: \mathbf{R} \rightarrow \mathbf{R}$。由于 $y$ 被当成常数，$yx$ 就是正比例函数，其图像是过原点的倾斜直线（图中上方虚线）。
 
-因此，共轭函数的定义可以用自然语言描述为：直线（超平面）$y^Tx$ 与 $f(x)$ 函数值的最大差值，并且该差值的取值与 $y^T$ 的取值一一对应——任意改变直线的斜率（超平面的方向向量），都有唯一确定的一个值与之对应。
+因此，共轭函数的定义可以用自然语言描述为：直线（超平面）$y^{\top}x$ 与 $f(x)$ 函数值的最大差值，并且该差值的取值与 $y^{\top}$ 的取值一一对应——任意改变直线的斜率（超平面的方向向量），都有唯一确定的一个值与之对应。
 
-显然，{{< math >}}$f^{*}${{< /math >}} 是凸函数，这是因为它是在求一系列值的逐点上确界。而且，无论 $f$ 是否为凸函数，{{< math >}}$f^{*}${{< /math >}} 都是凸函数。如果 $f$ 是凸函数，那么就没必要限制 $x \in \operatorname{dom} f$ 了。这是因为根据之前关于扩展值延伸的定义，对于 $x \notin \operatorname{dom} f$，$y^Tx - f(x) = -\infty$。
+显然，{{< math >}}$f^{*}${{< /math >}} 是凸函数，这是因为它是在求一系列值的逐点上确界。而且，无论 $f$ 是否为凸函数，{{< math >}}$f^{*}${{< /math >}} 都是凸函数。如果 $f$ 是凸函数，那么就没必要限制 $x \in \operatorname{dom} f$ 了。这是因为根据之前关于扩展值延伸的定义，对于 $x \notin \operatorname{dom} f$，$y^{\top}x - f(x) = -\infty$。
 
 ### 举例
 
@@ -121,15 +121,15 @@ $$
 
 {{< math >}}
 $$
-f(x)=\frac{1}{2} x^{T} Q x, \quad Q \in \mathbf{S}_{++}^{n}
+f(x)=\frac{1}{2} x^{\top} Q x, \quad Q \in \mathbf{S}_{++}^{n}
 $$
 {{< /math >}}
 
-对所有的 $y$，关于 $x$ 的函数 $y^{T} x-\frac{1}{2} x^{T} Q x$ 都有上界并在 $x = Q^{-1}y$ 处达到上确界。因此
+对所有的 $y$，关于 $x$ 的函数 $y^{\top} x-\frac{1}{2} x^{\top} Q x$ 都有上界并在 $x = Q^{-1}y$ 处达到上确界。因此
 
 {{< math >}}
 $$
-f^{*}(y)=\frac{1}{2} y^{T} Q^{-1} y
+f^{*}(y)=\frac{1}{2} y^{\top} Q^{-1} y
 $$
 {{< /math >}}
 
@@ -167,7 +167,7 @@ $$
 {{< math >}}
 $$
 f^{*}(y)=\left\{\begin{array}{ll}
-\sum_{i=1}^{n} y_{i} \log y_{i} & y \succeq 0 \wedge \mathbf{1}^{T} y=1 \\
+\sum_{i=1}^{n} y_{i} \log y_{i} & y \succeq 0 \wedge \mathbf{1}^{\top} y=1 \\
 \infty & \text { otherwise }
 \end{array}\right.
 $$
@@ -194,17 +194,17 @@ $$
 
 {{< math >}}
 $$
-f(x)+f^{*}(y) \geqslant x^{T} y
+f(x)+f^{*}(y) \geqslant x^{\top} y
 $$
 {{< /math >}}
 
 如果 $f$ 可微，上式亦可称为 Young 不等式。
 
-令 $f(x) = \frac{1}{2} x^TQx$，其中 $Q \in \mathbf{S}_{++}$，利用 Fenchel 不等式，我们可以如下结论：
+令 $f(x) = \frac{1}{2} x^{\top}Qx$，其中 $Q \in \mathbf{S}_{++}$，利用 Fenchel 不等式，我们可以如下结论：
 
 {{< math >}}
 $$
-x^Ty \leqslant \frac{1}{2} x^TQx + \frac{1}{2} y^TQ^{-1}y
+x^{\top}y \leqslant \frac{1}{2} x^{\top}Qx + \frac{1}{2} y^{\top}Q^{-1}y
 $$
 {{< /math >}}
 
@@ -224,7 +224,7 @@ $$
 
 可微函数 $f$ 的共轭函数亦称为函数 $f$ 的 Legendre 变换。
 
-设函数 $f$ 是凸函数且可微，其定义域为 $\operatorname{dom} f = \mathbf{R}^n$，使 $y^Tx - f(x)$ 取最大的 $x^{*}$ 满足 $y = \nabla f(x^{*})$，并且若 $x^{*}$ 满足 $y = \nabla f(x^{*})$，$y^Tx - f(x)$ 在 $x^{*}$ 处取最大值（二者等价）。因此，我们可以得到
+设函数 $f$ 是凸函数且可微，其定义域为 $\operatorname{dom} f = \mathbf{R}^n$，使 $y^{\top}x - f(x)$ 取最大的 $x^{*}$ 满足 $y = \nabla f(x^{*})$，并且若 $x^{*}$ 满足 $y = \nabla f(x^{*})$，$y^{\top}x - f(x)$ 在 $x^{*}$ 处取最大值（二者等价）。因此，我们可以得到
 
 {{< math >}}
 $$
@@ -238,7 +238,7 @@ $$
 
 {{< math >}}
 $$
-f^{*}(y)=z^T \nabla f\left(z\right)-f\left(z\right)
+f^{*}(y)=z^{\top} \nabla f\left(z\right)-f\left(z\right)
 $$
 {{< /math >}}
 
@@ -261,12 +261,12 @@ $$
 $$
 \begin{aligned}
     g(x) &= f(Ax + b) \\
-    g^{*}(y) &= f^{*}\left(A^{-T} y\right)-b^{T} A^{-T} y
+    g^{*}(y) &= f^{*}\left(A^{-T} y\right)-b^{\top} A^{-T} y
 \end{aligned}
 $$
 {{< /math >}}
 
-其定义域为 {{< math >}}$\operatorname{dom} g^{*} = A^T \operatorname{dom} f^{*}${{< /math >}}。
+其定义域为 {{< math >}}$\operatorname{dom} g^{*} = A^{\top} \operatorname{dom} f^{*}${{< /math >}}。
 
 ### 独立函数的和
 

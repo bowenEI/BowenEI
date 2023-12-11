@@ -187,12 +187,12 @@ $$
 {{< math >}}
 $$
 \begin{align}
-\textrm{Attention}\left(Q, K, V\right) = \textrm{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+\textrm{Attention}\left(Q, K, V\right) = \textrm{softmax}\left(\frac{QK^{\top}}{\sqrt{d_k}}\right)V
 \end{align}
 $$
 {{< /math >}}
 
-$Q$ 即 `query`，$K$ 即 `key`，$QK^T$ 即 `query` 和 `key` 做内积。作者认为，两个向量的内积值越大，说明相似度越高。除以 $\sqrt{d_k}$ 则表示单位化，然后再用 softmax 得到权重。这里的道理其实就是机器学习中的余弦相似度（余弦距离）：
+$Q$ 即 `query`，$K$ 即 `key`，$QK^{\top}$ 即 `query` 和 `key` 做内积。作者认为，两个向量的内积值越大，说明相似度越高。除以 $\sqrt{d_k}$ 则表示单位化，然后再用 softmax 得到权重。这里的道理其实就是机器学习中的余弦相似度（余弦距离）：
 
 {{< math >}}
 $$
