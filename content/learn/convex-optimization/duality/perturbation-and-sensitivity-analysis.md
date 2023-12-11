@@ -33,7 +33,7 @@ $$
 
 {{< math >}}
 $$
-p^{\star}(u, v) \geqslant p^{\star}(0,0)-\lambda^{\star T} u-\nu^{\star T} v
+p^{\star}(u, v) \geqslant p^{\star}(0,0)-\lambda^{\star \top} u-\nu^{\star \top} v
 $$
 {{< /math >}}
 

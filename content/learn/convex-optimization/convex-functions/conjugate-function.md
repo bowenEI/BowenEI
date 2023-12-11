@@ -13,7 +13,7 @@ weight: 240
 
 ## 定义
 
-设函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，其共轭函数 $f^{*}: \mathbf{R}^n \rightarrow \mathbf{R}$ 为
+设函数 $f: \mathbf{R}^n \rightarrow \mathbf{R}$，其共轭函数 {{< math >}}$f^{*}: \mathbf{R}^n \rightarrow \mathbf{R}${{< /math >}} 为
 
 {{< math >}}
 $$
@@ -77,7 +77,7 @@ f(x) = e^x
 $$
 {{< /math >}}
 
-当 $y < 0$ 时，函数 $xy - e^x$ 无界；当 $y > 0$ 时，函数 $xy - e^x$ 在 $x = \ln y$ 处取最大值；当 $y = 0$ 时，$f^{*}(y) = \sup \{-e^x\} = 0$。因此，指数函数的共轭函数为
+当 $y < 0$ 时，函数 $xy - e^x$ 无界；当 $y > 0$ 时，函数 $xy - e^x$ 在 $x = \ln y$ 处取最大值；当 $y = 0$ 时，{{< math >}}$f^{*}(y) = \sup \{-e^x\} = 0${{< /math >}}。因此，指数函数的共轭函数为
 
 {{< math >}}
 $$
@@ -224,15 +224,15 @@ $$
 
 可微函数 $f$ 的共轭函数亦称为函数 $f$ 的 Legendre 变换。
 
-设函数 $f$ 是凸函数且可微，其定义域为 $\operatorname{dom} f = \mathbf{R}^n$，使 $y^{\top}x - f(x)$ 取最大的 $x^{*}$ 满足 $y = \nabla f(x^{*})$，并且若 $x^{*}$ 满足 $y = \nabla f(x^{*})$，$y^{\top}x - f(x)$ 在 $x^{*}$ 处取最大值（二者等价）。因此，我们可以得到
+设函数 $f$ 是凸函数且可微，其定义域为 $\operatorname{dom} f = \mathbf{R}^n$，使 $y^{\top}x - f(x)$ 取最大的 {{< math >}}$x^{*}${{< /math >}} 满足 {{< math >}}$y = \nabla f(x^{*})${{< /math >}}，并且若 {{< math >}}$x^{*}${{< /math >}} 满足 {{< math >}}$y = \nabla f(x^{*})${{< /math >}}，$y^{\top}x - f(x)$ 在 {{< math >}}$x^{*}${{< /math >}} 处取最大值（二者等价）。因此，我们可以得到
 
 {{< math >}}
 $$
-f^{*}(y)=x^{* T} \nabla f\left(x^{*}\right)-f\left(x^{*}\right)
+f^{*}(y)=x^{* \top} \nabla f\left(x^{*}\right)-f\left(x^{*}\right)
 $$
 {{< /math >}}
 
-有了这个结论，给定任意 $y$，我们可以求解梯度方程 $y = \nabla f(z)$，从而得到 $y$ 处的共轭函数 $f^{*}(y)$。
+有了这个结论，给定任意 $y$，我们可以求解梯度方程 $y = \nabla f(z)$，从而得到 $y$ 处的共轭函数 {{< math >}}$f^{*}(y)${{< /math >}}。
 
 我们也可以换一个角度理解。$\forall z \in \mathbf{R}^n$，令 $y = \nabla f(z)$，则
 
@@ -261,7 +261,7 @@ $$
 $$
 \begin{aligned}
     g(x) &= f(Ax + b) \\
-    g^{*}(y) &= f^{*}\left(A^{-T} y\right)-b^{\top} A^{-T} y
+    g^{*}(y) &= f^{*}\left(A^{-\top} y\right)-b^{\top} A^{-\top} y
 \end{aligned}
 $$
 {{< /math >}}
