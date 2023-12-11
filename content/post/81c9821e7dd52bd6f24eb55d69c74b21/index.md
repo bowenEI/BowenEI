@@ -319,9 +319,9 @@ $$
 
 |        Stage         |                  FLOPS                   |                       MOPS                        |                                      Arithmetic Intensity                                       |
 | :------------------: | :--------------------------------------: | :-----------------------------------------------: | :---------------------------------------------------------------------------------------------: |
-|   $$Q \times W_Q$$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |  $$\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)$$  | $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \frac{2(S_{in}+i-1)}{M} + \frac{1}{B} \right)}$$ |
+|   $$Q \times W_Q$$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(2BM+M^2)$$        |                      $$O\left(\frac{1}{\frac{2}{M}+\frac{1}{B} }\right)$$                       |
 |   $$K \times W_K$$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |  $$\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)$$  | $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \frac{2(S_{in}+i-1)}{M} + \frac{1}{B} \right)}$$ |
-|   $$V \times W_V$$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(2BM+M^2)$$        |                      $$O\left(\frac{1}{\frac{2}{M}+\frac{1}{B} }\right)$$                       |
+|   $$V \times W_V$$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |  $$\sum_{i=1}^{S_{out} }O(2B[S_{in}+i-1]M+M^2)$$  | $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O\left( \frac{2(S_{in}+i-1)}{M} + \frac{1}{B} \right)}$$ |
 |    $$Q \times K$$    | $$\sum_{i=1}^{S_{out} }O(B(S_{in}+i)M)$$ | $$\sum_{i=1}^{S_{out} }O(BH[(S_{in}+i)(D+1)+D])$$ | $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \frac{1}{D} + \frac{1}{S_{in}+i} +1 \right)}$$  |
 |    $$P \times V$$    | $$\sum_{i=1}^{S_{out} }O(B(S_{in}+i)M)$$ | $$\sum_{i=1}^{S_{out} }O(BH[(S_{in}+i)(D+1)+D])$$ | $$\frac{S_{out} }{\sum_{i=1}^{S_{out} }O \left( \frac{1}{D} + \frac{1}{S_{in}+i} +1 \right)}$$  |
 |   $$A \times W_O$$   |     $$\sum_{i=1}^{S_{out} }O(BM^2)$$     |        $$\sum_{i=1}^{S_{out} }O(2BM+M^2)$$        |                      $$O\left(\frac{1}{\frac{2}{M}+\frac{1}{B} }\right)$$                       |
