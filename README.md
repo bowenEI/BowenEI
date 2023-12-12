@@ -1,77 +1,46 @@
-# BowenEI
+# [Hugo Academic CV Theme](https://github.com/HugoBlox/theme-academic-cv)
 
-## 仓库简介
+[![Screenshot](./preview.png)](https://hugoblox.com/templates/)
 
-该仓库是我的[个人主页](https://bowenei.gitee.io/)在 Gitee Pages 上托管的源码，使用 [Hugo](https://gohugo.io/) 框架和 [Hugo Academic Theme](https://github.com/wowchemy/starter-hugo-academic) 主题。
+The Hugo **Academic Resumé Template** empowers you to easily create your job-winning online resumé, showcase your academic publications, and create online courses or knowledge bases to grow your audience.
 
-## 环境依赖
+[![Get Started](https://img.shields.io/badge/-Get%20started-ff4655?style=for-the-badge)](https://hugoblox.com/templates/)
+[![Discord](https://img.shields.io/discord/722225264733716590?style=for-the-badge)](https://discord.com/channels/722225264733716590/742892432458252370/742895548159492138)  
+[![Twitter Follow](https://img.shields.io/twitter/follow/GetResearchDev?label=Follow%20on%20Twitter)](https://twitter.com/GetResearchDev)
 
-### Hugo
+️**Trusted by 250,000+ researchers, educators, and students.** Highly customizable via the integrated **no-code, Hugo Blox Builder**, making every site truly personalized ⭐⭐⭐⭐⭐
 
-- [Golang](https://golang.org/)
-- ~~[Hugo v0.81.0](https://github.com/gohugoio/hugo/releases/tag/v0.81.0)~~
-- ~~[Hugo v0.89.4](https://github.com/gohugoio/hugo/releases/tag/v0.89.4)~~
-- ~~[Hugo v0.91.2](https://github.com/gohugoio/hugo/releases/tag/v0.91.2)~~
-- ~~[Hugo v0.97.3](https://github.com/gohugoio/hugo/releases/tag/v0.97.3)~~
-- [Hugo v0.104.3](https://github.com/gohugoio/hugo/releases/tag/v0.104.3)
+Easily write technical content with plain text Markdown, LaTeX math, diagrams, RMarkdown, or Jupyter, and import publications from BibTeX.
 
-### Wowchemy
+[Check out the latest demo](https://academic-demo.netlify.app/) of what you'll get in less than 10 minutes, or [get inspired by our academics and research groups](https://hugoblox.com/creators/).
 
-[Wowchemy](https://wowchemy.com/docs/) 是本博客依赖的主题框架。主题版本位于 `go.mod`，更新方法详见[文档](https://wowchemy.com/docs/hugo-tutorials/update/)。
+The integrated [**Hugo Blox Builder**](https://hugoblox.com) and CMS makes it easy to create a beautiful website for free. Edit your site in the CMS (or your favorite editor), generate it with [Hugo](https://github.com/gohugoio/hugo), and deploy with GitHub or Netlify. Customize anything on your site with widgets, light/dark themes, and language packs.
 
-## 使用说明
+- 👉 [**Get Started**](https://hugoblox.com/templates/)
+- 📚 [View the **documentation**](https://docs.hugoblox.com/)
+- 💬 [Chat with the **Hugo Blox Builder community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
+- 🐦 Twitter: [@GetResearchDev](https://twitter.com/GetResearchDev) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithHugoBlox](https://twitter.com/search?q=%23MadeWithHugoBlox&src=typed_query)
+- ⬇️ **Automatically import your publications from BibTeX** with the [Hugo Academic CLI](https://github.com/GetRD/academic-file-converter)
+- 💡 [Suggest an improvement](https://github.com/HugoBlox/hugo-blox-builder/issues)
+- ⬆️ **Updating?** View the [Update Guide](https://docs.hugoblox.com/reference/update/) and [Release Notes](https://github.com/HugoBlox/hugo-blox-builder/releases)
 
-### 快速上手
+## We ask you, humbly, to support this open source movement
 
-1. `content/` 文件夹下是博客的内容，编辑主要都集中在这部分。包括 `learn/` 和 `post/` 两个重要的文件夹，以及 `home/` 文件夹下的各个部分。`content/` 文件夹下的各个文件夹名称不可随意修改！
-2. `learn/` 文件夹下是我学习各个课程的笔记，主要是计算机编程方面，还包括马克思主义以及其他方面。
-3. `post/` 文件夹下主要是一些博客文章，主要包括文献阅读等方面。
-4. `assets/media/` 文件夹下则是按照 `content/` 文件夹下的结构存储需要使用的图片，相当于图床。
+Today we ask you to defend the open source independence of the Hugo Blox Builder and themes 🐧
 
-### home
+We're an open source movement that depends on your support to stay online and thriving, but 99.9% of our creators don't give; they simply look the other way.
 
-`home` 文件夹下的 `md` 文件是组成博客各页面最基本的部分，由 `index.md` 来控制。
+### [❤️ Click here to become a GitHub Sponsor, unlocking awesome perks such as _exclusive academic templates and widgets_](https://github.com/sponsors/gcushen)
 
-- `about.md` 主要是个人的自我介绍。
-- `blogs.md` 主要用于显示个人最近发布的博客文章。
-- `gallery.md` 是照片墙。
-- `publications.md` 主要用于发表的论文。
-- `tags.md` 主要用于显示感兴趣的方向和内容，这由博客文章所打的标签数量决定。
+<p align="center"><a href="https://hugoblox.com/templates/" target="_blank" rel="noopener"><img src="https://hugoblox.com/uploads/readmes/academic_logo_200px.png" alt="Hugo Academic Theme for Hugo Blox Builder"></a></p>
 
-### learn
+## Demo image credits
 
-`learn` 文件夹下主要是我个人的学习笔记，包括马克思主义、计算机基本知识、恋爱心理以及数学等各领域的知识。
+- [Unsplash](https://unsplash.com)
 
-### post
+## Latest news
 
-`post/` 文件夹下主要是一些博客文章，每篇文章都会有类别 `categories` 属性，可能会有标签 `tags` 属性。目前，我的博客文章主要包含如下几种类别：
-
-- `Essay`: 随笔。主要是专业知识、科研之外的一些内容。
-- `Academic`: 学术。主要是文献精读后的笔记和理解，以及学术交流中专家学者的一些观点和见解。
-- `Technique`: 技术。主要包含计算机编程、人工智能等各类语言和工具的使用。
-- `Read`: 阅读。主要包含书籍阅读后的笔记与思维导图。
-- `Presentation`：演讲。主要包含专家、学者的演讲原文，以及对这些演讲的整理和归纳。
-- `Knowledge`：知识。主要包括各大领域的一些知识和基本概念。
-
-## 注意事项
-
-### Go modules
-
-~~本博客使用的主题被打包为 `Go modules`，它被放在 Github 仓库中，可能会存在访问较慢的问题。~~
-
-~~在从远程同步最新仓库前，应当先执行 `hugo mod tidy` 整理 `module`，然后再 `git pull`，以防止出现 `hugo` 连接不上主题仓库的问题。~~
-
-该问题现已得到解决，只需要在 `config/_default/config.yaml` 中设置代理：
-
-```yaml
-module:
-  proxy: https://goproxy.cn
-```
-
-### svg 渲染
-
-本博客所在的 Gitee 远程仓库存在图片加载性能方面的问题，特别是对于矢量图 `svg` 的渲染。
-
-## Github Actions 自动部署
-
-Github Actions 提供了自动化的部署工具，可以实现 Github Pages 的自动部署。当我们在本地向远程仓库推送更新之后的博客内容时，远程仓库执行一系列操作即可实现自动更新。Github 上有 Hugo 静态页面框架部署的模板，简单几步设置即可完成。
+<!--START_SECTION:news-->
+* [Hugo vs Quarto: Which One is Better for 2023?](https:&#x2F;&#x2F;hugoblox.com&#x2F;blog&#x2F;hugo-vs-quarto&#x2F;)
+* [Easily make an academic CV website to get more cites and grow your audience 🚀](https:&#x2F;&#x2F;hugoblox.com&#x2F;blog&#x2F;easily-make-academic-website&#x2F;)
+<!--END_SECTION:news-->

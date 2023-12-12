@@ -31,6 +31,10 @@ blockquote {
 }
 
 // 右侧目录
+#TableOfContents {
+  border-left: unset;
+}
+
 #TableOfContents a {
   margin-bottom: 8px;
 }
