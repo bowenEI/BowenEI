@@ -85,7 +85,7 @@ $$
 
 ### Jacobian 矩阵
 
-对于一簇多元函数
+对于一簇多元函数（也称为**向量函数**，即定义域和值域都是向量的集合的函数）
 
 {{< math >}}
 $$
@@ -103,16 +103,42 @@ $$
 
 {{< math >}}
 $$
-\mathbf{J}(\mathbf{x}) = \begin{bmatrix}
-    \frac{\partial y_1}{\partial x_1} & \frac{\partial y_1}{\partial x_2} & \cdots & \frac{\partial y_1}{\partial x_n} \\
-    \frac{\partial y_2}{\partial x_1} & \frac{\partial y_2}{\partial x_2} & \cdots & \frac{\partial y_2}{\partial x_n} \\
-    \vdots & \vdots & \ddots & \vdots \\
-    \frac{\partial y_m}{\partial x_1} & \frac{\partial y_m}{\partial x_2} & \cdots & \frac{\partial y_m}{\partial x_n}
-\end{bmatrix}
+\begin{align*}
+    \mathbf{J}(\mathbf{x}) &= \begin{bmatrix}
+        \frac{\partial y_1}{\partial x_1} & \frac{\partial y_1}{\partial x_2} & \cdots & \frac{\partial y_1}{\partial x_n} \\
+        \frac{\partial y_2}{\partial x_1} & \frac{\partial y_2}{\partial x_2} & \cdots & \frac{\partial y_2}{\partial x_n} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        \frac{\partial y_m}{\partial x_1} & \frac{\partial y_m}{\partial x_2} & \cdots & \frac{\partial y_m}{\partial x_n}
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        \nabla f_1(\mathbf{x}) &
+        \nabla f_2(\mathbf{x}) &
+        \cdots &
+        \nabla f_m(\mathbf{x})
+    \end{bmatrix}^{\top}
+\end{align*}
 $$
 {{< /math >}}
 
 是一个 $m \times n$ 的矩阵，其中 $m$ 是输出的维度，$n$ 是输入的维度。
+
+{{< callout warning >}}
+
+**注意**
+
+Jacobian 矩阵的维度是 $m \times n$，而不是 $n \times m$。这意味着，Jacobian 矩阵不能用来直接表示向量函数的导数和梯度——Jacobian 矩阵的**转置**才能表示向量函数的导数和梯度。
+
+实际上，向量函数的求导运算是一种从函数到函数的映射。用形式化的语言表达就是
+
+{{< math >}}
+$$
+\begin{align*}
+    \nabla: \mathbb{R}^{n} \to \mathbb{R}^{m} \longrightarrow \mathbb{R}^{n} \to \mathbb{R}^{n \times m}
+\end{align*}
+$$
+{{< /math >}}
+
+{{< /callout >}}
 
 ### Hessian 矩阵
 
@@ -181,6 +207,120 @@ $$
 
 在深度学习中，为了方便，一般采用**分母表达式**来表示导数。稍后我们就会看到这种表达方式的方便之处。
 
+## 多项式向量函数的导数
+
+多项式向量函数是指，每个因变量 $y_1, y_2, \cdots, y_m$ 都是关于自变量 $x_1, x_2, \cdots, x_n$ 和常数的线性函数的函数。本小节主要讨论一次多项式和二次多项式向量函数的导数计算，只需要理解齐次式的导数计算即可。
+
+### 一次齐次式
+
+{{< math >}}
+$$
+\begin{align*}
+    \mathbf{y} &= \mathbf{Wx} \quad (\mathbf{x} \in \mathbb{R}^n, \mathbf{y} \in \mathbb{R}^m) \\
+    \frac{\partial \mathbf{y}}{\partial \mathbf{x}}
+    &= \begin{bmatrix}
+        \frac{\partial y_1}{\partial x_1} & \frac{\partial y_2}{\partial x_1} & \cdots & \frac{\partial y_m}{\partial x_1} \\
+        \frac{\partial y_1}{\partial x_2} & \frac{\partial y_2}{\partial x_2} & \cdots & \frac{\partial y_m}{\partial x_2} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        \frac{\partial y_1}{\partial x_n} & \frac{\partial y_2}{\partial x_n} & \cdots & \frac{\partial y_m}{\partial x_n}
+    \end{bmatrix} \\
+    &= \mathbf{W}^{\top}
+\end{align*}
+$$
+{{< /math >}}
+
+注意到，$f: \mathbb{R}^n \rightarrow \mathbb{R}^m$ 是一个将向量从 $n$ 维映射到 $m$ 维的向量函数。所以，这里的 $\mathbf{W} \in \mathbb{R}^{m \times n}$，恰好是其 Jacobian 矩阵的转置。
+
+{{< callout note >}}
+
+**常用线性函数求导公式**
+
+{{< math >}}
+$$
+\begin{align*}
+    \frac{\partial \mathbf{Wx}}{\partial \mathbf{x}} &= \mathbf{W}^{\top} \\\\
+    \frac{\partial \mathbf{Wx}}{\partial \mathbf{W}} &= \mathbf{x}^{\top}
+\end{align*}
+$$
+{{< /math >}}
+
+{{< /callout >}}
+
+### 二次齐次式（二次型）
+
+{{< math >}}
+$$
+\begin{align*}
+    y &= \mathbf{x}^{\top} \mathbf{W} \mathbf{x} \quad (\mathbf{x} \in \mathbb{R}^n, y \in \mathbb{R}) \\
+    &= \begin{bmatrix}
+        x_1 & x_2 & \cdots & x_n
+    \end{bmatrix} \begin{bmatrix}
+        w_{11} & w_{12} & \cdots & w_{1n} \\
+        w_{21} & w_{22} & \cdots & w_{2n} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        w_{n1} & w_{n2} & \cdots & w_{nn}
+    \end{bmatrix} \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        \vdots \\
+        x_n
+    \end{bmatrix} \\
+    &= \sum_{i=1}^n \sum_{j=1}^n w_{ij} x_i x_j \\
+    \frac{\partial y}{\partial \mathbf{x}} &= \begin{bmatrix}
+        \frac{\partial}{\partial x_1} \sum_{i=1}^n \sum_{j=1}^n w_{ij} x_i x_j \\
+        \frac{\partial}{\partial x_2} \sum_{i=1}^n \sum_{j=1}^n w_{ij} x_i x_j \\
+        \vdots \\
+        \frac{\partial}{\partial x_n} \sum_{i=1}^n \sum_{j=1}^n w_{ij} x_i x_j
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        \frac{\partial}{\partial x_1} [w_{11}x_1^2 + (w_{12}x_1x_2 + \cdots + w_{1n}x_1x_n) + (w_{21}x_2x_1 + \cdots + w_{n1}x_nx_1)] \\
+        \frac{\partial}{\partial x_2} [w_{22}x_2^2 + (w_{21}x_2x_1 + \cdots + w_{2n}x_2x_n) + (w_{12}x_1x_2 + \cdots + w_{n2}x_nx_2)] \\
+        \vdots \\
+        \frac{\partial}{\partial x_n} [w_{nn}x_n^2 + (w_{n1}x_nx_1 + \cdots + w_{n(n-1)}x_nx_{n-1}) + (w_{1n}x_1x_n + \cdots + w_{(n-1)n}x_{n-1}x_n)]
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        2w_{11}x_1 + (w_{12}x_2 + \cdots + w_{1n}x_n) + (w_{21}x_2 + \cdots + w_{n1}x_n) \\
+        2w_{22}x_2 + (w_{21}x_1 + \cdots + w_{2n}x_n) + (w_{12}x_1 + \cdots + w_{n2}x_n) \\
+        \vdots \\
+        2w_{nn}x_n + (w_{n1}x_1 + \cdots + w_{n(n-1)}x_{n-1}) + (w_{1n}x_1 + \cdots + w_{(n-1)n}x_{n-1})
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        \sum_{i=1}^{n} w_{i1} x_i \\
+        \sum_{i=1}^{n} w_{i2} x_i \\
+        \vdots \\
+        \sum_{i=1}^{n} w_{in} x_i
+    \end{bmatrix} + \begin{bmatrix}
+        \sum_{j=1}^{n} w_{1j} x_j \\
+        \sum_{j=1}^{n} w_{2j} x_j \\
+        \vdots \\
+        \sum_{j=1}^{n} w_{nj} x_j
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        w_{11} & w_{21} & \cdots & w_{n1} \\
+        w_{12} & w_{22} & \cdots & w_{n2} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        w_{1n} & w_{2n} & \cdots & w_{nn}
+    \end{bmatrix} \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        \vdots \\
+        x_n
+    \end{bmatrix} + \begin{bmatrix}
+        w_{11} & w_{12} & \cdots & w_{1n} \\
+        w_{21} & w_{22} & \cdots & w_{2n} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        w_{n1} & w_{n2} & \cdots & w_{nn}
+    \end{bmatrix} \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        \vdots \\
+        x_n
+    \end{bmatrix} \\
+    &= (\mathbf{W}^{\top} + \mathbf{W}) \mathbf{x}
+\end{align*}
+$$
+{{< /math >}}
+
 ## 常见神经网络层的导数计算
 
 ### 全连接层
@@ -194,11 +334,11 @@ $$
 $$
 {{< /math >}}
 
-实际上，当所有的量均为标量时，它就是一个一次线性函数。所以，其求导结果就是 $\mathbf{x}$ 前面的系数矩阵 $\mathbf{W}$。
+它是一个典型的一次多项式向量函数，其导数为
 
 {{< math >}}
 $$
-\frac{\mathrm{d}\mathbf{y}}{\mathrm{d}\mathbf{x}} = \mathbf{W}
+\frac{\mathrm{d}\mathbf{y}}{\mathrm{d}\mathbf{x}} = \mathbf{W}^{\top}
 $$
 {{< /math >}}
 
