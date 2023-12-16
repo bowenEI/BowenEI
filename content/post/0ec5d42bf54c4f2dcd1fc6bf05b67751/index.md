@@ -6,7 +6,7 @@ subtitle: ""
 summary: ""
 authors: []
 tags: [深度学习, 线性代数, 函数与导数, 凸优化]
-categories: []
+categories: [Essay, Knowledge]
 date: 2023-12-06T10:44:14+08:00
 lastmod: 2023-12-06T10:44:14+08:00
 featured: false
@@ -347,7 +347,7 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    \frac{\mathrm{d}\mathbf{y}}{\mathrm{d}\mathbf{W}} = \mathbf{x}
+    \frac{\mathrm{d}\mathbf{y}}{\mathrm{d}\mathbf{W}} = \mathbf{x}^{\top}
 \end{align*}
 $$
 {{< /math >}}
