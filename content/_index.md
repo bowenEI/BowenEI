@@ -145,6 +145,7 @@ sections:
   - block: collection
     id: posts
     content:
+      sort_by: "Lastmod"
       title: Recent Posts
       subtitle: ''
       text: ''
