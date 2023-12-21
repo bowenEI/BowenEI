@@ -8,7 +8,7 @@ authors: []
 tags: [LLM]
 categories: [Academic]
 date: 2023-11-01T13:09:34+08:00
-lastmod: 2023-12-11T13:09:34+08:00
+lastmod: 2023-12-21T13:09:34+08:00
 featured: false
 draft: false
 
@@ -53,12 +53,12 @@ Transformer[^1] 是一种 Encoder-Decoder 结构的模型，它被认为是 LLM 
 
 LLM 超参数定义如下：
 
-|          超参数          | 符号表示 | Transformer 中的大小 |
-| :----------------------: | :------: | :------------------: |
-|   $d_{\textrm{model}}$   |    M     |         512          |
-| $d_k$, $d_v$ ($d_{qkv}$) |    D     |          64          |
-|           Head           |    H     |          8           |
-|         $d_{ff}$         |    F     |         2048         |
+|        超参数         | 符号表示 | Transformer 中的大小 |
+| :-------------------: | :------: | :------------------: |
+| $d_{\textrm{model} }$ |    M     |         512          |
+|      $d_k(d_v)$       |    D     |          64          |
+|         Head          |    H     |          8           |
+|       $d_{ff}$        |    F     |         2048         |
 
 根据论文中的定义，其中 $M = HD$，$F = 4M$。
 
@@ -74,7 +74,7 @@ $$
 $$
 {{< /math >}}
 
-在那之前，需要将每个 token 从 $d_{\textrm{model}}$ 维映射到 $d_k$ 或 $d_v$ 维。（在 Transformer 模型中，$d_{\textrm{model}} = 512$，而 $d_k = d_v = \frac{d_{\textrm{model}}}{h} = 64$，这里 $h = 8$。）所以，输入的 $Q, K, V$ 向量都需要进行投影操作，共需 3 个线性变换矩阵 $W_K, W_Q, W_V$，维度均为 `(M, D)`。
+在那之前，需要将每个 token 从 $d_{\textrm{model}}$ 维映射到 $d_k(d_v)$ 维。（在 Transformer 模型中，$d_{\textrm{model}} = 512$，而 $d_k = d_v = \frac{d_{\textrm{model}}}{h} = 64$，这里 $h = 8$。）所以，输入的 $Q, K, V$ 向量都需要进行投影操作，共需 3 个线性变换矩阵 $W_K, W_Q, W_V$，维度均为 `(M, D)`。
 
 {{< figure src="9b71910d735ee7b15951fdc350cc411d.png" title="Multi-Head Self-Attention Block." numbered="true" >}}
 
@@ -288,7 +288,81 @@ $$
 
 ### 全量推理
 
-全量推理阶段，即输入一个完整的 sequence，到输出第一个 token 的过程。其计算和访存开销与 sequence length 和 batch size 直接相关，分别用 $S_{in}$（下面简写为 $S$）和 $B$ 来分别表示其大小。对于 Encoder 的 8 个线性算子，其 FLOPS、MOPS 和算术强度如下表 [^6] 所示：
+全量推理阶段，即输入一个完整的 sequence，到输出第一个 token 的过程。其计算和访存开销与 sequence length 和 batch size 直接相关，分别用 $S_{in}$（下面简写为 $S$）和 $B$ 来分别表示其大小。
+
+对于 MHA 的 4 个 `proj` 算子，即 $W_Q, W_K, W_V, W_O$，其映射的维度都是一致的，即从 $d_{\mathrm{model}}$ 到 $\mathrm{head} \times d_{k}$（或反过来）。这部分的 FLOPS 和 $B, S, M, H, D$ 成正比，即
+
+{{< math >}}
+$$
+\begin{align*}
+    \text{FLOPS} & \propto BSMHD \\
+    &= BSM^2
+\end{align*}
+$$
+{{< /math >}}
+
+由于需要把模型权重和中间激活 tensor 都加载到显存中，其 MOPS 由 2 个部分组成，即
+
+{{< math >}}
+$$
+\begin{align*}
+    \text{MOPS} & \propto 2BSM + MHD \\
+    &= 2BSM + M^2
+\end{align*}
+$$
+{{< /math >}}
+
+其中，常数 $2$ 表示一对显存读写操作，因为中间激活 tensor 需要先读取，再将结果写入显存。
+
+对于 Self-Attention 计算，$Q \times K$ 和 Score（用 $P$ 表示）$\times V$ 这 2 个线性算子的 FLOPS 与 $B, S^2, H, D$ 成正比，即
+
+{{< math >}}
+$$
+\begin{align*}
+    \text{FLOPS} & \propto BS^2HD \\
+    &= BS^2M
+\end{align*}
+$$
+{{< /math >}}
+
+不过，由于 Self-Attention 没有模型参数，其 MOPS 由 2 个部分组成，即读取 $Q$ 和 $K$ 向量，将结果写入显存，即
+
+{{< math >}}
+$$
+\begin{align*}
+    \text{MOPS} & \propto 2BSHD + BS^2H \\
+    &= 2BSM + BS^2H
+\end{align*}
+$$
+{{< /math >}}
+
+由于 Self-Attention 本质上是计算余弦距离，每个 head 内的向量计算的实际上是内积，这样 $d_k(d_v)$ 这一维度就没有了。
+
+最后，对于 FFN 的 2 个线性算子，即 $W_{in}, W_{out}$ 2 个 MLP 层，其 FLOPS 与 $B, S, M, F$ 成正比，即
+
+{{< math >}}
+$$
+\begin{align*}
+    \text{FLOPS} & \propto BSMF + BSMF \\
+    &= 8BSM^2
+\end{align*}
+$$
+{{< /math >}}
+
+其中，加号两边的部分虽然一样，但它们分别表示权重矩阵 $W_{in}, W_{out}$ 和偏置向量 $b_{in}, b_{out}$。
+
+同理，和 MHA 的 4 个 `proj` 算子类似，FFN 的 MOPS 也由 2 个部分组成，即
+
+{{< math >}}
+$$
+\begin{align*}
+    \text{MOPS} & \propto BSM + MF \\
+    &= BSM + 4M^2
+\end{align*}
+$$
+{{< /math >}}
+
+综上所述，对于 Encoder 的 8 个线性算子，其 FLOPS、MOPS 和算术强度如下表[^6]所示：
 
 |       Stage        |    FLOPS    |      MOPS       |                 Arithmetic Intensity                  |
 | :----------------: | :---------: | :-------------: | :---------------------------------------------------: |
@@ -296,7 +370,7 @@ $$
 |   $K \times W_K$   | $O(BSM^2)$  |  $O(2BSM+M^2)$  | $$O\left(\frac{1}{\frac{2}{M}+\frac{1}{BS} }\right)$$ |
 |   $V \times W_V$   | $O(BSM^2)$  |  $O(2BSM+M^2)$  | $$O\left(\frac{1}{\frac{2}{M}+\frac{1}{BS} }\right)$$ |
 |    $Q \times K$    | $O(BS^2M)$  | $O(2BSM+BS^2H)$ | $$O\left(\frac{1}{\frac{1}{D}+\frac{1}{S} }\right)$$  |
-|   $P \times V $    | $O(BS^2M)$  | $O(2BSM+BS^2H)$ | $$O\left(\frac{1}{\frac{1}{D}+\frac{1}{S} }\right)$$  |
+|    $P \times V$    | $O(BS^2M)$  | $O(2BSM+BS^2H)$ | $$O\left(\frac{1}{\frac{1}{D}+\frac{1}{S} }\right)$$  |
 |   $A \times W_O$   | $O(BSM^2)$  |  $O(2BSM+M^2)$  | $$O\left(\frac{1}{\frac{2}{M}+\frac{1}{BS} }\right)$$ |
 | $F \times W_{in}$  | $O(8BSM^2)$ |  $O(BSM+4M^2)$  | $$O\left(\frac{8}{\frac{1}{M}+\frac{4}{BS} }\right)$$ |
 | $F \times W_{out}$ | $O(8BSM^2)$ |  $O(BSM+4M^2)$  | $$O\left(\frac{8}{\frac{1}{M}+\frac{4}{BS} }\right)$$ |
