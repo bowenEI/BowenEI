@@ -26,6 +26,8 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
+
+toc: true
 ---
 
 2024 年考研已落下帷幕。据报道，今年考研的人数比去年减少了 36 万（共 438 万人报考），引发社会广泛关注。在刚刚结束的数学科目考试中，不少考生哀叹今年的数学试题难如登天，特别是 301 数学（一）。
@@ -36,7 +38,262 @@ projects: []
 
 ------
 
+{{< gdocs src="https://docs.google.com/document/d/1GP4QxKlc49zVq3suq2CgQ6ZlIVZt2oEUiUL0xX0vlmQ/edit?usp=sharing" >}}
+
 ## 选择题
+
+### 1
+
+本题考察变限函数的定义和积分的性质。若一个函数具有奇偶性，则其求导和积分结果的奇偶性正好相反。题干中的被积函数都是偶函数，且变限积分的上限是奇函数。因此，其导函数都是偶函数，所以原函数都是奇函数。
+
+### 2
+
+本体考察第二类曲面积分的转换投影法。通过四个选项可以判断是往 $xOy$ 平面上投影，因此分别计算 $z$ 对 $x, y$ 的偏导数
+
+{{< math >}}
+$$
+\begin{align*}
+    z^2 &= 1 - x^2 - y^2 \\
+    2z \cdot \frac{\partial z}{\partial x} &= -2x \\
+    \Longrightarrow \frac{\partial z}{\partial x} &= - \frac{x}{z} \\
+    2z \cdot \frac{\partial z}{\partial y} &= -2y \\
+    \Longrightarrow \frac{\partial z}{\partial y} &= - \frac{y}{z}
+\end{align*}
+$$
+{{< /math >}}
+
+所以
+
+{{< math >}}
+$$
+\begin{align*}
+    &\ \iint_{\Sigma} P \mathrm{d}y \mathrm{d}z + Q \mathrm{d}z \mathrm{d}x \\
+    =&\ \iint_{\Sigma} \left( P \cdot \left(-\frac{\partial z}{\partial x}\right) + Q \cdot \left(-\frac{\partial z}{\partial y}\right) \right) \mathrm{d}y \mathrm{d}z \\
+    =&\ \iint_{\Sigma} \left( \frac{x}{z} + \frac{y}{z} \right) \mathrm{d}x \mathrm{d}y
+\end{align*}
+$$
+{{< /math >}}
+
+### 3
+
+本题考察幂级数和泰勒公式。首先我们将和函数 $\ln(2 + x)$ 泰勒展开
+
+{{< math >}}
+$$
+\begin{align*}
+    \ln{(2 + x)} &= \ln{2} + \ln{(1 + \frac{x}{2})} \\
+    &= \ln{2} + \sum_{n = 1}^{\infty} \frac{(-1)^{n-1}}{n} \left( \frac{x}{2} \right)^{n} \\
+\end{align*}
+$$
+{{< /math >}}
+
+易知，$a_0 = \ln{2}$。利用待定系数法，当 $n \geqslant 1$ 时，数列 $\{a_n\}$ 的通项公式为
+
+{{< math >}}
+$$
+\begin{align*}
+    a_n = \frac{(-1)^{n-1}}{n \cdot 2^n}
+\end{align*}
+$$
+{{< /math >}}
+
+所以待求的和式为
+
+{{< math >}}
+$$
+\begin{align*}
+    \sum_{n = 0}^{\infty} n a_{2n} &= \sum_{n = 1}^{\infty} n \frac{(-1)^{2n-1}}{2n \cdot 2^{2n}} \\
+    &= -\frac{1}{2} \sum_{n = 1}^{\infty} \frac{1}{4^{n}} \\
+    &= -\frac{1}{2} \lim_{n \to \infty}  \frac{\frac{1}{4} \left(1 - \frac{1}{4^{n}}\right)}{1 - \frac{1}{4}} \\
+    &= -\frac{1}{6}
+\end{align*}
+$$
+{{< /math >}}
+
+### 4
+
+本题考察导数的定义。函数在某点可导需要满足以下 2 个条件：
+
+1. 左导数等于右导数
+2. 函数在该点处连续
+
+对于 B 选项，因为 $f'(0) = m$，暗含了 $f(x)$ 在 $x = 0$ 处连续的条件，从而极限值等于函数值，即
+
+{{< math >}}
+$$
+\lim_{x \to 0} f(x) = f(0) = m
+$$
+{{< /math >}}
+
+由导数定义得
+
+{{< math >}}
+$$
+\lim_{x \to 0} \frac{f(x) - f(0)}{x - 0} = \lim_{x \to 0} \frac{f(x)}{x} = m
+$$
+{{< /math >}}
+
+可以证明 B 选项正确。而 A 选项恰好是其逆命题，不一定成立。这是因为 $f(0)$ 不一定等于 $0$，下面给出一个反例
+
+{{< math >}}
+$$
+f(x) = \begin{cases}
+    1 & x = 0 \\
+    x^2 \sin{\frac{1}{x}} & x \in (-1, 0) \cup (0, 1)
+\end{cases} \tag{1}
+$$
+{{< /math >}}
+
+$f(x)$ 在 $x = 0$ 处的极限为
+
+{{< math >}}
+$$
+\lim_{x \to 0} f(x) = \lim_{x \to 0^{+}} x^2 \sin{\frac{1}{x}} = \lim_{x \to 0^{-}} x^2 \sin{\frac{1}{x}} = 0 \neq f(0)
+$$
+{{< /math >}}
+
+对于 C 选项，是典型的导函数极限存在但不可导的情况。下面给出一个反例
+
+{{< math >}}
+$$
+\begin{align*}
+    f(x) = \begin{cases}
+        1 & x = 0 \\
+        x^2 & x \in (-1, 0) \cup (0, 1)
+    \end{cases}
+\end{align*}
+$$
+{{< /math >}}
+
+其导函数为
+
+{{< math >}}
+$$
+\begin{align*}
+    f'(x) = \begin{cases}
+        \nexists & x = 0 \\
+        2x & x \in (-1, 0) \cup (0, 1)
+    \end{cases}
+\end{align*}
+$$
+{{< /math >}}
+
+导函数的极限
+
+{{< math >}}
+$$
+\begin{align*}
+    \lim_{x \to 0} f'(x) &= \lim_{x \to 0} 2x = 0 \neq
+\end{align*}
+$$
+{{< /math >}}
+
+但 $f(x)$ 在 $x = 0$ 处的导数却不存在，因为不连续。
+
+而 D 选项刚好相反，是典型的可导但导函数极限不存在的情况。可以采用类似 (1) 式的反例，说明如下
+
+{{< math >}}
+$$
+\begin{align*}
+    f(x) = \begin{cases}
+        0 & x = 0 \\
+        x^2 & x \in (-1, 0) \cup (0, 1)
+    \end{cases}
+\end{align*}
+$$
+{{< /math >}}
+
+易知
+
+{{< math >}}
+$$
+\begin{align*}
+    \lim_{x \to 0^{+}} f(x) = \lim_{x \to 0^{-}} f(x) = f(0) = 0
+\end{align*}
+$$
+{{< /math >}}
+
+这说明 $f(x)$ 在 $(-1, 1)$ 上连续。由导数的定义，计算 $f(x)$ 在 $x = 0$ 处的导数
+
+{{< math >}}
+$$
+\begin{align*}
+    f'(0) &= \lim_{x \to 0} \frac{f(x) - f(0)}{x - 0} \\
+    &= \lim_{x \to 0} \frac{x^2 \sin{\frac{1}{x}}}{x} \\
+    &= 0
+\end{align*}
+$$
+{{< /math >}}
+
+但是
+
+{{< math >}}
+$$
+\begin{align*}
+    \lim_{x \to 0} f'(x) &= \lim_{x \to 0} 2x \sin{\frac{1}{x}} - \cos{\frac{1}{x}} \\
+    &= \nexists
+\end{align*}
+$$
+{{< /math >}}
+
+### 5
+
+本题考查线性方程组解的性质。本题通过给出三维空间中平面的位置关系，考察考生对线性方程组的直观理解，颇有新意。
+
+由图可知，平面 $\pi_1 \cap \pi_2 \cap \pi_3 = l$，交于一条直线。这说明，三个平面所对应的平面方程组成的三元线性方程组有无穷多解，且位于同一条直线上。所以，其基础解系只有一个向量作基。
+
+那么，相应的齐次线性方程组的系数矩阵的秩 $r = 3 - 1 = 2$，相应的非齐次线性方程组的增广矩阵的秩应该和前者相同。
+
+### 6
+
+本题考查向量组的关系。题目给出了 3 个 4 维向量，将之排列成 $4 \times 3$ 的矩阵。
+
+由题意可知，3 个向量线性相关，意味着该矩阵的任意 3 阶子式的行列式等于零，即
+
+{{< math >}}
+$$
+\begin{align*}
+    \begin{vmatrix}
+        a & 1 & 1 \\
+        1 & 1 & a \\
+        1 & a & 1
+    \end{vmatrix} &= a + a + a - 1 - 1 - a^3 \\
+    &= -a^3 + 3a - 2 \\
+    &= (a - 1)(-a^2 - a + 2) \\
+    &= -(a - 1)^2(a + 2) = 0 \\
+    \Longrightarrow a &\in \{1, -2\}
+\end{align*}
+$$
+{{< /math >}}
+
+当 $a=1$ 时，$\alpha_1$ 和 $\alpha_3$ 必然线性相关，不合题意，舍去。因此，$a = -2$。再计算含有 $b$ 的 3 阶子式的行列式，以反解出 $b$，即
+
+{{< math >}}
+$$
+\begin{align*}
+    \begin{vmatrix}
+        -2 & 1 & 1 \\
+        1 & 1 & -2 \\
+        -1 & b & -1
+    \end{vmatrix} &= \begin{vmatrix}
+        1 & 1 & -2 \\
+        -1 & b & -1 \\
+        -2 & 1 & 1
+    \end{vmatrix} \\
+    &= \begin{vmatrix}
+        1 & 1 & -2 \\
+        0 & b+1 & -3 \\
+        0 & 3 & -3
+    \end{vmatrix} \\
+    &= \begin{vmatrix}
+        b+1 & -3 \\
+        3 & -3
+    \end{vmatrix} \\
+    &= -3(b+1) + 9 = 0 \\
+    \Longrightarrow b &= 2
+\end{align*}
+$$
+{{< /math >}}
 
 ## 填空题
 
@@ -51,8 +308,6 @@ $$
 \oint_{L} (6xyz - yz^2) \mathrm{d}x + 2x^2z \mathrm{d}y +xyz \mathrm{d} z
 $$
 {{< /math >}}
-
-【解】
 
 本题求解的是空间曲线的第二类曲线积分，考察斯托克斯（Stokes）公式的运用。斯托克斯公式将空间曲线的第二类曲线积分转化为空间曲面的第二类曲面积分。
 
