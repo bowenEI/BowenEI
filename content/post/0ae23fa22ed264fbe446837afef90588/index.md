@@ -106,8 +106,8 @@ $$
     x^2 + y^2 + (2x-1)^2 &= 2x \\
     5x^2 + y^2 - 6x + 1 &= 0 \\ 
     5 \left[ \left(x - \frac{3}{5} \right)^2 - \frac{9}{25} \right] + y^2 + 1 &= 0 \\
-    5 \left( x - \frac{3}{5} \right)^2 + y^2 = \frac{4}{5} \\
-    \frac{\left( x - \frac{3}{5} \right)^2}{\left( \frac{2}{5} \right)^2} + \frac{y^2}{\left( \frac{2}{\sqrt{5}} \right)^2} = 1
+    5 \left( x - \frac{3}{5} \right)^2 + y^2 &= \frac{4}{5} \\
+    \frac{\left( x - \frac{3}{5} \right)^2}{\left( \frac{2}{5} \right)^2} + \frac{y^2}{\left( \frac{2}{\sqrt{5}} \right)^2} &= 1
 \end{align*}
 $$
 {{< /math >}}
@@ -117,7 +117,7 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    I &= \iint_{D} \mathrm{d}x \mathrm{d}y
+    I &= \iint_{D} \mathrm{d}x \mathrm{d}y \\
     &= \pi \times \frac{2}{5} \times \frac{2}{\sqrt{5}} \\
     &= \frac{4 \sqrt{5} \pi}{25}
 \end{align*}
