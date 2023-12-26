@@ -183,7 +183,7 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    \lim_{x \to 0} f'(x) &= \lim_{x \to 0} 2x = 0 \neq
+    \lim_{x \to 0} f'(x) &= \lim_{x \to 0} 2x = 0
 \end{align*}
 $$
 {{< /math >}}
