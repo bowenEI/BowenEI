@@ -38,15 +38,37 @@ toc: true
 
 ------
 
-{{< gdocs src="https://docs.google.com/document/d/1GP4QxKlc49zVq3suq2CgQ6ZlIVZt2oEUiUL0xX0vlmQ/edit?usp=sharing" >}}
-
 ## 选择题
 
 ### 1
 
+已知函数 $f(x)=\int_{0}^{x} e^{\cos t} \mathrm{d} t$，$g(x)=\int_{0}^{\sin x} e^{t^{2}} \mathrm{d} t$，则 $(\qquad)$
+
+A. $f(x)$ 是奇函数，$g(x)$ 是偶函数
+
+B. $f(x)$ 是偶函数，$g(x)$ 是奇函数
+
+C. $f(x)$ 与 $g(x)$ 均为奇函数
+
+D. $f(x)$ 与 $g(x)$ 均为周期函数
+
+【解】
+
 本题考察变限函数的定义和积分的性质。若一个函数具有奇偶性，则其求导和积分结果的奇偶性正好相反。题干中的被积函数都是偶函数，且变限积分的上限是奇函数。因此，其导函数都是偶函数，所以原函数都是奇函数。
 
 ### 2
+
+设 $P=P(x, y, z), Q=Q(x, y, z)$ 均为连续函数，$\Sigma$ 为曲面 $z=\sqrt{1-x^{2}-y^{2}} \ (x \leqslant 0, y \geqslant 0)$ 的上侧，则 $\iint_{\Sigma} P \mathrm{d}y \mathrm{d}z + Q \mathrm{d}z \mathrm{d}x = (\qquad)$
+
+A. $\iint_{\Sigma}\left(\frac{x}{z} P+\frac{y}{z} Q\right) \mathrm{d}x \mathrm{d}y$
+
+B. $\iint_{\Sigma}\left(-\frac{x}{z} P+\frac{y}{z} Q\right) \mathrm{d}x \mathrm{d}y$
+
+C. $\iint_{\Sigma}\left(\frac{x}{z} P-\frac{y}{z} Q\right) \mathrm{d}x \mathrm{d}y$
+
+D. $\iint_{\Sigma}\left(-\frac{x}{z} P-\frac{y}{z} Q\right) \mathrm{d}x \mathrm{d}y$
+
+【解】
 
 本题考察第二类曲面积分的转换投影法。通过四个选项可以判断是往 $xOy$ 平面上投影，因此分别计算 $z$ 对 $x, y$ 的偏导数
 
@@ -75,6 +97,18 @@ $$
 {{< /math >}}
 
 ### 3
+
+已知幂级数 $\sum_{n = 0}^{\infty} a_n x^n$ 的和函数为 $\ln(2 + x)$，则 $\sum_{n = 0}^{\infty} n a_{2n} = (\qquad)$
+
+A. $-\frac{1}{6}$
+
+B. $-\frac{1}{3}$
+
+C. $\frac{1}{6}$
+
+D. $\frac{1}{3}$
+
+【解】
 
 本题考察幂级数和泰勒公式。首先我们将和函数 $\ln(2 + x)$ 泰勒展开
 
@@ -111,6 +145,18 @@ $$
 {{< /math >}}
 
 ### 4
+
+设函数 $f(x)$ 在区间 $(-1,1)$ 上有定义，且 $\lim _{x \to 0} f(x)=0$，则 $(\qquad)$
+
+A. 当 $\lim _{x \to 0} \frac{f(x)}{x}=m$ 时，$f'(0)=m$
+
+B. 当 $f'(0)=m$ 时，$\lim _{x \to 0} \frac{f(x)}{x}=m$
+
+C. 当 $\lim _{x \to 0} f'(x)=m$ 时，$f'(0)=m$
+
+D. 当 $f'(0)=m$ 时，$\lim _{x \to 0} f'(x)=m$
+
+【解】
 
 本题考察导数的定义。函数在某点可导需要满足以下 2 个条件：
 
@@ -238,6 +284,36 @@ $$
 
 ### 5
 
+在空间直角坐标系 $O-xyz$ 中，三张平面 $\pi_i: a_ix+b_iy+c_i = d_i$ 的位置关系如图所示。记 $\alpha_i = (a_i, b_i, c_i)，\beta_i = (a_i, b_i, c_i, d_i)$。若
+
+{{< math >}}
+$$
+r \begin{pmatrix}
+    \alpha_1 \\
+    \alpha_2 \\
+    \alpha_3
+\end{pmatrix} = m, r \begin{pmatrix}
+    \beta_1 \\
+    \beta_2 \\
+    \beta_3 \\
+\end{pmatrix} = n
+$$
+{{< /math >}}
+
+则 $(\qquad)$
+
+A. $m=1, n=2$
+
+B. $m=n=2$
+
+C. $m=2, n=3$
+
+D. $m=n=3$
+
+{{< figure src="049564e9d0f8acd85f6b48a462a59e89.png" >}}
+
+【解】
+
 本题考查线性方程组解的性质。本题通过给出三维空间中平面的位置关系，考察考生对线性方程组的直观理解，颇有新意。
 
 由图可知，平面 $\pi_1 \cap \pi_2 \cap \pi_3 = l$，交于一条直线。这说明，三个平面所对应的平面方程组成的三元线性方程组有无穷多解，且位于同一条直线上。所以，其基础解系只有一个向量作基。
@@ -245,6 +321,40 @@ $$
 那么，相应的齐次线性方程组的系数矩阵的秩 $r = 3 - 1 = 2$，相应的非齐次线性方程组的增广矩阵的秩应该和前者相同。
 
 ### 6
+
+设向量
+
+{{< math >}}
+$$
+\alpha_1 = \begin{bmatrix}
+    a \\
+    1 \\
+    -1 \\
+    1
+\end{bmatrix}, \alpha_2 = \begin{bmatrix}
+    1 \\
+    b \\
+    a
+\end{bmatrix}, \alpha_3 = \begin{bmatrix}
+    1 \\
+    a \\
+    -1 \\
+    1
+\end{bmatrix}
+$$
+{{< /math >}}
+
+若 $\alpha_1, \alpha_2, \alpha_3$ 线性相关，且其中任意两个向量线性无关，则 $(\qquad)$
+
+A. $a=1, b \neq -1$
+
+B. $a=1, b=-1$
+
+C. $a \neq -2, b=2$
+
+D. $a=-2, b=2$
+
+【解】
 
 本题考查向量组的关系。题目给出了 3 个 4 维向量，将之排列成 $4 \times 3$ 的矩阵。
 
@@ -295,9 +405,524 @@ $$
 $$
 {{< /math >}}
 
+### 7
+
+设 $A$ 是秩为 2 的 3 阶矩阵，$\alpha$ 是满足 $A \alpha = 0$ 的非零向量。若对满足 $\beta^{\top} \alpha = 0$ 的 3 维列向量 $\beta$，均有 $A \beta = \beta$，则 $(\qquad)$
+
+A. $A^3$ 的迹为 2
+
+B. $A^3$ 的迹为 5
+
+C. $A^2$ 的迹为 8
+
+D. $A^2$ 的迹为 9
+
+【解】
+
+本题考察矩阵的特征值和特征向量。依题意，$A \alpha = 0$ 且 $\alpha$ 是非零向量，说明矩阵至少有一个特征值 $\lambda = 0$，且它是属于 $\alpha$ 的特征值。
+
+同理，对于任意与 $\alpha$ 正交的向量 $\beta$ 均满足 $A \beta = \beta$，说明 $\lambda = 1$ 也是矩阵 $A$ 的特征值。而且，$\alpha, \beta$ 都是 3 维列向量，说明 $\lambda = 1$ 至少是二重特征值。同时，$A$ 的秩又等于 2，说明 $\lambda = 1$ 恰好是二重特征值。因此
+
+{{< math >}}
+$$
+A \sim \begin{bmatrix}
+    1 & & \\
+    & 1 & \\
+    & & 0
+\end{bmatrix}
+$$
+{{< /math >}}
+
+故 $\operatorname{tr}(A^3) = 1+1+0 = 2$。
+
+### 8
+
+> TODO
+
+### 9
+
+> TODO
+
+### 10
+
+> TODO
+
 ## 填空题
 
+### 11
+
+若
+
+{{< math >}}
+$$
+\lim_{x \to 0} \frac{(1+ax^2)^{\sin{x}} - 1}{x^3} = 6
+$$
+{{< /math >}}
+
+则 $a = \underline{\qquad}$
+
+【解】
+
+{{< math >}}
+$$
+\begin{align*}
+    \lim_{x \to 0} \frac{(1+ax^2)^{\sin{x}} - 1}{x^3} &= \lim_{x \to 0} \frac{e^{\sin{x} \ln{(1+ax^2)}} - 1}{x^3}
+\end{align*}
+$$
+{{< /math >}}
+
+由 $e^x - 1 \sim 0 \ (x \to 0)$ 等价无穷小替换，可得
+
+{{< math >}}
+$$
+\begin{align*}
+    \cdots &= \lim_{x \to 0} \frac{\sin{x} \ln{(1+ax^2)}}{x^3}
+\end{align*}
+$$
+{{< /math >}}
+
+由 $\sin{x} \sim x$ 以及 $\ln{(x+1)} \sim x \ (x \to 0)$ 等价无穷小替换，可得
+
+{{< math >}}
+$$
+\begin{align*}
+    \cdots = \lim_{x \to 0} \frac{x \cdot ax^2}{x^3} &= 6 \\
+    \Longrightarrow a &= 6
+\end{align*}
+$$
+{{< /math >}}
+
+### 12
+
+设函数 $f(u, v)$ 具有 2 阶连续偏导数，且 {{< math >}}$\left. \mathrm{d} f\right|_{(1,1)} = 3 \mathrm{d} u + 4 \mathrm{d} v${{< /math >}}，令 {{< math >}}$y = f\left(\cos{x}, 1+x^{2}\right)${{< /math >}}，则 {{< math >}}$\left.\frac{\mathrm{d}^{2} y}{\mathrm{d} x^{2}}\right|_{x = 0} = \underline{\qquad}${{< /math >}}
+
+【解】
+
+本题考察偏导数和全微分。易知
+
+{{< math >}}
+$$
+\begin{align*}
+    \left. f'_u \right|_{(1,1)} &= 3 \\
+    \left. f'_v \right|_{(1,1)} &= 4
+\end{align*}
+$$
+{{< /math >}}
+
+对 $y$ 求导，可得
+
+{{< math >}}
+$$
+\begin{align*}
+    \frac{\mathrm{d} y}{\mathrm{d} x} =&\ 
+ \frac{\mathrm{d} f\left(\cos x, 1+x^{2}\right)}{\mathrm{d} x} \\
+    =&\ f'_u \cdot (-\sin{x}) + f'_v \cdot 2x \\
+    \frac{\mathrm{d}^{2} y}{\mathrm{d} x^{2}} =&\ \frac{\mathrm{d}^{2} f\left(\cos x, 1+x^{2}\right)}{\mathrm{d} x^{2}} \\
+    =&\ [f''_{uu} \cdot (-\sin{x}) + f''_{uv} \cdot 2x] (-\sin{x}) + f'_{u} \cdot (-\cos{x}) + \\
+    &\ [f''_{vu} \cdot (-\sin{x}) + f''_{vv} \cdot 2x] \cdot 2x + 2 f'_{v}
+\end{align*}
+$$
+{{< /math >}}
+
+于是
+
+{{< math >}}
+$$
+\begin{align*}
+    \frac{\mathrm{d}^{2} y}{\mathrm{d} x^{2}} &= \left.\frac{\mathrm{d}^{2} f(\cos x, 1+x^{2})}{\mathrm{d} x^{2}}\right|_{x=0} \\
+    &= \left. - f'_u \right|_{(1,1)} + \left. 2 f'_v \right|_{(1,1)} \\
+    &= 5
+\end{align*}
+$$
+{{< /math >}}
+
+### 13
+
+已知函数 $f(x) = x+1$，若
+
+{{< math >}}
+$$
+\begin{align*}
+    f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} a_{n} \cos{nx}, \ x \in [0, \pi]
+\end{align*}
+$$
+{{< /math >}}
+
+则 $\lim_{n \to \infty} n^2 \sin{a_{2n-1}} = \underline{\qquad}$
+
+【解】
+
+本题考察傅里叶级数。由公式得
+
+{{< math >}}
+$$
+\begin{align*}
+    a_n &= \frac{2}{\pi} \int_{0}^{\pi} (x+1) \cos{\frac{n \pi x}{\pi}} \mathrm{d}x \\
+    &= \frac{2}{n \pi} \left(
+        \left. \sin{nx} \right|_{0}^{\pi} + \int_{0}^{\pi} x \mathrm{d} \sin{nx}
+    \right) \\
+    &= \frac{2}{n \pi} \left(
+        \left. x \sin{nx} \right|_{0}^{\pi} - \int_{0}^{\pi} \sin{nx} \mathrm{d} x
+    \right) \\
+    &= \frac{2}{n^2 \pi} \left. \cos{nx} \right|_{0}^{\pi} \\
+    &= -\frac{4}{n^2 \pi}
+\end{align*}
+$$
+{{< /math >}}
+
+于是
+
+{{< math >}}
+$$
+\begin{align*}
+    \lim_{n \to \infty} n^2 \sin{a_{2n-1}} &= -\lim_{n \to \infty} n^2 \cdot \sin{\frac{4}{(2n-1)^2 \pi}} \\
+\end{align*}
+$$
+{{< /math >}}
+
+原式为 $\infty \cdot 0$ 型未定式，利用倒代换，令
+
+{{< math >}}
+$$
+\begin{align*}
+    t &= \frac{1}{2n - 1} \\
+    \Longrightarrow n &= \frac{t+1}{2t}
+\end{align*}
+$$
+{{< /math >}}
+
+于是原式可化为
+
+{{< math >}}
+$$
+\begin{align*}
+    \cdots &= -\lim_{t \to 0} \left( \frac{t+1}{2t} \right)^2 \sin{\frac{4t^2}{\pi}} \\
+    &= -\lim_{t \to 0} \left( \frac{t+1}{2t} \right)^2 \cdot \frac{4t^2}{\pi} \\
+    &= -\lim_{t \to 0} \frac{(t+1)^2}{\pi} \\
+    &= -\frac{1}{\pi}
+\end{align*}
+$$
+{{< /math >}}
+
+### 14
+
+微分方程
+
+{{< math >}}
+$$
+y' = \frac{1}{(x+y)^2}
+$$
+{{< /math >}}
+
+满足条件 $y(1) = 0$ 的解为 $\underline{\qquad}$
+
+【解】
+
+令 $x+y = u$，等式两边同时对 $x$ 求导，得到 $u' = 1+y'$。代入原式得
+
+{{< math >}}
+$$
+\begin{align*}
+    u' - 1 &= \frac{1}{u^2} \\
+    \frac{\mathrm{d}u}{\mathrm{d}x} &= \frac{1+u^2}{u^2} \\
+\end{align*}
+$$
+{{< /math >}}
+
+采用分离变量法解这个微分方程，得
+
+{{< math >}}
+$$
+\begin{align*}
+    \int \frac{u^2}{1+u^2} \mathrm{d}u &= \int \mathrm{d}x \\
+    \Longrightarrow x &= \int \left(1 - \frac{1}{1+u^2}\right) \mathrm{d}u \\
+    &= u - \arctan{u} + C \\
+\end{align*}
+$$
+{{< /math >}}
+
+即
+
+{{< math >}}
+$$
+\begin{align*}
+    x &= x + y - \arctan{(x+y)} + C \\
+    y &= \arctan{(x+y)} + C
+\end{align*}
+$$
+{{< /math >}}
+
+代入初始条件，可解得
+
+{{< math >}}
+$$
+\begin{align*}
+    0 &= \arctan{1} + C \\
+    \Longrightarrow C &= -\frac{\pi}{4}
+\end{align*}
+$$
+{{< /math >}}
+
+故原微分方程的解为
+
+{{< math >}}
+$$
+x = \tan{(y + \frac{\pi}{4})} - y
+$$
+{{< /math >}}
+
+### 15
+
+设实矩阵
+
+{{< math >}}
+$$
+A = \begin{bmatrix}
+    a+1 & a \\
+    a & a
+\end{bmatrix}
+$$
+{{< /math >}}
+
+若对任意实向量 $\alpha = [x_1, x_2]^{\top}, \beta = [y_1, y_2]^{\top}$，都有
+
+{{< math >}}
+$$
+(\alpha^{\top} A \beta)^{2} \leqslant \alpha^{\top} A \alpha \cdot \beta^{\top} A \beta
+$$
+{{< /math >}}
+
+都成立，则 $a$ 的取值范围是 $\underline{\qquad}$
+
+【解】
+
+用作差法，得到
+
+{{< math >}}
+$$
+\begin{align*}
+    (\alpha^{\top} A \beta)^{2} - \alpha^{\top} A \alpha \cdot \beta^{\top} A \beta &= \alpha^{\top} A ( \beta \alpha^{\top} - \alpha \beta^{\top} ) A \beta \\
+    &= \alpha^{\top} A \left(
+        \begin{bmatrix}
+            x_1 y_1 & x_2 y_1 \\
+            x_1 y_2 & x_2 y_2
+        \end{bmatrix} - \begin{bmatrix}
+            x_1 y_1 & x_1 y_2 \\
+            x_2 y_1 & x_2 y_2
+        \end{bmatrix}
+    \right) A \beta \\
+    &= \alpha^{\top} A (x_1 y_2 - x_2 y_1) \begin{bmatrix}
+        0 & -1 \\
+        1 & 0
+    \end{bmatrix} A \beta \\
+    &= (x_1 y_2 - x_2 y_1) \alpha^{\top} \begin{bmatrix}
+        a+1 & a \\
+        a & a
+    \end{bmatrix} \begin{bmatrix}
+        0 & -1 \\
+        1 & 0
+    \end{bmatrix} \begin{bmatrix}
+        a+1 & a \\
+        a & a
+    \end{bmatrix} \beta \\
+    &= (x_1 y_2 - x_2 y_1) \alpha^{\top} \begin{bmatrix}
+        a & -(a+1) \\
+        a & -a
+    \end{bmatrix} \begin{bmatrix}
+        a+1 & a \\
+        a & a
+    \end{bmatrix} \beta \\
+    &= (x_1 y_2 - x_2 y_1) \alpha^{\top} \begin{bmatrix}
+        0 & -a \\
+        a & 0
+    \end{bmatrix} \beta \\
+    &= a (x_1 y_2 - x_2 y_1) \begin{bmatrix}
+        x_1 & x_2
+    \end{bmatrix} \begin{bmatrix}
+        0 & -1 \\
+        1 & 0
+    \end{bmatrix} \begin{bmatrix}
+        y_1 \\
+        y_2
+    \end{bmatrix} \\
+    &= -a (x_1 y_2 - x_2 y_1)^2 \leqslant 0 \\
+    \Longrightarrow a &\geqslant 0
+\end{align*}
+$$
+{{< /math >}}
+
+### 16
+
+设随机试验每次成功的概率为 $p$，现进行 3 次独立重复试验。在至少成功 1 次的情况下，3 次试验全部成功的概率为 $\frac{4}{13}$，则 $p = \underline{\qquad}$
+
+【解】
+
+本题考察二项分布以及条件概率。设随机变量 $X$ 表示 3 次试验中成功的次数，则 $X \sim B(3, p)$。由题意得
+
+{{< math >}}
+$$
+\begin{align*}
+    P(X=3 | X \geqslant 1) &= \frac{P(X=3, X \geqslant 1)}{P(X \geqslant 1)} \\
+    &= \frac{C_3^3 p^3}{1 - C_3^0 (1 - p)^3} = \frac{4}{13}
+\end{align*}
+$$
+{{< /math >}}
+
+整理并解这个方程
+
+{{< math >}}
+$$
+\begin{align*}
+    13 p^3 + 4 (1 - p)^3 &= 4 \\
+    9 p^3 + 12 p^2 - 12 p &= 0 \\
+    3 p^2 + 4 p - 4 &= 0 \quad (0 < p < 1) \\
+    (3p - 2)(p + 2) &= 0 \\
+    \Longrightarrow p &= \frac{2}{3}
+\end{align*}
+$$
+{{< /math >}}
+
 ## 解答题
+
+### 17
+
+已知平面区域 {{< math >}}$D = \{(x, y) \mid \sqrt{1-y^2} \leqslant x \leqslant 1, -1 \leqslant y \leqslant 1\}${{< /math >}}，计算
+
+{{< math >}}
+$$
+\iint_D \frac{x}{\sqrt{x^2+y^2}} \mathrm{d}x \mathrm{d}y
+$$
+{{< /math >}}
+
+【解】
+
+依题意，积分区域是一个 $y$ 型区域，且关于 $x$ 轴对称。而被积函数关于 $x$ 是奇函数，关于 $y$ 是偶函数。所以原积分式可化为
+
+{{< math >}}
+$$
+\begin{align*}
+    2 \iint_{D_1} \frac{x}{\sqrt{x^2+y^2}} \mathrm{d}x \mathrm{d}y
+\end{align*}
+$$
+{{< /math >}}
+
+其中
+
+{{< math >}}
+$$
+D_1 = \{(x, y) \mid \sqrt{1-y^2} \leqslant x \leqslant 1, 0 \leqslant y \leqslant 1\}
+$$
+{{< /math >}}
+
+这仍然是一个 $y$ 型区域。不过注意到，如果先关于 $y$ 积分，会得到反三角函数，不利于计算。所以，应该将这个区域看成 $x$ 型区域。于是
+
+{{< math >}}
+$$
+\begin{align*}
+    \cdots &= 2 \iint_{D_1} \frac{x}{\sqrt{x^2+y^2}} \mathrm{d}x \mathrm{d}y \\
+    &= \int_{0}^{1} \mathrm{d}y \int_{\sqrt{1-y^2}}^{1} (x^2+y^2)^{-\frac{1}{2}} \mathrm{d} x^2 \\
+    &= \int_{0}^{1} \left. 2(x^2+y^2)^{\frac{1}{2}} \right|_{\sqrt{1-y^2}}^{1} \mathrm{d}y \\
+    &= 2 \int_{0}^{1} \left( \sqrt{1+y^2} - 1 \right) \mathrm{d}y
+\end{align*}
+$$
+{{< /math >}}
+
+计算这个定积分，不得不进行三角换元。令
+
+{{< math >}}
+$$
+\begin{align*}
+    y &= \tan{\theta} \\
+    y \in [0, 1] & \Rightarrow \theta \in [0, \frac{\pi}{4}] \\
+    \mathrm{d}y &= \sec^2{\theta} \mathrm{d}\theta
+\end{align*}
+$$
+{{< /math >}}
+
+所以原式可化为
+
+{{< math >}}
+$$
+\begin{align*}
+    \cdots &= 2 \int_{0}^{\frac{\pi}{4}} (\sec{\theta} - 1) \sec^2{\theta} \mathrm{d}\theta \\
+    &= 2 \int_{0}^{\frac{\pi}{4}} \frac{\cos{\theta}}{\cos^4{\theta}} \mathrm{d}\theta - 2 \int_{0}^{\frac{\pi}{4}} \sec^2{\theta} \mathrm{d}\theta \\
+    &= 2 \int_{0}^{\frac{\pi}{4}} \left. \frac{\mathrm{d} \sin{\theta}}{(1 - \sin^2{\theta})^2} - 2 \tan{\theta} \right|_{0}^{\frac{\pi}{4}} \\
+    &= 2 \int_{0}^{\frac{\sqrt{2}}{2}} \frac{\mathrm{d}t}{(t+1)^2 (t-1)^2} - 2
+\end{align*}
+$$
+{{< /math >}}
+
+计算至此，需要对被积的分式裂项。设
+
+{{< math >}}
+$$
+\begin{align*}
+    \frac{1}{(t+1)^2 (t-1)^2} = \frac{A}{t+1} + \frac{B}{t-1} + \frac{C}{(t+1)^2} + \frac{D}{(t-1)^2} \tag{2}
+\end{align*}
+$$
+{{< /math >}}
+
+由留数法，可以首先解得
+
+{{< math >}}
+$$
+\begin{align*}
+    C &= \left. \frac{1}{(t-1)^2} \right|_{t=-1} = \frac{1}{4} \\
+    D &= \left. \frac{1}{(t+1)^2} \right|_{t=1} = \frac{1}{4}
+\end{align*}
+$$
+{{< /math >}}
+
+代入方程 (2)，得到
+
+{{< math >}}
+$$
+\begin{align*}
+    \frac{1}{(t+1)^2 (t-1)^2} &= \frac{A}{t+1} + \frac{B}{t-1} + \frac{t^2+1}{2 (t+1)^2 (t-1)^2} \\
+    \frac{1-t^2}{2 (t+1)^2 (t-1)^2} &= \frac{A}{t+1} + \frac{B}{t-1} \\
+    -\frac{1}{2 (t+1) (t-1)} &= \frac{A}{t+1} + \frac{B}{t-1} \\
+\end{align*}
+$$
+{{< /math >}}
+
+再一次使用留数法，可以解得
+
+{{< math >}}
+$$
+\begin{align*}
+    A &= \left. -\frac{1}{2} \times \frac{1}{t-1} \right|_{t=-1} = \frac{1}{4} \\
+    B &= \left. -\frac{1}{2} \times \frac{1}{t+1} \right|_{t=1} = -\frac{1}{4}
+\end{align*}
+$$
+{{< /math >}}
+
+于是，原式可化为
+
+{{< math >}}
+$$
+\begin{align*}
+    \cdots &= \frac{1}{2} \left[
+        \int_{0}^{\frac{\sqrt{2}}{2}} \frac{\mathrm{d}t}{t+1} - \int_{0}^{\frac{\sqrt{2}}{2}} \frac{\mathrm{d}t}{t-1} + \int_{0}^{\frac{\sqrt{2}}{2}} \frac{\mathrm{d}t}{(t+1)^2} + \int_{0}^{\frac{\sqrt{2}}{2}} \frac{\mathrm{d}t}{(t-1)^2}
+    \right] - 2 \\
+    &= \frac{1}{2} \left[
+        \ln{(t+1)} \Big|_{0}^{\frac{\sqrt{2}}{2}} - \ln{(1-t)} \Big|_{0}^{\frac{\sqrt{2}}{2}} - \frac{1}{t+1} \Big|_{0}^{\frac{\sqrt{2}}{2}} - \frac{1}{t-1} \Big|_{0}^{\frac{\sqrt{2}}{2}}
+    \right] - 2 \\
+    &= \frac{1}{2} \left[
+        \ln{\frac{2+\sqrt{2}}{2-\sqrt{2}}} - \left(
+            \frac{2}{\sqrt{2}+2} - 1 + \frac{2}{\sqrt{2}-2} + 1
+        \right)
+    \right] - 2 \\
+    &= \frac{1}{2} \left[
+        2 \ln{(\sqrt{2}+1)} - \frac{2 \times 2\sqrt{2}}{(\sqrt{2}+2)(\sqrt{2}-2)}
+    \right] - 2 \\
+    &= \ln{(\sqrt{2}+1)} + \sqrt{2} - 2
+\end{align*}
+$$
+{{< /math >}}
+
+【点评】
+
+本题形为二重积分，实际上难点在于定积分的计算过程。本题涉及到二重积分的对称性、定积分第二换元法（三角换元）、三角函数有理式的积分、分式裂项等诸多知识点，且计算量非常大，计算过程繁琐，极易出错。
 
 ### 20
 
