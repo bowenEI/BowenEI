@@ -42,7 +42,7 @@ toc: true
 
 ### 1
 
-已知函数 $f(x)=\int_{0}^{x} e^{\cos t} \mathrm{d} t$，$g(x)=\int_{0}^{\sin x} e^{t^{2}} \mathrm{d} t$，则 $(\qquad)$
+已知函数 $\displaystyle f(x)=\int_{0}^{x} e^{\cos t} \mathrm{d} t$，$\displaystyle g(x)=\int_{0}^{\sin x} e^{t^{2}} \mathrm{d} t$，则 $(\qquad)$
 
 A. $f(x)$ 是奇函数，$g(x)$ 是偶函数
 
@@ -58,7 +58,7 @@ D. $f(x)$ 与 $g(x)$ 均为周期函数
 
 ### 2
 
-设 $P=P(x, y, z), Q=Q(x, y, z)$ 均为连续函数，$\Sigma$ 为曲面 $z=\sqrt{1-x^{2}-y^{2}} \ (x \leqslant 0, y \geqslant 0)$ 的上侧，则 $\iint_{\Sigma} P \mathrm{d}y \mathrm{d}z + Q \mathrm{d}z \mathrm{d}x = (\qquad)$
+设 $P=P(x, y, z), Q=Q(x, y, z)$ 均为连续函数，$\Sigma$ 为曲面 $z=\sqrt{1-x^{2}-y^{2}} \ (x \leqslant 0, y \geqslant 0)$ 的上侧，则 $\displaystyle \iint_{\Sigma} P \mathrm{d}y \mathrm{d}z + Q \mathrm{d}z \mathrm{d}x = (\qquad)$
 
 A. $\displaystyle \iint_{\Sigma}\left(\dfrac{x}{z} P+\dfrac{y}{z} Q\right) \mathrm{d}x \mathrm{d}y$
 
@@ -98,7 +98,7 @@ $$
 
 ### 3
 
-已知幂级数 $\sum_{n = 0}^{\infty} a_n x^n$ 的和函数为 $\ln(2 + x)$，则 $\sum_{n = 0}^{\infty} n a_{2n} = (\qquad)$
+已知幂级数 $\displaystyle \sum_{n = 0}^{\infty} a_n x^n$ 的和函数为 $\ln(2 + x)$，则 $\displaystyle \sum_{n = 0}^{\infty} n a_{2n} = (\qquad)$
 
 A. $-\dfrac{1}{6}$
 
@@ -146,7 +146,7 @@ $$
 
 ### 4
 
-设函数 $f(x)$ 在区间 $(-1,1)$ 上有定义，且 $\lim _{x \to 0} f(x)=0$，则 $(\qquad)$
+设函数 $f(x)$ 在区间 $(-1,1)$ 上有定义，且 $\displaystyle \lim _{x \to 0} f(x)=0$，则 $(\qquad)$
 
 A. 当 $\displaystyle \lim _{x \to 0} \dfrac{f(x)}{x}=m$ 时，$f'(0)=m$
 
@@ -967,8 +967,8 @@ $$
 $$
 \begin{align*}
     \cdots &= 2 \iint_{D_1} \dfrac{x}{\sqrt{x^2+y^2}} \mathrm{d}x \mathrm{d}y \\
-    &= \int_{0}^{1} \mathrm{d}y \int_{\sqrt{1-y^2}}^{1} (x^2+y^2)^{-\dfrac{1}{2}} \mathrm{d} x^2 \\
-    &= \int_{0}^{1} \left. 2(x^2+y^2)^{\dfrac{1}{2}} \right|_{\sqrt{1-y^2}}^{1} \mathrm{d}y \\
+    &= \int_{0}^{1} \mathrm{d}y \int_{\sqrt{1-y^2}}^{1} (x^2+y^2)^{-\frac{1}{2}} \mathrm{d} x^2 \\
+    &= \int_{0}^{1} \left. 2(x^2+y^2)^{\frac{1}{2}} \right|_{\sqrt{1-y^2}}^{1} \mathrm{d}y \\
     &= 2 \int_{0}^{1} \left( \sqrt{1+y^2} - 1 \right) \mathrm{d}y
 \end{align*}
 $$
