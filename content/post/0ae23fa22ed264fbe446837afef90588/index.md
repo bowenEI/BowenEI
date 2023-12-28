@@ -6,9 +6,9 @@ subtitle: ""
 summary: ""
 authors: []
 tags: [考研, 数学]
-categories: []
+categories: [Essay]
 date: 2023-12-24T22:20:59+08:00
-lastmod: 2023-12-26T22:20:59+08:00
+lastmod: 2023-12-28T22:20:59+08:00
 featured: false
 draft: false
 
@@ -60,13 +60,13 @@ D. $f(x)$ 与 $g(x)$ 均为周期函数
 
 设 $P=P(x, y, z), Q=Q(x, y, z)$ 均为连续函数，$\Sigma$ 为曲面 $z=\sqrt{1-x^{2}-y^{2}} \ (x \leqslant 0, y \geqslant 0)$ 的上侧，则 $\iint_{\Sigma} P \mathrm{d}y \mathrm{d}z + Q \mathrm{d}z \mathrm{d}x = (\qquad)$
 
-A. $\iint_{\Sigma}\left(\frac{x}{z} P+\frac{y}{z} Q\right) \mathrm{d}x \mathrm{d}y$
+A. $\displaystyle \iint_{\Sigma}\left(\dfrac{x}{z} P+\dfrac{y}{z} Q\right) \mathrm{d}x \mathrm{d}y$
 
-B. $\iint_{\Sigma}\left(-\frac{x}{z} P+\frac{y}{z} Q\right) \mathrm{d}x \mathrm{d}y$
+B. $\displaystyle \iint_{\Sigma}\left(-\dfrac{x}{z} P+\dfrac{y}{z} Q\right) \mathrm{d}x \mathrm{d}y$
 
-C. $\iint_{\Sigma}\left(\frac{x}{z} P-\frac{y}{z} Q\right) \mathrm{d}x \mathrm{d}y$
+C. $\displaystyle \iint_{\Sigma}\left(\dfrac{x}{z} P-\dfrac{y}{z} Q\right) \mathrm{d}x \mathrm{d}y$
 
-D. $\iint_{\Sigma}\left(-\frac{x}{z} P-\frac{y}{z} Q\right) \mathrm{d}x \mathrm{d}y$
+D. $\displaystyle \iint_{\Sigma}\left(-\dfrac{x}{z} P-\dfrac{y}{z} Q\right) \mathrm{d}x \mathrm{d}y$
 
 【解】
 
@@ -76,10 +76,10 @@ D. $\iint_{\Sigma}\left(-\frac{x}{z} P-\frac{y}{z} Q\right) \mathrm{d}x \mathrm{
 $$
 \begin{align*}
     z^2 &= 1 - x^2 - y^2 \\
-    2z \cdot \frac{\partial z}{\partial x} &= -2x \\
-    \Longrightarrow \frac{\partial z}{\partial x} &= - \frac{x}{z} \\
-    2z \cdot \frac{\partial z}{\partial y} &= -2y \\
-    \Longrightarrow \frac{\partial z}{\partial y} &= - \frac{y}{z}
+    2z \cdot \dfrac{\partial z}{\partial x} &= -2x \\
+    \Longrightarrow \dfrac{\partial z}{\partial x} &= - \dfrac{x}{z} \\
+    2z \cdot \dfrac{\partial z}{\partial y} &= -2y \\
+    \Longrightarrow \dfrac{\partial z}{\partial y} &= - \dfrac{y}{z}
 \end{align*}
 $$
 {{< /math >}}
@@ -90,8 +90,8 @@ $$
 $$
 \begin{align*}
     &\ \iint_{\Sigma} P \mathrm{d}y \mathrm{d}z + Q \mathrm{d}z \mathrm{d}x \\
-    =&\ \iint_{\Sigma} \left( P \cdot \left(-\frac{\partial z}{\partial x}\right) + Q \cdot \left(-\frac{\partial z}{\partial y}\right) \right) \mathrm{d}y \mathrm{d}z \\
-    =&\ \iint_{\Sigma} \left( \frac{x}{z} + \frac{y}{z} \right) \mathrm{d}x \mathrm{d}y
+    =&\ \iint_{\Sigma} \left( P \cdot \left(-\dfrac{\partial z}{\partial x}\right) + Q \cdot \left(-\dfrac{\partial z}{\partial y}\right) \right) \mathrm{d}y \mathrm{d}z \\
+    =&\ \iint_{\Sigma} \left( \dfrac{x}{z} + \dfrac{y}{z} \right) \mathrm{d}x \mathrm{d}y
 \end{align*}
 $$
 {{< /math >}}
@@ -100,13 +100,13 @@ $$
 
 已知幂级数 $\sum_{n = 0}^{\infty} a_n x^n$ 的和函数为 $\ln(2 + x)$，则 $\sum_{n = 0}^{\infty} n a_{2n} = (\qquad)$
 
-A. $-\frac{1}{6}$
+A. $-\dfrac{1}{6}$
 
-B. $-\frac{1}{3}$
+B. $-\dfrac{1}{3}$
 
-C. $\frac{1}{6}$
+C. $\dfrac{1}{6}$
 
-D. $\frac{1}{3}$
+D. $\dfrac{1}{3}$
 
 【解】
 
@@ -115,8 +115,8 @@ D. $\frac{1}{3}$
 {{< math >}}
 $$
 \begin{align*}
-    \ln{(2 + x)} &= \ln{2} + \ln{(1 + \frac{x}{2})} \\
-    &= \ln{2} + \sum_{n = 1}^{\infty} \frac{(-1)^{n-1}}{n} \left( \frac{x}{2} \right)^{n} \\
+    \ln{(2 + x)} &= \ln{2} + \ln{(1 + \dfrac{x}{2})} \\
+    &= \ln{2} + \sum_{n = 1}^{\infty} \dfrac{(-1)^{n-1}}{n} \left( \dfrac{x}{2} \right)^{n} \\
 \end{align*}
 $$
 {{< /math >}}
@@ -126,7 +126,7 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    a_n = \frac{(-1)^{n-1}}{n \cdot 2^n}
+    a_n = \dfrac{(-1)^{n-1}}{n \cdot 2^n}
 \end{align*}
 $$
 {{< /math >}}
@@ -136,10 +136,10 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    \sum_{n = 0}^{\infty} n a_{2n} &= \sum_{n = 1}^{\infty} n \frac{(-1)^{2n-1}}{2n \cdot 2^{2n}} \\
-    &= -\frac{1}{2} \sum_{n = 1}^{\infty} \frac{1}{4^{n}} \\
-    &= -\frac{1}{2} \lim_{n \to \infty}  \frac{\frac{1}{4} \left(1 - \frac{1}{4^{n}}\right)}{1 - \frac{1}{4}} \\
-    &= -\frac{1}{6}
+    \sum_{n = 0}^{\infty} n a_{2n} &= \sum_{n = 1}^{\infty} n \dfrac{(-1)^{2n-1}}{2n \cdot 2^{2n}} \\
+    &= -\dfrac{1}{2} \sum_{n = 1}^{\infty} \dfrac{1}{4^{n}} \\
+    &= -\dfrac{1}{2} \lim_{n \to \infty}  \dfrac{\dfrac{1}{4} \left(1 - \dfrac{1}{4^{n}}\right)}{1 - \dfrac{1}{4}} \\
+    &= -\dfrac{1}{6}
 \end{align*}
 $$
 {{< /math >}}
@@ -148,13 +148,13 @@ $$
 
 设函数 $f(x)$ 在区间 $(-1,1)$ 上有定义，且 $\lim _{x \to 0} f(x)=0$，则 $(\qquad)$
 
-A. 当 $\lim _{x \to 0} \frac{f(x)}{x}=m$ 时，$f'(0)=m$
+A. 当 $\displaystyle \lim _{x \to 0} \dfrac{f(x)}{x}=m$ 时，$f'(0)=m$
 
-B. 当 $f'(0)=m$ 时，$\lim _{x \to 0} \frac{f(x)}{x}=m$
+B. 当 $f'(0)=m$ 时，$\displaystyle \lim _{x \to 0} \dfrac{f(x)}{x}=m$
 
-C. 当 $\lim _{x \to 0} f'(x)=m$ 时，$f'(0)=m$
+C. 当 $\displaystyle \lim _{x \to 0} f'(x)=m$ 时，$f'(0)=m$
 
-D. 当 $f'(0)=m$ 时，$\lim _{x \to 0} f'(x)=m$
+D. 当 $f'(0)=m$ 时，$\displaystyle \lim _{x \to 0} f'(x)=m$
 
 【解】
 
@@ -175,7 +175,7 @@ $$
 
 {{< math >}}
 $$
-\lim_{x \to 0} \frac{f(x) - f(0)}{x - 0} = \lim_{x \to 0} \frac{f(x)}{x} = m
+\lim_{x \to 0} \dfrac{f(x) - f(0)}{x - 0} = \lim_{x \to 0} \dfrac{f(x)}{x} = m
 $$
 {{< /math >}}
 
@@ -185,7 +185,7 @@ $$
 $$
 f(x) = \begin{cases}
     1 & x = 0 \\
-    x^2 \sin{\frac{1}{x}} & x \in (-1, 0) \cup (0, 1)
+    x^2 \sin{\dfrac{1}{x}} & x \in (-1, 0) \cup (0, 1)
 \end{cases} \tag{1}
 $$
 {{< /math >}}
@@ -194,7 +194,7 @@ $f(x)$ 在 $x = 0$ 处的极限为
 
 {{< math >}}
 $$
-\lim_{x \to 0} f(x) = \lim_{x \to 0^{+}} x^2 \sin{\frac{1}{x}} = \lim_{x \to 0^{-}} x^2 \sin{\frac{1}{x}} = 0 \neq f(0)
+\lim_{x \to 0} f(x) = \lim_{x \to 0^{+}} x^2 \sin{\dfrac{1}{x}} = \lim_{x \to 0^{-}} x^2 \sin{\dfrac{1}{x}} = 0 \neq f(0)
 $$
 {{< /math >}}
 
@@ -243,7 +243,7 @@ $$
 \begin{align*}
     f(x) = \begin{cases}
         0 & x = 0 \\
-        x^2 \sin{\frac{1}{x}} & x \in (-1, 0) \cup (0, 1)
+        x^2 \sin{\dfrac{1}{x}} & x \in (-1, 0) \cup (0, 1)
     \end{cases}
 \end{align*}
 $$
@@ -264,8 +264,8 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    f'(0) &= \lim_{x \to 0} \frac{f(x) - f(0)}{x - 0} \\
-    &= \lim_{x \to 0} \frac{x^2 \sin{\frac{1}{x}}}{x} \\
+    f'(0) &= \lim_{x \to 0} \dfrac{f(x) - f(0)}{x - 0} \\
+    &= \lim_{x \to 0} \dfrac{x^2 \sin{\dfrac{1}{x}}}{x} \\
     &= 0
 \end{align*}
 $$
@@ -276,7 +276,7 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    \lim_{x \to 0} f'(x) &= \lim_{x \to 0} 2x \sin{\frac{1}{x}} - \cos{\frac{1}{x}} \\
+    \lim_{x \to 0} f'(x) &= \lim_{x \to 0} 2x \sin{\dfrac{1}{x}} - \cos{\dfrac{1}{x}} \\
     &= \nexists
 \end{align*}
 $$
@@ -332,6 +332,7 @@ $$
     -1 \\
     1
 \end{bmatrix}, \alpha_2 = \begin{bmatrix}
+    1 \\
     1 \\
     b \\
     a
@@ -437,15 +438,161 @@ $$
 
 ### 8
 
-> TODO
+设随机变量 $X, Y$ 相互独立，且 $X \sim N(0, 2)$，$Y \sim N(-2, 2)$。若 $P(2X+Y < a) = P(X > Y)$，则 $a = (\qquad)$
+
+A. $-2-\sqrt{10}$
+
+B. $-2+\sqrt{10}$
+
+C. $-2-\sqrt{6}$
+
+D. $-2+\sqrt{6}$
+
+【解】
+
+本题考察正态分布的性质。易知随机变量 $2X+Y \sim N(-2, 10)$，$Y-X \sim N(-2, 4)$，于是得到
+
+{{< math >}}
+$$
+\begin{align*}
+    P(2X+Y < a) &= P(Y-X < 0) \\
+    \Phi(\dfrac{a+2}{\sqrt{10}}) &= \Phi(\dfrac{0+2}{2}) \\
+    \Longrightarrow \dfrac{a+2}{\sqrt{10}} &= \dfrac{0+2}{2} \\
+    a &= -2 + \sqrt{10}
+\end{align*}
+$$
+{{< /math >}}
 
 ### 9
 
-> TODO
+设随机变量的概率密度为
+
+{{< math >}}
+$$
+f(x) = \begin{cases}
+    2(1 - x) & 0 < x < 1 \\
+    0 & \text{else}
+\end{cases}
+$$
+{{< /math >}}
+
+在 $X = x \ (0 < x < 1)$ 的条件下，随机变量 $Y \sim U(x, 1)$。则 $\operatorname{Cov}(X, Y) = (\qquad)$
+
+A. $-\dfrac{1}{36}$
+
+B. $-\dfrac{1}{72}$
+
+C. $\dfrac{1}{72}$
+
+D. $\dfrac{1}{36}$
+
+【解】
+
+本题考察条件概率和协方差的计算。由题意可得随机变量 $Y$ 在 $X = x$ 的条件下的概率密度函数为
+
+{{< math >}}
+$$
+f_{Y|X}(y|x) = \begin{cases}
+    \dfrac{1}{1-x} & 0 < x < 1, x < y < 1 \\
+    0 & \text{else}
+\end{cases}
+$$
+{{< /math >}}
+
+那么，由条件概率公式可得
+
+{{< math >}}
+$$
+\begin{align*}
+    f(x, y) &= f_{Y|X}(y|x) \cdot f(x) \\
+    &= \begin{cases}
+        2 & 0 < x < 1, x < y < 1 \\
+        0 & \text{else}
+    \end{cases}
+\end{align*}
+$$
+{{< /math >}}
+
+下面分别计算随机变量 $X, Y, XY$ 的均值
+
+{{< math >}}
+$$
+\begin{align*}
+    E(X) &= \int_{0}^{1} x \cdot 2(1-x) \mathrm{d}x \\
+    &= x^2 \Big|_{0}^{1} - \dfrac{2}{3} x^3 \Big|_{0}^{1} \\
+    &= \dfrac{1}{3} \\
+    E(Y) &= \iint_{\mathbb{R}^2} y f(x, y) \mathrm{d}x \mathrm{d}y \\
+    &= \int_{0}^{1} \mathrm{d}y \int_{0}^{y} 2y \mathrm{d}x \\
+    &= \dfrac{2}{3} y^3 \Big|_{0}^{1} \\
+    &= \dfrac{2}{3} \\
+    E(XY) &= \iint_{\mathbb{R}^2} xy f(x, y) \mathrm{d}x \mathrm{d}y \\
+    &= \int_{0}^{1} y \mathrm{d}y \int_{0}^{y} 2x \mathrm{d}x \\
+    &= \dfrac{1}{4} y^4 \Big|_{0}^{1} \\
+    &= \dfrac{1}{4}
+\end{align*}
+$$
+{{< /math >}}
+
+故协方差为
+
+{{< math >}}
+$$
+\begin{align*}
+    \operatorname{Cov}(X, Y) &= E(XY) - E(X)E(Y) \\
+    &= \dfrac{1}{4} - \dfrac{1}{3} \times \dfrac{2}{3} \\
+    &= \dfrac{1}{36}
+\end{align*}
+$$
+{{< /math >}}
 
 ### 10
 
-> TODO
+设随机变量 $X, Y$ 相互独立，且均服从参数为 $\lambda$ 的指数分布。令 $Z = |X-Y|$，则下列随机变量与 $Z$ 同分布的是 $(\qquad)$
+
+A. $X+Y$
+
+B. $\dfrac{X+Y}{2}$
+
+C. $2X$
+
+D. $X$
+
+【解】
+
+本题考查指数分布的计算。依题意，显然当 $z < 0$ 时，概率分布函数 $F_Z(z) = 0$。下面计算当 $z \geqslant 0$ 时的概率分布函数。
+
+{{< math >}}
+$$
+\begin{align*}
+    F_Z(z) &= \iint_{|x-y| \leqslant z} f(x, y) \mathrm{d}x \mathrm{d}y \\
+    &= \iint_{|x-y| \leqslant z} \lambda e^{-\lambda x} \cdot \lambda e^{-\lambda y} \mathrm{d}x \mathrm{d}y \\
+    &= 2 \int_{0}^{+\infty} \lambda e^{-\lambda y} \mathrm{d}y \int_{y}^{y+z} \lambda e^{-\lambda x} \mathrm{d}x \\
+    &= -2 \int_{0}^{+\infty} \lambda e^{-\lambda y} \cdot e^{-\lambda x} \Big|_{y}^{y+z} \mathrm{d}y \\
+    &= -2 \int_{y}^{y+z} \lambda e^{-2 \lambda y} (e^{-\lambda z} - 1) \mathrm{d}y \\
+    &= (e^{-\lambda z} - 1) e^{-2 \lambda y} \Big|_{0}^{+\infty} \\
+    &= 1 - e^{-\lambda z}
+\end{align*}
+$$
+{{< /math >}}
+
+也就是说
+
+{{< math >}}
+$$
+\begin{align*}
+    F_Z(z) &= \begin{cases}
+        1 - e^{-\lambda z} & z \geqslant 0 \\
+        0 & z < 0 
+    \end{cases} \\
+    f(z) &= \begin{cases}
+        \lambda e^{-\lambda z} & z \geqslant 0 \\
+        0 & z < 0
+    \end{cases}
+\end{align*}
+$$
+{{< /math >}}
+
+显然 $Z=|X-Y|$ 与 $X$ 同分布。
 
 ## 填空题
 
@@ -455,7 +602,7 @@ $$
 
 {{< math >}}
 $$
-\lim_{x \to 0} \frac{(1+ax^2)^{\sin{x}} - 1}{x^3} = 6
+\lim_{x \to 0} \dfrac{(1+ax^2)^{\sin{x}} - 1}{x^3} = 6
 $$
 {{< /math >}}
 
@@ -466,7 +613,7 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    \lim_{x \to 0} \frac{(1+ax^2)^{\sin{x}} - 1}{x^3} &= \lim_{x \to 0} \frac{e^{\sin{x} \ln{(1+ax^2)}} - 1}{x^3}
+    \lim_{x \to 0} \dfrac{(1+ax^2)^{\sin{x}} - 1}{x^3} &= \lim_{x \to 0} \dfrac{e^{\sin{x} \ln{(1+ax^2)}} - 1}{x^3}
 \end{align*}
 $$
 {{< /math >}}
@@ -476,7 +623,7 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    \cdots &= \lim_{x \to 0} \frac{\sin{x} \ln{(1+ax^2)}}{x^3}
+    \cdots &= \lim_{x \to 0} \dfrac{\sin{x} \ln{(1+ax^2)}}{x^3}
 \end{align*}
 $$
 {{< /math >}}
@@ -486,7 +633,7 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    \cdots = \lim_{x \to 0} \frac{x \cdot ax^2}{x^3} &= 6 \\
+    \cdots = \lim_{x \to 0} \dfrac{x \cdot ax^2}{x^3} &= 6 \\
     \Longrightarrow a &= 6
 \end{align*}
 $$
@@ -494,7 +641,7 @@ $$
 
 ### 12
 
-设函数 $f(u, v)$ 具有 2 阶连续偏导数，且 {{< math >}}$\left. \mathrm{d} f\right|_{(1,1)} = 3 \mathrm{d} u + 4 \mathrm{d} v${{< /math >}}，令 {{< math >}}$y = f\left(\cos{x}, 1+x^{2}\right)${{< /math >}}，则 {{< math >}}$\left.\frac{\mathrm{d}^{2} y}{\mathrm{d} x^{2}}\right|_{x = 0} = \underline{\qquad}${{< /math >}}
+设函数 $f(u, v)$ 具有 2 阶连续偏导数，且 {{< math >}}$\left. \mathrm{d} f\right|_{(1,1)} = 3 \mathrm{d} u + 4 \mathrm{d} v${{< /math >}}，令 {{< math >}}$y = f\left(\cos{x}, 1+x^{2}\right)${{< /math >}}，则 {{< math >}}$\left.\dfrac{\mathrm{d}^{2} y}{\mathrm{d} x^{2}}\right|_{x = 0} = \underline{\qquad}${{< /math >}}
 
 【解】
 
@@ -514,10 +661,10 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    \frac{\mathrm{d} y}{\mathrm{d} x} =&\ 
- \frac{\mathrm{d} f\left(\cos x, 1+x^{2}\right)}{\mathrm{d} x} \\
+    \dfrac{\mathrm{d} y}{\mathrm{d} x} =&\ 
+ \dfrac{\mathrm{d} f\left(\cos x, 1+x^{2}\right)}{\mathrm{d} x} \\
     =&\ f'_u \cdot (-\sin{x}) + f'_v \cdot 2x \\
-    \frac{\mathrm{d}^{2} y}{\mathrm{d} x^{2}} =&\ \frac{\mathrm{d}^{2} f\left(\cos x, 1+x^{2}\right)}{\mathrm{d} x^{2}} \\
+    \dfrac{\mathrm{d}^{2} y}{\mathrm{d} x^{2}} =&\ \dfrac{\mathrm{d}^{2} f\left(\cos x, 1+x^{2}\right)}{\mathrm{d} x^{2}} \\
     =&\ [f''_{uu} \cdot (-\sin{x}) + f''_{uv} \cdot 2x] (-\sin{x}) + f'_{u} \cdot (-\cos{x}) + \\
     &\ [f''_{vu} \cdot (-\sin{x}) + f''_{vv} \cdot 2x] \cdot 2x + 2 f'_{v}
 \end{align*}
@@ -529,7 +676,7 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    \frac{\mathrm{d}^{2} y}{\mathrm{d} x^{2}} &= \left.\frac{\mathrm{d}^{2} f(\cos x, 1+x^{2})}{\mathrm{d} x^{2}}\right|_{x=0} \\
+    \dfrac{\mathrm{d}^{2} y}{\mathrm{d} x^{2}} &= \left.\dfrac{\mathrm{d}^{2} f(\cos x, 1+x^{2})}{\mathrm{d} x^{2}}\right|_{x=0} \\
     &= \left. - f'_u \right|_{(1,1)} + \left. 2 f'_v \right|_{(1,1)} \\
     &= 5
 \end{align*}
@@ -543,7 +690,7 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} a_{n} \cos{nx}, \ x \in [0, \pi]
+    f(x) = \dfrac{a_0}{2} + \sum_{n=1}^{\infty} a_{n} \cos{nx}, \ x \in [0, \pi]
 \end{align*}
 $$
 {{< /math >}}
@@ -557,15 +704,15 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    a_n &= \frac{2}{\pi} \int_{0}^{\pi} (x+1) \cos{\frac{n \pi x}{\pi}} \mathrm{d}x \\
-    &= \frac{2}{n \pi} \left(
+    a_n &= \dfrac{2}{\pi} \int_{0}^{\pi} (x+1) \cos{\dfrac{n \pi x}{\pi}} \mathrm{d}x \\
+    &= \dfrac{2}{n \pi} \left(
         \left. \sin{nx} \right|_{0}^{\pi} + \int_{0}^{\pi} x \mathrm{d} \sin{nx}
     \right) \\
-    &= \frac{2}{n \pi} \left(
+    &= \dfrac{2}{n \pi} \left(
         \left. x \sin{nx} \right|_{0}^{\pi} - \int_{0}^{\pi} \sin{nx} \mathrm{d} x
     \right) \\
-    &= \frac{2}{n^2 \pi} \left. \cos{nx} \right|_{0}^{\pi} \\
-    &= -\frac{4}{n^2 \pi}
+    &= \dfrac{2}{n^2 \pi} \left. \cos{nx} \right|_{0}^{\pi} \\
+    &= -\dfrac{4}{n^2 \pi}
 \end{align*}
 $$
 {{< /math >}}
@@ -575,7 +722,7 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    \lim_{n \to \infty} n^2 \sin{a_{2n-1}} &= -\lim_{n \to \infty} n^2 \cdot \sin{\frac{4}{(2n-1)^2 \pi}} \\
+    \lim_{n \to \infty} n^2 \sin{a_{2n-1}} &= -\lim_{n \to \infty} n^2 \cdot \sin{\dfrac{4}{(2n-1)^2 \pi}} \\
 \end{align*}
 $$
 {{< /math >}}
@@ -585,8 +732,8 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    t &= \frac{1}{2n - 1} \\
-    \Longrightarrow n &= \frac{t+1}{2t}
+    t &= \dfrac{1}{2n - 1} \\
+    \Longrightarrow n &= \dfrac{t+1}{2t}
 \end{align*}
 $$
 {{< /math >}}
@@ -596,10 +743,10 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    \cdots &= -\lim_{t \to 0} \left( \frac{t+1}{2t} \right)^2 \sin{\frac{4t^2}{\pi}} \\
-    &= -\lim_{t \to 0} \left( \frac{t+1}{2t} \right)^2 \cdot \frac{4t^2}{\pi} \\
-    &= -\lim_{t \to 0} \frac{(t+1)^2}{\pi} \\
-    &= -\frac{1}{\pi}
+    \cdots &= -\lim_{t \to 0} \left( \dfrac{t+1}{2t} \right)^2 \sin{\dfrac{4t^2}{\pi}} \\
+    &= -\lim_{t \to 0} \left( \dfrac{t+1}{2t} \right)^2 \cdot \dfrac{4t^2}{\pi} \\
+    &= -\lim_{t \to 0} \dfrac{(t+1)^2}{\pi} \\
+    &= -\dfrac{1}{\pi}
 \end{align*}
 $$
 {{< /math >}}
@@ -610,7 +757,7 @@ $$
 
 {{< math >}}
 $$
-y' = \frac{1}{(x+y)^2}
+y' = \dfrac{1}{(x+y)^2}
 $$
 {{< /math >}}
 
@@ -623,8 +770,8 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    u' - 1 &= \frac{1}{u^2} \\
-    \frac{\mathrm{d}u}{\mathrm{d}x} &= \frac{1+u^2}{u^2} \\
+    u' - 1 &= \dfrac{1}{u^2} \\
+    \dfrac{\mathrm{d}u}{\mathrm{d}x} &= \dfrac{1+u^2}{u^2} \\
 \end{align*}
 $$
 {{< /math >}}
@@ -634,8 +781,8 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    \int \frac{u^2}{1+u^2} \mathrm{d}u &= \int \mathrm{d}x \\
-    \Longrightarrow x &= \int \left(1 - \frac{1}{1+u^2}\right) \mathrm{d}u \\
+    \int \dfrac{u^2}{1+u^2} \mathrm{d}u &= \int \mathrm{d}x \\
+    \Longrightarrow x &= \int \left(1 - \dfrac{1}{1+u^2}\right) \mathrm{d}u \\
     &= u - \arctan{u} + C \\
 \end{align*}
 $$
@@ -658,7 +805,7 @@ $$
 $$
 \begin{align*}
     0 &= \arctan{1} + C \\
-    \Longrightarrow C &= -\frac{\pi}{4}
+    \Longrightarrow C &= -\dfrac{\pi}{4}
 \end{align*}
 $$
 {{< /math >}}
@@ -667,7 +814,7 @@ $$
 
 {{< math >}}
 $$
-x = \tan{(y + \frac{\pi}{4})} - y
+x = \tan{(y + \dfrac{\pi}{4})} - y
 $$
 {{< /math >}}
 
@@ -753,7 +900,7 @@ $$
 
 ### 16
 
-设随机试验每次成功的概率为 $p$，现进行 3 次独立重复试验。在至少成功 1 次的情况下，3 次试验全部成功的概率为 $\frac{4}{13}$，则 $p = \underline{\qquad}$
+设随机试验每次成功的概率为 $p$，现进行 3 次独立重复试验。在至少成功 1 次的情况下，3 次试验全部成功的概率为 $\dfrac{4}{13}$，则 $p = \underline{\qquad}$
 
 【解】
 
@@ -762,8 +909,8 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    P(X=3 | X \geqslant 1) &= \frac{P(X=3, X \geqslant 1)}{P(X \geqslant 1)} \\
-    &= \frac{C_3^3 p^3}{1 - C_3^0 (1 - p)^3} = \frac{4}{13}
+    P(X=3 | X \geqslant 1) &= \dfrac{P(X=3, X \geqslant 1)}{P(X \geqslant 1)} \\
+    &= \dfrac{C_3^3 p^3}{1 - C_3^0 (1 - p)^3} = \dfrac{4}{13}
 \end{align*}
 $$
 {{< /math >}}
@@ -777,7 +924,7 @@ $$
     9 p^3 + 12 p^2 - 12 p &= 0 \\
     3 p^2 + 4 p - 4 &= 0 \quad (0 < p < 1) \\
     (3p - 2)(p + 2) &= 0 \\
-    \Longrightarrow p &= \frac{2}{3}
+    \Longrightarrow p &= \dfrac{2}{3}
 \end{align*}
 $$
 {{< /math >}}
@@ -790,7 +937,7 @@ $$
 
 {{< math >}}
 $$
-\iint_D \frac{x}{\sqrt{x^2+y^2}} \mathrm{d}x \mathrm{d}y
+\iint_D \dfrac{x}{\sqrt{x^2+y^2}} \mathrm{d}x \mathrm{d}y
 $$
 {{< /math >}}
 
@@ -801,7 +948,7 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    2 \iint_{D_1} \frac{x}{\sqrt{x^2+y^2}} \mathrm{d}x \mathrm{d}y
+    2 \iint_{D_1} \dfrac{x}{\sqrt{x^2+y^2}} \mathrm{d}x \mathrm{d}y
 \end{align*}
 $$
 {{< /math >}}
@@ -819,9 +966,9 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    \cdots &= 2 \iint_{D_1} \frac{x}{\sqrt{x^2+y^2}} \mathrm{d}x \mathrm{d}y \\
-    &= \int_{0}^{1} \mathrm{d}y \int_{\sqrt{1-y^2}}^{1} (x^2+y^2)^{-\frac{1}{2}} \mathrm{d} x^2 \\
-    &= \int_{0}^{1} \left. 2(x^2+y^2)^{\frac{1}{2}} \right|_{\sqrt{1-y^2}}^{1} \mathrm{d}y \\
+    \cdots &= 2 \iint_{D_1} \dfrac{x}{\sqrt{x^2+y^2}} \mathrm{d}x \mathrm{d}y \\
+    &= \int_{0}^{1} \mathrm{d}y \int_{\sqrt{1-y^2}}^{1} (x^2+y^2)^{-\dfrac{1}{2}} \mathrm{d} x^2 \\
+    &= \int_{0}^{1} \left. 2(x^2+y^2)^{\dfrac{1}{2}} \right|_{\sqrt{1-y^2}}^{1} \mathrm{d}y \\
     &= 2 \int_{0}^{1} \left( \sqrt{1+y^2} - 1 \right) \mathrm{d}y
 \end{align*}
 $$
@@ -833,7 +980,7 @@ $$
 $$
 \begin{align*}
     y &= \tan{\theta} \\
-    y \in [0, 1] & \Rightarrow \theta \in [0, \frac{\pi}{4}] \\
+    y \in [0, 1] & \Rightarrow \theta \in [0, \dfrac{\pi}{4}] \\
     \mathrm{d}y &= \sec^2{\theta} \mathrm{d}\theta
 \end{align*}
 $$
@@ -857,7 +1004,7 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    \frac{1}{(t+1)^2 (t-1)^2} = \frac{A}{t+1} + \frac{B}{t-1} + \frac{C}{(t+1)^2} + \frac{D}{(t-1)^2} \tag{2}
+    \dfrac{1}{(t+1)^2 (t-1)^2} = \dfrac{A}{t+1} + \dfrac{B}{t-1} + \dfrac{C}{(t+1)^2} + \dfrac{D}{(t-1)^2} \tag{2}
 \end{align*}
 $$
 {{< /math >}}
@@ -867,8 +1014,8 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    C &= \left. \frac{1}{(t-1)^2} \right|_{t=-1} = \frac{1}{4} \\
-    D &= \left. \frac{1}{(t+1)^2} \right|_{t=1} = \frac{1}{4}
+    C &= \left. \dfrac{1}{(t-1)^2} \right|_{t=-1} = \dfrac{1}{4} \\
+    D &= \left. \dfrac{1}{(t+1)^2} \right|_{t=1} = \dfrac{1}{4}
 \end{align*}
 $$
 {{< /math >}}
@@ -878,9 +1025,9 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    \frac{1}{(t+1)^2 (t-1)^2} &= \frac{A}{t+1} + \frac{B}{t-1} + \frac{t^2+1}{2 (t+1)^2 (t-1)^2} \\
-    \frac{1-t^2}{2 (t+1)^2 (t-1)^2} &= \frac{A}{t+1} + \frac{B}{t-1} \\
-    -\frac{1}{2 (t+1) (t-1)} &= \frac{A}{t+1} + \frac{B}{t-1} \\
+    \dfrac{1}{(t+1)^2 (t-1)^2} &= \dfrac{A}{t+1} + \dfrac{B}{t-1} + \dfrac{t^2+1}{2 (t+1)^2 (t-1)^2} \\
+    \dfrac{1-t^2}{2 (t+1)^2 (t-1)^2} &= \dfrac{A}{t+1} + \dfrac{B}{t-1} \\
+    -\dfrac{1}{2 (t+1) (t-1)} &= \dfrac{A}{t+1} + \dfrac{B}{t-1} \\
 \end{align*}
 $$
 {{< /math >}}
@@ -890,8 +1037,8 @@ $$
 {{< math >}}
 $$
 \begin{align*}
-    A &= \left. -\frac{1}{2} \times \frac{1}{t-1} \right|_{t=-1} = \frac{1}{4} \\
-    B &= \left. -\frac{1}{2} \times \frac{1}{t+1} \right|_{t=1} = -\frac{1}{4}
+    A &= \left. -\dfrac{1}{2} \times \dfrac{1}{t-1} \right|_{t=-1} = \dfrac{1}{4} \\
+    B &= \left. -\dfrac{1}{2} \times \dfrac{1}{t+1} \right|_{t=1} = -\dfrac{1}{4}
 \end{align*}
 $$
 {{< /math >}}
@@ -944,7 +1091,7 @@ $$
     I &= \oint_{L} (6xyz - yz^2) \mathrm{d}x + 2x^2z \mathrm{d}y +xyz \mathrm{d} z \\
     &= \iint_{\Sigma} \begin{vmatrix}
         \mathrm{d}y \mathrm{d}z & \mathrm{d}z \mathrm{d}x & \mathrm{d}x \mathrm{d}y \\
-        \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+        \dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
         6xyz - yz^2 & 2x^2z & xyz
     \end{vmatrix} \\
     &= \iint_{\Sigma} (xz - 2x^2) \mathrm{d}y \mathrm{d}z + (6xy - 2yz - yz) \mathrm{d}z \mathrm{d}x + (4xz - 6xz + z^2) \mathrm{d}x \mathrm{d}y \\
@@ -985,21 +1132,21 @@ $$
 \begin{align*}
     x^2 + y^2 + (2x-1)^2 &= 2x \\
     5x^2 + y^2 - 6x + 1 &= 0 \\ 
-    5 \left[ \left(x - \frac{3}{5} \right)^2 - \frac{9}{25} \right] + y^2 + 1 &= 0 \\
-    5 \left( x - \frac{3}{5} \right)^2 + y^2 &= \frac{4}{5} \\
-    \frac{\left( x - \frac{3}{5} \right)^2}{\left( \frac{2}{5} \right)^2} + \frac{y^2}{\left( \frac{2}{\sqrt{5}} \right)^2} &= 1
+    5 \left[ \left(x - \dfrac{3}{5} \right)^2 - \dfrac{9}{25} \right] + y^2 + 1 &= 0 \\
+    5 \left( x - \dfrac{3}{5} \right)^2 + y^2 &= \dfrac{4}{5} \\
+    \dfrac{\left( x - \dfrac{3}{5} \right)^2}{\left( \dfrac{2}{5} \right)^2} + \dfrac{y^2}{\left( \dfrac{2}{\sqrt{5}} \right)^2} &= 1
 \end{align*}
 $$
 {{< /math >}}
 
-这说明了积分区域在 $xOy$ 平面内的投影是一个椭圆区域 $D$。由平面解析几何的相关知识，可以判断椭圆的半长轴和半短轴分别为 $a = \frac{2}{\sqrt{5}}$ 和 $b = \frac{2}{5}$。由椭圆面积公式 $S = \pi ab$ 得
+这说明了积分区域在 $xOy$ 平面内的投影是一个椭圆区域 $D$。由平面解析几何的相关知识，可以判断椭圆的半长轴和半短轴分别为 $a = \dfrac{2}{\sqrt{5}}$ 和 $b = \dfrac{2}{5}$。由椭圆面积公式 $S = \pi ab$ 得
 
 {{< math >}}
 $$
 \begin{align*}
     I &= \iint_{D} \mathrm{d}x \mathrm{d}y \\
-    &= \pi \times \frac{2}{5} \times \frac{2}{\sqrt{5}} \\
-    &= \frac{4 \sqrt{5} \pi}{25}
+    &= \pi \times \dfrac{2}{5} \times \dfrac{2}{\sqrt{5}} \\
+    &= \dfrac{4 \sqrt{5} \pi}{25}
 \end{align*}
 $$
 {{< /math >}}
