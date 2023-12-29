@@ -8,7 +8,7 @@ authors: []
 tags: [考研, 数学]
 categories: [Essay]
 date: 2023-12-24T22:20:59+08:00
-lastmod: 2023-12-28T22:20:59+08:00
+lastmod: 2023-12-29T22:20:59+08:00
 featured: false
 draft: false
 
@@ -933,7 +933,15 @@ $$
 
 ### 17
 
-已知平面区域 {{< math >}}$D = \{(x, y) \mid \sqrt{1-y^2} \leqslant x \leqslant 1, -1 \leqslant y \leqslant 1\}${{< /math >}}，计算
+已知平面区域
+
+{{< math >}}
+$$
+D = \{(x, y) \mid \sqrt{1-y^2} \leqslant x \leqslant 1, -1 \leqslant y \leqslant 1\}
+$$
+{{< /math >}}
+
+计算
 
 {{< math >}}
 $$
@@ -974,7 +982,7 @@ $$
 $$
 {{< /math >}}
 
-计算这个定积分，不得不进行三角换元。令
+计算这个定积分，~~不得不~~进行三角换元。令
 
 {{< math >}}
 $$
@@ -1067,9 +1075,169 @@ $$
 $$
 {{< /math >}}
 
+【注】
+
+本题最终计算定积分时，也可以采用分部积分法。分部积分法的计算更为巧妙，比直接进行三角换元计算量更小。
+
+$$
+\begin{align*}
+    \int_{0}^{1} \sqrt{1+y^2} \mathrm{d}y &= y \sqrt{1+y^2} \Big|_{0}^{1} - \int_{0}^{1} \frac{y \cdot 2y}{2 \sqrt{1+y^2}} \mathrm{d}y \\
+    &= \sqrt{2} - \int_{0}^{1} \frac{y^2+1-1}{\sqrt{1+y^2}} \mathrm{d}y \\
+    &= \sqrt{2} - \int_{0}^{1} \sqrt{1+y^2} \mathrm{d}y + \int_{0}^{1} \frac{1}{\sqrt{1+y^2}} \mathrm{d}y \\
+    \Longrightarrow \int_{0}^{1} \sqrt{1+y^2} \mathrm{d}y &= \frac{\sqrt{2}}{2} + \frac{1}{2} \int_{0}^{1} \frac{1}{\sqrt{1+y^2}} \mathrm{d}y
+\end{align*}
+$$
+
+下面计算定积分 $\displaystyle \int_{0}^{1} \frac{1}{\sqrt{1+y^2}} \mathrm{d}y$。此时再进行三角换元，计算量相对较小。
+
+$$
+\begin{align*}
+    y &= \tan{\theta} \quad \theta \in [0, \frac{\pi}{4}] \\
+    \int_{0}^{1} \frac{1}{\sqrt{1+y^2}} \mathrm{d}y &= \int_{0}^{\frac{\pi}{4}} \frac{\sec^2{\theta}}{\sec{\theta}} \mathrm{d} \theta \\
+    &= \int_{0}^{\frac{\pi}{4}} \frac{1}{1-\sin^2{\theta}} \mathrm{d} \sin{\theta} \\
+    &= \frac{1}{2} \left( \int_{0}^{\frac{\sqrt{2}}{2}} \frac{1}{1+u} \mathrm{d}u + \int_{0}^{\frac{\sqrt{2}}{2}} \frac{1}{1-u} \mathrm{d}u \right) \\
+    &= \frac{1}{2} \ln{\frac{1+u}{1-u}} \Big|_{0}^{\frac{\sqrt{2}}{2}} \\
+    &= \ln{(\sqrt{2}+1)}
+\end{align*}
+$$
+
+于是
+
+$$
+\begin{align*}
+    \int_{0}^{1} \sqrt{1+y^2} \mathrm{d}y &= \frac{\sqrt{2}}{2} + \frac{1}{2} \ln{(\sqrt{2}+1)}
+\end{align*}
+$$
+
+所以原式的结果为
+
+$$
+\begin{align*}
+    \cdots &= 2 \int_{0}^{1} \left( \sqrt{1+y^2} - 1 \right) \mathrm{d}y \\
+    &= \ln{(\sqrt{2}+1)} + \sqrt{2} - 2 \\
+\end{align*}
+$$
+
 【点评】
 
 本题形为二重积分，实际上难点在于定积分的计算过程。本题涉及到二重积分的对称性、定积分第二换元法（三角换元）、三角函数有理式的积分、分式裂项等诸多知识点，且计算量非常大，计算过程繁琐，极易出错。
+
+在计算定积分的过程中，可以通过分部积分法简化积分计算。这样即使需要进行三角换元，不会涉及到分明次数较高的有理函数积分。
+
+### 18
+
+已知函数 $f(x, y) = x^3 + y^3 - (x+y)^2 + 3$，$T$ 是曲面 $z = f(x, y)$ 在 $(1,1,1)$ 处的切平面，$D$ 为 $T$ 与坐标平面所围成的有界区域在 $xOy$ 平面上的投影。
+
+(1) 求 $T$ 的方程。
+
+(2) 求 $f(x, y)$ 在 $D$ 上的最大值和最小值。
+
+【解】
+
+本题的第 (1) 问考察曲线的切平面和法线方程的求解。首先将曲面方程改写为隐函数，即 $F(x, y, z) = f(x, y) - z = 0$。然后求解 $F(x, y, z)$ 的梯度，即
+
+$$
+\begin{align*}
+    \nabla F(x, y, z) &= \begin{bmatrix}
+        3x^2 - 2x - 2y \\
+        3y^2 - 2x - 2y \\
+        -1
+    \end{bmatrix} \\
+    \nabla F(1, 1, 1) &= \begin{bmatrix}
+        -1 \\
+        -1 \\
+        -1
+    \end{bmatrix}
+\end{align*}
+$$
+
+那么，只要与 $\nabla F(1, 1, 1)$ 线性相关的向量均为曲面切平面的法向量。于是，可以写成切平面 $T$ 的点法式方程为
+
+$$
+(x-1) + (y-1) + (z-1) = 0
+$$
+
+本题的第 (2) 问考察多元函数的条件极值。我们首先求出区域 $D$，令 $z=0$，得到
+
+$$
+\begin{align*}
+    l: x + y - 3 &= 0 \\
+\end{align*}
+$$
+
+那么区域 $D$ 应当是直线 $l$ 与 $x$ 轴和 $y$ 轴所围成的有界区域，即
+
+$$
+\begin{align*}
+    D = \{ (x, y) \mid 0 \leqslant x \leqslant 3, 0 \leqslant y \leqslant 3-x \}
+\end{align*}
+$$
+
+下面先求出所有的驻点（可能的极值点）。首先在 $D$ 的内部求解
+
+$$
+\begin{align*}
+    \nabla f(x, y) &= \begin{bmatrix}
+        3x^2 - 2x - 2y \\
+        3y^2 - 2x - 2y
+    \end{bmatrix} = \begin{bmatrix}
+        0 \\
+        0
+    \end{bmatrix} \\
+    \Longrightarrow & \begin{cases}
+        3x^2 - 4x = 0 \\
+        3y^2 - 4y = 0
+    \end{cases} \\
+    \Longrightarrow & \begin{cases}
+        x = \dfrac{4}{3} \\
+        y = \dfrac{4}{3}
+    \end{cases}
+\end{align*}
+$$
+
+接下来在 $D$ 的边界上求解
+
+$$
+\begin{align*}
+    f'(x, 0) &= 3x^2 - 2x = 0 \\
+    \Longrightarrow x &= 0 \text{ or } x = \frac{2}{3} \\
+    f'(0, y) &= 3y^2 - 2y = 0 \\
+    \Longrightarrow y &= 0 \text{ or } y = \frac{2}{3} \\
+    f'(x, 3-x) &= \frac{\mathrm{d}}{\mathrm{d}x} [x^3 + (3-x)^3 - 6] \\
+    &= 3x^2 - 3(3-x)^2 \\
+    &= 9(2x - 3) = 0 \\
+    \Longrightarrow x &= \dfrac{3}{2} \\
+\end{align*}
+$$
+
+因此，可以求出如下 3 个驻点：$(\dfrac{2}{3}, 0), (0, \dfrac{2}{3}), (\dfrac{3}{2}, \dfrac{3}{2})$
+
+下面，分别计算各驻点的函数值为
+
+$$
+\begin{align*}
+    f(\frac{4}{3}, \frac{4}{3}) &= \frac{17}{27} \\
+    f(\frac{2}{3}, 0) &= \frac{77}{27} \\
+    f(0, \frac{2}{3}) &= \frac{77}{27} \\
+    f(\frac{3}{2}, \frac{3}{2}) &= \frac{3}{4}
+\end{align*}
+$$
+
+最后，由于边界顶点处完全不可导，直接代入计算得到函数值为
+
+$$
+\begin{align*}
+    f(0, 0) &= 3 \\
+    f(0, 3) &= 21 \\
+    f(3, 0) &= 21
+\end{align*}
+$$
+
+所以，最大值为 $21$，最小值为 $\dfrac{17}{27}$。
+
+【点评】
+
+本题难度并不大，但是需要非常细致的计算，特别是因漏解而失分。
 
 ### 20
 
@@ -1080,6 +1248,8 @@ $$
 \oint_{L} (6xyz - yz^2) \mathrm{d}x + 2x^2z \mathrm{d}y +xyz \mathrm{d} z
 $$
 {{< /math >}}
+
+【解】
 
 本题求解的是空间曲线的第二类曲线积分，考察斯托克斯（Stokes）公式的运用。斯托克斯公式将空间曲线的第二类曲线积分转化为空间曲面的第二类曲面积分。
 
