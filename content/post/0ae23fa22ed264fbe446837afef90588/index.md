@@ -8,7 +8,7 @@ authors: []
 tags: [考研, 数学]
 categories: [Essay]
 date: 2023-12-24T22:20:59+08:00
-lastmod: 2023-12-29T22:20:59+08:00
+lastmod: 2023-12-30T22:20:59+08:00
 featured: false
 draft: false
 
@@ -1079,6 +1079,7 @@ $$
 
 本题最终计算定积分时，也可以采用分部积分法。分部积分法的计算更为巧妙，比直接进行三角换元计算量更小。
 
+{{< math >}}
 $$
 \begin{align*}
     \int_{0}^{1} \sqrt{1+y^2} \mathrm{d}y &= y \sqrt{1+y^2} \Big|_{0}^{1} - \int_{0}^{1} \frac{y \cdot 2y}{2 \sqrt{1+y^2}} \mathrm{d}y \\
@@ -1087,9 +1088,11 @@ $$
     \Longrightarrow \int_{0}^{1} \sqrt{1+y^2} \mathrm{d}y &= \frac{\sqrt{2}}{2} + \frac{1}{2} \int_{0}^{1} \frac{1}{\sqrt{1+y^2}} \mathrm{d}y
 \end{align*}
 $$
+{{< /math >}}
 
 下面计算定积分 $\displaystyle \int_{0}^{1} \frac{1}{\sqrt{1+y^2}} \mathrm{d}y$。此时再进行三角换元，计算量相对较小。
 
+{{< math >}}
 $$
 \begin{align*}
     y &= \tan{\theta} \quad \theta \in [0, \frac{\pi}{4}] \\
@@ -1100,23 +1103,28 @@ $$
     &= \ln{(\sqrt{2}+1)}
 \end{align*}
 $$
+{{< /math >}}
 
 于是
 
+{{< math >}}
 $$
 \begin{align*}
     \int_{0}^{1} \sqrt{1+y^2} \mathrm{d}y &= \frac{\sqrt{2}}{2} + \frac{1}{2} \ln{(\sqrt{2}+1)}
 \end{align*}
 $$
+{{< /math >}}
 
 所以原式的结果为
 
+{{< math >}}
 $$
 \begin{align*}
     \cdots &= 2 \int_{0}^{1} \left( \sqrt{1+y^2} - 1 \right) \mathrm{d}y \\
     &= \ln{(\sqrt{2}+1)} + \sqrt{2} - 2 \\
 \end{align*}
 $$
+{{< /math >}}
 
 【点评】
 
@@ -1136,6 +1144,7 @@ $$
 
 本题的第 (1) 问考察曲线的切平面和法线方程的求解。首先将曲面方程改写为隐函数，即 $F(x, y, z) = f(x, y) - z = 0$。然后求解 $F(x, y, z)$ 的梯度，即
 
+{{< math >}}
 $$
 \begin{align*}
     \nabla F(x, y, z) &= \begin{bmatrix}
@@ -1150,31 +1159,39 @@ $$
     \end{bmatrix}
 \end{align*}
 $$
+{{< /math >}}
 
-那么，只要与 $\nabla F(1, 1, 1)$ 线性相关的向量均为曲面切平面的法向量。于是，可以写成切平面 $T$ 的点法式方程为
+那么，只要与 $\nabla F(1, 1, 1)$ 线性相关的向量均为曲面切平面的法向量。于是，可以写出切平面 $T$ 的点法式方程为
 
+{{< math >}}
 $$
 (x-1) + (y-1) + (z-1) = 0
 $$
+{{< /math >}}
 
 本题的第 (2) 问考察多元函数的条件极值。我们首先求出区域 $D$，令 $z=0$，得到
 
+{{< math >}}
 $$
 \begin{align*}
     l: x + y - 3 &= 0 \\
 \end{align*}
 $$
+{{< /math >}}
 
 那么区域 $D$ 应当是直线 $l$ 与 $x$ 轴和 $y$ 轴所围成的有界区域，即
 
+{{< math >}}
 $$
 \begin{align*}
     D = \{ (x, y) \mid 0 \leqslant x \leqslant 3, 0 \leqslant y \leqslant 3-x \}
 \end{align*}
 $$
+{{< /math >}}
 
 下面先求出所有的驻点（可能的极值点）。首先在 $D$ 的内部求解
 
+{{< math >}}
 $$
 \begin{align*}
     \nabla f(x, y) &= \begin{bmatrix}
@@ -1194,9 +1211,11 @@ $$
     \end{cases}
 \end{align*}
 $$
+{{< /math >}}
 
 接下来在 $D$ 的边界上求解
 
+{{< math >}}
 $$
 \begin{align*}
     f'(x, 0) &= 3x^2 - 2x = 0 \\
@@ -1209,11 +1228,13 @@ $$
     \Longrightarrow x &= \dfrac{3}{2} \\
 \end{align*}
 $$
+{{< /math >}}
 
 因此，可以求出如下 3 个驻点：$(\dfrac{2}{3}, 0), (0, \dfrac{2}{3}), (\dfrac{3}{2}, \dfrac{3}{2})$
 
 下面，分别计算各驻点的函数值为
 
+{{< math >}}
 $$
 \begin{align*}
     f(\frac{4}{3}, \frac{4}{3}) &= \frac{17}{27} \\
@@ -1222,9 +1243,11 @@ $$
     f(\frac{3}{2}, \frac{3}{2}) &= \frac{3}{4}
 \end{align*}
 $$
+{{< /math >}}
 
 最后，由于边界顶点处完全不可导，直接代入计算得到函数值为
 
+{{< math >}}
 $$
 \begin{align*}
     f(0, 0) &= 3 \\
@@ -1232,12 +1255,154 @@ $$
     f(3, 0) &= 21
 \end{align*}
 $$
+{{< /math >}}
 
 所以，最大值为 $21$，最小值为 $\dfrac{17}{27}$。
 
 【点评】
 
 本题难度并不大，但是需要非常细致的计算，特别是因漏解而失分。
+
+### 19
+
+设 $f(x)$ 二阶可导，$f'(0)=f'(1)$，$|f''(x)| \leqslant 1$。求证：
+
+(1) 当 $x \in (0, 1)$ 时，$\left| f(x) - f(0)(1-x) - f(1)x \right| \leqslant \dfrac{x(1-x)}{2}$
+
+(2) $\displaystyle \left| \int_{0}^{1} f(x) \mathrm{d}x - \dfrac{f(0) + f(1)}{2} \right| \leqslant \dfrac{1}{12}$
+
+【解】
+
+本题乍一看，完全不知道该如何入手。感觉上看，本题好像考察的是微分和积分中值定理。做证明题，思路非常之重要。下面的过程并不是答案的标准过程，它反映了我寻找证明思路的过程。
+
+通过已知条件，好像暂时也得不出什么结论。于是，我们来看第 (1) 问待证明的目标式。绝对值内部的后面两项好像形式类似，不妨将它们看成一个整体。于是我们令
+
+{{< math >}}
+$$
+\begin{align*}
+    F(x) &= f(0)(1-x) + f(1)x \\
+    \Longrightarrow F(0) &= f(0) \\
+    F(1) &= f(1) \\
+    \Longrightarrow F'(x) &= f(1) - f(0)
+\end{align*}
+$$
+{{< /math >}}
+
+下面，我们再尝试令
+
+{{< math >}}
+$$
+\begin{align*}
+    \varphi(x) &= f(x) - F(x) \\
+    \Longrightarrow \varphi(0) &= f(0) - F(0) = 0 \\
+    \varphi(1) &= f(1) - F(1) = 0 \\
+    \Longrightarrow \varphi'(x) &= f'(x) - F'(x) \\
+    &= f'(x) - f(1) + f(0) \\
+    \Longrightarrow \varphi'(0) &= f'(0) - f(1) + f(0) \\
+    \varphi'(1) &= f'(1) - f(1) + f(0) \\
+    \because f'(0) &= f'(1) \\
+    \therefore \varphi'(0) &= \varphi'(1) \\
+\end{align*}
+$$
+{{< /math >}}
+
+这样一来，我们终于知道了，原来题目的条件 $f'(0) = f'(1)$ 是这样使用的。要证明第 (1) 问的不等式，只需保证
+
+{{< math >}}
+$$
+\begin{align*}
+    \begin{cases}
+        \varphi(x) - \dfrac{x(1-x)}{2} \leqslant 0 \\
+        \varphi(x) + \dfrac{x(1-x)}{2} \geqslant 0
+    \end{cases}
+\end{align*}
+$$
+{{< /math >}}
+
+我们令
+
+{{< math >}}
+$$
+\begin{align*}
+    \Phi(x) &= \varphi(x) - \dfrac{x(1-x)}{2} \\
+    \Longrightarrow \Phi'(x) &= \varphi'(x) + x - \frac{1}{2} \\
+    &= f'(x) - f(1) + f(0) + x - \frac{1}{2} \\
+    \Longrightarrow \Phi''(x) &= f''(x) + 1 \\
+    \because |f''(x)| & \leqslant 1 \quad \therefore \Phi''(x) \geqslant 0 \\
+\end{align*}
+$$
+{{< /math >}}
+
+这说明 $\Phi(x)$ 是凹函数。又因为 $\Phi(0) = \Phi(1) = 0$，所以当 $x \in [0, 1]$ 时，$\Phi(x) \leqslant 0$。
+
+同理，我们令
+
+{{< math >}}
+$$
+\begin{align*}
+    \Psi(x) &= \varphi(x) + \dfrac{x(1-x)}{2} \\
+    \Longrightarrow \Psi'(x) &= \varphi'(x) - x + \frac{1}{2} \\
+    &= f'(x) - f(1) + f(0) - x + \frac{1}{2} \\
+    \Longrightarrow \Psi''(x) &= f''(x) - 1 \\
+    \because |f''(x)| & \leqslant 1 \quad \therefore \Psi''(x) \leqslant 0 \\
+\end{align*}
+$$
+{{< /math >}}
+
+这说明 $\Psi(x)$ 是凸函数。又因为 $\Psi(0) = \Psi(1) = 0$，所以当 $x \in [0, 1]$ 时，$\Psi(x) \geqslant 0$。
+
+综合以上，即证明第 (1) 问的结论。
+
+现在我们再来看第 (2) 问要证明的式子，其中含有 $\dfrac{f(0)+f(1)}{2}$。而第 (1) 问已经证明的式子可以直接用来作结论。显然，把 $x=\dfrac{1}{2}$ 代入得
+
+{{< math >}}
+$$
+\begin{align*}
+    \left| f(\frac{1}{2}) - \frac{f(0) + f(1)}{2} \right| \leqslant \frac{1}{8}
+\end{align*}
+$$
+{{< /math >}}
+
+可以看到这个式子和待证明的式子比较接近了。不过，貌似这里的 $f(\dfrac{1}{2})$ 不好处理。但仔细一看，绝对值内的式子好像是区间 $[0, 1]$ 上中点的函数值和端点函数值的平均值之差，这与凹凸性的定义有关联。
+
+然而，这个式子的右边的值为 $\dfrac{1}{8}$ 而不是 $\dfrac{1}{12}$。可否对这个式子变形一下，使得它的右边的值为 $\dfrac{1}{12}$ 呢？由于目标式左边含有积分，所以在第 (1) 问结论的基础上，两边在区间 $[0, 1]$ 上同时积分，得到
+
+{{< math >}}
+$$
+\begin{align*}
+    \int_{0}^{1} \left| f(x) - f(0)(1-x) - f(1)x \right| \mathrm{d}x & \leqslant \int_{0}^{1} \frac{x(1-x)}{2} \mathrm{d}x \\
+    &= \frac{1}{4} x^2 \Big|_{0}^{1} - \frac{1}{6} x^3 \Big|_{0}^{1} \\
+    &= \frac{1}{12}
+\end{align*}
+$$
+{{< /math >}}
+
+这样就凑出了 $\dfrac{1}{12}$。下面去掉绝对值符号，分类讨论。
+
+{{< math >}}
+$$
+\begin{align*}
+    \int_{0}^{1} f(x) \mathrm{d}x + f(0) \cdot \frac{1}{2} (x-1)^2 \Big|_{0}^{1} - f(1) \cdot \frac{1}{2} x^2 \Big|_{0}^{1} & \leqslant \frac{1}{12} \\
+    \int_{0}^{1} f(x) \mathrm{d}x - \frac{f(0)+f(1)}{2} & \leqslant \frac{1}{12}
+\end{align*}
+$$
+{{< /math >}}
+
+同理可证
+
+{{< math >}}
+$$
+\begin{align*}
+    \int_{0}^{1} f(x) \mathrm{d}x - \frac{f(0)+f(1)}{2} & \geqslant -\frac{1}{12} \\
+\end{align*}
+$$
+{{< /math >}}
+
+综合以上，即证明第 (2) 问的结论。
+
+【点评】
+
+本题是一道偏怪难的纯技巧证明题，且每个小问证明都较为麻烦，需要去绝对值符号分类讨论。实际上，这题不需要任何的微分和积分中值定理的知识，但是需要对数字、代数式特别敏感，且很多操作很难想到。个人认为，本题出得没有太大意义，且考察知识点意义不明。
 
 ### 20
 
