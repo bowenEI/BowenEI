@@ -1130,7 +1130,7 @@ $$
 
 本题形为二重积分，实际上难点在于定积分的计算过程。本题涉及到二重积分的对称性、定积分第二换元法（三角换元）、三角函数有理式的积分、分式裂项等诸多知识点，且计算量非常大，计算过程繁琐，极易出错。
 
-在计算定积分的过程中，可以通过分部积分法简化积分计算。这样即使需要进行三角换元，不会涉及到分明次数较高的有理函数积分。
+在计算定积分的过程中，可以通过分部积分法简化积分计算。这样即使需要进行三角换元，不会涉及到分母次数较高的有理函数积分。
 
 ### 18
 
@@ -1489,3 +1489,379 @@ $$
 【点评】
 
 本题题型较为常规，但考察到了很多的知识点，包括斯托克斯公式、转换投影法、二重积分等。同时，由于斯托克斯公式需要计算三阶行列式，无形之中增加了本题的计算量。此外，计算二重积分时，由于倾斜平面截球面所得交线在 $xOy$ 平面内的投影是椭圆，求解这个椭圆方程也需要一些计算量。如稍有不慎，二重积分的被积函数算错，由于积分区域复杂，计算量会更大。这在考场上是十分令人崩溃的。
+
+### 21
+
+已知数列 $\{x_n\}, \{y_n\}, \{z_n\}$ 满足 $x_0 = -1, y_0 = 0, z_0 = 2$，且
+
+{{< math >}}
+$$
+\begin{cases}
+    x_n = -2 x_{n-1} + 2 z_{n-1} \\
+    y_n = -2 y_{n-1} - 2 z_{n-1} \\
+    z_n = -6 x_{n-1} - 3 y_{n-1} + 3 z_{n-1}
+\end{cases}
+$$
+{{< /math >}}
+
+记 $\alpha_n = [x_n, y_n, z_n]^{\top}$，写出满足 $\alpha_n = A \alpha_{n-1}$ 的矩阵 $A$，并求 $A^n, x_n, y_n, z_n$。
+
+【解】
+
+本题给出了一系列数列的递推公式，且后一项都是关于前一项的线性函数。所以，本题考察的实际上是线性代数知识的综合运用。首先，由题意得
+
+{{< math >}}
+$$
+\begin{bmatrix}
+    x_n \\
+    y_n \\
+    z_n
+\end{bmatrix} = \begin{bmatrix}
+    -2 & 0 & 2 \\
+    0 & -2 & -2 \\
+    -6 & -3 & 3
+\end{bmatrix} \begin{bmatrix}
+    x_{n-1} \\
+    y_{n-1} \\
+    z_{n-1}
+\end{bmatrix}
+$$
+{{< /math >}}
+
+中间的 3 阶方阵即为矩阵 $A$。由于要求 $A^n$，需要将之相似对角化。令
+
+{{< math >}}
+$$
+\begin{align*}
+    \det{(\lambda E - A)} &= \begin{vmatrix}
+        \lambda + 2 & 0 & -2 \\
+        0 & \lambda + 2 & 2 \\
+        6 & 3 & \lambda - 3
+    \end{vmatrix} \\
+    &= (\lambda+2) \begin{vmatrix}
+        \lambda + 2 & 2 \\
+        3 & \lambda - 3
+    \end{vmatrix} - 2 \begin{vmatrix}
+        0 & \lambda + 2 \\
+        6 & 3
+    \end{vmatrix} \\
+    &= (\lambda+2)[(\lambda+2)(\lambda-3) - 6] + 12(\lambda+2) \\
+    &= \lambda (\lambda+2) (\lambda-1) = 0 \\
+    & \Longrightarrow \lambda_1 = 0, \lambda_2 = -2, \lambda_3 = 1
+\end{align*}
+$$
+{{< /math >}}
+
+下面求解系数矩阵对应齐次线性方程组的基础解系。
+
+{{< math >}}
+$$
+\begin{align*}
+    \lambda_1 = 0: \lambda_1 E - A &= \begin{bmatrix}
+        2 & 0 & -2 \\
+        0 & 2 & 2 \\
+        6 & 3 & -3
+    \end{bmatrix} \\
+    & \rightarrow \begin{bmatrix}
+        1 & 0 & -1 \\
+        0 & 1 & 1 \\
+        2 & 1 & -1
+    \end{bmatrix} \\
+    & \rightarrow \begin{bmatrix}
+        1 & 0 & -1 \\
+        0 & 1 & 1 \\
+        0 & 0 & 0
+    \end{bmatrix} \\
+    \Longrightarrow \xi_1 &= \begin{bmatrix}
+        1 \\
+        -1 \\
+        1
+    \end{bmatrix}
+\end{align*}
+$$
+{{< /math >}}
+
+{{< math >}}
+$$
+\begin{align*}
+    \lambda_2 = -2: \lambda_2 E - A &= \begin{bmatrix}
+        0 & 0 & -2 \\
+        0 & 0 & 2 \\
+        6 & 3 & -5
+    \end{bmatrix} \\
+    & \rightarrow \begin{bmatrix}
+        6 & 3 & -5 \\
+        0 & 0 & 1 \\
+        0 & 0 & 0
+    \end{bmatrix} \\
+    \Longrightarrow \xi_2 &= \begin{bmatrix}
+        1 \\
+        -2 \\
+        0
+    \end{bmatrix}
+\end{align*}
+$$
+{{< /math >}}
+
+{{< math >}}
+$$
+\begin{align*}
+    \lambda_3 = 1: \lambda_3 E - A &= \begin{bmatrix}
+        3 & 0 & -2 \\
+        0 & 3 & 2 \\
+        6 & 3 & -2
+    \end{bmatrix} \\
+    & \rightarrow \begin{bmatrix}
+        3 & 0 & -2 \\
+        0 & 3 & 2 \\
+        0 & 0 & 0
+    \end{bmatrix} \\
+    \longrightarrow \xi_3 &= \begin{bmatrix}
+        2 \\
+        -2 \\
+        3
+    \end{bmatrix}
+\end{align*}
+$$
+{{< /math >}}
+
+故存在可逆矩阵
+
+{{< math >}}
+$$
+\begin{align*}
+    P = \begin{bmatrix}
+        \xi_1 & \xi_2 & \xi_3
+    \end{bmatrix} &= \begin{bmatrix}
+        1 & 1 & 2 \\
+        -1 & -2 & -2 \\
+        1 & 0 & 3
+    \end{bmatrix} \\
+    \text{s.t. } P^{-1}AP &= \begin{bmatrix}
+        0 & & \\
+        & -2 & \\
+        & & 1
+    \end{bmatrix}
+\end{align*}
+$$
+{{< /math >}}
+
+求出 $P$ 的逆矩阵为
+
+{{< math >}}
+$$
+\begin{align*}
+    (P \mid E) =& \begin{bmatrix}
+        1 & 1 & 2 & 1 & 0 & 0 \\
+        -1 & -2 & -2 & 0 & 1 & 0 \\
+        1 & 0 & 3 & 0 & 0 & 1
+    \end{bmatrix} \\
+    \rightarrow & \begin{bmatrix}
+        1 & 1 & 2 & 1 & 0 & 0 \\
+        0 & -1 & 0 & 1 & 1 & 0 \\
+        0 & -1 & 1 & -1 & 0 & 1
+    \end{bmatrix} \\
+    \rightarrow & \begin{bmatrix}
+        1 & 1 & 2 & 1 & 0 & 0 \\
+        0 & 1 & 0 & -1 & -1 & 0 \\
+        0 & 0 & 1 & -2 & -1 & 1
+    \end{bmatrix} \\
+    \rightarrow & \begin{bmatrix}
+        1 & 1 & 0 & 5 & 2 & -2 \\
+        0 & 1 & 0 & -1 & -1 & 0 \\
+        0 & 0 & 1 & -2 & -1 & 1
+    \end{bmatrix} \\
+    \rightarrow & \begin{bmatrix}
+        1 & 0 & 0 & 6 & 3 & -2 \\
+        0 & 1 & 0 & -1 & -1 & 0 \\
+        0 & 0 & 1 & -2 & -1 & 1
+    \end{bmatrix} = (E \mid P^{-1}) \\
+\end{align*}
+$$
+{{< /math >}}
+
+于是
+
+{{< math >}}
+$$
+\begin{align*}
+    A^n &= (P \operatorname{diag}{(0, -2, 1)} P^{-1})^n \\
+    &= \begin{bmatrix}
+        1 & 1 & 2  \\
+        -1 & -2 & -2 \\
+        1 & 0 & 3
+    \end{bmatrix} \begin{bmatrix}
+        0 & & \\
+        & (-2)^n & \\
+        & & 1
+    \end{bmatrix} \begin{bmatrix}
+        6 & 3 & -2 \\
+        -1 & -1 & 0 \\
+        -2 & -1 & 1
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        0 & (-2)^n & 2 \\
+        0 & (-2)^{n+1} & -2 \\
+        0 & 0 & 3
+    \end{bmatrix} \begin{bmatrix}
+        6 & 3 & -2 \\
+        -1 & -1 & 0 \\
+        -2 & -1 & 1
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        -(-2)^n - 4 & -(-2)^2 - 2 & 2 \\
+        -(-2)^{n+1} + 4 & -(-2)^{n+1} + 2 & -2 \\
+        -6 & -3 & 3
+    \end{bmatrix}
+\end{align*}
+$$
+{{< /math >}}
+
+由 $\alpha_n = A \alpha_{n-1}$ 得
+
+{{< math >}}
+$$
+\begin{align*}
+    \alpha_n = \begin{bmatrix}
+        x_n \\
+        y_n \\
+        z_n
+    \end{bmatrix} = A^n \alpha_0 &= \begin{bmatrix}
+        -(-2)^n - 4 & -(-2)^2 - 2 & 2 \\
+        -(-2)^{n+1} + 4 & -(-2)^{n+1} + 2 & -2 \\
+        -6 & -3 & 3
+    \end{bmatrix} \begin{bmatrix}
+        x_0 \\
+        y_0 \\
+        z_0
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        -(-2)^n - 4 & -(-2)^2 - 2 & 2 \\
+        -(-2)^{n+1} + 4 & -(-2)^{n+1} + 2 & -2 \\
+        -6 & -3 & 3
+    \end{bmatrix} \begin{bmatrix}
+        -1 \\
+        0 \\
+        2
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        -(-2)^n + 8 \\
+        -(-2)^{n+1} - 8 \\
+        12
+    \end{bmatrix}
+\end{align*}
+$$
+{{< /math >}}
+
+【点评】
+
+本题主要考察了矩阵相似对角化及其综合应用，难度不大，但是计算量较大，需要非常细致。
+
+### 22
+
+设总体 $X \sim U(0, \theta)$，其中 $\theta \in (0, \infty)$ 为未知参数，$X_1, X_2, \cdots, X_n$ 是来自总体 $X$ 的简单随机样本，记
+
+{{< math >}}
+$$
+X(n) = \max \{ X_1, X_2, \cdots, X_n \}, T_c = c X(n)
+$$
+{{< /math >}}
+
+(1) 求 $c$，使得 $T_c$ 是 $\theta$ 的无偏估计；
+
+(2) 记 $h(c) = E(T_c - \theta)^2$，求 $c$ 使得 $h(c)$ 最小。
+
+【解】
+
+第 (1) 问考察参数估计中的无偏估计。首先依题意，得到 $X$ 的概率密度函数和概率分布函数分别为
+
+{{< math >}}
+$$
+\begin{align*}
+    f(x) &= \begin{cases}
+        \dfrac{1}{\theta} & 0 < x < \theta \\
+        0 & \text{else}
+    \end{cases} \\
+    F(x) &= \begin{cases}
+        0 & x \leqslant 0 \\
+        \dfrac{1}{\theta} x & 0 < x < \theta \\
+        1 & x \geqslant \theta
+    \end{cases}
+\end{align*}
+$$
+{{< /math >}}
+
+而 $X(n)$ 是一个离散型的随机变量，其分布函数为
+
+{{< math >}}
+$$
+\begin{align*}
+    F_{X(n)}(x) &= P(\max \{ X_1, X_2, \cdots, X_n \} \leqslant x) \\
+    &= P(X_1 \leqslant x, X_2 \leqslant x, \cdots, X_n \leqslant x) \\
+    &= P(X_1 \leqslant x) \cdot P(X_2 \leqslant x) \cdot \cdots \cdot P(X_n \leqslant x) \\
+    &= F^{n}(x)
+\end{align*}
+$$
+{{< /math >}}
+
+上面的计算过程表明，样本的最大值小于 $x$ 的概率，等于每个样本的值都小于 $x$ 的概率。而各个样本的值小于 $x$ 这些事件均彼此独立，所以由独立可乘的原理，得到 $n$ 次抽样的概率之积。所以，最终 $X(n)$ 的概率密度函数为
+
+{{< math >}}
+$$
+f_{X(n)}(x) = n F^{n-1}(x) f(x) = \begin{cases}
+    \dfrac{n}{\theta^n} x^{n-1} & 0 < x < \theta \\
+    0 & \text{else}
+\end{cases} 
+$$
+{{< /math >}}
+
+要求 $c$ 使 $T_c$ 是 $\theta$ 的无偏估计，即要求 $E(T_c) = \theta$。下面计算 $T_c$ 的均值
+
+{{< math >}}
+$$
+\begin{align*}
+    E(T_c) = c E(X(n)) &= c \int_{0}^{\theta} x \cdot \dfrac{n}{\theta^n} x^{n-1} \mathrm{d}x \\
+    &= \frac{cn x^{n+1}}{(n+1) \theta^n} \Bigg|_{0}^{\theta} \\
+    &= \frac{cn}{(n+1)} \theta
+\end{align*}
+$$
+{{< /math >}}
+
+令 $\dfrac{cn}{(n+1)} \theta = \theta$，解得 $c = \dfrac{n}{n+1}$，使得 $T_c$ 是 $\theta$ 的无偏估计。
+
+对于第 (2) 问，我们首先整理出 $h(c)$ 的表达式
+
+{{< math >}}
+$$
+\begin{align*}
+    h(c) &= E(T_c - \theta)^2 \\
+    &= E(T_c^2 - 2 T_c \theta + \theta^2) \\
+    &= E(T_c^2) - 2 \theta E(T_c) + \theta^2 \\
+    &= c^2 E(X^2(n)) - 2 \theta c E(X(n)) + \theta^2 \\
+    &= c^2 \int_{0}^{\theta} x^2 \cdot \dfrac{n}{\theta^n} x^{n-1} \mathrm{d}x - 2 \theta c \int_{0}^{\theta} x \cdot \dfrac{n}{\theta^n} x^{n-1} \mathrm{d}x + \theta^2 \\
+    &= \frac{\theta^2 n}{n+2} c^2 - \frac{2 \theta^2 n}{n+1} c + \theta^2
+\end{align*}
+$$
+{{< /math >}}
+
+易知 $h(c)$ 是一个关于 $c$ 的二次函数，其函数图像为开口向上的抛物线。因此，$h(c)$ 在其对称轴处取到最小值，即
+
+{{< math >}}
+$$
+c = \dfrac{\dfrac{2 \theta^2 n}{n+1}}{2 \cdot \dfrac{\theta^2 n}{n+2}} = \frac{n+2}{n+1}
+$$
+{{< /math >}}
+
+【点评】
+
+本题的要点在于读懂题意。而且本题的随机变量服从均匀分布，这极大地简化了计算，使得本题只要理解题意就不难求解。
+
+## 总结与评价
+
+2024 年的考研已经落下帷幕。除去专业课之外，大家都要面临的考试科目基本上就是数学、英语和政治了。而数学承载着拉开考生差距的使命，命题上更是要精雕细琢。纵观整张数学试卷，没有任何一道题超纲。除少部分题（第 19 题）外，大多数题目对于大多数考生而言是不难理解的，也是能够找到解题思路的。然而，问题就在于很多题目的计算量特别大，特别是第 17 题和 20 题的两个积分以及第 21 题，甚至连填空题第 15 题的推导也很复杂。而第 18 题考察条件极值，需要特别细心，否则容易漏解。
+
+因此，整张数学试卷的最大特点就是：计算量相当大。这样一来，它对广大考生，特别是中等生非常不友好。因为要想做对任何一道数学题，都需要两个过程：捋清思路和算出答案。广大考生不是不会做，而是计算容易出错，甚至算不出来。特别是对于中等生而言，题目他都能理解，也有解题的思路，但在考场上就是算不出来，这会极大地影响到他的考试状态。所以，才会出现考试当天网络上的一片哀嚎声。
+
+纵观这个趋势，我们可以看到，研究生初试的选拔性得到了进一步的加强。反观高考，只要基础知识扎实，选择填空的难题失分，解析几何和导数的最后一问干脆不作答，也能得到 120 分左右的分数。学霸通过难题即使能够拉开和中等生的差距，也仅仅不过 30 分左右。而考研数学的情况就完全不一样了，中等生甚至有些平时具有学霸水平的考生，在考研的考场上都很有可能因为计算量大而导致发挥失常。这样一来，考生似乎必须兼具天赋和努力才能够立于不败之地了。
+
+难道，能够在考场上有限的时间内计算出积分的结果的考生，就一定是适合做科研的研究生吗？数学考试究竟应该考察考生的什么能力？而研究生又究竟应该具备什么样的能力？
