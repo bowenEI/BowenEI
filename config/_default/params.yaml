@@ -66,8 +66,8 @@ features:
     theme_light: github-light
     theme_dark: dracula
   math:
-    enable: false
-    katex: true
+    enable: true
+    # katex: true
   privacy_pack:
     enable: false
   repository:
