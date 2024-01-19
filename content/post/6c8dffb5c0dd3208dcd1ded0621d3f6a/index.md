@@ -8,7 +8,7 @@ authors: []
 tags: [LLM, Inference]
 categories: [Essay, Knowledge]
 date: 2024-01-02T18:20:53+08:00
-lastmod: 2024-01-04T18:20:53+08:00
+lastmod: 2024-01-19T18:20:53+08:00
 featured: false
 draft: false
 
@@ -76,7 +76,8 @@ toc: true
   - [LightLLM](https://github.com/ModelTC/lightllm)
 - 推理加速框架
   - [vLLM](https://github.com/vllm-project/vllm)
-  - [TensorRT-LLM (FasterTransformer)](https://github.com/NVIDIA/TensorRT-LLM)
+  - [FasterTransformer](https://github.com/NVIDIA/FasterTransformer)
+    - [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)
   - [Text Generation Inference](https://github.com/huggingface/text-generation-inference)
   - [Lit-LLaMA](https://github.com/Lightning-AI/lit-llama)
   - [fastllm](https://github.com/ztxz16/fastllm)
