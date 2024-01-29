@@ -8,7 +8,7 @@ authors: []
 tags: [数学, 线性代数]
 categories: [Knowledge]
 date: 2023-11-28T18:34:13+08:00
-lastmod: 2024-01-27T18:34:13+08:00
+lastmod: 2024-01-29T18:34:13+08:00
 featured: false
 draft: false
 
@@ -248,7 +248,15 @@ $$
 
 ## 图解分块矩阵乘法
 
-{{< figure src="a0e50e5d9eb316ff3ba6ef938d215e5f.svg" >}}
+设想有 2 个矩阵都被切分成 $2 \times 2$ 的块，每个块在 4 张不同的 GPU 上进行矩阵乘法运算。则每个 GPU 上的计算分别如下面 4 张图所示：
+
+{{< figure src="5b1754c39f3279088779d105a8ac8fd3.svg" >}}
+
+{{< figure src="cdffdebf9d18eaacb04b206b64af6266.svg" >}}
+
+{{< figure src="44432a5b019047ed1de2b056359358aa.svg" >}}
+
+{{< figure src="dec14c42714e74a73b6df392aa0583fe.svg" >}}
 
 ## 分块矩阵乘法的意义
 
