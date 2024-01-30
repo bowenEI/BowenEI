@@ -206,7 +206,7 @@ Flash Attention 中计算 Softmax 并不完全是按照上述过程进行的，�
 
 实际上，涉及到块间的计算仅取最大值和求和两部分。所以，需要额外的存储空间，并且在每次循环迭代中更新之。
 
-我们反观 Flash Attention 的遍历规则，可以得知外循环是遍历 $\mathbf{K}$ 和 $\mathbf{V}$ 的，内循环是遍历 $\mathbf{Q}$ 和 $\mathbf{O}$ 的。并且，都是在序列长度 `N` 上进行遍历的。这充分说明了，Flash Attention 将长序列的计算进行了更细粒度的划分。
+我们反观 Flash Attention 的遍历规则，可以得知外循环是遍历 $\mathbf{K}$ 和 $\mathbf{V}$ 的，内循环是遍历 $\mathbf{Q}$ 和 $\mathbf{O}$ 的。并且，都是在序列长度 $N$ 上进行遍历的。这充分说明了，Flash Attention 将长序列的计算进行了更细粒度的划分。
 
 不过，每次循环遍历时，仅仅只是计算部分 Attention。要向通过部分 Attention 的计算结果，递推出后续的计算结果，直至完整序列的计算结果，对于线性算子 $\mathbf{Q} \mathbf{K}^{\top}$ 和 $\mathbf{P} \mathbf{V}$ 来说较为容易，但对于非线性算子 Softmax 来说较为复杂。
 
