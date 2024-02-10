@@ -57,7 +57,7 @@ toc: true
   - Operator Fusion
 - 模型编译
   - [XLA](https://www.tensorflow.org/xla?hl=zh-cn)
-  - [MLC LLM](https://github.com/mlc-ai/mlc-llm)
+  - [MLC LLM](https://llm.mlc.ai/)
 ```
 
 ## 框架
