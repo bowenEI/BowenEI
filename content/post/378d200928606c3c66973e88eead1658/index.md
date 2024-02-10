@@ -8,7 +8,7 @@ authors: []
 tags: [数学, 线性代数]
 categories: [Knowledge]
 date: 2023-11-28T18:34:13+08:00
-lastmod: 2023-11-28T18:34:13+08:00
+lastmod: 2024-01-29T18:34:13+08:00
 featured: false
 draft: false
 
@@ -57,11 +57,10 @@ $$
 
 {{< math >}}
 $$
-\left\{ \begin{align*}
-    x & = \frac{m}{X} \\
-    y & = \frac{n}{Y}
-\end{align*}
-\right.
+\begin{cases}
+    x = \dfrac{m}{X} \\
+    y = \dfrac{n}{Y}
+\end{cases}
 $$
 {{< /math >}}
 
@@ -129,10 +128,10 @@ $$
 $$
 \lambda^{\top} W = 
 \begin{bmatrix}
-    \sum_{i=1}^{X} \lambda_{i}^{\top} W_{i1} &
-    \sum_{i=1}^{X} \lambda_{i}^{\top} W_{i2} &
+    \displaystyle \sum_{i=1}^{X} \lambda_{i}^{\top} W_{i1} &
+    \displaystyle \sum_{i=1}^{X} \lambda_{i}^{\top} W_{i2} &
     \cdots &
-    \sum_{i=1}^{X} \lambda_{i}^{\top} W_{iy}
+    \displaystyle \sum_{i=1}^{X} \lambda_{i}^{\top} W_{iy}
 \end{bmatrix}
 $$
 {{< /math >}}
@@ -161,10 +160,10 @@ $$
 $$
 AW = 
 \begin{bmatrix}
-    \sum_{i=1}^{X} A_{i} W_{i1} &
-    \sum_{i=1}^{X} A_{i} W_{i2} &
+    \displaystyle \sum_{i=1}^{X} A_{i} W_{i1} &
+    \displaystyle \sum_{i=1}^{X} A_{i} W_{i2} &
     \cdots &
-    \sum_{i=1}^{X} A_{i} W_{iy}
+    \displaystyle \sum_{i=1}^{X} A_{i} W_{iy}
 \end{bmatrix}
 $$
 {{< /math >}}
@@ -197,19 +196,19 @@ $$
 $$
 AW = 
 \begin{bmatrix}
-    \sum_{i=1}^{X} A_{1i} W_{i1} &
-    \sum_{i=1}^{X} A_{1i} W_{i2} &
+    \displaystyle \sum_{i=1}^{X} A_{1i} W_{i1} &
+    \displaystyle \sum_{i=1}^{X} A_{1i} W_{i2} &
     \cdots &
-    \sum_{i=1}^{X} A_{1i} W_{iy} \\
-    \sum_{i=1}^{X} A_{2i} W_{i1} &
-    \sum_{i=1}^{X} A_{2i} W_{i2} &
+    \displaystyle \sum_{i=1}^{X} A_{1i} W_{iy} \\
+    \displaystyle \sum_{i=1}^{X} A_{2i} W_{i1} &
+    \displaystyle \sum_{i=1}^{X} A_{2i} W_{i2} &
     \cdots &
-    \sum_{i=1}^{X} A_{2i} W_{iy} \\
+    \displaystyle \sum_{i=1}^{X} A_{2i} W_{iy} \\
     \vdots & \vdots & \ddots & \vdots \\
-    \sum_{i=1}^{X} A_{Ti} W_{i1} &
-    \sum_{i=1}^{X} A_{Ti} W_{i2} &
+    \displaystyle \sum_{i=1}^{X} A_{Ti} W_{i1} &
+    \displaystyle \sum_{i=1}^{X} A_{Ti} W_{i2} &
     \cdots &
-    \sum_{i=1}^{X} A_{Ti} W_{iy}
+    \displaystyle \sum_{i=1}^{X} A_{Ti} W_{iy}
 \end{bmatrix}
 $$
 {{< /math >}}
@@ -234,10 +233,10 @@ $$
         B_{P1} & B_{P2} & \cdots & B_{PN}
     \end{bmatrix} \\
     AB &= \begin{bmatrix}
-        \sum_{i=1}^{P} A_{1i} B_{i1} & \sum_{i=1}^{P} A_{1i} B_{i2} & \cdots & \sum_{i=1}^{P} A_{1i} B_{iN} \\
-        \sum_{i=1}^{P} A_{2i} B_{i1} & \sum_{i=1}^{P} A_{2i} B_{i2} & \cdots & \sum_{i=1}^{P} A_{2i} B_{iN} \\
+        \displaystyle \sum_{i=1}^{P} A_{1i} B_{i1} & \displaystyle \sum_{i=1}^{P} A_{1i} B_{i2} & \cdots & \displaystyle \sum_{i=1}^{P} A_{1i} B_{iN} \\
+        \displaystyle \sum_{i=1}^{P} A_{2i} B_{i1} & \displaystyle \sum_{i=1}^{P} A_{2i} B_{i2} & \cdots & \displaystyle \sum_{i=1}^{P} A_{2i} B_{iN} \\
         \vdots & \vdots & \ddots & \vdots \\
-        \sum_{i=1}^{P} A_{Mi} B_{i1} & \sum_{i=1}^{P} A_{Mi} B_{i2} & \cdots & \sum_{i=1}^{P} A_{Mi} B_{iN}
+        \displaystyle \sum_{i=1}^{P} A_{Mi} B_{i1} & \displaystyle \sum_{i=1}^{P} A_{Mi} B_{i2} & \cdots & \displaystyle \sum_{i=1}^{P} A_{Mi} B_{iN}
     \end{bmatrix}
 \end{align*}
 $$
@@ -246,6 +245,18 @@ $$
 其中，矩阵 $A$ 被 2D 切分为 $M \times P$ 份，矩阵 $B$ 被 2D 切分为 $P \times N$ 份。
 
 而至于向量与分块矩阵的乘法，以及 1D 和 2D 切分的情况，都属于上述一般规律的特例。是否需要将分块累加，取决于是否对 $p$ 维进行切分。
+
+## 图解分块矩阵乘法
+
+设想有 2 个矩阵都被切分成 $2 \times 2$ 的块，每个块在 4 张不同的 GPU 上进行矩阵乘法运算。则每个 GPU 上的计算分别如下面 4 张图所示：
+
+{{< figure src="5b1754c39f3279088779d105a8ac8fd3.svg" >}}
+
+{{< figure src="cdffdebf9d18eaacb04b206b64af6266.svg" >}}
+
+{{< figure src="44432a5b019047ed1de2b056359358aa.svg" >}}
+
+{{< figure src="dec14c42714e74a73b6df392aa0583fe.svg" >}}
 
 ## 分块矩阵乘法的意义
 
