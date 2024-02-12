@@ -3,9 +3,10 @@
   font-size: 1.5rem;
 }
 
+// 块引用
 blockquote {
   color: inherit;
-  border-left: 0.25rem solid #20c997;
+  border-left: 0.25rem solid var(--teal);
 }
 
 @media (min-width: 30em) {
@@ -16,7 +17,7 @@ blockquote {
 }
 
 // spoiler
-.dark details p {
+details p {
   border-left: unset;
 }
 
@@ -41,4 +42,21 @@ blockquote {
 
 #back_to_top {
   margin-bottom: 8px;
+}
+
+// 粗体文本
+// Dark Style
+.dark .article-style>p>strong,
+.dark .article-style>ul strong,
+.dark .article-style>ol strong,
+.dark .article-style>blockquote>p>strong {
+  color: tomato;
+}
+
+// Light Style
+.article-style>p>strong,
+.article-style>ul strong,
+.article-style>ol strong,
+.article-style>blockquote>p>strong {
+  color: crimson;
 }
