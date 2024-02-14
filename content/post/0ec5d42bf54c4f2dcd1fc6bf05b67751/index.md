@@ -533,7 +533,7 @@ $$
 
 我们以 Feed Forward 网络为例，其网络结构为
 
-{{< figure src="3d69b3aa0efda65f8ace0f021389bd1b.png" caption="Feed Forward Network" numbered="true" >}}
+{{< figure src="29284454c24b3c926515969d87e91efa.svg" caption="Feed Forward Network" >}}
 
 用解析式表示就是
 

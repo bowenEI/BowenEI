@@ -45,7 +45,7 @@ projects: []
 
 {{< figure src="1efdd3bd0e2fa731ee1537e3954c9dca.png" >}}
 
-该综述从<strong style="color: tomato">算法创新</strong>和<strong style="color: tomato">系统优化</strong>两个维度展开介绍。顾名思义，前者是在偏上层的算法（模型）层面的工作，后者是在偏下层的系统层面的工作。
+该综述从**算法创新**和**系统优化**两个维度展开介绍。顾名思义，前者是在偏上层的算法（模型）层面的工作，后者是在偏下层的系统层面的工作。
 
 ## Algorithmic Innovations 算法创新
 
@@ -96,7 +96,7 @@ projects: []
 
 ### Parallel Computation 并行计算
 
-本文分两个小节介绍并行计算，即<strong style="color: tomato">模型并行</strong>和<strong style="color: tomato">去中心化计算</strong>。这两大技术都是我们所熟知的。
+本文分两个小节介绍并行计算，即**模型并行**和**去中心化计算**。这两大技术都是我们所熟知的。
 
 首先，模型并行（Model Parallelism，MP）分为张量并行（Tensor Parallelism，TP）和流水线并行（Pipeline Parallelism，PP）。要注意，数据并行（Data Parallelism，DP）不属于模型并行的范畴。
 
@@ -145,26 +145,26 @@ projects: []
 
 > **Development and Enhancement of Hardware Accelerators.** Future progress in enhancing generative LLM serving efficiency could be significantly driven by the development and refinement of specialized hardware accelerators, complemented by a co-design approach that aligns hardware and software optimizations. For instance, integrating memory closer to processing units or optimizing chip architectures to better align with the data flow of LLM algorithms can lead to substantial reductions in latency and energy consumption.
 
-<strong style="color: tomato;">专用硬件加速器的发展</strong>：生成型 LLM 服务效率的显著提升可能在很大程度上依赖于专用硬件加速器的发展和提升，尤其是软硬协同设计方法。例如，让内存单元更加接近处理单元，或是针对 LLM 算法数据流优化芯片架构，这些硬件优化可以在很大程度上为 LLM 推理在软件层面带来便利和机会。
+**专用硬件加速器的发展**：生成型 LLM 服务效率的显著提升可能在很大程度上依赖于专用硬件加速器的发展和提升，尤其是软硬协同设计方法。例如，让内存单元更加接近处理单元，或是针对 LLM 算法数据流优化芯片架构，这些硬件优化可以在很大程度上为 LLM 推理在软件层面带来便利和机会。
 
 > **Efficient and Effective Decoding Algorithms.** The development of more efficient decoding algorithms could substantially improve serving efficiency. Motivated by the demand for more resource-efficient ways to utilize the vast knowledge encapsulated within LLMs, future work could explore alternative approaches to the traditional auto-regressive methods and unlock the generation speed for real-time applications while maintaining the decoding quality. One promising direction is generalized speculative inference as it enables preserving the same generation quality.
 
-<strong style="color: tomato;">高效且有效的解码算法</strong>：受对实时应用更快生成速度的需求驱动，一个有前途的方向是广义的投机式推理，不仅会带来显著加速，同时保持相同的生成质量。
+**高效且有效的解码算法**：受对实时应用更快生成速度的需求驱动，一个有前途的方向是广义的投机式推理，不仅会带来显著加速，同时保持相同的生成质量。
 
 > **Long Context/Sequence Scenarios Optimization.** As the application of LLMs continues to expand into more sophisticated scenarios, the demand for processing longer contexts or sequences is steadily growing. Serving LLMs with long-sequence workloads requires resolving the challenges from both the algorithm and system sides.
 >
 > For the LLM serving systems, longer sequence brings critical challenges, including more memory consumption and access of KV cache and quadratic increasing computational complexity of self-attention.
 
-<strong style="color: tomato;">长上下文/序列场景优化</strong>：随着应用场景变得更加复杂，处理更长的上下文或序列的需求不断增长。服务长序列负载的 LLM 需要解决算法和系统两方面的挑战，包括更多的显存开销和 K/V Cache 访存开销，以及 Attention 的二次计算复杂度。
+**长上下文/序列场景优化**：随着应用场景变得更加复杂，处理更长的上下文或序列的需求不断增长。服务长序列负载的 LLM 需要解决算法和系统两方面的挑战，包括更多的显存开销和 K/V Cache 访存开销，以及 Attention 的二次计算复杂度。
 
 > **Investigating Alternative Architectures.** Although Transformer models and self-attention mechanisms currently dominate the landscape of LLMs, exploring alternative architectures is a promising direction for future research. The field of DL has historically seen a constant alternation of dominant architectures, with each new paradigm shift bringing about significant advancements. Given this trend, it’s important to consider other architectural approaches that could offer distinct advantages, especially for improved computational efficiency.
 
-<strong style="color: tomato;">探索替代基础架构</strong>：尽管 Transformer 模型和自注意力机制目前在 LLM 领域占据主导地位，但探索替代架构是未来研究的一个有前景的方向。深度学习领域历来见证了主导架构的不断更替，每一次新的范式转变都会带来重大进步。鉴于这种趋势，考虑其他可以提供明显优势的架构方法非常重要，特别是在提高计算效率方面。
+**探索替代基础架构**：尽管 Transformer 模型和自注意力机制目前在 LLM 领域占据主导地位，但探索替代架构是未来研究的一个有前景的方向。深度学习领域历来见证了主导架构的不断更替，每一次新的范式转变都会带来重大进步。鉴于这种趋势，考虑其他可以提供明显优势的架构方法非常重要，特别是在提高计算效率方面。
 
 > **Exploration of Deployment in Complex Environments.** As the application of LLMs expands, a crucial future direction involves exploring and optimizing their deployment across various complex environments. This exploration goes beyond traditional cloud-based deployments to include scenarios like edge computing, hybrid computing (combining cloud and edge computing), decentralized computing, and the utilization of more affordable resources like spot instances. Each of these environments presents unique challenges and opportunities for LLM serving.
 
-<strong style="color: tomato;">探索复杂环境的部署</strong>：随着 LLM 应用的扩展，探索并优化它们在各种复杂环境中的部署成为一个关键的未来方向。这一探索不仅限于传统的基于云的部署，还包括边缘计算、混合计算（云边协同）、去中心化计算以及廉价的可抢占资源等。这些环境中的每一个都为 LLM 服务带来了独特的挑战和机遇。
+**探索复杂环境的部署**：随着 LLM 应用的扩展，探索并优化它们在各种复杂环境中的部署成为一个关键的未来方向。这一探索不仅限于传统的基于云的部署，还包括边缘计算、混合计算（云边协同）、去中心化计算以及廉价的可抢占资源等。这些环境中的每一个都为 LLM 服务带来了独特的挑战和机遇。
 
 > **Automatic Adaptation to Specific Requirements.** The diverse application-specific requirements create a wide range of innovative LLM serving optimization opportunities, such as parameterefficient fine-tuning, retrieval from external vector storage, online learning and knowledge updates, multi-modal workloads, and chaining together different LLMs’ capabilities. These unique challenges also demand automatic and smooth integration of LLM serving techniques into existing IT infrastructures by extending the optimization space to the whole LLM lifetime.
 
-<strong style="color: tomato;">特定需求的自适应</strong>：应用特定需求的多样性创造了一系列创新的 LLM 服务优化机会，例如模型微调、向量数据库检索、多模态负载等等。这些独特的挑战也要求将 LLM 服务技术自动且顺利地集成到现有 IT 基础设施中，将优化空间扩展到整个 LLM 生命周期。
+**特定需求的自适应**：应用特定需求的多样性创造了一系列创新的 LLM 服务优化机会，例如模型微调、向量数据库检索、多模态负载等等。这些独特的挑战也要求将 LLM 服务技术自动且顺利地集成到现有 IT 基础设施中，将优化空间扩展到整个 LLM 生命周期。

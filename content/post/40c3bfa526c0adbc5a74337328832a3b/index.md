@@ -19,7 +19,7 @@ toc: true
 image:
   caption: ""
   focal_point: ""
-  preview_only: false
+  preview_only: true
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -41,14 +41,14 @@ projects: []
 
 Flash Attetention 的研究动机是降低 Attention 计算过程中 GPU 的 HBM 和片内 SRAM 之间的访存开销。对此，Flash Attention 主要应用了如下两个技术：
 
-1. <strong style="color: tomato">Tiling</strong>：将输入划分为多个块，通过循环遍历每个块，在每个块上执行精简化的 Softmax 计算；
-2. <strong style="color: tomato">Recompute</strong>：存储来自前向传播的 softmax 归一化因子，而不从 HBM 读写注意力矩阵。
+1. **Tiling**：将输入划分为多个块，通过循环遍历每个块，在每个块上执行精简化的 Softmax 计算；
+2. **Recompute**：存储来自前向传播的 softmax 归一化因子，而不从 HBM 读写注意力矩阵。
 
 于是，每次循环迭代的过程中，自注意力计算就被 fuse 到了一个 GPU kernel 中，从而实现了对 GPU 内存的更细粒度的控制和优化。
 
 ### 架构
 
-{{< figure src="1badb390319ef26379af9ab75866a489.png" title="Flash Attention Architecture" >}}
+{{< figure src="featured.png" title="Flash Attention Architecture" >}}
 
 左图显示了 GPU 的三级存储结构，从上到下分别是 SRAM、HBM 和 CPU Main Memory。由计算机体系结构的基本常识可知，从上到下的访存速度越来越慢，而存储容量越来越大，离计算单元越来越远。
 
@@ -170,7 +170,7 @@ $$
 
 下面的几张图显示了在这种分块方式下计算 Softmax 的过程。
 
-我们希望读者首先要了解一个根本的规律：分块计算是一种对直接计算的<strong style="color: tomato">抽象</strong>。在分块计算的过程中，块内要计算，块间也要相应地计算。前者可并行计算，互不影响；后者不可并行计算，且相互依赖彼此的计算结果。下面的计算过程将处处体现这一根本规律。
+我们希望读者首先要了解一个根本的规律：分块计算是一种对直接计算的**抽象**。在分块计算的过程中，块内要计算，块间也要相应地计算。前者可并行计算，互不影响；后者不可并行计算，且相互依赖彼此的计算结果。下面的计算过程将处处体现这一根本规律。
 
 {{< figure src="9497a73f235bee95c7367e38e66012e6.svg" title="第一阶段：减最大值">}}
 
@@ -235,7 +235,7 @@ $$
 
 ## 复杂度分析
 
-论文在一开始就指出，Flash Attention 相较于标准 Attention，可以将 HBM 访存开销由 $\Theta(Nd + N^2)$ 降低到 $\Theta(N^2d^2M^{-1})$。其中，$N$ 表示序列长度，$d$ 表示注意力头的数量，而 $M$ 表示 SRAM 的存储容量，其取值范围是 $d \leqslant M \leqslant Nd$。那么，最优情况就是 $\Theta(Nd)$，这意味着 Attention 的访存开销成功降低到<strong style="color:tomato">线性</strong>！
+论文在一开始就指出，Flash Attention 相较于标准 Attention，可以将 HBM 访存开销由 $\Theta(Nd + N^2)$ 降低到 $\Theta(N^2d^2M^{-1})$。其中，$N$ 表示序列长度，$d$ 表示注意力头的数量，而 $M$ 表示 SRAM 的存储容量，其取值范围是 $d \leqslant M \leqslant Nd$。那么，最优情况就是 $\Theta(Nd)$，这意味着 Attention 的访存开销成功降低到**线性**！
 
 这里的 $M$ 是很有讲究的，它的取值与算法伪代码中的分割阶段有着紧密联系。由前文 Softmax 的相关知识，以及动画演示片段可知，每次循环迭代计算的块内 Softmax 是一部分 token，而不是整个序列。显然，SRAM 的存储容量越大，对访存开销的减少就越有帮助。
 
