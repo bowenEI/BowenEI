@@ -48,11 +48,11 @@ toc: true
 
 需要注意的是，这里简化了传输延迟的定义，并没有考虑在真实网络传输中会出现的丢失的消息（Dropped Message）和损坏的消息（Corrupted Message）的情况。
 
-{{< figure src="2f1ac53ab4bff8e769030ba38a90ac67.png" title="通信模型" numbered="true" >}}
+{{< figure src="16546c384352d5e55083d8b7bc9f8235.svg" title="通信模型" numbered="true" >}}
 
 ## 常见集合通信算子
 
-{{< figure src="3e17703c8fc49d9d9fc20cce1059334b.png" title="常见集合通信算子" numbered="true" >}}
+{{< figure src="e24432e631fc56237d83432972b53717.svg" title="常见集合通信算子" numbered="true" >}}
 
 ### Broadcast
 
@@ -66,7 +66,7 @@ $$
 $$
 {{< /math >}}
 
-{{< figure src="b4640f7c166969f9b0236bad31effb1c.png" title="Broadcast" numbered="true" >}}
+{{< figure src="ac61990089747ed4b6736a7155088384.svg" title="Broadcast" numbered="true" >}}
 
 但是很显然，这种通信方式是串行的，没有并行性。我们可以利用分治思想对上述算法进行优化，将这个问题分解为在两个子集群中进行广播，每个子集群有 $n/2$ 个设备。然后对于每个子集群，又可以继续采用分治思想分解问题，直到每个子集群仅有一个设备。此时，只包括两种情况：
 
@@ -85,7 +85,7 @@ $$
 
 下图展示了分治算法的过程：
 
-{{< figure src="1f7c2421e5eded92a327f0dd9fc42aeb.png" title="分治算法" numbered="true" >}}
+{{< figure src="356854ce7eb958f116da01496954ba32.svg" title="分治算法" numbered="true" >}}
 
 其中，设备数量 $n=8$。第一次分治，`device[1]` 发送消息给 `device[5]`（本地就无需发送了，下同）；第二次分治，`device[1]` 发送消息给 `device[3]`，`device[5]` 发送消息给 `device[7]`；第三次分治，`device[1]` 发送消息给 `device[2]`，`device[3]` 发送消息给 `device[4]`，`device[5]` 发送消息给 `device[6]`，`device[7]` 发送消息给 `device[8]`。
 
@@ -93,7 +93,7 @@ $$
 
 在分布式机器学习系统中，另一个常见的操作是将不同设备上的计算结果进行聚合（Aggregation）。例如求和、乘积、最值等，这里我们统一用一个聚合函数 $f$ 来表示。如果最终的结果只存在 `device[i]` 上，这就是 Reduce 算子；如果所有的设备都需要存储最终的结果，这就是 All Reduce 算子。
 
-{{< figure src="3a2f6411fb885633c5f1cc74a42101ce.png" title="Reduce & All Reduce" numbered="true" >}}
+{{< figure src="c7afac5e9281f71db207e50a34208658.svg" title="Reduce & All Reduce" numbered="true" >}}
 
 由于上述分治算法的并行性，Reduce 和 All Reduce 的通信开销均为
 
@@ -119,7 +119,7 @@ $$
 $$
 {{< /math >}}
 
-{{< figure src="914f573b614695fda2b89bcabd5d080c.png" title="Gather & All Gather" numbered="true" >}}
+{{< figure src="a502fb86d645c1d1e1f89e1339019b39.svg" title="Gather & All Gather" numbered="true" >}}
 
 这里要注意，在第 $t$ 次分治中，传输的信息长度都为原来的 $2^t$ 倍。所以，分治算法无法降低传输时延，和串行一样为 $(n-1)bl$。
 
@@ -129,7 +129,7 @@ $$
 
 Scatter 算子可以被视为是 Gather 算子的逆运算：把 `device[i]` 上长度为 $n$（信息长度为 $nl$）的链式数据结构 `L` 中的值分散到每个设备上，使得每个 `device[i]` 上会得到 `L[i]` 的结果。
 
-{{< figure src="8a096c5bbeb0d3f6e2d51e62b2f628db.png" title="Scatter" numbered="true" >}}
+{{< figure src="36fa37ee30bae91863cd84f46a891e7b.svg" title="Scatter" numbered="true" >}}
 
 因此，Scatter 算子的通信开销为
 
@@ -155,13 +155,13 @@ $$
 $$
 {{< /math >}}
 
-{{< figure src="7ce7e96d1d88971b8823e756c996c30d.png" title="Reduce Scatter" numbered="true" >}}
+{{< figure src="136cb31ed01998bce92dad29c65c9e61.svg" title="Reduce Scatter" numbered="true" >}}
 
 ### All to All
 
 All to All 是一种较为复杂的集合通信算子，将 `device[i]` 上的链式数据结构 `L[i][1:n]` 分散到每个设备上，使得每个 `device[i]` 上得到 `L[1:n][i]` 的结果。它相当于将整个集群的数据视为一个 $n \times n$ 的矩阵，然后将这个矩阵转置。
 
-{{< figure src="f4c27c45d1731d1e43c4893bb2a3ddea.png" title="All to All" numbered="true" >}}
+{{< figure src="d80a758d337eb05d6978dc1a35cba936.svg" title="All to All" numbered="true" >}}
 
 如上图所示，All to All 和 Reduce Scatter 算子相比，仅仅只是少了最后一步的聚合操作。因此，其通信开销为
 
