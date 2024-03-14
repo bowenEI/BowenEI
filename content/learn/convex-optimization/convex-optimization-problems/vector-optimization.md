@@ -54,7 +54,7 @@ $$
 
 ### 几何意义
 
-{{< figure src="learn/convex-optimization/convex-optimization-problems/4-7-1.png" >}}
+{{< figure src="/learn/convex-optimization/convex-optimization-problems/455f3f54b7dc5d4a7a0f58156d1779fb.png" >}}
 
 深色的部分表示目标值在 $\mathbf{R}^2$ 上的向量优化问题的可达目标值集合 $\mathcal{O}$，其中锥为 $K = \mathbf{R}^2_+$。在这个例子中，标有 $f_0(x^{\star})$ 的点为问题的最优值，$x^{\star}$ 为一个最优解。目标值 $f_0(x^{\star})$ 与其他任意可达值 $f_0(y)$ 均可比，并且比 $f_0(y)$ 更好或相等。（这里的“好”和“相等”表示在其下、其左。）
 
