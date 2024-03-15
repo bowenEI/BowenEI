@@ -7,7 +7,7 @@ type: book
 weight: 70
 ---
 
-{{< figure src="learn/pandas/pandas_white.svg" theme="dark" >}}
+{{< figure src="/learn/pandas/pandas_white.svg" theme="dark" >}}
 
 {{< toc hide_on="xl" >}}
 

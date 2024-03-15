@@ -7,7 +7,7 @@ type: book
 weight: 110
 ---
 
-{{< figure src="learn/algorithm/algorithm.png" >}}
+{{< figure src="/learn/algorithm/cover.png" >}}
 
 {{< toc hide_on="xl" >}}
 

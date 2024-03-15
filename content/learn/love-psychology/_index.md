@@ -9,7 +9,7 @@ summary: "学习恋爱心理学。爱情从来都是一个亘古常新的话题�
 weight: 105
 ---
 
-{{< figure src="learn/love-psychology/love-psychology.jpg" >}}
+{{< figure src="/learn/love-psychology/cover.jpg" >}}
 
 ## What you will learn
 

@@ -7,7 +7,7 @@ type: book
 weight: 10
 ---
 
-{{< figure src="learn/marxism/marxism.png" >}}
+{{< figure src="/learn/marxism/cover.png" >}}
 
 {{< toc hide_on="xl" >}}
 

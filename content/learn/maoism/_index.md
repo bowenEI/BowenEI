@@ -7,7 +7,7 @@ type: book
 weight: 20
 ---
 
-{{< figure src="learn/maoism/maoism.jpg" >}}
+{{< figure src="/learn/maoism/cover.jpg" >}}
 
 {{< toc hide_on="xl" >}}
 

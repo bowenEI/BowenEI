@@ -7,7 +7,7 @@ type: book
 weight: 60
 ---
 
-{{< figure src="learn/numpy/numpy.svg" >}}
+{{< figure src="/learn/numpy/cover.svg" >}}
 
 {{< toc hide_on="xl" >}}
 

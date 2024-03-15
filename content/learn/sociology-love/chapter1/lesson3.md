@@ -13,7 +13,7 @@ weight: 30
 
 ## 现代爱情的四象限理论
 
-{{< figure src="learn/sociology-love/爱情四象限.png" >}}
+{{< figure src="/learn/sociology-love/爱情四象限.png" >}}
 
 横轴表示快乐，包含两个层面：
 
