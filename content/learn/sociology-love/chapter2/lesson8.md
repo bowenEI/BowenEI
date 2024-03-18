@@ -42,9 +42,7 @@ weight: 80
 
 {{< /callout >}}
 
-{{< figure src="/learn/sociology-love/梯度理论.png" >}}
-
-> 图源于复旦沈奕斐的社会学爱情思维课[第 16 集](https://www.iqiyi.com/v_209dja1qqus.html)，侵删。
+{{< figure src="/learn/sociology-love/chapter2/1e486ca3287a6505a940233ad6eac928.svg" >}}
 
 于是我们发现，在爱情旧脚本中，女性越优秀越容易被剩下。而男性则相反。
 
