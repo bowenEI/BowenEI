@@ -6,7 +6,8 @@
 // 块引用
 blockquote {
   color: inherit;
-  border-left: 0.25rem solid var(--teal);
+  // border-left: 0.25rem solid var(--teal);
+  border-left-color: mediumseagreen;
 }
 
 @media (min-width: 30em) {

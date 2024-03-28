@@ -139,9 +139,9 @@ $$
 
 {{< /callout >}}
 
-{{< figure src="learn/convex-optimization/convex-sets/2-1-1.png" >}}
+{{< figure src="/learn/convex-optimization/convex-sets/618e77ebebe5b9c3492d93709ecf91d3.png" caption="凸集和非凸集" >}}
 
-如图所示，黄色的正六边形是凸集；蓝色的圆环不是凸集，因为任意两点之间的连线不一定都被集合包含；绿色的正方形也不是凸集，因为它仅包含部分边界。
+如图所示，左边的正六边形是凸集；中间的图形不是凸集，因为任意两点之间的连线不一定都被集合包含；右边的正方形也不是凸集，因为它仅包含部分边界。
 
 我们称 $\theta_1 x_1 + \cdots + \theta_1 x_1$ 为点 $x_1, \cdots, x_k$ 的一个**凸组合**，其中 $\theta_1 + \cdots + \theta_k = 1$ 并且 $\theta_i \geqslant 0, i = 1, \cdots, k$。可以将点的图组合理解为他们的混合或加权平均，$\theta_i$ 代表混合时 $x_i$ 所占的份数。
 
@@ -155,9 +155,9 @@ $$
 $$
 {{< /math >}}
 
-{{< figure src="learn/convex-optimization/convex-sets/2-1-2.png" >}}
+{{< figure src="/learn/convex-optimization/convex-sets/77eeab1681900ad289e3fbd6a4fe19c2.png" caption="凸包" >}}
 
-如图所示，圆环的闭包是整个圆。
+如图所示，左边的一系列散点的闭包是外层散点连线所构成的多边形；右边的图形的闭包是用与图形相切的部分代替凹陷的部分重新构成的封闭图形。
 
 凸组合的概念可以扩展到无穷级数、积分以及大多数形式的概率分布。例如：
 
@@ -182,11 +182,13 @@ $$
 $$
 {{< /math >}}
 
-半径为 $\infty$ 的扇形和母线长为 $\infty$ 的圆锥面是典型的凸锥。
+半径为 $\infty$ 的扇形和母线长为 $\infty$ 的圆锥面是典型的凸锥，如图所示：
+
+{{< figure src="/learn/convex-optimization/convex-sets/6e6a8e093bd56757414eae861b7054a6.png" caption="锥" >}}
 
 和凸组合和凸包类似，可以定义锥组合和锥包。集合 $C$ 的锥包是 $C$ 中元素的所有锥组合的集合，如图所示：
 
-{{< figure src="learn/convex-optimization/convex-sets/2-1-3.png" >}}
+{{< figure src="/learn/convex-optimization/convex-sets/5c975d6279f8a1b3988c5bf96e083ea8.png" caption="锥包" >}}
 
 ## 小结
 

@@ -7,7 +7,7 @@ type: book
 weight: 80
 ---
 
-{{< figure src="learn/matplotlib/logo2_compressed.svg" >}}
+{{< figure src="/learn/matplotlib/logo2_compressed.svg" >}}
 
 {{< toc hide_on="xl" >}}
 

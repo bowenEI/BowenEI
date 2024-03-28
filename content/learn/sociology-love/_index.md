@@ -9,7 +9,7 @@ summary: "沈奕斐的社会学爱情思维课包含60讲视频，用社会学�
 weight: 100
 ---
 
-{{< figure src="learn/sociology-love/featured.jpg" >}}
+{{< figure src="/learn/sociology-love/cover.jpg" >}}
 
 {{< toc hide_on="xl" >}}
 

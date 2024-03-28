@@ -7,7 +7,7 @@ type: book
 weight: 40
 ---
 
-{{< figure src="learn/linux/linux_logo_icon_171222.png" >}}
+{{< figure src="/learn/linux/linux_logo_icon_171222.png" >}}
 
 {{< toc hide_on="xl" >}}
 

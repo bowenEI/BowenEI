@@ -7,7 +7,7 @@ type: book
 weight: 50
 ---
 
-{{< figure src="learn/python/python.png" >}}
+{{< figure src="/learn/python/cover.png" >}}
 
 {{< toc hide_on="xl" >}}
 

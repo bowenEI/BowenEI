@@ -25,7 +25,7 @@ $$
 
 称为 $K$ 的对偶锥。从几何上看，对偶锥 {{< math >}}$K^{*}${{< /math >}} 是与锥 $K$ 内的所有向量夹角不超过 $90$ 度的所有向量组成的集合。如图所示，以 $y$ 为法向量的半空间包含锥 $K$，因此 {{< math >}}$y \in K^{*}${{< /math >}}；而以 $z$ 为法向量的半空间不包含锥 $K$，因此 {{< math >}}$z \notin K^{*}${{< /math >}}。
 
-{{< figure src="learn/convex-optimization/convex-sets/2-6-1.png" >}}
+{{< figure src="/learn/convex-optimization/convex-sets/b1d251fd13ec6351881f34f9b1b4d4a5.png" caption="对偶锥" >}}
 
 ### 对偶锥的性质
 
@@ -56,12 +56,12 @@ $$
 
 $x$ 是 $S$ 上关于广义不等式 $\preceq_K$ 的最小元的充要条件是，对于 {{< math >}}$\forall \lambda \succ_{K^{*}} 0${{< /math >}}，$x$ 是在 $z \in S$ 上极小化 $\lambda^{\top} z$ 的唯一最优解。从几何上看，这意味着对于 {{< math >}}$\forall \lambda \succ_{K^{*}} 0${{< /math >}}，超平面 $\{z \mid \lambda^{\top} (z-x) = 0\}$ 是在 $x$ 处对 $S$ 的一个严格支撑超平面。如图所示。
 
-{{< figure src="learn/convex-optimization/convex-sets/2-6-2.png" >}}
+{{< figure src="/learn/convex-optimization/convex-sets/12b91c5ce92ab9b262312e149f6723e9.png" caption="最小元的对偶性质" >}}
 
 ### 极小元的对偶性质
 
 如果 {{< math >}}$\lambda \succ _{K^{*}} 0${{< /math >}} 并且 $x$ 在 $z \in S$ 上极小化 $\lambda^{\top} z$，那么 $x$ 是极小的，如图所示。
 
-{{< figure src="learn/convex-optimization/convex-sets/2-6-3.png" >}}
+{{< figure src="/learn/convex-optimization/convex-sets/e72967c0f14fb5b66fc117438557fc70.png" caption="极小元的对偶性质" >}}
 
 其逆命题在一般情况下是不成立的。

@@ -7,7 +7,7 @@ type: book
 weight: 90
 ---
 
-{{< figure src="learn/finance/finance.jpg" >}}
+{{< figure src="/learn/finance/cover.jpg" >}}
 
 {{< toc hide_on="xl" >}}
 
