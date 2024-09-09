@@ -8,7 +8,7 @@ authors: []
 tags: [马克思主义]
 categories: [essay]
 date: 2024-08-26T22:54:06+08:00
-lastmod: 2024-08-26T22:54:06+08:00
+lastmod: 2024-09-09T22:54:06+08:00
 featured: false
 draft: false
 
@@ -30,4 +30,4 @@ projects: []
 
 <!--more-->
 
-{{< figure src="57d8eea413f9319f29de4abd928efb85.svg" >}}
+{{< figure src="中国社会各阶级分析.drawio.svg" >}}
