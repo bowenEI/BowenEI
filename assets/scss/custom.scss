@@ -61,3 +61,20 @@ details p {
 .article-style>blockquote>p>strong {
   color: crimson;
 }
+
+// 引述文本
+.quote {
+  font-size: 0.8rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+// 毛主席诗词
+.poetry {
+  text-align: center;
+}
+
+.poetry>p {
+  margin-bottom: 0;
+}
