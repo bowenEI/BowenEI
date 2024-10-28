@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "pandas 索引和选择"
-linktitle: "pandas 索引和选择"
+title: "索引和选择"
+linktitle: "索引和选择"
 date: 2022-02-19T11:14:00+08:00
 type: book
 summary: ""
@@ -47,7 +47,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -135,7 +135,7 @@ df[['B', 'C']]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -226,7 +226,7 @@ df[:-1]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -290,7 +290,7 @@ df[:2] > 0
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -347,7 +347,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -431,7 +431,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -562,7 +562,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -660,7 +660,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -758,7 +758,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -914,9 +914,8 @@ s[::-1]
 
 
 ```python
-s2 = s.copy()
-s2[:3] = 0
-s2
+s[:3] = 0
+s
 ```
 
 
@@ -951,7 +950,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1011,7 +1010,7 @@ df[:2]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1064,7 +1063,7 @@ df[::-1]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1111,28 +1110,13 @@ df[::-1]
 
 
 ```python
-sa = pd.Series([1, 2, 3], index=list('abc'))
-dfa = df.copy()
+s = pd.Series([1, 2, 3], index=list('abc'))
+s
 ```
 
 
 ```python
-sa
-```
-
-
-
-
-    a    1
-    b    2
-    c    3
-    dtype: int64
-
-
-
-
-```python
-sa.b
+s.b
 ```
 
 
@@ -1144,7 +1128,8 @@ sa.b
 
 
 ```python
-dfa
+df = pd.DataFrame(np.random.randn(3, 4), index=list('abc'), columns=list('ABCD'))
+df
 ```
 
 
@@ -1159,7 +1144,7 @@ dfa
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1204,7 +1189,7 @@ dfa
 
 
 ```python
-dfa.A
+df.A
 ```
 
 
@@ -1219,8 +1204,8 @@ dfa.A
 
 
 ```python
-dfa.A = list(range(len(dfa.index)))
-dfa
+df.A = list(range(len(df.index)))
+df
 ```
 
 
@@ -1235,7 +1220,7 @@ dfa
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1282,8 +1267,8 @@ dfa
 
 
 ```python
-dfa['E'] = list(range(len(dfa.index)))
-dfa
+df['E'] = list(range(len(df.index)))
+df
 ```
 
 
@@ -1298,7 +1283,7 @@ dfa
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1351,8 +1336,8 @@ dfa
 
 
 ```python
-s1 = pd.Series(np.random.randn(6), index=list('abcdef'))
-s1
+s = pd.Series(np.random.randn(6), index=list('abcdef'))
+s
 ```
 
 
@@ -1370,7 +1355,7 @@ s1
 
 
 ```python
-s1.loc['b']
+s.loc['b']
 ```
 
 
@@ -1384,7 +1369,7 @@ s1.loc['b']
 
 
 ```python
-s1.loc['c':]
+s.loc['c':]
 ```
 
 
@@ -1400,8 +1385,8 @@ s1.loc['c':]
 
 
 ```python
-df1 = pd.DataFrame(np.random.randn(6, 4), index=list('abcdef'), columns=list('ABCD'))
-df1
+df = pd.DataFrame(np.random.randn(6, 4), index=list('abcdef'), columns=list('ABCD'))
+df
 ```
 
 
@@ -1416,7 +1401,7 @@ df1
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1484,7 +1469,7 @@ DataFrame 对象可以行列同时索引。
 
 
 ```python
-df1.loc[['a', 'b', 'd'], ['A', 'C']]
+df.loc[['a', 'b', 'd'], ['A', 'C']]
 ```
 
 
@@ -1499,7 +1484,7 @@ df1.loc[['a', 'b', 'd'], ['A', 'C']]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1536,7 +1521,7 @@ df1.loc[['a', 'b', 'd'], ['A', 'C']]
 
 
 ```python
-df1.loc['d':, 'A':'C']
+df.loc['d':, 'A':'C']
 ```
 
 
@@ -1551,7 +1536,7 @@ df1.loc['d':, 'A':'C']
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1614,8 +1599,8 @@ s.loc[3:5]
 
 
 ```python
-s2 = pd.Series(np.random.randn(5), index=list(range(0, 10, 2)))
-s2
+s = pd.Series(np.random.randn(5), index=list(range(0, 10, 2)))
+s
 ```
 
 
@@ -1632,7 +1617,7 @@ s2
 
 
 ```python
-s2.iloc[:3]
+s.iloc[:3]
 ```
 
 
@@ -1647,7 +1632,7 @@ s2.iloc[:3]
 
 
 ```python
-s2.iloc[-1]
+s.iloc[-1]
 ```
 
 
@@ -1659,10 +1644,10 @@ s2.iloc[-1]
 
 
 ```python
-df2 = pd.DataFrame(np.random.randn(6, 4),
+df = pd.DataFrame(np.random.randn(6, 4),
                    index=list(range(0, 12, 2)),
                    columns=list(range(0, 8, 2)))
-df2
+df
 ```
 
 
@@ -1677,7 +1662,7 @@ df2
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1745,7 +1730,7 @@ DataFrame 对象可以行列同时索引。
 
 
 ```python
-df2.iloc[:3]
+df.iloc[:3]
 ```
 
 
@@ -1760,7 +1745,7 @@ df2.iloc[:3]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1805,7 +1790,7 @@ df2.iloc[:3]
 
 
 ```python
-df2.iloc[1:5, 2:4]
+df.iloc[1:5, 2:4]
 ```
 
 
@@ -1820,7 +1805,7 @@ df2.iloc[1:5, 2:4]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1862,7 +1847,7 @@ df2.iloc[1:5, 2:4]
 
 
 ```python
-df2.iloc[[1, 3, 5], [1, 3]]
+df.iloc[[1, 3, 5], [1, 3]]
 ```
 
 
@@ -1877,7 +1862,7 @@ df2.iloc[[1, 3, 5], [1, 3]]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1914,7 +1899,7 @@ df2.iloc[[1, 3, 5], [1, 3]]
 
 
 ```python
-df2.iloc[1:3, :]
+df.iloc[1:3, :]
 ```
 
 
@@ -1929,7 +1914,7 @@ df2.iloc[1:3, :]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1969,7 +1954,7 @@ df2.iloc[1:3, :]
 
 
 ```python
-df2.iloc[:, 4:]
+df.iloc[:, 4:]
 ```
 
 
@@ -1984,7 +1969,7 @@ df2.iloc[:, 4:]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -2026,10 +2011,10 @@ df2.iloc[:, 4:]
 
 
 ```python
-df1 = pd.DataFrame(np.random.randn(6, 4),
+df = pd.DataFrame(np.random.randn(6, 4),
                    index=list('abcdef'),
                    columns=list('ABCD'))
-df1
+df
 ```
 
 
@@ -2044,7 +2029,7 @@ df1
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -2110,7 +2095,7 @@ df1
 
 
 ```python
-df1.loc[lambda df: df['A'] > 0, :]
+df.loc[lambda df: df['A'] > 0, :]
 ```
 
 
@@ -2125,7 +2110,7 @@ df1.loc[lambda df: df['A'] > 0, :]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -2170,7 +2155,7 @@ df1.loc[lambda df: df['A'] > 0, :]
 
 
 ```python
-df1.loc[:, lambda df: ['A', 'B']]
+df.loc[:, lambda df: ['A', 'B']]
 ```
 
 
@@ -2185,7 +2170,7 @@ df1.loc[:, lambda df: ['A', 'B']]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -2237,7 +2222,7 @@ df1.loc[:, lambda df: ['A', 'B']]
 
 
 ```python
-df1.iloc[:, lambda df: [0, 1]]
+df.iloc[:, lambda df: [0, 1]]
 ```
 
 
@@ -2252,7 +2237,7 @@ df1.iloc[:, lambda df: [0, 1]]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -2304,7 +2289,7 @@ df1.iloc[:, lambda df: [0, 1]]
 
 
 ```python
-df1[lambda df: df.columns[0]]
+df[lambda df: df.columns[0]]
 ```
 
 
@@ -2322,7 +2307,7 @@ df1[lambda df: df.columns[0]]
 
 
 ```python
-df1['A'].loc[lambda s: s > 0]
+df['A'].loc[lambda s: s > 0]
 ```
 
 
@@ -2401,7 +2386,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -2560,7 +2545,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -2648,7 +2633,7 @@ df[df['A'] > 0]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -2681,3 +2666,5 @@ df[df['A'] > 0]
   </tbody>
 </table>
 </div>
+
+

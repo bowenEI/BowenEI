@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "pandas 数据对齐"
-linktitle: "pandas 数据对齐"
+title: "数据对齐"
+linktitle: "数据对齐"
 date: 2022-02-19T11:17:40+08:00
 type: book
 summary: ""
@@ -39,7 +39,7 @@ df1
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -149,7 +149,7 @@ df2
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -229,7 +229,7 @@ df1 + df2
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -340,7 +340,7 @@ df1 - df1.iloc[0]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -429,4 +429,5 @@ df1 - df1.iloc[0]
   </tbody>
 </table>
 </div>
+
 

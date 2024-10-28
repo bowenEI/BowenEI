@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "pandas Dataframe 对象"
-linktitle: "pandas Dataframe 对象"
+title: "Dataframe 对象"
+linktitle: "Dataframe 对象"
 date: 2022-02-18T16:41:59+08:00
 type: book
 summary: ""
@@ -29,18 +29,17 @@ import numpy as np
 
 
 ```python
-d = {
-    'one': pd.Series([1.0, 2.0, 3.0], index=['a', 'b', 'c']),
-    'two': pd.Series([1.0, 2.0, 3.0, 4.0], index=['a', 'b', 'c', 'd']),
+data = {
+    "one": pd.Series([1.0, 2.0, 3.0], index=["a", "b", "c"]),
+    "two": pd.Series([1.0, 2.0, 3.0, 4.0], index=["a", "b", "c", "d"]),
 }
-df = pd.DataFrame(d)
 ```
 
 结果索引将是各种系列的索引的并集。如果有任何嵌套的 `dict`，这些将首先转换为 `Series`。如果未传递任何列，则这些列将是 `dict` 键的有序列表。
 
 
 ```python
-df
+pd.DataFrame(data)
 ```
 
 
@@ -55,7 +54,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -97,7 +96,7 @@ df
 
 
 ```python
-pd.DataFrame(d, index=['d', 'b', 'a'])
+pd.DataFrame(data, index=['d', 'b', 'a'])
 ```
 
 
@@ -112,7 +111,7 @@ pd.DataFrame(d, index=['d', 'b', 'a'])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -149,7 +148,7 @@ pd.DataFrame(d, index=['d', 'b', 'a'])
 
 
 ```python
-pd.DataFrame(d, index=['d', 'b', 'a'], columns=['two', 'three'])
+pd.DataFrame(data, index=['d', 'b', 'a'], columns=['two', 'three'])
 ```
 
 
@@ -164,7 +163,7 @@ pd.DataFrame(d, index=['d', 'b', 'a'], columns=['two', 'three'])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -205,7 +204,7 @@ pd.DataFrame(d, index=['d', 'b', 'a'], columns=['two', 'three'])
 
 
 ```python
-d = {
+data = {
     'one': [1.0, 2.0, 3.0, 4.0],
     'two': [4.0, 3.0, 2.0, 1.0],
 }
@@ -213,7 +212,7 @@ d = {
 
 
 ```python
-pd.DataFrame(d)
+pd.DataFrame(data)
 ```
 
 
@@ -228,7 +227,7 @@ pd.DataFrame(d)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -270,7 +269,7 @@ pd.DataFrame(d)
 
 
 ```python
-pd.DataFrame(d, index=['a', 'b', 'c', 'd'])
+pd.DataFrame(data, index=['a', 'b', 'c', 'd'])
 ```
 
 
@@ -285,7 +284,7 @@ pd.DataFrame(d, index=['a', 'b', 'c', 'd'])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -375,7 +374,7 @@ pd.DataFrame(data)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -425,7 +424,7 @@ pd.DataFrame(data, index=['first', 'second'])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -475,7 +474,7 @@ pd.DataFrame(data, columns=['C', 'A', 'B'])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -512,7 +511,7 @@ pd.DataFrame(data, columns=['C', 'A', 'B'])
 
 
 ```python
-data2 = [
+data = [
     {'a': 1, 'b': 2},
     {'a': 5, 'b': 10, 'c': 20},
 ]
@@ -520,7 +519,7 @@ data2 = [
 
 
 ```python
-pd.DataFrame(data2)
+pd.DataFrame(data)
 ```
 
 
@@ -535,7 +534,7 @@ pd.DataFrame(data2)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -570,7 +569,7 @@ pd.DataFrame(data2)
 
 
 ```python
-pd.DataFrame(data2, index=['first', 'second'])
+pd.DataFrame(data, index=['first', 'second'])
 ```
 
 
@@ -585,7 +584,7 @@ pd.DataFrame(data2, index=['first', 'second'])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -620,7 +619,7 @@ pd.DataFrame(data2, index=['first', 'second'])
 
 
 ```python
-pd.DataFrame(data2, columns=['a', 'b'])
+pd.DataFrame(data, columns=['a', 'b'])
 ```
 
 
@@ -635,7 +634,7 @@ pd.DataFrame(data2, columns=['a', 'b'])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -671,7 +670,7 @@ pd.DataFrame(data2, columns=['a', 'b'])
 
 
 ```python
-df2 = pd.DataFrame(
+df = pd.DataFrame(
     {
         ('a', 'b'): {('A', 'B'): 1, ('A', 'C'): 2},
         ('a', 'a'): {('A', 'C'): 3, ('A', 'B'): 4},
@@ -680,7 +679,7 @@ df2 = pd.DataFrame(
         ('b', 'b'): {('A', 'D'): 9, ('A', 'B'): 10},
     }
 )
-df2
+df
 ```
 
 
@@ -695,7 +694,7 @@ df2
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead tr th {
         text-align: left;
     }
@@ -754,7 +753,7 @@ df2
 
 
 ```python
-df2['a']
+df['a']
 ```
 
 
@@ -769,7 +768,7 @@ df2['a']
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -812,7 +811,7 @@ df2['a']
 
 
 ```python
-df2['b']
+df['b']
 ```
 
 
@@ -827,7 +826,7 @@ df2['b']
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -891,7 +890,7 @@ pd.DataFrame([Point(0, 0), Point(0, 3), Point(2, 3)])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -950,7 +949,7 @@ pd.DataFrame([Point3D(0, 0, 0), Point3D(0, 3, 5), Point(2, 3)])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1014,7 +1013,7 @@ pd.DataFrame([Point(0, 0), Point(0, 3), Point(2, 3)])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1068,7 +1067,7 @@ pd.DataFrame.from_dict(dict([("A", [1, 2, 3]), ("B", [4, 5, 6])]))
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1122,7 +1121,7 @@ pd.DataFrame.from_dict(dict([("A", [1, 2, 3]), ("B", [4, 5, 6])]))
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1159,13 +1158,14 @@ pd.DataFrame.from_dict(dict([("A", [1, 2, 3]), ("B", [4, 5, 6])]))
 
 
 ```python
+data = np.zeros((2,), dtype=[("A", "i4"), ("B", "f4"), ("C", "a10")])
 data
 ```
 
 
 
 
-    array([(1, 2., b'Hello'), (2, 3., b'World')],
+    array([(0, 0., b''), (0, 0., b'')],
           dtype=[('A', '<i4'), ('B', '<f4'), ('C', 'S10')])
 
 
@@ -1187,7 +1187,7 @@ pd.DataFrame.from_records(data, index='C')
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1207,14 +1207,14 @@ pd.DataFrame.from_records(data, index='C')
   </thead>
   <tbody>
     <tr>
-      <th>b'Hello'</th>
-      <td>1</td>
-      <td>2.0</td>
+      <th>b''</th>
+      <td>0</td>
+      <td>0.0</td>
     </tr>
     <tr>
-      <th>b'World'</th>
-      <td>2</td>
-      <td>3.0</td>
+      <th>b''</th>
+      <td>0</td>
+      <td>0.0</td>
     </tr>
   </tbody>
 </table>
@@ -1223,6 +1223,68 @@ pd.DataFrame.from_records(data, index='C')
 
 
 ## DataFrame 对象的属性
+
+
+```python
+data = {
+    "one": pd.Series([1.0, 2.0, 3.0], index=["a", "b", "c"]),
+    "two": pd.Series([1.0, 2.0, 3.0, 4.0], index=["a", "b", "c", "d"]),
+}
+df = pd.DataFrame(data)
+df
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>one</th>
+      <th>two</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>2.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>3.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>NaN</td>
+      <td>4.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 
 ```python
@@ -1267,7 +1329,7 @@ df.T
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1307,6 +1369,68 @@ df.T
 
 ## DataFrame 列操作
 
+
+```python
+data = {
+    "one": pd.Series([1.0, 2.0, 3.0], index=["a", "b", "c"]),
+    "two": pd.Series([1.0, 2.0, 3.0, 4.0], index=["a", "b", "c", "d"]),
+}
+df = pd.DataFrame(data)
+df
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>one</th>
+      <th>two</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>2.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>3.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>NaN</td>
+      <td>4.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
 可以在语义上认为 `DataFrame` 对象是索引 `Series` 对象的字典。因此，对 `DataFrame` 对象进行列操作和对 `dict` 对象进行增删改查等操作类似。
 
 ### 选择
@@ -1332,15 +1456,6 @@ df['one']
 
 ```python
 df['three'] = df['one'] * df['two']
-```
-
-
-```python
-df['flag'] = df['one'] > 2
-```
-
-
-```python
 df
 ```
 
@@ -1356,7 +1471,70 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>one</th>
+      <th>two</th>
+      <th>three</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>NaN</td>
+      <td>4.0</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+df['flag'] = df['one'] > 2
+df
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1411,7 +1589,65 @@ df
 
 ```python
 del df['two']
+df
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>one</th>
+      <th>three</th>
+      <th>flag</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>3.0</td>
+      <td>9.0</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>d</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 
 ```python
@@ -1447,7 +1683,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1492,10 +1728,6 @@ df
 
 ```python
 df['foo'] = 'bar'
-```
-
-
-```python
 df
 ```
 
@@ -1511,7 +1743,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1561,10 +1793,6 @@ df
 
 ```python
 df["one_trunc"] = df["one"][:2]
-```
-
-
-```python
 df
 ```
 
@@ -1580,7 +1808,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1635,10 +1863,6 @@ df
 
 ```python
 df.insert(1, "bar", df["one"])
-```
-
-
-```python
 df
 ```
 
@@ -1654,7 +1878,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1706,4 +1930,5 @@ df
   </tbody>
 </table>
 </div>
+
 

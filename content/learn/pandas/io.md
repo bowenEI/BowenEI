@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "pandas 输入输出"
-linktitle: "pandas 输入输出"
+title: "输入输出"
+linktitle: "输入输出"
 date: 2022-02-19T11:19:54+08:00
 type: book
 summary: ""
@@ -14,6 +14,8 @@ weight: 70
 ```python
 import pandas as pd
 import numpy as np
+
+from io import StringIO
 ```
 
 ## CSV
@@ -22,19 +24,7 @@ import numpy as np
 
 
 ```python
-from io import StringIO
 data = "col1,col2,col3\na,b,1\na,b,2\nc,d,3"
-print(data)
-```
-
-    col1,col2,col3
-    a,b,1
-    a,b,2
-    c,d,3
-
-
-
-```python
 pd.read_csv(StringIO(data))
 ```
 
@@ -50,7 +40,7 @@ pd.read_csv(StringIO(data))
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -108,7 +98,7 @@ pd.read_csv(StringIO(data), usecols=lambda x: x.upper() in ["COL1", "COL3"])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -162,7 +152,7 @@ pd.read_csv(StringIO(data), skiprows=lambda x: x % 2 != 0)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -194,17 +184,6 @@ pd.read_csv(StringIO(data), skiprows=lambda x: x % 2 != 0)
 
 ```python
 data = "a,b,c\n1,2,3\n4,5,6\n7,8,9"
-print(data)
-```
-
-    a,b,c
-    1,2,3
-    4,5,6
-    7,8,9
-
-
-
-```python
 pd.read_csv(StringIO(data), names=["foo", "bar", "baz"], header=0)
 ```
 
@@ -220,7 +199,7 @@ pd.read_csv(StringIO(data), names=["foo", "bar", "baz"], header=0)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -278,7 +257,7 @@ pd.read_csv(StringIO(data), names=["foo", "bar", "baz"], header=None)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -328,18 +307,6 @@ pd.read_csv(StringIO(data), names=["foo", "bar", "baz"], header=None)
 
 ```python
 data = "skip this skip it\na,b,c\n1,2,3\n4,5,6\n7,8,9"
-print(data)
-```
-
-    skip this skip it
-    a,b,c
-    1,2,3
-    4,5,6
-    7,8,9
-
-
-
-```python
 pd.read_csv(StringIO(data), header=1)
 ```
 
@@ -355,7 +322,7 @@ pd.read_csv(StringIO(data), header=1)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -418,20 +385,6 @@ df.dtypes
 
 ```python
 data = "\na,b,c\n  \n# commented line\n1,2,3\n\n4,5,6"
-print(data)
-```
-
-
-    a,b,c
-      
-    # commented line
-    1,2,3
-    
-    4,5,6
-
-
-
-```python
 pd.read_csv(StringIO(data), comment="#")
 ```
 
@@ -447,7 +400,7 @@ pd.read_csv(StringIO(data), comment="#")
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -500,7 +453,7 @@ pd.read_csv(StringIO(data), skip_blank_lines=False)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -558,14 +511,14 @@ pd.read_csv(StringIO(data), skip_blank_lines=False)
 df = pd.DataFrame(np.random.randint(0, 10, size=(3, 4)),
                   index=pd.date_range('2022/2/22', periods=3),
                   columns=list('ABCD'))
-df.to_csv('foo.csv', encoding='utf-8')
+df.to_csv('dist/foo.csv', encoding='utf-8')
 ```
 
 参数 `index_col=0` 指定 `csv` 文件的第一列为 `index`。
 
 
 ```python
-pd.read_csv('foo.csv', index_col=0)
+pd.read_csv('src/foo.csv', index_col=0)
 ```
 
 
@@ -580,7 +533,7 @@ pd.read_csv('foo.csv', index_col=0)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -598,24 +551,24 @@ pd.read_csv('foo.csv', index_col=0)
   <tbody>
     <tr>
       <th>2022-02-22</th>
-      <td>1</td>
-      <td>0</td>
       <td>9</td>
-      <td>6</td>
+      <td>4</td>
+      <td>9</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>2022-02-23</th>
-      <td>5</td>
+      <td>3</td>
       <td>1</td>
-      <td>9</td>
-      <td>9</td>
+      <td>3</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2022-02-24</th>
-      <td>6</td>
-      <td>1</td>
+      <td>5</td>
+      <td>9</td>
+      <td>8</td>
       <td>7</td>
-      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -632,12 +585,12 @@ pd.read_csv('foo.csv', index_col=0)
 df = pd.DataFrame(np.random.randint(0, 10, size=(3, 4)),
                   index=pd.date_range('2022/2/22', periods=3),
                   columns=list('ABCD'))
-df.to_excel('foo.xlsx', sheet_name='Sheet1')
+df.to_excel('dist/foo.xlsx', sheet_name='Sheet1')
 ```
 
 
 ```python
-pd.read_excel('foo.xlsx', sheet_name='Sheet1', index_col=0, na_values=['NA'])
+pd.read_excel('src/foo.xlsx', sheet_name='Sheet1', index_col=0, na_values=['NA'])
 ```
 
 
@@ -652,7 +605,7 @@ pd.read_excel('foo.xlsx', sheet_name='Sheet1', index_col=0, na_values=['NA'])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -670,24 +623,24 @@ pd.read_excel('foo.xlsx', sheet_name='Sheet1', index_col=0, na_values=['NA'])
   <tbody>
     <tr>
       <th>2022-02-22</th>
-      <td>0</td>
-      <td>5</td>
-      <td>0</td>
       <td>2</td>
+      <td>2</td>
+      <td>8</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2022-02-23</th>
+      <td>0</td>
       <td>6</td>
-      <td>5</td>
-      <td>9</td>
-      <td>5</td>
+      <td>4</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>2022-02-24</th>
+      <td>3</td>
       <td>2</td>
-      <td>0</td>
-      <td>0</td>
-      <td>5</td>
+      <td>6</td>
+      <td>6</td>
     </tr>
   </tbody>
 </table>
@@ -695,21 +648,29 @@ pd.read_excel('foo.xlsx', sheet_name='Sheet1', index_col=0, na_values=['NA'])
 
 
 
-
-```python
-df2 = pd.DataFrame(np.random.randint(0, 10, size=(3, 4)),
-                   index=pd.date_range('2022/2/22', periods=3),
-                   columns=list('ABCD'))
-df.to_excel('foo.xlsx', sheet_name='Sheet1')
-df2.to_excel('foo.xlsx', sheet_name='Sheet2')
-```
-
 如果要读取一个 Excel 文件的多个 Sheet，使用 `ExcelFile` 对象。
 
 
 ```python
 data = {}
-with pd.ExcelFile("foo.xlsx") as xlsx:
+
+with pd.ExcelFile("src/foo.xlsx") as xlsx:
     data["Sheet1"] = pd.read_excel(xlsx, "Sheet1", index_col=0, na_values=['NA'])
     data["Sheet2"] = pd.read_excel(xlsx, "Sheet2", index_col=0, na_values=['NA'])
+
+data
 ```
+
+
+
+
+    {'Sheet1':             A  B  C  D
+     2022-02-22  2  2  8  1
+     2022-02-23  0  6  4  2
+     2022-02-24  3  2  6  6,
+     'Sheet2':             A  B  C  D
+     2022-02-22  1  2  4  3
+     2022-02-23  3  2  1  2
+     2022-02-24  3  1  4  6}
+
+

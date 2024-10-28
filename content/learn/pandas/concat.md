@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "pandas 合并与连接"
-linktitle: "pandas 合并与连接"
+title: "合并与连接"
+linktitle: "合并与连接"
 date: 2022-02-19T11:18:56+08:00
 type: book
 summary: ""
@@ -22,58 +22,12 @@ import pandas as pd
 
 ```python
 df1 = pd.DataFrame({'Name': ['Sam', 'Emma'], 'Age': [14, 15]})
-df2 = pd.DataFrame({'Name': ['Karen', 'Rahul'], 'Age': [10, 13]})
-```
-
-
-```python
 df1
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Name</th>
-      <th>Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Sam</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Emma</td>
-      <td>15</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-
 ```python
+df2 = pd.DataFrame({'Name': ['Karen', 'Rahul'], 'Age': [10, 13]})
 df2
 ```
 
@@ -89,7 +43,7 @@ df2
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -138,7 +92,7 @@ pd.concat([df1, df2])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -197,7 +151,7 @@ pd.concat([df1, df2]).reset_index(drop=True)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -242,58 +196,12 @@ pd.concat([df1, df2]).reset_index(drop=True)
 
 ```python
 df1 = pd.DataFrame({'Name': ['Sam', 'Emma'], 'Age': [14, 15]})
-df2 = pd.DataFrame({'Math': ['B', 'A+'], 'Science': ['A', 'B+']})
-```
-
-
-```python
 df1
 ```
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-    
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Name</th>
-      <th>Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Sam</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Emma</td>
-      <td>15</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-
 ```python
+df2 = pd.DataFrame({'Math': ['B', 'A+'], 'Science': ['A', 'B+']})
 df2
 ```
 
@@ -309,7 +217,7 @@ df2
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -358,7 +266,7 @@ pd.concat([df1, df2], axis=1)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -430,7 +338,7 @@ df1
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -505,7 +413,7 @@ df2
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -567,7 +475,7 @@ pd.concat([df1, df2], axis=1, join='outer')
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -669,7 +577,7 @@ pd.concat([df1, df2], axis=1, join='inner')
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -731,7 +639,7 @@ pd.concat([df1, df2], axis=0, join='outer')
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -835,7 +743,7 @@ pd.concat([df1, df2], axis=0, join='inner')
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -914,7 +822,7 @@ pd.concat([df1, df2], ignore_index=True)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1037,7 +945,7 @@ pd.concat([df1, s], axis=1)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1118,7 +1026,7 @@ left
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1187,7 +1095,7 @@ right
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1249,7 +1157,7 @@ pd.merge(left, right, on='key')
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1341,7 +1249,7 @@ left
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1416,7 +1324,7 @@ right
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1485,7 +1393,7 @@ pd.merge(left, right, on=["key1", "key2"])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1555,7 +1463,7 @@ pd.merge(left, right, how="inner", on=["key1", "key2"])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1625,7 +1533,7 @@ pd.merge(left, right, how="outer", on=["key1", "key2"])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1722,7 +1630,7 @@ pd.merge(left, right, how="left", on=["key1", "key2"])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1810,7 +1718,7 @@ pd.merge(left, right, how="right", on=["key1", "key2"])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -1889,7 +1797,7 @@ pd.merge(left, right, how="cross")
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -2113,7 +2021,7 @@ left
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -2168,7 +2076,7 @@ right
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -2220,7 +2128,7 @@ left.join(right)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -2280,7 +2188,7 @@ right.join(left)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -2342,7 +2250,7 @@ left.join(right, how='inner')
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -2375,4 +2283,5 @@ left.join(right, how='inner')
   </tbody>
 </table>
 </div>
+
 

@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "pandas 分类汇总"
-linktitle: "pandas 分类汇总"
+title: "分类汇总"
+linktitle: "分类汇总"
 date: 2022-02-19T11:19:27+08:00
 type: book
 summary: ""
@@ -62,7 +62,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -180,7 +180,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -284,7 +284,7 @@ grouped.sum()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -338,7 +338,7 @@ grouped.mean()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -392,7 +392,7 @@ grouped.median()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -446,7 +446,7 @@ grouped.min()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -500,7 +500,7 @@ grouped.max()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -554,7 +554,7 @@ grouped.std()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -608,11 +608,11 @@ grouped.agg(['sum', 'mean'])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead tr th {
         text-align: left;
     }
-    
+
     .dataframe thead tr:last-of-type th {
         text-align: right;
     }
@@ -684,7 +684,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -808,7 +808,7 @@ df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -879,4 +879,5 @@ df.sort_values('GRE Score', ascending=False).groupby('Name')['GRE Score'].first(
     Jim    321
     Pam    330
     Name: GRE Score, dtype: int64
+
 

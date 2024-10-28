@@ -1,8 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "pandas Series 对象"
-linktitle: "pandas Series 对象"
+title: "Series 对象"
+linktitle: "Series 对象"
 date: 2022-02-18T15:01:52+08:00
 type: book
 summary: ""
@@ -35,11 +35,11 @@ pd.Series(np.random.randn(5), index=['a', 'b', 'c', 'd', 'e'])
 
 
 
-    a   -0.840342
-    b    1.301792
-    c   -0.542978
-    d   -0.057463
-    e   -2.716027
+    a   -0.247457
+    b    0.127203
+    c    0.048504
+    d   -1.802860
+    e   -1.480528
     dtype: float64
 
 
@@ -54,11 +54,11 @@ pd.Series(np.random.randn(5))
 
 
 
-    0   -0.237221
-    1   -0.126770
-    2    0.737682
-    3   -0.093711
-    4   -0.632866
+    0   -0.218089
+    1   -1.875552
+    2   -0.351250
+    3    2.237674
+    4    0.794604
     dtype: float64
 
 
@@ -118,11 +118,11 @@ s
 
 
 
-    a   -0.669858
-    b   -0.669152
-    c   -0.228237
-    d   -2.224927
-    e    0.038875
+    a    1.234485
+    b   -0.893518
+    c    0.400802
+    d   -1.328360
+    e   -1.023169
     dtype: float64
 
 
@@ -132,10 +132,14 @@ s
 s[0]
 ```
 
+    C:\Users\Fourier\AppData\Local\Temp\ipykernel_17908\243613605.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+      s[0]
+    
 
 
 
-    -0.6698575320970594
+
+    1.2344849322112634
 
 
 
@@ -147,9 +151,9 @@ s[:3]
 
 
 
-    a   -0.669858
-    b   -0.669152
-    c   -0.228237
+    a    1.234485
+    b   -0.893518
+    c    0.400802
     dtype: float64
 
 
@@ -164,8 +168,8 @@ s[s > s.median()]
 
 
 
-    c   -0.228237
-    e    0.038875
+    a    1.234485
+    c    0.400802
     dtype: float64
 
 
@@ -175,12 +179,16 @@ s[s > s.median()]
 s[[4, 3, 1]]
 ```
 
+    C:\Users\Fourier\AppData\Local\Temp\ipykernel_17908\3696278557.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
+      s[[4, 3, 1]]
+    
 
 
 
-    e    0.038875
-    d   -2.224927
-    b   -0.669152
+
+    e   -1.023169
+    d   -1.328360
+    b   -0.893518
     dtype: float64
 
 
@@ -195,11 +203,11 @@ np.exp(s)
 
 
 
-    a    0.511781
-    b    0.512143
-    c    0.795935
-    d    0.108075
-    e    1.039641
+    a    3.436608
+    b    0.409214
+    c    1.493022
+    d    0.264911
+    e    0.359454
     dtype: float64
 
 
@@ -214,9 +222,9 @@ s.array
 
 
 
-    <PandasArray>
-    [ -0.6698575320970594,  -0.6691515909398379, -0.22823732871328664,
-       -2.224927424376556,  0.03887527676649628]
+    <NumpyExtensionArray>
+    [ 1.2344849322112634, -0.8935181616923943, 0.40080196379724387,
+     -1.3283596009432421,  -1.023169455667722]
     Length: 5, dtype: float64
 
 
@@ -243,7 +251,7 @@ s.to_numpy()
 
 
 
-    array([-0.66985753, -0.66915159, -0.22823733, -2.22492742,  0.03887528])
+    array([ 1.23448493, -0.89351816,  0.40080196, -1.3283596 , -1.02316946])
 
 
 
@@ -259,7 +267,7 @@ s['a']
 
 
 
-    -0.6698575320970594
+    1.2344849322112634
 
 
 
@@ -272,10 +280,10 @@ s
 
 
 
-    a    -0.669858
-    b    -0.669152
-    c    -0.228237
-    d    -2.224927
+    a     1.234485
+    b    -0.893518
+    c     0.400802
+    d    -1.328360
     e    12.000000
     dtype: float64
 
@@ -304,7 +312,7 @@ except KeyError:
 ```
 
     KeyError
-
+    
 
 使用 `get` 方法，缺少的标签将返回 `None` 或指定的默认值：
 
@@ -337,10 +345,10 @@ s + s
 
 
 
-    a    -1.339715
-    b    -1.338303
-    c    -0.456475
-    d    -4.449855
+    a     2.468970
+    b    -1.787036
+    c     0.801604
+    d    -2.656719
     e    24.000000
     dtype: float64
 
@@ -354,10 +362,10 @@ s * 2
 
 
 
-    a    -1.339715
-    b    -1.338303
-    c    -0.456475
-    d    -4.449855
+    a     2.468970
+    b    -1.787036
+    c     0.801604
+    d    -2.656719
     e    24.000000
     dtype: float64
 
@@ -374,9 +382,9 @@ s[1:] + s[:-1]
 
 
     a         NaN
-    b   -1.338303
-    c   -0.456475
-    d   -4.449855
+    b   -1.787036
+    c    0.801604
+    d   -2.656719
     e         NaN
     dtype: float64
 
@@ -395,11 +403,11 @@ s
 
 
 
-    0    0.042130
-    1    0.067907
-    2   -1.121646
-    3   -1.390116
-    4   -0.990718
+    0    0.715769
+    1   -0.089104
+    2    1.187363
+    3   -1.413279
+    4    0.272194
     Name: something, dtype: float64
 
 
@@ -420,8 +428,8 @@ s.name
 
 
 ```python
-s2 = s.rename('different')
-s2.name
+new_s = s.rename('different')
+new_s.name
 ```
 
 
@@ -431,4 +439,4 @@ s2.name
 
 
 
-请注意，`s` 和 `s2` 指的是不同的对象。
+请注意，`s` 和 `new_s` 指的是不同的对象。
