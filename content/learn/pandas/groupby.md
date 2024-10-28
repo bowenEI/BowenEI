@@ -113,6 +113,8 @@ df
 
 
 
+按行分组。
+
 
 ```python
 df.groupby('class')
@@ -121,23 +123,11 @@ df.groupby('class')
 
 
 
-    <pandas.core.groupby.generic.DataFrameGroupBy object at 0x0000021B59E47F10>
+    <pandas.core.groupby.generic.DataFrameGroupBy object at 0x000001BC34299A10>
 
 
 
-`axis` 为 `1` 或 `columns` 表示按列分组，默认值为 `0` 或 `index` 即按行分组。
-
-
-```python
-df.groupby('order', axis='columns')
-```
-
-
-
-
-    <pandas.core.groupby.generic.DataFrameGroupBy object at 0x0000021B59E47BE0>
-
-
+按多个字段分组。
 
 
 ```python
@@ -147,9 +137,11 @@ df.groupby(['class', 'order'])
 
 
 
-    <pandas.core.groupby.generic.DataFrameGroupBy object at 0x0000021B576F6BB0>
+    <pandas.core.groupby.generic.DataFrameGroupBy object at 0x000001BC3427E710>
 
 
+
+通常一张数据表每一行表示一条记录，每一列表示一个字段。因而分类汇总是针对字段，对每条记录（按行）进行分组。如果确实有按列进行分组的需求，将 DataFrame 对象转置即可。
 
 ## 应用与合并
 
@@ -200,57 +192,57 @@ df
       <th>0</th>
       <td>foo</td>
       <td>one</td>
-      <td>-0.358296</td>
-      <td>2.330367</td>
+      <td>0.106162</td>
+      <td>-0.093786</td>
     </tr>
     <tr>
       <th>1</th>
       <td>bar</td>
       <td>one</td>
-      <td>1.081549</td>
-      <td>-1.002115</td>
+      <td>-0.179389</td>
+      <td>2.213905</td>
     </tr>
     <tr>
       <th>2</th>
       <td>foo</td>
       <td>two</td>
-      <td>-0.237551</td>
-      <td>0.510146</td>
+      <td>-0.190954</td>
+      <td>0.082038</td>
     </tr>
     <tr>
       <th>3</th>
       <td>bar</td>
       <td>three</td>
-      <td>-1.573979</td>
-      <td>-1.366482</td>
+      <td>0.312979</td>
+      <td>1.034273</td>
     </tr>
     <tr>
       <th>4</th>
       <td>foo</td>
       <td>two</td>
-      <td>-0.146734</td>
-      <td>0.273849</td>
+      <td>1.052136</td>
+      <td>-0.130627</td>
     </tr>
     <tr>
       <th>5</th>
       <td>bar</td>
       <td>two</td>
-      <td>-1.927644</td>
-      <td>0.645096</td>
+      <td>-1.220164</td>
+      <td>1.215908</td>
     </tr>
     <tr>
       <th>6</th>
       <td>foo</td>
       <td>one</td>
-      <td>1.393947</td>
-      <td>-0.680186</td>
+      <td>-0.926031</td>
+      <td>-1.477368</td>
     </tr>
     <tr>
       <th>7</th>
       <td>foo</td>
       <td>three</td>
-      <td>-0.036544</td>
-      <td>0.883412</td>
+      <td>0.157087</td>
+      <td>1.622384</td>
     </tr>
   </tbody>
 </table>
@@ -305,13 +297,13 @@ grouped.sum()
   <tbody>
     <tr>
       <th>bar</th>
-      <td>-2.420074</td>
-      <td>-1.723502</td>
+      <td>-1.086574</td>
+      <td>4.464086</td>
     </tr>
     <tr>
       <th>foo</th>
-      <td>0.614822</td>
-      <td>3.317587</td>
+      <td>0.198399</td>
+      <td>0.002641</td>
     </tr>
   </tbody>
 </table>
@@ -359,13 +351,13 @@ grouped.mean()
   <tbody>
     <tr>
       <th>bar</th>
-      <td>-0.806691</td>
-      <td>-0.574501</td>
+      <td>-0.362191</td>
+      <td>1.488029</td>
     </tr>
     <tr>
       <th>foo</th>
-      <td>0.122964</td>
-      <td>0.663517</td>
+      <td>0.039680</td>
+      <td>0.000528</td>
     </tr>
   </tbody>
 </table>
@@ -413,13 +405,13 @@ grouped.median()
   <tbody>
     <tr>
       <th>bar</th>
-      <td>-1.573979</td>
-      <td>-1.002115</td>
+      <td>-0.179389</td>
+      <td>1.215908</td>
     </tr>
     <tr>
       <th>foo</th>
-      <td>-0.146734</td>
-      <td>0.510146</td>
+      <td>0.106162</td>
+      <td>-0.093786</td>
     </tr>
   </tbody>
 </table>
@@ -467,13 +459,13 @@ grouped.min()
   <tbody>
     <tr>
       <th>bar</th>
-      <td>-1.927644</td>
-      <td>-1.366482</td>
+      <td>-1.220164</td>
+      <td>1.034273</td>
     </tr>
     <tr>
       <th>foo</th>
-      <td>-0.358296</td>
-      <td>-0.680186</td>
+      <td>-0.926031</td>
+      <td>-1.477368</td>
     </tr>
   </tbody>
 </table>
@@ -521,13 +513,13 @@ grouped.max()
   <tbody>
     <tr>
       <th>bar</th>
-      <td>1.081549</td>
-      <td>0.645096</td>
+      <td>0.312979</td>
+      <td>2.213905</td>
     </tr>
     <tr>
       <th>foo</th>
-      <td>1.393947</td>
-      <td>2.330367</td>
+      <td>1.052136</td>
+      <td>1.622384</td>
     </tr>
   </tbody>
 </table>
@@ -575,13 +567,13 @@ grouped.std()
   <tbody>
     <tr>
       <th>bar</th>
-      <td>1.644797</td>
-      <td>1.071799</td>
+      <td>0.782748</td>
+      <td>0.635154</td>
     </tr>
     <tr>
       <th>foo</th>
-      <td>0.720271</td>
-      <td>1.096317</td>
+      <td>0.712226</td>
+      <td>1.100833</td>
     </tr>
   </tbody>
 </table>
@@ -642,17 +634,17 @@ grouped.agg(['sum', 'mean'])
   <tbody>
     <tr>
       <th>bar</th>
-      <td>-2.420074</td>
-      <td>-0.806691</td>
-      <td>-1.723502</td>
-      <td>-0.574501</td>
+      <td>-1.086574</td>
+      <td>-0.362191</td>
+      <td>4.464086</td>
+      <td>1.488029</td>
     </tr>
     <tr>
       <th>foo</th>
-      <td>0.614822</td>
-      <td>0.122964</td>
-      <td>3.317587</td>
-      <td>0.663517</td>
+      <td>0.198399</td>
+      <td>0.039680</td>
+      <td>0.002641</td>
+      <td>0.000528</td>
     </tr>
   </tbody>
 </table>
@@ -779,9 +771,8 @@ df.groupby('Name')['GRE Score'].nth(1)
 
 
 
-    Name
-    Jim    321
-    Pam    330
+    1    321
+    4    330
     Name: GRE Score, dtype: int64
 
 

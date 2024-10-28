@@ -174,25 +174,6 @@ s[s > s.median()]
 
 
 
-
-```python
-s[[4, 3, 1]]
-```
-
-    C:\Users\Fourier\AppData\Local\Temp\ipykernel_17908\3696278557.py:1: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
-      s[[4, 3, 1]]
-    
-
-
-
-
-    e   -1.023169
-    d   -1.328360
-    b   -0.893518
-    dtype: float64
-
-
-
 ### 数学运算
 
 

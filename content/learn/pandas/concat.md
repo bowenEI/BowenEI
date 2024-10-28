@@ -21,14 +21,56 @@ import pandas as pd
 
 
 ```python
-df1 = pd.DataFrame({'Name': ['Sam', 'Emma'], 'Age': [14, 15]})
-df1
+left = pd.DataFrame({'Name': ['Sam', 'Emma'], 'Age': [14, 15]})
+left
 ```
 
 
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sam</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Emma</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
 ```python
-df2 = pd.DataFrame({'Name': ['Karen', 'Rahul'], 'Age': [10, 13]})
-df2
+right = pd.DataFrame({'Name': ['Karen', 'Rahul'], 'Age': [10, 13]})
+right
 ```
 
 
@@ -77,7 +119,7 @@ df2
 
 
 ```python
-pd.concat([df1, df2])
+pd.concat([left, right])
 ```
 
 
@@ -136,7 +178,7 @@ pd.concat([df1, df2])
 
 
 ```python
-pd.concat([df1, df2]).reset_index(drop=True)
+pd.concat([left, right]).reset_index(drop=True)
 ```
 
 
@@ -195,14 +237,56 @@ pd.concat([df1, df2]).reset_index(drop=True)
 
 
 ```python
-df1 = pd.DataFrame({'Name': ['Sam', 'Emma'], 'Age': [14, 15]})
-df1
+left = pd.DataFrame({'Name': ['Sam', 'Emma'], 'Age': [14, 15]})
+left
 ```
 
 
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sam</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Emma</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
 ```python
-df2 = pd.DataFrame({'Math': ['B', 'A+'], 'Science': ['A', 'B+']})
-df2
+right = pd.DataFrame({'Math': ['B', 'A+'], 'Science': ['A', 'B+']})
+right
 ```
 
 
@@ -251,7 +335,7 @@ df2
 
 
 ```python
-pd.concat([df1, df2], axis=1)
+pd.concat([left, right], axis=1)
 ```
 
 
@@ -314,7 +398,7 @@ pd.concat([df1, df2], axis=1)
 
 
 ```python
-df1 = pd.DataFrame(
+left = pd.DataFrame(
     {
         "A": ["A0", "A1", "A2", "A3"],
         "B": ["B0", "B1", "B2", "B3"],
@@ -323,7 +407,7 @@ df1 = pd.DataFrame(
     },
     index=[0, 1, 2, 3],
 )
-df1
+left
 ```
 
 
@@ -390,7 +474,7 @@ df1
 
 
 ```python
-df2 = pd.DataFrame(
+right = pd.DataFrame(
     {
         "B": ["B2", "B3", "B6", "B7"],
         "D": ["D2", "D3", "D6", "D7"],
@@ -398,7 +482,7 @@ df2 = pd.DataFrame(
     },
     index=[2, 3, 6, 7],
 )
-df2
+right
 ```
 
 
@@ -460,7 +544,7 @@ df2
 
 
 ```python
-pd.concat([df1, df2], axis=1, join='outer')
+pd.concat([left, right], axis=1, join='outer')
 ```
 
 
@@ -562,7 +646,7 @@ pd.concat([df1, df2], axis=1, join='outer')
 
 
 ```python
-pd.concat([df1, df2], axis=1, join='inner')
+pd.concat([left, right], axis=1, join='inner')
 ```
 
 
@@ -624,7 +708,7 @@ pd.concat([df1, df2], axis=1, join='inner')
 
 
 ```python
-pd.concat([df1, df2], axis=0, join='outer')
+pd.concat([left, right], axis=0, join='outer')
 ```
 
 
@@ -728,7 +812,7 @@ pd.concat([df1, df2], axis=0, join='outer')
 
 
 ```python
-pd.concat([df1, df2], axis=0, join='inner')
+pd.concat([left, right], axis=0, join='inner')
 ```
 
 
@@ -807,7 +891,7 @@ pd.concat([df1, df2], axis=0, join='inner')
 
 
 ```python
-pd.concat([df1, df2], ignore_index=True)
+pd.concat([left, right], ignore_index=True)
 ```
 
 
@@ -930,7 +1014,8 @@ s
 
 
 ```python
-pd.concat([df1, s], axis=1)
+df = pd.DataFrame({'Name': ['Sam', 'Emma'], 'Age': [14, 15]})
+df
 ```
 
 
@@ -954,44 +1039,81 @@ pd.concat([df1, s], axis=1)
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>A</th>
-      <th>B</th>
-      <th>C</th>
-      <th>D</th>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sam</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Emma</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+pd.concat([df, s], axis=1)
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Age</th>
       <th>X</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>A0</td>
-      <td>B0</td>
-      <td>C0</td>
-      <td>D0</td>
+      <td>Sam</td>
+      <td>14.0</td>
       <td>X0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>A1</td>
-      <td>B1</td>
-      <td>C1</td>
-      <td>D1</td>
+      <td>Emma</td>
+      <td>15.0</td>
       <td>X1</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>A2</td>
-      <td>B2</td>
-      <td>C2</td>
-      <td>D2</td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>X2</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>A3</td>
-      <td>B3</td>
-      <td>C3</td>
-      <td>D3</td>
+      <td>NaN</td>
+      <td>NaN</td>
       <td>X3</td>
     </tr>
   </tbody>
@@ -1590,20 +1712,20 @@ pd.merge(left, right, how="outer", on=["key1", "key2"])
     <tr>
       <th>4</th>
       <td>K2</td>
-      <td>K1</td>
-      <td>A3</td>
-      <td>B3</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>K2</td>
       <td>K0</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>C3</td>
       <td>D3</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>K2</td>
+      <td>K1</td>
+      <td>A3</td>
+      <td>B3</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
