@@ -12,3 +12,4 @@ go.sum
 # 自定义
 content/post/*/media
 __pycache__
+*.bkp
