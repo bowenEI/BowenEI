@@ -51,7 +51,8 @@ details p {
 .dark .article-style>ul strong,
 .dark .article-style>ol strong,
 .dark .article-style>blockquote>p>strong {
-  color: tomato;
+  // color: tomato;
+  color: mediumturquoise;
 }
 
 // Light Style
@@ -59,7 +60,8 @@ details p {
 .article-style>ul strong,
 .article-style>ol strong,
 .article-style>blockquote>p>strong {
-  color: crimson;
+  // color: crimson;
+  color: mediumslateblue;
 }
 
 // 引述文本
@@ -77,4 +79,9 @@ details p {
 
 .poetry>p {
   margin-bottom: 0;
+}
+
+// 全局字体
+body {
+  font-family: 'Noto Sans SC';
 }
